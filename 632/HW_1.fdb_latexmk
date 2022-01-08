@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1641679896 "d:/Programming/Physics-Homework/632/HW_1.tex" "HW_1.pdf" "HW_1" 1641679897
+["pdflatex"] 1641681611 "d:/Programming/Physics-Homework/632/HW_1.tex" "HW_1.pdf" "HW_1" 1641681612
   "C:/Users/Sean/AppData/Local/MiKTeX/2.9/miktex/data/le/pdftex/pdflatex.fmt" 1537892425 4068920 520bebc8e2bd60ec36f06996e0994828 ""
   "C:/Users/Sean/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map" 1638664211 82934 0f9cae5545343c2e719a06cf9ddf0ae9 ""
   "D:/Programs/MiKTeX 2.9/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1233951848 1004 54797486969f23fa377b128694d548df ""
@@ -28,6 +28,7 @@
   "D:/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb" 1247593067 32722 d7379af29a190c3f453aba36302ff5a9 ""
   "D:/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb" 1247593066 32362 bc3f3eec7ab7d65fe700963d4017d32c ""
   "D:/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb" 1247593067 32726 39f0f9e62e84beb801509898a605dbd5 ""
+  "D:/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1247593067 32569 5e5ddc8df908dea60932f3c484a54c0d ""
   "D:/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb" 1247593073 34694 870c211f62cb72718a00e353f14f254d ""
   "D:/Programs/MiKTeX 2.9/tex/generic/ifxetex/ifxetex.sty" 1284257189 1458 43ab4710dc82f3edeabecd0d099626b2 ""
   "D:/Programs/MiKTeX 2.9/tex/generic/oberdiek/ifpdf.sty" 1516838086 1251 d170e11a3246c3392bc7f59595af42cb ""
@@ -54,10 +55,10 @@
   "D:/Programs/MiKTeX 2.9/tex/latex/l3kernel/l3pdfmode.def" 1540968056 16254 878fe18aafb12f4418da1bfd7789fdb4 ""
   "D:/Programs/MiKTeX 2.9/tex/latex/l3packages/xparse/xparse.sty" 1539795236 78679 0f13caccf8fc0a14ee080e185fe4bd6e ""
   "D:/Programs/MiKTeX 2.9/tex/latex/physics/physics.sty" 1356002062 29610 a9597219b282d9c78b02393dcd7d4322 ""
-  "HW_1.aux" 1641679897 9 a94a2480d3289e625eea47cd1b285758 "pdflatex"
-  "HW_1.tex" 1641679896 1494 90a0c0babb75d592eb71003151aaaaeb ""
-  "d:/Programming/Physics-Homework/632/HW_1.tex" 1641679896 1494 90a0c0babb75d592eb71003151aaaaeb ""
+  "HW_1.aux" 1641681612 9 a94a2480d3289e625eea47cd1b285758 "pdflatex"
+  "HW_1.tex" 1641681610 2590 1ef3079e5aff96e741323d8d95974fa7 ""
+  "d:/Programming/Physics-Homework/632/HW_1.tex" 1641681610 2590 1ef3079e5aff96e741323d8d95974fa7 ""
   (generated)
-  "HW_1.pdf"
   "HW_1.log"
   "HW_1.aux"
+  "HW_1.pdf"
