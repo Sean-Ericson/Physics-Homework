@@ -12,9 +12,6 @@
 \newcommand{\cint}[2]{\int_{#1}^{#2}}
 \newcommand{\cintd}[3]{\cint{#1}{#2}\dd#3\:}
 
-\newtheorem*{problem}{Problem}
-\newtheorem*{solution}{Solution}
-
 \begin{document}
 	
 \title{Homework 1}
@@ -38,18 +35,18 @@ In scaled variables,
 \begin{align*}
     \partial_t\avg{x} & = -i\avg{\comm{x}{H}} \\
     & = -\frac{i}{2}\avg{\comm{x}{p^2}} \\
-    & = \avg{p} \\
+    & = \avg{p} \\ \\
     \partial_t\avg{p} & = -i\avg{\comm{p}{H}} \\
     & = -\frac{i}{2}\avg{\comm{p}{x^2}} \\
-    & = -\avg{x} \\
+    & = -\avg{x} \\ \\
     \partial_tV_x & = \partial_t\left(\avg{x^2} - \avg{x}^2\right) \\
     & = -i\avg{\comm{x^2}{H}} - 2\avg{x}\partial_t\avg{x} \\
     & = -\frac{i}{2}\avg{\comm{x^2}{p^2}} - 2\avg{x}\avg{p} \\
-    & = \avg{\comm{x}{p}_+} - 2\avg{x}\avg{p} \\
+    & = \avg{\comm{x}{p}_+} - 2\avg{x}\avg{p} \\ \\
     \partial_tV_p & = \partial_t\left(\avg{p^2} - \avg{p}^2\right) \\
     & = -i\avg{\comm{p^2}{H}} - 2\avg{p}\partial_t\avg{p} \\
     & = -\frac{i}{2}\avg{\comm{p^2}{x^2}} + 2\avg{x}\avg{p} \\
-    & = -\avg{\comm{x}{p}_+} + 2{x}{p} \\
+    & = -\avg{\comm{x}{p}_+} + 2\avg{x}\avg{p} \\ \\
     \partial_tC_{xp} & = \partial_t\left(\avg{\comm{x}{p}_+} - \avg{x}\avg{p}\right) \\
     & = -i\avg{\comm{xp + px}{H}} - \avg{p}^2 + \avg{x}^2 \\
     & = -\frac{i}{2}\avg{\comm{xp}{x^2} + \comm{xp}{p^2} + \comm{px}{x^2} + \comm{px}{p^2}} - \avg{p}^2 + \avg{x}^2 \\
