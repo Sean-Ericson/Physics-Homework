@@ -19,20 +19,32 @@
 \maketitle
 
 \section*{Exercise 1}
+\begin{enumerate}[label=(\alph*)]
+    \item We want to approximate
+    \[ n! = \cintd{0}{\infty}{t} e^{-t + n\log{t}}. \]
+    First we expand the function in the exponential about it's maximum. The maximum occurs at
+    \[ \dv{t}(-t + n\log{t}) = 0 \implies \frac{n}{t} - 1 = 0 \implies t = n. \]
+    Expanding about that point gives
+    \[ -(t - n) + n\log(t - n) \approx -n - n\log{n} - \frac{(t-n)^2}{2n} \]
+
+    \item Plugging this back into the exponential we see that
+    \begin{align*}
+        n! & \approx e^{-n - n\log{n}}\cintd{0}{\infty}{t}e^{-\frac{(t-n)^2}{2n}} \\
+        & \approx \left(\frac{n}{e}\right)^n \sqrt{2\pi n}
+    \end{align*}
+\end{enumerate}
 
 
 
 \section*{Exercise 2}
+\begin{enumerate}[label=(\alph*)]
+    \item Given that $x = \frac{1}{2}\frac{F}{m}t^2$, we can see that $F \propto \frac{mx}{t^2}$ thus
+    \[ \Delta F \propto \Delta x \frac{m}{\tau^2} = \sqrt{\frac{\hbar\tau}{m}}\frac{m}{\tau^2} = \sqrt{\frac{\hbar m}{\tau^3}} \]
 
-
-
-
-\section*{Exercise 3}
+    \item Multiplying the expression for $\Delta F$ by a quantity with dimensions of time ($\tau$) gives
+    \[ \Delta p \propto \tau\sqrt{\frac{\hbar m}{\tau^3}} = \sqrt{\frac{\hbar m}{\tau}} \]
+\end{enumerate}
     
-
-
-\section*{Exercise 4}
-
 
 
 \end{document}
