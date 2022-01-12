@@ -25,7 +25,7 @@ Let
 The Hamiltonian,
 \[ H = \frac{1}{2m}\left(p_x^2 + p_y^2\right) + \frac{m}{2}\left(\omega_x^2x^2 + \omega_y^2y^2\right), \]
 can then be rewritten as
-\[ \tilde{H}E_s = \frac{1}{2m}\left((\tilde{p}_xp_x)^2 + (\tilde{p}_yp_y)^2\right) + \frac{m}{2}\left(\omega_x^2(\tilde{x}x)^2 + (\tilde{\omega}_y\omega_y)^2(\tilde{y}y)^2\right). \] 
+\[ \tilde{H}E_s = \frac{1}{2m}\left((\tilde{p}_xp_s)^2 + (\tilde{p}_yp_s)^2\right) + \frac{m}{2}\left(\omega_x^2(\tilde{x}x_s)^2 + (\tilde{\omega}_y\omega_x)^2(\tilde{y}x_s)^2\right). \] 
 Dropping tildes and substituting in values, this reduces to
 \[ H = \frac{1}{2}\left(p_x^2 + p_y^2 + x^2 + \omega_y^2y^2\right) \]
 
@@ -42,22 +42,52 @@ In scaled variables,
     \partial_tV_x & = \partial_t\left(\avg{x^2} - \avg{x}^2\right) \\
     & = -i\avg{\comm{x^2}{H}} - 2\avg{x}\partial_t\avg{x} \\
     & = -\frac{i}{2}\avg{\comm{x^2}{p^2}} - 2\avg{x}\avg{p} \\
-    & = \avg{\comm{x}{p}_+} - 2\avg{x}\avg{p} \\ \\
+    & = 2\avg{\comm{x}{p}_+} - 2\avg{x}\avg{p} \\
+    & = 2C_{xp} \\ \\
     \partial_tV_p & = \partial_t\left(\avg{p^2} - \avg{p}^2\right) \\
     & = -i\avg{\comm{p^2}{H}} - 2\avg{p}\partial_t\avg{p} \\
     & = -\frac{i}{2}\avg{\comm{p^2}{x^2}} + 2\avg{x}\avg{p} \\
-    & = -\avg{\comm{x}{p}_+} + 2\avg{x}\avg{p} \\ \\
+    & = -2\avg{\comm{x}{p}_+} + 2\avg{x}\avg{p} \\
+    & = -2C_{xp} \\ \\
     \partial_tC_{xp} & = \partial_t\left(\avg{\comm{x}{p}_+} - \avg{x}\avg{p}\right) \\
     & = -i\avg{\comm{xp + px}{H}} - \avg{p}^2 + \avg{x}^2 \\
     & = -\frac{i}{2}\avg{\comm{xp}{x^2} + \comm{xp}{p^2} + \comm{px}{x^2} + \comm{px}{p^2}} - \avg{p}^2 + \avg{x}^2 \\
-    & = 2\avg{p^2} - 2\avg{x^2} - \avg{p}^2 + \avg{x}^2
+    & = \avg{p^2} - \avg{x^2} - \avg{p}^2 + \avg{x}^2 \\
+    & = V_p - V_x 
+\end{align*}
+Restoring units,
+\begin{align*}
+    \partial_t\avg{x} & = \frac{1}{m}\avg{p} \\
+    \partial_t\avg{p} & = -m\omega^2\avg{x} \\
+    \partial_tV_x & = \frac{2}{m}C_{xp} \\
+    \partial_tV_P & = -m\omega^2C_{xp} \\
+    \partial_tC_{xp} & = \frac{1}{m}V_p - m\omega^2V_x
 \end{align*}
 
 
 \section*{Problem 3}
+From the result of Homework 3 Problem 3 from last term,
+\[ V_x(t) = \sigma^2(t) = \sigma^2 + \frac{\hbar^2t^2}{4m^2\sigma^2} \]
+\[ \implies \dot{V}_x(t) = \frac{\hbar^2t}{2m^2\sigma^2} \]
+Using the equations from problem 2 above (with $\omega = 0$) we see that
+\[ \partial_tV_p = 0 \implies V_p = c \]
+for some constant $c$. This implies that the time dependence of $C_{xp}$ has the simple form 
+\[ C_{xp}(t) = \frac{c}{m}t + k \]
+for another constant $k$, which in turn implies
+\[ V_x(t) = V_x(0) + \frac{c}{m^2}t \]
+The substituting in the initial conditions gives
+\[ V_x(t) = \sigma^2 + \frac{\hbar^2t^2}{4m^2\sigma^2} \]
 
 
 \section*{Problem 4}
-
+Let 
+\[ U_g = V_x V_p - C_{xp}^2 \]
+Then
+\begin{align*}
+    \partial_tU_g & = \dot{V}_xV_p + V_x\dot{V}_p - 2C_{xp}\dot{C}_{xp} \\
+    & = 2C_{xp}V_p -2C_{xp}V_x - 2C_{xp}(V_p-V_x) \\
+    & = 2C_{xp}(V_p - V_x - V_p + V_x) \\
+    & = 0
+\end{align*}
 
 \end{document}
