@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1642033180 "c:/Users/Admin/Documents/GitHub/Physics-Homework/632/HW2/HW_2.tex" "HW_2.pdf" "HW_2" 1642033181
+["pdflatex"] 1642033400 "c:/Users/Admin/Documents/GitHub/Physics-Homework/632/HW2/HW_2.tex" "HW_2.pdf" "HW_2" 1642033400
   "C:/Users/Admin/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1633365462 9715384 565b68b9956d71e4d38fa4bdfddc1659 ""
   "C:/Users/Admin/AppData/Local/MiKTeX/pdftex/config/pdftex.map" 1633441985 278015 b5ae8789d05c9394f564dcef5be6e51a ""
   "C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1233951848 1004 54797486969f23fa377b128694d548df ""
@@ -55,10 +55,10 @@
   "C:/Users/Admin/AppData/Local/Programs/MiKTeX/tex/latex/l3kernel/expl3.sty" 1630063990 6208 18ab2eb39b7f1285bd1aa7af7abc9309 ""
   "C:/Users/Admin/AppData/Local/Programs/MiKTeX/tex/latex/l3packages/xparse/xparse.sty" 1630064270 6566 7cee8bf5f629baa63c111395011c9378 ""
   "C:/Users/Admin/AppData/Local/Programs/MiKTeX/tex/latex/physics/physics.sty" 1356002062 29610 a9597219b282d9c78b02393dcd7d4322 ""
-  "HW_2.aux" 1642033181 32 044b7f8fc9779af7531264e0c5c84b6d "pdflatex"
-  "HW_2.tex" 1642033180 2209 d4992ec6c37b603b4450239f0be09471 ""
-  "c:/Users/Admin/Documents/GitHub/Physics-Homework/632/HW2/HW_2.tex" 1642033180 2209 d4992ec6c37b603b4450239f0be09471 ""
+  "HW_2.aux" 1642033400 32 044b7f8fc9779af7531264e0c5c84b6d "pdflatex"
+  "HW_2.tex" 1642033399 2211 fb0dfae06fa166986dc100e2ee9e74a2 ""
+  "c:/Users/Admin/Documents/GitHub/Physics-Homework/632/HW2/HW_2.tex" 1642033399 2211 fb0dfae06fa166986dc100e2ee9e74a2 ""
   (generated)
-  "HW_2.log"
   "HW_2.aux"
   "HW_2.pdf"
+  "HW_2.log"
