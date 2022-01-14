@@ -2,6 +2,7 @@
 
 \usepackage[margin=1in]{geometry}
 \usepackage{amsmath,amsthm,amssymb}
+\usepackage{mathrsfs}
 \usepackage{enumitem}
 \usepackage{physics}
 
@@ -46,12 +47,24 @@ The WKB solution is thus approximately
 while the asymptotic form of the patch wavefunction is
 \[ \frac{a}{\sqrt{4\pi}\nu^{1/4}(x-x_1)^{1/4}}\exp\left[-\frac{2}{3}\nu^{3/2}(x-x_1)^{3/2}\right] + \frac{b}{\sqrt{\pi}\nu^{1/4}(x-x_1)^{1/4}}\exp\left[\frac{2}{3}\nu^{3/2}(x-x_1)^{3/2}\right] \]
 The two solutions are equivalent subjet to 
-\[ a = \frac{4\pi}{\hbar\nu}A_F, \quad b = \frac{\pi}{\hbar\nu}B_F \tag{2}\]
+\[ a = \frac{4\pi}{\hbar\nu}A_F, \quad b = \frac{\pi}{\hbar\nu}B_F. \tag{2}\]
+Combining the two conditions for equality gives
+\[ 4A_F - B_F = 2A_< \]
+\[ 4A_F + B_F = 2B_< \]
 
 \section*{Problem 2}
 
 
 \section*{Problem 3}
+The approimate tunneling probability is given by
+\begin{align*}
+    T & \approx \exp\left[-\frac{2}{\hbar}\cint{x_1}{x_2}\abs{p(x')}\dd x'\right] \\
+    & = \exp\left[-\frac{2}{\hbar}\cint{0}{\frac{V_0-E}{e\mathscr{E}}} \abs{\sqrt{2m(E - V_0 + e\mathscr{E}x)}} \dd x' \right] \\
+    & = \exp\left[-\frac{2}{\hbar}\cint{0}{\frac{V_0-E}{e\mathscr{E}}} \sqrt{2m(V_0 - E - e\mathscr{E}x)} \dd x' \right] \\
+    & = \exp\left[-\frac{2\left(2m(V_0-E)\right)^{3/2}}{3\hbar me\mathscr{E}}\right]
+\end{align*}
+If $E = V_0 - W$ then
+\[ T \approx \exp\left[-\frac{2(2mW)^{3/2}}{3\hbar me\mathscr{E}}\right] \]
 
 
 \end{document}
