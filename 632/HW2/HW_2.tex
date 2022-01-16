@@ -53,6 +53,30 @@ Combining the two conditions for equality gives
 \[ 2A_F + B_F = \sqrt{2}B_< \]
 
 \section*{Problem 2}
+The approximate wavefucntions around the turning points are
+\[ \psi_\text{WKB} = \begin{cases}
+    \frac{A_<}{\sqrt{p(x)}}\cos\left(\frac{1}{\hbar}\cint{x}{x_1}p(x')\dd x'\right) + \frac{B_<}{\sqrt{p(x)}}\sin\left(\cint{x}{x_1}p(x')\dd x'\right) & x \lesssim x_1 \\
+    \frac{A_F^{(1)}}{\sqrt{\abs{p(x)}}}\exp\left[-\frac{1}{\hbar}\cint{x_1}{x}\abs{p(x')}\dd x'\right] + \frac{B_F^{(1)}}{\sqrt{\abs{p(x)}}}\exp\left[\frac{1}{\hbar}\cint{x_1}{x}\abs{p(x')}\dd x'\right] & x \gtrsim x_1 \\
+    \frac{A_F^{(2)}}{\sqrt{\abs{p(x)}}}\exp\left[\frac{1}{\hbar}\cint{x}{x_2}\abs{p(x')}\dd x'\right] + \frac{B_F^{(2)}}{\sqrt{\abs{p(x)}}}\exp\left[-\frac{1}{\hbar}\cint{x}{x_2}\abs{p(x')}\dd x'\right] & x \lesssim x_2 \\
+    \frac{A_>}{\sqrt{p(x)}}\cos\left(\frac{1}{\hbar}\cint{x}{x_1}p(x')\dd x'\right) + \frac{B_>}{\sqrt{p(x)}}\sin\left(\cint{x}{x_1}p(x')\dd x'\right) & x \gtrsim x_2
+\end{cases} \]
+Requiring the two components within the barrier to be equivalent gives
+\[ \frac{A_F^{(1)}}{\sqrt{\abs{p(x)}}}\exp\left[-\frac{1}{\hbar}\cint{x_1}{x}\abs{p(x')}\dd x'\right] = \frac{A_F^{(2)}}{\sqrt{\abs{p(x)}}}\exp\left[\frac{1}{\hbar}\cint{x}{x_2}\abs{p(x')}\dd x'\right] \]
+\begin{align*}
+    \implies \frac{A_F^{(1)}}{A_F^{(2)}} & = \exp\left[\frac{1}{\hbar}\cint{x_1}{x}\abs{p(x')}\dd x'\right]\exp\left[\frac{1}{\hbar}\cint{x}{x_2}\abs{p(x')}\dd x'\right] \\
+    & = \exp\left[\frac{1}{\hbar}\cint{x_1}{x_2}\abs{p(x')}\dd x'\right] \\
+    & = \sqrt{T_1}
+\end{align*}
+and, similarly,
+\[ \frac{B_F^{(1)}}{B_F^{(2)}} = \frac{1}{\sqrt{T_1}} \]
+Using the result from the last problem we can write the coefficients inside the barrier in terms of the external coefficients:
+\[ A_F^{(1,2)} = \frac{1}{2\sqrt{2}}(A_{<,>} + B_{<,>}) \]
+\[ B_F^{(1,2)} = \frac{1}{\sqrt{2}}(B_{<,>} - B_{<,>}) \]
+Combining these, we can write the left-interior coefficients in terms of the right-transmission region coefficients:
+\[ A_F^{(1)} = \frac{\sqrt{T_1}}{2\sqrt{2}}(A_> + B_>) \]
+\[ B_F^{(1)} = \frac{1}{\sqrt{2T_1}}(B_> - A_>) \]
+We can write the left-transmission region as a superposition of left and right going waves:
+\[ \psi_\text{WKB} = \frac{A_< - iB_<}{2}\exp\left[\frac{1}{\hbar}\cint{x}{x_1}\abs{p(x')}\dd x'\right] + \frac{A_< + iB_<}{2}\exp\left[-\frac{1}{\hbar}\cint{x}{x_1}\abs{p(x')}\dd x'\right] \quad x \lesssim x_1  \]
 
 
 \section*{Problem 3}
