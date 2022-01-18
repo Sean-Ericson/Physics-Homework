@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2022.1.17)  18 JAN 2022 13:34
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2022.1.17)  18 JAN 2022 15:18
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**d:/Programming/GitHub/Physics-Homework/632/HW2/HW_2.tex
-(d:/Programming/GitHub/Physics-Homework/632/HW2/HW_2.tex
+**d:/Programming/GitHub/Physics-Homework/632/HW3/HW_3.tex
+(d:/Programming/GitHub/Physics-Homework/632/HW3/HW_3.tex
 LaTeX2e <2021-11-15> patch level 1
 L3 programming layer <2022-01-12> (d:/Programs/texlive/2021/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2021/10/04 v1.4n Standard LaTeX document class
@@ -139,8 +139,8 @@ File: l3backend-pdftex.def 2022-01-12 L3 backend support: PDF output (pdfTeX)
 \l__pdf_internal_box=\box53
 ))
 Package: xparse 2022-01-12 L3 Experimental document command parser
-)) (./HW_2.aux)
-\openout1 = `HW_2.aux'.
+)) (./HW_3.aux)
+\openout1 = `HW_3.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 16.
 LaTeX Font Info:    ... okay on input line 16.
@@ -202,42 +202,22 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 LaTeX Font Info:    Trying to load font information for U+rsfs on input line 20.
  (d:/Programs/texlive/2021/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
-)
-Overfull \hbox (33.64703pt too wide) detected at line 32
-\OML/cmm/m/it/12  []\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ^^Y [] [] [] \OT1/cmr/m/n/12 + [] [] [] \OML/cmm/m/it/12 ;
- []
+) [1
 
-
-Overfull \hbox (66.57526pt too wide) detected at line 34
-\OML/cmm/m/it/12  [] \OMS/cmsy/m/n/12 ^^Y [] [] [] \OT1/cmr/m/n/12 + [] [] [] \OML/cmm/m/it/12 :
- []
-
-
-Overfull \hbox (30.00037pt too wide) detected at line 39
-\OML/cmm/m/it/12  [] \OMS/cmsy/m/n/12 ^^Y [] [] [] \OT1/cmr/m/n/12 + [] [] [] \OML/cmm/m/it/12 :
- []
-
-[1
-
-{d:/Programs/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Overfull \hbox (22.90889pt too wide) detected at line 46
-\OML/cmm/m/it/12  [] \OMS/cmsy/m/n/12 ^^Y [] [] [] \OT1/cmr/m/n/12 + [] [] [] \OML/cmm/m/it/12 ;
- []
-
-[2] [3] (./HW_2.aux) ) 
+{d:/Programs/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] (./HW_3.aux) ) 
 Here is how much of TeX's memory you used:
- 3383 strings out of 478286
- 49311 string characters out of 5846229
- 361982 words of memory out of 5000000
- 21573 multiletter control sequences out of 15000+600000
- 478398 words of font info for 66 fonts, out of 8000000 for 9000
+ 3400 strings out of 478286
+ 49488 string characters out of 5846229
+ 354982 words of memory out of 5000000
+ 21582 multiletter control sequences out of 15000+600000
+ 481167 words of font info for 75 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 68i,13n,77p,357b,212s stack positions out of 5000i,500n,10000p,200000b,80000s
-<d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/rsfs/rsfs5.pfb>
-Output written on HW_2.pdf (3 pages, 154296 bytes).
+ 68i,9n,77p,407b,212s stack positions out of 5000i,500n,10000p,200000b,80000s
+<d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on HW_3.pdf (2 pages, 108842 bytes).
 PDF statistics:
- 94 PDF objects out of 1000 (max. 8388607)
- 56 compressed objects within 1 object stream
+ 66 PDF objects out of 1000 (max. 8388607)
+ 39 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
