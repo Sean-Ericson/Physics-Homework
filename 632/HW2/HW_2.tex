@@ -75,8 +75,15 @@ Using the result from the last problem we can write the coefficients inside the 
 Combining these, we can write the left-interior coefficients in terms of the right-transmission region coefficients:
 \[ A_F^{(1)} = \frac{\sqrt{T_1}}{2\sqrt{2}}(A_> + B_>) \]
 \[ B_F^{(1)} = \frac{1}{\sqrt{2T_1}}(B_> - A_>) \]
-We can write the left-transmission region as a superposition of left and right going waves:
-\[ \psi_\text{WKB} = \frac{A_< - iB_<}{2}\exp\left[\frac{1}{\hbar}\cint{x}{x_1}\abs{p(x')}\dd x'\right] + \frac{A_< + iB_<}{2}\exp\left[-\frac{1}{\hbar}\cint{x}{x_1}\abs{p(x')}\dd x'\right] \quad x \lesssim x_1  \]
+We can write the transmission regions as superpositions of left and right going waves:
+\[ \psi_\text{WKB} = \frac{A_< - iB_<}{2}\exp\left[\frac{i}{\hbar}\cint{x}{x_1}p(x')\dd x'\right] + \frac{A_< + iB_<}{2}\exp\left[-\frac{i}{\hbar}\cint{x}{x_1}p(x')\dd x'\right] \quad x \lesssim x_1  \]
+\[ \psi_\text{WKB} = \frac{A_> + iB_>}{2}\exp\left[-\frac{i}{\hbar}\cint{x_2}{x}p(x')\dd x'\right] + \frac{A_> - iB_>}{2}\exp\left[\frac{i}{\hbar}\cint{x_2}{x}p(x')\dd x'\right] \quad x \gtrsim x_2  \]
+To model the action of a wave incident on the barrier from the left side, we set
+\[ A_< - iB_< = 0 \]
+The trasnmission probability is then
+\[ T = \magsq{\frac{A_> - iB_>}{A_< + iB_<}} \]
+Combining with the results above gives
+\[ T = \frac{T_1}{1 + T_1/4} \]
 
 
 \section*{Problem 3}
