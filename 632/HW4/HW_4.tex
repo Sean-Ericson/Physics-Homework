@@ -34,7 +34,22 @@ Therefore,
     \[ \comm{J_y^2}{J_x^2} + \comm{J_z^2}{J_x^2} = 0 \implies \comm{J_z^2}{J_x^2} = \comm{J_x^2}{J_y^2}\]
     Substituting the remaining values of $\alpha$ gives other two requisite equations.
 
-    \item 
+    \item First let
+    \[ J_\pm^2\ket{j,m} = c_{j,m}^\pm\ket{j,m\pm 2}. \]
+    Then, for $j = 1$,
+    \[ J_z^2(J_+^2 + J_-^2)\ket{1,1} = J_z^2J_-^2\ket{1,1} = \hbar^2c_{1,1}^-\ket{1,-1} \]
+    \[ (J_+^2 + J_-^2)J_z^2\ket{1,1} = \hbar^2J_-^2\ket{1,1} = \hbar^2c_{1,1}^-\ket{1,-1} \]
+    \[ J_z^2(J_+^2 + J_-^2)\ket{1,-1} = J_z^2J_+^2\ket{1,-1} = \hbar^2c_{1,-1}^+\ket{1,1}\]
+    \[ (J_+^2 + J_-^2)J_z^2\ket{1,-1} = \hbar^2J_+^2\ket{1,-1} = \hbar^2c_{1,-1}^+\ket{1,1} \]
+    \[ J_z^2(J_+^2 + J_-^2)\ket{1,0} = (J_+^2 + J_-^2)J_z^2\ket{1,0} = 0 \]
+    Obviously for $j=1/2$ and $j=0$ the operator vanishishes similarly to the $\ket{1,0}$ case. 
+    Therefore it is the case that, for $j\in\{0, \frac{1}{2}, 1\}$,
+    \[ \comm{J_z^2}{J_+^2 + J_-^2} = 0 \]
+    Now, since
+    \[ J_+^2 + J_-^2 = 2J_x^2 - 2J_y^2 = 2J^2 - 2J_z^2 - 4J_y^2 \]
+    we see that
+    \[ \comm{J_z^2}{J_+^2 + J_-^2} = 0 \implies \comm{J_z^2}{2J^2 - 2J_z^2 - 4J_y^2} = -4\comm{J_z^2}{J_y^2} = 0 \]
+    This combined with the result from part (a) give the desired result.
 \end{enumerate}
 
 

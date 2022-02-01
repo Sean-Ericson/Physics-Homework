@@ -277,9 +277,9 @@ INPUT d:/Programs/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm
 INPUT d:/Programs/texlive/2021/texmf-dist/fonts/tfm/public/rsfs/rsfs10.tfm
 INPUT d:/Programs/texlive/2021/texmf-dist/fonts/tfm/public/rsfs/rsfs10.tfm
 INPUT d:/Programs/texlive/2021/texmf-dist/fonts/tfm/public/rsfs/rsfs5.tfm
-INPUT d:/Programs/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmti12.tfm
 OUTPUT HW_4.pdf
 INPUT d:/Programs/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map
+INPUT d:/Programs/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmti12.tfm
 INPUT HW_4.aux
 INPUT d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 INPUT d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
