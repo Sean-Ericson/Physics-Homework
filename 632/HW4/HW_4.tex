@@ -15,50 +15,51 @@
 
 \begin{document}
 	
-\title{Homework 3}
+\title{Homework 4}
 \author{Sean Ericson \\ Phys 632}
 \maketitle
 
 \section*{Problem 1}
-In components, the cross product side of the ``bac-cab'' rule is
-\[ \left(\vec{B}\cross\vec{C}\right)_r = B_sC_t\epsilon_{str} \]
-\[ \left(\vec{A}\cross\left(\vec{B}\cross\vec{C}\right)\right)_p = A_qB_sC_t\epsilon_{str}\epsilon_{qrp} \]
-The dot product side is
-\begin{align*}
-    \left(\vec{B}\left(\vec{A}\cdot\vec{C}\right)-\vec{C}\left(\vec{A}\cdot\vec{B}\right)\right)_p & = A_tB_pC_t - A_sB_sC_p \\
-    & = A_qB_pC_t\delta_{qt} - A_qB_sC_p\delta_{qs} \\
-    & = A_qB_sC_t\delta_{qt}\delta_{ps} - A_qB_sC_t\delta_{qs}\delta_{pt} \\
-    & = A_qB_sC_t\left(\delta_{qt}\delta_{ps}-\delta_{qs}\delta_{pt}\right)
-\end{align*}
-Putting it together,
-\[ \vec{A}\cross\left(\vec{B}\cross\vec{C}\right) = \vec{B}\left(\vec{A}\cdot\vec{C}\right)-\vec{C}\left(\vec{A}\cdot\vec{B}\right) \]
-\[ \implies A_qB_sC_t\epsilon_{str}\epsilon_{qrp} = A_qB_sC_t\left(\delta_{qt}\delta_{ps}-\delta_{qs}\delta_{pt}\right) \]
-\[ \implies \epsilon_{str}\epsilon_{qrp} = \delta_{qt}\delta_{ps}-\delta_{qs}\delta_{pt} \]
-
+Firstly,
+\[ \comm{A}{J_x} = \comm{A}{J_y} = 0 \implies \comm{A}{J_+} = 0 \]
+Therefore,
+\[ \comm{A}{J_+J_-} = 0 \]
+\[ \implies \comm{A}{J_x^2 + J_y^2 -\hbar J_z} = \hbar\comm{A}{J_z} = 0 \]
 
 \section*{Problem 2}
-Using the ladder operators,
-\[ L_\pm = L_x \pm iL_y, \]
-we can write $L_x$ as
-\[ L_x = \frac{1}{2}\left(J_+ + J_-\right). \]
-The expectation value, $\avg{L_x}$, is now immediatly obvious:
-\[ \avg{L_x} = \frac{1}{2}\left(\avg{J_+} + \avg{J_-}\right) = 0. \]
-For the expectation value of $L_x^2$, we simply note that by symmetry it must have the same value as $L_y^2$. Therefore,
-\[ L_x^2 = L_y^2 = \frac{1}{2}\left(L^2 - L_z^2\right) = \frac{\hbar^2}{2}(j(j+1)-m^2) \]
-Since the first moments are zero, the variance (and hence the uncertainty) are trivial:
-\[ \sigma_x = \sigma_y = \sqrt{\frac{\hbar^2}{2}(j(j+1)-m^2)} \]
-The restriction of $m$ to the range $\{-j,...j\}$ ensures that $(j(j+1)-m^2)\geq1$, so
-\[ \sigma_x\sigma_y = \frac{\hbar^2}{2}(j(j+1)-m^2) \geq \frac{\hbar}{2} \]
+\begin{enumerate}[label=(\alph*)]
+    \item Consider $\comm{J^2}{J_\alpha^2}$. We know every individual component commutes with $J^2$, so
+    \[ \comm{J^2}{J_\alpha^2} = 0 \implies \comm{J_x^2}{J_\alpha^2} + \comm{J_y^2}{J_\alpha^2} + \comm{J_z^2}{J_\alpha^2} = 0 \]
+    When we substitute one of $\{x, y, z\}$ for $\alpha$, one of the terms above will disappear and another will be ``out of order''. For example, $\alpha = x$ gives
+    \[ \comm{J_y^2}{J_x^2} + \comm{J_z^2}{J_x^2} = 0 \implies \comm{J_z^2}{J_x^2} = \comm{J_x^2}{J_y^2}\]
+    Substituting the remaining values of $\alpha$ gives other two requisite equations.
+
+    \item 
+\end{enumerate}
+
 
 \section*{Problem 3}
-For a radial displacement, $\vec{r}\to\vec{r}+\hat{r}\dd r$,
-\[ f(r + \dd r) - f(r) = \dd r \hat{r}\cdot\nabla f \]
-\[ \implies \hat{r}\cdot\nabla f = \frac{f(r + \dd r) - f(r)}{\dd r} = \partial_rf. \]
-For a polar angular displacement, $\vec{r}\to\vec{r}+r\dd \theta \hat{\theta}$,
-\[ f(\theta + \dd\theta) - f(\theta) = r\dd \theta \hat{\theta}\nabla f \]
-\[ \implies \hat{\theta}\cdot\nabla f = \frac{1}{r}\frac{f(\theta + \dd\theta) - f(\theta)}{\dd\theta} = \frac{1}{r}\partial_\theta f. \]
-For an azimuthal angular displacement, $\vec{r}\to\vec{r}+r\sin\theta\hat{\phi}$,
-\[ f(\theta + \dd\phi) - f(\phi) = r\sin\theta\dd\phi\hat{\phi}\cdot\nabla f \]
-\[ \implies \hat{\phi}\cdot\nabla f = \frac{1}{r\sin\theta}\partial_\phi f. \]
+In the case that $l = 1/2$, we \textit{should} have that
+\[ \Theta_{1/2}^{-1/2}(\theta) = \Theta_{1/2}^{1/2}(\theta) \propto \sqrt{\sin\theta} \]
+It should also be the case that
+\[ L_+\Theta_{1/2}^{-1/2}(\theta)e^{-i\phi/2} \propto \Theta_{1/2}^{1/2}(\theta)e^{i\phi/2} \]
+However, applying $L_+$ to $\Theta_{1/2}^{-1/2}(\theta)e^{-i\phi/2}$, we see that
+\begin{align*}
+    L_+\Theta_{1/2}^{-1/2}(\theta)e^{-i\phi/2} & = \hbar e^{i\phi/2}\left(i\cot\theta\partial_\phi + \partial_\theta\right)\sqrt{\sin\theta}e^{-i\phi/2} \\
+    & = i\hbar e^{i\phi/2}\cot\theta\partial_\phi\sqrt{\sin\theta}e^{-i\phi/2} + \hbar e^{i\phi/2}\partial_\theta\sqrt{\sin\theta}e^{-i\phi/2} \\
+    & = \frac{\hbar}{2}e^{i\phi/2}\cot\theta\sqrt{\sin\theta}e^{-i\phi/2} + \frac{\hbar}{2}e^{i\phi/2}\cos\theta\sqrt{\sin\theta}e^{-i\phi/2} \\
+    & = \frac{\hbar}{2}e^{i\phi/2}\frac{\cos\theta}{\sqrt{\sin\theta}}e^{-i\phi/2}
+\end{align*}
+Which is \textit{not} proportional to $\sqrt{\sin\theta}$.
+
+\section*{Problem 4}
+\[ \ket{1 1} = \sqrt{\frac{3}{7}}\ket{2, 2; 2 -1} - \sqrt{\frac{1}{14}}\ket{2,2;1,0} - \sqrt{\frac{1}{14}}\ket{2,2;1,0} + \sqrt{\frac{3}{7}}\ket{2,2;-1,2} \]
+\[  \implies P(m_1=0 \:\text{OR}\: m_2=0) = 2\times\frac{1}{14} = \frac{1}{7} \]
+
+
+\section*{Problem 5}
+Let $\alpha = \braket{1,0;j,0}{j,0}$. The symmetry relation
+\[ \braket{j_1, m_1; j_2, m_2}{j_3, m_3} = (-1)^{j_1 + j_2 - j_3}\braket{j_1, -m_1; j_2 -m_2}{j_3, -m_3} \]
+implies that $\alpha = -\alpha$, therefore it must be that $\alpha = 0$.
 
 \end{document}
