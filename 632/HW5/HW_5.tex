@@ -45,14 +45,11 @@
     
     \item The cartesian rotation matricies about the $y$ and $z$ axes are given by 
     \[ R_y(\theta) = \mqty(\cos\theta & 0 & \sin\theta \\ 0&1&0 \\ -\sin\theta & 0 & \cos\theta) \quad R_z(\theta) = \mqty(\cos\theta & -\sin\theta & 0 \\ \sin\theta & \cos\theta & 0 \\ 0&0&1) \]
-    The Euler-angle rotation matricies, transformed into the spherical basis, are given by
-    \begin{align*}
-        R_z(-\gamma)R_y(-\beta)R_z(-\gamma) &= \\
-        UR_z(-\gamma)R_y(-\beta)R_z(-\gamma)U^\dag &= \\
-        UR_z(-\gamma)U^\dag &= \\
-        UR_y(-\beta)U^\dag &=  \\
-        UR_z(-\alpha)U^\dag &= 
-    \end{align*}
+    The composite passive-rotation operator, $P = R_z(-\gamma)R_y(-\beta)R_z(-\alpha)$, in cartesian coordinates is
+    \[ \mqty(\cos\alpha\cos\beta\cos\gamma-\sin\alpha\sin\gamma & \cos\beta\cos\gamma\sin\alpha + \cos\alpha\sin\alpha & - \cos\gamma\sin\beta \\ -\cos\gamma\sin\alpha - \cos\alpha\cos\beta\sin\gamma & \cos\alpha\cos\gamma - \cos\beta\sin\alpha\sin\gamma & \sin\beta\sin\gamma \\ \cos\alpha\cos\beta & \sin\alpha\sin\beta & \cos\beta) \]
+    Transforming to the spherical basis gives
+    \[ UPU^\dag = \mqty(\frac{1}{2}(\cos\beta - 1)e^{i\alpha}e^{-i\gamma} & \frac{1}{\sqrt{2}}\sin\beta e^{-i\gamma} & -\frac{1}{2}(1 + \cos\beta)e^{-i\alpha}e^{-i\gamma} \\ -\frac{1}{\sqrt{2}}\sin\beta e^{i\alpha} & \cos\beta & \frac{1}{\sqrt{2}}\sin\beta e^{-i\alpha} \\ -\frac{1}{2}(\cos\beta + 1)e^{i\alpha}e^{i\gamma} & -\frac{1}{\sqrt{2}}\sin\beta e^{i\gamma} & \frac{1}{2}(\cos\beta - 1)e^{-i\alpha}e^{i\gamma}) \]
+    
 \end{enumerate}
 
 
