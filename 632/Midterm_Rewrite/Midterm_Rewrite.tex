@@ -1,0 +1,65 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{mathrsfs}
+\usepackage{enumitem}
+\usepackage{physics}
+
+\newcommand{\magsq}[1]{\big|#1\big|^2}
+\newcommand{\avg}[1]{\left<#1\right>}
+\newcommand{\fullint}{\int_{-\infty}^\infty}
+\newcommand{\fullintd}[1]{\fullint\dd#1\:}
+\newcommand{\cint}[2]{\int_{#1}^{#2}}
+\newcommand{\cintd}[3]{\cint{#1}{#2}\dd#3\:}
+
+\begin{document}
+	
+\title{Midterm Rewrite}
+\author{Sean Ericson \\ Phys 632}
+\maketitle
+
+\section*{Problem 1}
+Consider, without loss of generality, $J_z = -\frac{i}{\hbar}\comm{J_x}{J_y}$. Due to the linearity and commutational invariance of the trace,
+\begin{align*}
+    \tr[J_z] &= -\frac{i}{\hbar}\tr[J_xJ_y - J_yJ_x] \\
+    & = -\frac{i}{\hbar}\left(\tr[J_xJ_y] - \tr[J_yJ_x]\right) \\
+    & = -\frac{i}{\hbar}\left(\tr[J_xJ_y] - \tr[J_xJ_y]\right) \\
+    & = 0
+\end{align*}
+
+\section*{Problem 2}
+Using the saddle-point approximation with $f(x, t) = xt-e^t$, we have
+\begin{align*}
+    \pdv{f}{t} &= x - e^t \\
+    \pdv[2]{f}{t} &= -e^t
+\end{align*}
+Therefore,
+\[ t_0 = \ln(x); \quad f_0 = f(x, t_0) = x\ln(x)-x; \quad f''_0 = \pdv[2]{f}{t}|_{t=t_0} = -x \]
+and applying the saddle-point approximation gives
+\begin{align*}
+    I(x) &\approx e^{f_0}\sqrt{\frac{2\pi}{\abs{f''_0}}} \\
+    &\approx e^{x\ln(x)-x}\sqrt{\frac{2\pi}{x}} \\
+    &\approx \sqrt{2\pi}e^{-x}x^{x-\frac{1}{2}}
+\end{align*}
+
+\section*{Problem 3}
+\begin{enumerate}[label=(\alph*)]
+    \item No, $\vec{r}$ and $\vec{p}$ are vector operators, but their components each commute amongst themselves.
+    \item \[ \vec{V}\cdot\vec{J} - \vec{J}\cdot\vec{V} = \comm{V_\alpha}{J_\alpha} = i\hbar\epsilon_{\alpha\alpha\beta}V_\beta = 0 \implies \vec{V}\cdot\vec{J} = \vec{J}\cdot\vec{V} \]
+    \item
+    \begin{align*}
+        \comm{J_\alpha}{\vec{V}\cdot\vec{J}} &= \comm{J_\alpha}{V_\beta J_\beta} \\
+        &= V_\beta\comm{J_\alpha}{J_\beta} + \comm{J_\alpha}{V_\beta}J_\beta \\
+        &= i\hbar\left(\epsilon_{\alpha\beta\gamma}V_\beta J_\gamma + \epsilon_{\alpha\beta\gamma}V_\gamma J_\beta\right) \\
+        &= 0
+    \end{align*}
+    where the last equality comes from the antisymmetry of the Levi-Civita symbol.
+    \item 
+\end{enumerate}
+
+
+\section*{Problem 4}
+
+
+\end{document}
