@@ -1,0 +1,115 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{mathrsfs}
+\usepackage{enumitem}
+\usepackage{physics}
+
+\newcommand{\magsq}[1]{\big|#1\big|^2}
+\newcommand{\avg}[1]{\left<#1\right>}
+\newcommand{\fullint}{\int_{-\infty}^\infty}
+\newcommand{\fullintd}[1]{\fullint\dd#1\:}
+\newcommand{\cint}[2]{\int_{#1}^{#2}}
+\newcommand{\cintd}[3]{\cint{#1}{#2}\dd#3\:}
+
+\begin{document}
+	
+\title{Homework 6}
+\author{Sean Ericson \\ Phys 632}
+\maketitle
+
+\section*{Problem 1}
+In terms of the $c_\pm$ amplitudes, the expectation values of the Pauli operators are
+\begin{align*}
+    \ev{\sigma_x} &= c_+^*c_- + \text{c.c.} \\
+    \ev{\sigma_y} &= -ic_+^*c_- + \text{c.c.} \\
+    \ev{\sigma_y} &= c_+^*c_+ + c_-^*c_-
+\end{align*}
+The equations of motion for the amplitudes are given by
+\begin{align*}
+    \dot{c}_+ &= -\frac{i}{2}\left(\Delta c_+ - \Omega c_-\right) \\
+    \dot{c}_- &= -\frac{i}{2}\left(\Omega^* c_+ - \Delta c_-\right)
+\end{align*}
+Combining these, we can see that
+\begin{align*}
+    \dv{t}\ev{\sigma_x} &= \dot{c}_+^* c_- + c_+^* \dot{c}_- + \text{c.c.} \\
+    &= \frac{i}{2}\left(\Delta c_+^* - \Omega^* c_-^*\right)c_- - \frac{i}{2}c_+^*\left(\Omega^*c_+ - \Delta c_-\right) + \text{c.c.} \\
+    &= -\frac{i}{2}\left(\Omega^* \magsq{c_+} - \Omega^* \magsq{c_-} - 2\Delta c_+^*c_- \right) + \text{c.c.} \\
+    &= -\Delta\ev{\sigma_y} - \Im[\sigma]\ev{\sigma_z} \\
+    \dv{t}\ev{\sigma_y} &= -i\dot{c}_+^* c_- -ic_+^*\dot{c}_- + \text{c.c.} \\
+    &= -i\left[\frac{i}{2}\left(\Delta c_+^* - \Omega^*c_-^*\right)\right] - ic_+^*\left[\frac{-i}{2}\left(\Omega^*c_+ - \Delta c_-\right)\right] \\
+    &= \frac{1}{2}\left(\Omega^*\magsq{c_+} - \Omega^*\magsq{c_-}  - 2\Delta c_+^*c_-\right) + \text{c.c.} \\
+    &= \Delta\ev{\sigma_x} - \Re[\Omega]\ev{\sigma_z} \\
+    \dv{t}\ev{\sigma_z} &= c_+^*\dot{c}_+ - c_-^*\dot{c}_- + \text{c.c.} \\
+    &= -\frac{i}{2}\left(\Delta\magsq{c_+} + \Omega c_+^* c_- - \Omega^* c_-^*c_+ - \Delta\magsq{c_-}\right) +\text{c.c.} \\
+    &= \Re[\Omega]\ev{\sigma_y} + \Im[\Omega]\ev{\sigma_x}
+\end{align*}
+This is equivalent to
+\[ \vec{P}\times\ev{\vec{\sigma}} = \mqty(\Re[\Omega]\\-\Im[\Omega]\\\Delta)\times\mqty(\ev{\sigma_x}\\\ev{\sigma_y}\\\ev{\sigma_z}) = \mqty(-\Delta\ev{\sigma_y} - \Im[\Omega]\ev{\sigma_z}\\\Delta\ev{\sigma_x}-\Re[\Omega]\ev{\sigma_z}\\\Im[\Omega]\ev{\sigma_x}+\Re[\Omega]\ev{\sigma_y}) \]
+
+\section*{Problem 2}
+Given
+\[ H = -\vec{\mu}_S\cdot\vec{B} = \frac{g_S\mu_B}{\hbar}\vec{S}\cdot\vec{B}, \]
+The equation of motion for the operator $S_\alpha$ is given by
+\begin{align*}
+    \dot{S}_\alpha &= -\frac{i}{\hbar}\comm{S_\alpha}{H} \\
+    &= -\frac{ig_S\mu_B}{\hbar^2}\comm{S_\alpha}{S_\beta B_\beta} \\
+    &= -\frac{ig_S\mu_B}{\hbar^2}\comm{S_\alpha}{S_\beta}B_\beta \\
+    &= -\frac{ig_S\mu_B}{\hbar^2}\epsilon_{\alpha\beta\gamma}S_\gamma B_\beta \\
+    &= \frac{ig_S\mu_B}{\hbar^2}\epsilon_{\alpha\beta\gamma}S_\beta B_\gamma \\
+    &= \vec{\mu}_S\times\vec{B}
+\end{align*}
+
+
+\section*{Problem 3}
+Orient the coordiante system such that $\hat{\alpha}$ points in the $\hat{z}$ direction. Then,
+\begin{align*}
+    e^{-i\vec{\alpha}\cdot\vec{S}/\hbar} &= e^{-i\alpha S_z/\hbar} \\
+    &= e^{-i\alpha\sigma_z / 2} \\
+    &= \mathbb{I} - i\frac{\alpha}{2}\sigma_z + \frac{1}{2}\left(\frac{i}{2}\alpha\sigma_z\right)^2 + \frac{1}{6}\left(\frac{i}{2}\alpha\sigma_z\right)^3 + \dots \\
+    &= \mathbb{I} - i\frac{\alpha}{2}\sigma_z - \frac{1}{2}\left(\frac{\alpha}{2}\right)^2\mathbb{I} - \frac{1}{6}\left(\frac{\alpha}{2}\right)^3\sigma_z + \dots \\
+    &= \left(\mathbb{I} - \frac{1}{2}\left(\frac{\alpha}{2}\right)^2 + \dots\right) - i\left(\frac{\alpha}{2}\sigma_z + \frac{1}{6}\left(\frac{\alpha}{2}\right)^3 + \dots\right) \\
+    &= \cos(\frac{\alpha}{2})\mathbb{I} - i\sin(\frac{\alpha}{2})\sigma_z.
+\end{align*}
+Given that the coordinate orientation was arbitrary, we have
+\[ e^{-i\vec{\alpha}\cdot\vec{S}} = \cos(\frac{\alpha}{2})\mathbb{I} - i\sin(\frac{\alpha}{2})\left(\hat{\alpha}\cdot\vec{\sigma}\right). \]
+
+
+\section*{Problem 4}
+\begin{enumerate}[label=(\alph*)]
+    \item The relevant rotation operators in the standard basis are
+    \begin{align*}
+        R_x(\pi) &= \cos(\frac{\pi}{2})\mathbb{I} - i\sin(\frac{\pi}{2})\sigma_x = \mqty(0&-i\\-i&0) \\
+        R_x(\frac{\pi}{2}) &= \cos(\frac{\pi}{4})\mathbb{I} - i\sin(\frac{\pi}{4})\sigma_x = \frac{1}{\sqrt{2}}\mqty(1&-i\\-i&1) \\
+        R_y(-\pi) &= \cos(\frac{\pi}{2})\mathbb{I} + i\sin(\frac{\pi}{2})\sigma_y = \mqty(0&1\\-1&0)
+    \end{align*}
+    Now,
+    \[ R_x(\pi)\ket{+} = \mqty(0&-i\\-i&0)\mqty(1\\0) = -i\mqty(0\\1) = -i\ket{-}. \]
+    While
+    \begin{align*}
+        R_x(\frac{\pi}{2})R_y(-\pi)R_x(\frac{\pi}{2})\ket{+} &= \frac{1}{2}\mqty(1&-i\\-i&1)\mqty(0&1\\-1&0)\mqty(1&-i\\-i&1)\mqty(1\\0) \\
+        &= -\mqty(0\\1) \\
+        &= -\ket{-}
+    \end{align*}
+    The final states are equivalent up to a $\frac{\pi}{2}$ difference in phase.
+
+    \item Taking into account the error $\epsilon$, the rotation operators are
+    \begin{align*}
+        R_x(\pi + \epsilon) &= \mqty(-\epsilon & -i\left(1 - \frac{\epsilon^2}{2}\right) \\ -i\left(1 - \frac{\epsilon^2}{2}\right) & -\epsilon ) \\
+        R_x(\frac{\pi}{2}+\epsilon) &= \frac{1}{\sqrt{2}}\mqty(1 - \epsilon - \frac{\epsilon^2}{2} & -i\left(1 + \epsilon - \frac{\epsilon^2}{2}\right) \\ -i\left(1 + \epsilon - \frac{\epsilon^2}{2}\right) & 1 - \epsilon - \frac{\epsilon^2}{2}) \\
+        R_y(-\pi + \epsilon) &= \mqty(\epsilon & 1 - \frac{\epsilon^2}{2} \\ \frac{\epsilon^2}{2} -1 & \epsilon)
+    \end{align*}
+    The single $R_x(\pi + \epsilon)$ rotation gives
+    \[ R_x(\pi + \epsilon)\ket{+} = -\epsilon\ket{+} - i(1-\frac{\epsilon^2}{2})\ket{-} \]
+    With error
+    \[ \mel{+}{R_x(\pi + \epsilon)}{+} = -\epsilon \]
+    The composite rotation is given by (to second-order in $\epsilon$)
+    \[ R_x(\pi/2 + \epsilon)R_y(-\pi + \epsilon)R_x(\pi/2 + \epsilon) = \mqty(-2\epsilon^2 & 1-i\epsilon-\frac{\epsilon^2}{2} \\ \frac{\epsilon^2}{2}-i\epsilon-1 & -2\epsilon^2) \]
+    With error
+    \[ \mel{+}{R_x(\pi/2 + \epsilon)R_y(-\pi + \epsilon)R_x(\pi/2 + \epsilon)}{+} = -2\epsilon^2 \]
+    Thus, the error of the single rotation is of order $\epsilon$, while the composite rotation's error is of order $\epsilon^2$.
+\end{enumerate}
+
+
+\end{document}

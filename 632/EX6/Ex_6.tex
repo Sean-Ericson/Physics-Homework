@@ -1,0 +1,40 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{enumitem}
+\usepackage{physics}
+
+\newcommand{\magsq}[1]{\big|#1\big|^2}
+\newcommand{\avg}[1]{\left<#1\right>}
+\newcommand{\fullint}{\int_{-\infty}^\infty}
+\newcommand{\fullintd}[1]{\fullint\dd#1\:}
+\newcommand{\cint}[2]{\int_{#1}^{#2}}
+\newcommand{\cintd}[3]{\cint{#1}{#2}\dd#3\:}
+
+\begin{document}
+	
+\title{Exercise Set 6}
+\author{Sean Ericson \\ Phys 632}
+\maketitle
+
+\section*{Exercise 1}
+\begin{align*}
+    \magsq{\ev{\vec{\sigma}}} &= \magsq{\ev{\sigma_x}} + \magsq{\ev{\sigma_y}} + \magsq{\ev{\sigma_x}} \\
+    &= \left(c_+^* c_- + c_+ c_-^*\right)^2 + \left(-ic_+^* c_- +ic_+ c_-^*\right)^2 + \left(\magsq{c_+}-\magsq{c_-}\right)^2 \\
+    &= 4\magsq{c_+}\magsq{c_-} + \left(\magsq{c_+}-\magsq{c_-}\right)^2 \\
+    &= \left(\magsq{c_+} + \magsq{c_-}\right)^2 \\
+    &= 1
+\end{align*}
+
+\section*{Exercise 2}
+\begin{enumerate}
+    \item $\ket{\psi} = \ket{+}$
+    \item $H\ket{+} = \frac{1}{\sqrt{2}}\left(\ket{+} - \ket{-}\right)$
+    \item $\frac{1}{\sqrt{2}}\left(\ket{+} - \ket{-}\right) \to \frac{1}{\sqrt{2}}\left(e^{-i\omega T}\ket{+} - \ket{-}\right)$
+    \item $\frac{1}{\sqrt{2}}\left(e^{-i\omega T}\ket{+} - \ket{-}\right) \to \frac{1}{2}\left(e^{-i\omega T} - 1\right)\ket{+} - \frac{1}{2}\left(e^{-i\omega T} + 1\right)\ket{-}$
+    \item $P_{\ket{+}} = \frac{1}{4}\left(e^{-i\omega T} - 1\right) \left(e^{i\omega T} - 1\right) = \frac{1}{2}\left(1 - \cos(\omega T)\right)$
+\end{enumerate}
+
+
+\end{document}
