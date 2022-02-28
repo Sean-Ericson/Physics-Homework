@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1646064639 "c:/Users/Admin/Documents/GitHub/Physics-Homework/632/EX7/Ex_7.tex" "Ex_7.pdf" "Ex_7" 1646064639
+["pdflatex"] 1646072989 "c:/Users/Admin/Documents/GitHub/Physics-Homework/632/EX7/Ex_7.tex" "Ex_7.pdf" "Ex_7" 1646074870
   "C:/Users/Admin/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1633365462 9715384 565b68b9956d71e4d38fa4bdfddc1659 ""
   "C:/Users/Admin/AppData/Local/MiKTeX/pdftex/config/pdftex.map" 1642192212 278015 b5ae8789d05c9394f564dcef5be6e51a ""
   "C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1233951848 1004 54797486969f23fa377b128694d548df ""
@@ -13,9 +13,11 @@
   "C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmr12.tfm" 1136765053 1288 655e228510b4c2a1abe905c368440826 ""
   "C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmr17.tfm" 1136765053 1292 296a67155bdbfc32aa9c636f21e91433 ""
   "C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmsy10.tfm" 1136765053 1124 6c73e740cf17375f03eec0ee63599741 ""
+  "C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmti12.tfm" 1136765053 1484 ed72f8f5cf654cda15ecc8e32bfcbee5 ""
   "C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb" 1247593066 32080 340ef9bf63678554ee606688e7b5339d ""
   "C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb" 1247593067 32722 d7379af29a190c3f453aba36302ff5a9 ""
   "C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb" 1247593066 32362 bc3f3eec7ab7d65fe700963d4017d32c ""
+  "C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb" 1247593067 36118 fad905eba93cff5bce1e185fe980a177 ""
   "C:/Users/Admin/AppData/Local/Programs/MiKTeX/tex/generic/iftex/iftex.sty" 1583523400 6501 4011d89d9621e0b0901138815ba5ff29 ""
   "C:/Users/Admin/AppData/Local/Programs/MiKTeX/tex/generic/iftex/ifvtex.sty" 1583523400 1057 525c2192b5febbd8c1f662c9468335bb ""
   "C:/Users/Admin/AppData/Local/Programs/MiKTeX/tex/latex/amscls/amsthm.sty" 1591020009 12594 0d51ac3a545aaaa555021326ff22a6cc ""
@@ -38,10 +40,10 @@
   "C:/Users/Admin/AppData/Local/Programs/MiKTeX/tex/latex/l3kernel/expl3.sty" 1630063990 6208 18ab2eb39b7f1285bd1aa7af7abc9309 ""
   "C:/Users/Admin/AppData/Local/Programs/MiKTeX/tex/latex/l3packages/xparse/xparse.sty" 1630064270 6566 7cee8bf5f629baa63c111395011c9378 ""
   "C:/Users/Admin/AppData/Local/Programs/MiKTeX/tex/latex/physics/physics.sty" 1356002062 29610 a9597219b282d9c78b02393dcd7d4322 ""
-  "Ex_7.aux" 1646064639 32 3985256e7290058c681f74d7a3565a19 "pdflatex"
-  "Ex_7.tex" 1646064637 574 d53224e7b158bd21f538d59bad816fab ""
-  "c:/Users/Admin/Documents/GitHub/Physics-Homework/632/EX7/Ex_7.tex" 1646064637 574 d53224e7b158bd21f538d59bad816fab ""
+  "Ex_7.aux" 1646072990 32 3985256e7290058c681f74d7a3565a19 "pdflatex"
+  "Ex_7.tex" 1646074869 1589 4fc9600199721426c5bfb6f866d55842 ""
+  "c:/Users/Admin/Documents/GitHub/Physics-Homework/632/EX7/Ex_7.tex" 1646074869 1589 4fc9600199721426c5bfb6f866d55842 ""
   (generated)
-  "Ex_7.log"
   "Ex_7.aux"
+  "Ex_7.log"
   "Ex_7.pdf"
