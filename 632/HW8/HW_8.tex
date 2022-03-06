@@ -23,12 +23,41 @@
 
 
 \section*{Problem 2}
-
+Before Alice performs her measurement, the three qubits are in the state
+\[ \ket{\psi_{\text{TAB}}} = \frac{1}{2}\left[\ket{1 1}\ket{\psi_{11}} + \ket{1 0}\ket{\psi_{10}} + \ket{01}\ket{\psi_{01}} - \ket{00}\ket{\psi_{00}}\right] \]
+where
+\begin{align*}
+    \ket{\psi_{11}} &= c_0\ket{1} + c_1\ket{0} = \sigma_x\ket{\psi_{10}} \\
+    \ket{\psi_{10}} &= c_1\ket{1} + c_0\ket{0} = \mathcal{I}\ket{\psi_{10}} \\
+    \ket{\psi_{01}} &= c_0\ket{1} - c_1\ket{0} = i\sigma_y\ket{\psi_{10}} \\
+    \ket{\psi_{00}} &= c_1\ket{1} - c_0\ket{0} = \sigma_z\ket{\psi_{10}}
+\end{align*}
+Consider the case in which Alice informs Bob that her measurement yielded $\ket{10}$. In this case, Bob performs no operations, and his state is now
+\[ \rho_B = (1-\epsilon)\dyad{\psi_{10}} + \frac{\epsilon}{3}\left(\dyad{\psi_{11}} + \dyad{\psi_{01}} + \dyad{\psi_{00}}\right) \]
+which, as a matrix is
+\[ \mqty(\magsq{c_1} + \frac{\epsilon}{3}\left(\magsq{c_0}-2\magsq{c_1}\right) & \left(1 - \frac{4}{3}\epsilon\right)c_0^*c_1 \\ \left(1 - \frac{4}{3}\epsilon\right)c_0c_1^* & \magsq{c_0} + \frac{\epsilon}{3}\left(\magsq{c_1}-2\magsq{c_0}\right)) \]
 
 \section*{Problem 3}
-
+The mean-squared separation is given by
+\begin{align*}
+    \ev{(x_A - x_B)^2} &= \ev{x^2}_A + \ev{x^2}_B - 2\ev{x}_A\ev{x}_B \mp 2\magsq{\mel{\psi_1}{x}{\psi_2}} \\
+    &= \sigma_x^2(n) + \sigma_x^2(m) \mp 2\magsq{\mel{n}{x}{m}}
+\end{align*}
+where the last term is + for fermions, - for bosons, and 0 for distinguishable particles. The position-variances are simply
+\[ \sigma_x^2 = \frac{\hbar(n + 1/2)}{m\omega_0} \]
+and the overlap is
+\begin{align*}
+    \mel{n}{x}{m} &= \fullintd{x}\frac{1}{\sqrt{\pi 2^{n+m} n!m!}}xe^{-x^2}H_n(x)H_m(x)
+\end{align*}
 
 \section*{Problem 4}
+\begin{enumerate}[label=(\alph*)]
+    \item Parahelium should have the lower energy. Since the electrons' spins are antisymmetric, their position wavefunctions must be symmetric and therefore less spread out. In the Hydrogen atom, higher energy states are more spread out, so it would seem that this more spread out case (Parahelium) should have more energy.
+    \item For the delium atom, the electrons' wavefunctions need not be symmetric or antisymmetric, so their spread should be betwen that of the para/orthohelium cases, and its energy should also be between that of para/orthohelium.
+\end{enumerate}
+
+
+\section*{Problem 5}
 
 
 \end{document}
