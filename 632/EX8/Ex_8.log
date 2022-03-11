@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.10.4)  11 MAR 2022 14:40
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.10.4)  11 MAR 2022 15:06
 entering extended mode
 **c:/Users/Admin/Documents/GitHub/Physics-Homework/632/EX8/Ex_8.tex
 (c:/Users/Admin/Documents/GitHub/Physics-Homework/632/EX8/Ex_8.tex
@@ -196,17 +196,17 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 {C:/Users/Admin/AppData/Local/MiKTeX/pdftex/config/pdftex.map}] (Ex_8.aux) ) 
 Here is how much of TeX's memory you used:
- 3148 strings out of 478927
- 42666 string characters out of 2852535
- 345488 words of memory out of 3000000
- 21014 multiletter control sequences out of 15000+600000
- 407232 words of font info for 42 fonts, out of 8000000 for 9000
+ 3174 strings out of 478927
+ 42943 string characters out of 2852535
+ 349488 words of memory out of 3000000
+ 21032 multiletter control sequences out of 15000+600000
+ 411926 words of font info for 60 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 70i,6n,81p,368b,212s stack positions out of 5000i,500n,10000p,200000b,80000s
-<C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb>
-Output written on Ex_8.pdf (1 page, 34492 bytes).
+ 70i,6n,81p,603b,212s stack positions out of 5000i,500n,10000p,200000b,80000s
+<C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on Ex_8.pdf (1 page, 88447 bytes).
 PDF statistics:
- 21 PDF objects out of 1000 (max. 8388607)
+ 46 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
