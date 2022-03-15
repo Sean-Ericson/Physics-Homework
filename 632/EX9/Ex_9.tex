@@ -1,0 +1,30 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{enumitem}
+\usepackage{physics}
+
+\newcommand{\magsq}[1]{\big|#1\big|^2}
+\newcommand{\avg}[1]{\left<#1\right>}
+\newcommand{\fullint}{\int_{-\infty}^\infty}
+\newcommand{\fullintd}[1]{\fullint\dd#1\:}
+\newcommand{\cint}[2]{\int_{#1}^{#2}}
+\newcommand{\cintd}[3]{\cint{#1}{#2}\dd#3\:}
+
+\begin{document}
+	
+\title{Exercise Set 9}
+\author{Sean Ericson \\ Phys 632}
+\maketitle
+
+\section*{Exercise 1}
+\begin{enumerate}[label=(\alph*)]
+    \item The $\{\ket{0}, \ket{1}\}$ basis is already defined such that $\ket{\psi_1}$ and $\ket{\psi_2}$ are equally spaced about $\ket{0}$. In the case that $p_0 = p_1$, the $Q$ matrix is proportional to $\sigma_x$, so it's eignevectors are $\ket{0}\pm\ket{1}$, which are \textit{also} equally spaced about $\ket{0}$, so they must also be equally spaced about $\ket{\psi_1}$ and $\ket{\psi_2}$.
+    \item Q is still Hermitian, so its distinct eigenvalues correspond to orthogonal eignevectors. To see that the $\Pi_0$ axis should be closer to $\ket{\psi_0}$ than $\Pi_1$ is to $\ket{\psi_1}$ (in the case that $p_0 > p_1$), consider the edge-case of a vanishingly small $p_1$. In this case, the problem of state ``descrimination'' is more of a problem of state ``confirmation''; merely measure the state by projecting onto the expected state. If the measurment fails, it certianly was not in the expected state.
+\end{enumerate}
+
+\section*{Exercise 2}
+The POVM element for the inconclusive result has the form $\mathcal{I} - \dyad{+} - \dyad{-}$. Since $\ket{+}$ and $\ket{-}$ are linearly independent pure states, subtracting them effectively subtracts all the `purity' from the state, leaving the ``I know nothing'' state. Thus, no more information may be extracted by further measurement.
+
+\end{document}
