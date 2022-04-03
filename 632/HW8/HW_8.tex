@@ -34,9 +34,19 @@ Now, neglecting units for the time being,
 Letting $z = \e^{-1}$ and applying Mehler's formula gives
 \begin{align*}
     \rho(x,x') &= \frac{1}{\sqrt{\pi}}\frac{1 - \e^{-1}}{\sqrt{1 - \e^{-2}}}e^{-(x^2 + (x')^2)/2}\exp\left[\frac{2xx'\e^{-1} - (x^2 + (x')^2)\e^{-2}}{1 - \e^{-2}}\right] \\
-    &= \frac{1}{\sqrt{\pi}}\frac{1 - \e^{-1}}{\sqrt{1 - \e^{-2}}}\exp\left[\frac{2xx'}{\e^{1} - \e^{-1}} - (x^2 + (x')^2)\left(\frac{\e^{-1}}{\e^1 - \e^{-1}} + \frac{1}{2}\right)\right] \\
-    &= \frac{1}{\sqrt{\pi}}\frac{1 - \e^{-1}}{\sqrt{1 - \e^{-2}}}\exp[xx'\csch(\beta\hbar\omega) - \frac{1}{2}(x^2 + (x')^2)\coth(\beta\hbar\omega)]
+    &= \frac{1}{\sqrt{\pi}}\frac{\e^{\frac{1}{2}}(\e^{\frac{1}{2}} - \e^{-\frac{1}{2}})}{\e^{\frac{1}{2}}\sqrt{\e^1 - \e^{-1}}}\exp\left[\frac{2xx'}{\e^{1} - \e^{-1}} - (x^2 + (x')^2)\left(\frac{\e^{-1}}{\e^1 - \e^{-1}} + \frac{1}{2}\right)\right] \\
+    &= \frac{1}{\sqrt{\pi}}\frac{\e^{\frac{1}{2}} - \e^{-\frac{1}{2}}}{\sqrt{(\e^{\frac{1}{2}}-\e^{-\frac{1}{2}})(\e^{\frac{1}{2}}+\e^{-\frac{1}{2}})}}\exp[xx'\csch(\beta\hbar\omega) - \frac{1}{2}(x^2 + (x')^2)\coth(\beta\hbar\omega)] \\
+    &= \frac{1}{\sqrt{\pi\coth(\beta\hbar\omega/2)}}\exp[xx'\csch(\beta\hbar\omega) - \frac{1}{2}(x^2 + (x')^2)\coth(\beta\hbar\omega)] \\
 \end{align*}
+Restoring units,
+\[ \rho(x,x') = \frac{1}{\sqrt{\pi x_s^2 \coth(\beta\hbar\omega/2)}}\exp[\frac{xx'}{x_s^2}\csch(\beta\hbar\omega) - \frac{(x^2 + (x')^2))}{2x_s^2}\coth(\beta\hbar\omega)] \]
+For the position uncertainty, $\rho(x,x)$ is a gaussian, so we can immediately read off the  uncertainty as
+\[ \sigma_x = \sqrt{\frac{1}{2}x_s^2\coth(\beta\hbar\omega/2)} = \sqrt{\frac{\hbar\coth(\beta\hbar\omega/2)}{2m\omega}} \]
+As $T\to 0$, this becomes the typical harmonic oscillator ground state position uncertainty,
+\[ \sigma_x = \sqrt{\frac{\hbar}{2m\omega}}. \]
+As $T\to\inf$, $\coth(\beta\hbar\omega/2)\to 2/\beta\hbar\omega$, and the uncertainty approaches
+\[ \sigma_x = \sqrt{\frac{k_BT}{m\omega^2}} \]
+as expexted by the equipartition theorem, $\frac{1}{2}m\omega^2\sigma_x^2 = \frac{1}{2}k_bT$.
 
 
 \section*{Problem 2}
