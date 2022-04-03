@@ -1,8 +1,8 @@
 # Fdb version 3
-["pdflatex"] 1648945974 "d:/Programming/GitHub/Physics-Homework/633/EX1/Ex_1.tex" "Ex_1.pdf" "Ex_1" 1648945974
-  "Ex_1.aux" 1648945974 32 3985256e7290058c681f74d7a3565a19 "pdflatex"
-  "Ex_1.tex" 1648945972 1875 7a3d09fe43564e6eae1c296452c07eb1 ""
-  "d:/Programming/GitHub/Physics-Homework/633/EX1/Ex_1.tex" 1648945972 1875 7a3d09fe43564e6eae1c296452c07eb1 ""
+["pdflatex"] 1648954330 "d:/Programming/GitHub/Physics-Homework/633/EX1/Ex_1.tex" "Ex_1.pdf" "Ex_1" 1648954331
+  "Ex_1.aux" 1648954331 32 044b7f8fc9779af7531264e0c5c84b6d "pdflatex"
+  "Ex_1.tex" 1648954330 2776 5b9ffee96c99f2953430c20092e2a80a ""
+  "d:/Programming/GitHub/Physics-Homework/633/EX1/Ex_1.tex" 1648954330 2776 5b9ffee96c99f2953430c20092e2a80a ""
   "d:/Programs/texlive/2021/texmf-dist/fonts/map/fontname/texfonts.map" 1642479329 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "d:/Programs/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1642477776 1004 54797486969f23fa377b128694d548df ""
   "d:/Programs/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1642477776 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -25,7 +25,6 @@
   "d:/Programs/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmti12.tfm" 1642478462 1484 ed72f8f5cf654cda15ecc8e32bfcbee5 ""
   "d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb" 1642477776 32080 340ef9bf63678554ee606688e7b5339d ""
   "d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb" 1642477776 36741 0ee9e374ec3e30da87cdfb0ea3575226 ""
-  "d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb" 1642477776 35469 dcf3a5f2fc1862f5952e3ee5eb1d98c4 ""
   "d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb" 1642477776 32722 d7379af29a190c3f453aba36302ff5a9 ""
   "d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb" 1642477776 32362 bc3f3eec7ab7d65fe700963d4017d32c ""
   "d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb" 1642477776 32726 39f0f9e62e84beb801509898a605dbd5 ""
