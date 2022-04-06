@@ -23,6 +23,12 @@
 \section*{Problem 1}
 Let's begin with the purified state, $\ket{\psi_\text{CM}}$ (where ``C'' stands for ``contestant'' and ``M'' stands for ``Monty'')
 \[ \ket{\psi_\text{CM}} = \frac{1}{\sqrt{3}}\left(\ket{1}\ket{1} + \ket{2}\ket{2} + \ket{3}\ket{3}\right)\]
+The contestant's selection of door 1 induces the transformation
+\begin{align*}
+     \ket{\psi_\text{CM}} \to& \frac{1}{\sqrt{3}}\left[\ket{1}\left(\frac{\ket{2}+\ket{3}}{\sqrt{2}}\right) + \ket{2}\ket{3} + \ket{3}\ket{2}\right] \\
+     &= \frac{1}{\sqrt{6}}\ket{1}\ket{2} + \frac{1}{\sqrt{6}}\ket{1}\ket{3} + \frac{1}{\sqrt{3}}\ket{2}\ket{3} + \frac{1}{\sqrt{3}}\ket{3}\ket{2} \\
+     &= \left(\frac{1}{\sqrt{6}}\ket{1} + \frac{1}{\sqrt{3}}\ket{2}\right)\ket{2} + \left(\frac{1}{\sqrt{6}}\ket{1} + \frac{1}{\sqrt{3}}\ket{2}\right)\ket{3}
+\end{align*}
 
 
 \section*{Problem 2}

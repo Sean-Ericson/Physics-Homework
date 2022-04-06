@@ -1,288 +1,128 @@
-PWD d:/Programming/GitHub/Physics-Homework/633/HW1
-INPUT d:/Programs/texlive/2021/texmf.cnf
-INPUT d:/Programs/texlive/2021/texmf-dist/web2c/texmf.cnf
-INPUT d:/Programs/texlive/2021/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT d:/Programming/GitHub/Physics-Homework/633/HW1/HW_1.tex
+PWD d:/Programming/Physics-Homework/633/HW1
+INPUT C:/Users/Sean/AppData/Local/MiKTeX/2.9/miktex/data/le/pdftex/pdflatex.fmt
+INPUT d:/Programming/Physics-Homework/633/HW1/HW_1.tex
 OUTPUT HW_1.log
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/base/article.cls
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/base/article.cls
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/base/article.cls
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/base/article.cls
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/base/article.cls
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/base/article.cls
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/base/article.cls
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/base/article.cls
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/base/article.cls
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/base/article.cls
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/base/article.cls
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/base/size12.clo
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/base/size12.clo
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/base/size12.clo
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/base/size12.clo
-INPUT d:/Programs/texlive/2021/texmf-dist/fonts/map/fontname/texfonts.map
-INPUT d:/Programs/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/geometry/geometry.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/geometry/geometry.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/geometry/geometry.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/geometry/geometry.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/geometry/geometry.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/geometry/geometry.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/geometry/geometry.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/geometry/geometry.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/geometry/geometry.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/geometry/geometry.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/geometry/geometry.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/graphics/keyval.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/graphics/keyval.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/graphics/keyval.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/graphics/keyval.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/graphics/keyval.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/graphics/keyval.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/graphics/keyval.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/graphics/keyval.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/graphics/keyval.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/graphics/keyval.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/graphics/keyval.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/generic/iftex/ifvtex.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/generic/iftex/ifvtex.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/generic/iftex/ifvtex.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/generic/iftex/ifvtex.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/generic/iftex/ifvtex.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/generic/iftex/ifvtex.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/generic/iftex/ifvtex.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/generic/iftex/ifvtex.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/generic/iftex/ifvtex.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/generic/iftex/ifvtex.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/generic/iftex/ifvtex.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/generic/iftex/iftex.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/generic/iftex/iftex.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/generic/iftex/iftex.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/generic/iftex/iftex.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/generic/iftex/iftex.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/generic/iftex/iftex.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/generic/iftex/iftex.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/generic/iftex/iftex.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/generic/iftex/iftex.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/generic/iftex/iftex.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/generic/iftex/iftex.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/amsmath/amsmath.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/amsmath/amsmath.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/amsmath/amsmath.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/amsmath/amsmath.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/amsmath/amsmath.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/amsmath/amsmath.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/amsmath/amsmath.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/amsmath/amsmath.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/amsmath/amsmath.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/amsmath/amsmath.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/amsmath/amsmath.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/amsmath/amsopn.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/amsmath/amsopn.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/amsmath/amstext.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/amsmath/amstext.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/amsmath/amstext.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/amsmath/amstext.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/amsmath/amstext.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/amsmath/amstext.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/amsmath/amstext.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/amsmath/amstext.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/amsmath/amstext.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/amsmath/amstext.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/amsmath/amstext.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/amsmath/amsgen.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/amsmath/amsgen.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/amsmath/amsgen.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/amsmath/amsgen.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/amsmath/amsgen.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/amsmath/amsgen.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/amsmath/amsgen.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/amsmath/amsgen.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/amsmath/amsgen.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/amsmath/amsgen.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/amsmath/amsgen.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/amsmath/amsbsy.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/amsmath/amsbsy.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/amsmath/amsbsy.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/amsmath/amsbsy.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/amsmath/amsbsy.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/amsmath/amsbsy.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/amsmath/amsbsy.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/amsmath/amsbsy.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/amsmath/amsbsy.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/amsmath/amsbsy.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/amsmath/amsbsy.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/amsmath/amsgen.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/amsmath/amsopn.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/amsmath/amsopn.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/amsmath/amsopn.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/amsmath/amsopn.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/amsmath/amsopn.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/amsmath/amsopn.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/amsmath/amsopn.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/amsmath/amsopn.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/amsmath/amsopn.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/amsmath/amsopn.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/amsmath/amsopn.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/amsmath/amsgen.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/amscls/amsthm.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/amscls/amsthm.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/amscls/amsthm.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/amscls/amsthm.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/amscls/amsthm.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/amscls/amsthm.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/amscls/amsthm.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/amscls/amsthm.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/amscls/amsthm.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/amscls/amsthm.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/amscls/amsthm.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/amsfonts/amssymb.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/amsfonts/amssymb.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/amsfonts/amssymb.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/amsfonts/amssymb.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/amsfonts/amssymb.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/amsfonts/amssymb.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/amsfonts/amssymb.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/amsfonts/amssymb.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/amsfonts/amssymb.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/amsfonts/amssymb.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/amsfonts/amssymb.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/amsfonts/amsfonts.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/amsfonts/amsfonts.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/amsfonts/amsfonts.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/amsfonts/amsfonts.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/amsfonts/amsfonts.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/amsfonts/amsfonts.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/amsfonts/amsfonts.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/amsfonts/amsfonts.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/amsfonts/amsfonts.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/amsfonts/amsfonts.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/amsfonts/amsfonts.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/jknapltx/mathrsfs.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/jknapltx/mathrsfs.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/jknapltx/mathrsfs.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/jknapltx/mathrsfs.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/jknapltx/mathrsfs.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/jknapltx/mathrsfs.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/jknapltx/mathrsfs.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/jknapltx/mathrsfs.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/jknapltx/mathrsfs.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/jknapltx/mathrsfs.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/jknapltx/mathrsfs.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/enumitem/enumitem.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/enumitem/enumitem.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/enumitem/enumitem.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/enumitem/enumitem.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/enumitem/enumitem.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/enumitem/enumitem.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/enumitem/enumitem.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/enumitem/enumitem.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/enumitem/enumitem.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/enumitem/enumitem.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/enumitem/enumitem.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/physics/physics.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/physics/physics.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/physics/physics.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/physics/physics.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/physics/physics.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/physics/physics.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/physics/physics.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/physics/physics.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/physics/physics.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/physics/physics.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/physics/physics.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/l3kernel/expl3.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/l3kernel/expl3.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/l3kernel/expl3.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/l3kernel/expl3.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/l3kernel/expl3.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/l3kernel/expl3.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/l3kernel/expl3.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/l3kernel/expl3.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/l3kernel/expl3.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/l3kernel/expl3.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/l3kernel/expl3.sty
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/amsmath/amsmath.sty
-INPUT ./HW_1.aux
+INPUT D:/Programs/MiKTeX 2.9/tex/latex/base/article.cls
+INPUT D:/Programs/MiKTeX 2.9/tex/latex/base/article.cls
+INPUT D:/Programs/MiKTeX 2.9/tex/latex/base/size12.clo
+INPUT D:/Programs/MiKTeX 2.9/tex/latex/base/size12.clo
+INPUT D:/Programs/MiKTeX 2.9/fonts/tfm/public/cm/cmr12.tfm
+INPUT D:/Programs/MiKTeX 2.9/tex/latex/geometry/geometry.sty
+INPUT D:/Programs/MiKTeX 2.9/tex/latex/geometry/geometry.sty
+INPUT D:/Programs/MiKTeX 2.9/tex/latex/graphics/keyval.sty
+INPUT D:/Programs/MiKTeX 2.9/tex/latex/graphics/keyval.sty
+INPUT D:/Programs/MiKTeX 2.9/tex/generic/oberdiek/ifpdf.sty
+INPUT D:/Programs/MiKTeX 2.9/tex/generic/oberdiek/ifpdf.sty
+INPUT D:/Programs/MiKTeX 2.9/tex/generic/oberdiek/ifvtex.sty
+INPUT D:/Programs/MiKTeX 2.9/tex/generic/oberdiek/ifvtex.sty
+INPUT D:/Programs/MiKTeX 2.9/tex/generic/ifxetex/ifxetex.sty
+INPUT D:/Programs/MiKTeX 2.9/tex/generic/ifxetex/ifxetex.sty
+INPUT D:/Programs/MiKTeX 2.9/tex/latex/geometry/geometry.cfg
+INPUT D:/Programs/MiKTeX 2.9/tex/latex/geometry/geometry.cfg
+INPUT D:/Programs/MiKTeX 2.9/tex/latex/amsmath/amsmath.sty
+INPUT D:/Programs/MiKTeX 2.9/tex/latex/amsmath/amsmath.sty
+INPUT D:/Programs/MiKTeX 2.9/tex/latex/amsmath/amstext.sty
+INPUT D:/Programs/MiKTeX 2.9/tex/latex/amsmath/amstext.sty
+INPUT D:/Programs/MiKTeX 2.9/tex/latex/amsmath/amsgen.sty
+INPUT D:/Programs/MiKTeX 2.9/tex/latex/amsmath/amsgen.sty
+INPUT D:/Programs/MiKTeX 2.9/tex/latex/amsmath/amsbsy.sty
+INPUT D:/Programs/MiKTeX 2.9/tex/latex/amsmath/amsbsy.sty
+INPUT D:/Programs/MiKTeX 2.9/tex/latex/amsmath/amsopn.sty
+INPUT D:/Programs/MiKTeX 2.9/tex/latex/amsmath/amsopn.sty
+INPUT D:/Programs/MiKTeX 2.9/tex/latex/amscls/amsthm.sty
+INPUT D:/Programs/MiKTeX 2.9/tex/latex/amscls/amsthm.sty
+INPUT D:/Programs/MiKTeX 2.9/tex/latex/amsfonts/amssymb.sty
+INPUT D:/Programs/MiKTeX 2.9/tex/latex/amsfonts/amssymb.sty
+INPUT D:/Programs/MiKTeX 2.9/tex/latex/amsfonts/amsfonts.sty
+INPUT D:/Programs/MiKTeX 2.9/tex/latex/amsfonts/amsfonts.sty
+INPUT D:/Programs/MiKTeX 2.9/tex/latex/jknappen/mathrsfs.sty
+INPUT D:/Programs/MiKTeX 2.9/tex/latex/jknappen/mathrsfs.sty
+INPUT D:/Programs/MiKTeX 2.9/tex/latex/enumitem/enumitem.sty
+INPUT D:/Programs/MiKTeX 2.9/tex/latex/enumitem/enumitem.sty
+INPUT D:/Programs/MiKTeX 2.9/tex/latex/physics/physics.sty
+INPUT D:/Programs/MiKTeX 2.9/tex/latex/physics/physics.sty
+INPUT D:/Programs/MiKTeX 2.9/tex/latex/l3packages/xparse/xparse.sty
+INPUT D:/Programs/MiKTeX 2.9/tex/latex/l3packages/xparse/xparse.sty
+INPUT D:/Programs/MiKTeX 2.9/tex/latex/l3kernel/expl3.sty
+INPUT D:/Programs/MiKTeX 2.9/tex/latex/l3kernel/expl3.sty
+INPUT D:/Programs/MiKTeX 2.9/tex/latex/l3kernel/expl3-code.tex
+INPUT D:/Programs/MiKTeX 2.9/tex/latex/l3kernel/expl3-code.tex
+INPUT D:/Programs/MiKTeX 2.9/fonts/tfm/public/cm/cmr10.tfm
+INPUT D:/Programs/MiKTeX 2.9/fonts/tfm/public/cm/cmr10.tfm
+INPUT D:/Programs/MiKTeX 2.9/fonts/tfm/public/cm/cmr10.tfm
+INPUT D:/Programs/MiKTeX 2.9/fonts/tfm/public/cm/cmr10.tfm
+INPUT D:/Programs/MiKTeX 2.9/fonts/tfm/public/cm/cmr10.tfm
+INPUT D:/Programs/MiKTeX 2.9/fonts/tfm/public/cm/cmr10.tfm
+INPUT D:/Programs/MiKTeX 2.9/fonts/tfm/public/cm/cmr10.tfm
+INPUT D:/Programs/MiKTeX 2.9/fonts/tfm/public/cm/cmr10.tfm
+INPUT D:/Programs/MiKTeX 2.9/fonts/tfm/public/cm/cmr10.tfm
+INPUT D:/Programs/MiKTeX 2.9/fonts/tfm/public/cm/cmr10.tfm
+INPUT D:/Programs/MiKTeX 2.9/tex/generic/unicode-data/UnicodeData.txt
+INPUT D:/Programs/MiKTeX 2.9/tex/generic/unicode-data/UnicodeData.txt
+INPUT nul:.tex
+INPUT nul:.tex
+INPUT D:/Programs/MiKTeX 2.9/tex/latex/l3kernel/l3pdfmode.def
+INPUT D:/Programs/MiKTeX 2.9/tex/latex/l3kernel/l3pdfmode.def
 INPUT HW_1.aux
 INPUT HW_1.aux
 OUTPUT HW_1.aux
-INPUT d:/Programs/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmr17.tfm
-INPUT d:/Programs/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
-INPUT d:/Programs/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm
-INPUT d:/Programs/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
-INPUT d:/Programs/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmex10.tfm
-INPUT d:/Programs/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd
-INPUT d:/Programs/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
-INPUT d:/Programs/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
-INPUT d:/Programs/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam7.tfm
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd
-INPUT d:/Programs/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
-INPUT d:/Programs/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
-INPUT d:/Programs/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/jknapltx/ursfs.fd
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/jknapltx/ursfs.fd
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/jknapltx/ursfs.fd
-INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/jknapltx/ursfs.fd
-INPUT d:/Programs/texlive/2021/texmf-dist/fonts/tfm/public/rsfs/rsfs10.tfm
-INPUT d:/Programs/texlive/2021/texmf-dist/fonts/tfm/public/rsfs/rsfs10.tfm
-INPUT d:/Programs/texlive/2021/texmf-dist/fonts/tfm/public/rsfs/rsfs7.tfm
-INPUT d:/Programs/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmr17.tfm
-INPUT d:/Programs/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
-INPUT d:/Programs/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmr8.tfm
-INPUT d:/Programs/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmr6.tfm
-INPUT d:/Programs/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm
-INPUT d:/Programs/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmmi8.tfm
-INPUT d:/Programs/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmmi6.tfm
-INPUT d:/Programs/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
-INPUT d:/Programs/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmsy8.tfm
-INPUT d:/Programs/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmsy6.tfm
-INPUT d:/Programs/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmex10.tfm
-INPUT d:/Programs/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm
-INPUT d:/Programs/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
-INPUT d:/Programs/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
-INPUT d:/Programs/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
-INPUT d:/Programs/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam7.tfm
-INPUT d:/Programs/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
-INPUT d:/Programs/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
-INPUT d:/Programs/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
-INPUT d:/Programs/texlive/2021/texmf-dist/fonts/tfm/public/rsfs/rsfs10.tfm
-INPUT d:/Programs/texlive/2021/texmf-dist/fonts/tfm/public/rsfs/rsfs10.tfm
-INPUT d:/Programs/texlive/2021/texmf-dist/fonts/tfm/public/rsfs/rsfs5.tfm
+INPUT D:/Programs/MiKTeX 2.9/fonts/tfm/public/cm/cmr17.tfm
+INPUT D:/Programs/MiKTeX 2.9/fonts/tfm/public/cm/cmr12.tfm
+INPUT D:/Programs/MiKTeX 2.9/fonts/tfm/public/cm/cmmi12.tfm
+INPUT D:/Programs/MiKTeX 2.9/fonts/tfm/public/cm/cmsy10.tfm
+INPUT D:/Programs/MiKTeX 2.9/fonts/tfm/public/cm/cmex10.tfm
+INPUT D:/Programs/MiKTeX 2.9/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
+INPUT D:/Programs/MiKTeX 2.9/tex/latex/amsfonts/umsa.fd
+INPUT D:/Programs/MiKTeX 2.9/tex/latex/amsfonts/umsa.fd
+INPUT D:/Programs/MiKTeX 2.9/fonts/tfm/public/amsfonts/symbols/msam10.tfm
+INPUT D:/Programs/MiKTeX 2.9/fonts/tfm/public/amsfonts/symbols/msam10.tfm
+INPUT D:/Programs/MiKTeX 2.9/fonts/tfm/public/amsfonts/symbols/msam7.tfm
+INPUT D:/Programs/MiKTeX 2.9/tex/latex/amsfonts/umsb.fd
+INPUT D:/Programs/MiKTeX 2.9/tex/latex/amsfonts/umsb.fd
+INPUT D:/Programs/MiKTeX 2.9/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
+INPUT D:/Programs/MiKTeX 2.9/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
+INPUT D:/Programs/MiKTeX 2.9/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
+INPUT D:/Programs/MiKTeX 2.9/tex/latex/jknappen/ursfs.fd
+INPUT D:/Programs/MiKTeX 2.9/tex/latex/jknappen/ursfs.fd
+INPUT C:/Users/Sean/AppData/Local/MiKTeX/2.9/fonts/tfm/public/rsfs/rsfs10.tfm
+INPUT C:/Users/Sean/AppData/Local/MiKTeX/2.9/fonts/tfm/public/rsfs/rsfs10.tfm
+INPUT C:/Users/Sean/AppData/Local/MiKTeX/2.9/fonts/tfm/public/rsfs/rsfs7.tfm
+INPUT D:/Programs/MiKTeX 2.9/fonts/tfm/public/cm/cmr17.tfm
+INPUT D:/Programs/MiKTeX 2.9/fonts/tfm/public/cm/cmbx12.tfm
+INPUT D:/Programs/MiKTeX 2.9/fonts/tfm/public/cm/cmr8.tfm
+INPUT D:/Programs/MiKTeX 2.9/fonts/tfm/public/cm/cmr6.tfm
+INPUT D:/Programs/MiKTeX 2.9/fonts/tfm/public/cm/cmmi12.tfm
+INPUT D:/Programs/MiKTeX 2.9/fonts/tfm/public/cm/cmmi8.tfm
+INPUT D:/Programs/MiKTeX 2.9/fonts/tfm/public/cm/cmmi6.tfm
+INPUT D:/Programs/MiKTeX 2.9/fonts/tfm/public/cm/cmsy10.tfm
+INPUT D:/Programs/MiKTeX 2.9/fonts/tfm/public/cm/cmsy8.tfm
+INPUT D:/Programs/MiKTeX 2.9/fonts/tfm/public/cm/cmsy6.tfm
+INPUT D:/Programs/MiKTeX 2.9/fonts/tfm/public/cm/cmex10.tfm
+INPUT D:/Programs/MiKTeX 2.9/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm
+INPUT D:/Programs/MiKTeX 2.9/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
+INPUT D:/Programs/MiKTeX 2.9/fonts/tfm/public/amsfonts/symbols/msam10.tfm
+INPUT D:/Programs/MiKTeX 2.9/fonts/tfm/public/amsfonts/symbols/msam10.tfm
+INPUT D:/Programs/MiKTeX 2.9/fonts/tfm/public/amsfonts/symbols/msam7.tfm
+INPUT D:/Programs/MiKTeX 2.9/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
+INPUT D:/Programs/MiKTeX 2.9/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
+INPUT D:/Programs/MiKTeX 2.9/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
+INPUT C:/Users/Sean/AppData/Local/MiKTeX/2.9/fonts/tfm/public/rsfs/rsfs10.tfm
+INPUT C:/Users/Sean/AppData/Local/MiKTeX/2.9/fonts/tfm/public/rsfs/rsfs10.tfm
+INPUT C:/Users/Sean/AppData/Local/MiKTeX/2.9/fonts/tfm/public/rsfs/rsfs5.tfm
 OUTPUT HW_1.pdf
-INPUT d:/Programs/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map
+INPUT C:/Users/Sean/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map
 INPUT HW_1.aux
-INPUT d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
-INPUT d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb
-INPUT d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb
-INPUT d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb
-INPUT d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb
-INPUT d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
+INPUT D:/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb
+INPUT D:/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb
+INPUT D:/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb
+INPUT D:/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb
+INPUT D:/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb
+INPUT D:/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb
+INPUT D:/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb
+INPUT D:/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb
+INPUT D:/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb
+INPUT D:/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb
+INPUT D:/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb
+INPUT D:/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb
+INPUT D:/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb
+INPUT D:/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb
