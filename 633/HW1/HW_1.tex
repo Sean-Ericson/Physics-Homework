@@ -113,7 +113,7 @@ Now let's handle the trace of each term individually
 \end{align*}
 Putting it all together we have
 \[ \Tr[\Delta_4] = \sum_{\alpha,\beta,\gamma\neq 0}\frac{V_{0\alpha}V_{\alpha\beta}V_{\beta\gamma}V_{\gamma 0}}{E_{0\alpha}E_{0\beta}E_{0\gamma}} -\sum_{\alpha,\beta\neq 0} \frac{\magsq{V_{0\alpha}}\magsq{V_{0\beta}}}{E_{0\alpha}^2E_{0\beta}} -V_{00}\sum_{\alpha,\beta\neq 0}\left[\frac{V_{0\alpha}V_{\alpha\beta}V_{\beta 0}}{E_{0\alpha}E_{0\beta}^2}+\frac{V_{0\alpha}V_{\alpha\beta}V_{\beta 0}}{E_{0\alpha}^2E_{0\beta}}\right] + V_{00}^2\sum_{\alpha\neq 0}\frac{\magsq{V_{0\alpha}}}{E_{0\alpha}^3} \]
-In the case that $\Tr[\Delta_1] = \Tr[\Delta_2] = \Tr[\Delta_3] = 0$ this reduces to
+In the case that $\Tr[\Delta_1] = \Tr[\Delta_2] = \Tr[\Delta_3] = 0$ this reduces to just the first term:
 \[ \Tr[\Delta_4] = \sum_{\alpha,\beta,\gamma\neq 0}\frac{V_{0\alpha}V_{\alpha\beta}V_{\beta\gamma}V_{\gamma 0}}{E_{0\alpha}E_{0\beta}E_{0\gamma}} \]
 
 
@@ -135,7 +135,32 @@ so
 
 \section*{Problem 5}
 \begin{enumerate}[label=(\alph*)]
+    \item For the hydrogen atom we have $n=-1$, so
+    \[ \ev{T} = -\frac{1}{2}\ev{v} \implies E_n = \ev{T}_n + \ev{V}_n = \frac{1}{2}\ev{V}_n \]
+    \[ \implies -\frac{\alpha^2\mu c^2}{2n^2} = \frac{\hbar c \alpha}{2}\ev{r^{-1}} \]
+    \[ \implies \ev{r^{-1}} = \frac{\alpha\mu c}{\hbar n^2} = \frac{1}{a_0n^2} \]
+
+    \item Given $H = \frac{p_r^2}{2m_e} + \frac{\hbar^2L(L+1)}{2m_er^2} - \frac{\hbar c \alpha}{r}$, $E_n = -\frac{\alpha^2\mu c^2}{2n^2}$,
+    \[ \partial_\alpha E = -\frac{\alpha\mu c^2}{n^2} \]
+    \[ \ev{\partial_\alpha H} = \ev{-\frac{\hbar c}{r}} = -\hbar c \ev{r^{-1}} \]
+    \[ \partial_\alpha E = \ev{\partial_\alpha H} \implies \ev{r^{-1}} = \frac{\alpha\mu c}{\hbar n^2} = \frac{1}{a_0 n^2} \]
+
     \item 
+    \[ \partial_L E = \partial_L \left(-\frac{\alpha^2\mu c^2}{2(L+k)^2}\right) = \frac{\alpha^2\mu c^2}{(L+k)^3} = \frac{\alpha^2\mu c^2}{n^3} \]
+    \[ \ev{\partial_L H} = \ev{\partial_L \left(\frac{p_r^2}{2\mu} + \frac{\hbar^2L(L+1)}{2\mu r^2} - \frac{\hbar c \alpha}{r}\right)} = \frac{\hbar^2(L + 1/2)}{\mu}\ev{r^{-2}} \]
+    \[ \partial_L E = \ev{\partial_L H} \implies \ev{r^{-2}} = \frac{\alpha^2\mu^2 c^2}{\hbar^2(L + 1/2)n^3} = \frac{1}{a_0^2(L + 1/2)n^3}\]
+
+    \item 
+    \begin{align*}
+        \comm{H}{p_r} &= \frac{\hbar^2L(L+1)}{2\mu}\comm{r^{-2}}{p_r} - \hbar\alpha c\comm{r^{-1}}{p_r} \\
+        &= -\frac{i\hbar^3L(L+1)}{\mu}r^{-3} + i\hbar^2\alpha c r^{-2}
+    \end{align*}
+    Since the expectation value of any operator with the Hamiltonian vanishes with respect to any of the Hamiltonian's eigenstates,
+    \[ \ev{\comm{H}{p_r}} = 0 \implies i\hbar^2\alpha c \ev{r^{-2}} = \frac{i\hbar^3L(L+1)}{\mu}\ev{r^{-3}} \]
+    \[ \implies \ev{r^{-3}} = \frac{\alpha\mu c}{\hbar L(L+1)}\ev{r^{-2}} = \frac{1}{a_0L(L+1)}\ev{r^{-2}} \] 
+    Substituting in the value for $\ev{r^{-2}}$ gives
+    \[ \ev{r^{-3}} = \frac{1}{L(L+1/2)(L+1)a_0^3n^3} \]
+
 \end{enumerate}
 
 
