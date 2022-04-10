@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2022.1.17)  10 APR 2022 14:34
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2022.1.17)  10 APR 2022 13:30
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**d:/Programming/GitHub/Physics-Homework/633/HW1/HW_1.tex
-(d:/Programming/GitHub/Physics-Homework/633/HW1/HW_1.tex
+**d:/Programming/GitHub/Physics-Homework/633/NDPT/Energies.tex
+(d:/Programming/GitHub/Physics-Homework/633/NDPT/Energies.tex
 LaTeX2e <2021-11-15> patch level 1
 L3 programming layer <2022-01-12> (d:/Programs/texlive/2021/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2021/10/04 v1.4n Standard LaTeX document class
@@ -139,8 +139,8 @@ File: l3backend-pdftex.def 2022-01-12 L3 backend support: PDF output (pdfTeX)
 \l__pdf_internal_box=\box53
 ))
 Package: xparse 2022-01-12 L3 Experimental document command parser
-)) (./HW_1.aux)
-\openout1 = `HW_1.aux'.
+)) (./Energies.aux)
+\openout1 = `Energies.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 17.
 LaTeX Font Info:    ... okay on input line 17.
@@ -204,25 +204,20 @@ LaTeX Font Info:    Trying to load font information for U+rsfs on input line 21.
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 ) [1
 
-{d:/Programs/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]
-Overfull \hbox (48.99449pt too wide) detected at line 123
-[][][] \OT1/cmr/m/n/12 = [] [] \OMS/cmsy/m/n/12 ^^@ [] [] ^^@ \OML/cmm/m/it/12 V[] [] [] \OT1/cmr/m/n/12 + \OML/cmm/m/it/12 V[] [] []
- []
-
-[4] [5] [6] (./HW_1.aux) ) 
+{d:/Programs/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./Energies.aux) ) 
 Here is how much of TeX's memory you used:
- 3386 strings out of 478286
- 49385 string characters out of 5846229
- 363988 words of memory out of 5000000
- 21576 multiletter control sequences out of 15000+600000
- 478398 words of font info for 66 fonts, out of 8000000 for 9000
+ 3385 strings out of 478286
+ 49382 string characters out of 5846229
+ 354005 words of memory out of 5000000
+ 21575 multiletter control sequences out of 15000+600000
+ 478705 words of font info for 67 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 68i,13n,77p,595b,274s stack positions out of 5000i,500n,10000p,200000b,80000s
-<d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on HW_1.pdf (6 pages, 135791 bytes).
+ 68i,11n,77p,362b,212s stack positions out of 5000i,500n,10000p,200000b,80000s
+<d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on Energies.pdf (1 page, 104365 bytes).
 PDF statistics:
- 83 PDF objects out of 1000 (max. 8388607)
- 50 compressed objects within 1 object stream
+ 63 PDF objects out of 1000 (max. 8388607)
+ 37 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

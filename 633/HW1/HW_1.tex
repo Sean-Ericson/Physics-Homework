@@ -23,16 +23,24 @@
 \section*{Problem 1}
 Let's begin with the purified state, $\ket{\psi_\text{CM}}$ (where ``C'' stands for ``contestant'' and ``M'' stands for ``Monty'')
 \[ \ket{\psi_\text{CM}} = \frac{1}{\sqrt{3}}\left(\ket{1}\ket{1} + \ket{2}\ket{2} + \ket{3}\ket{3}\right)\]
-The contestant's selection of door 1 induces the transformation
+The contestant's state represents their state of belief about which door the car is behind. Monty's state represents his state of belief about which door he will open to reveal a goat. The contestant's selection of door 1 induces the transformation
 \begin{align*}
      \ket{\psi_\text{CM}} \to& \frac{1}{\sqrt{3}}\left[\ket{1}\left(\frac{\ket{2}+\ket{3}}{\sqrt{2}}\right) + \ket{2}\ket{3} + \ket{3}\ket{2}\right] \\
      &= \frac{1}{\sqrt{6}}\ket{1}\ket{2} + \frac{1}{\sqrt{6}}\ket{1}\ket{3} + \frac{1}{\sqrt{3}}\ket{2}\ket{3} + \frac{1}{\sqrt{3}}\ket{3}\ket{2} \\
      &= \left(\frac{1}{\sqrt{6}}\ket{1} + \frac{1}{\sqrt{3}}\ket{2}\right)\ket{2} + \left(\frac{1}{\sqrt{6}}\ket{1} + \frac{1}{\sqrt{3}}\ket{2}\right)\ket{3}
 \end{align*}
-
+Now, a projective measurment on Monty's state (i.e., Monty choosing to open door 2 or 3) will collapse the state one of
+\[ \left(\sqrt{\frac{1}{3}}\ket{1} + \sqrt{\frac{2}{3}}\ket{2}\right)\ket{2} \]
+\[ \left(\sqrt{\frac{1}{3}}\ket{1} + \sqrt{\frac{2}{3}}\ket{2}\right)\ket{3} \]
+with equal probability. In either case, the contestant's part of the state becomes
+\[ \ket{\psi_\text{C}} = \sqrt{\frac{1}{3}}\ket{1} + \sqrt{\frac{2}{3}}\ket{2}\]
+indicating that with probability $2/3$ the car is behind door 2 and the contestant should switch.
 
 \section*{Problem 2}
-\[ x \approx x_0 + \lambda x_1 + \lambda^2 x_2 + \cdots \]
+\begin{align*}
+    x &\approx x_0 + \lambda x_1 + \lambda^2 x_2 + \cdots\\
+    &= 12.002383785691716
+\end{align*}  
 \begin{enumerate}[label=(\alph*)]
     \item 
     \begin{align*}
@@ -53,7 +61,7 @@ The contestant's selection of door 1 induces the transformation
     matching terms proportional to $\lambda^2$ gives
     \[ 3x_0^2x_2 + 3x_0x_1^2 = 0 \implies x_2 = -\frac{x_0x_1^2}{x_0^2} = -\frac{x_1^2}{x_0} = -\frac{1}{9x_0^3} \]
     The current approximation for $x$ is therefore
-    \[ x \approx x_0 + \lambda x_1 + \lambda^2 x_2 = 12 + \frac{1.03}{3\times12^2} - \frac{1.03^2}{9\times12^3} \]
+    \[ x \approx x_0 + \lambda x_1 + \lambda^2 x_2 = 12 + \frac{1.03}{3\times12^2} - \frac{1.03^2}{9\times12^3} = 12.002316042952675\]
 \end{enumerate}
 
 
