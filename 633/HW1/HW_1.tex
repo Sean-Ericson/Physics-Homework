@@ -32,17 +32,105 @@ The contestant's selection of door 1 induces the transformation
 
 
 \section*{Problem 2}
+\[ x \approx x_0 + \lambda x_1 + \lambda^2 x_2 + \cdots \]
 \begin{enumerate}[label=(\alph*)]
     \item 
+    \begin{align*}
+        x &= (x_0 + \lambda x_1)^3 \\
+        &= x_0^3 + 3\lambda x_0^2x_1 + 3\lambda^2x_0x_1^2 + \lambda^3 x_1^3 \\
+        &= x_0^3 + \lambda
+    \end{align*}
+    Matching terms proportional to $\lambda$ gives
+    \[ \lambda = 3\lambda x_0^2x_1 \implies 3x_0^2x_1 = 1 \implies x_1 = \frac{1}{3x_0^2} \]
+    The current approximation for $x$ is therefore
+    \[ x \approx x_0 + \lambda x_1 = 12 + \frac{1.03}{3\times12^2} = 12.002384\overline{259} \]
+
+    \item Keeping terms only proportional to $\lambda^2$ we have
+    \begin{align*}
+        (x_0 + \lambda x_1 + \lambda^2 x_2)^3 &\to 3x_0^2x_2\lambda^2 + 3x_0x_1^2\lambda^2 \\
+        &= (3x_0^2x_2 + 3x_0x_1^2) \lambda^2
+    \end{align*}
+    matching terms proportional to $\lambda^2$ gives
+    \[ 3x_0^2x_2 + 3x_0x_1^2 = 0 \implies x_2 = -\frac{x_0x_1^2}{x_0^2} = -\frac{x_1^2}{x_0} = -\frac{1}{9x_0^3} \]
+    The current approximation for $x$ is therefore
+    \[ x \approx x_0 + \lambda x_1 + \lambda^2 x_2 = 12 + \frac{1.03}{3\times12^2} - \frac{1.03^2}{9\times12^3} \]
 \end{enumerate}
 
 
 \section*{Problem 3}
-
+$\Delta_4$ is a sum over all sets of 5 nonnegative indicies that add to 3:
+\begin{align*}
+    \Delta_4 = &(01110\cdot) + (10011\cdot) + (10101\cdot) + (11001\cdot) + \\
+    &(00120\cdot) + (00210\cdot) + (01020\cdot) + (01200\cdot) + (02100\cdot) + (02010\cdot) + (10002\cdot) + (20001\cdot) \\
+    &(00030\cdot) + (00300\cdot) + (03000\cdot)
+\end{align*}
+Where only terms in which the first and last indicies do not cancel under trace have been kept. Some further simplification is given by
+\[ (10002\cdot) \to (3000) \]
+\[ (2001\cdot) \to (3000) \]
+\[ (00030\cdot), (03000\cdot), (00300\cdot) \to -(3000) \]
+\[ (00120\cdot) \to -(0011\cdot 1) \to -(10011\cdot) \]
+\[ (00210\cdot) \to -(001\cdot 11) \to -(11001\cdot) \]
+\[ (01020\cdot) \to -(0101\cdot 1) \to -(10101\cdot) \]
+\[ (01200\cdot) \to -(011\cdot 10) \to -(10011\cdot) \]
+\[ (02100\cdot) \to -(01\cdot 110) \to -(11001\cdot) \]
+\[ (02010\cdot) \to -(01\cdot 101) \to -(10101\cdot) \]
+Giving
+\begin{align*}
+    \Delta_4 &= (01110\cdot) - (10011\cdot) - (11001\cdot) - (10101\cdot) - (3000) \\
+    &= -(0111) - (2001) - (2100) - (2010) - (3000) \\
+\end{align*}
+Now let's handle the trace of each term individually
+\begin{align*}
+    \Tr[-(0111)] &= \Tr[P_0 V \sum_{\alpha\neq 0}\frac{\dyad{\alpha}}{E_{0\alpha}}V \sum_{\beta\neq 0}\frac{\dyad{\beta}}{E_{0\beta}}V\sum_{\gamma\neq 0}\frac{\dyad{\gamma}}{E_{0\gamma}}V] \\
+    &= \Tr[P_0 V \sum_{\alpha\neq 0}\frac{\dyad{\alpha}}{E_{0\alpha}}V \sum_{\beta\neq 0}\frac{\dyad{\beta}}{E_{0\beta}}V\sum_{\gamma\neq 0}\frac{\dyad{\gamma}}{E_{0\gamma}}V P_0] \\
+    &= \Tr[P_0\sum_{\alpha,\beta,\gamma\neq 0}\frac{V_{0\alpha}V_{\alpha\beta}V_{\beta\gamma}V_{\gamma 0}}{E_{0\alpha}E_{0\beta}E_{0\gamma}}] \\
+    &= \sum_{\alpha,\beta,\gamma\neq 0}\frac{V_{0\alpha}V_{\alpha\beta}V_{\beta\gamma}V_{\gamma 0}}{E_{0\alpha}E_{0\beta}E_{0\gamma}}
+\end{align*}
+\begin{align*}
+    -\Tr[(2010)] &= -\Tr[\sum_{\alpha\neq 0}\frac{\dyad{\alpha}}{E_{0\alpha}^2}VP_0V\sum_{\beta\neq 0}\frac{\dyad{\beta}}{E_{0\beta}}VP_0V] \\
+    &= -\Tr[P_0V\sum_{\alpha\neq 0}\frac{\dyad{\alpha}}{E_{0\alpha}^2}VP_0V\sum_{\beta\neq 0}\frac{\dyad{\beta}}{E_{0\beta}}VP_0] \\
+    &= -\Tr[P_0\sum_{\alpha,\beta\neq 0}\frac{V_{0\alpha}V_{\alpha 0}V_{0\beta}V_{\beta 0}}{E_{0\alpha}^2E_{0\beta}}] \\
+    &= -\sum_{\alpha,\beta\neq 0} \frac{\magsq{V_{0\alpha}}\magsq{V_{0\beta}}}{E_{0\alpha}^2E_{0\beta}}
+\end{align*}
+\begin{align*}
+    -\Tr[(2001)] &= -\Tr[\sum_{\alpha\neq 0}\frac{\dyad{\alpha}}{E_{0\alpha}^2}VP_0VP_0V\sum_{\beta\neq 0}\frac{\dyad{\beta}}{E_{0\beta}}V] \\
+    &= -\Tr[P_0V\sum_{\beta\neq 0}\frac{\dyad{\beta}}{E_{0\beta}}V\sum_{\alpha\neq 0}\frac{\dyad{\alpha}}{E_{0\alpha}^2}VP_0VP_0] \\
+    &= -\Tr[P_0\sum_{\alpha,\beta\neq 0}\frac{V_{0\beta}V_{\beta\alpha}V_{\alpha 0}}{E_{0\alpha}^2E_{0\beta}}V_{00}] \\
+    &= -V_{00}\sum_{\alpha,\beta\neq 0}\frac{V_{0\beta}V_{\beta\alpha}V_{\alpha 0}}{E_{0\alpha}^2E_{0\beta}} \\
+    &= -V_{00}\sum_{\alpha,\beta\neq 0}\frac{V_{0\alpha}V_{\alpha\beta}V_{\beta 0}}{E_{0\alpha}E_{0\beta}^2}
+\end{align*}
+\begin{align*}
+    -\Tr[(2100)] &= -\Tr[\sum_{\alpha\neq 0}\frac{\dyad{\alpha}}{E_{0\alpha}^2}V\sum_{\beta\neq 0}\frac{\dyad{\beta}}{E_{0\beta}}VP_0VP_0V] \\
+    &= -\Tr[P_0V\sum_{\alpha\neq 0}\frac{\dyad{\alpha}}{E_{0\alpha}^2}V\sum_{\beta\neq 0}\frac{\dyad{\beta}}{E_{0\beta}}VP_0VP_0] \\
+    &= -\Tr[P_0\sum_{\alpha,\beta\neq 0}\frac{V_{0\alpha}V_{\alpha\beta}V_{\beta 0}}{E_{0\alpha}^2E_{0\beta}}V_{00}] \\
+    &= -V_{00}\sum_{\alpha,\beta\neq 0}\frac{V_{0\alpha}V_{\alpha\beta}V_{\beta 0}}{E_{0\alpha}^2E_{0\beta}}
+\end{align*}
+\begin{align*}
+    -\Tr[(3000)] &= \Tr[\sum_{\alpha\neq 0}\frac{\dyad{\alpha}}{E_{0\alpha}^3}VP_0VP_0VP_0V] \\
+    &= \Tr[P_0V\sum_{\alpha\neq 0}\frac{\dyad{\alpha}}{E_{0\alpha}^3}VP_0VP_0VP_0] \\
+    &= \Tr[P_0\sum_{\alpha\neq 0}\frac{V_{0\alpha}V_{\alpha 0}}{E_{0\alpha}^3}V_{00}V_{00}] \\
+    &= V_{00}^2\sum_{\alpha\neq 0}\frac{\magsq{V_{0\alpha}}}{E_{0\alpha}^3}
+\end{align*}
+Putting it all together we have
+\[ \Tr[\Delta_4] = \sum_{\alpha,\beta,\gamma\neq 0}\frac{V_{0\alpha}V_{\alpha\beta}V_{\beta\gamma}V_{\gamma 0}}{E_{0\alpha}E_{0\beta}E_{0\gamma}} -\sum_{\alpha,\beta\neq 0} \frac{\magsq{V_{0\alpha}}\magsq{V_{0\beta}}}{E_{0\alpha}^2E_{0\beta}} -V_{00}\sum_{\alpha,\beta\neq 0}\left[\frac{V_{0\alpha}V_{\alpha\beta}V_{\beta 0}}{E_{0\alpha}E_{0\beta}^2}+\frac{V_{0\alpha}V_{\alpha\beta}V_{\beta 0}}{E_{0\alpha}^2E_{0\beta}}\right] + V_{00}^2\sum_{\alpha\neq 0}\frac{\magsq{V_{0\alpha}}}{E_{0\alpha}^3} \]
+In the case that $\Tr[\Delta_1] = \Tr[\Delta_2] = \Tr[\Delta_3] = 0$ this reduces to
+\[ \Tr[\Delta_4] = \sum_{\alpha,\beta,\gamma\neq 0}\frac{V_{0\alpha}V_{\alpha\beta}V_{\beta\gamma}V_{\gamma 0}}{E_{0\alpha}E_{0\beta}E_{0\gamma}} \]
 
 
 \section*{Problem 4}
-
+\begin{align*}
+    \comm{\vec{r}\cdot\vec{p}}{H} &= \comm{\vec{r}\cdot\vec{p}}{\frac{p^2}{2m}} + \comm{\vec{r}\cdot\vec{p}}{V(r)} \\
+    &= \frac{1}{2m}\comm{\vec{r}}{p^2}\cdot\vec{p} + \vec{r}\cdot\comm{\vec{p}}{V(r)} \\
+    &= \frac{1}{2m}(2i\hbar\vec{p})\cdot{\vec{p}} - i\hbar\vec{r}\cdot\nabla V(r) \\
+    &= i\hbar\left(\frac{p^2}{m} - \vec{r}\cdot\nabla V(r)\right) \\
+    &= i\hbar\left(2T - \vec{r}\cdot\nabla V\right)
+\end{align*}
+Now,
+\[ \ev{\comm{\vec{r}\cdot\vec{p}}{H}} = 0 \implies 2\ev{T} = \ev{\vec{r}\cdot\nabla V} \]
+but 
+\[ \ev{\vec{r}\cdot\nabla V} = \ev{\vec{r} \cdot n\lambda r^{n-1}\hat{r}} = \ev{n\lambda r^n} = n\ev{V} \]
+so
+\[ 2\ev{T} = n\ev{V} \]
 
 
 \section*{Problem 5}
