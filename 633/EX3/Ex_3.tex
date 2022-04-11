@@ -22,10 +22,17 @@
 
 \section*{Monday}
 \subsection*{Exercise 1}
-
+\[ \comm{p^2}{z} = 2i\hbar p_z = -2\hbar^2\partial_z \]
 
 \subsection*{Exercise 2}
-
+\begin{align*}
+    \comm{p^2}{r}f &= -\hbar^2\comm{\nabla^2}{r}f \\
+    &= -\hbar^2\left(\nabla^2(rf) - r\left(\nabla^2f\right)\right) \\
+    &= -\hbar^2\left((\nabla^2r)f + 2(\nabla r)\cdot(\nabla f) + r\nabla^2f - r\nabla^2 f\right) \\
+    &= -2\hbar^2\left(\frac{1}{r} - (\nabla r)\cdot\nabla\right)f \\
+    &= -2\hbar^2\left(\frac{1}{r} - \hat{r}\cdot\nabla\right)f
+\end{align*}
+\[ \implies \comm{p^2}{r} = -2\hbar^2\left(\frac{1}{r} - \hat{r}\cdot\nabla\right) \]
 
 \section*{Tuesday}
 \subsection*{Exercise 1}
