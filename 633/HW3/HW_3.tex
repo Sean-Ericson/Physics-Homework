@@ -1,0 +1,96 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{mathrsfs}
+\usepackage{enumitem}
+\usepackage{physics}
+
+\newcommand{\magsq}[1]{\big|#1\big|^2}
+\newcommand{\avg}[1]{\left<#1\right>}
+\newcommand{\fullint}{\int_{-\infty}^\infty}
+\newcommand{\fullintd}[1]{\fullint\dd#1\:}
+\newcommand{\cint}[2]{\int_{#1}^{#2}}
+\newcommand{\cintd}[3]{\cint{#1}{#2}\dd#3\:}
+
+\newcommand{\ahfs}{A_\text{hfs}}
+\newcommand{\hhfs}{H_\text{hfs}}
+\newcommand{\hhfsb}{H_\text{hfs}^{(\text{B})}}
+
+\begin{document}
+	
+\title{Homework 3}
+\author{Sean Ericson \\ Phys 633}
+\maketitle
+
+\section*{Problem 1}
+\begin{align*}
+    \mel{m_J m_I}{\hhfs}{m_J' m_I'} &= \frac{\ahfs}{\hbar^2} \mel{m_J m_I}{I_zJ_z + \frac{1}{2}(I_+J_- + I_-J_+)}{m_J' m_I'} \\
+    &= \ahfs m_I' m_J' \delta_{m_I,m_I'}\delta_{m_J,m_J'} \\ 
+    & \quad + \frac{\ahfs}{2}\sqrt{(J + m_J' +1)(J - m_J')(I + m_I' +1)(I-m_I')}\delta_{m_I,m_I'+1}\delta_{m_J,m_J-1} \\
+    & \quad + \frac{\ahfs}{2}\sqrt{(J - m_J' +1)(J + m_J')(I - m_I' +1)(I+m_I')}\delta_{m_I,m_I'-1}\delta_{m_J,m_J+1} \\
+    &= \ahfs m_I' m_J' \delta_{m_I,m_I'}\delta_{m_J,m_J'} + \frac{\ahfs}{2}\left(\right)
+\end{align*}
+
+\begin{align*}
+    \mel{m_I m_J}{I_zJ_z}{m_I' m_J'} &= \hbar^2 m_I' m_J' \delta_{m_I,m_I'}\delta_{m_J,m_J'} \\
+    \mel{m_I m_J}{I_\pm J_\mp}{m_I' m_J'} &= \hbar^2 \sqrt{(I \pm m_I' +1)(I \mp m_I')(J \mp m_J' +1)(J \pm m_J')}\delta_{m_I,m_I'\mp 1}\delta_{m_J,m_J \pm 1}
+\end{align*}
+
+
+\section*{Problem 2}
+\begin{align*}
+    \partial_t U(t,t_0) &= \partial_t U_0(t,t_0) -\frac{i}{\hbar}\partial_t\cint{t_0}{t}\dd t_1 U_0(t,t_1)V(t_1)U(t_1,t_0) \\
+    &= -\frac{i}{\hbar}H_0U_0(t,t_0) -\frac{i}{\hbar}\left[U_0(t,t)V(t)U(t,t_0) - \frac{i}{\hbar}\cintd{t_0}{t}{t_1} H_0U_0(t,t_1)V(t_1)U(t_1,t_0)\right] \\
+    &= -\frac{i}{\hbar}\left[H_0U_0(t,t_0) + V(t)U(t,t_0) - \frac{i}{\hbar}H_0\cintd{t_0}{t}{t_1}U_0(t,t_1)V(t_1)U(t_1,t_0) \right] \\
+    &= -\frac{i}{\hbar}\left[H_0\left(U_0(t,t_0)-\frac{i}{\hbar}\cintd{t_0}{t}{t_1}U_0(t,t_1)V(t_1)U(t_1,t)\right) + V(t)U(t,t_0)\right] \\
+    &= -\frac{i}{\hbar}\left[H_0U(t,t_0) + V(t)U(t,t_0)\right] \\
+    &= -\frac{i}{\hbar}\left[H_0 + V(t)\right]U(t,t_0)
+\end{align*}
+
+
+\section*{Problem 3}
+\begin{enumerate}[label=(\alph*)]
+    \item 
+    \begin{align*}
+        G^+(x,x_0;E) &= \mel{x}{\frac{1}{E - p^2/2m + i0^+}}{x_0} \\
+        &= \fullintd{p} \mel{x}{\frac{1}{E-p^2/2m + i0^+}}{p}\braket{p}{x_0} \\
+        &= \frac{1}{2\pi\hbar}\fullintd{p}\frac{e^{ip(x-x_0)/\hbar}}{E-p^2/2m + i0^+}
+    \end{align*}
+    Let
+    \[ r = x-x_0, \quad z = \frac{pr}{\hbar}, \quad z_E^2 = \frac{2mr^2E}{\hbar^2} \]
+    Then
+    \begin{align*}
+        G^+(x,x_0;E) &= \frac{mr}{\pi\hbar}\fullintd{z} \frac{e^{iz}}{\left[z - (z_E + i0^+)\right]\left[z + (z_E - i0^+)\right]} \\
+        &= (-2\pi i)\frac{mr}{\pi\hbar}\frac{e^{iz_E}}{-2z_E} \\
+        &= \frac{im}{z_E\hbar}e^{iz_E} \\
+        &= \frac{im}{z_E\hbar}e^{ip_E r/\hbar}
+    \end{align*}
+\end{enumerate}
+
+
+\section*{Problem 4}
+\begin{align*}
+    \tilde{K}_\textbf{fi}^{(3)} &= \frac{i}{\hbar^3}\sum_{jk}\cintd{0}{t}{t_3}\cintd{0}{t_3}{t_2}\cintd{0}{t_2}{t_3}V_{\textbf{f}j}V_{jk}V_{k\textbf{i}}e^{iE_{\textbf{f}j}t_3/\hbar}e^{iE_{jk}t_2/\hbar}e^{iE_{k\textbf{i}}t_1/\hbar} \\
+    &= \frac{i}{\hbar^3}\sum_{jk}V_{\textbf{f}j}V_{jk}V_{k\textbf{i}}\cintd{0}{t}{t_3}e^{iE_{\textbf{f}j}t_3/\hbar}\cintd{0}{t_3}{t_2}\cintd{0}{t_2}{t_1}e^{iE_{jk}t_2/\hbar}e^{iE_{k\textbf{i}}t_1/\hbar} \\
+    &= \frac{1}{2\pi\hbar^3}\sum_{jk}V_{\textbf{f}j}V_{jk}V_{k\textbf{i}}\cintd{0}{t}{t_3}e^{iE_{\textbf{f}j}t_3/\hbar}\cintd{0}{t_3}{t_2}\cintd{0}{t_3}{t_1}\fullintd{E}\frac{e^{i(E_j - E)t_2/\hbar}e^{i(E-E_i)t_1/\hbar}}{E - E_k + i0^+} \\
+    &= \frac{1}{2\pi\hbar^3}\sum_{jk}V_{\textbf{f}j}V_{jk}V_{k\textbf{i}}\cintd{0}{t}{t_3}e^{iE_{\textbf{f}j}t_3/\hbar}\fullintd{E}\frac{\delta_t(E_j-E)\delta_t(E_i-E)e^{i(E_j-E)t_3/2\hbar}e^{i(E-E_i)t_3/2\hbar}}{E-E_k+i0^+} \\
+    &\approx \frac{1}{2\pi\hbar^2}\sum_{jk}V_{\textbf{f}j}V_{jk}V_{k\textbf{i}}\cintd{0}{t}{t_3}e^{iE_{\textbf{f}j}t_3/\hbar}\frac{e^{iE_{j\textbf{i}}t_3/2\hbar}}{E_i - E_k + i0^+}\fullintd{E}\delta_t(E_j-E)\delta_t(E_i-E) \\
+    &= \frac{1}{2\pi\hbar^2}\sum_{jk}\frac{V_{\textbf{f}j}V_{jk}V_{k\textbf{i}}}{E_i-E_k+i0^+}\cintd{0}{t}{t_3}e^{iE_{\textbf{f}j}t_3/\hbar}\delta_t(E_{\textbf{i}j})e^{iE_{j\textbf{i}}t_3/2\hbar}
+\end{align*}
+
+
+\section*{Problem 5}
+\begin{enumerate}[label=(\alph*)]
+    \item 
+    \begin{align*}
+        \tilde{K}_\textbf{fi}^{(2)} &= \mel{\textbf{f}}{-\frac{1}{2\hbar^2}\cintd{0}{t}{t_2}\cintd{0}{t_2}{t_1}e^{iH_0t_2/\hbar}V_0e^{-i\omega t_2}e^{-iH_0t_2/\hbar}e^{iH_0t_1/\hbar}V_0e^{-i\omega t_1/\hbar}e^{-iH_0t_1/\hbar} }{\textbf{i}} \\
+        & \quad + \mel{\textbf{f}}{-\frac{1}{2\hbar^2}\cintd{0}{t}{t_2}\cintd{0}{t_2}{t_1}e^{iH_0t_2/\hbar}V_0^\dag e^{i\omega t_2}e^{-iH_0t_2/\hbar}e^{iH_0t_1/\hbar}V_0^\dag e^{i\omega t_1/\hbar}e^{-iH_0t_1/\hbar} }{\textbf{i}} \\
+        &= -\frac{1}{2\hbar^2}\sum_k\cintd{0}{t}{t_2}\cintd{0}{t_2}{t_1}(V_0)_{\textbf{f}k}e^{iE_{\textbf{f}k}-\hbar\omega}(V_0)_{k\textbf{i}}e^{iE_{k\textbf{i}}-\hbar\omega} + (V_0^\dag)_{\textbf{f}k}e^{iE_{\textbf{f}k}+\hbar\omega}(V_0^\dag)_{k\textbf{i}}e^{iE_{k\textbf{i}}+\hbar\omega}
+    \end{align*}
+
+    \item
+\end{enumerate}
+
+
+\end{document}
