@@ -25,17 +25,28 @@
 
 \section*{Problem 1}
 \begin{align*}
-    \mel{m_J m_I}{\hhfs}{m_J' m_I'} &= \frac{\ahfs}{\hbar^2} \mel{m_J m_I}{I_zJ_z + \frac{1}{2}(I_+J_- + I_-J_+)}{m_J' m_I'} \\
-    &= \ahfs m_I' m_J' \delta_{m_I,m_I'}\delta_{m_J,m_J'} \\ 
-    & \quad + \frac{\ahfs}{2}\sqrt{(J + m_J' +1)(J - m_J')(I + m_I' +1)(I-m_I')}\delta_{m_I,m_I'+1}\delta_{m_J,m_J-1} \\
-    & \quad + \frac{\ahfs}{2}\sqrt{(J - m_J' +1)(J + m_J')(I - m_I' +1)(I+m_I')}\delta_{m_I,m_I'-1}\delta_{m_J,m_J+1} \\
-    &= \ahfs m_I' m_J' \delta_{m_I,m_I'}\delta_{m_J,m_J'} + \frac{\ahfs}{2}\left(\right)
+    \mel{\frac{1}{2}, m_J'; I, m_I'}{I_zJ_z}{\frac{1}{2}, m_J; I, m_I} &= \hbar^2 m_I m_J \delta_{m_J',m_J} \delta_{m_I',m_I} \\
+    \mel{\frac{1}{2}, m_J'; I, m_I'}{I_+ J_-}{\frac{1}{2}, m_J; I, m_I} &= \hbar^2 \sqrt{(I + m_I +1)(I - m_I)}\delta_{m_J',-\frac{1}{2}}\delta_{m_J,\frac{1}{2}}\delta_{m_I',m_I+1} \\
+    \mel{\frac{1}{2}, m_J'; I, m_I'}{I_- J_+}{\frac{1}{2}, m_J; I, m_I} &= \hbar^2 \sqrt{(I - m_I +1)(I + m_I)}\delta_{m_J',\frac{1}{2}}\delta_{m_J,-\frac{1}{2}}\delta_{m_I',m_I-1} \\
+    \mel{\frac{1}{2}, m_J'; I, m_I'}{g_JJ_z + g_II_z}{\frac{1}{2} m_J; I m_I} &= \hbar \left(g_Jm_J\delta_{m_J',m_J} + g_Im_I\delta_{m_I',m_I}\right)
 \end{align*}
 
 \begin{align*}
-    \mel{m_I m_J}{I_zJ_z}{m_I' m_J'} &= \hbar^2 m_I' m_J' \delta_{m_I,m_I'}\delta_{m_J,m_J'} \\
-    \mel{m_I m_J}{I_\pm J_\mp}{m_I' m_J'} &= \hbar^2 \sqrt{(I \pm m_I' +1)(I \mp m_I')(J \mp m_J' +1)(J \pm m_J')}\delta_{m_I,m_I'\mp 1}\delta_{m_J,m_J \pm 1}
+    \mel{\frac{1}{2},\frac{1}{2};I, m_I'}{\hhfs + \hhfsb}{\frac{1}{2},\frac{1}{2};I, m_I} &= \ahfs \frac{m_I}{2}\delta_{m_I',m_I} + \mu_B(\frac{g_J}{2} + g_Im_I\delta_{m_I',m_I})B \\
+    \mel{\frac{1}{2},\frac{1}{2};I, m_I'}{\hhfs + \hhfsb}{\frac{1}{2},\frac{-1}{2};I, m_I} &= \ahfs \sqrt{(I-m_I+1)(I+m_I)}\delta_{m_I',m_I-1} \\
+    \mel{\frac{1}{2},\frac{-1}{2};I, m_I'}{\hhfs + \hhfsb}{\frac{1}{2},\frac{1}{2};I, m_I} &= \ahfs \sqrt{(I+m_I+1)(I-m_I)}\delta_{m_I',m_I+1} \\
+    \mel{\frac{1}{2},\frac{-1}{2};I, m_I'}{\hhfs + \hhfsb}{\frac{1}{2},\frac{-1}{2};I, m_I} &= -\ahfs \frac{m_I}{2}\delta_{m_I,m_I'} + \mu_B(-\frac{g_J}{2} + g_Im_I\delta_{m_I',m_I})
 \end{align*}
+
+\begin{align*}
+    \mel{m_J' m_I'}{\hhfs}{m_J m_I} &= \frac{\ahfs}{\hbar^2} \mel{m_J' m_I'}{I_zJ_z + \frac{1}{2}(I_+J_- + I_-J_+)}{m_J m_I} \\
+    &= \ahfs m_I m_J \delta_{m_I',m_I}\delta_{m_J',m_J} \\ 
+    & \quad + \frac{\ahfs}{2}\sqrt{(J + m_J +1)(J - m_J)(I + m_I +1)(I-m_I)}\delta_{m_I',m_I+1}\delta_{m_J',m_J-1} \\
+    & \quad + \frac{\ahfs}{2}\sqrt{(J - m_J +1)(J + m_J)(I - m_I +1)(I+m_I)}\delta_{m_I',m_I-1}\delta_{m_J',m_J'+1} \\
+    &= \ahfs m_I m_J \delta_{m_I',m_I}\delta_{m_J',m_J} + \frac{\ahfs}{2}\left(\right)
+\end{align*}
+
+
 
 
 \section*{Problem 2}
