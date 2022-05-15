@@ -1,0 +1,55 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{mathrsfs}
+\usepackage{mathtools}
+\usepackage{enumitem}
+\usepackage{physics}
+
+\newcommand{\magsq}[1]{\big|#1\big|^2}
+\newcommand{\avg}[1]{\left<#1\right>}
+\newcommand{\fullint}{\int_{-\infty}^\infty}
+\newcommand{\fullintd}[1]{\fullint\dd#1\:}
+\newcommand{\cint}[2]{\int_{#1}^{#2}}
+\newcommand{\cintd}[3]{\cint{#1}{#2}\dd#3\:}
+\newcommand\treq{\stackrel{\mathclap{\tiny\mbox{Tr}}}{=}}
+
+\begin{document}
+	
+\title{Exercise Set 6}
+\author{Sean Ericson \\ Phys 633}
+\maketitle
+
+\section*{Monday}
+\subsection*{Exercise 1}
+\begin{align*}
+  \fullintd{E} \delta_t(E_f-E)\delta_t(E-E_i) &= \frac{1}{(2\pi\hbar)^2}\fullintd{E}\cintd{-t/2}{t/2}{t_1}\cintd{-t/2}{t/2}{t_2}e^{i(E_f-E)t_1/\hbar}e^{i(E-E_f)t_2/\hbar} \\
+  &= \frac{1}{(2\pi\hbar)^2}\fullintd{E}\cintd{-t/2}{t/2}{t_1}\cintd{-t/2}{t/2}{t_2} e^{iE(t_2-t_1)/\hbar}e^{iE_ft_1/\hbar}e^{-iE_it_2/\hbar} \\
+  &= \frac{1}{2\pi\hbar} \cintd{-t/2}{t/2}{t_1}\cintd{-t/2}{t/2}{t_2} \delta(t_1-t_2)e^{iE_ft_1/\hbar}e^{-iE_it_2/\hbar} \\
+  &= \frac{1}{2\pi\hbar} \cintd{-t/2}{t/2}{t'}e^{i(E_f-E_i)t'/\hbar} \\
+  &= \delta_t(E_f-E_i)
+\end{align*}
+
+
+\section*{Tuesday}
+\subsection*{Exercise 1}
+We're just doing the substitutions $E_\textbf{fi} \to E_\textbf{fi} \pm \hbar\omega$
+
+\subsection*{Exercise 2}
+\begin{align*}
+  \mel{x}{e^{\pm ikx}}{p} &= \fullintd{x'}\mel{x}{e^{\pm ikx}}{x'}\braket{x'}{p} \\
+  &= \frac{1}{\sqrt{2\pi\hbar}}\fullintd{x'}\delta(x-x')e^{\pm ikx}e^{ipx/\hbar} \\
+  &= \frac{1}{\sqrt{2\pi\hbar}}e^{i (p \pm \hbar k)x/\hbar} \\
+  &= \braket{x}{p \pm \hbar k}
+\end{align*}
+
+\subsection*{Exercise 3}
+\begin{align*}
+  \lim_{E_\textbf{fi}\to 0} e^{iE_\textbf{fi}t/2\hbar}\delta_t(E_\textbf{fi}) &= \lim_{E_\textbf{fi}\to 0} e^{iE_\textbf{fi}t/2\hbar}\frac{\sin(E_\textbf{fi}t/2\hbar)}{\pi E_\textbf{fi}} \\
+  &= \lim_{E_\textbf{fi}\to 0} \frac{\sin(E_\textbf{fi}t/2\hbar)}{\pi E_\textbf{fi}} \\
+  &= \lim_{E_\textbf{fi}\to 0} \frac{t}{2\pi\hbar}\cos(E_\textbf{fi}t/2\hbar) \\
+  &= \frac{t}{2\pi\hbar}
+\end{align*}
+
+\end{document}

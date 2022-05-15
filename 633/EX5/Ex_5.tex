@@ -1,0 +1,50 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{mathrsfs}
+\usepackage{mathtools}
+\usepackage{enumitem}
+\usepackage{physics}
+
+\newcommand{\magsq}[1]{\big|#1\big|^2}
+\newcommand{\avg}[1]{\left<#1\right>}
+\newcommand{\fullint}{\int_{-\infty}^\infty}
+\newcommand{\fullintd}[1]{\fullint\dd#1\:}
+\newcommand{\cint}[2]{\int_{#1}^{#2}}
+\newcommand{\cintd}[3]{\cint{#1}{#2}\dd#3\:}
+\newcommand\treq{\stackrel{\mathclap{\tiny\mbox{Tr}}}{=}}
+
+\begin{document}
+	
+\title{Exercise Set 5}
+\author{Sean Ericson \\ Phys 633}
+\maketitle
+
+\section*{Monday}
+\subsection*{Exercise 1}
+\begin{align*}
+  \mel{J m_J}{S_z}{J m_J} &= \frac{\mel{J m_J}{\vec{J}\cdot\vec{S}}{J m_J}}{\hbar^2 J(J+1)}\mel{J m_J}{J_z}{J m_J} \\
+  &= \frac{\mel{J m_J}{J^2 + S^2 - L^2}{J m_J}}{2\hbar J(J+1)}m_J \\
+  &= \frac{J(J+1) + S(S+1) - L(L+1)}{2J(J+1)}\hbar m_J
+\end{align*}
+
+
+\section*{Tuesday}
+\subsection*{Exercise 1}
+\begin{align*}
+  \partial_t A_I &= \partial_t \left[e^{iH_0t/\hbar}A_se^{-iH_0t/\hbar}\right] \\
+  &= \frac{i}{\hbar}H_0A_I - \frac{i}{\hbar}A_IH_0 \\
+  &= -\frac{i}{\hbar}\comm{A_I}{H_0}
+\end{align*}
+\begin{align*}
+  \partial_t \ket{\psi}_I &= \partial_t \left[e^{iH_0t/\hbar}\ket{\psi}_S\right] \\
+  &= \frac{i}{\hbar} H_0 e^{iH_0t/\hbar}\ket{\psi}_S - \frac{i}{\hbar}e^{iH_0t/\hbar}\ket{\psi}_S \\
+  &= -\frac{i}{\hbar}\left[e^{iH_0t/\hbar}(H_0 + V) - H_0e^{iH_0t/\hbar}\right]\ket{\psi}_S \\
+  &= -\frac{i}{\hbar}e^{iH_0t/\hbar}V\ket{\psi}_S \\
+  &= -\frac{i}{\hbar}e^{iH_0t/\hbar}Ve^{-iH_0t/\hbar}e^{iH_0t/\hbar}\ket{\psi}_S \\
+  &= -\frac{i}{\hbar}V_I(t)\ket{\psi}_I
+\end{align*}
+
+
+\end{document}

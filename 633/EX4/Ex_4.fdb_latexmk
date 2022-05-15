@@ -1,14 +1,16 @@
 # Fdb version 3
-["pdflatex"] 1652654028 "d:/Programming/GitHub/Physics-Homework/633/EX3/Ex_3.tex" "Ex_3.pdf" "Ex_3" 1652654028
-  "Ex_3.aux" 1652654028 32 3985256e7290058c681f74d7a3565a19 "pdflatex"
-  "Ex_3.tex" 1652654027 1432 ac4022937b09f0bcab46d4e5ac4c6dec ""
-  "d:/Programming/GitHub/Physics-Homework/633/EX3/Ex_3.tex" 1652654027 1432 ac4022937b09f0bcab46d4e5ac4c6dec ""
+["pdflatex"] 1652654709 "d:/Programming/GitHub/Physics-Homework/633/EX4/Ex_4.tex" "Ex_4.pdf" "Ex_4" 1652654709
+  "Ex_4.aux" 1652654709 32 3985256e7290058c681f74d7a3565a19 "pdflatex"
+  "Ex_4.tex" 1652654708 1373 b6c3e883b1bfa069166c2be5055b489b ""
+  "d:/Programming/GitHub/Physics-Homework/633/EX4/Ex_4.tex" 1652654708 1373 b6c3e883b1bfa069166c2be5055b489b ""
   "d:/Programs/texlive/2021/texmf-dist/fonts/map/fontname/texfonts.map" 1642479329 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "d:/Programs/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1642477776 1004 54797486969f23fa377b128694d548df ""
   "d:/Programs/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1642477776 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
   "d:/Programs/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1642477776 916 f87d7c45f9c908e672703b83b72241a3 ""
+  "d:/Programs/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam5.tfm" 1642477776 924 9904cf1d39e9767e7a3622f2a125a565 ""
   "d:/Programs/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam7.tfm" 1642477776 928 2dc8d444221b7a635bb58038579b861a ""
   "d:/Programs/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm" 1642477776 908 2921f8a10601f252058503cc6570e581 ""
+  "d:/Programs/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm" 1642477776 940 75ac932a52f80982a9f8ea75d03a34cf ""
   "d:/Programs/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm" 1642477776 940 228d6584342e91276bf566bcf9716b83 ""
   "d:/Programs/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm" 1642478462 1324 c910af8c371558dc20f2d7822f66fe64 ""
   "d:/Programs/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmex10.tfm" 1642478462 992 662f679a0b3d2d53c1b94050fdaa3f50 ""
@@ -34,7 +36,6 @@
   "d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb" 1642477776 32726 39f0f9e62e84beb801509898a605dbd5 ""
   "d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1642477776 32569 5e5ddc8df908dea60932f3c484a54c0d ""
   "d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb" 1642477776 34694 870c211f62cb72718a00e353f14f254d ""
-  "d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb" 1642481433 16077 4737ac34f0fb5608550f3780a0202c22 ""
   "d:/Programs/texlive/2021/texmf-dist/tex/context/base/mkii/supp-pdf.mkii" 1642480578 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "d:/Programs/texlive/2021/texmf-dist/tex/generic/iftex/iftex.sty" 1642479765 6501 4011d89d9621e0b0901138815ba5ff29 ""
   "d:/Programs/texlive/2021/texmf-dist/tex/generic/iftex/ifvtex.sty" 1642479765 1057 525c2192b5febbd8c1f662c9468335bb ""
@@ -74,6 +75,6 @@
   "d:/Programs/texlive/2021/texmf-var/web2c/pdftex/pdflatex.fmt" 1642482664 2796587 825f17197e932c4ad1fc2363155e73cb ""
   "d:/Programs/texlive/2021/texmf.cnf" 1642482565 713 e69b156964470283e0530f5060668171 ""
   (generated)
-  "Ex_3.aux"
-  "Ex_3.log"
-  "Ex_3.pdf"
+  "Ex_4.aux"
+  "Ex_4.log"
+  "Ex_4.pdf"
