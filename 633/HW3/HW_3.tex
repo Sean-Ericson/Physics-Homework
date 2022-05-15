@@ -85,7 +85,7 @@
 \section*{Problem 5}
 \[ \sum_{k_1,\cdots,k_{n-1}} \frac{1}{(i\hbar)^n} \cintd{0}{t}{t_n}\cintd{0}{t_n}{t_{n-1}}\cdots\cintd{0}{t_2}{t_1} V_{fk_1}V_{k_1k_2}\cdots V_{k_{n-1}i} e^{iE_{fk_1}t_n/\hbar}\cdots e^{iE_{k_{n-1}i}} \]
 \[ = \sum_{k_1,\cdots,k_{n-1}} \frac{1}{(i\hbar)^n n!} V_{fk_1}V_{k_1k_2}\cdots V_{k_{n-1}i} \mathscr{T} \cintd{0}{t}{t_n}e^{iE_{fk_1}t_n/\hbar} \cdots   \cintd{0}{t}{t_1}e^{iE_{k_{n-1}i}} \]
-
+\[ = \sum_{k_1,\cdots,k_{n-1}} \frac{1}{(i\hbar)^n n!} V_{fk_1}V_{k_1k_2}\cdots V_{k_{n-1}i} \mathscr{T} \left[2\pi\hbar e^{iEt/2\hbar} \delta_t(E)\right] \]
 
 \section*{Problem 6}
 \begin{enumerate}[label=(\alph*)]
@@ -93,10 +93,14 @@
     \begin{align*}
         \tilde{K}_\textbf{fi}^{(2)} &= \mel{\textbf{f}}{-\frac{1}{2\hbar^2}\cintd{0}{t}{t_2}\cintd{0}{t_2}{t_1}e^{iH_0t_2/\hbar}V_0e^{-i\omega t_2}e^{-iH_0t_2/\hbar}e^{iH_0t_1/\hbar}V_0e^{-i\omega t_1/\hbar}e^{-iH_0t_1/\hbar} }{\textbf{i}} \\
         & \quad + \mel{\textbf{f}}{-\frac{1}{2\hbar^2}\cintd{0}{t}{t_2}\cintd{0}{t_2}{t_1}e^{iH_0t_2/\hbar}V_0^\dag e^{i\omega t_2}e^{-iH_0t_2/\hbar}e^{iH_0t_1/\hbar}V_0^\dag e^{i\omega t_1/\hbar}e^{-iH_0t_1/\hbar} }{\textbf{i}} \\
-        &= -\frac{1}{2\hbar^2}\sum_k\cintd{0}{t}{t_2}\cintd{0}{t_2}{t_1}(V_0)_{\textbf{f}k}e^{iE_{\textbf{f}k}-\hbar\omega}(V_0)_{k\textbf{i}}e^{iE_{k\textbf{i}}-\hbar\omega} + (V_0^\dag)_{\textbf{f}k}e^{iE_{\textbf{f}k}+\hbar\omega}(V_0^\dag)_{k\textbf{i}}e^{iE_{k\textbf{i}}+\hbar\omega}
+        &= -\frac{1}{2\hbar^2}\sum_k\cintd{0}{t}{t_2}\cintd{0}{t_2}{t_1}(V_0)_{\textbf{f}k}e^{i(E_{\textbf{f}k}-\hbar\omega)t_2}(V_0)_{k\textbf{i}}e^{i(E_{k\textbf{i}}-\hbar\omega)t_1} + (V_0^\dag)_{\textbf{f}k}e^{i(E_{\textbf{f}k}+\hbar\omega)t_2}(V_0^\dag)_{k\textbf{i}}e^{i(E_{k\textbf{i}}+\hbar\omega)t_1}
     \end{align*}
 
     \item
+    \[ \tilde{K}_\textbf{fi}^{(2)} = -2\pi i \sum_k \left[\left(\frac{(V_0)_{\textbf{f}k}(V_0)_{k\textbf{i}}}{E_{\textbf{i}k}-\hbar\omega +i0^+}e^{i(E_\textbf{fi}-\hbar\omega)}\delta_t(E_\textbf{fi}-\hbar\omega)\right)+\left(\frac{(V_0)_{\textbf{f}k}(V_0)_{k\textbf{i}}}{E_{\textbf{i}k}+\hbar\omega + i0^+}e^{i(E_\textbf{fi}+\hbar\omega)}\delta_t(E_\textbf{fi}+\hbar\omega)\right)\right] \]
+
+    \item
+    The term on the left will be the dominant term, as the difference $E_{\mathbf{i}k} - \hbar\omega$ in the denominator will be extremely small.
 \end{enumerate}
 
 
