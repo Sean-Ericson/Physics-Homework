@@ -76,16 +76,26 @@
 \begin{align*}
     \tilde{K}_\textbf{fi}^{(3)} &= \frac{i}{\hbar^3}\sum_{jk}\cintd{0}{t}{t_3}\cintd{0}{t_3}{t_2}\cintd{0}{t_2}{t_3}V_{\textbf{f}j}V_{jk}V_{k\textbf{i}}e^{iE_{\textbf{f}j}t_3/\hbar}e^{iE_{jk}t_2/\hbar}e^{iE_{k\textbf{i}}t_1/\hbar} \\
     &= \frac{i}{\hbar^3}\sum_{jk}V_{\textbf{f}j}V_{jk}V_{k\textbf{i}}\cintd{0}{t}{t_3}e^{iE_{\textbf{f}j}t_3/\hbar}\cintd{0}{t_3}{t_2}\cintd{0}{t_2}{t_1}e^{iE_{jk}t_2/\hbar}e^{iE_{k\textbf{i}}t_1/\hbar} \\
+    &= \frac{i}{\hbar^3}\sum_{jk}V_{\textbf{f}j}V_{jk}V_{k\textbf{i}}\cintd{0}{t}{t_3}e^{iE_{\textbf{f}j}t_3/\hbar}\cintd{0}{t_3}{t_2}\cintd{0}{t_2}{t_1} e^{iE_k(t_1-t_2)/\hbar}e^{iE_jt_2/\hbar}e^{iE_\textbf{i}t_1/\hbar} \\
     &= \frac{1}{2\pi\hbar^3}\sum_{jk}V_{\textbf{f}j}V_{jk}V_{k\textbf{i}}\cintd{0}{t}{t_3}e^{iE_{\textbf{f}j}t_3/\hbar}\cintd{0}{t_3}{t_2}\cintd{0}{t_3}{t_1}\fullintd{E}\frac{e^{i(E_j - E)t_2/\hbar}e^{i(E-E_i)t_1/\hbar}}{E - E_k + i0^+} \\
-    &= \frac{1}{2\pi\hbar^3}\sum_{jk}V_{\textbf{f}j}V_{jk}V_{k\textbf{i}}\cintd{0}{t}{t_3}e^{iE_{\textbf{f}j}t_3/\hbar}\fullintd{E}\frac{\delta_t(E_j-E)\delta_t(E_i-E)e^{i(E_j-E)t_3/2\hbar}e^{i(E-E_i)t_3/2\hbar}}{E-E_k+i0^+} \\
-    &\approx \frac{1}{2\pi\hbar^2}\sum_{jk}V_{\textbf{f}j}V_{jk}V_{k\textbf{i}}\cintd{0}{t}{t_3}e^{iE_{\textbf{f}j}t_3/\hbar}\frac{e^{iE_{j\textbf{i}}t_3/2\hbar}}{E_i - E_k + i0^+}\fullintd{E}\delta_t(E_j-E)\delta_t(E_i-E) \\
-    &= \frac{1}{2\pi\hbar^2}\sum_{jk}\frac{V_{\textbf{f}j}V_{jk}V_{k\textbf{i}}}{E_i-E_k+i0^+}\cintd{0}{t}{t_3}e^{iE_{\textbf{f}j}t_3/\hbar}\delta_t(E_{\textbf{i}j})e^{iE_{j\textbf{i}}t_3/2\hbar}
+    &= \frac{2\pi}{\hbar}\sum_{jk}V_{\textbf{f}j}V_{jk}V_{k\textbf{i}}\cintd{0}{t}{t_3}e^{iE_{\textbf{f}j}t_3/\hbar}\fullintd{E}\frac{\delta_t(E_j-E)\delta_t(E_i-E)e^{i(E_j-E)t_3/2\hbar}e^{i(E-E_i)t_3/2\hbar}}{E-E_k+i0^+} \\
+    &\approx \frac{2\pi}{\hbar}\sum_{jk}\frac{V_{\textbf{f}j}V_{jk}V_{k\textbf{i}}}{E_i - E_k + i0^+}\cintd{0}{t}{t_3}e^{iE_{\textbf{f}j}t_3/\hbar}e^{iE_{j\textbf{i}}t_3/2\hbar}\fullintd{E}\delta_t(E_j-E)\delta_t(E_i-E) \\
+    &= \frac{2\pi}{\hbar}\sum_{jk}\frac{V_{\textbf{f}j}V_{jk}V_{k\textbf{i}}}{E_\textbf{i}-E_k+i0^+}\cintd{0}{t}{t_3}e^{iE_{\textbf{f}j}t_3/\hbar}e^{iE_{j\textbf{i}}t_3/2\hbar}\delta_t(E_{\textbf{i}j}) \\
+    &= \frac{1}{\hbar^2}\sum_{jk}\frac{V_{\textbf{f}j}V_{jk}V_{k\textbf{i}}}{E_\textbf{i}-E_k+i0^+}\cintd{0}{t}{t_3}\cintd{0}{t_3}{t_3'}e^{iE_{\textbf{f}j}t_3/\hbar}e^{iE_{j\textbf{i}}t_3'/\hbar} \\
+    &= \frac{1}{2\pi i \hbar^2}\sum_{jk}\frac{V_{\textbf{f}j}V_{jk}V_{k\textbf{i}}}{E_\textbf{i}-E_k+i0^+}\cintd{0}{t}{t_3}\cintd{0}{t}{t_3'}\fullintd{E}\frac{e^{i(E_\textbf{f}-E)t_3/\hbar}e^{i(E-E_\textbf{i})t_3'/\hbar}}{E-E_j+i0^+} \\
+    &= -2\pi i\sum_{jk}\frac{V_{\textbf{f}j}V_{jk}V_{k\textbf{i}}}{E_\textbf{i}-E_k+i0^+}\fullintd{E}\frac{\delta_t(E_\textbf{f}-E)\delta_t(E-E_\textbf{i})e^{i(E_\textbf{f}-E)t/2\hbar}e^{i(E-E_\textbf{i})t/2\hbar}}{E-E_j+i0^+} \\
+    &\approx -2\pi i\sum_{jk}\frac{V_{\textbf{f}j}V_{jk}V_{k\textbf{i}}}{(E_\textbf{i}-E_k+i0^+)(E_\textbf{i}-E_j+i0^+)}e^{iE_\textbf{fi}t/2\hbar}\fullintd{E}\delta_t(E_\textbf{f}-E)\delta_t(E-E_\textbf{i}) \\
+    &= -2\pi i\sum_{jk}\frac{V_{\textbf{f}j}V_{jk}V_{k\textbf{i}}}{(E_\textbf{i}-E_k+i0^+)(E_\textbf{i}-E_j+i0^+)}e^{iE_\textbf{fi}t/2\hbar}\delta_t(E_\textbf{fi})
 \end{align*}
 
 \section*{Problem 5}
-\[ \sum_{k_1,\cdots,k_{n-1}} \frac{1}{(i\hbar)^n} \cintd{0}{t}{t_n}\cintd{0}{t_n}{t_{n-1}}\cdots\cintd{0}{t_2}{t_1} V_{fk_1}V_{k_1k_2}\cdots V_{k_{n-1}i} e^{iE_{fk_1}t_n/\hbar}\cdots e^{iE_{k_{n-1}i}} \]
-\[ = \sum_{k_1,\cdots,k_{n-1}} \frac{1}{(i\hbar)^n n!} V_{fk_1}V_{k_1k_2}\cdots V_{k_{n-1}i} \mathscr{T} \cintd{0}{t}{t_n}e^{iE_{fk_1}t_n/\hbar} \cdots   \cintd{0}{t}{t_1}e^{iE_{k_{n-1}i}} \]
-\[ = \sum_{k_1,\cdots,k_{n-1}} \frac{1}{(i\hbar)^n n!} V_{fk_1}V_{k_1k_2}\cdots V_{k_{n-1}i} \mathscr{T} \left[2\pi\hbar e^{iEt/2\hbar} \delta_t(E)\right] \]
+\[ \sin^2(\Omega t/2) = \left(\frac{\Omega t}{2}\right)^2 - \frac{1}{3}\left(\frac{\Omega t}{2}\right)^4 + \cdots \]
+We already know that the first order term in the perturbation series gives
+\[ \left(\frac{\Omega t}{2}\right)^2 \]
+The restriction of the Hilbert space to $\{\ket{i},\ket{f}\}$ kills any terms in the perturbation series with an odd number of perturbation matrix elements. The next nonzero term gives
+\begin{align*}
+    \tilde{K}_\textbf{fi}^{(3)} = \frac{i}{\hbar^3}\magsq{V_\textbf{fi}}\mathscr{T}\frac{1}{3!}\left[e\right]
+\end{align*}
 
 \section*{Problem 6}
 \begin{enumerate}[label=(\alph*)]
