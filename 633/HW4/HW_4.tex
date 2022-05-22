@@ -1,0 +1,79 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{mathrsfs}
+\usepackage{enumitem}
+\usepackage{physics}
+
+\usepackage{tikz}
+\usetikzlibrary{calc,decorations.markings}
+
+\newcommand{\magsq}[1]{\big|#1\big|^2}
+\newcommand{\avg}[1]{\left<#1\right>}
+\newcommand{\fullint}{\int_{-\infty}^\infty}
+\newcommand{\fullintd}[1]{\fullint\dd#1\:}
+\newcommand{\cint}[2]{\int_{#1}^{#2}}
+\newcommand{\cintd}[3]{\cint{#1}{#2}\dd#3\:}
+
+\begin{document}
+	
+\title{Homework 4}
+\author{Sean Ericson \\ Phys 633}
+\maketitle
+
+\section*{Problem 1}
+\begin{align*}
+    \fullintd{x}\frac{f(x)}{x+i0^+} - \mathscr{P} \fullintd{x}\frac{1}{x} &= \fullintd{x}\frac{1}{x+i0^+} - \frac{1/2}{1+i0^+} - \frac{1/2}{x-i0^+} \\
+    &= \frac{1}{2}\fullintd{x}\left[\frac{1}{x+i0^+} - \frac{1}{x-i0^+}\right] \\
+    &= \frac{1}{2}(-2\pi i f(0)) \\
+    &= -\pi i f(0)
+\end{align*}
+
+\begin{tikzpicture}
+    \draw (0,-2.5) -- (0,2.5);  % Axis
+    \draw (-5.5,0) -- (5.5,0);   
+    \foreach \y in {-5,...,5} {
+      \draw (\y,-4pt) -- (\y,4pt) node[pos=0,below] {\y};
+    }
+    \foreach \y in {-2,...,2}{
+        \draw (-4pt,\y) -- (4pt,\y) node[pos=0,left] {\y};
+    }
+    
+    \node at (0,0) {$\times$}; % Pole
+    
+   
+    \end{tikzpicture}
+
+
+\begin{align*}
+    \fullintd{x}\frac{f(x)}{x-i0^+} - \mathscr{P} \fullintd{x}\frac{1}{x} &= \fullintd{x}\frac{1}{x-i0^+} - \frac{1/2}{1+i0^+} - \frac{1/2}{x-i0^+} \\
+    &= \frac{1}{2}\fullintd{x}\left[\frac{1}{x-i0^+} - \frac{1}{x+i0^+}\right] \\
+    &= \frac{1}{2}(2\pi i f(0)) \\
+    &= \pi i f(0)
+\end{align*}
+Thus
+\[ \fullintd{x} \frac{f(x)}{x\pm i0^+} - \mathscr{P}\fullintd{x}\frac{f(x)}{x} = \mp i\pi f(0) \]
+\[ \implies \]
+\[ \frac{1}{x\pm i0^+} = \mathscr{P}\frac{1}{x} \mp i\pi\delta(x) \]
+
+\section*{Problem 2}
+
+
+
+\section*{Problem 3}
+
+
+
+\section*{Problem 4}
+
+
+
+\section*{Problem 5}
+
+
+
+\section*{Problem 6}
+
+
+\end{document}
