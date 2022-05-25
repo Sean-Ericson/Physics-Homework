@@ -187,7 +187,11 @@ Similarly,
     \[ \left(\pdv[2]{t} + \gamma\pdv{t} + \omega_0^2\right)g(t,t') = \delta(t-t'). \]
     Taking the Fourier transform of the above equation (with respect to $t$) yields
     \[ \left(-\omega^2 - i\gamma\omega + \omega_0^2\right)g(\omega,t') = \fullintd{t}\delta(t-t')e^{i\omega t} = e^{i\omega t'} \]
-    \[ \implies g(\omega, t') = \frac{e^{i\omega t'}}{-\omega^2 - i\gamma\omega + \omega_0^2} \]
+    \[ \implies  \]
+    \begin{equation}
+        \label{eq1}
+        g(\omega, t') = \frac{e^{i\omega t'}}{-\omega^2 - i\gamma\omega + \omega_0^2}
+    \end{equation} 
     Inverting the Fourier transform gives
     \begin{align*}
         g(t, t') &= -\frac{1}{2\pi}\fullintd{\omega}\frac{e^{i\omega t'}e^{-i\omega t}}{\omega^2 + i\gamma\omega - \omega_0^2} \\
@@ -236,7 +240,7 @@ Similarly,
 
     \item 
     Let 
-    \[ \mathscr{L}x(t) = f(t); \quad \mathscr{L} = \pdv[2]{t} + \gamma\pdv{t} + \omega_0^2 \]
+    \[ \mathscr{L}x(t) = f(t); \quad \mathscr{L} = \pdv[2]{t} + \gamma\pdv{t} + \omega_0^2 \] 
     Then
     \begin{align*}
         f(t) &= \fullintd{t'}\delta(t-t')f(t') \\
@@ -251,9 +255,7 @@ Similarly,
     \end{align*}
 
     \item
-    \begin{align*}
-        \tilde{x}(\omega)e^{-i\omega t} &= \frac{1}{\tilde{\omega}}\cintd{0}{\infty}{t'}e^{-\gamma(t-t')/2}\sin[\tilde{\omega}(t-t')]e^{-i\omega t'}
-    \end{align*}
+    See \eqref{eq1}
 
     \item
     By the convolution theorem,
