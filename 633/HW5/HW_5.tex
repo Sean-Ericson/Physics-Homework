@@ -1,0 +1,129 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{mathtools}
+\usepackage{mathrsfs}
+\usepackage{enumitem}
+\usepackage{physics}
+
+\usepackage{tikz}
+\usetikzlibrary{calc,decorations.markings}
+
+\newcommand{\magsq}[1]{\big|#1\big|^2}
+\newcommand{\avg}[1]{\left<#1\right>}
+\newcommand{\fullint}{\int_{-\infty}^\infty}
+\newcommand{\fullintd}[1]{\fullint\dd#1\:}
+\newcommand{\cint}[2]{\int_{#1}^{#2}}
+\newcommand{\cintd}[3]{\cint{#1}{#2}\dd#3\:}
+
+\newcommand{\tens}[1]{\overset{\leftrightarrow}{#1}}
+
+\def\Xint#1{\mathchoice
+   {\XXint\displaystyle\textstyle{#1}}%
+   {\XXint\textstyle\scriptstyle{#1}}%
+   {\XXint\scriptstyle\scriptscriptstyle{#1}}%
+   {\XXint\scriptscriptstyle\scriptscriptstyle{#1}}%
+   \!\int}
+\def\XXint#1#2#3{{\setbox0=\hbox{$#1{#2#3}{\int}$}
+     \vcenter{\hbox{$#2#3$}}\kern-.5\wd0}}
+\def\ddashint{\Xint=}
+\def\dashint{\Xint-}
+
+\newcommand{\fulldashintd}[1]{\dashint_{-\infty}^{\infty}\dd{#1}}
+
+\begin{document}
+	
+\title{Homework 5}
+\author{Sean Ericson \\ Phys 633}
+\maketitle
+
+\section*{Problem 1}
+\begin{enumerate}[label=(\alph*)]
+    \item
+    \begin{align*}
+        \mathscr{E}(\mathbf{r}) &= \fullintd{T}\varphi(\mathbf{r}, T)e^{ik^2T} \\
+        &= \frac{1}{2\pi}\fullintd{T}\fullintd{E}\tilde{\varphi}(\mathbf{r},E)e^{-iET}e^{ik^2T} \\
+        &= \frac{1}{2\pi}\fullintd{E}\fullintd{T}\tilde{\varphi}(\mathbf{r},E)e^{-i(E-k^2)T} \\
+        &= \fullintd{E}\tilde{\varphi}(\mathbf{r},E)\delta(E - k^2) \\
+        &= \tilde{\varphi}(\mathbf{r},k^2)
+    \end{align*}
+    The $\tilde{\varphi}$ are solutions for particualar values of energy, and our desired solution is the $\tilde{\varphi}$ with energy $k^2$ as expected.
+
+    \item Given that 
+    \[ \hbar = 1, \quad m = 1/2 \]
+    we have that
+    \[ L(x,\dot{x}) = \frac{\dot{x}}{4} - V(x) = \frac{\dot{x}^2}{4} - k^2(1 - n^2(\mathbf{r})) \]
+    Thus
+    \begin{align*}
+        K(x,T;x_0,0) &= \int \text{D}x \exp[i\cintd{0}{T}{\tau}L(x,\dot{x})] \\
+        &= \int \text{D}x \exp[i\cintd{0}{T}{\tau}\left(\frac{\dot{x}^2}{4} -k^2(1-n^2(\mathbf{r}))\right)]
+    \end{align*}
+
+    \item
+    \[ G^+(\mathbf{r},\mathbf{r}';E) = -i\cintd{0}{\infty}{\tau}e^{i(E+i0^+)\tau}G^+(\mathbf{r},\mathbf{r}';\tau) \]
+    \[ \to -i\cintd{0}{\infty}{T}e^{ik^2T}\int\text{D}x\exp[i\cintd{0}{T}{\tau}\frac{\dot{x}^2}{4} - k^2(1-n^2(\mathbf{r}))] \]
+
+    \item
+    \begin{align*}
+        S_\text{reduced}[x] &= \cintd{0}{s}{s'}\sqrt{k^2 - V(x)} \\
+        &= \cintd{0}{s}{s'} \sqrt{k^2 - k^2(1 - n^2(x))} \\
+        &= \cintd{0}{s}{s'} kn(x)
+    \end{align*}
+\end{enumerate}
+
+
+
+\section*{Problem 2}
+\begin{enumerate}[label=(\alph*)]
+    \item Firstly,
+    \begin{align*}
+        \ket{\Psi(\mathbf{r}_1,\cdots,\mathbf{r}_N)} &= \frac{1}{\sqrt{N!}}\hat{\psi}^\dag(\mathbf{r}_1)\cdots\hat{\psi}^\dag(\mathbf{r}_N)\ket{0} \\
+        &= \frac{1}{\sqrt{N!}}\left(\sum_{j_1}\hat{a}_{j_1}^\dag(t)\phi_{j_1}^*(\mathbf{r}_1)\right)\cdots\left(\sum_{j_N}\hat{a}_{j_N}^\dag(t)\phi_{j_N}^*(\mathbf{r}_1)\right)\ket{0}
+    \end{align*}
+    Now,
+    \begin{align*}
+        \hat{N}\ket{\Psi(\mathbf{r}_1,\cdots,\mathbf{r}_N)} &= \left(\sum_{j_0}\hat{a}_{j_0}^\dag\hat{a}_{j_0}\right)\ket{\Psi(\mathbf{r}_1,\cdots,\mathbf{r}_N)} \\
+        &= \frac{1}{\sqrt{N!}}\left(\sum_{j_0}\hat{a}_{j_0}^\dag\hat{a}_{j_0}\right)\left(\sum_{j_1}\hat{a}_{j_1}^\dag(t)\phi_{j_1}^*(\mathbf{r}_1)\right)\cdots\left(\sum_{j_N}\hat{a}_{j_N}^\dag(t)\phi_{j_N}^*(\mathbf{r}_1)\right)\ket{0} \\
+        &= \frac{1}{\sqrt{N!}} \sum_{j_0,\cdots,j_N}\hat{a}_{j_0}^\dag\hat{a}_{j_0}\hat{a}_{j_1}^\dag\hat{a}_{j_2}^\dag\cdots\hat{a}_{j_N}^\dag\ket{0}\phi_{j_1}^*\cdots\phi_{j_N}^* \\
+        &= \frac{1}{\sqrt{N!}}\sum_{j_0,\cdots,j_N}\hat{a}_{j_0}^\dag\left(\hat{a}_{j_1}^\dag\hat{a}_{j_0} + \delta_{j_0j_1}\right)\hat{a}_{j_2}^\dag\cdots\hat{a}_{j_N}^\dag\ket{0}\phi_{j_1}^*\cdots\phi_{j_N}^* \\
+        &= \frac{1}{\sqrt{N!}} \sum_{j_0,\cdots,j_N}\hat{a}_{j_0}^\dag\hat{a}_{j_1}^\dag\hat{a}_{j_0}\hat{a}_{j_2}^\dag\cdots\hat{a}_{j_N}^\dag\ket{0}\phi_{j_1}^*\cdots\phi_{j_N}^* + \ket{\Psi} \\
+        \cdots \\
+        &= \frac{1}{\sqrt{N!}}\sum_{j_0,\cdots,j_N}\hat{a}_{j_0}^\dag\hat{a}_{j_1}^\dag\cdots\hat{a}_{j_N}^\dag\hat{a}_{j_0}\ket{0} + N\ket{\Psi} \\
+        &= 0 + N\ket{\Psi} \\
+        &= N\ket{\Psi}
+    \end{align*}
+    Notice that commuting the $j_0$ annihilation operator over one position yields a copy of $\ket{\Psi}$. After moving it over $N$ times, the $j_0$ annihilation operator will be next to the vaccum state, killing that term and leaving us with $N$ coppies of $\ket{\Psi}$. Therefore,
+    \[ \hat{N}\ket{\Psi} = N\ket{\Psi} \]
+
+    \item The same argument carries over to the fermionic case with one slight change. Commuting the annihilation operator over one position will yeild a term like
+    \[ \delta_{j_0j_i} - \hat{a}_{j_i}^\dag\hat{a}_{j_0} \]
+    In the bosonic case, at the end of the argument we're effective left with 
+    \[ \hat{N}\ket{\Psi} = 0 + N\ket{\Psi} = N\ket{\Psi} \]
+    In the fermionic case, we're instead left with
+    \[ \hat{N}\ket{\Psi} = N\ket{\Psi} - 0 = N\ket{\Psi} \]
+
+\end{enumerate}
+
+
+\section*{Problem 3}
+\begin{enumerate}[label=(\alph*)]
+    \item Let
+    \[ \psi_i \coloneqq \hat{\psi}(\mathbf{r}_i); \quad \psi_i^\dag \coloneqq \hat{\psi}^\dag(\mathbf{r}_i) \]
+    \[ \psi_{i'} \coloneqq \hat{\psi}(\mathbf{r}'_i); \quad \psi_{i'}^\dag \coloneqq \hat{\psi}^\dag(\mathbf{r}'_i) \]
+    \[ \ket{\Psi} \coloneqq \frac{1}{\sqrt{N!}}\psi_1^\dag\cdots\psi_N^\dag\ket{0} \]
+    \[ \ket{\Psi'} \coloneqq \frac{1}{\sqrt{N!}}\psi_{1'}^\dag\cdots\psi_{N'}^\dag\ket{0} \]
+    Then
+    \begin{align*}
+        \braket{\Psi'}{\Psi} &= \frac{1}{N!}\mel{0}{\psi_{N'}\cdots\psi_{1'}\psi_1^\dag\cdots\psi_N^\dag}{0} \\
+        &= \frac{1}{N!}\mel{0}{\psi_{N'}\cdots\psi_{2'}\left(\delta^3(\mathbf{r}_1 - \mathbf{r}'_1) + \psi_1^\dag\psi_{1'}\right)\psi_2^\dag\cdots\psi_N^\dag}{0} \\
+        &= \frac{1}{N!}\mel{0}{\psi_{N'}\cdots\psi_{2'}\psi_2^\dag\cdots\psi_N^\dag}{0}\delta^3(\mathbf{r}_1 - \mathbf{r}'_1) + \frac{1}{N!}\mel{0}{\psi_{N'}\cdots\psi_{2'}\psi_1^\dag\psi_{1'}\psi_{2}^\dag\cdots\psi_N^\dag}{0} \\
+        &= \frac{1}{N!}\mel{0}{\psi_{N'}\cdots\psi_{2'}\psi_2^\dag\cdots\psi_N^\dag}{0}\delta^3(\mathbf{r}_1 - \mathbf{r}'_1) + 0 \\
+        \cdots \\
+        &= \frac{1}{N!}\braket{0}\delta^3(\mathbf{r}_1 - \mathbf{r}'_1) \cdots \delta^3(\mathbf{r}_N - \mathbf{r}'_N)
+    \end{align*}
+\end{enumerate}
+Notice that each time a $\psi_{i'}\psi_i^\dag$ pair are commuted we get two terms. One of the terms is zero, as the annihilation operator is free to commute all the way over to the vaccum state. In the other term the pair is simply replaced by a delta function.
+
+
+\end{document}

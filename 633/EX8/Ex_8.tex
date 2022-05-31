@@ -1,0 +1,52 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{mathrsfs}
+\usepackage{mathtools}
+\usepackage{enumitem}
+\usepackage{physics}
+
+\newcommand{\magsq}[1]{\big|#1\big|^2}
+\newcommand{\avg}[1]{\left<#1\right>}
+\newcommand{\fullint}{\int_{-\infty}^\infty}
+\newcommand{\fullintd}[1]{\fullint\dd#1\:}
+\newcommand{\cint}[2]{\int_{#1}^{#2}}
+\newcommand{\cintd}[3]{\cint{#1}{#2}\dd#3\:}
+\newcommand\treq{\stackrel{\mathclap{\tiny\mbox{Tr}}}{=}}
+
+\begin{document}
+	
+\title{Exercise Set 8}
+\author{Sean Ericson \\ Phys 633}
+\maketitle
+
+\section*{Monday}
+\subsection*{Exercise 1}
+\begin{align*}
+    \ev{\tilde{x}(t_1)\tilde{y}(t_2)} &= \tr\left[\tilde{x}(t_1)\tilde{y}(t_2)\rho_0\right] \\
+    &= \tr\left[\tilde{x}(t_1)e^{iH_0t_2/\hbar}\tilde{y}(0)e^{-iH_0t_2/\hbar}\rho_0\right] \\
+    &= \tr\left[e^{-iH_0t_2/\hbar}\tilde{x}(t_1)e^{iH_0t_2/\hbar}\tilde{y}(0)\rho_0\right] \\
+    &= \tr\left[\tilde{x}(t_1-t_2)\tilde{y}(0)\right] \\
+    &= \ev{\tilde{x}(t_1-t_2)\tilde{y}(0)}
+\end{align*}
+
+\section*{Tuesday}
+\subsection*{Exercise 1}
+\begin{enumerate}[label=(\alph*)]
+    \item Given that
+    \[ \omega_{eg} = \frac{3\alpha^2m_ec^2}{8}, \quad \magsq{\vec{r}_{eg}} = \magsq{z_{ge}} = \frac{2^{15}a_0}{3^{10}}, \quad \alpha = \frac{1}{4\pi\epsilon_0}\frac{e^2}{\hbar c} \]
+    We have
+    \begin{align*}
+        \Gamma &= \frac{\omega_{eg}^3e^2\magsq{\vec{r}_eg}}{3\pi\epsilon_0\hbar c^3} \\
+        &= \frac{3^3}{2^9} \frac{\alpha^6m_e^3c^6}{\hbar^3}\frac{e^2}{3\pi\epsilon_0\hbar c^3}\frac{2^{15}}{3^{10}}\frac{\hbar^2}{m_e^2c^2\alpha^2} \\
+        &= \frac{2^6m_ece^2\alpha^4}{3^8\hbar^2\pi\epsilon_0} \\
+        &= \left(\frac{2}{3}\right)^8\frac{m_ec^2\alpha^5}{\hbar}
+    \end{align*}
+
+    \item Plugging the above expression into WolframAlpha gives
+    \[ 6.268315\times10^8 \text{Hz} \]
+    which is pretty good!
+\end{enumerate}
+
+\end{document}
