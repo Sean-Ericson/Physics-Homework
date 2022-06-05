@@ -18,6 +18,7 @@
 \newcommand{\cintd}[3]{\cint{#1}{#2}\dd#3\:}
 
 \newcommand{\tens}[1]{\overset{\leftrightarrow}{#1}}
+\newcommand{\deltaDif}[2]{\delta^3(\mathbf{r}_{#1} - \mathbf{r}'_{#2})}
 
 \def\Xint#1{\mathchoice
    {\XXint\displaystyle\textstyle{#1}}%
@@ -57,19 +58,36 @@
     Thus
     \begin{align*}
         K(x,T;x_0,0) &= \int \text{D}x \exp[i\cintd{0}{T}{\tau}L(x,\dot{x})] \\
+        &= \int \text{D}x \exp[i\cintd{0}{T}{\tau}\left(\frac{\dot{x}^2}{4} - V(x)\right)] \\
         &= \int \text{D}x \exp[i\cintd{0}{T}{\tau}\left(\frac{\dot{x}^2}{4} -k^2(1-n^2(\mathbf{r}))\right)]
     \end{align*}
 
     \item
-    \[ G^+(\mathbf{r},\mathbf{r}';E) = -i\cintd{0}{\infty}{\tau}e^{i(E+i0^+)\tau}G^+(\mathbf{r},\mathbf{r}';\tau) \]
-    \[ \to -i\cintd{0}{\infty}{T}e^{ik^2T}\int\text{D}x\exp[i\cintd{0}{T}{\tau}\frac{\dot{x}^2}{4} - k^2(1-n^2(\mathbf{r}))] \]
+    We have that 
+    \begin{align*}
+        G^+(\mathbf{r},\mathbf{r}';\tau) &= K(\mathbf{r}, \mathbf{r}';\tau)\Theta(\tau) \\
+        &= \Theta(\tau)\int \text{D}x \exp[i\cintd{0}{T}{\tau}\left(\frac{\dot{x}^2}{4} - V(x)\right)]
+    \end{align*}
+    Therefore
+    \begin{align*}
+        G^+(\mathbf{r},\mathbf{r}';E) &= \frac{1}{i\hbar}\cintd{0}{\infty}{\tau}e^{i(E+i0^+)\tau/\hbar}G^+(\mathbf{r},\mathbf{r}',\tau) \\
+        &= -i\cintd{0}{\infty}{\tau}e^{i(E+i0^+)\tau/\hbar}\int \text{D}x \exp[i\cintd{0}{T}{\tau}\left(\frac{\dot{x}^2}{4} - V(x)\right)]
+    \end{align*}
+    where $\hbar =1$ was used. Finally,
+    \[ G^+(\mathbf{r},\mathbf{r}';k) = -i\cintd{0}{\infty}{T}e^{ik^2T}\int\text{D}x\exp[i\cintd{0}{T}{\tau}\frac{\dot{x}^2}{4} - k^2(1-n^2(\mathbf{r}))] \]
+    where the convergence helper $i0^+$ is understood to be present if necessary.
+
 
     \item
     \begin{align*}
         S_\text{reduced}[x] &= \cintd{0}{s}{s'}\sqrt{k^2 - V(x)} \\
         &= \cintd{0}{s}{s'} \sqrt{k^2 - k^2(1 - n^2(x))} \\
-        &= \cintd{0}{s}{s'} kn(x)
+        &= k\cintd{0}{s}{s'} n(x)
     \end{align*}
+    Given that
+    \[ l[\mathbf{r}] = \cintd{0}{d}{s}n(x) \]
+    we have that
+    \[ \delta l = 0 \iff \delta S_\text{reduced} = 0 \]
 \end{enumerate}
 
 
@@ -113,17 +131,35 @@
     \[ \psi_{i'} \coloneqq \hat{\psi}(\mathbf{r}'_i); \quad \psi_{i'}^\dag \coloneqq \hat{\psi}^\dag(\mathbf{r}'_i) \]
     \[ \ket{\Psi} \coloneqq \frac{1}{\sqrt{N!}}\psi_1^\dag\cdots\psi_N^\dag\ket{0} \]
     \[ \ket{\Psi'} \coloneqq \frac{1}{\sqrt{N!}}\psi_{1'}^\dag\cdots\psi_{N'}^\dag\ket{0} \]
-    Then
+    Let's work out the first few cases explicitly: \\
+    $N=1$
     \begin{align*}
-        \braket{\Psi'}{\Psi} &= \frac{1}{N!}\mel{0}{\psi_{N'}\cdots\psi_{1'}\psi_1^\dag\cdots\psi_N^\dag}{0} \\
-        &= \frac{1}{N!}\mel{0}{\psi_{N'}\cdots\psi_{2'}\left(\delta^3(\mathbf{r}_1 - \mathbf{r}'_1) + \psi_1^\dag\psi_{1'}\right)\psi_2^\dag\cdots\psi_N^\dag}{0} \\
-        &= \frac{1}{N!}\mel{0}{\psi_{N'}\cdots\psi_{2'}\psi_2^\dag\cdots\psi_N^\dag}{0}\delta^3(\mathbf{r}_1 - \mathbf{r}'_1) + \frac{1}{N!}\mel{0}{\psi_{N'}\cdots\psi_{2'}\psi_1^\dag\psi_{1'}\psi_{2}^\dag\cdots\psi_N^\dag}{0} \\
-        &= \frac{1}{N!}\mel{0}{\psi_{N'}\cdots\psi_{2'}\psi_2^\dag\cdots\psi_N^\dag}{0}\delta^3(\mathbf{r}_1 - \mathbf{r}'_1) + 0 \\
-        \cdots \\
-        &= \frac{1}{N!}\braket{0}\delta^3(\mathbf{r}_1 - \mathbf{r}'_1) \cdots \delta^3(\mathbf{r}_N - \mathbf{r}'_N)
+        (1!)\braket{\Psi'}{\Psi}_1 &= \mel{0}{\psi_{1'}\psi_1^\dag}{0} \\
+        &= \deltaDif{1}{1}\braket{0}{0} + \mel{0}{\psi_1^\dag\psi_{1'}}{0} \\
+        &= \deltaDif{1}{1}
     \end{align*}
+    $N=2$
+    \begin{align*}
+        (2!)\braket{\Psi'}{\Psi}_2 &= \mel{0}{\psi_{2'}\psi_{1'}\psi_1^\dag\psi_2^\dag}{0} \\
+        &= \deltaDif{1}{1}\mel{0}{\psi_{2'}\psi_2^\dag}{0}  + \mel{0}{\psi_{2'}\psi_1^\dag\psi_{1'}\psi_2^\dag}{0} \\
+        &= \deltaDif{1}{1}\deltaDif{2}{2} +\deltaDif{2}{1}\mel{0}{\psi_{2'}\psi_1^\dag}{0} + \mel{0}{\psi_{2'}\psi_1^\dag\psi_2^\dag\psi_{1'}}{0} \\
+        &= \deltaDif{1}{1}\deltaDif{2}{2} + \deltaDif{1}{2}\deltaDif{2}{1}
+    \end{align*}
+    $N=3$
+    \begin{align*}
+        (3!)\braket{\Psi'}{\Psi}_3 &= \mel{0}{\psi_{3'}\psi_{2'}\psi_{1'}\psi_1^\dag\psi_2^\dag\psi_3^\dag}{0} \\
+        &= \deltaDif{1}{1}\mel{0}{\psi_{3'}\psi_{2'}\psi_2^\dag\psi_3^\dag}{0} + \deltaDif{2}{1}\mel{0}{\psi_{3'}\psi_{2'}\psi_1^\dag\psi_3^\dag}{0} + \deltaDif{3}{1}\mel{0}{\psi_{3'}\psi_{2'}\psi_1^\dag\psi_2^\dag}{0} \\
+        &= \deltaDif{1}{1}\deltaDif{2}{2}\deltaDif{3}{3} + \deltaDif{1}{1}\deltaDif{2}{3}\deltaDif{3}{2} \\
+        &\quad + \deltaDif{1}{2}\deltaDif{2}{1}\deltaDif{3}{3} + \deltaDif{1}{3}\deltaDif{2}{1}\deltaDif{3}{2} \\
+        &\quad + \deltaDif{1}{2}\deltaDif{3}{1}\deltaDif{2}{3} + \deltaDif{1}{3}\deltaDif{2}{2}\deltaDif{3}{1} 
+    \end{align*}
+    
+    For each $N$, we first use the commutation relation to move $\psi_{1'}$ over all the way to the right, generating $N$ terms. Each of these terms contains a delta function and a matrix element of the form $(N-1)$, up to a re-labeling of the indicies. Continuing inductively,
+    \[ \braket{\Psi'}{\Psi} = \frac{1}{N!}\sum_{\mathbf{\sigma}\in P(N)} \deltaDif{1}{\sigma_1}\cdots\deltaDif{N}{\sigma_N} \]
+
+    \item For a fermionic state, nearly the same argument applies, but now the anticommutation relation introduces a minus sign everytime we commute. A commutation corresponds to a transpostion of two of the indicies, so the even permutations will get an even number of minus signs, while the odd permutations will get an odd number of minus signs. The net result is therefore
+    \[ \braket{\Psi'}{\Psi} = \frac{1}{N!}\sum_{\mathbf{\sigma}\in P(N)} \epsilon_\mathbf{\sigma} \deltaDif{1}{\sigma_1}\cdots\deltaDif{N}{\sigma_N} \]  
 \end{enumerate}
-Notice that each time a $\psi_{i'}\psi_i^\dag$ pair are commuted we get two terms. One of the terms is zero, as the annihilation operator is free to commute all the way over to the vaccum state. In the other term the pair is simply replaced by a delta function.
 
 
 \end{document}
