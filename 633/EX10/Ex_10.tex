@@ -1,0 +1,36 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{mathrsfs}
+\usepackage{mathtools}
+\usepackage{enumitem}
+\usepackage{physics}
+
+\newcommand{\magsq}[1]{\big|#1\big|^2}
+\newcommand{\avg}[1]{\left<#1\right>}
+\newcommand{\fullint}{\int_{-\infty}^\infty}
+\newcommand{\fullintd}[1]{\fullint\dd#1\:}
+\newcommand{\cint}[2]{\int_{#1}^{#2}}
+\newcommand{\cintd}[3]{\cint{#1}{#2}\dd#3\:}
+\newcommand\treq{\stackrel{\mathclap{\tiny\mbox{Tr}}}{=}}
+
+\begin{document}
+	
+\title{Exercise Set 10}
+\author{Sean Ericson \\ Phys 633}
+\maketitle
+
+\section*{Tuesday}
+
+\subsection*{Exercise 1}
+The initial joint state is given by
+\[ \left(\frac{\ket{1_L0_R} + \ket{0_L1_R}}{\sqrt{2}}\right)\ket{\uparrow_A\uparrow_B} = \frac{\ket{1_L0_R}\ket{\uparrow_A\uparrow_B} + \ket{0_L1_R}\ket{\uparrow_A\uparrow_B}}{\sqrt{2}}. \]
+After the interaction (and discarding the mode states) we have the state
+\[ \frac{\ket{\downarrow_A\uparrow_B} + \ket{\uparrow_A\downarrow_B}}{\sqrt{2}}, \]
+in which the spins of the particals are clearly entangled. Assuming the modes are physically separted, and the spin-flipping interactions between the modes and the particals are local, the entanglment present in the particals' spins must have come from the modes. Hence, mode state
+\[ \frac{\ket{1_L0_R} + \ket{0_L1_R}}{\sqrt{2}} \]
+must be entangled.
+
+
+\end{document}
