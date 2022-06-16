@@ -1,7 +1,7 @@
 PWD c:\Users\Admin\Documents\GitHub\Physics-Homework\633\EX10
 INPUT C:\Users\Admin\AppData\Local\MiKTeX\miktex\data\le\pdftex\pdflatex.fmt
-INPUT c:\Users\Admin\Documents\GitHub\Physics-Homework\633\EX10\Ex_10.tex
-OUTPUT Ex_10.log
+INPUT c:\Users\Admin\Documents\GitHub\Physics-Homework\633\EX10\Ex_9.tex
+OUTPUT Ex_9.log
 INPUT C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex\latex\base\article.cls
 INPUT C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex\latex\base\article.cls
 INPUT C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex\latex\base\article.cls
