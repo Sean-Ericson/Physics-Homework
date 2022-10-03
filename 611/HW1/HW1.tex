@@ -8,7 +8,7 @@
 \usepackage{physics}
 
 \usepackage{tikz}
-\usetikzlibrary{calc,decorations.markings}
+\usetikzlibrary{calc,decorations.markings,patterns}
 
 \newcommand{\magsq}[1]{\big|#1\big|^2}
 \newcommand{\avg}[1]{\left<#1\right>}
@@ -18,7 +18,7 @@
 \newcommand{\cintd}[3]{\cint{#1}{#2}\dd#3\:}
 
 \begin{document}
-	
+
 \title{Homework 1}
 \author{Sean Ericson \\ Phys 611}
 \maketitle
@@ -40,6 +40,16 @@
 
 
 \section*{Problem 3}
+
+\scalebox{10}{
+    \begin{tikzpicture}
+        \draw (0,0) -- (1,0) -- (1,1) -- (0.6,1) -- (0.6, 0.3) -- (0.4, 0.3) -- (0.4, 1) -- (0, 1) -- cycle;
+        \draw (0.2, 1) -- (0.3, 1) -- (0.3, 1.1) -- (0.2, 1.1) -- cycle;
+        \filldraw (0.43,1.03) circle (0.25pt);
+        \node at (1,1) [rectangle,draw] (v100) {\tiny $v_{100}$};
+    \end{tikzpicture}
+}
+
 \begin{enumerate}[label=(\alph*)]
     \item a
     \item b

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2022.1.17)  27 SEP 2022 18:22
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2022.1.17)  3 OCT 2022 10:49
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -392,7 +392,11 @@ File: tikzlibrarycalc.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 \pgfdecorationsegmentlength=\dimen281
 )
 \tikz@lib@dec@box=\box66
-) (d:/Programs/texlive/2021/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydecorations.markings.code.tex)) (./HW1.aux)
+) (d:/Programs/texlive/2021/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydecorations.markings.code.tex)) (d:/Programs/texlive/2021/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarypatterns.code.tex
+File: tikzlibrarypatterns.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+ (d:/Programs/texlive/2021/texmf-dist/tex/generic/pgf/libraries/pgflibrarypatterns.code.tex
+File: pgflibrarypatterns.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)) (./HW1.aux)
 \openout1 = `HW1.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 20.
@@ -474,22 +478,27 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 LaTeX Font Info:    Trying to load font information for U+rsfs on input line 24.
  (d:/Programs/texlive/2021/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
-) [1
+)
+Overfull \hbox (8.55919pt too wide) in paragraph at lines 51--52
+[] 
+ []
+
+[1
 
 {d:/Programs/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] (./HW1.aux) ) 
 Here is how much of TeX's memory you used:
- 15702 strings out of 478286
- 314426 string characters out of 5846229
- 580472 words of memory out of 5000000
- 33630 multiletter control sequences out of 15000+600000
- 473557 words of font info for 46 fonts, out of 8000000 for 9000
+ 15888 strings out of 478286
+ 319593 string characters out of 5846229
+ 586981 words of memory out of 5000000
+ 33804 multiletter control sequences out of 15000+600000
+ 476087 words of font info for 57 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 100i,6n,104p,473b,249s stack positions out of 5000i,500n,10000p,200000b,80000s
-<d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb>
-Output written on HW1.pdf (2 pages, 33832 bytes).
+ 100i,8n,104p,482b,555s stack positions out of 5000i,500n,10000p,200000b,80000s
+<d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb>
+Output written on HW1.pdf (2 pages, 49892 bytes).
 PDF statistics:
- 29 PDF objects out of 1000 (max. 8388607)
- 18 compressed objects within 1 object stream
+ 39 PDF objects out of 1000 (max. 8388607)
+ 24 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
