@@ -40,15 +40,25 @@
 
 
 \section*{Problem 3}
+\begin{center}
+    \scalebox{5}{
+        \begin{tikzpicture}[line width=0.1pt]
+            \draw (0,0) -- (1,0) -- (1,1) -- (0.6,1) -- (0.6, 0.3) -- (0.4, 0.3) -- (0.4, 1) -- (0, 1) -- cycle;
+            % \draw (0.2, 1) -- (0.3, 1) -- (0.3, 1.1) -- (0.2, 1.1) -- cycle;
+            \filldraw (0.43,1.03) circle (0.25pt);
+            \draw (0.4,1) -- (0.43,1.03);
+            \node at (0.2,1.05) [rectangle,draw,scale=0.2] {$m_3$};
+            \node at (0.5,.7) [rectangle,draw,scale=0.2] {$m_2$};
+            \node at (0.2, 0.2) [scale=0.2] {$m_1$};
+            \draw (0.29,1.03) -- (0.43,1.03) -- (0.43,0.75);
+            \draw [-to](.3,1.07) -- (.43, 1.07);
+            \node at (0.47, 1.07) [scale=0.2] {$x_2$};
+            \draw [-to](1.05, 0.2) -- (1.15, 0.2);
+            \node at (1.2,0.2)[scale=0.2]{$x_1$};
 
-\scalebox{10}{
-    \begin{tikzpicture}
-        \draw (0,0) -- (1,0) -- (1,1) -- (0.6,1) -- (0.6, 0.3) -- (0.4, 0.3) -- (0.4, 1) -- (0, 1) -- cycle;
-        \draw (0.2, 1) -- (0.3, 1) -- (0.3, 1.1) -- (0.2, 1.1) -- cycle;
-        \filldraw (0.43,1.03) circle (0.25pt);
-        \node at (1,1) [rectangle,draw,scale=0.2] (v100) {\ $m_3$};
-    \end{tikzpicture}
-}
+        \end{tikzpicture}
+    }
+\end{center}
 
 \begin{enumerate}[label=(\alph*)]
     \item a
@@ -66,9 +76,65 @@
 
 
 \section*{Problem 5}
+
+\begin{center}
+    \scalebox{.75}{
+        \begin{tikzpicture}
+            \draw (5,5) circle (5);
+            \draw [dashed] (5,5) -- (10,5);
+            \draw [dashed] (10,5) -- (10,-4);
+            \node at (10,0) [right] {$l$};
+            \filldraw [pattern=north west lines] (10,-4) circle (0.1);
+            \node at (7.5,5.3) {$R$};
+            \draw [->] (5,5) -- (8.5,1.5);
+            \node at (8.5,2) {$\vec{P}$};
+            \begin{scope}
+                \path[clip] (5,5) -- (10,5) -- (8.5,1.5) -- cycle;
+                \node[circle,draw,minimum size=45pt] at (5,5) (circ) {};
+            \end{scope}
+            \node at (6.2,4.5) {$\theta$};
+            \draw (8.55,1.45) -- (4.5,-2);
+            \node at (6.6,-0.55) {$l'$};
+            \filldraw (4.5,-2) circle (0.1);
+            \node at (4.5,-2) [right] {$m$};
+            \draw [->] (5,5) -- (4.5,-1.9);
+            \node at (4,-1.5) {$\vec{r}$};
+            \draw [->] (5,8) -- (7,8);
+            \node at (6,8) [above] {$x$};
+            \draw [->] (5,8) -- (5,6);
+            \node at (5,7) [left] {$y$};
+        \end{tikzpicture}
+    }
+\end{center}
 \begin{enumerate}[label=(\alph*)]
-    \item a
-    \item b
+    \item First, some needed quantities/vectors
+    \[ l' = l - R\theta \]
+    \[ \vec{r} - \vec{p} = \mqty(-l'\sin\theta \\ l'\cos\theta) \]
+    \[ \implies \vec{r} = \mqty(-l'\sin\theta + R\cos\theta \\ l'\cos\theta + R\sin\theta) = \mqty(-(l-R\theta)\sin\theta + R\cos\theta \\ (l-R\theta)\cos\theta + R\sin\theta) \]
+    The kinetic and potential energies are given by
+    \begin{align*}
+        T &= \frac{1}{2}m\magsq{\dot{\vec{r}}} \\
+        &= \frac{1}{2}m\mqty|R\sin\theta\dot{\theta} - (l-R\theta)\cos\theta\dot{\theta} - R\sin\theta\dot{\theta} \\ -R\cos\theta\dot{\theta} - (l-R\theta)\sin\theta\dot{\theta} + R\cos\theta\dot{\theta}|^2 \\
+        &= \frac{1}{2}m\mqty|(R\theta-l)\cos\theta\dot{\theta} \\ (R\theta - l)\sin\theta\dot{\theta}|^2 \\
+        &= \frac{1}{2}m\dot{\theta}^2(R\theta - l)^2 \\
+        \\
+        V &= -mg(\vec{r}\cdot\hat{y}) \\
+        &= -mg\left((l-R\theta)\cos\theta + R\sin\theta\right)
+    \end{align*}
+    Combining these, we get the Lagrangian
+    \[ \boxed{\mathscr{L} = \frac{1}{2}m\dot{\theta}^2 + mg(l-R\theta)\cos\theta + mgR\sin\theta} \]
+    
+    \item Let's take some derivatives!
+    \begin{align*}
+        \pdv{\mathscr{L}}{\theta} &= m\dot{\theta}^2(R\theta - l) - mgR\cos\theta - mg(l-R\theta)\sin\theta + mgR\cos\theta \\
+        &= m\dot{\theta}^2(R\theta - l) - mg(l-R\theta)\sin\theta \\
+        \\
+        \pdv{\mathscr{L}}{\dot{\theta}} &= m\dot{\theta}(R\theta - l)^2 \\
+        \dv{t}\pdv{\mathscr{L}}{\dot{\theta}} &= m\ddot{\theta}(R\theta - l)^2 + 2m\dot{\theta}(R\theta - l)
+    \end{align*}
+    The Euler-Lagrange equation is now
+    \[ m\dot{\theta}(R\theta -l)^2 = m\ddot{\theta}(R\theta - l)^2 + 2m\dot{\theta}(R\theta - l) \]
+
     \item c
 \end{enumerate}
 
