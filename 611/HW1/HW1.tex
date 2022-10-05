@@ -52,10 +52,22 @@
     Integrating by parts once on the second term and twice on the third term yields
     \[ \delta S = \cintd{x_0}{x_1}{x} \left(\pdv{\mathscr{L}}{x} - \dv{x}\pdv{\mathscr{L}}{\dot{x}} + \dv[2]{x}\pdv{\mathscr{L}}{\ddot{x}}\right)\delta x \]
     Now we can use the stationary action principle to derive the modified Euler-Lagrange equation
-    \[ \delta S = 0 \implies \boxed{\pdv{\mathscr{L}}{x} - \dv{x}\pdv{\mathscr{L}}{\dot{x}} + \dv[2]{x}\pdv{\mathscr{L}}{\ddot{x}} = 0} \]
+    \[ \delta S = 0 \implies \boxed{\pdv{\mathscr{L}}{y} - \dv{x}\pdv{\mathscr{L}}{\dot{y}} + \dv[2]{y}\pdv{\mathscr{L}}{\ddot{x}} = 0} \]
     
     \item Now to apply the modified EL equation. The Lagrangian is given by
-    \[ \mathscr{L} = \ddot{y} \]
+    \[ \mathscr{L}(y, \dot{y}, \ddot{y}) = \ddot{y}^2 \]
+    Now some derivatives!
+    \[ \pdv{\mathscr{L}}{y} = 0; \quad \pdv{\mathscr{L}}{\dot{y}} = 0; \quad \pdv{\mathscr{L}}{\ddot{y}} = 2\ddot{y} \]
+    \[ \dv[2]{x}\pdv{\mathscr{L}}{\ddot{y}} = 2\ddddot{y} \]
+    The Euler-Lagrange equation then gives
+    \[ \ddddot{y} = 0 \]
+
+    \item The general solution to the above equation is
+    \[ y(x) = ax^3 + bx^2 + cx + d \]
+    Applying the boundary conditions $y(0) = 0$ and $y'(0) = 0$ gives
+    \[ c = d = 0 \]
+    Further, applying the boundary conditions $y(L) = h$ and $y'(L) = m$ gives
+    \[  \]
 \end{enumerate}
 
 
@@ -75,7 +87,6 @@
             \node at (0.47, 1.07) [scale=0.2] {$x_2$};
             \draw [-to](1.05, 0.2) -- (1.15, 0.2);
             \node at (1.2,0.2)[scale=0.2]{$x_1$};
-
         \end{tikzpicture}
     }
 \end{center}
