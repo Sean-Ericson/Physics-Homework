@@ -25,17 +25,37 @@
 
 \section*{Problem 1}
 \begin{enumerate}[label=(\alph*)]
-    \item a
+    \item To start with, we need to parameterize a path along the surface of a sphere (along with it's derivative w.r.t. the parameter $\phi$):
+    \[ \vec{r}(\phi) = \mqty(r\sin\theta (\phi) \cos\phi \\ r\sin\theta (\phi)\sin\phi \\ r\cos\theta (\phi)) \]
+    \[ \dot{\vec{r}} = r\mqty(\cos\theta\cos\phi\dot{\theta} - \sin\theta\sin\phi \\ \cos\theta\sin\phi\dot{\theta} + \sin\theta\cos\phi \\ -\sin\theta\dot{\theta}) \]
+    The arc length is then given by
+    \[ S = \cintd{\phi_0}{\phi_1}{\phi} |\dot{\vec{r}}| \]
+    Now,
+    \begin{align*}
+        \magsq{\dot{\vec{r}}} &= \cos^2\theta\cos^2\phi\dot{\theta}^2 - 2\cos\theta\sin\theta\cos\phi\sin\phi\dot{\theta}  \\ 
+        &+ \sin^2\theta\sin^2\phi + \cos^2\theta\sin^\phi\dot{\theta}^2 + 2\cos\theta\sin\theta\cos\phi\sin\phi\dot{\theta} + \sin^2\theta\cos^2\phi + \sin^2\theta\dot{\theta}^2 \\
+        & = \cos^2\theta\cos^2\phi\dot{\theta}^2 + \cos^2\theta\sin^2\phi\dot{\theta}^2 + \sin^2\theta\sin^2\phi + \sin^2\theta\cos^2\phi \\
+        &= \cos^2\theta\dot{\theta}^2 + \sin^2\theta
+    \end{align*}
+    so the arc length is then
+    \[ S = \cintd{\phi_0}{\phi_1}{\phi}\sqrt{\cos^2\theta\dot{\theta}^2 + \sin^2\theta} \]
+    where $\theta$ and $\dot{\theta}$ are both functions of $\phi$.
     \item b
     \item c
     \item d
 \end{enumerate}
 
-
 \section*{Problem 2}
 \begin{enumerate}[label=(\alph*)]
-    \item a
-    \item b
+    \item Extending the derivation from class, now for $\mathscr{L}(y, \dot{y}, \ddot{y})$, 
+    \[ \delta\mathscr{L} = \left(\pdv{\mathscr{L}}{x}\right)\delta x + \left(\pdv{\mathscr{L}}{\dot{x}}\right)\delta\dot{x} + \left(\pdv{\mathscr{L}}{\ddot{x}}\right)\delta\ddot{x} \]
+    Integrating by parts once on the second term and twice on the third term yields
+    \[ \delta S = \cintd{x_0}{x_1}{x} \left(\pdv{\mathscr{L}}{x} - \dv{x}\pdv{\mathscr{L}}{\dot{x}} + \dv[2]{x}\pdv{\mathscr{L}}{\ddot{x}}\right)\delta x \]
+    Now we can use the stationary action principle to derive the modified Euler-Lagrange equation
+    \[ \delta S = 0 \implies \boxed{\pdv{\mathscr{L}}{x} - \dv{x}\pdv{\mathscr{L}}{\dot{x}} + \dv[2]{x}\pdv{\mathscr{L}}{\ddot{x}} = 0} \]
+    
+    \item Now to apply the modified EL equation. The Lagrangian is given by
+    \[ \mathscr{L} = \ddot{y} \]
 \end{enumerate}
 
 
