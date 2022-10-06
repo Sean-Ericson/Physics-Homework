@@ -26,23 +26,32 @@
 \section*{Problem 1}
 \begin{enumerate}[label=(\alph*)]
     \item To start with, we need to parameterize a path along the surface of a sphere (along with it's derivative w.r.t. the parameter $\phi$):
-    \[ \vec{r}(\phi) = \mqty(r\sin\theta (\phi) \cos\phi \\ r\sin\theta (\phi)\sin\phi \\ r\cos\theta (\phi)) \]
+    \[ \vec{r}(\phi) = \mqty(r\sin\theta\cos\phi \\ r\sin\theta\sin\phi \\ r\cos\theta) \]
     \[ \dot{\vec{r}} = r\mqty(\cos\theta\cos\phi\dot{\theta} - \sin\theta\sin\phi \\ \cos\theta\sin\phi\dot{\theta} + \sin\theta\cos\phi \\ -\sin\theta\dot{\theta}) \]
     The arc length is then given by
     \[ S = \cintd{\phi_0}{\phi_1}{\phi} |\dot{\vec{r}}| \]
     Now,
     \begin{align*}
         \magsq{\dot{\vec{r}}} &= \cos^2\theta\cos^2\phi\dot{\theta}^2 - 2\cos\theta\sin\theta\cos\phi\sin\phi\dot{\theta}  \\ 
-        &+ \sin^2\theta\sin^2\phi + \cos^2\theta\sin^\phi\dot{\theta}^2 + 2\cos\theta\sin\theta\cos\phi\sin\phi\dot{\theta} + \sin^2\theta\cos^2\phi + \sin^2\theta\dot{\theta}^2 \\
-        & = \cos^2\theta\cos^2\phi\dot{\theta}^2 + \cos^2\theta\sin^2\phi\dot{\theta}^2 + \sin^2\theta\sin^2\phi + \sin^2\theta\cos^2\phi \\
-        &= \cos^2\theta\dot{\theta}^2 + \sin^2\theta
+        &+ \sin^2\theta\sin^2\phi + \cos^2\theta\sin^2\phi\dot{\theta}^2 + 2\cos\theta\sin\theta\cos\phi\sin\phi\dot{\theta} + \sin^2\theta\cos^2\phi + \sin^2\theta\dot{\theta}^2 \\
+        & = \cos^2\theta\cos^2\phi\dot{\theta}^2 + \cos^2\theta\sin^2\phi\dot{\theta}^2 + \sin^2\theta\sin^2\phi + \sin^2\theta\cos^2\phi + \sin^2\theta\dot{\theta}^2 \\
+        &= \cos^2\theta\dot{\theta}^2 + \sin^2\theta + \sin^2\theta\dot{\theta}^2 \\
+        &= \dot{\theta}^2 + \sin^2\theta
     \end{align*}
     so the arc length is then
-    \[ S = \cintd{\phi_0}{\phi_1}{\phi}\sqrt{\cos^2\theta\dot{\theta}^2 + \sin^2\theta} \]
+    \[ \boxed{S = r\cintd{\phi_0}{\phi_1}{\phi}\sqrt{  \dot{\theta}^2 + \sin^2\theta}} \]
     where $\theta$ and $\dot{\theta}$ are both functions of $\phi$.
-    \item b
+    \item Let's take some derivatives!
+    \begin{align*}
+        \pdv{\mathscr{L}}{\theta} &= \frac{\sin\theta\cos\theta}{\sqrt{\dot{\theta}^2 + \sin^2\theta}} \\
+        \pdv{\mathscr{L}}{\dot{\theta}} &= \frac{\dot{\theta}}{\sqrt{\dot{\theta}^2 + \sin^2\theta}} \\
+        \dv{t}\pdv{\mathscr{L}}{\dot{\theta}} &= \frac{\ddot{\theta}}{\sqrt{\dot{\theta}^2 + \sin^2\theta}} - \frac{\dot{\theta}^2\left(\ddot{\theta} + \sin\theta\cos\theta\right)}{\left(\dot{\theta}^2 + \sin^2\theta\right)^{3/2}} 
+    \end{align*}
+    The Euler-Lagrange equation then gives
+    \[ \frac{\sin\theta\cos\theta}{\sqrt{\dot{\theta}^2 + \sin^2\theta}} = \frac{\ddot{\theta}}{\sqrt{\dot{\theta}^2 + \sin^2\theta}} - \frac{\dot{\theta}^2\left(\ddot{\theta} + \sin\theta\cos\theta\right)}{\left(\dot{\theta}^2 + \sin^2\theta\right)^{3/2}} \]
+    which simplifies (somewhat) to
+    \[ \boxed{ \sin\theta\cos\theta = \ddot{\theta} - \frac{\dot{\theta}^2(\ddot{\theta} + \sin\theta\cos\theta)}{\left(\dot{\theta}^2 + \sin^2\theta\right)^3}} \]
     \item c
-    \item d
 \end{enumerate}
 
 \section*{Problem 2}
