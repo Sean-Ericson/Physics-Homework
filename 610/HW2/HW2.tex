@@ -6,6 +6,7 @@
 \usepackage{mathrsfs}
 \usepackage{enumitem}
 \usepackage{physics}
+\usepackage{array}
 
 \usepackage{tikz}
 \usetikzlibrary{calc,decorations.markings}
@@ -25,21 +26,39 @@
 
 \section*{1.1.5}
 \begin{enumerate}[label=(\alph*)]
-    \item a
-    \item b
-    \item c
-    \item d
+    \item Not an equivalence relation: not symmetric. E.g. $3|6 \nRightarrow 6|3$
+    \item Not an equivalence relation: not symmetric. E.g. $3\leq 6 \nRightarrow 6\leq 3$
+    \item Not an equivalence relation: not reflexive. E.g. no line is perpendicular to itself.
+    \item Equivalence relation:
+    \begin{enumerate}
+        \item Obviously reflexive.
+        \item Symmetric: $a \equiv b \mod n \implies (a-b)|n \implies (b-a)|n \implies b \equiv a \mod n$
+        \item Transitive: $a \equiv b \mod n, \quad b \equiv c \mod n \\ \implies \exists j,k \in \mathbb{Z} \qquad (a-b)=kn, \quad (b-c)=jn \\ \implies a-b+b-c = a-c = (j+k)n \implies a\equiv c \mod n$
+    \end{enumerate}
 \end{enumerate}
 
 
 \section*{1.1.6}
 
 
-\section{1.1.7}
+\section*{1.1.7}
+The flaw in the induction step is obvious when there are two ducks. Let $n=1$ and $m=n+1=2$. We then consider the sets $\{1,2,\cdots,m\} = \{1\}$ and $\{2,...,m,m+1\}=\{2\}$ Each of these sets are themselevs the same color (trivially, and by the induction hypothesis). The problem is now with the claim "the ducks $\#2$ throuh $m$ are all the same color". This claim revers to the ducks ``shared'' between the two sets, but the sets are distinct so no elemets are shared between them.
 
-
-\section{1.2.1}
-
+\section*{1.2.1}
+Let's construct the multiplication table for the four Pauli matrices
+\[
+    \begin{tabular}{>{$}c<{$}|*{4}{>{$}c<{$}}}
+    ~   & \sigma_0   & \sigma_1   & \sigma_2 & \sigma_3  \\
+    \hline\vrule height 12pt width 0pt
+    \sigma_0   & \sigma_0   & \sigma_1     & \sigma_2     & \sigma_3    \\
+    \sigma_1   & \sigma_1   & \sigma_0     & i\sigma_3    & -i\sigma_2  \\
+    \sigma_2   & \sigma_2   & -i\sigma_3   & \sigma_0     & i\sigma_1   \\
+    \sigma_3   & \sigma_3   & i\sigma_2    & -i\sigma_1   & \sigma_0    \\
+    \end{tabular} 
+\]
+Obviously the four Pauli matrices are not by themselves closed under multiplication. However, since the set $\{\pm 1,\pm i\}$ is closed under multiplication, the use of all four of these coefficients ensures the closure of the Pauli group.
+Matrix multiplication is associative, so that requirement is covered. The neutral element is obviously $\sigma_0$. From the table above, we can immediately tell that each of the Pauli matrices is it's own inverse. The unique inverses for the other 12 elements of the group are easy to find:
+\[ \left[-\sigma_j\right]^{-1} = -\sigma_j; \qquad \left[\pm i \sigma_j\right]^{-1} = \mp i \sigma_j \]
 
 
 \end{document}

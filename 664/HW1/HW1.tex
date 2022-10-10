@@ -1,0 +1,59 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{mathtools}
+\usepackage{mathrsfs}
+\usepackage{enumitem}
+\usepackage{physics}
+\usepackage{tensor}
+
+\usepackage{tikz}
+\usetikzlibrary{calc,decorations.markings,patterns}
+
+\newcommand{\magsq}[1]{\big|#1\big|^2}
+\newcommand{\avg}[1]{\left<#1\right>}
+\newcommand{\fullint}{\int_{-\infty}^\infty}
+\newcommand{\fullintd}[1]{\fullint\dd#1\:}
+\newcommand{\cint}[2]{\int_{#1}^{#2}}
+\newcommand{\cintd}[3]{\cint{#1}{#2}\dd#3\:}
+
+\begin{document}
+
+\title{Homework 1}
+\author{Sean Ericson \\ Phys 664}
+\maketitle
+
+\section*{Problem 1}
+Let
+\[ \Lambda_{\;\nu}^{\mu} = \delta_{\;\nu}^{\mu} + \delta\omega_{\;\nu}^{\mu} \]
+Then, (keeping only terms linear in $\delta\omega$)
+\begin{align*}
+    g_{\rho\sigma} &= g_{\mu\nu}\Lambda_{\;\rho}^\mu\Lambda_{\;\sigma}^\nu \\
+    &= g_{\mu\nu}\left(\delta_{\;\rho}^\mu + \delta\omega_{\;\rho}^\mu\right)\left(\delta_{\;\rho}^\mu + \delta\omega_{\;\sigma}^\nu\right) \\
+    &= g_{\mu\nu}\delta_{\;\rho}^\mu\delta_{\;\rho}^\mu + g_{\mu\nu}\delta_{\;\rho}^\mu\delta\omega_{\;\sigma}^\nu + g_{\mu\nu}\delta\omega_{\;\rho}^\mu\delta_{\;\rho}^\mu \\
+    &= g_{\rho\sigma} + \delta\omega_{\rho\sigma} + \delta\omega_{\sigma\rho}
+\end{align*}
+\[ \implies \delta\omega_{\rho\sigma} = -\delta\omega_{\sigma\rho} \]
+
+
+\section*{Problem 2}
+
+
+
+\section*{Problem 3}
+
+
+
+\section*{Problem 4}
+
+\section*{Problem 5}
+\begin{enumerate}[label=(\alph*)]
+    \item a
+    \setcounter{enumi}{2}
+    \item c
+    \item d
+\end{enumerate}
+
+
+\end{document}
