@@ -1,8 +1,8 @@
-PWD d:/Programming/GitHub/Physics-Homework/611/HW1
+PWD d:/Programming/GitHub/Physics-Homework/664/HW1
 INPUT d:/Programs/texlive/2021/texmf.cnf
 INPUT d:/Programs/texlive/2021/texmf-dist/web2c/texmf.cnf
 INPUT d:/Programs/texlive/2021/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT d:/Programming/GitHub/Physics-Homework/611/HW1/HW1.tex
+INPUT d:/Programming/GitHub/Physics-Homework/664/HW1/HW1.tex
 OUTPUT HW1.log
 INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/base/article.cls
 INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/base/article.cls
@@ -259,6 +259,17 @@ INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/l3backend/l3backend-pdftex.d
 INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/amsmath/amsmath.sty
+INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/tensor/tensor.sty
+INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/tensor/tensor.sty
+INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/tensor/tensor.sty
+INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/tensor/tensor.sty
+INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/tensor/tensor.sty
+INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/tensor/tensor.sty
+INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/tensor/tensor.sty
+INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/tensor/tensor.sty
+INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/tensor/tensor.sty
+INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/tensor/tensor.sty
+INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/tensor/tensor.sty
 INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
 INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
 INPUT d:/Programs/texlive/2021/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
@@ -615,8 +626,4 @@ INPUT d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.
 INPUT d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb
 INPUT d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb
 INPUT d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb
-INPUT d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb
-INPUT d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb
 INPUT d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
-INPUT d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb
-INPUT d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb

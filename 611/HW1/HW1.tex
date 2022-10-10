@@ -26,23 +26,32 @@
 \section*{Problem 1}
 \begin{enumerate}[label=(\alph*)]
     \item To start with, we need to parameterize a path along the surface of a sphere (along with it's derivative w.r.t. the parameter $\phi$):
-    \[ \vec{r}(\phi) = \mqty(r\sin\theta (\phi) \cos\phi \\ r\sin\theta (\phi)\sin\phi \\ r\cos\theta (\phi)) \]
+    \[ \vec{r}(\phi) = \mqty(r\sin\theta\cos\phi \\ r\sin\theta\sin\phi \\ r\cos\theta) \]
     \[ \dot{\vec{r}} = r\mqty(\cos\theta\cos\phi\dot{\theta} - \sin\theta\sin\phi \\ \cos\theta\sin\phi\dot{\theta} + \sin\theta\cos\phi \\ -\sin\theta\dot{\theta}) \]
     The arc length is then given by
     \[ S = \cintd{\phi_0}{\phi_1}{\phi} |\dot{\vec{r}}| \]
     Now,
     \begin{align*}
         \magsq{\dot{\vec{r}}} &= \cos^2\theta\cos^2\phi\dot{\theta}^2 - 2\cos\theta\sin\theta\cos\phi\sin\phi\dot{\theta}  \\ 
-        &+ \sin^2\theta\sin^2\phi + \cos^2\theta\sin^\phi\dot{\theta}^2 + 2\cos\theta\sin\theta\cos\phi\sin\phi\dot{\theta} + \sin^2\theta\cos^2\phi + \sin^2\theta\dot{\theta}^2 \\
-        & = \cos^2\theta\cos^2\phi\dot{\theta}^2 + \cos^2\theta\sin^2\phi\dot{\theta}^2 + \sin^2\theta\sin^2\phi + \sin^2\theta\cos^2\phi \\
-        &= \cos^2\theta\dot{\theta}^2 + \sin^2\theta
+        &+ \sin^2\theta\sin^2\phi + \cos^2\theta\sin^2\phi\dot{\theta}^2 + 2\cos\theta\sin\theta\cos\phi\sin\phi\dot{\theta} + \sin^2\theta\cos^2\phi + \sin^2\theta\dot{\theta}^2 \\
+        & = \cos^2\theta\cos^2\phi\dot{\theta}^2 + \cos^2\theta\sin^2\phi\dot{\theta}^2 + \sin^2\theta\sin^2\phi + \sin^2\theta\cos^2\phi + \sin^2\theta\dot{\theta}^2 \\
+        &= \cos^2\theta\dot{\theta}^2 + \sin^2\theta + \sin^2\theta\dot{\theta}^2 \\
+        &= \dot{\theta}^2 + \sin^2\theta
     \end{align*}
     so the arc length is then
-    \[ S = \cintd{\phi_0}{\phi_1}{\phi}\sqrt{\cos^2\theta\dot{\theta}^2 + \sin^2\theta} \]
+    \[ \boxed{S = r\cintd{\phi_0}{\phi_1}{\phi}\sqrt{  \dot{\theta}^2 + \sin^2\theta}} \]
     where $\theta$ and $\dot{\theta}$ are both functions of $\phi$.
-    \item b
+    \item Let's take some derivatives!
+    \begin{align*}
+        \pdv{\mathscr{L}}{\theta} &= \frac{\sin\theta\cos\theta}{\sqrt{\dot{\theta}^2 + \sin^2\theta}} \\
+        \pdv{\mathscr{L}}{\dot{\theta}} &= \frac{\dot{\theta}}{\sqrt{\dot{\theta}^2 + \sin^2\theta}} \\
+        \dv{t}\pdv{\mathscr{L}}{\dot{\theta}} &= \frac{\ddot{\theta}}{\sqrt{\dot{\theta}^2 + \sin^2\theta}} - \frac{\dot{\theta}^2\left(\ddot{\theta} + \sin\theta\cos\theta\right)}{\left(\dot{\theta}^2 + \sin^2\theta\right)^{3/2}} 
+    \end{align*}
+    The Euler-Lagrange equation then gives
+    \[ \frac{\sin\theta\cos\theta}{\sqrt{\dot{\theta}^2 + \sin^2\theta}} = \frac{\ddot{\theta}}{\sqrt{\dot{\theta}^2 + \sin^2\theta}} - \frac{\dot{\theta}^2\left(\ddot{\theta} + \sin\theta\cos\theta\right)}{\left(\dot{\theta}^2 + \sin^2\theta\right)^{3/2}} \]
+    which simplifies (somewhat) to
+    \[ \boxed{ \sin\theta\cos\theta = \ddot{\theta} - \frac{\dot{\theta}^2(\ddot{\theta} + \sin\theta\cos\theta)}{\left(\dot{\theta}^2 + \sin^2\theta\right)^3}} \]
     \item c
-    \item d
 \end{enumerate}
 
 \section*{Problem 2}
@@ -92,17 +101,77 @@
 \end{center}
 
 \begin{enumerate}[label=(\alph*)]
-    \item a
-    \item b
+    \item Taking $x_1$ and $x_2$ as the independent variables (with $x_1$ measured relative to the ground and $x_2$ relative to $m_1$), the kinetic energy of each mass is given by
+    \begin{align*}
+        T_1 &= \frac{1}{2}m_1\dot{x}_1^2 \\
+        T_2 &= \frac{1}{2}m_2(\dot{x}_1^2 + \dot{x}_2^2) \\
+        T_3 &= \frac{1}{2}m_3(\dot{x}_1 + \dot{x}_2)^2
+    \end{align*}
+    The only relevant potential energy is that of $m_2$:
+    \[ U = -m_2gx_2 \]
+    This gives a Lagrangian of
+    \[ \boxed{\mathscr{L} = \frac{1}{2}m_1\dot{x}_1^2 + \frac{1}{2}m_2(\dot{x}_1^2 + \dot{x}_2^2) + \frac{1}{2}m_3(\dot{x}_1 + \dot{x}_2)^2 + m_2gx_2} \]
+    \item Let's take some derivatives!
+    \begin{align*}
+        \pdv{\mathscr{L}}{x_1} &= 0 \\
+        \pdv{\mathscr{L}}{\dot{x}_1} &= m_1\dot{x}_1 + m_2\dot{x}_1 + m_3(\dot{x}_1 + \dot{x}_2) \\
+        &= (m_1+m_2+m_3)\dot{x}_1 + m_3\dot{x}_2 \\
+        \dv{t}\pdv{\mathscr{L}}{\dot{x}_1} &= (m_1+m_2+m_3)\ddot{x}_1 + m_3\ddot{x}_2 \\
+        \\
+        \pdv{\mathscr{L}}{x_2} &= m_2g \\
+        \pdv{\mathscr{L}}{\dot{x}_2} &= m_2\dot{x}_2 + m_3(\dot{x}_1 + \dot{x}_2)  \\
+        &= (m_2+m_3)\dot{x}_2 + m_3\dot{x}_1 \\
+        \dv{t}\pdv{\mathscr{L}}{\dot{x}_1} &= (m_2+m_3)\ddot{x}_2 + m_3\ddot{x}_1 \\
+    \end{align*}
+    Applying the Euler-Lagrange equation gives the (coupled) equations of motion
+    \begin{alignat*}{4}
+        (m_1+m_2+m_3)\ddot{x}_1+&&\quad m_3&&\ddot{x}_2 =&& 0 \\
+        m_3\ddot{x}_1+&&\quad (m_2+m_3)&&\ddot{x}_2 =&& m_2g
+    \end{alignat*}
+    which can equivalently be written as
+    \[ \mqty(m_1+m_2+m_3 & m_3 \\ m_3 & m_2+m_3)\mqty(\ddot{x}_1 \\ \ddot{x}_2) = \mqty(0 \\ m_2g) \]
+    Inverting the above equation to solve for $\ddot{x}_1$ and $\ddot{x}_2$ yields
+    \begin{align*}
+        \mqty(\ddot{x}_1 \\ \ddot{x}_2) &= \frac{1}{(m_1+m_2+m_3)(m_2+m_3) - m_3^2}\mqty(m_2+m_3 & -m_3 \\ -m_3 & m_1+m_2+m_3)\mqty(0 \\ m_2g) \\
+        &= \frac{1}{(m_1+m_2+m_3)(m_2+m_3) - m_3^2}\mqty(-m_2m_3 \\ (m_1+m_2+m_3)m_2g)
+    \end{align*}
+    Reading off the first component gives the acceleration of $m_1$
+    \[ \boxed{\ddot{x}_1 = \frac{-m_2m_3g}{(m_1+m_2+m_3)(m_2+m_3) - m_3^2}} \]
 \end{enumerate}
 
 
 
 \section*{Problem 4}
 \begin{enumerate}[label=(\alph*)]
-    \item a
-    \item b
-    \item c
+    \item Since there's no potential energy, the Lagrangian is just the kinetic energy:
+    \begin{align*}
+        \mathscr{L} &= T \\
+        &= \frac{1}{2}m(r^2\dot{\theta}^2 + v_0^2) \\
+        &= \frac{1}{2}m(v_0^2t^2\dot{\theta}^2 + v_0^2) \\
+        &= \boxed{\frac{1}{2}mv_0^2(\dot{\theta}^2t^2 + 1)}
+    \end{align*}
+    \item Let's take some derivatives!
+    \begin{align*}
+        \pdv{\mathscr{L}}{\theta} &= 0 \\
+        \pdv{\mathscr{L}}{\dot{\theta}} &= mv_0^2\dot{\theta}t^2 \\
+        \dv{t}\pdv{\mathscr{L}}{\dot{\theta}} &= mv_0^2(\ddot{\theta}t^2 + 2\dot{\theta}t)
+    \end{align*}
+    Applying the Euler-Lagrange equation yields
+    \[ mv_0^2(\ddot{\theta}t^2 + 2\dot{\theta}t) = 0 \implies \boxed{t\ddot{\theta} + 2\dot{\theta} = 0}\]
+    \item The general solution for the above differential equation is
+    \[ \theta(t) = \frac{a}{t} + b \]
+    Plugging in the given initial conditions gives
+    \begin{align*}
+        \frac{a}{t_0} + b &= 0 \\
+        -\frac{a}{t_0^2} &= \omega_0
+    \end{align*}
+    Solving for the constants of integration gives
+    \begin{align*}
+        a &= -\frac{\omega_0}{t_0^2} \\
+        b &= -t_0\omega_0
+    \end{align*}
+    The exact solution is then
+    \[ \boxed{\theta(t) = -\frac{t_0^2\omega_0}{t} - t_0\omega_0 = -t_0\omega_0\left(\frac{t_0}{t} + 1\right)} \]
 \end{enumerate}
 
 
