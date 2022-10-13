@@ -38,16 +38,37 @@ Then, (keeping only terms linear in $\delta\omega$)
 
 
 \section*{Problem 2}
-\begin{alignat*}{3}
-    U(\Lambda)^{-1}U(\Lambda')U(\Lambda) \qquad && = & \qquad U(\Lambda^{-1}\Lambda'\Lambda) \\
-    U(\Lambda)^{-1}U(1 + \delta\omega')U(\Lambda) \qquad && = & \qquad U((\Lambda^{-1})(\delta + \delta\omega')\Lambda) \\
-    U(\Lambda)^{-1}(\mathbb{I} + \frac{i}{2}\delta\omega_{\mu\nu}M_{\mu\nu})U(\Lambda) \qquad && = & \qquad U((\Lambda^{-1})\delta \Lambda + (\Lambda^{-1})\Lambda\delta\omega) \\
-    U(\Lambda)^{-1}U(\Lambda) + \frac{i}{2}\delta\omega_{\mu\nu}U(\Lambda)^{-1}M_{\mu\nu}U(\Lambda) \qquad && = & \qquad U(\delta + \Lambda\Lambda\delta\omega) \\
-    \mathbb{I} + \frac{i}{2}\delta\omega_{\mu\nu}U(\Lambda)^{-1}M_{\mu\nu}U(\Lambda) \qquad && = & \qquad \mathbb{I} + \frac{i}{2}\delta\omega\Lambda\Lambda M_{\mu\nu} \\
-    \delta\omega_{\mu\nu}U(\Lambda)^{-1}M_{\mu\nu}U(\Lambda) \qquad && = & \qquad \delta\omega\Lambda\Lambda M_{\mu\nu} \\
-\end{alignat*}
-Words words Words
-\[ U(\Lambda)^{-1}M_{\mu\nu}U(\Lambda) = \Lambda\Lambda M_{\mu\nu} \]
+Starting with
+\[ U(\Lambda)^{-1}U(\Lambda')U(\Lambda) = U(\Lambda^{-1}\Lambda'\Lambda) \]
+we can expand $\Lambda'$ to $\delta_{\;\nu}^{\mu} + \delta{\omega'}_{\;\nu}^{\mu}$. On the left hand side this gives
+\begin{align*}
+    U(\Lambda)^{-1}U(\Lambda')U(\Lambda) &= U(\Lambda)^{-1}U(\delta_{\;\nu}^{\mu} + \delta{\omega'}_{\;\nu}^{\mu})U(\Lambda) \\
+    &= U(\Lambda)^{-1}\left(\mathbb{I} + \frac{i}{2}\delta{\omega'}_{\;\nu}^\mu\right)U(\Lambda) \\
+    &= \mathbb{I} + \frac{i}{2}\delta{\omega'}_{\mu\nu}U(\Lambda)^{-1}M^{\mu\nu}U(\Lambda)
+\end{align*}
+On the right hand side we get
+\begin{align*}
+    U(\Lambda^{-1}\Lambda'\Lambda) &= U((\Lambda^{-1})_{\;\alpha}^{\mu}{\Lambda'}_{\;\beta}^{\alpha}\Lambda_{\;\nu}^{\beta}) \\
+    &= U(\Lambda_{\alpha}^{\;\mu}(\delta_{\;\beta}^\alpha + \delta{\omega'}_{\;\beta}^\alpha)\Lambda_{\;\nu}^{\beta}) \\
+    &= U(\delta_{\;\mu}^\nu + \Lambda_\alpha^{\;\mu}\Lambda_{\;\nu}^\beta\delta{\omega'}_{\;\beta}^\alpha) \\
+    &= U(\delta_{\;\mu}^\nu + \delta\tilde{\omega}_{\;\nu}^\mu) \\
+    &= \mathbb{I} + \frac{i}{2}\delta\tilde{\omega}_{\mu\nu}M^{\mu\nu}
+\end{align*}
+Where
+\[ \delta\tilde{\omega}_{\;\nu}^\mu = \Lambda_\alpha^{\;\mu}\Lambda_{\;\nu}^\beta\delta{\omega'}_{\;\beta}^\alpha) \]
+Now,
+\begin{align*}
+    \delta\tilde{\omega}_{\mu\nu} &= g_{\mu\rho}\delta\tilde{\omega}_{\;\nu}^\rho \\
+    &= g_{\kappa\sigma}\Lambda_{\;\mu}^{\kappa}\Lambda_{\;\rho}^\sigma\Lambda_\alpha^{\;\rho}\Lambda_{\;\nu}^\beta\delta{\omega'}_{\;\beta}^\alpha \\
+    &= g_{\kappa\sigma}\Lambda_{\;\mu}^{\kappa}\delta_{\;\alpha}^\sigma\Lambda_{\;\nu}^\beta\delta{\omega'}_{\;\beta}^\alpha \\
+    &= g_{\kappa\sigma}\Lambda_{\;\mu}^\kappa\Lambda_{\;\nu}^\beta\delta{\omega'}_{\;\beta}^\alpha \\
+    &= \Lambda_{\;\mu}^\kappa\Lambda_{\;\nu}^\beta\delta{\omega'}_{\kappa\beta}
+\end{align*}
+So we have that
+\[ \mathbb{I} + \frac{i}{2}\delta{\omega'}_{\mu\nu}U(\Lambda)^{-1}M^{\mu\nu}U(\Lambda) = \mathbb{I} + \frac{i}{2}\Lambda_{\;\mu}^\kappa\Lambda_{\;\nu}^\beta\delta{\omega'}_{\kappa\beta}M^{\mu\nu} \]
+\[ \implies \delta{\omega'}_{\mu\nu}U(\Lambda)^{-1}M^{\mu\nu}U(\Lambda) = \delta{\omega'}_{\kappa\beta}\Lambda_{\;\mu}^\kappa\Lambda_{\;\nu}^\beta\delta{\omega'}_{\kappa\beta}M^{\mu\nu} \]
+
+
 
 \section*{Problem 3}
 
