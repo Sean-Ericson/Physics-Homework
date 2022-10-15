@@ -31,10 +31,11 @@ Then, (keeping only terms linear in $\delta\omega$)
 \begin{align*}
     g_{\rho\sigma} &= g_{\mu\nu}\Lambda_{\;\rho}^\mu\Lambda_{\;\sigma}^\nu \\
     &= g_{\mu\nu}\left(\delta_{\;\rho}^\mu + \delta\omega_{\;\rho}^\mu\right)\left(\delta_{\;\rho}^\mu + \delta\omega_{\;\sigma}^\nu\right) \\
-    &= g_{\mu\nu}\delta_{\;\rho}^\mu\delta_{\;\rho}^\mu + g_{\mu\nu}\delta_{\;\rho}^\mu\delta\omega_{\;\sigma}^\nu + g_{\mu\nu}\delta\omega_{\;\rho}^\mu\delta_{\;\rho}^\mu \\
+    &= g_{\mu\nu}\delta_{\;\rho}^\mu\delta_{\;\rho}^\mu + g_{\mu\nu}\delta_{\;\rho}^\mu\delta\omega_{\;\sigma}^\nu + g_{\mu\nu}\delta\omega_{\;\rho}^\mu\delta_{\;\rho}^\mu + O(\delta\omega^2)\\
     &= g_{\rho\sigma} + \delta\omega_{\rho\sigma} + \delta\omega_{\sigma\rho}
 \end{align*}
-\[ \implies \delta\omega_{\rho\sigma} = -\delta\omega_{\sigma\rho} \]
+\[ \implies 0 = \delta\omega_{\rho\sigma} + \delta\omega_{\sigma\rho} \]
+\[ \implies \boxed{\delta\omega_{\rho\sigma} = -\delta\omega_{\sigma\rho}} \]
 
 
 \section*{Problem 2}
@@ -69,7 +70,7 @@ So we have that
 \[ \implies \delta{\omega'}_{\mu\nu}U(\Lambda)^{-1}M^{\mu\nu}U(\Lambda) = \delta{\omega'}_{\kappa\beta}\Lambda_{\;\mu}^\kappa\Lambda_{\;\nu}^\beta M^{\mu\nu} \]
 \[ \implies \delta{\omega'}_{\mu\nu}U(\Lambda)^{-1}M^{\mu\nu}U(\Lambda) = \delta{\omega'}_{\mu\nu}\Lambda_{\;\kappa}^\mu\Lambda_{\;\beta}^\nu M^{\kappa\beta} \]
 Now we can equate the antisymmetric parts on both sides. Since $M^{\alpha\beta}$ is already antisymmetric, we can simply cancel $\delta{\omega'}_{\mu\nu}$, giving (after swapping out the contracted indicies to match the desired form):
-\[ U(\Lambda)^{-1}M^{\mu\nu}U(\Lambda) = \Lambda_{\;\rho}^\mu\Lambda_{\;\sigma}^\nu M^{\rho\sigma} \]
+\[ \boxed{U(\Lambda)^{-1}M^{\mu\nu}U(\Lambda) = \Lambda_{\;\rho}^\mu\Lambda_{\;\sigma}^\nu M^{\rho\sigma}} \]
 
 
 
@@ -83,7 +84,7 @@ Starting with the solution from Problem 2, we can again expand $\Lambda$. On the
 The right-hand side gives
 \begin{align*}
     \Lambda_{\;\rho}^\mu\Lambda_{\;\sigma}^\nu M^{\rho\sigma} &= (\delta_{\;\rho}^\mu + \delta\omega_{\;\rho}^\mu)(\delta_{\;\sigma}^\nu + \delta\omega_{\;\sigma}^\nu)M^{\rho\sigma} \\
-    &= M^{\mu\nu} + \delta\omega_{\;\sigma}^\nu M^{\mu\sigma} + \delta\omega_{\;\rho}^\mu M^{\rho\nu}
+    &= M^{\mu\nu} + \delta\omega_{\;\sigma}^\nu M^{\mu\sigma} + \delta\omega_{\;\rho}^\mu M^{\rho\nu} + O(\delta\omega^2)
 \end{align*}
 Re-equating the two sides, canceling the first term in each, and swapping some contracted indicies gives
 \[ \frac{i}{2}\left(\delta\omega_{\alpha\beta}M^{\mu\nu}M^{\alpha\beta} - \delta\omega_{\alpha\beta}M^{\alpha\beta}M^{\mu\nu}\right) = \delta\omega_{\;\alpha}^\nu M^{\mu\alpha} + \delta\omega_{\;\alpha}^\mu M^{\alpha\nu} \]
@@ -99,7 +100,7 @@ In the first term of the second line above, the antisymmetry of $\delta\omega$ w
 \end{align*}
 Just as in Problem 2, the antisymmetry of $M^{\alpha\beta}$ allows us to cancel all the $\delta\omega_{\alpha\beta}$. Swapping contracted indicies again to match the desired result, we have
 \[ M^{\mu\nu}M^{\rho\sigma} - M^{\rho\sigma}M^{\mu\nu} = i\left(g^{\nu\beta}M^{\mu\alpha} - g^{\mu\beta}M^{\alpha\nu} - g^{\nu\alpha}M^{\mu\beta} + g^{\mu\beta}M^{\alpha\nu} \right) \]
-\[ \implies \comm{M^{\mu\nu}}{M^{\rho\sigma}} = \left(g^{\mu\rho}M^{\nu\sigma} - (\mu \leftrightarrow \nu)\right) - (\rho \leftrightarrow \sigma) \]
+\[ \implies \boxed{\comm{M^{\mu\nu}}{M^{\rho\sigma}} = \left(g^{\mu\rho}M^{\nu\sigma} - (\mu \leftrightarrow \nu)\right) - (\rho \leftrightarrow \sigma)} \]
 
 
 \section*{Problem 4}
@@ -117,7 +118,7 @@ Now, using the result from Problem 3, we have that
     &= iJ_3
 \end{align*}
 Taking cyclic permutations of the above result gives
-\[ \comm{J_i}{J_j} = i\varepsilon_{ijk}J_k \]
+\[ \boxed{\comm{J_i}{J_j} = i\varepsilon_{ijk}J_k} \]
 \\
 For the next identity, consider
 \begin{align*}
@@ -127,7 +128,7 @@ For the next identity, consider
     &= iK_3
 \end{align*}
 Again, taking cyclic permutations of the above result gives
-\[ \comm{J_i}{K_j} = i\varepsilon_{ijk}K_k \]
+\[ \boxed{\comm{J_i}{K_j} = i\varepsilon_{ijk}K_k} \]
 \\
 Finally,
 \begin{align*}
@@ -137,7 +138,7 @@ Finally,
     &= -iJ_3
 \end{align*}
 taking cyclic permutations of the above result then gives
-\[ \comm{K_i}{K_j} = -i\varepsilon_{ijk}J_k \]
+\[ \boxed{\comm{K_i}{K_j} = -i\varepsilon_{ijk}J_k} \]
 
 \section*{Problem 5}
 \begin{enumerate}[label=(\alph*)]
@@ -173,13 +174,13 @@ taking cyclic permutations of the above result then gives
     We can now use the chain rule to expand the right-hand side further
     \begin{align*}
         \partial^\mu\mathcal{L}^\alpha\beta\phi(x) &= \mathcal{L}^\alpha\beta\partial^\mu\phi(x) + \left(\partial^\mu\mathcal{L}^{\alpha\beta}\right)\phi(x) \\
-        &= \mathcal{L}^\alpha\beta\partial^\mu\phi(x) -i\partial^\mu\left(x^\alpha\partial^\beta - x^\beta\partial^\alpha\right)\phi(x) \\
-        &= \mathcal{L}^\alpha\beta\partial^\mu\phi(x) -i\left(g^{\mu\alpha}\partial^\beta - g^{\mu\beta}\partial^\alpha\right)\phi(x) \\
-        &= \mathcal{L}^\alpha\beta\partial^\mu\phi(x) -i\left(g^{\alpha\mu}\delta_{\;\tau}^\beta - g^{\beta\mu}\delta_{\;\tau}^\alpha\right)\partial^\tau\phi(x) \\
-        &= \mathcal{L}^\alpha\beta\partial^\mu\phi(x) + \left(S_V^{\alpha\beta}\right)_{\;\tau}^{\mu}\partial^\tau\phi(x)
+        &= \mathcal{L}^{\alpha\beta}\partial^\mu\phi(x) -i\partial^\mu\left(x^\alpha\partial^\beta - x^\beta\partial^\alpha\right)\phi(x) \\
+        &= \mathcal{L}^{\alpha\beta}\partial^\mu\phi(x) -i\left(g^{\mu\alpha}\partial^\beta - g^{\mu\beta}\partial^\alpha\right)\phi(x) \\
+        &= \mathcal{L}^{\alpha\beta}\partial^\mu\phi(x) -i\left(g^{\alpha\mu}\delta_{\;\tau}^\beta - g^{\beta\mu}\delta_{\;\tau}^\alpha\right)\partial^\tau\phi(x) \\
+        &= \mathcal{L}^{\alpha\beta}\partial^\mu\phi(x) + \left(S_V^{\alpha\beta}\right)_{\;\tau}^{\mu}\partial^\tau\phi(x)
     \end{align*}
     which finally gives the desired result
-    \[ \comm{\partial^\mu\phi(x)}{M^{\alpha\beta}} = \mathcal{L}^\alpha\beta\partial^\mu\phi(x) + \left(S_V^{\alpha\beta}\right)_{\;\tau}^{\mu}\partial^\tau\phi(x) \]
+    \[ \boxed{\comm{\partial^\mu\phi(x)}{M^{\alpha\beta}} = \mathcal{L}^\alpha\beta\partial^\mu\phi(x) + \left(S_V^{\alpha\beta}\right)_{\;\tau}^{\mu}\partial^\tau\phi(x)} \]
 
     \setcounter{enumi}{2}
     \item To begin, let's right out $S_V^{12}$ as a matrix:
@@ -202,12 +203,35 @@ taking cyclic permutations of the above result then gives
         &= \mathbb{I} - \theta A + \frac{1}{2!}\theta^2A^2 - \frac{1}{3!}\theta^3A^3 + \frac{1}{4!}\theta^4A^4 - \frac{1}{5!}\theta^5A^5 + \frac{1}{6!}\theta^6A^6 + \cdots \\
         &= \mathbb{I} - \theta A + \frac{1}{2!}\theta^2A^2 + \frac{1}{3!}\theta^3A - \frac{1}{4!}\theta^4A^2 -\frac{1}{5!}\theta^5A + \frac{1}{6!}\theta^6A^2 + \cdots \\
         &= \mathbb{I} + \left(-\theta + \frac{1}{3!}\theta^3 - \frac{1}{5!}\theta^5 + \cdots\right)A + \left(\frac{1}{2!}\theta^2 - \frac{1}{4!}\theta^4 + \frac{1}{6!}\theta^6 + \cdots\right)A^2 \\
-        &= \mathbb{I} - \sin\theta A + (1-\cos\theta)A^2
+        &= \mathbb{I} - (\sin\theta)A + (1-\cos\theta)A^2
     \end{align*}
     Plugging in the above matrix expressions for $A$ and $A^2$ gives the desired result:
-    \[ \Lambda_{\;\nu}^\mu = \mqty(1&0&0&0\\0&\cos\theta&-\sin\theta&0\\0&\sin\theta&\cos\theta&0\\0&0&0&1) \]
+    \[ \boxed{\Lambda = \mqty(1&0&0&0\\0&\cos\theta&-\sin\theta&0\\0&\sin\theta&\cos\theta&0\\0&0&0&1)} \]
 
-    \item d
+    \item As in part c, we can begin by writing out $S_V^{30}$ as a matrix:
+    \begin{align*}
+        S_V^{30} &= -i\left(g^{3\rho}\delta_{\;\tau}^0 - g^{0\rho}\delta_{\;\tau}^3 \right) \\
+        &= -i\left[\mqty(0\\0\\0\\-1)\mqty(1&0&0&0) - \mqty(1\\0\\0\\0)\mqty(0&0&0&1)\right] \\
+        &= -i\left[\mqty(0&0&0&0\\0&0&0&0\\0&0&0&0\\-1&0&0&0) - \mqty(0&0&0&1\\0&0&0&0\\0&0&0&0\\0&0&0&0)\right] \\
+        &= \mqty(0&0&0&i\\0&0&0&0\\0&0&0&0\\i&0&0&0)
+    \end{align*}
+    Now, letting $A = i\left(S_V^{30}\right)$, powers of $A$ are given by
+    \begin{align*}
+        A &= \mqty(0&0&0&-1\\0&0&0&0\\0&0&0&0\\-1&0&0&0) \\
+        A^2 &= \mqty(1&0&0&0\\0&0&0&0\\0&0&0&0\\0&0&0&1) \\
+        A^3 &= \mqty(0&0&0&-1\\0&0&0&0\\0&0&0&0\\-1&0&0&0) \\
+        &= A
+    \end{align*}
+    Now we can expand $exp(i\eta S_V^{30})$ as follows:
+    \begin{align*}
+        exp(i\eta S_V^{30}) &= e^{\eta A} \\
+        &= \mathbb{I} + \eta A + \frac{1}{2!}\eta^2A^2 + \frac{1}{3!}\eta^3A^3 + \frac{1}{4!}\eta^4A^4 + \frac{1}{5!}\eta^5A^5 + \cdots \\
+        &= \mathbb{I} + \eta A + \frac{1}{2!}\eta^2A^2 + \frac{1}{3!}\eta^3A + \frac{1}{4!}\eta^4A^2 + \frac{1}{5!}\eta^5A + \cdots \\
+        &= \mathbb{I} + \left(\eta + \frac{1}{3!}\eta^3 + \frac{1}{5!}\eta^5 + \cdots\right)A + \left(\frac{1}{2!}\eta^2 + \frac{1}{4!}\eta^4 + \cdots\right)A^2 \\
+        &= \mathbb{I} + (\sinh\eta)A + (\cosh\eta - 1)A^2
+    \end{align*}
+    Plugging in the above matrix expressions for $A$ and $A^2$ gives the desired result:
+    \[ \boxed{\Lambda = \mqty(\cosh\eta&0&0&\sinh\eta\\0&1&0&0\\0&0&0&1\\\sinh\eta&0&0&\cosh\eta)} \]
 \end{enumerate}
 
 
