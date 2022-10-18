@@ -1,7 +1,7 @@
-PWD d:/Programming/Physics-Homework/610/HW1
+PWD d:/Programming/Physics-Homework/610/HW3
 INPUT C:/Users/Sean/AppData/Local/MiKTeX/2.9/miktex/data/le/pdftex/pdflatex.fmt
-INPUT d:/Programming/Physics-Homework/610/HW1/HW1.tex
-OUTPUT HW1.log
+INPUT d:/Programming/Physics-Homework/610/HW3/HW3.tex
+OUTPUT HW3.log
 INPUT D:/Programs/MiKTeX 2.9/tex/latex/base/article.cls
 INPUT D:/Programs/MiKTeX 2.9/tex/latex/base/article.cls
 INPUT D:/Programs/MiKTeX 2.9/tex/latex/base/size12.clo
@@ -69,6 +69,8 @@ INPUT nul:.tex
 INPUT nul:.tex
 INPUT D:/Programs/MiKTeX 2.9/tex/latex/l3kernel/l3pdfmode.def
 INPUT D:/Programs/MiKTeX 2.9/tex/latex/l3kernel/l3pdfmode.def
+INPUT D:/Programs/MiKTeX 2.9/tex/latex/tools/array.sty
+INPUT D:/Programs/MiKTeX 2.9/tex/latex/tools/array.sty
 INPUT D:/Programs/MiKTeX 2.9/tex/latex/pgf/frontendlayer/tikz.sty
 INPUT D:/Programs/MiKTeX 2.9/tex/latex/pgf/frontendlayer/tikz.sty
 INPUT D:/Programs/MiKTeX 2.9/tex/latex/pgf/basiclayer/pgf.sty
@@ -179,13 +181,9 @@ INPUT D:/Programs/MiKTeX 2.9/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
 INPUT D:/Programs/MiKTeX 2.9/tex/generic/pgf/modules/pgfmoduledecorations.code.tex
 INPUT D:/Programs/MiKTeX 2.9/tex/generic/pgf/libraries/decorations/pgflibrarydecorations.markings.code.tex
 INPUT D:/Programs/MiKTeX 2.9/tex/generic/pgf/libraries/decorations/pgflibrarydecorations.markings.code.tex
-INPUT D:/Programs/MiKTeX 2.9/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarypatterns.code.tex
-INPUT D:/Programs/MiKTeX 2.9/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarypatterns.code.tex
-INPUT D:/Programs/MiKTeX 2.9/tex/generic/pgf/libraries/pgflibrarypatterns.code.tex
-INPUT D:/Programs/MiKTeX 2.9/tex/generic/pgf/libraries/pgflibrarypatterns.code.tex
-INPUT HW1.aux
-INPUT HW1.aux
-OUTPUT HW1.aux
+INPUT HW3.aux
+INPUT HW3.aux
+OUTPUT HW3.aux
 INPUT D:/Programs/MiKTeX 2.9/tex/context/base/supp-pdf.mkii
 INPUT D:/Programs/MiKTeX 2.9/tex/context/base/supp-pdf.mkii
 INPUT D:/Programs/MiKTeX 2.9/tex/latex/oberdiek/epstopdf-base.sty
@@ -231,7 +229,6 @@ INPUT C:/Users/Sean/AppData/Local/MiKTeX/2.9/fonts/tfm/public/rsfs/rsfs10.tfm
 INPUT C:/Users/Sean/AppData/Local/MiKTeX/2.9/fonts/tfm/public/rsfs/rsfs7.tfm
 INPUT D:/Programs/MiKTeX 2.9/fonts/tfm/public/cm/cmr17.tfm
 INPUT D:/Programs/MiKTeX 2.9/fonts/tfm/public/cm/cmbx12.tfm
-INPUT D:/Programs/MiKTeX 2.9/fonts/tfm/public/cm/cmti12.tfm
 INPUT D:/Programs/MiKTeX 2.9/fonts/tfm/public/cm/cmr8.tfm
 INPUT D:/Programs/MiKTeX 2.9/fonts/tfm/public/cm/cmr6.tfm
 INPUT D:/Programs/MiKTeX 2.9/fonts/tfm/public/cm/cmmi12.tfm
@@ -252,24 +249,19 @@ INPUT D:/Programs/MiKTeX 2.9/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
 INPUT C:/Users/Sean/AppData/Local/MiKTeX/2.9/fonts/tfm/public/rsfs/rsfs10.tfm
 INPUT C:/Users/Sean/AppData/Local/MiKTeX/2.9/fonts/tfm/public/rsfs/rsfs10.tfm
 INPUT C:/Users/Sean/AppData/Local/MiKTeX/2.9/fonts/tfm/public/rsfs/rsfs5.tfm
-OUTPUT HW1.pdf
+INPUT D:/Programs/MiKTeX 2.9/fonts/tfm/public/cm/cmti12.tfm
+OUTPUT HW3.pdf
 INPUT C:/Users/Sean/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map
-INPUT HW1.aux
+INPUT HW3.aux
 INPUT D:/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 INPUT D:/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 INPUT D:/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb
 INPUT D:/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb
-INPUT D:/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb
-INPUT D:/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb
 INPUT D:/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb
 INPUT D:/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb
 INPUT D:/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb
 INPUT D:/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb
 INPUT D:/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb
 INPUT D:/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb
-INPUT D:/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb
-INPUT D:/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb
 INPUT D:/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb
 INPUT D:/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb
-INPUT D:/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb
-INPUT D:/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb
