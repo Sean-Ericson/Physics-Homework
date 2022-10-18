@@ -105,6 +105,27 @@
     \[ m_2l^2\omega^2\frac{\sin^4\theta_0}{\sin^2\theta_m} - 2(m_1+m_2)gl\cos\theta_m = m_2l^2\omega^2\sin^2\theta_0 - 2(m_1+m_2)gl\cos\theta_0 \] 
     \[ \implies \]
     \[ m_2l^2\omega^2\sin^2\theta_0\left(\frac{\sin^2\theta_0}{\sin^2\theta_m} - 1\right) = 2(m_1+m_2)gl(\cos\theta_m - \cos\theta_0) \]
+    Now we can focus on the parenthesized quantity on the left-hand side for some simplification:
+    \begin{align*}
+        \frac{\sin^2\theta_0}{\sin^2\theta_m} - 1 &= \frac{\sin^2\theta_0 - \sin^2\theta_m}{\sin^2\theta_m} \\
+        &= \frac{(1 - \cos^2\theta_0)-(1 - \cos^2\theta_m)}{\sin^2\theta_m} \\
+        &= \frac{\cos^2\theta_m - \cos^2\theta_0}{\sin^2\theta_m} \\
+        &= \frac{(\cos\theta_m + \cos\theta_0)(\cos\theta_m - \cos\theta_0)}{\sin^2\theta_m}
+    \end{align*}
+    Next, we can turn the $\sin^2\theta_m$ in the denominator into a $1 - \cos^2\theta_m$, reinsert into the previous equation, and cancel some terms:
+    \[ m_2l^2\omega^2\sin^2\theta_0(\cos\theta_m + \cos\theta_0) = 2gl(m_1+m_2)(1 - \cos^2\theta_m) \]
+    \[ \implies 2gl(m_1+m_2)\cos^2\theta_m + m_2l^2\omega^2\sin^2\theta_0\cos\theta_m + m_2l^2\omega^2\sin^2\theta_0\cos\theta_0 - 2gl(m_1+m_2) = 0 \]
+    The equation above is a quadratic equation in $\cos\theta_m$. In standard form ($ax^2 + bx + c = 0$) the coefficients are
+    \begin{align*}
+        a &= 2gl(m_1+m_2) \\
+        b &= m_2l^2\omega^2\sin^2\theta_0 \\
+        c &= m_2l^2\omega^2\sin^2\theta_0\cos\theta_0 - 2gl(m_1+m_2)
+    \end{align*}
+    The solution is then
+    \[ \cos\theta_m = \frac{-b \pm \sqrt{b^2 -4ac}}{2a} \]
+    Since inverse-cosine is monotonically decrasing, we want to take the \textit{positive} root to get the minimum value of $\theta$ (the negative root will yield the maximum value of $\theta$), i.e.
+    \[ \boxed{\theta_\text{min} = \cos^{-1}\left[\frac{-b + \sqrt{b^2 -4ac}}{2a} \right]} \]
+
 \end{enumerate}
 
 
@@ -171,7 +192,24 @@
     \[ \frac{1}{2}m\omega^2\frac{\rho_0^4}{\rho_m^2} + mg\rho_m\cot B = \frac{1}{2}m\omega^2\rho_0^2+ mg\rho_0\cot B \] 
     \[ \implies \]
     \[ \frac{1}{2}\omega^2\rho_0^2\left(\frac{\rho_0^2}{\rho_m^2} - 1\right) = g\cot B \left(\rho_0 - \rho_m\right) \]
-    \item d
+    This is nearly the equation we arrived at in problem 1. Applying similar tricks we find
+    \[ g\cot B \rho_m^2 - \frac{1}{2}\omega^2\rho_0^2\rho_m - \frac{1}{2}\omega^2\rho_0^3 = 0 \]
+    Again, this is quadratic in $\rho_m$ with coefficients
+    \begin{align*}
+        a &= g\cot B \\
+        b &= \frac{1}{2}\omega^2\rho_0^2 \\
+        c &= \frac{1}{2}\omega^2\rho_0^3
+    \end{align*}
+    Taking now the negative root and changing variable back to $z$ we have
+    \[ \boxed{z_\text{min} = \frac{-b + \sqrt{b^2 -4ac}}{2a}\cot B } \]
+
+    \item At it's lowest point, the mass will have no radial velocity, meaning
+    \begin{align*}
+        v &= \rho_m\dot{\phi} \\
+        &= \rho_m \left(\frac{\rho_0}{\rho_m}\right)^2\omega \\
+        &= \frac{\omega\rho_0^2}{\rho_m} \\
+        &= \boxed{\frac{\omega z_0^2}{z_m}\cot B}
+    \end{align*}
 \end{enumerate}
 
 
@@ -179,8 +217,24 @@
 \begin{enumerate}[label=(\alph*)]
     \item The particle will oscillate between the starting point $x_A$ and another point $0<x'_A<x_A$ such that $U(x'_A) = U(x_A)$.
     \item For points $x_B$ and $x_C$, the particle will escapte to positive infinity. For point $x_D$ the particle will oscillate between $x_D$ and another point $x'_D$ such that $x_D<x'_D<\infty$ and $U(x'_D) = U(x_D)$.
-    \item c
-    \item d
+    \item Starting at point $B$ with no kinetic energy, the particle's total energy is some positive constant satisfying
+    \[ E = \frac{1}{2}m\dot{x}^2 - \frac{U_0x_0}{x} > 0 \]
+    Solving for $\dot{x}$, we find
+    \[ \dot{x} = \sqrt{\frac{2}{m}\left(\frac{U_0x_0}{x} + E\right)} \]
+    which is a seperable first-order differential equation:
+    \[ \left[\frac{2}{m}\left(\frac{U_0x_0}{x} + E\right)\right]^{-1/2} \dd x = \dd t \]
+    ...unfortunately it's not a very \textit{nice} differential equation. However, given that we \textit{know} that the particle will escape to infinity, and we're interested in the long-term behaviour, we can safely neglect the $\frac{U_0x_0}{x}$ term, as it goes to zero in the limit we're interested in. That leaves us with
+    \[ \cint{x_0}{x}\sqrt{\frac{m}{2E}}\dd x' = \cint{t_0}{t}\dd t' \]
+    \[ \implies x(t) \to \sqrt{\frac{2E}{m}}t + C \]
+    i.e.
+    \[ \boxed{x(t) \propto t^1} \]
+
+    \item Following the same logic as in part c, we arive at the same seperable differential equation, but this one is \textit{much} nicer since $E=0$:
+    \[ \cint{x_0}{x}\left(\frac{2U_0x_0}{mx'}\right)^{-1/2}\dd x' = \cint{t_0}{t}\dd t' \]
+    \[ \implies \frac{m}{U_0x_0}x^{1/2} + C = t \]
+    \[ \implies x(t) = \sqrt{\frac{U_0x_0t}{m}} + C' \]
+    i.e.
+    \[ x(t) \propto t^{1/2} \]
 \end{enumerate}
 
 
@@ -237,7 +291,11 @@ The force is given by
     \[ \dot{\theta}\left(\pdv{\mathscr{L}}{\dot{\theta}}\right) - \mathscr{L} = \frac{1}{2}mR^2\left(\dot{\theta}^2 + \sin^2\theta\dot{\omega}^2\right) - mgR\cos\theta = T + U\]
     \[ \implies \boxed{E = \frac{1}{2}mR^2\left(\dot{\theta}^2 + \sin^2\theta\dot{\omega}^2\right) - mgR\cos\theta} \]
 
-    \item c    
+    \item Centripetal force will act to move the bead up the ring, which can be though of as an effective weakening of gravity. Depending on the relative strenghts of gravity and the centripetal force, along with the inital angual velocity, one of two things will happen
+    \begin{enumerate}[label=(\arabic*)]
+        \item If the initial velocity is sufficient, the bead will rotate all the way around the ring.
+        \item If the initial velocity is \textit{insufficient}, the bead will oscillate without ever reaching the top of the ring.
+    \end{enumerate}    
 \end{enumerate}
 
 \end{document}
