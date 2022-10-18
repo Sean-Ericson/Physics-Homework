@@ -250,11 +250,17 @@ INPUT C:/Users/Sean/AppData/Local/MiKTeX/2.9/fonts/tfm/public/rsfs/rsfs10.tfm
 INPUT C:/Users/Sean/AppData/Local/MiKTeX/2.9/fonts/tfm/public/rsfs/rsfs10.tfm
 INPUT C:/Users/Sean/AppData/Local/MiKTeX/2.9/fonts/tfm/public/rsfs/rsfs5.tfm
 INPUT D:/Programs/MiKTeX 2.9/fonts/tfm/public/cm/cmti12.tfm
+INPUT D:/Programs/MiKTeX 2.9/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
+INPUT D:/Programs/MiKTeX 2.9/fonts/tfm/public/amsfonts/symbols/msam5.tfm
+INPUT D:/Programs/MiKTeX 2.9/fonts/tfm/public/amsfonts/symbols/msbm5.tfm
+INPUT C:/Users/Sean/AppData/Local/MiKTeX/2.9/fonts/tfm/public/rsfs/rsfs5.tfm
 OUTPUT HW3.pdf
 INPUT C:/Users/Sean/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map
 INPUT HW3.aux
 INPUT D:/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 INPUT D:/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb
+INPUT D:/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb
+INPUT D:/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb
 INPUT D:/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb
 INPUT D:/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb
 INPUT D:/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb
@@ -263,5 +269,13 @@ INPUT D:/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb
 INPUT D:/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb
 INPUT D:/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb
 INPUT D:/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb
+INPUT D:/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb
+INPUT D:/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb
+INPUT D:/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb
+INPUT D:/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb
 INPUT D:/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb
 INPUT D:/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb
+INPUT D:/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam10.pfb
+INPUT D:/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam10.pfb
+INPUT D:/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb
+INPUT D:/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb

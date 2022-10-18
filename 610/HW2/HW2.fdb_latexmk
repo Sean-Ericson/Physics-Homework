@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1666029212 "d:/Programming/Physics-Homework/610/HW2/HW2.tex" "HW2.pdf" "HW2" 1666029214
+["pdflatex"] 1666029212 "d:/Programming/Physics-Homework/610/HW2/HW2.tex" "HW2.pdf" "HW2" 1666111790
   "C:/Users/Sean/AppData/Local/MiKTeX/2.9/fonts/tfm/public/rsfs/rsfs10.tfm" 1634866650 688 37338d6ab346c2f1466b29e195316aa4 ""
   "C:/Users/Sean/AppData/Local/MiKTeX/2.9/fonts/tfm/public/rsfs/rsfs5.tfm" 1634866652 684 3a51bd4fd9600428d5264cf25f04bb9a ""
   "C:/Users/Sean/AppData/Local/MiKTeX/2.9/fonts/tfm/public/rsfs/rsfs7.tfm" 1634866651 692 1b6510779f0f05e9cbf03e0f6c8361e6 ""
@@ -153,6 +153,6 @@
   "HW2.tex" 1665592921 4082 0d10ff077e0e3787d6e77871e00d7b55 ""
   "d:/Programming/Physics-Homework/610/HW2/HW2.tex" 1665592921 4082 0d10ff077e0e3787d6e77871e00d7b55 ""
   (generated)
-  "HW2.pdf"
-  "HW2.aux"
   "HW2.log"
+  "HW2.aux"
+  "HW2.pdf"

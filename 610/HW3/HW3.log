@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.9.25)  17 OCT 2022 11:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.9.25)  18 OCT 2022 12:35
 entering extended mode
 **d:/Programming/Physics-Homework/610/HW3/HW3.tex
 (d:/Programming/Physics-Homework/610/HW3/HW3.tex
@@ -652,32 +652,21 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 LaTeX Font Info:    Try loading font information for U+rsfs on input line 25.
  ("D:\Programs\MiKTeX 2.9\tex\latex\jknappen\ursfs.fd"
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
-)
-d:/Programming/Physics-Homework/610/HW3/HW3.tex:30: Missing number, treated as zero
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
+) [1
 
-d:/Programming/Physics-Homework/610/HW3/HW3.tex:30: Missing number, treated as zero
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-[1
-
-{C:/Users/Sean/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] (HW3.aux) ) 
+{C:/Users/Sean/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] [2] (HW3.aux) ) 
 Here is how much of TeX's memory you used:
- 23880 strings out of 493305
- 464786 string characters out of 3141037
- 480571 words of memory out of 3000000
- 27116 multiletter control sequences out of 15000+200000
- 541824 words of font info for 63 fonts, out of 3000000 for 9000
+ 23884 strings out of 493305
+ 464828 string characters out of 3141037
+ 482568 words of memory out of 3000000
+ 27118 multiletter control sequences out of 15000+200000
+ 542633 words of font info for 67 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,8n,65p,467b,275s stack positions out of 5000i,500n,10000p,200000b,50000s
-<D:/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><D:/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><D:/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><D:/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><D:/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><D:/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on HW3.pdf (1 page, 56967 bytes).
+<D:/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><D:/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><D:/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><D:/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><D:/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><D:/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><D:/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><D:/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><D:/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb><D:/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam10.pfb><D:/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on HW3.pdf (2 pages, 104673 bytes).
 PDF statistics:
- 33 PDF objects out of 1000 (max. 8388607)
+ 56 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
