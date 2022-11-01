@@ -24,13 +24,66 @@
 \author{Sean Ericson \\ Phys 664}
 \maketitle
 
+\section*{NOTE}
+In all problems the pessimistic metric (mostly minus) is used.
+
 \section*{Problem 1 \small{(Srednicki 3.4)}}
 \begin{enumerate}[label=(\alph*)]
-    \item a
-    \item b
-    \item c
-    \item d
-    \item e
+    \item To begin, we're given
+    \begin{equation} \label{1} T^{-1}(a)\phi(x)T(a) = \phi(x-a) \end{equation}
+    where
+    \[ T(a) = \exp(-iP^\mu a_\mu) \]
+    and
+    \[ P^0 = H. \]
+    Consider an infinitesimal $a$. Expanding the left-hand side of equation \refeq{1} (keeping terms at most linear in $a$) gives
+    \begin{align*}
+        T^{-1}(a)\phi(x)T(a) &= \left(\mathbb{I} + iP^\mu a_\mu\right)\phi(x)\left(\mathbb{I} - iP^\mu a_\mu\right) \\
+        &= \phi(x) + iP^\mu a_\mu\phi(x) - i\phi(x)P^\mu a_\mu.
+    \end{align*}
+    Expanding the right-hand side, meanwhile, gives
+    \[ \phi(x-a) = \phi(x) - a_\mu\partial^\mu\phi(x). \]
+    Equating these expressions and canceling off the lone $\phi$ on each side yields
+    \[ iP^\mu a_\mu\phi(x) - i\phi(x)P^\mu a_\mu = - a_\mu\partial^\mu\phi(x). \]
+    A bit more rearrangment and canceling of the $a_\mu$ gives us the desired result:
+    \[ \boxed{\comm{\phi(x)}{P^\mu} = -i\partial^\mu\phi(x)} \]
+
+    \item Letting $\mu = 0$ in the above result gives
+    \[ \comm{\phi(x)}{P^0} = -i\partial^0\phi(x) \quad \implies \quad \comm{\phi(x)}{H} = i\partial_0\phi(x) = i\dot{\phi}(x), \]
+    which is simply the Heisenberg equation of motion for $\phi(x)$
+    
+    \item Consider the Heisenberg equation of motion for the time derivative of $\phi$
+    \begin{equation}\label{2} \comm{\dot{\phi}(x)}{H} = i\ddot{\phi}\end{equation}
+    Using the Hamiltonian for a free field
+    \[ H = \frac{1}{2}\int\dd^3x \; \dot{\phi}^2(x) + \left(\nabla\phi(x)\right)^2 + m^2\phi^2(x) - 2\Omega_0, \]
+    we can evaluate the left-hand side of equation \refeq{2} as follows:
+    \begin{align*}
+        \comm{\dot{\phi}(x)}{H} &= \frac{1}{2}\int\dd^3x' \left(\comm{\dot{\phi}(x)}{\dot{\phi}^2(x')} + \comm{\dot{\phi}(x)}{\left(\nabla\phi(x')\right)^2} + m^2\comm{\dot{\phi}(x)}{\phi^2(x')} + 2\comm{\dot{\phi}(x)}{\Omega_0} \right) \\
+        &= \frac{1}{2}\int\dd^3x' \left(\comm{\dot{\phi}(x)}{\left(\nabla\phi(x')\right)^2} + m^2\comm{\dot{\phi}(x)}{\phi^2(x')}\right) \\
+        &= \frac{1}{2}\int\dd^3x' \; \nabla\phi(x')\comm{\dot{\phi}(x)}{\nabla\phi(x')} + \comm{\dot{\phi}(x)}{\nabla\phi(x')}\nabla\phi(x') \\ 
+        &\qquad + m^2\phi(x')\comm{\dot{\phi}(x)}{\phi(x')} + m^2\comm{\dot{\phi}(x)}{\phi(x')}\phi(x') \\  
+        &= \frac{1}{2}\int\dd^3x' \; \nabla\phi(x')\nabla\comm{\dot{\phi}(x)}{\phi(x')} + \nabla\comm{\dot{\phi}(x)}{\phi(x')}\nabla\phi(x') - 2im^2\phi(x')\delta^3(x-x') \\
+        &= i\int\dd^3x' \; -\nabla\phi(x')\nabla\delta^3(x-x') - m^2\phi(x')\delta^3(x-x') \\
+        &= i\int\dd^3x' \; \nabla^2\phi(x')\delta^3(x-x') - m^2\phi(x')\delta^3(x-x') \\
+        &= i\nabla^2\phi(x) - im^2\phi(x)
+    \end{align*}
+    Equating the above expression to the right-hand side of equation 2 gives
+    \[ i\nabla^2\phi(x) - im^2\phi(x) = i\partial_t^2\phi(x). \]
+    Some rearrangment along with combining the spatial and temporal derivatives then gives the Klein-Gordon equation:
+    \[ \left(\Box + m^2\right)\phi(x) = 0 \]
+
+    \item Define
+    \[ \boldmath{P} = -\int\dd^3x\:\Pi(x)\nabla\phi(x) \]
+    Then
+    \begin{align*}
+        \comm{\phi(x)}{\boldmath{P}} &= -\int\dd^3x'\comm{\phi(x)}{\dot{\phi}(x')\nabla\phi(x')} \\
+        &= -\int\dd^3x' \; \left(\dot{\phi}(x')\comm{\phi(x)}{\nabla\phi(x')} + \comm{\phi(x)}{\dot{\phi}(x')}\nabla\phi(x') \right) \\
+        &= -\int\dd^3x' \; \left(\dot{\phi}(x')\nabla\comm{\phi(x)}{\phi(x')} + \comm{\phi(x)}{\dot{\phi}(x')}\nabla\phi(x') \right) \\
+        &= -i\int\dd^3x' \; \nabla\phi(x')\delta^3(x-x') \\
+        &= -i\nabla\phi(x)
+    \end{align*}
+    which is just the spatial part of the result in part (a).
+
+    \item 
 \end{enumerate}
 
 
