@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2022.1.17)  31 OCT 2022 23:34
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2022.1.17)  1 NOV 2022 21:42
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -510,20 +510,55 @@ LaTeX Font Warning: Command \boldmath invalid in math mode on input line 83.
 
 LaTeX Font Warning: Command \mathversion invalid in math mode on input line 83.
 
-[2] [3] (./HW3.aux) ) 
+[2]
+Overfull \hbox (28.14355pt too wide) detected at line 99
+[]
+ []
+
+[3] [4]
+Overfull \hbox (48.4915pt too wide) detected at line 153
+[]
+ []
+
+
+Overfull \hbox (22.53209pt too wide) detected at line 160
+[]
+ []
+
+
+Overfull \hbox (35.658pt too wide) detected at line 167
+[]
+ []
+
+
+Overfull \hbox (11.46286pt too wide) detected at line 174
+[]
+ []
+
+[5]
+Overfull \hbox (12.70894pt too wide) detected at line 181
+\OMS/cmsy/m/n/12 r\OML/cmm/m/it/12 ^^^\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x\OT1/cmr/m/n/12 ) = \OML/cmm/m/it/12 i [] [] [] [] \OT1/cmr/m/n/12 ;  \OMS/cmsy/m/n/12 r\OML/cmm/m/it/12 ^^^[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x\OT1/cmr/m/n/12 ) = \OML/cmm/m/it/12 i [] [] [] []
+ []
+
+[6]
+Overfull \hbox (23.23364pt too wide) detected at line 241
+\OML/cmm/m/it/12 t < t[]  \OT1/cmr/m/n/12 =[]\OMS/cmsy/m/n/12 )  [] [][] \OT1/cmr/m/n/12 d\OML/cmm/m/it/12 E [] \OT1/cmr/m/n/12 = [] [][] d\OML/cmm/m/it/12 E []
+ []
+
+[7] [8] (./HW3.aux) ) 
 Here is how much of TeX's memory you used:
- 15918 strings out of 478286
- 319679 string characters out of 5846229
- 598842 words of memory out of 5000000
- 33827 multiletter control sequences out of 15000+600000
- 478706 words of font info for 67 fonts, out of 8000000 for 9000
+ 16078 strings out of 478286
+ 323917 string characters out of 5846229
+ 603842 words of memory out of 5000000
+ 33986 multiletter control sequences out of 15000+600000
+ 479053 words of font info for 68 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 100i,13n,104p,482b,331s stack positions out of 5000i,500n,10000p,200000b,80000s
-<d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on HW3.pdf (3 pages, 123962 bytes).
+ 100i,14n,104p,482b,1065s stack positions out of 5000i,500n,10000p,200000b,80000s
+<d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on HW3.pdf (8 pages, 174131 bytes).
 PDF statistics:
- 77 PDF objects out of 1000 (max. 8388607)
- 47 compressed objects within 1 object stream
+ 109 PDF objects out of 1000 (max. 8388607)
+ 68 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
