@@ -26,9 +26,38 @@
 
 \section*{$0.2.1$ The brachistochrone problem}
 \begin{enumerate}[label=(\alph*)]
-    \item a
-    \item b
-    \item c
+    \item Let
+    \[ \tilde{g} = g\sin\alpha. \]
+    Conservation of energy implies 
+    \[ \frac{1}{2}mv^2 = -m\tilde{g}y \implies \boxed{v = \sqrt{-2\tilde{g}y}} \]
+
+    \item The passage time is given by
+    \begin{align*}
+        T &= \int \frac{\dd s}{v} \\
+        &= \int_{x_1}^{x_2}\sqrt{\frac{\dd x^2 + \dd y^2}{-2\tilde{g}y}} \\
+        &= \int_{x_1}^{x_2}\sqrt{\frac{\dd x^2 + \left(\dv{y}{x} \dd x\right)^2}{-2\tilde{g}y}} \\
+        &= \int_{x_1}^{x_2}\dd x \sqrt{\frac{1 + (y')^2}{-2\tilde{g}y}},
+    \end{align*}
+    where we identify
+    \[ L(y, y') = \sqrt{\frac{1 + (y')^2}{-2\tilde{g}y}}. \]
+    Now, using the derivative
+    \[ \pdv{L}{y'} = \frac{y'}{1 + (y')^2}\sqrt{\frac{1 + (y')^2}{-2\tilde{g}y}}, \]
+    we can write out Jaboci's integral:
+    \begin{align*}
+        C_1 &= y'\pdv{L}{y'} - L \\
+        &= \frac{(y')^2}{1 + (y')^2}\sqrt{\frac{1 + (y')^2}{-2\tilde{g}y}} - \sqrt{\frac{1 + (y')^2}{-2\tilde{g}y}} \\
+        &= \frac{-1}{1 + (y')^2}\sqrt{\frac{1 + (y')^2}{-2\tilde{g}y}} \\
+        &= \frac{-1}{\sqrt{-2\tilde{g}y(1 + (y')^2)}}.
+    \end{align*}
+    This equation represents an ODE for $y(x)$.
+
+    \item Let $y' = \cot x$ (note that this implies $\dd x/ \dd y = \tan(t)$). Plugging this into the above ODE gives
+    \[ -2\tilde{g}y\csc^2(t) = \frac{1}{C_1^2} \implies \boxed{y(t) = -\frac{\sin^2(t)}{2C_1^2\tilde{g}}}, \]
+    with time derivative
+    \[ \dv{y}{t} = -\frac{\sin(t)\cos(t)}{2C_1^2\tilde{g}} \]
+    Now, 
+    \[ \dv{x}{t} = \dv{x}{y}\dv{y}{t} = -\tan(t)\frac{\sin(t)\cos(t)}{2C_1^2\tilde{g}} = -\frac{\sin^2(t)}{C_1^2\tilde{g}} \]
+    \[ \implies \boxed{x(t) = \frac{\sin(t)\cos(t) - t}{2C_1^2\tilde{g}} + C_2} \]
     \item d
     \item e
     \item f
