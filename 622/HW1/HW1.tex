@@ -7,6 +7,9 @@
 \usepackage{enumitem}
 \usepackage{physics}
 \usepackage{empheq}
+\usepackage{float}
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
 
 \usepackage{tikz}
 \usetikzlibrary{calc,decorations.markings,patterns}
@@ -51,13 +54,14 @@
     \end{align*}
     This equation represents an ODE for $y(x)$.
 
-    \item Let $y' = \cot x$ (note that this implies $\dd x/ \dd y = \tan(t)$). Plugging this into the above ODE gives
+    \item Let $y' = \cot t$ (note that this implies $\dd x/ \dd y = \tan(t)$). Plugging this into the above ODE gives
     \[ -2\tilde{g}y\csc^2(t) = \frac{1}{C_1^2} \implies \boxed{y(t) = -\frac{\sin^2(t)}{2C_1^2\tilde{g}}}, \]
     with time derivative
     \[ \dv{y}{t} = -\frac{\sin(t)\cos(t)}{2C_1^2\tilde{g}} \]
     Now, 
     \[ \dv{x}{t} = \dv{x}{y}\dv{y}{t} = -\tan(t)\frac{\sin(t)\cos(t)}{2C_1^2\tilde{g}} = -\frac{\sin^2(t)}{C_1^2\tilde{g}} \]
     \[ \implies \boxed{x(t) = \frac{\sin(t)\cos(t) - t}{2C_1^2\tilde{g}} + C_2} \]
+    
     \item d
     \item e
     \item f
@@ -65,8 +69,39 @@
 
 
 \section*{$0.2.2$ Dido's problem}
-
-
+The full Lagriangian is
+\[ L = \frac{1}{2}(\dot{x}y - \dot{y}x) + \lambda\sqrt{\dot{x}^2 + \dot{y}^2}. \]
+We can start by taking some derivatives:
+\begin{align*}
+    \pdv{L}{x} &= -\frac{1}{2}\dot{y} \\
+    \pdv{L}{y} &= \frac{1}{2}\dot{x} \\
+    \pdv{L}{\dot{x}} &= \frac{1}{2}y + \lambda\frac{\dot{x}}{\sqrt{\dot{x}^2 + \dot{y}^2}} \\
+    \pdv{L}{\dot{y}} &= -\frac{1}{2}x + \lambda\frac{\dot{y}}{\sqrt{\dot{x}^2 + \dot{y}^2}}
+\end{align*}
+The Euler-Lagrange equation for the $x$-coordinate gives
+\[ -\frac{1}{2}\dot{y} = \frac{1}{2}\dot{y} + \lambda \dv{t}\left(\frac{\dot{x}}{\sqrt{\dot{x}^2 + \dot{y}^2}}\right) \]
+\[ \implies -\dv{t}y = \lambda \dv{t}\left(\frac{\dot{x}}{\sqrt{\dot{x}^2 + \dot{y}^2}}\right) \] 
+\[ \implies y - y_0 = -\frac{\dot{x}}{\sqrt{\dot{x}^2 + \dot{y}^2}} \]
+Similarly, the Euler-Lagrange equation for the $y$-coordinate gives
+\[ \frac{1}{2}\dot{x} = -\frac{1}{2}\dot{x} + \lambda \dv{t}\left(\frac{\dot{y}}{\sqrt{\dot{x}^2 + \dot{y}^2}}\right) \]
+\[ \implies \dv{t}x = \lambda \dv{t}\left(\frac{\dot{y}}{\sqrt{\dot{x}^2 + \dot{y}^2}}\right) \] 
+\[ \implies x - x_0 = \frac{\dot{y}}{\sqrt{\dot{x}^2 + \dot{y}^2}} \]
+Squaring and adding the previous two results, we see that
+\[ (x-x_0)^2 + (y-y_0)^2 = \lambda^2, \]
+which is the equation for a circle centered at $(x_0, y_0)$ with radius $\lambda$. Let the origin be at point $O$, with the $x$-axis pointing along the line $\overline{OP}$, as depicted in Figure \ref{fig1}. By symmetry, we can see that 
+\begin{figure}[H]
+    \includegraphics[scale=0.7]{fig1}
+    \centering
+    \caption{An illustration of the relevent quantities.}
+    \label{fig1}
+\end{figure}
+\[ x_0 = \frac{d}{2}, \]
+leaving $y_0$ and $\lambda$ to be determined as a functions of $d$ and $l$. From Figure \ref{fig1}, we can see that
+\[ y_0^2 + \left(\frac{d}{2}\right)^2 = \lambda^2, \]
+\[ l = (2\pi - \theta)\lambda, \]
+and
+\[ \sin(\theta/2) = \frac{d}{2\lambda}. \]
+These three equations implicitly define $y_0$ and $\lambda$ as functions of $d$ and $l$, but they cannot be solved analytically.
 
 \section*{$0.2.3$ Geodesics on the 2-sphere}
 

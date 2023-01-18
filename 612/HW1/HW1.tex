@@ -7,6 +7,9 @@
 \usepackage{enumitem}
 \usepackage{physics}
 \usepackage{empheq}
+\usepackage{float}
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
 
 \usepackage{tikz}
 \usetikzlibrary{calc,decorations.markings,patterns}
@@ -34,7 +37,7 @@
     \[ \pdv{\mathscr{L}}{\dot{q}_\sigma} = m\dot{q}_\sigma - \pdv{V}{\dot{q}_\sigma} \]
     \[ \dv{t}\pdv{\mathscr{L}}{\dot{q}_\sigma} = m\ddot{q}_\sigma - \dv{t}\pdv{V}{\dot{q}_\sigma}.  \]
     The Euler-Lagrange equations then give
-    \[ m\ddot{q}_\sigma - \dv{t}\pdv{V}{\dot{q}_\sigma} = - \pdv{V}{q_\sigma} \implies m\ddot{q}_\sigma = \dv{t}\pdv{V}{\dot{q}_\sigma} - \pdv{V}{q_\sigma} \]
+    \[ m\ddot{q}_\sigma - \dv{t}\pdv{V}{\dot{q}_\sigma} = - \pdv{V}{q_\sigma} \implies \boxed{m\ddot{q}_\sigma = \dv{t}\pdv{V}{\dot{q}_\sigma} - \pdv{V}{q_\sigma}} \]
     
     \item Given the Lagrangian
     \[ L(\vec{x}, \vec{v}, t) = \frac{1}{2}\vec{v}\cdot\vec{v} - e\phi(\vec{x}, t) + e\vec{v}\cdot{\vec{A}(\vec{x}, t)}, \]
@@ -72,7 +75,7 @@
 \section*{Problem 2}
 \begin{enumerate}[label=\roman*.]
     \item The complete solution to the equations of motion is given by
-    \[ \mqty(x_1(t)\\x_2(t)) = \frac{1}{2}c_1\vec{a}_1e^{i\omega_1 t} + \frac{1}{2}c_2\vec{a}_2e^{i\omega_2 t} \]
+    \[ \mqty(x_1(t)\\x_2(t)) = \Re{\frac{1}{2}c_1\vec{a}_1e^{i\omega_1 t} + \frac{1}{2}c_2\vec{a}_2e^{i\omega_2 t}} \]
     where,
     \begin{align*}
         c_1 &= (x_1(0) + x_2(0)) + \frac{i}{\omega_1}(\dot{x}_1(0) + \dot{x}_2(0)) \\
@@ -88,12 +91,34 @@
     \end{align*}
     For the initial conditions
     \[ x_1(0) = a, \quad x_2(0) = 0, \quad \dot{x}_1(0) = 0, \quad \dot{x}_2(0) = 0, \]
-    the evolution of the system is given by the real part of
-    \[ \mqty(x_1(t)\\x_2(t)) = \frac{a}{2}\mqty(e^{i\omega_1 t} + e^{i\omega_2 t} \\ e^{i\omega_1 t} + e^{i\omega_2 t} ), \]
+    the evolution of the system is then
+    \[ \mqty(x_1(t)\\x_2(t)) = \frac{a}{2}\Re\mqty(e^{i\omega_1 t} + e^{i\omega_2 t} \\ e^{i\omega_1 t} + e^{i\omega_2 t} ), \]
     i.e.
-    \[ \mqty(\Re{x_1(t)}\\\Re{x_2(t)}) = \frac{a}{2}\mqty(\cos(\omega_1 t) + \cos(\omega_2 t) \\ \cos(\omega_1 t) - \cos(\omega_2 t)) \]
+    \[ \Re \mqty(x_1(t)\\x_2(t)) = \frac{a}{2}\mqty(\cos(\omega_1 t) + \cos(\omega_2 t) \\ \cos(\omega_1 t) - \cos(\omega_2 t)) \]
     For $k_{12} \ll k$, we have that $\omega_1 \approx \omega_2$. Therefore, 
-    
+    \[ x_1(t) \approx a\cos(\omega_1 t) \approx a\cos(\omega_2 t); \quad x_2(t) \approx 0, \]
+    and the evolution of the system is depicted in Figure \ref{fig1}.
+    \begin{figure}[H]
+        \includegraphics[scale=0.75]{fig1}
+        \centering
+        \caption{System evolution for the given initial conditons with $k_{12} \ll k$}
+        \label{fig1}
+    \end{figure}
+    where the red line is $x_1(t)$ and the blue line is $x_2(t)$. The period of oscillations for $x_1$ is $\boxed{T = 2\pi/\omega_{1} \approx 2\pi/\omega_2}$
+
+    For $k_{12} \gg k$, we have that $\omega_2 \gg \omega_1$. The evolution of the system is depcited in Figure \ref{fig2}. The period associated with the small features (i.e. the fast wiggles) of these dynamics is $\boxed{T_2 = 2\pi/\omega_2}$, while the period associated with the larege features (i.e. the big wiggles) is $\boxed{T_1 = 2\pi/\omega_1}$.
+    \begin{figure}[H]
+        \includegraphics[scale=0.6]{fig2}
+        \centering
+        \caption{System evolution for the given initial conditons with $k_{12} \gg k$}
+        \label{fig2}
+    \end{figure}
+
+    In order for the combined motion to be periodic, there must be an integer-multiple of the slow period which equals some integer-multiple of the fast period, i.e.
+    \[ \exists p,q \in \mathbb{Z} \;\; pT_1 = qT_2 \implies \boxed{\frac{\omega_2}{\omega_1} \in \mathbb{Q}}. \]
+    That is, the ratio between $\omega_1$ and $\omega_2$ must be rational.
+
+
     \item b
 \end{enumerate}
 
