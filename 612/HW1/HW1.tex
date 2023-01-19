@@ -123,12 +123,17 @@
     Applying this to our configuration vector, we get
     \[ R(\theta)\mqty(x_1(t)\\x_2(t)) = \mqty(x_1(t)\cos\theta - x_2(t)\sin\theta \\ x_1(t)\sin\theta + x_2(t)\cos\theta). \]
     If we select $\theta = -45^\circ$, this becomes
-    \[ \frac{1}{\sqrt{2}}\mqty(x_1(t) + x_2(t) \\ x_1(t) - x_2(t)), \]
-    which we recognize as being (proportional to) our two modes! Now, since both
-    \[ -a \leq x_1(t) \leq a \]
-    and 
-    \[ -a \leq x_2(t) \leq a, \]
-    we know that our configuration vector is confined to a square. Some combination of these facts leads us to conclude that the curves are bounded by square with vertices at $(a, 0)$, $(0, a)$, $(-a, 0)$, $(0, -a)$. \\
+    \[ \frac{1}{\sqrt{2}}\mqty(x_1(t) + x_2(t) \\ x_1(t) - x_2(t)) = \frac{a}{\sqrt{2}}\mqty(\cos\omega_1 \\ \cos\omega_2) \]
+    Now, we have that the components of the rotated configuration vector are both bounded between
+    \[ -\frac{a}{\sqrt{2}} \leq x_{1(2)}^{\text{rot}} \leq \frac{a}{\sqrt{2}} \]
+    Becuase the two modes are independent, they can both reach any value in this region, giving a square with side length $\sqrt{2}a$. In the original (unrotated) coordinate system, then, we get a square of side length $\sqrt{2}a$, rotated by $-45^\circ$, as we can observe in Figure 3.
+    \begin{figure}[H]
+        \includegraphics[scale=.2]{fig3}
+        \centering
+        \caption{The square!}
+        \label{fig3}
+    \end{figure}
+
     When the motion is periodic, the path is closed and there will be parts of the space that the system never reaches. Conversely, when the motion is aperiodic, every point in the square will eventually be reached.
 
 
@@ -201,7 +206,7 @@
 
     \item To find the mode frequencies we form the ``characteristic equation''
     \[ \det[K - \omega^2M] = 0 \]
-    and solve for $\omega$. Using Mathematica, we find
+    and solve for $\omega^2$. Using Mathematica, we find
     \[ \frac{1}{16}\left(-96k^3m^3\omega^6 + 176k^2m^4\omega^8 - 96km^5\omega^{10} + 16m^6\omega^{12}\right) \]
     This is a $6^\text{th}$ order polynomial in $\omega^2$, with 6 solutions. Three of these solutions are 0, which correspond to the three zero-frequency modes found in part ii. The other three solutions are
     \begin{align*}
@@ -215,12 +220,12 @@
         \vec{a}_2 &= \mqty(-1 & -1 & 1 & 0 & 0 & 1)^\intercal \\
         \vec{a}_3 &= \mqty(1/2 & 1/2 & -1 & 1/2 & 1/2 & 1)^\intercal
     \end{align*}
-    These modes are illustrated in Figure 3.
+    These modes are illustrated in Figure 4.
     \begin{figure}[H]
-        \includegraphics[scale=0.6]{fig3}
+        \includegraphics[scale=.08]{fig4}
         \centering
-        \caption{The three modes}
-        \label{fig3}
+        \caption{The three modes with non-zero frequencies.}
+        \label{fig4}
     \end{figure}
 
 \end{enumerate}

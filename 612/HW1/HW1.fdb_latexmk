@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1674118370 "d:/Programming/Physics-Homework/612/HW1/HW1.tex" "HW1.pdf" "HW1" 1674118372
+["pdflatex"] 1674122237 "d:/Programming/Physics-Homework/612/HW1/HW1.tex" "HW1.pdf" "HW1" 1674122242
   "C:/Users/Sean/AppData/Local/MiKTeX/2.9/fonts/tfm/public/rsfs/rsfs10.tfm" 1634863050 688 37338d6ab346c2f1466b29e195316aa4 ""
   "C:/Users/Sean/AppData/Local/MiKTeX/2.9/fonts/tfm/public/rsfs/rsfs5.tfm" 1634863052 684 3a51bd4fd9600428d5264cf25f04bb9a ""
   "C:/Users/Sean/AppData/Local/MiKTeX/2.9/fonts/tfm/public/rsfs/rsfs7.tfm" 1634863051 692 1b6510779f0f05e9cbf03e0f6c8361e6 ""
@@ -155,13 +155,14 @@
   "D:/Programs/MiKTeX 2.9/tex/latex/physics/physics.sty" 1356002062 29610 a9597219b282d9c78b02393dcd7d4322 ""
   "D:/Programs/MiKTeX 2.9/tex/latex/tools/calc.sty" 1492419594 10503 d03d065f799d54f6b7e9b175f8d84279 ""
   "D:/Programs/MiKTeX 2.9/tex/latex/xcolor/xcolor.sty" 1463131981 57049 34128738f682d033422ca125f82e5d62 ""
-  "HW1.aux" 1674118372 469 d587e767a06ac71afbc6b3a0f943e82f "pdflatex"
-  "HW1.tex" 1674118369 12490 7a7a2d61379c49526bd05404a02a08d0 ""
-  "d:/Programming/Physics-Homework/612/HW1/HW1.tex" 1674118369 12490 7a7a2d61379c49526bd05404a02a08d0 ""
+  "HW1.aux" 1674122242 610 af7369a94a231f215844b4a1aa6059ef "pdflatex"
+  "HW1.tex" 1674122232 12821 2cd1932caa88829d30f80c11d9c6dd8e ""
+  "d:/Programming/Physics-Homework/612/HW1/HW1.tex" 1674122232 12821 2cd1932caa88829d30f80c11d9c6dd8e ""
   "images/fig1.png" 1673987528 23444 1e2c946dfc489cab28dda8831125c3a3 ""
   "images/fig2.png" 1673988141 77490 229d214902d5ef07b5206e15e41ec9b8 ""
-  "images/fig3.png" 1674118244 1604341 192a1aee6238430d43ad6c7f158a177d ""
+  "images/fig3.png" 1674122161 150745 a0f233c5ef29ad5747c775f78c064d35 ""
+  "images/fig4.png" 1674120806 5793623 fb1d0917b98224c073913026764a7d5f ""
   (generated)
+  "HW1.aux"
   "HW1.pdf"
   "HW1.log"
-  "HW1.aux"
