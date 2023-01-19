@@ -61,10 +61,15 @@
     Now, 
     \[ \dv{x}{t} = \dv{x}{y}\dv{y}{t} = -\tan(t)\frac{\sin(t)\cos(t)}{2C_1^2\tilde{g}} = -\frac{\sin^2(t)}{C_1^2\tilde{g}} \]
     \[ \implies \boxed{x(t) = \frac{\sin(t)\cos(t) - t}{2C_1^2\tilde{g}} + C_2} \]
+    Hey, that's a parameterization of a cycloid!
+
+    \item Let $t_1 = 0$. Then $T = t_2$ and we have that
+    \[ T = \cot^{-1}(y'_2) \]
     
-    \item d
-    \item e
-    \item f
+    \item Let $P_1$ be the origin. The length of the shortest path between $P_1$ and $P_2$ (a straight line) is therefore
+    \[ D = \sqrt{x_2^2 + y_2^2} \]
+
+    \item $\pi$ is the ration of a circle's diameter to its circumference. (Sorry, I didn't get part e finished, so this is the only ratio I can offer)
 \end{enumerate}
 
 
@@ -103,7 +108,22 @@ and
 \[ \sin(\theta/2) = \frac{d}{2\lambda}. \]
 These three equations implicitly define $y_0$ and $\lambda$ as functions of $d$ and $l$, but they cannot be solved analytically.
 
-\section*{$0.2.3$ Geodesics on the 2-sphere}
 
+
+\section*{$0.2.3$ Geodesics on the 2-sphere}
+We want to minimize 
+\[ \int \dd t \sqrt{\dot{x}^2 + \dot{y}^2 + \dot{z}^2} \]
+subject to the constraint
+\[ x^2 + y^2 + z^2 = R^2 \]
+We start by taking some derivatives. Let 
+\[ L_1 = \sqrt{\dot{x}^2 + \dot{y}^2 + \dot{z}^2} \]
+then
+\[ \pdv{L_1}{\dot{x}} = \frac{\dot{x}}{\sqrt{\dot{x}^2 + \dot{y}^2 + \dot{z}^2}} \]
+\[ \pdv{L_1}{\dot{y}} = \frac{\dot{y}}{\sqrt{\dot{x}^2 + \dot{y}^2 + \dot{z}^2}} \]
+\[ \pdv{L_1}{\dot{z}} = \frac{\dot{z}}{\sqrt{\dot{x}^2 + \dot{y}^2 + \dot{z}^2}} \]
+The Euler-Lagrange equations then give
+\[ \dv{t}\frac{\dot{x}}{\sqrt{\dot{x}^2 + \dot{y}^2 + \dot{z}^2}} = 2\lambda x \]
+\[ \dv{t}\frac{\dot{y}}{\sqrt{\dot{x}^2 + \dot{y}^2 + \dot{z}^2}} = 2\lambda y \]
+\[ \dv{t}\frac{\dot{z}}{\sqrt{\dot{x}^2 + \dot{y}^2 + \dot{z}^2}} = 2\lambda z \]
 
 \end{document}
