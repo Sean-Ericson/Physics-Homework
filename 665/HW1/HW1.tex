@@ -74,7 +74,7 @@ Finally,
 
 
 \section*{Problem 34.2}
-Given that
+Let's use the $(-,+,+,_)$ metric for this one. Now, given that
 \[ \left(S_L^{ij}\right) = \frac{1}{2}\epsilon^{ijk}\sigma_k, \]
 \[ \left(S_L^{k0}\right) = \frac{1}{2}i\sigma_k, \]
 and
@@ -82,8 +82,25 @@ and
 we can see that
 \begin{align*}
     \comm{S_L^{ij}}{S_L^{ij'}} &= \frac{1}{4}\comm{\epsilon^{ijk}\sigma_k}{\epsilon^{ij'k'}\sigma_{k'}} \\
-    &= \frac{1}{4}\epsilon^{ijk}\epsilon^{ij'k'}\comm{\sigma_k}{\sigma_{k'}}
+    &= \frac{1}{4}\epsilon^{ijk}\epsilon^{ij'k'}\comm{\sigma_k}{\sigma_{k'}} \\
+    &= \frac{i}{2}\epsilon^{ijk}\epsilon^{ij'k'}\epsilon_{kk'l}\sigma_l \\
+    &= \frac{i}{2}\epsilon^{ijk}\left(\delta_{\;l}^{i}\delta_{\;k}^{j'} - \delta_{\;k}^{i}\delta_{\;l}^{j'}\right)\sigma_l \\
+    &= \frac{i}{2}\epsilon^{ijk}\delta_{\;l}^{i}\delta_{\;k}^{j'}\sigma_l - \frac{i}{2}\epsilon^{ijk}\delta_{\;k}^{i}\delta_{\;l}^{j'}\sigma_l \\
+    &= \frac{i}{2}\epsilon^{ijj'}\sigma_l - \frac{i}{2}\epsilon^{iji}\sigma_{j'} \\
+    &= \frac{i}{2}\epsilon^{ijj'}\sigma_l \\
+    &= i\left(S_L^{jj'}\right)
 \end{align*}
+Is this consistent with the generator commutation relation? It is, as can be seen by
+\[ i\left[g^{ii}\left(S_L^{jj'}\right) - g^{ji'}\left(S_L^{ij'}\right) - g^{ij}\left(S_L^{ji}\right) + g^{jj'}\left(S_L^{ii}\right)\right] = iS_L^{jj'} \]
+Next, consider
+\begin{align*}
+    \comm{S_L^{k0}}{S_L^{k'0}} &= -\frac{1}{4}\comm{\sigma_k}{\sigma_{k'}} \\
+    &= -\frac{i}{2}\epsilon_{kk'l}\sigma_l \\
+    &= -iS_L^{kk'}.
+\end{align*}
+This is also consistent with the generator commutation relation:
+\[ i\left[g^{kk'}\left(S_L^{00}\right) - g^{0k}\left(S_L^{k0}\right) - g^{k0}\left(S_L^{0k'}\right) + g^{00}\left(S_L^{kk'}\right)\right] = iS_L^{kk'} \]
+
 
 \section*{Problem 34.3}
 Consider
@@ -96,7 +113,7 @@ The assigments of ${\alpha, \beta, \gamma}$ that will yeild a $-1$ are then
 \[ \{1,2,3\}, \;\; \{2,3,1\}, \;\; \{3,1,2\}, \]
 while the assigments that yield a $+1$ are
 \[ \{2,1,3\}, \;\; \{1,3,2\}, \;\; \{3,2,1\}. \]
-We can write out this specific example using delta functions as
+We can write out this specific example using Kronecker deltas as
 \[ -\delta_{\;1}^{1}\delta_{\;2}^{2}\delta_{\;3}^{3} - \delta_{\;2}^{1}\delta_{\;3}^{2}\delta_{\;1}^{3} - \delta_{\;3}^{1}\delta_{\;1}^{2}\delta_{\;2}^{3} + \delta_{\;2}^{1}\delta_{\;1}^{2}\delta_{\;3}^{3} + \delta_{\;1}^{1}\delta_{\;3}^{2}\delta_{\;2}^{3} + \delta_{\;3}^{1}\delta_{\;2}^{2}\delta_{\;1}^{3}. \]
 Or, using the indicies, this is just
 \[ -\delta_{\;\alpha}^{\mu}\delta_{\;\beta}^{\nu}\delta_{\;\gamma}^{\rho} - \delta_{\;\beta}^{\mu}\delta_{\;\gamma}^{\nu}\delta_{\;\alpha}^{\rho} - \delta_{\;\gamma}^{\mu}\delta_{\;\alpha}^{\nu}\delta_{\;\beta}^{\rho} + \delta_{\;\beta}^{\mu}\delta_{\;\alpha}^{\nu}\delta_{\;\gamma}^{\rho} + \delta_{\;\alpha}^{\mu}\delta_{\;\gamma}^{\nu}\delta_{\;\beta}^{\rho} + \delta_{\;\gamma}^{\mu}\delta_{\;\beta}^{\nu}\delta_{\;\alpha}^{\rho}. \]
@@ -117,7 +134,8 @@ $3! = 6$ terms will be nonzero. Note that now there is no more freedom to assign
 
 
 \section*{Problem 5}
-Most generally, a representation of a group is a homomorphism from the group to the set of linear operators on some vector space. In our case, the group is the Lorentz group, and the vector space is the Hilbert space in which our states live.
+Most generally, a representation of a group is a homomorphism from the group to the set of linear operators on some vector space. In our case, the group is the Lorentz group, and the vector space is space of tensors (tensor fields, specifically). A reducible representation is one that can be written as the sum of representations of smaller dimension, whereas irriducible representations cannot. A prime example is the decomposition of an arbitrary rank-2 tensor into the antisymmetric, symmetric-traceless, and scalar parts as in problem 33.1. Under Lorentz transformations (the action of the group) these irriducible representations stay within their own subspaces. \\
+The generators of $SO(1,3)$ are the boost and angular momentum operators. These operators form two distinct representations of the $SO(3)$ Lie algebra. However, the representations for which the $j$ angular moementum number is an half-integer, it is the case that a rotation by $2\pi$ yields a minus sign. In this case, the representations are really representations of $SU(2)$.
 
 
 \end{document}
