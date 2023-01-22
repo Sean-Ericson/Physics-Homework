@@ -1,0 +1,71 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{mathtools}
+\usepackage{mathrsfs}
+\usepackage{enumitem}
+\usepackage{physics}
+\usepackage{empheq}
+\usepackage{float}
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
+
+\usepackage{tikz}
+\usetikzlibrary{calc,decorations.markings,patterns}
+
+\newcommand{\magsq}[1]{\big|#1\big|^2}
+\newcommand{\avg}[1]{\left<#1\right>}
+\newcommand{\fullint}{\int_{-\infty}^\infty}
+\newcommand{\fullintd}[1]{\fullint\dd#1\:}
+\newcommand{\cint}[2]{\int_{#1}^{#2}}
+\newcommand{\cintd}[3]{\cint{#1}{#2}\dd#3\:}
+\newcommand{\vecnabla}{\vec{\nabla}}
+
+\begin{document}
+
+\title{Homework 2}
+\author{Sean Ericson \\ Phys 612}
+\maketitle
+
+\section*{Problem 1}
+The variation of the action is given by
+\begin{align*}
+    \delta S &= \cintd{t_1}{t_2}{t} \left[p\delta\dot{q} + \dot{q}\delta p - \pdv{H}{q}\delta q - \pdv{H}{p}\delta p\right] \\
+    &= \cintd{t_1}{t_2}{t} \left[-\dot{p}\delta q + \dot{q}\delta p - \pdv{H}{q}\delta q - \pdv{H}{p}\delta p\right] \\
+    &= \cintd{t_1}{t_2}{t} \left[\dot{q}\delta p - \pdv{H}{p}\delta p - \dot{p}\delta q - \pdv{H}{q}\delta q \right] \\
+    &= \cintd{t_1}{t_2}{t} \left[\left(\dot{q} - \pdv{H}{p}\right)\delta p - \left(\dot{p} + \pdv{H}{q}\right)\delta q\right],
+\end{align*}
+where the assumption that $\delta q(t_1) = \delta q(t_2) = 0$ was used to integrate by parts in the second line. Demanding stationary action, we find
+\[
+\delta S = 0 \implies
+\begin{array}{l}
+    \dot{q} - \pdv{H}{p} = 0  \\
+    \dot{p} + \pdv{H}{q} = 0
+\end{array} \implies
+\begin{array}{l}
+    \dot{q} = \pdv{H}{p} \\
+    \dot{p} = -\pdv{H}{q}
+\end{array}
+\]
+
+\section*{Problem 2}
+The Poisson bracket is defined by
+\[ \poissonbracket{f}{g} = \sum_i \left(\pdv{f}{q_i}\pdv{g}{p_i} - \pdv{f}{p_i}\pdv{g}{q_i}\right), \]
+and satisfies the following properties:
+\[ \poissonbracket{f}{g} = -\poissonbracket{g}{f}, \]
+\[ \poissonbracket{\alpha f + \beta g}{h} = \alpha\poissonbracket{f}{h} + \beta\poissonbracket{g}{h}, \]
+\[ \poissonbracket{fg}{h} = f\poissonbracket{g}{h} + g\poissonbracket{f}{h}, \]
+\[ \poissonbracket{f}{\poissonbracket{g}{h}} + \poissonbracket{h}{\poissonbracket{f}{g}} + \poissonbracket{g}{\poissonbracket{h}{f}} = 0.  \]
+\begin{enumerate}[label=\roman*.]
+    \item The complete solution to the equations of motion is given by
+\end{enumerate}
+
+
+\section*{Problem 3}
+\begin{enumerate}[label=\roman*.]
+    \item The (squared) distances between the masses are, to linear order,
+\end{enumerate}
+
+
+\end{document}
