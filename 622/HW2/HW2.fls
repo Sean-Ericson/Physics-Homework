@@ -263,8 +263,6 @@ INPUT C:/Users/Sean/AppData/Local/MiKTeX/2.9/fonts/tfm/public/rsfs/rsfs10.tfm
 INPUT C:/Users/Sean/AppData/Local/MiKTeX/2.9/fonts/tfm/public/rsfs/rsfs5.tfm
 INPUT D:/Programs/MiKTeX 2.9/fonts/tfm/public/cm/cmbx12.tfm
 INPUT D:/Programs/MiKTeX 2.9/fonts/tfm/public/cm/cmbx10.tfm
-INPUT D:/Programs/MiKTeX 2.9/fonts/tfm/public/cm/cmbx8.tfm
-INPUT D:/Programs/MiKTeX 2.9/fonts/tfm/public/cm/cmbx6.tfm
 OUTPUT HW2.pdf
 INPUT C:/Users/Sean/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map
 INPUT HW2.aux
