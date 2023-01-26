@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.9.25)  25 JAN 2023 14:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.9.25)  25 JAN 2023 21:07
 entering extended mode
 **d:/Programming/Physics-Homework/622/HW2/HW2.tex
 (d:/Programming/Physics-Homework/622/HW2/HW2.tex
@@ -682,19 +682,25 @@ Overfull \hbox (73.26033pt too wide) detected at line 47
 
 [1
 
-{C:/Users/Sean/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] [2] [3] [4] (HW2.aux) ) 
+{C:/Users/Sean/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] [2] [3]
+<./images/fig1.png, id=25, 1517.67pt x 755.82375pt>
+File: ./images/fig1.png Graphic file (type png)
+<use ./images/fig1.png>
+Package pdftex.def Info: ./images/fig1.png  used on input line 138.
+(pdftex.def)             Requested size: 379.41656pt x 188.95547pt.
+ [4] [5 <./images/fig1.png>] [6] (HW2.aux) ) 
 Here is how much of TeX's memory you used:
- 24253 strings out of 493305
- 473356 string characters out of 3141037
- 504366 words of memory out of 3000000
- 27476 multiletter control sequences out of 15000+200000
+ 24264 strings out of 493305
+ 473501 string characters out of 3141037
+ 505374 words of memory out of 3000000
+ 27484 multiletter control sequences out of 15000+200000
  544125 words of font info for 72 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,13n,65p,476b,415s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 55i,17n,65p,476b,415s stack positions out of 5000i,500n,10000p,200000b,50000s
 <D:/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><D:/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><D:/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><D:/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><D:/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><D:/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><D:/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><D:/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><D:/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb><D:/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><D:/Programs/MiKTeX 2.9/fonts/type1/public/rsfs/rsfs10.pfb>
-Output written on HW2.pdf (4 pages, 127415 bytes).
+Output written on HW2.pdf (6 pages, 2963015 bytes).
 PDF statistics:
- 62 PDF objects out of 1000 (max. 8388607)
+ 71 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 13 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 18 words of extra memory for PDF output out of 10000 (max. 10000000)
 

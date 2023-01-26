@@ -124,13 +124,47 @@
         &= \frac{\omega}{2\pi}\frac{2\pi}{\omega}c\frac{E_y}{B} \\
         &= c\frac{E_y}{B} \\
         \avg{v_y} &= \frac{\omega}{2\pi}\int_0^{2\pi/\omega}\dd t \Im{\dot{\xi}} \\
-        &= 
+        &\propto \frac{\omega}{2\pi}\int_0^{2\pi/\omega}\sin(\omega t) \\
+        &= 0
     \end{align*}
+    It is! the time-averaged velocity in the $x-y$ plane is in the $x$-direction, with magnitude $cE_y/B$. If we rearrange this slightly, we see
+    \[ \frac{\avg{\vec{v}}}{c} = \frac{E_y}{B}, \]
+    so
+    \[ \frac{E_y}{B} \ll 1 \implies \frac{\abs{\vec{v}}}{c} \ll 1 \]
+    and hence the non-relativisitc approximation is valid.
     
-    \item d
+    \item The three qualitatively different trajectories depend on the value of $E_y$ relative to $B$, as seen in Figure 1.
+    \begin{figure}[H]
+        \includegraphics[scale=0.25]{fig1}
+        \centering
+        \caption{The three qualitatively differnt trajectories.}
+        \label{fig1}
+    \end{figure}
 \end{enumerate}
 
 
 \section*{$0.2.7$ Harmonic oscillator coupled to a magnetic field}
+The force is given by
+\begin{align*}
+    \vec{F} &= -k\vec{r} + \frac{e}{c}\vec{v}\times\vec{B} \\
+    &= -m\omega_0^2\vec{r} + \frac{eB}{c}\dot{y}\hat{x} + \frac{eB}{c}\dot{x}\hat{y} \\
+    &= \mqty(-m\omega_0^2 x + m\omega_1\dot{y} \\ -m\omega_0^2y - m\omega_1\dot{x} \\ -m\omega_0^2z)
+\end{align*}
+where 
+\[ \omega_1 = \frac{eB}{mc}. \]
+As in the last problem, we can see that motion in the $z$-direction (parallel to $\vec{B}$) decouples from motion in the $x-y$ plane, as
+\[ F_z = -m\omega_0^2 z. \]
+We can also see that motion is this direction is just that of a 1-dimensional harmonic oscillator with frequency $\omega_0$. \\
+Also like the last problem, we can define
+\[ \xi = x + iy \]
+to help us analyze motion in the $x-y$ plane (the plane perpendicular to $\vec{B}$). From the force above, we can see that the acceleration is
+\[ \mqty(\ddot{x} \\ \ddot{y}) = \mqty(\omega_1\dot{y} - \omega_0^2x \\ -\omega_1\dot{x} - \omega_0^2y). \]
+In terms of $\xi$, this is 
+\[ \ddot{\xi} = -i\omega_1\dot{\xi} - \omega_0^2\xi \implies \ddot{\xi} + i\omega_1\dot{\xi} + \omega_0^2\xi = 0. \]
+This is another second-order ODE for $\xi$, with general solution 
+\[ \xi(t) = \Re[Ae^{i\tilde{\omega}t}], \]
+where $A$ is some complex constant determined by the initial conditions, and
+\[ \tilde{\omega} = \frac{1}{2}\left(\sqrt{\omega_1^2 + 4\omega_0^2} - \omega_1\right) \]
+is the frequency of oscillation in the plane.
 
 \end{document}

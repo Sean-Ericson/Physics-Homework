@@ -48,6 +48,7 @@ where the assumption that $\delta q_{\sigma}(t_1) = \delta q_{\sigma}(t_2) = 0$ 
     \dot{p}_{\sigma} = -\pdv{H}{q_{\sigma}}
 \end{array}
 \]
+This is $2n$ conditions for the $n$ coordinates and $n$ momenta.
 
 \section*{Problem 2}
 The Poisson bracket is defined by
@@ -109,7 +110,7 @@ and satisfies the following properties:
         \end{align*}
     \end{itemize}
 
-    \item ANSWER!?!?!?!?!?!?
+    \item Nope! The $L$s could \textit{not} serve as a set of momenta, because they don't satisfy the cannonical Poisson bracket $\poissonbracket{p_i}{p_j} = 0$.
 \end{enumerate}
 
 
@@ -133,7 +134,7 @@ and satisfies the following properties:
     where $A$ is some complex number with $\Re A = q(0)$. The equation for $p$ is then
     \[ \boxed{p(t) = \Re[im\omega Ae^{i\omega t}]}, \]
     fixing the imaginary part of $A$ as $\Im A = -im\omega p(0)$. \\
-    The resulting trajectories in phase space are just circles, as seen in Figure 1.
+    The resulting trajectories in phase space are just circles and ellipses, as seen in Figure 1.
     \begin{figure}[H]
         \includegraphics[scale=0.75]{fig1}
         \centering
@@ -146,6 +147,15 @@ and satisfies the following properties:
         \poissonbracket{q}{p}_{(Q,P)} &= \pdv{q}{Q}\pdv{p}{P} - \pdv{q}{P}\pdv{p}{Q} \\
         &= \left(\sqrt{\frac{2P}{m\omega}}\cos Q\right)\left(\sqrt{\frac{m\omega}{2P}}\cos Q\right) - \left(\frac{1}{\sqrt{2Pm\omega}}\sin Q\right)\left(-\sqrt{2Pm\omega}\sin Q\right) \\
         &= \cos^2 Q + \sin^2 Q \\
+        &= 1
+    \end{align*}
+    Now the other way! When we invert the transformation, we find
+    \[ Q = \tan^{-1}(\frac{m\omega q}{p}); \quad P = \frac{p^2}{2m\omega} + \frac{1}{2}m\omega q^2. \]
+    Now,
+    \begin{align*}
+        \poissonbracket{Q}{P}_{(q,p)} &= \pdv{Q}{q}\pdv{P}{p} - \pdv{Q}{p}\pdv{P}{q} \\
+        &= \left(\frac{m\omega/p}{\left(\frac{m\omega q}{p}\right)^2 + 1}\right)\left(\frac{p}{m\omega}\right) - \left(-\frac{m\omega q}{\left(m \omega q\right)^2 + p^2}\right)\left(m\omega\right) \\
+        &= \frac{p^2}{m^2\omega^2q^2 + p^2} + \frac{m^2\omega^2q^2}{m^2\omega^2q^2 + p^2} \\
         &= 1
     \end{align*}
 

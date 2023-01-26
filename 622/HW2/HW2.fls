@@ -267,6 +267,11 @@ INPUT D:/Programs/MiKTeX 2.9/fonts/tfm/public/cm/cmbx12.tfm
 INPUT D:/Programs/MiKTeX 2.9/fonts/tfm/public/cm/cmbx10.tfm
 INPUT D:/Programs/MiKTeX 2.9/fonts/tfm/public/cm/cmbx8.tfm
 INPUT D:/Programs/MiKTeX 2.9/fonts/tfm/public/cm/cmbx6.tfm
+INPUT images/fig1.png
+INPUT ./images/fig1.png
+INPUT ./images/fig1.png
+INPUT ./images/fig1.png
+INPUT ./images/fig1.png
 INPUT HW2.aux
 INPUT D:/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 INPUT D:/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb
