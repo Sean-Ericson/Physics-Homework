@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1674622846 "d:/Programming/Physics-Homework/622/HW2/HW2.tex" "HW2.pdf" "HW2" 1674622848
+["pdflatex"] 1674687378 "d:/Programming/Physics-Homework/622/HW2/HW2.tex" "HW2.pdf" "HW2" 1674687380
   "C:/Users/Sean/AppData/Local/MiKTeX/2.9/fonts/tfm/public/rsfs/rsfs10.tfm" 1634863050 688 37338d6ab346c2f1466b29e195316aa4 ""
   "C:/Users/Sean/AppData/Local/MiKTeX/2.9/fonts/tfm/public/rsfs/rsfs5.tfm" 1634863052 684 3a51bd4fd9600428d5264cf25f04bb9a ""
   "C:/Users/Sean/AppData/Local/MiKTeX/2.9/fonts/tfm/public/rsfs/rsfs7.tfm" 1634863051 692 1b6510779f0f05e9cbf03e0f6c8361e6 ""
@@ -13,6 +13,8 @@
   "D:/Programs/MiKTeX 2.9/fonts/tfm/public/amsfonts/symbols/msbm7.tfm" 1233951854 940 228d6584342e91276bf566bcf9716b83 ""
   "D:/Programs/MiKTeX 2.9/fonts/tfm/public/cm/cmbx10.tfm" 1136765053 1328 c834bbb027764024c09d3d2bf908b5f0 ""
   "D:/Programs/MiKTeX 2.9/fonts/tfm/public/cm/cmbx12.tfm" 1136765053 1324 c910af8c371558dc20f2d7822f66fe64 ""
+  "D:/Programs/MiKTeX 2.9/fonts/tfm/public/cm/cmbx6.tfm" 1136765053 1344 8a0be4fe4d376203000810ad4dc81558 ""
+  "D:/Programs/MiKTeX 2.9/fonts/tfm/public/cm/cmbx8.tfm" 1136765053 1332 1fde11373e221473104d6cc5993f046e ""
   "D:/Programs/MiKTeX 2.9/fonts/tfm/public/cm/cmex10.tfm" 1136765053 992 662f679a0b3d2d53c1b94050fdaa3f50 ""
   "D:/Programs/MiKTeX 2.9/fonts/tfm/public/cm/cmmi12.tfm" 1136765053 1524 4414a8315f39513458b80dfc63bff03a ""
   "D:/Programs/MiKTeX 2.9/fonts/tfm/public/cm/cmmi6.tfm" 1136765053 1512 f21f83efb36853c0b70002322c1ab3ad ""
@@ -33,7 +35,9 @@
   "D:/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb" 1247593066 32362 bc3f3eec7ab7d65fe700963d4017d32c ""
   "D:/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb" 1247593067 32726 39f0f9e62e84beb801509898a605dbd5 ""
   "D:/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1247593067 32569 5e5ddc8df908dea60932f3c484a54c0d ""
+  "D:/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb" 1247593067 32587 65067f817f408bc71a7312f3d9828a9b ""
   "D:/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb" 1247593067 32626 5abc8bb2f28aa647d4c70f8ea38cc0d3 ""
+  "D:/Programs/MiKTeX 2.9/fonts/type1/public/rsfs/rsfs10.pfb" 893410260 16077 4737ac34f0fb5608550f3780a0202c22 ""
   "D:/Programs/MiKTeX 2.9/tex/context/base/supp-pdf.mkii" 1306914861 71592 fe353e1fbd982ffc647f3e98ff74da96 ""
   "D:/Programs/MiKTeX 2.9/tex/generic/ifxetex/ifxetex.sty" 1284257189 1458 43ab4710dc82f3edeabecd0d099626b2 ""
   "D:/Programs/MiKTeX 2.9/tex/generic/oberdiek/etexcmds.sty" 1516838086 7612 729a8cc22a1ee0029997c7f74717ae05 ""
@@ -152,10 +156,10 @@
   "D:/Programs/MiKTeX 2.9/tex/latex/physics/physics.sty" 1356002062 29610 a9597219b282d9c78b02393dcd7d4322 ""
   "D:/Programs/MiKTeX 2.9/tex/latex/tools/calc.sty" 1492419594 10503 d03d065f799d54f6b7e9b175f8d84279 ""
   "D:/Programs/MiKTeX 2.9/tex/latex/xcolor/xcolor.sty" 1463131981 57049 34128738f682d033422ca125f82e5d62 ""
-  "HW2.aux" 1674622848 9 a94a2480d3289e625eea47cd1b285758 "pdflatex"
-  "HW2.tex" 1674622845 1806 6da974f2f47f23cf6c2dc41984e7f996 ""
-  "d:/Programming/Physics-Homework/622/HW2/HW2.tex" 1674622845 1806 6da974f2f47f23cf6c2dc41984e7f996 ""
+  "HW2.aux" 1674687380 9 a94a2480d3289e625eea47cd1b285758 "pdflatex"
+  "HW2.tex" 1674687378 7828 5ae79204765d5774bb0ea3a21764972b ""
+  "d:/Programming/Physics-Homework/622/HW2/HW2.tex" 1674687378 7828 5ae79204765d5774bb0ea3a21764972b ""
   (generated)
+  "HW2.pdf"
   "HW2.log"
   "HW2.aux"
-  "HW2.pdf"
