@@ -1,0 +1,195 @@
+\documentclass{beamer}
+
+\usetheme{Malmoe}
+\usecolortheme{spruce}
+
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{mathtools}
+\usepackage{mathrsfs}
+\usepackage{enumitem}
+\usepackage{physics}
+\usepackage{slashed}
+
+\newcommand{\cev}[1]{\reflectbox{\ensuremath{\vec{\reflectbox{\ensuremath{#1}}}}}}
+
+%Information to be included in the title page:
+\title{Problem 50.5}
+\author{Sean Ericson}
+\institute{Phys 465}
+\date{November 30, 2022}
+
+\begin{document}
+
+\frame{\titlepage}
+
+\begin{frame}
+\frametitle{The Problem Statement}
+\begin{itemize}
+    \item \begin{enumerate}[label=(\alph*)]
+        \item<only@1> Prove the useful identities
+        \begin{equation} \bra{p}\gamma^\mu|k] = [k|\gamma^\mu\ket{p} \tag{50.38} \end{equation}
+        \begin{equation} \bra{p}\gamma^\mu|k]^* = \bra{k}\gamma^\mu|p] \tag{50.39} \end{equation}
+        \begin{equation} \bra{p}\gamma^\mu|p] = 2p^\mu \tag{50.40} \end{equation}
+        \begin{equation} \mel{p}{\gamma^\mu}{k} = 0 \tag{50.41} \end{equation}
+        \begin{equation} [p|\gamma^\mu|k] = 0 \tag{50.42} \end{equation}
+        
+        \item<only@2> Extend the last two identities of part (a): show that the product of an odd number of gamma matrices sandwiched between either $\bra{p}$ and $\ket{k}$ or $[p|$ and $|k]$ vanishes. Also show that the product of an even number of gamma matrices betweeh either $\bra{p}$ and $|k]$ or $[p|$ and $\ket{k}$ vanishes.
+        \item<only@3> Prove the Fierz identities,
+        \begin{equation} -\frac{1}{2}\bra{p}\gamma_\mu|q]\gamma^\mu = |q]\bra{p} + \ket{p}[q|, \tag{50.43} \end{equation}
+        \begin{equation} -\frac{1}{2}[p|\gamma_\mu\ket{q}\gamma^\mu = \ket{q}[p| + |p]\bra{q}. \tag{50.44} \end{equation}
+        Now take the matrix element of eq. (50.44) between $\bra{r}$ and $|s]$ to get another useful form of the Fierz identity,
+        \begin{equation} [p|\gamma^\mu\ket{q}\bra{r}\gamma_\mu|s] = 2[ps]\ev{qr}. \tag{50.45} \end{equation}
+    \end{enumerate}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Some Important Definitions and Relations}
+\begin{itemize}
+    \item<only@1> Our twister bras and kets are defined by
+    \[ |p] = u_-(\vec{p}) = \mqty(\phi_a \\ 0) \qquad [p| = \bar{u}_+(\vec{p}) = \mqty(\phi^a & 0) \]
+    \[ \ket{p} = u_+(\vec{p}) = \mqty(0 \\ \phi^{*\dot{a}}) \qquad \bra{p} = \bar{u}_-(\vec{p}) = \mqty(0 & \phi_{\dot{a}}^*) \]
+
+    \item<only@2> They obey the inner product relations
+    \begin{align*}
+        & \bra{k}{}\ket{p} \coloneqq \ev{kp} = -\ev{pk} \\
+        &\; [k||p] \coloneqq [kp] = -[pk] \\
+        & \bra{k}p] = [k\ket{p} = 0 \\
+        &\; [kp]^* = \ev{pk}
+    \end{align*}
+    \item<only@2> where
+    \[ \ev{pk} = \phi_{\dot{a}}^*\kappa^{*\dot{a}}, \quad [pk] = \phi^a\kappa_a \]
+
+    \item<only@3> The twistors are related to the 4-momentum by
+    \[ p_{a\dot{a}} \coloneqq p_\mu\sigma_{a\dot{a}}^\mu = -\phi_a\phi_{\dot{a}}^*, \]
+    \item<only@3> from which we can easily derive the useful relation
+    \[ -\slashed{p} = \ket{p}[p| + |p]\bra{p}. \]
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Solution: 50.5 (a)}
+\begin{itemize}
+    \framesubtitle<1>{$\bra{p}\gamma^\mu|k] = [k|\gamma^\mu\ket{p}$}
+    \item<only@1> First, let 
+    \[ q_\nu = -\delta_\nu^{\;\mu} \; \implies \; -\slashed{q} = \delta_\nu^{\;\mu}\gamma^\nu = \gamma^\mu. \]
+    Now,
+    \begin{align*}
+        \bra{p}-\slashed{q}|k] &= \bra{p}\left(\ket{q}[q| + |q]\bra{q}\right)|k] \\
+        &= \ev{pq}[qk] + \bra{p}q][q\ket{k} \\
+        &= \ev{pq}[qk] \\
+        [k|-\slashed{q}\ket{p} &= [k|\left(\ket{q}[q| + |q]\bra{q}\right)\ket{p} \\
+        &= [k\ket{q}[q\ket{p} + [kq]\ev{qp} \\
+        &= \ev{qp}[kq] \\
+        &= \ev{pq}[qk] \qquad\qedsymbol
+    \end{align*}
+
+    \framesubtitle<2>{$\bra{p}\gamma^\mu|k]^* = \bra{k}\gamma^\mu|p]$}
+    \item<only@2> Define $q_\nu$ as before, then
+    \begin{align*}
+        \bra{p}-\slashed{q}|k]^* &= \left(\ev{pq}[qk]\right)^* \\
+        &= [qp]\ev{kq} \\
+        [k|-\slashed{q}|p] &= \ev{kq}[qp] \\
+        &= [qp]\ev{kq} \qquad\qedsymbol
+    \end{align*} 
+
+    \framesubtitle<3>{$\bra{p}\gamma^\mu|p] = 2p^\mu$}
+    \item<only@3> Define $q_\nu$ as before, then
+    \begin{align*}
+        \bra{p}-\slashed{q}|p] &= \ev{pq}[qp] \\
+        &= \phi_{\dot{a}}^*\kappa^{*\dot{a}}\phi_a\kappa^a \\
+        &= \phi_a\phi_{\dot{a}}^*\kappa^{*\dot{a}}\kappa^a \\
+        &= p_{a\dot{a}}q^{\dot{a}a} \\
+        &= p_\mu q_\nu \sigma_{a\dot{a}}^\mu\bar{\sigma}^{\nu\dot{a}a} \\
+        &= -2p_\mu q_\nu g^{\mu\nu} \\
+        &= -2p^\nu q_\nu \\
+        &= 2p^\nu \delta_\nu^{\;\mu} \\
+        &= 2p^\mu \qquad\qedsymbol
+    \end{align*}
+
+    \framesubtitle<4>{$\mel{p}{\gamma^\mu}{k} = 0$, $[p|\gamma^\mu|k] = 0$}
+    \item<only@4> Define $q_\nu$ as before, then
+    \begin{align*}
+        \mel{p}{-\slashed{q}}{k} &= \bra{p}\left(\ket{q}[q| + |q]\bra{q}\right)\ket{k} \\
+        &= \ev{pq}[q\ket{k} + \bra{p}q]\ev{qk} \\
+        &= 0 \qquad\qedsymbol \\
+        [p|-\slashed{q}|k] &= [p|\left(\ket{q}[q| + |q]\bra{q}\right)|k] \\
+        &= [p\ket{q}[qk] + [pq]\bra{q}k] \\
+        &= 0 \qquad\qedsymbol
+    \end{align*}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Solution: 50.5 (b)}
+    \begin{itemize}
+        \item<only@1> First, note that
+        \begin{align*}
+            -\slashed{p}_1 &= \ket{p_1}[p_1| + |p_1]\bra{p_1} \\
+            (-\slashed{p}_1)(-\slashed{p}_2) &= \left(\ket{p_1}[p_1| + |p_1]\bra{p_1}\right)\left(\ket{p_2}[p_2| + |p_2]\bra{p_2}\right) \\
+            &= [p_1p_2]\dyad{p_1}{p_2} + \ev{p_1p_2}|p_1][p_2| \\
+            (-\slashed{p}_1)(-\slashed{p}_2)(-\slashed{p}_3) &= (-\slashed{p}_1)(-\slashed{p}_2)\left(\ket{p_3}[p_3| + |p_3]\bra{p_3}\right) \\
+            &= [p_1p_2]\ev{p_2p_3}\bra{p_1}[p_3| + \ev{p_1p_2}[p_2p_3]|p_1]\bra{p_3}
+        \end{align*}
+
+        \item<only@2> Let's refer to outer products of the form
+        \[ \dyad{p}{q}, \quad |p][q| \]
+        as \textit{homogeneous}, and outer products of the form
+        \[ \ket{p}[q|, \quad |p]\bra{q} \]
+        as \textit{heterogeneous}. 
+        
+        \item<only@2> Analogous definitions can be made for inner products and matrix elements.
+
+        \item<only@3> The following pattern is clear from the previous slide:
+        \begin{enumerate}[label=-]
+            \item<only@3> The product of an \textit{odd} number of $\gamma$ is given by \textit{heterogeneous} outer products
+            \item<only@3> The product of an \textit{even} number of $\gamma$ is given by \textit{homogeneous} outer products
+        \end{enumerate}
+
+        \item<only@4> Therefore, we can conlude that
+        \begin{enumerate}[label=-]
+            \item \textit{Homogeneous} matrix elements of an \textit{odd} number of $\gamma$ vanish. i.e.
+             \[ \bra{p}\prod_{i=1}^{2n+1}\gamma^{\mu_i}\ket{k} = [p|\prod_{i=1}^{2n+1}\gamma^{\mu_i}|k] = 0 \]
+            \item Similarly, \textit{heterogeneous} matrix elements of an \textit{even} number of $\gamma$ vanish. i.e.
+            \[ \bra{p}\prod_{i=1}^{2n}\gamma^{\mu_i}|k] = [p|\prod_{i=1}^{2n}\gamma^{\mu_i}\ket{k} = 0 \]  
+        \end{enumerate}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Solution: 50.5 (c)}
+    \begin{itemize}
+        \framesubtitle<1>{$-\frac{1}{2}\bra{p}\gamma_\mu|q]\gamma^\mu = |q]\bra{p} + \ket{p}[q|$}
+        \item<only@1>
+        \begin{align*}
+            \bra{p}\gamma_\mu|q]\gamma^\mu &= \mqty(0 & \phi_{\dot{a}}^*)\mqty(0 & \sigma_{\mu a\dot{c}} \\ \bar{\sigma}_{\mu}^{\dot{a}c} & 0)\mqty(\kappa_c \\ 0)\mqty(0 & \sigma_{b\dot{d}}^\mu \\ \bar{\sigma}^{\mu\dot{b}d} & 0) \\
+            &= \mqty(0 & \phi_{\dot{a}}^*\kappa_c\bar{\sigma}_\mu^{\dot{a}c}\sigma_{b\dot{d}}^\mu \\ \phi_{\dot{a}}^*\kappa_c\bar{\sigma}_\mu^{\dot{a}c}\bar{\sigma}^{\mu\dot{b}d} ) \\
+            &= \mqty(0 & -2\phi_{\dot{a}}^*\kappa_b \\ -2\phi^{*\dot{b}}\kappa^b) \\
+            |q]\bra{p} + \ket{p}[q| &= \mqty(\kappa_b \\ 0)\mqty(0 & \phi_{\dot{a}}^*) + \mqty(0 & \phi^{*\dot{b}})\mqty(\kappa^b \\ 0) \\
+            &= \mqty(0 & \phi_{\dot{a}}^*\kappa_b \\ 0 & 0) + \mqty(0 & 0 \\ \phi^{*\dot{b}}\kappa^b & 0) \\
+            &= \mqty(0 & \phi_{\dot{a}}^*\kappa_b \\ \phi^{*\dot{b}}\kappa^b & 0) \qquad\qedsymbol
+        \end{align*}
+
+        \framesubtitle<2>{$-\frac{1}{2}[p|\gamma_\mu\ket{q}\gamma^\mu = \ket{q}[p| + |p]\bra{q}$} 
+        \item<only@2>
+        \begin{align*}
+            [p|\gamma_\mu\ket{q} &= \mqty(\phi^a & 0)\mqty(0 & \sigma_{\mu a\dot{c}} \\ \bar{\sigma}_{\mu}^{\dot{a}c} & 0)\mqty(0 \\ \kappa^{*\dot{a}})\mqty(0 & \sigma_{b\dot{d}}^\mu \\ \bar{\sigma}^{\mu\dot{b}d} & 0) \\
+            &= \mqty(0 & \phi^a\kappa^{*\dot{a}}\sigma_{\mu a\dot{a}}\sigma_{b\dot{d}}^\mu \\ \phi^a\kappa^{*\dot{a}}\sigma_{\mu a\dot{a}}\sigma^{\mu b\dot{d}} & 0) \\
+            &= \mqty(0 & -2\phi_b\kappa_{\dot{b}}^* \\ -2\phi^a\kappa^{*\dot{a}} & 0) \\
+            \ket{q}[p| + |p]\bra{q} &= \mqty(0 \\ \kappa^{*\dot{a}})\mqty(\phi^a & 0) + \mqty(\phi_b \\ 0)\mqty(0 & \kappa_{\dot{b}}^*) \\
+            &= \mqty(0 & 0 \\ \phi^a\kappa^{*\dot{a}} & 0) + \mqty(0 & \phi_b\kappa_{\dot{b}}^*) \\
+            &= \mqty(0 & \phi_b\kappa_{\dot{b}}^* \\ \phi^a\kappa^{*\dot{a}} & 0) \qquad\qedsymbol
+        \end{align*}
+
+        \framesubtitle<3>{$[p|\gamma^\mu\ket{q}\bra{r}\gamma_mu|s] = 2[ps]\ev{qr}$}
+        \item<only@3>
+        \begin{align*}
+            \bra{r}\left(-\frac{1}{2}[p|\gamma_\mu\ket{q}\gamma^\mu\right)|s] &= \frac{1}{2}[p|\gamma_\mu\ket{q}\bra{r}\gamma^\mu|s] \\
+            &= -\bra{r}\left(\ket{q}[p| + |p]\bra{q}\right)|s] \\
+            &= -\ev{rq}[ps] \\
+            &= [ps]\ev{qr} \qquad\qedsymbol
+        \end{align*}
+    \end{itemize}
+\end{frame}
+
+\end{document}
