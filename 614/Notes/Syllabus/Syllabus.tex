@@ -1,0 +1,75 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{mathtools}
+\usepackage{mathrsfs}
+\usepackage{enumitem}
+\usepackage{physics}
+\usepackage{empheq}
+\usepackage{float}
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
+
+\usepackage{tikz}
+\usetikzlibrary{calc,decorations.markings,patterns}
+
+\newcommand{\magsq}[1]{\big|#1\big|^2}
+\newcommand{\avg}[1]{\left<#1\right>}
+\newcommand{\fullint}{\int_{-\infty}^\infty}
+\newcommand{\fullintd}[1]{\fullint\dd#1\:}
+\newcommand{\cint}[2]{\int_{#1}^{#2}}
+\newcommand{\cintd}[3]{\cint{#1}{#2}\dd#3\:}
+\newcommand{\vecnabla}{\vec{\nabla}}
+
+\begin{document}
+
+\title{Physics 614}
+\author{Prof: John Toner (jjt@uoregon.edu)}
+\maketitle
+
+\section*{Course Mechanics}
+\subsection*{Grading}
+\begin{align*}
+\text{Problem Sets:} && 40\% \\
+\text{Take-home Midterm:} && 30\% \\
+\text{Take-home Last Exam:} && 19.9\% \\
+\text{Class Participation:} && 10.1\%
+\end{align*}
+
+\subsection*{Collaboration}
+\begin{itemize}
+    \item \underline{Encouraged} on problem sets.
+    \item \underline{Forbidden} (and you will be caught!) on midterm and last exam.
+\end{itemize}
+
+\subsection*{Class Participation}
+\underline{Very} important; worth $>>$ 10.1\%. In practice, you won't get the other 89.9\% without it.
+
+\subsection*{TA}
+Xiaolu Cheng. Office hours:
+
+\section*{Syllabus}
+\begin{enumerate}[label=\Roman*)]
+    \item Grand Canonical Ensemble
+    \begin{enumerate}[label=\Alph*)]
+        \item Review
+        \item Application: Classical Ideal Gas
+        \item Energy + Number fluctuations (small)
+        \item Bosons + Fermions -- Occupation Numbers
+        \item Bose-Einstein Condensation
+        \item Black Body Radiation
+        \item Specific Heat of Solids
+        \item Fermi Systems
+        \item White Dwarf Stars
+    \end{enumerate}
+    \item Phase Transitions
+    \begin{enumerate}[label=\Alph*)]
+        \item Clapeyron-Clausius Law
+        \item Supercooling, Nucleation, et. al.
+        \item Finite Size Effects
+        \item (If time permits) Magnetic Systems
+    \end{enumerate}
+\end{enumerate}
+
+\end{document}
