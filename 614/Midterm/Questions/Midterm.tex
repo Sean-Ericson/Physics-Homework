@@ -1,0 +1,59 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{mathtools}
+\usepackage{mathrsfs}
+\usepackage{enumitem}
+\usepackage{physics}
+\usepackage{empheq}
+\usepackage{float}
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
+
+\usepackage{tikz}
+\usetikzlibrary{calc,decorations.markings,patterns}
+
+\newcommand{\magsq}[1]{\big|#1\big|^2}
+\newcommand{\avg}[1]{\left<#1\right>}
+\newcommand{\fullint}{\int_{-\infty}^\infty}
+\newcommand{\fullintd}[1]{\fullint\dd#1\:}
+\newcommand{\cint}[2]{\int_{#1}^{#2}}
+\newcommand{\cintd}[3]{\cint{#1}{#2}\dd#3\:}
+
+\begin{document}
+
+\title{Midterm}
+\author{Phys 614}
+\date{Due: 10:30 AM, Thursday, May 4, 2023}
+\maketitle
+
+\section*{Problem 1}
+For a two-dimensional system of non-interacting Bosons in a box, calculate the low temperature behavior of $\mu(T)$.
+
+\section*{Problem 2}
+For \underline{arbitrary} spatial dimensions $d > 2$, show that, for non-interacting Bosons in a box,
+\begin{equation}
+    \mu(T) \propto \abs*{T-T_c}^{X(d)} \tag{2.1}
+\end{equation}
+as $T \to T_c$ from above, where $T_c$ is the Bose-Einstein condensation temperature, and find an explicit expression for $X(d)$.
+
+\section*{Problem 3}
+For the system in problem 2, show that the specific heat $C_V(T)$ for $T \gtrapprox T_c$, obeys
+\begin{equation}
+    C_V(T) - C_V(T_c) \propto \abs{T-T_c}^{-\alpha(d)} \tag{3.1}
+\end{equation}
+and find an explicit expression for $\alpha(d)$.
+
+\section*{Problem 4}
+Find the behavior of the specific heat $C_V(T)$ as $T \to 0$ in this problem.
+
+\section*{Problem 5}
+$N$ non-interacting Bosons move in a 1-dimensional box of length $L$. There is an attractive potential in the box that creates a single bound state of energy $\epsilon_0 < 0$.
+\begin{enumerate}[label=(\alph*)]
+    \item \underline{Assuming} that $k_BT_c \ll \abs{\epsilon_0}$, show that the system Bose condenses at a temperature $T_c$, and calculate $T_c$. For what values of $\rho \equiv \frac{N}{L}$ is the $k_BT_c$ you found actually $\ll \abs{\epsilon_0}$?
+    \item Assuming $k_BT_c \gg \abs{\epsilon_0}$, show that the system again Bose condenses, and calculate $T_c$. For what values of $\rho$ is $k_BT_c$ actually $\gg \abs{\epsilon_0}$?
+    \item Are your results for (a) and (b) consistent with each other?
+\end{enumerate}
+
+\end{document}
