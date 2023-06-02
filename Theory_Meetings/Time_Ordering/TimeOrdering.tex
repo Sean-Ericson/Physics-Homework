@@ -63,7 +63,7 @@
         \vspace{0.1cm}
         \item<7-> $(BA)(t_1, t_2) = B(t_1)A(t_2)$
         \vspace{0.1cm}
-        \item<8-> $T\{AB\} = \begin{cases}
+        \item<8-> $T\{AB\}(t_1, t_2) = \begin{cases}
 			(AB)(t_1, t_2), & t_1 > t_2 \\
             (BA)(t_2, t_1), & t_1 < t_2
 		 \end{cases}$
@@ -86,7 +86,7 @@
             \item[\textbullet]<4-> $S_n$ is the symmetric group on $n$ elements,
             \item[\textbullet]<5-> $\epsilon(\pi) = \begin{cases}
                 1 & \text{(bosonic)} \\
-                \text{sgn}(\pi) & (fermionic)
+                \text{sgn}(\pi) & \text{(fermionic)}
              \end{cases}$
             \item[\textbullet]<6-> and $\theta(t)$ is the Heaviside step function.
         \end{itemize}
@@ -115,29 +115,68 @@
         \item[\textbullet]<2-> By the definition of ``operator'' given above, \textbf{yes}!!
         \begin{itemize}
             \item[\textbullet]<3-> $\mathcal{D}_1^n$ and $\mathcal{D}_n$ are both vector spaces, and
-            \item[\textbullet]<4-> $\mathscr{T}$ maps elemets from $\mathcal{D}_1^n$ to $\mathcal{D}_n$  
+            \item[\textbullet]<4-> $\mathscr{T}$ maps elemets from $\mathcal{D}_1^n$ to $\mathcal{D}_n$, so 
+            \item[\textbullet]<5-> it's an operator!
         \end{itemize}
     \end{itemize}
 \end{frame}
 
 \begin{frame}
 \frametitle{Why Ask in the First Place?}
-\alert{Why would it not be an operator?}
+\alert{\textbf{Why would it not be an operator?}}
 \begin{itemize}
     \item[\textbullet]<2-> $\mathscr{T}$ is not an element of $\mathcal{O}_{\mathcal{H}}$, the set of linear operators on the Hilbert space.
-    \item[\textbullet]<3-> It's also not a \textit{superoperator}: $\Sigma: \mathcal{O}_{\mathcal{H}} \to \mathcal{O}_{\mathcal{H}}$ 
+    \begin{itemize}
+        \item[\textbullet]<3-> Likely what most people implicitly mean when they say ``operator''.
+    \end{itemize}
+    \item[\textbullet]<4-> It's also not a \textit{superoperator}: $\Sigma: \mathcal{O}_{\mathcal{H}} \to \mathcal{O}_{\mathcal{H}}$ 
+    \begin{itemize}
+        \item[\textbullet]<5-> Even though it \textit{looks} like one!
+    \end{itemize}
 \end{itemize}
 \end{frame}
 
 \begin{frame}
 \frametitle{Further Classifications}
-\alert{What about those other terms?}
+\alert{\textbf{What about those other terms?}}
 \begin{itemize}
-    \item<2-> Meta-Operators
+    \item<2-> Meta-Operator?
     \begin{itemize}
-        \item<3-> 
+        \item[\textbullet]<3-> From wikipedia: "...a specific operation over a combination of operators, as in the example of path-ordering. A meta-operator is generally neither an operator (a linear transform on the vector space) nor a superoperator (a linear transform on the space of operators)."
+        \item[\textbullet]<4-> The Chronological Operator is just a special case of the ``path-ordering'' operator, and so is a meta-operator. 
     \end{itemize}
 \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Further Classifications}
+    \alert{\textbf{What about those other terms?}}
+    \begin{itemize}
+        \item<2-> ``Just a function?''
+        \begin{itemize}
+            \item[\textbullet]<3-> Whether or not it's a function depends on the spaces on which it acts.
+            \item[\textbullet]<4-> If we try to think of it as a superoperator, we can see that it fails to even be a function:
+            \item[\textbullet]<5-> Consider $\sigma_1(t_1), \sigma_2(t_2), \sigma_3(t_3), \sigma_4(t_4) \in \mathcal{D}_1$ with $t_1<t_2<t_3<t_4$
+            \item[\textbullet]<6-> Let $\sigma_2(t_2)\sigma_1(t_1) = \sigma_3(t_3)\sigma_4(t_4) = A$
+            \item[\textbullet]<7-> Also let $\sigma_4(t_4)\sigma_3(t_3) = B$. Then,
+            \item[]<8-> \[ \mathscr{T}\{\sigma_2(t_2)\sigma_1(t_1)\} = \sigma_2(t_2)\sigma_1(t_1) = A \] 
+            \item[]<9-> but \begin{align*}
+                \mathscr{T}\{\sigma_3(t_3)\sigma_4(t_4)\} &= \sigma_4(t_4)\sigma_3(t_3) = B \\
+                &= \mathscr{T}\{A\} = A
+            \end{align*}  
+        \end{itemize}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Further Classifications}
+    \alert{\textbf{What about those other terms?}}
+    \begin{itemize}
+        \item<2-> ``Just a rewrite rule?''
+        \begin{itemize}
+            \item[\textbullet]<3->
+        \end{itemize}
+    \end{itemize}
 \end{frame}
 
 \end{document}
