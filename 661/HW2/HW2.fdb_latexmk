@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1696970316 "d:/Programming/Physics-Homework/661/HW2/HW2.tex" "HW2.pdf" "HW2" 1696970318 0
+["pdflatex"] 1696980240 "d:/Programming/Physics-Homework/661/HW2/HW2.tex" "HW2.pdf" "HW2" 1696980241 0
   "C:/Users/Sean/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1696875231 278015 b5ae8789d05c9394f564dcef5be6e51a ""
   "C:/Users/Sean/AppData/Local/MiKTeX/fonts/tfm/public/rsfs/rsfs10.tfm" 1696875238 688 37338d6ab346c2f1466b29e195316aa4 ""
   "C:/Users/Sean/AppData/Local/MiKTeX/fonts/tfm/public/rsfs/rsfs5.tfm" 1696875373 684 3a51bd4fd9600428d5264cf25f04bb9a ""
@@ -32,6 +32,7 @@
   "D:/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb" 1247596667 32726 39f0f9e62e84beb801509898a605dbd5 ""
   "D:/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1247596667 32569 5e5ddc8df908dea60932f3c484a54c0d ""
   "D:/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb" 1247596667 32626 5abc8bb2f28aa647d4c70f8ea38cc0d3 ""
+  "D:/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb" 1247596673 31764 459c573c03a4949a528c2cc7f557e217 ""
   "D:/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb" 1247596673 34694 870c211f62cb72718a00e353f14f254d ""
   "D:/Programs/MiKTeX/tex/context/base/mkii/supp-pdf.mkii" 1580393758 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "D:/Programs/MiKTeX/tex/generic/iftex/iftex.sty" 1644000708 7237 bdd120a32c8fdb4b433cf9ca2e7cd98a ""
@@ -142,9 +143,9 @@
   "D:/Programs/MiKTeX/tex/latex/tools/array.sty" 1686255640 12691 ddae4e0162a664f166015d992388b742 ""
   "D:/Programs/MiKTeX/tex/latex/tools/calc.sty" 1686255640 10214 75bcd28386d4b4b9f28b2aff3cea7b24 ""
   "D:/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1656236890 56148 51a9a8571c07b9921892ae11063ae853 ""
-  "HW2.aux" 1696970318 32 ab05033ccbb38b00a31b200ccedf8001 "pdflatex"
-  "HW2.tex" 1696970315 4267 72ba8ef97371c4e6c347da87abe3c48f ""
-  "d:/Programming/Physics-Homework/661/HW2/HW2.tex" 1696970315 4267 72ba8ef97371c4e6c347da87abe3c48f ""
+  "HW2.aux" 1696980241 32 ab05033ccbb38b00a31b200ccedf8001 "pdflatex"
+  "HW2.tex" 1696980238 5042 add2bc8a0f018b2ae9b435e4c964fe5d ""
+  "d:/Programming/Physics-Homework/661/HW2/HW2.tex" 1696980238 5042 add2bc8a0f018b2ae9b435e4c964fe5d ""
   (generated)
   "HW2.aux"
   "HW2.log"
