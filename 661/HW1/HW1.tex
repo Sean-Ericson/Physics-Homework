@@ -94,11 +94,34 @@ In the center of mass-energy frame, we have
 \begin{equation*} \tag{4.1}
     (M, 0, 0, 0) \rightarrow 
     \begin{cases*}
-        (m, \beta_\text{CM}', 0, 0) \\
-        (m, -\beta_\text{CM}', 0, 0),    
+        (\frac{M}{2}, \frac{1}{4}M^2 - m^2, 0, 0) \\
+        (\frac{M}{2}, m^2 - \frac{1}{4}M^2 0, 0),    
     \end{cases*}
 \end{equation*}
 while in the lab frame we have
-
+\begin{equation*} \tag{4.2}
+    (\gamma M, 0, 0, \gamma\beta) \rightarrow 
+    \begin{cases*}
+        (\sqrt{m^2 + \gamma^2\abs{\beta_\text{Lab}'}}, \gamma\abs{\beta_\text{Lab}'}\sin\frac{\theta}{2}, 0, \gamma\abs{\beta_\text{Lab}'}\cos\frac{\theta}{2}) \\
+        (\sqrt{m^2 + \gamma^2\abs{\beta_\text{Lab}'}}, -\gamma\abs{\beta_\text{Lab}'}\sin\frac{\theta}{2}, 0, \gamma\abs{\beta_\text{Lab}'}\cos\frac{\theta}{2}),
+    \end{cases*}
+\end{equation*}
+where $\theta$ is the angle between the final state particles in the lab frame. Boosting from the CoM/E frame to labe frame (i.e. boosting by $-\beta \hat{z}$), we find
+\begin{equation*} \tag{4.3}
+    \begin{rcases*}
+        (\frac{M}{2}, \frac{1}{4}M^2 - m^2, 0, 0) \\
+        (\frac{M}{2}, m^2 - \frac{1}{4}M^2 0, 0)  
+    \end{rcases*} 
+    \rightarrow \mqty{(\frac{1}{2}\gamma M, \frac{1}{4}M^2 - m^2, 0, -\gamma\beta m) \\ (\frac{1}{2}\gamma M, m^2 - \frac{1}{4}M^2, 0, -\gamma\beta m)}.
+\end{equation*}
+By conservation of energy, we have that 
+\begin{equation*} \tag{4.4}
+    \sqrt{m^2 + \gamma^2\abs{\beta_\text{Lab}'}^2} = \frac{1}{2}\gamma M \implies \abs{\beta_\text{Lab}'}^2 = \frac{1}{4}M^2 - (\frac{m}{\gamma})^2
+\end{equation*}
+Now, comparing the $z$ components of (4.2) and (4.3), we see that
+\begin{align*} \tag{4.5}
+    \gamma \abs{\beta_\text{Lab}} \cos\frac{\theta}{2} = -\gamma\beta \implies \boxed{\cos\frac{\theta}{2} = \frac{-\beta}{\frac{1}{4}M^2 - (\frac{m}{\gamma})^2}} 
+\end{align*}
+Oops, this can't be right...
 
 \end{document}
