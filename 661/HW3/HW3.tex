@@ -1,0 +1,82 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{mathtools}
+\usepackage{mathrsfs}
+\usepackage{enumitem}
+\usepackage{physics}
+\usepackage{tensor}
+\usepackage{array}
+
+\usepackage{tikz}
+\usetikzlibrary{calc,decorations.markings,patterns}
+
+\newcommand{\magsq}[1]{\big|#1\big|^2}
+\newcommand{\avg}[1]{\left<#1\right>}
+\newcommand{\fullint}{\int_{-\infty}^\infty}
+\newcommand{\fullintd}[1]{\fullint\dd#1\:}
+\newcommand{\cint}[2]{\int_{#1}^{#2}}
+\newcommand{\cintd}[3]{\cint{#1}{#2}\dd#3\:}
+
+\begin{document}
+
+\title{Homework 2}
+\author{Sean Ericson \\ Phys 661}
+\maketitle
+
+\section*{Peskin 3.4}
+\begin{enumerate}[label=(\alph*)]
+    \item The final state consists of two photons and therefore has total angular momentum 0, 1, or 2 by the usual addition of angular momentum rules. By conservation of angular momentum, the initial particle must have had one of these values of angular momentum, and thus was an integer rather than half-integer.
+    \item Rotation by an angle $\phi$ about the $\hat{z}$ axis is affected by the matrix
+    \[ R(\phi\hat{z}) = \mqty(\cos\phi & -\sin\phi & 0 \\ \sin\phi & \cos\phi & 0 \\ 0 & 0 & 1). \]
+    Applying this to the given polarization vectors, we have
+    \begin{align*}
+        R(\phi\hat{z})\vec{\epsilon}_{1\text{R}} &= \frac{1}{\sqrt{2}}\mqty(\cos\phi & -\sin\phi & 0 \\ \sin\phi & \cos\phi & 0 \\ 0 & 0 & 1)\mqty(1\\i\\0) \\
+        &= \frac{1}{\sqrt{2}}\mqty(\cos\phi - i\sin\phi \\ \sin\phi + i\cos\phi \\ 0) \\
+        &= \frac{1}{\sqrt{2}}\mqty(e^{-i\phi} \\ ie^{-i\phi} \\ 0) \\
+        &= e^{-i\phi}\vec{\epsilon}_{1\text{R}},
+    \end{align*}
+    and 
+    \begin{align*}
+        R(\phi\hat{z})\vec{\epsilon}_{1\text{L}} &= \frac{1}{\sqrt{2}}\mqty(\cos\phi & -\sin\phi & 0 \\ \sin\phi & \cos\phi & 0 \\ 0 & 0 & 1)\mqty(1\\-i\\0) \\
+        &= \frac{1}{\sqrt{2}}\mqty(\cos\phi + i\sin\phi \\ \sin\phi - i\cos\phi \\ 0) \\
+        &= \frac{1}{\sqrt{2}}\mqty(e^{i\phi} \\ ie^{i\phi} \\ 0) \\
+        &= e^{i\phi}\vec{\epsilon}_{1\text{L}}.
+    \end{align*}
+    Thus, $\vec{\epsilon}_{1\text{R}}$ corresponds to a photon state of angular momentum $J_z = +1$, while $\vec{\epsilon}_{1\text{L}}$ corresponds to $J_z = -1$.
+    \item Rotation by $\pi$ radians about the $\hat{y}$ axis is affected by the matrix
+    \[ R(\pi\hat{y}) = \mqty(-1&0&0\\0&1&0\\0&0&-1). \]
+    Applying this to the given polarization vectors gives
+    \begin{align*}
+        \vec{\epsilon}_{2\text{R}} &= R(\pi\hat{y})\vec{\epsilon}_{1\text{R}} \\
+        &= \mqty(-1&0&0\\0&1&0\\0&0&-1)\mqty(1\\i\\0) \\
+        &= \mqty(-1\\i\\0),
+    \end{align*}
+    and 
+    \begin{align*}
+        \vec{\epsilon}_{2\text{L}} &= R(\pi\hat{y})\vec{\epsilon}_{1\text{L}} \\
+        &= \mqty(-1&0&0\\0&1&0\\0&0&-1)\mqty(1\\-i\\0) \\
+        &= \mqty(-1\\-i\\0).
+    \end{align*}
+    Checking that these corresponds to the expected photon momentums, we see that
+    \begin{align*}
+        R(\phi\hat{z})\vec{\epsilon}_{2\text{R}} &= \frac{1}{\sqrt{2}}\mqty(\cos\phi & -\sin\phi & 0 \\ \sin\phi & \cos\phi & 0 \\ 0 & 0 & 1)\mqty(-1\\i\\0) \\
+        &= \frac{1}{\sqrt{2}}\mqty(-\cos\phi - i\sin\phi \\ -\sin\phi + i\cos\phi \\ 0) \\
+        &= \frac{1}{\sqrt{2}}\mqty(e^{i\phi} \\ ie^{i\phi} \\ 0) \\
+        &= e^{i\phi}\vec{\epsilon}_{2\text{R}},
+    \end{align*}
+    and
+    \begin{align*}
+        R(\phi\hat{z})\vec{\epsilon}_{2\text{L}} &= \frac{1}{\sqrt{2}}\mqty(\cos\phi & -\sin\phi & 0 \\ \sin\phi & \cos\phi & 0 \\ 0 & 0 & 1)\mqty(-1\\-i\\0) \\
+        &= \frac{1}{\sqrt{2}}\mqty(-\cos\phi + i\sin\phi \\ -\sin\phi - i\cos\phi \\ 0) \\
+        &= \frac{1}{\sqrt{2}}\mqty(e^{-i\phi} \\ ie^{-i\phi} \\ 0) \\
+        &= e^{-i\phi}\vec{\epsilon}_{2\text{L}},
+    \end{align*}
+    as expected.
+
+\end{enumerate}
+
+
+
+\end{document}
