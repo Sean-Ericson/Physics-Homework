@@ -2,6 +2,7 @@
 
 \usepackage[margin=1in]{geometry}
 \usepackage{amsmath,amsthm,amssymb}
+\usepackage{mathtools}
 \usepackage{graphicx}
 \usepackage{enumitem}
 \usepackage{physics}
@@ -11,24 +12,25 @@
 
 \begin{document}
 	
-\title{title}
+\title{Notes}
 \author{Sean Ericson}
 \maketitle
 
 \section*{Bell Superposition}
 \begin{align*}
-    \ket{\Phi^+} &= \frac{1}{\sqrt{2}}\left(\ket{00} + \ket{11}\right) \\
-    \ket{\Phi^-} &= \frac{1}{\sqrt{2}}\left(\ket{00} - \ket{11}\right) \\
-    \ket{\Psi^+} &= \frac{1}{\sqrt{2}}\left(\ket{01} + \ket{10}\right) \\
-    \ket{\Psi^-} &= \frac{1}{\sqrt{2}}\left(\ket{01} - \ket{10}\right) \\
+    \ket{B_1} = \ket{\Phi^+} &= \frac{1}{\sqrt{2}}\left(\ket{00} + \ket{11}\right) \\
+    \ket{B_2} = \ket{\Phi^-} &= \frac{1}{\sqrt{2}}\left(\ket{00} - \ket{11}\right) \\
+    \ket{B_3} = \ket{\Psi^+} &= \frac{1}{\sqrt{2}}\left(\ket{01} + \ket{10}\right) \\
+    \ket{B_4} = \ket{\Psi^-} &= \frac{1}{\sqrt{2}}\left(\ket{01} - \ket{10}\right) \\
 \end{align*}
+\[ \ket{\psi(p;B_i,B_j)} \coloneqq \sqrt{1-p}\ket{B_i}_{TA}\ket{0}_B + \sqrt{p}\ket{B_j}_{TA}\ket{1}_B \]
 \begin{align*}
-    \ket{\psi(p)} &= \sqrt{1-p}\ket{\Phi^+}\ket{0} + \sqrt{p}\ket{\Psi^-}\ket{1} \\
+    \ket{\psi(p;B_1,B_4)} &= \sqrt{1-p}\ket{\Phi^+}\ket{0} + \sqrt{p}\ket{\Psi^-}\ket{1} \\
     &= \sqrt{\frac{1-p}{2}}\left(\ket{000} + \ket{110}\right) + \sqrt{\frac{p}{2}}\left(\ket{011} - \ket{101}\right) \\
     &= \mqty( \sqrt{\frac{1-p}{2}} \\ 0 \\ 0 \\ \sqrt{\frac{p}{2}} \\ 0 \\ -\sqrt{\frac{p}{2}} \\ \sqrt{\frac{1-p}{2}} \\ 0) 
 \end{align*}
 \begin{align*}
-    \rho(p) &= \mqty(
+    \rho^{1,4} &= \mqty(
         \frac{1-p}{2} & 0 & 0 & \frac{1}{2} \sqrt{(1-p) p} & 0 & -\frac{1}{2} \sqrt{(1-p) p} & \frac{1-p}{2} & 0 \\
         0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
         0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
@@ -40,21 +42,21 @@
     ) \\
 \end{align*} 
 \begin{align*}
-    \rho_{TA}(p) &= \mqty(
+    \rho_{TA}^{1,4} &= \mqty(
         \frac{1-p}{2} & 0 & 0 & \frac{1-p}{2} \\
         0 & \frac{p}{2} & -\frac{p}{2} & 0 \\
         0 & -\frac{p}{2} & \frac{p}{2} & 0 \\
         \frac{1-p}{2} & 0 & 0 & \frac{1-p}{2}
     ) \\
     \\
-    \rho_{TB}(p) &= \mqty(
+    \rho_{TB}^{1,4} &= \mqty(
         \frac{1-p}{2} & 0 & 0 & -\frac{1}{2} \sqrt{(1-p) p} \\
         0 & \frac{p}{2} & \frac{1}{2} \sqrt{(1-p) p} & 0 \\
         0 & \frac{1}{2} \sqrt{(1-p) p} & \frac{1-p}{2} & 0 \\
         -\frac{1}{2} \sqrt{(1-p) p} & 0 & 0 & \frac{p}{2}
     ) \\
     \\
-    \rho_{AB}(p) &= \mqty(
+    \rho_{AB}^{1,4} &= \mqty(
         \frac{1-p}{2} & 0 & 0 & \frac{1}{2} \sqrt{(1-p) p} \\
         0 & \frac{p}{2} & -\frac{1}{2} \sqrt{(1-p) p} & 0 \\
         0 & -\frac{1}{2} \sqrt{(1-p) p} & \frac{1-p}{2} & 0 \\
@@ -63,23 +65,24 @@
 \end{align*}
 
 \begin{align*}
-    \rho_T(p) &= \mqty(
+    \rho_T^{1,4} &= \mqty(
         \frac{1}{2} & 0 \\
         0 & \frac{1}{2}
     ) \\
     \\
-    \rho_A(p) &= \mqty(
+    \rho_A^{1,4} &= \mqty(
         \frac{1}{2} & 0 \\
         0 & \frac{1}{2}
     ) \\
     \\
-    \rho_B(p) &= \mqty(
+    \rho_B^{1,4} &= \mqty(
         1-p & 0 \\
         0 & p
     )
 \end{align*}
 
-\[ \rho_{T|A} = \mqty(
+\begin{align*}
+    \rho_{T|A}^{1,4} &= \mqty(
     1-p & 0 & 0 & 0 & 0 & 0 & 1-p & 0 \\
     0 & 1-p & 0 & 0 & 0 & 0 & 0 & 1-p \\
     0 & 0 & p & 0 & -p & 0 & 0 & 0 \\
@@ -88,9 +91,21 @@
     0 & 0 & 0 & -p & 0 & p & 0 & 0 \\
     1-p & 0 & 0 & 0 & 0 & 0 & 1-p & 0 \\
     0 & 1-p & 0 & 0 & 0 & 0 & 0 & 1-p
-) \]
+) \\
+\\
+&= \mqty(
+    \mqty(1-p & 0 \\ 0 & 1-p) & \mqty(0&0\\0&0) & \mqty(0&0\\0&0) & \mqty(1-p & 0 \\ 0 & 1-p) \\
+    \mqty(0&0\\0&0) & \mqty(p&0\\0&p) & \mqty(-p&0\\0&-p) & \mqty(0&0\\0&0) \\
+    \mqty(0&0\\0&0) & \mqty(-p&0\\0&-p) & \mqty(p&0\\0&p) & \mqty(0&0\\0&0) \\
+    \mqty(1-p & 0 \\ 0 & 1-p) & \mqty(0&0\\0&0) & \mqty(0&0\\0&0) & \mqty(1-p & 0 \\ 0 & 1-p) 
+) \\
+\\
+&= \mqty(1-p&0&0&1-p\\0&p&-p&0\\0&-p&p&0\\1-p&0&0&1-p)_{TA} \otimes \mathbb{I}_B
+\end{align*}
 
-\[ \scriptsize\rho_{T|B} = \mqty(
+{\scriptsize
+\begin{align*}
+    \rho_{T|B}^{1,4} &= \mqty(
     1-p & 0 & 0 & 0 & 0 & -\sqrt{(1-p) p} & 0 & 0 \\
     0 & p & 0 & 0 & \sqrt{(1-p)p} & 0 & 0 & 0 \\
     0 & 0 & 1-p & 0 & 0 & 0 & 0 & -\sqrt{(1-p) p} \\
@@ -99,9 +114,22 @@
     -\sqrt{(1-p) p} & 0 & 0 & 0 & 0 & p & 0 & 0 \\
     0 & 0 & 0 & \sqrt{(1-p)p} & 0 & 0 & 1-p & 0 \\
     0 & 0 & -\sqrt{(1-p) p} & 0 & 0 & 0 & 0 & p
-)\normalsize \]
+) \\
+\\
+&= \pi_{132}\mqty(1-p&0&0&0&0&0&-\sqrt{(1-p)p}&0\\0&1-p&0&0&0&0&0&-\sqrt{(1-p)p}\\0&0&p&0&\sqrt{-((p-1)p)}&0&0&0\\0&0&0&p&0&\sqrt{-((p-1)p)}&0&0\\0&0&\sqrt{-((p-1)p)}&0&1-p&0&0&0\\0&0&0&\sqrt{-((p-1)p)}&0&1-p&0&0\\-\sqrt{(1-p)p}&0&0&0&0&0&p&0\\0&-\sqrt{(1-p)p}&0&0&0&0&0&p)\pi_{132}^\dag \\
+&= \pi_{132}\left[\mqty(1-p&0&0&-\sqrt{(1-p)p}\\0&p&\sqrt{-((p-1)p)}&0\\0&\sqrt{-((p-1)p)}&1-p&0\\-\sqrt{(1-p)p}&0&0&p)_{TB}\otimes\mathbb{I}_A\right] \pi_{132}^\dag
+\end{align*}
+}
 
-\subsubsection*{$\rho_{T|A}$ Eigensystem}
+\subsubsection*{$\tilde{\rho}_{T|A}^{1,4}$ Eigensystem}
+\textit{CONJECTURE $\{i,j,k,l\} = \{1,2,3,4\}$}
+\[ \tilde{\rho}_{T|A}^{i,j} = 2(1-p)\ket{B_i}_{TA} \bra{B_i}_{TA} + 2p\ket{B_j}_{TA}\bra{B_j}_{TA} \]
+\[ \tilde{\rho}_{T|B}^{i,j} = \ket{B_k'}_{TB} \bra{B_k'}_{TB} + \ket{B_l'}_{TB} \bra{B_l'}_{TB} \]
+\[ \ket{B_{k(l)}'} \coloneq U\ket{B_{k(l)}} \]
+\[ U = \frac{1}{\sqrt{2}}\mqty(\sqrt{1-p}+\sqrt{p}&0&0&\sqrt{p}-\sqrt{1-p}\\0&\sqrt{1-p}+\sqrt{p}&\sqrt{p}-\sqrt{1-p}&0\\0&\sqrt{1-p}-\sqrt{p}&\sqrt{1-p}+\sqrt{p}&0\\\sqrt{1-p}-\sqrt{p}&0&0&\sqrt{1-p}+\sqrt{p}) \]
+
+
+\subsubsection*{$\rho_{T|A}^{1,4}$ Eigensystem}
 $\lambda = 0$ subspace (kernel):
 \begin{align*}
     \frac{1}{\sqrt{2}}\left(\ket{111}-\ket{010}\right) \\
