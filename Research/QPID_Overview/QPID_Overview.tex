@@ -1,0 +1,139 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{physics}
+
+\newcommand{\magsq}[1]{\big|#1\big|^2}
+\newcommand{\avg}[1]{\left<#1\right>}
+
+\begin{document}
+	
+\title{title}
+\author{Sean Ericson}
+\maketitle
+
+\section*{Bell Superposition}
+\begin{align*}
+    \ket{\Phi^+} &= \frac{1}{\sqrt{2}}\left(\ket{00} + \ket{11}\right) \\
+    \ket{\Phi^-} &= \frac{1}{\sqrt{2}}\left(\ket{00} - \ket{11}\right) \\
+    \ket{\Psi^+} &= \frac{1}{\sqrt{2}}\left(\ket{01} + \ket{10}\right) \\
+    \ket{\Psi^-} &= \frac{1}{\sqrt{2}}\left(\ket{01} - \ket{10}\right) \\
+\end{align*}
+\begin{align*}
+    \ket{\psi(p)} &= \sqrt{1-p}\ket{\Phi^+}\ket{0} + \sqrt{p}\ket{\Psi^-}\ket{1} \\
+    &= \sqrt{\frac{1-p}{2}}\left(\ket{000} + \ket{110}\right) + \sqrt{\frac{p}{2}}\left(\ket{011} - \ket{101}\right) \\
+    &= \mqty( \sqrt{\frac{1-p}{2}} \\ 0 \\ 0 \\ \sqrt{\frac{p}{2}} \\ 0 \\ -\sqrt{\frac{p}{2}} \\ \sqrt{\frac{1-p}{2}} \\ 0) 
+\end{align*}
+\begin{align*}
+    \rho(p) &= \mqty(
+        \frac{1-p}{2} & 0 & 0 & \frac{1}{2} \sqrt{(1-p) p} & 0 & -\frac{1}{2} \sqrt{(1-p) p} & \frac{1-p}{2} & 0 \\
+        0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+        0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+        \frac{1}{2} \sqrt{(1-p) p} & 0 & 0 & \frac{p}{2} & 0 & -\frac{p}{2} & \frac{1}{2} \sqrt{(1-p) p} & 0 \\
+        0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+        -\frac{1}{2} \sqrt{(1-p) p} & 0 & 0 & -\frac{p}{2} & 0 & \frac{p}{2} & -\frac{1}{2} \sqrt{(1-p) p} & 0 \\
+        \frac{1-p}{2} & 0 & 0 & \frac{1}{2} \sqrt{(1-p) p} & 0 & -\frac{1}{2} \sqrt{(1-p) p} & \frac{1-p}{2} & 0 \\
+        0 & 0 & 0 & 0 & 0 & 0 & 0 & 0
+    ) \\
+\end{align*} 
+\begin{align*}
+    \rho_{TA}(p) &= \mqty(
+        \frac{1-p}{2} & 0 & 0 & \frac{1-p}{2} \\
+        0 & \frac{p}{2} & -\frac{p}{2} & 0 \\
+        0 & -\frac{p}{2} & \frac{p}{2} & 0 \\
+        \frac{1-p}{2} & 0 & 0 & \frac{1-p}{2}
+    ) \\
+    \\
+    \rho_{TB}(p) &= \mqty(
+        \frac{1-p}{2} & 0 & 0 & -\frac{1}{2} \sqrt{(1-p) p} \\
+        0 & \frac{p}{2} & \frac{1}{2} \sqrt{(1-p) p} & 0 \\
+        0 & \frac{1}{2} \sqrt{(1-p) p} & \frac{1-p}{2} & 0 \\
+        -\frac{1}{2} \sqrt{(1-p) p} & 0 & 0 & \frac{p}{2}
+    ) \\
+    \\
+    \rho_{AB}(p) &= \mqty(
+        \frac{1-p}{2} & 0 & 0 & \frac{1}{2} \sqrt{(1-p) p} \\
+        0 & \frac{p}{2} & -\frac{1}{2} \sqrt{(1-p) p} & 0 \\
+        0 & -\frac{1}{2} \sqrt{(1-p) p} & \frac{1-p}{2} & 0 \\
+        \frac{1}{2} \sqrt{(1-p) p} & 0 & 0 & \frac{p}{2}
+    )
+\end{align*}
+
+\begin{align*}
+    \rho_T(p) &= \mqty(
+        \frac{1}{2} & 0 \\
+        0 & \frac{1}{2}
+    ) \\
+    \\
+    \rho_A(p) &= \mqty(
+        \frac{1}{2} & 0 \\
+        0 & \frac{1}{2}
+    ) \\
+    \\
+    \rho_B(p) &= \mqty(
+        1-p & 0 \\
+        0 & p
+    )
+\end{align*}
+
+\[ \rho_{T|A} = \mqty(
+    1-p & 0 & 0 & 0 & 0 & 0 & 1-p & 0 \\
+    0 & 1-p & 0 & 0 & 0 & 0 & 0 & 1-p \\
+    0 & 0 & p & 0 & -p & 0 & 0 & 0 \\
+    0 & 0 & 0 & p & 0 & -p & 0 & 0 \\
+    0 & 0 & -p & 0 & p & 0 & 0 & 0 \\
+    0 & 0 & 0 & -p & 0 & p & 0 & 0 \\
+    1-p & 0 & 0 & 0 & 0 & 0 & 1-p & 0 \\
+    0 & 1-p & 0 & 0 & 0 & 0 & 0 & 1-p
+) \]
+
+\[ \scriptsize\rho_{T|B} = \mqty(
+    1-p & 0 & 0 & 0 & 0 & -\sqrt{(1-p) p} & 0 & 0 \\
+    0 & p & 0 & 0 & \sqrt{(1-p)p} & 0 & 0 & 0 \\
+    0 & 0 & 1-p & 0 & 0 & 0 & 0 & -\sqrt{(1-p) p} \\
+    0 & 0 & 0 & p & 0 & 0 & \sqrt{(1-p)p} & 0 \\
+    0 & \sqrt{(1-p)p} & 0 & 0 & 1-p & 0 & 0 & 0 \\
+    -\sqrt{(1-p) p} & 0 & 0 & 0 & 0 & p & 0 & 0 \\
+    0 & 0 & 0 & \sqrt{(1-p)p} & 0 & 0 & 1-p & 0 \\
+    0 & 0 & -\sqrt{(1-p) p} & 0 & 0 & 0 & 0 & p
+)\normalsize \]
+
+\subsubsection*{$\rho_{T|A}$ Eigensystem}
+$\lambda = 0$ subspace (kernel):
+\begin{align*}
+    \frac{1}{\sqrt{2}}\left(\ket{111}-\ket{010}\right) \\
+    \frac{1}{\sqrt{2}}\left(\ket{110}-\ket{000}\right) \\ 
+    \frac{1}{\sqrt{2}}\left(\ket{011}-\ket{101}\right) \\
+    \frac{1}{\sqrt{2}}\left(\ket{010}-\ket{100}\right) 
+\end{align*}
+$\lambda = 2p$ subspace:
+\begin{align*}
+    \frac{1}{\sqrt{2}}\left(\ket{101}-\ket{011}\right) \\
+    \frac{1}{\sqrt{2}}\left(\ket{100}-\ket{010}\right)
+\end{align*}
+$\lambda = 2(1-p)$ subspace:
+\begin{align*}
+    \frac{1}{\sqrt{2}}\left(\ket{001}+\ket{111}\right) \\
+    \frac{1}{\sqrt{2}}\left(\ket{000}+\ket{110}\right)
+\end{align*}
+
+\subsubsection*{$\rho_{T|B}$ Eigensystem}
+$\lambda = 0$ subspace (kernel):
+\begin{align*}
+    \sqrt{1-p}\ket{111} + \sqrt{p}\ket{010} \\
+    \sqrt{1-p}\ket{011} - \sqrt{p}\ket{110} \\
+    \sqrt{1-p}\ket{101} + \sqrt{p}\ket{000} \\
+    \sqrt{1-p}\ket{001} - \sqrt{p}\ket{100} 
+\end{align*}
+$\lambda = 1$ subspace:
+\begin{align*}
+    \sqrt{1-p}\ket{010} - \sqrt{p}\ket{111}  \\
+    \sqrt{1-p}\ket{110} + \sqrt{p}\ket{011} \\
+    \sqrt{1-p}\ket{000} - \sqrt{p}\ket{101} \\
+    \sqrt{1-p}\ket{100} + \sqrt{p}\ket{001} 
+\end{align*}
+
+\end{document}
