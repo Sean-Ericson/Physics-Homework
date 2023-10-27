@@ -1,0 +1,140 @@
+\documentclass{beamer}
+
+\usetheme{Malmoe}
+\usecolortheme{spruce}
+
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{mathtools}
+\usepackage{mathrsfs}
+\usepackage{enumitem}
+\usepackage{physics}
+
+\newcommand{\avg}[1]{\left<#1\right>}
+
+%Information to be included in the title page:
+\title{Mathematics of Physical Quantities and Units:}
+\subtitle{Dimensional Analysis and The $\Pi$ Theorem}
+\author{Sean Ericson}
+\institute{UO}
+\date{Theory meeting, October 27, 2023}
+\titlegraphic{\includegraphics[scale=0.75]{seal.jpg}}
+
+\begin{document}
+
+\frame{\titlepage}
+
+\begin{frame}
+\frametitle{Scalars, Physical Quantities, and Dimensions}
+\begin{itemize}
+    \item<1-> Physical quantities ($\mathcal{P}$), their units ($\mathcal{D}$), and the set of scalars ($\mathcal{S}$) all form $\mathbb{Q}$-vector spaces.
+    \begin{itemize}
+        \item<2-> Note that we consider $\mathcal{S}$ as a 1-dimensional subspace of $\mathcal{P}$.
+    \end{itemize}
+    \item<3-> We can describe their relationship via the \textit{short exact sequence}
+    \item<4-> \[ \mathcal{E} = \left( \mathcal{S} \xrightarrow{i} \mathcal{P} \xrightarrow{d} \mathcal{D} \right), \] where
+    \begin{itemize}
+        \item<5-> $i$ is the inclusion map of $\mathcal{S}$ into $\mathcal{P}$,
+        \item<6-> $d$ is a surjection, and
+        \item<7-> $\ker[d] = \text{im}[i]$.
+    \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{A Quick Demonstration of the Notation}
+    \begin{itemize}
+        \item<1-> Denote preimages of $d$ via $\avg{D} \coloneqq d^{-1}(D)$ for $D \in \mathcal{D}$.
+        \begin{itemize}
+            \item<2-> i.e. ``the set of quantities with units D''
+            \item<3-> Note that $\avg{0} = \mathcal{S}$.
+        \end{itemize}
+        \item<4-> For all $q_1, q_2 \in \avg{D}$, we have that $q_1 - q_2 \in \mathcal{S}$
+        \begin{itemize}
+            \item<5-> $d(q_1 - q_2) = d(q_1) - d(q_2) = D - D = 0$
+        \end{itemize}
+        \item<6-> For any $\lambda \in \mathcal{S}$ and $q \in \avg{D}$, we have that $\lambda + q \in \avg{D}$
+        \begin{itemize}
+            \item<7-> $d(\lambda + q) = d(\lambda) + d(q) = D + 0 = D$
+        \end{itemize}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Splittings (i.e. Choosing Base Units)}
+\begin{itemize}
+    \item<1-> A linear map $U:\mathcal{D}\rightarrow\mathcal{P}$ such that $d(U(D)) = D \quad \forall D \in \mathcal{D}$ is called a \textit{linear splitting}.
+    \item<2-> Any such splitting induces a (linear) map $V:\mathcal{P}\rightarrow\mathcal{S}$ via  $V(q) = q - U(d(q))$
+    \item<3-> We can define the map $\chi : \mathcal{S} \times \mathcal{D} \rightarrow \mathcal{P}$  by \[ \chi(\lambda, D) = \lambda + U(D) \],
+    \item<4-> and its inverse \[ \chi^{-1}(q) = (V(q), d(q)) \]
+    \item<5-> $\chi$ as given is a bijection, hence $\mathcal{S}\times\mathcal{D} \simeq \mathcal{P}$.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{$G(\mathcal{E})$-invariance}
+    \begin{itemize}
+        \item<1-> We denote by $G(\mathcal{E})$ the group of linear maps from $\mathcal{D}$ to $\mathcal{S}$, $\text{Lin}[\mathcal{D}, \mathcal{S}]$.
+        \item<2-> An n-ary relation $F \subseteq \mathcal{P}^n$ is said to be \textit{$G(\mathcal{E})$-invariant} if
+        \item<3-> \[ (q_1, \cdots, q_n) \in F \implies (q_1 + \theta(d(q_1)), \cdots, q_n + \theta(d(q_n))) \in F \]
+        \item<4-> \textit{Example: } $lwh - V = 0$
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{The $\Pi$ Theorem for Relations}
+    \begin{itemize}
+        \item<1->
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{The $\Pi$ Theorem for Relations}
+    \alert{\textit{Proof}}
+    \begin{itemize}
+        \item<2->
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{An (Obvious) Proposition}
+    \begin{itemize}
+        \item<1->
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{The $\Pi$ Theorem for Functions}
+    \begin{itemize}
+        \item<1-> 
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Some Interpretations and Comments}
+    \begin{itemize}
+        \item<1-> 
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Example: The Harmonic Oscillator}
+    \begin{itemize}
+        \item<1-> 
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Going Further}
+    \begin{itemize}
+        \item<1-> 
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Bonus: \textit{Torsors}}
+    \begin{itemize}
+        \item 
+    \end{itemize}
+\end{frame}
+
+\end{document}
