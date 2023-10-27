@@ -1,10 +1,10 @@
 # Fdb version 3
-["pdflatex"] 1698392326 "d:/Programming/GitHub/Physics-Homework/Theory_Meetings/Quantities_and_Units/Quantities_and_Units.tex" "Quantities_and_Units.pdf" "Quantities_and_Units" 1698392327
-  "Quantities_and_Units.aux" 1698392327 2659 088736775a6f2676c587de38c9da7a2e "pdflatex"
-  "Quantities_and_Units.nav" 1698392327 1414 7d00ecf577ede9eb7a44c2de98e9aadf "pdflatex"
-  "Quantities_and_Units.out" 1698392326 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "Quantities_and_Units.tex" 1698392324 4651 8b7cfd6691d66efe038959da45d9b5a8 ""
-  "d:/Programming/GitHub/Physics-Homework/Theory_Meetings/Quantities_and_Units/Quantities_and_Units.tex" 1698392324 4651 8b7cfd6691d66efe038959da45d9b5a8 ""
+["pdflatex"] 1698428974 "d:/Programming/GitHub/Physics-Homework/Theory_Meetings/Quantities_and_Units/Quantities_and_Units.tex" "Quantities_and_Units.pdf" "Quantities_and_Units" 1698428976
+  "Quantities_and_Units.aux" 1698428976 3046 81970d71440ff2b2c5e107d78eebd705 "pdflatex"
+  "Quantities_and_Units.nav" 1698428976 1693 86a485822f41dd21cc266391d52fe65a "pdflatex"
+  "Quantities_and_Units.out" 1698428974 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "Quantities_and_Units.tex" 1698428971 11477 dd088e8a0ccbf637e74ab22f1c895b21 ""
+  "d:/Programming/GitHub/Physics-Homework/Theory_Meetings/Quantities_and_Units/Quantities_and_Units.tex" 1698428971 11477 dd088e8a0ccbf637e74ab22f1c895b21 ""
   "d:/Programs/texlive/2021/texmf-dist/fonts/map/fontname/texfonts.map" 1642479329 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "d:/Programs/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1642477776 1004 54797486969f23fa377b128694d548df ""
   "d:/Programs/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1642477776 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -34,6 +34,7 @@
   "d:/Programs/texlive/2021/texmf-dist/fonts/tfm/public/sansmathaccent/mathkerncmssi8.tfm" 1642481461 1676 fb6c6a335484692abff897d6e8965829 ""
   "d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb" 1642477776 30251 6afa5cb1d0204815a708a080681d4674 ""
   "d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb" 1642477776 36299 5f9df58c2139e7edcf37c8fca4bd384d ""
+  "d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb" 1642477776 35469 dcf3a5f2fc1862f5952e3ee5eb1d98c4 ""
   "d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb" 1642477776 24457 5cbb7bdf209d5d1ce9892a9b80a307cc ""
   "d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb" 1642477776 24393 3b7eb51a67a0a62aec5849271bdb9c2e ""
   "d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb" 1642477776 24420 52dbb8e8aa0069a1b987309557f8d303 ""
