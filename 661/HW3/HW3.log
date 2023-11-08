@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2022.1.17)  14 OCT 2023 18:55
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2022.1.17)  7 NOV 2023 21:02
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -496,20 +496,20 @@ LaTeX Font Info:    Trying to load font information for U+rsfs on input line 26.
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 ) [1
 
-{d:/Programs/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] [3] (./HW3.aux) ) 
+{d:/Programs/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] [3] [4] (./HW3.aux) ) 
 Here is how much of TeX's memory you used:
  15980 strings out of 478286
  320681 string characters out of 5846229
- 605748 words of memory out of 5000000
+ 606748 words of memory out of 5000000
  33888 multiletter control sequences out of 15000+600000
  478398 words of font info for 66 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  100i,16n,104p,482b,380s stack positions out of 5000i,500n,10000p,200000b,80000s
 <d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on HW3.pdf (3 pages, 95221 bytes).
+Output written on HW3.pdf (4 pages, 103453 bytes).
 PDF statistics:
- 62 PDF objects out of 1000 (max. 8388607)
- 38 compressed objects within 1 object stream
+ 65 PDF objects out of 1000 (max. 8388607)
+ 40 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
