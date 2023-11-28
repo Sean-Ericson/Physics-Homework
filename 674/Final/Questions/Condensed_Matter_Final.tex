@@ -1,0 +1,65 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{mathtools}
+\usepackage{mathrsfs}
+\usepackage{enumitem}
+\usepackage{physics}
+\usepackage{tensor}
+\usepackage{array}
+
+\usepackage{tikz}
+\usetikzlibrary{calc,decorations.markings,patterns}
+
+\newcommand{\magsq}[1]{\big|#1\big|^2}
+\newcommand{\avg}[1]{\left<#1\right>}
+\newcommand{\fullint}{\int_{-\infty}^\infty}
+\newcommand{\fullintd}[1]{\fullint\dd#1\:}
+\newcommand{\cint}[2]{\int_{#1}^{#2}}
+\newcommand{\cintd}[3]{\cint{#1}{#2}\dd#3\:}
+
+\begin{document}
+
+\title{PHYS 674 Condensed Matter \\ Final Exam}
+\date{Due: Thursday, December 7, 12:00pm}
+\maketitle
+
+\section*{Problem 1}
+Consider an $O(n)$ model with a ``cubic symmetry breaking term'' $g$, by which I mean the following model:
+\begin{equation*}
+    H = \int \dd^dr \left[\frac{t}{2}\abs{\vec{M}}^2 + u\abs{\vec{M}}^4 + g\sum_{\alpha=1}^n M_\alpha^4 + \frac{c}{2}\abs{\nabla M}^2\right]
+    \tag{1.1}
+\end{equation*}
+\begin{enumerate}[label=(\alph*)]
+    \item Derive the RG recursion relations for this model to one loop order.
+    \item Find the fixed points
+    \item Identify the fixed point that controls the transition.
+    \item Calculate the critical exponents $\alpha$, $\beta$, and $\nu$ to $O(\epsilon = 4-d)$
+\end{enumerate}
+Hint: Your answers to parts (b), (c), and (d) could be qualitatively different for different values of $n$.
+
+\section*{Problem 3}
+Suppose we apply a magnetic field to an X-Y model, this amounts to adding a symmetry breaking term
+\begin{equation*}
+    \Delta H = -\vec{h}\cdot\sum_i \vec{S}_i
+    \tag{3.1}
+\end{equation*}
+to the standard X-Y Hamiltonian.
+\begin{enumerate}[label=(\alph*)]
+    \item Write the continuum version of this model, ignoring irrelevant terms.
+    \item Show that the model includes a term
+    \begin{equation*}
+        \Delta H = - \int \dd^dr\cos(\theta(\vec{r}))
+        \tag{3.2}
+    \end{equation*}
+    \item Expand the cosine to all orders in $\theta$, and represent each term by a (schematic) Feynman graph.
+    \item Derive RG recursion relations for $a_n$, the coefficient of $\theta^n$ in the above expansion to \underline{linear} order in the $a_n$. Show that, for the correct choice of $\chi_\theta$, the rescaling exponent for $\theta$, the entire series can be resummed to give a $-h(l)\cos(\theta'(\vec{r'}))$, with a renormalized $h(l)$; and thereby derive the recursion relation for $h(l)$ to this order.
+    \item Derive the recursion relation for $K(l)$ to this order, using the above choice of $\chi_\theta$.
+    \item Show that, for $d>2$, $h(l\to\infty)\to\infty$ (at least, as far as this perturbative calculation can tell). What does this imply about the $\abs{\vec{q}} \ll \Lambda$ limit of the fluctuations $\avg{\abs{\theta(q)}^2}$?
+    \item Show that, in $d=2$, there is a phase transition at some critical temperature $T_c$ in this model, in the sense that qualitatively different scaling behaviors apply for $T<T_c$ and $T>T_c$. Calculate $T_c$ in terms of $K$.
+    \item Calculate $\avg{\cos\theta(r)}$ in a $d=2$ $L\times L$ square system, taking $h=0$.
+\end{enumerate}
+
+
+\end{document}
