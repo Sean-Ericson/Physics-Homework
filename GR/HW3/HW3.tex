@@ -15,7 +15,7 @@
 \newcommand{\magsq}[1]{\big|#1\big|^2}
 \newcommand{\metric}{\mqty(1 & 0 & 0 & 0 \\ 0 & -1 & 0 & 0 \\ 0 & 0 & -1 & 0 \\ 0 & 0 & 0 & -1)}
 \newcommand{\chrissym}[3]{\Gamma_{#2#3}^#1}
-
+\newcommand{\partialg}[3]{\partial_{#1}g_{#2#3}}
 
 \begin{document}
 
@@ -24,9 +24,56 @@
 \maketitle
 
 \section*{Problem 1}
-\[ \chrissym{\alpha}{\beta}{\gamma} \]
+Given the Lagrangian
+\[ L = \frac{1}{2}mg_{ij}(x)\dot{x}^i\dot{x}^j, \]
+and the definition of the christoffel symbols
+\[ \chrissym{i}{j}{k} = \frac{1}{2}g^{il}\left(\partialg{k}{l}{j} + \partialg{j}{l}{k} - \partialg{l}{j}{k}\right), \]
+we can start by taking derivatives of the Lagrangian:
+\begin{align*}
+    \pdv{L}{x^l} &= \frac{1}{2}m\pdv{g_{ij}(x)}{x^l}\dot{x}^i\dot{x}^j \\
+    &= \frac{1}{2}m\partialg{l}{i}{j}\dot{x}^i\dot{x}^j
+\end{align*}
+\begin{align*}
+    \pdv{L}{\dot{x}^l} &= \frac{1}{2}mg_{ij}\left(\pdv{\dot{x}^i}{\dot{x}^l}\dot{x}^j + \dot{x}^i\pdv{\dot{x}^j}{\dot{x}^l}\right) \\
+    &= \frac{1}{2}mg_{ij}\left(\delta_{\;l}^i\dot{x}^j + \delta_{\;l}^j\dot{x}^i\right) \\
+    &= \frac{1}{2}m\left(g_{lj}\dot{x}^j + g_{il}\dot{x}^i\right) \\
+    &= mg_{li}\dot{x}^i
+\end{align*}
+\begin{align*}
+    \dv{t}\pdv{L}{\dot{x}^l} &= \dv{t}\left(mg_{li}\dot{x}^i\right) \\
+    &= m\dv{g_{li}}{t}\dot{x}^i + mg_{li}\dv{\dot{x}^i}{t} \\
+    &= m \pdv{g_{li}}{x^j}\dv{x^j}{t}\dot{x}^i + mg_{li}\ddot{x}^i \\
+    &= m \partialg{j}{l}{i}\dot{x}^i\dot{x}^j + mg_{li}\ddot{x}^i
+\end{align*}
+Now we can just plug these in to the Euler-Lagrange equation:
+\begin{alignat*}{3}
+    &         \quad & \dv{t}\pdv{L}{\dot{x}^l} &= \pdv{L}{x^l} \\
+    &\implies \quad & m \partialg{j}{l}{i}\dot{x}^i\dot{x}^j + mg_{li}\ddot{x}^i &= \frac{1}{2}m\partialg{l}{i}{j}\dot{x}^i\dot{x}^j \\
+    &\implies \quad & g_{li}\ddot{x}^i &= \left(\frac{1}{2}\partialg{l}{i}{j} - \partialg{j}{l}{i} \right)\dot{x}^i\dot{x}^j \\
+    &         \quad &  &= -\frac{1}{2}\left(2\partialg{j}{l}{i} - \partialg{l}{i}{j}\right)\dot{x}^i\dot{x}^j \\
+    &         \quad &  &= -\frac{1}{2}\left(\partialg{j}{l}{i} + \partialg{j}{l}{i} - \partialg{l}{i}{j}\right)\dot{x}^i\dot{x}^j \\
+    &         \quad &  &= -\frac{1}{2}\left(\partialg{j}{l}{i} + \partialg{i}{l}{j} - \partialg{l}{i}{j}\right)\dot{x}^i\dot{x}^j \\
+    &\implies \quad & \ddot{x}^i &= -\frac{1}{2}g^{il}\left(\partialg{k}{l}{j} + \partialg{j}{l}{k} - \partialg{l}{j}{k}\right)\dot{x}^j\dot{x}^k \\
+    &         \quad &  &= -\chrissym{i}{j}{k}\dot{x}^j\dot{x}^k \\
+    &\implies \quad & \ddot{x}^i + \chrissym{i}{j}{k}\dot{x}^j\dot{x}^k &= 0
+\end{alignat*}
+In the third-to-last line, the index relabeling $i \to j$ and $j \to k$ for contracted indices was used on the right-hand side.
 
 \section*{Problem 2}
+\begin{figure}[h]
+    \centering
+    \resizebox{250pt}{!}{
+        \begin{tikzpicture}
+            \draw[thick] (0,10) arc (90:0:10);
+            \draw[thick] (0,0)--(0,10);
+            \draw[thick] (0,0)--(4,9.15) node[midway,right]{$R'$};
+            \draw[thick] (0,2) arc (90:66:2) node[midway,above]{$\dd\alpha$};
+            \draw[thick] (0,10) arc (90:66:10) node[midway,above]{$R'\dd\alpha$};
+        \end{tikzpicture}
+    }
+    \caption{Arc length for a circle of radius $R'$ and angle $\dd\alpha$.}
+    \label{fig1}
+\end{figure}
 \begin{enumerate}[label=(\alph*)]
     \item 
     \item
