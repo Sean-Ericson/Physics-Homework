@@ -126,12 +126,12 @@ In the third-to-last line, the index relabeling $i \to j$ and $j \to k$ for cont
     \begin{align*}
         \chrissym{\theta}{\phi}{\phi} &= \frac{1}{2}g^{\theta l}\left(\partialg{\phi}{l}{\phi} + \partialg{\phi}{l}{\phi} - \partialg{l}{\phi}{\phi}\right) \\
         &= -\frac{1}{2}g^{\theta\theta}\partialg{\theta}{\phi}{\phi} \\
-        &= -\frac{1}{2}R^2\pdv{\theta}R^2\sin^2\theta \\
-        &= -R^4\sin\theta\cos\theta \\
+        &= -\frac{1}{2}\frac{1}{R^2}\pdv{\theta}R^2\sin^2\theta \\
+        &= -\sin\theta\cos\theta \\
         \chrissym{\phi}{\theta}{\phi} &= \frac{1}{2}g^{\phi l}\left(\partialg{\phi}{l}{\theta} + \partialg{\theta}{l}{\phi} - \partialg{l}{\theta}{\phi}\right) \\
         &= \frac{1}{2}g^{\phi\phi}\partialg{\theta}{\phi}{\phi} \\
-        &= \frac{1}{2}R^2\sin^2\theta\pdv{\theta}R^2\sin^2\theta \\
-        &= R^4\sin^3\theta\cos\theta \\
+        &= \frac{1}{2}\frac{1}{R^2\sin^2\theta}\pdv{\theta}R^2\sin^2\theta \\
+        &= \cot\theta \\
         &= \chrissym{\phi}{\phi}{\theta}
     \end{align*}
 \end{enumerate}
@@ -140,6 +140,9 @@ In the third-to-last line, the index relabeling $i \to j$ and $j \to k$ for cont
 \section*{Problem 3}
 \begin{enumerate}[label=(\alph*)]
     \item 
+    \[ \dv[2]{x^i}{\tau} = -\chrissym{i}{j}{k}\dot{x}^j\dot{x}^k \]
+    \[ \dv[2]{\theta}{\tau} = \frac{1}{2}\sin\theta\cos\theta\dot{\theta}^2 \]
+    \[ \dv[2]{\phi}{\tau} = -2\cot\theta\dot{\theta}\dot{\phi}
     \item
     \item
     \item
