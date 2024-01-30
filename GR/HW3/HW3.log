@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10.12) (preloaded format=pdflatex 2023.12.12)  30 JAN 2024 13:50
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10.12) (preloaded format=pdflatex 2023.12.12)  30 JAN 2024 14:02
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -537,22 +537,156 @@ Overfull \hbox (9.08723pt too wide) in paragraph at lines 105--116
  [][] 
  []
 
-[2] [3] (HW3.aux)
+
+LaTeX Warning: Reference `arclen_fig' on page 2 undefined on input line 123.
+
+
+LaTeX Warning: Reference `latitude_fig' on page 2 undefined on input line 123.
+
+
+LaTeX Warning: Reference `longitude_fig' on page 2 undefined on input line 123.
+
+[2]
+
+c:/Users/seric/Documents/GitHub/Physics-Homework/GR/HW3/HW3.tex:146: LaTeX Error: Command \item invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.146     \item
+               
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+c:/Users/seric/Documents/GitHub/Physics-Homework/GR/HW3/HW3.tex:147: LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.147     \item
+               
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+c:/Users/seric/Documents/GitHub/Physics-Homework/GR/HW3/HW3.tex:147: LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.147     \item
+               
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+c:/Users/seric/Documents/GitHub/Physics-Homework/GR/HW3/HW3.tex:147: LaTeX Error: Command \item invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.147     \item
+               
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+c:/Users/seric/Documents/GitHub/Physics-Homework/GR/HW3/HW3.tex:148: Missing $ inserted.
+<inserted text> 
+                $
+l.148     \item
+               
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+c:/Users/seric/Documents/GitHub/Physics-Homework/GR/HW3/HW3.tex:148: Missing } inserted.
+<inserted text> 
+                }
+l.148     \item
+               
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+c:/Users/seric/Documents/GitHub/Physics-Homework/GR/HW3/HW3.tex:148: Display math should end with $$.
+<to be read again> 
+                   \tex_par:D 
+l.148     \item
+               
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+c:/Users/seric/Documents/GitHub/Physics-Homework/GR/HW3/HW3.tex:148: Extra }, or forgotten \endgroup.
+\par ...m \@noitemerr {\@@par }\fi \else {\@@par }
+                                                  \fi 
+l.148     \item
+               
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+
+c:/Users/seric/Documents/GitHub/Physics-Homework/GR/HW3/HW3.tex:150: LaTeX Error: \begin{equation*} on input line 145 ended by \end{enumerate}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.150 \end{enumerate}
+                     
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+[3]
+
+c:/Users/seric/Documents/GitHub/Physics-Homework/GR/HW3/HW3.tex:156: LaTeX Error: \begin{enumerate} on input line 141 ended by \end{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.156 \end{document}
+                    
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+(HW3.aux)
  ***********
 LaTeX2e <2023-11-01>
 L3 programming layer <2023-12-08>
  ***********
- ) 
+
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ )
+(\end occurred inside a group at level 1)
+
+### semi simple group (level 1) entered at line 141 (\begingroup)
+### bottom level 
 Here is how much of TeX's memory you used:
- 17738 strings out of 474491
- 355914 string characters out of 5743833
+ 17741 strings out of 474491
+ 355975 string characters out of 5743833
  1947473 words of memory out of 5000000
- 39717 multiletter control sequences out of 15000+600000
- 567508 words of font info for 75 fonts, out of 8000000 for 9000
+ 39720 multiletter control sequences out of 15000+600000
+ 567815 words of font info for 76 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 102i,12n,107p,622b,863s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 102i,12n,107p,631b,863s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/seric/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/seric/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/seric/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/seric/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/seric/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/seric/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/seric/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/seric/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/seric/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/seric/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on HW3.pdf (3 pages, 118401 bytes).
+Output written on HW3.pdf (3 pages, 118982 bytes).
 PDF statistics:
  67 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
