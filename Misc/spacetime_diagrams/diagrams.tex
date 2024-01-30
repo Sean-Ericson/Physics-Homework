@@ -1,0 +1,76 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{nccmath}
+\usepackage{mathtools}
+\usepackage{mathrsfs}
+\usepackage{enumitem}
+\usepackage{physics}
+\usepackage{tensor}
+\usepackage{ifthen}
+
+\usepackage{tikz}
+\usetikzlibrary{calc,decorations.markings,patterns,math}
+
+
+\begin{document}
+
+\title{Spacetime}
+\author{Sean Ericson}
+\maketitle
+
+\section*{}
+\begin{figure}
+    \centering
+    \begin{tikzpicture}
+        \tikzmath{\rad = 5; \vel = 0.6; \gam = 1;}
+
+        % Unprimed Axes
+        \draw[<->, thick] (0,-\rad)--(0,\rad) node[above]{$t$};
+        \draw[<->, thick] (-\rad,0)--(\rad,0) node[right]{$x$};
+
+        % Primed Axes
+        \draw[->] (0,0)--({\gam*\vel*\rad}, {\gam*\rad}) node[above]{$t'$};
+        \draw[->] (0,0)--({\gam*\rad}, {\gam*\vel*\rad}) node[right]{$x'$};
+        
+        \foreach \i in {-\rad,...,\rad}{
+            % const x'
+            %\draw[very thin, gray] ({\gam*\i - \gam*\rad*\vel}, {-\gam*\rad + \gam*\i*\vel})--({\gam*\i + \gam*\rad*\vel}, {\gam*\rad + \gam*\i*\vel});
+
+            % const t'
+            %\draw[very thin, gray] ({-\gam*\rad + \gam*\vel*\i}, {\gam*\i - \gam*\vel*\rad})--({\gam*\rad + \gam*\vel*\i}, {\gam*\i + \gam*\vel*\rad});
+        }
+
+        % Null line
+        %\draw[dashed] ({-\gam*\rad - \gam*\rad*\vel}, {-\gam*\rad - \gam*\rad*\vel})--({\gam*\rad + \gam*\rad*\vel}, {\gam*\rad + \gam*\rad*\vel});
+        %\draw[dashed] ({\gam*\rad - \gam*\rad*\vel}, {-\gam*\rad + \gam*\rad*\vel})--({-\gam*\rad + \gam*\rad*\vel}, {\gam*\rad - \gam*\rad*\vel});
+
+        % Event A (origin)
+        \coordinate (A) at (0,0);
+        \filldraw (A) circle[radius=1.5pt];
+        \node[left] at (A) {A};
+
+        % Event B
+        \coordinate (B) at (3,1.75);
+        \filldraw (B) circle[radius=1.5pt];
+        \node[right] at (B) {B};
+
+        % Event C
+        \coordinate (C) at (4,2);
+        \filldraw (C) circle[radius=1.5pt];
+        \node[right] at (C) {C};
+
+        % parallelogram
+        \draw[dashed, blue]
+
+    \end{tikzpicture}
+    \caption{}
+    \label{fig1}
+\end{figure}
+
+
+
+
+
+\end{document}
