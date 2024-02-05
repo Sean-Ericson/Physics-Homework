@@ -121,7 +121,7 @@ In the third-to-last line, the index relabeling $i \to j$ and $j \to k$ for cont
 
 \begin{enumerate}[label=(\alph*)]
     \item As illustrated in Figure \ref{arclen_fig}, the arc length for a circle of radius $r$ and angle $\dd\alpha$ is $r\dd\alpha$. On a 2-sphere of radius $R$, paths of constant $\theta$ are circles of radius $R\sin\theta$ (Figure \ref{latitude_fig}), while paths of constant $\phi$ are circles of radius $R$ (Figure \ref{longitude_fig}). The $\hat{\theta}$ and $\hat{\phi}$ directions are orthogonal everywhere on the sphere, so the square of the total displacement is the sum of the squares of the displacements in either direction:
-    \[ \dd s^2 = R^2\dd\theta^2 + \sin^2\theta \dd\phi^2 \]
+    \[ \dd s^2 = R^2\dd\theta^2 + R^2\sin^2\theta \dd\phi^2 \]
     \item The only nonzero christoffel symbols are
     \begin{align*}
         \chrissym{\theta}{\phi}{\phi} &= \frac{1}{2}g^{\theta l}\left(\partialg{\phi}{l}{\phi} + \partialg{\phi}{l}{\phi} - \partialg{l}{\phi}{\phi}\right) \\
@@ -140,17 +140,53 @@ In the third-to-last line, the index relabeling $i \to j$ and $j \to k$ for cont
 \section*{Problem 3}
 \begin{enumerate}[label=(\alph*)]
     \item 
-    \[ \dv[2]{x^i}{\tau} = -\chrissym{i}{j}{k}\dot{x}^j\dot{x}^k \]
-    \[ \dv[2]{\theta}{\tau} = \frac{1}{2}\sin\theta\cos\theta\dot{\theta}^2 \]
-    \[ \dv[2]{\phi}{\tau} = -2\cot\theta\dot{\theta}\dot{\phi}
+    \[ \dv[2]{x^i}{s} = -\chrissym{i}{j}{k}\dot{x}^j\dot{x}^k \]
+    \[ \dv[2]{\theta}{s} = \sin\theta\cos\theta\dot{\phi}^2 \]
+    \[ \dv[2]{\phi}{s} = -\left(\chrissym{\phi}{\theta}{\phi}+\chrissym{\phi}{\phi}{\theta}\right)\dot{\theta}\dot{\phi} = -2\cot\theta\dot{\theta}\dot{\phi} \]
     \item
+    \begin{alignat*}{3}
+        &         \quad & \ddot{\phi} + 2\cot\theta\dot{\theta}\dot{\phi} &= 0  \\
+        &\implies \quad & \sin^2\theta\ddot{\phi} + 2\sin\theta\cos\theta\dot{\theta}\dot{\phi} &= 0 \\
+        &\implies \quad & \dv{t}\left(\sin^2\theta\dot{\phi}\right) &= 0 \\
+    \end{alignat*}
+    \begin{align*}
+        \dv{t}\left(\dot{\theta}^2 + \sin^2\theta\dot{\phi}\right) &= 2\dot{\theta}\ddot{\theta} + 2\sin\theta\cos\theta\dot{\theta}\dot{\phi}^2 + 2\sin^2\theta\dot{\phi}\ddot{\phi} \\
+        &= 2\sin\theta\cos\theta\dot{\theta}\dot{\phi}^2 + 2\sin\theta\cos\theta\dot{\theta}\dot{\phi}^2 - 4\sin\theta\cos\theta\dot{\theta}\dot{\phi}^2 \\
+        &= 0
+    \end{align*}
     \item
+    \[ \tilde{L} = R^2\sin^2\theta\dot{\phi} \implies \dot{\phi} = \frac{1}{R^2\sin^2\theta} \]
+    \[ u\cdot u = R^2\left(\dot{\theta}^2 + \sin^2\theta\dot{\phi}^2\right) = 1 \implies \dot{\theta}^2 = \frac{1}{R^2}\left(1 - \frac{L^2}{R^2\sin^2\theta}\right) \implies \dot{\theta} = \frac{1}{R}\sqrt{1 - \frac{L^2}{R^2\sin^2\theta}} \]
+    \[ \dv{\theta}{s} = \frac{1}{R}\sqrt{1 - \frac{L^2}{R^2\sin^2\theta}} \implies \int\dd s = \int \frac{R\dd\theta}{\sqrt{1 - \frac{L^2}{R^2\sin^2\theta}}} \]
     \item
+    \[ z = R\cos\theta \implies \dd z = -R\sin\theta\dd\theta \]
+    \begin{align*}
+        s &= \int \frac{R\dd\theta}{\sqrt{1 - \frac{L^2}{R^2\sin^2\theta}}} \\
+        &= -\int\frac{R\dd z}{\sqrt{R^2\sin^2\theta - L^2}} \\
+        &= -\int\frac{R\dd z}{\sqrt{R^2\left(1 - \cos^2\theta\right) - L^2}} \\
+        &= -\int\frac{R\dd z}{\sqrt{R^2 - L^2 - z^2}} \\
+        &= \frac{-1}{\sqrt{R^2-L^2}}\int\frac{R\dd z}{\sqrt{1 - \frac{z^2}{R^2 - L^2}}} \\
+        &= R\cos^{-1}\left(\frac{z}{\sqrt{R^2 - L^2}}\right) + C \\
+        &= R\cos^{-1}\left(\frac{\sin I \cos\psi}{1 - \cos^2I}\right) + C \\
+        &= R\cos^{-1}\left(\frac{\cos\psi}{\sin I}\right) + C \\
+        \implies \qquad \frac{\cos\psi}{\sin I} &= \cos{\frac{s - C}{R}}
+    \end{align*}
+
     \item
 \end{enumerate}
 
 
 \section*{Problem 4}
-
+\begin{align}
+    \Delta_\rho g_{\mu\nu} &= \partial_\rho g_{\mu\nu} - \chrissym{\lambda}{\rho}{\mu}g_{\lambda\nu} - \chrissym{\lambda}{\rho}{\nu}g_{\mu\lambda} = 0 \\
+    \Delta_\mu g_{\nu\rho} &= \partial_\mu g_{\nu\rho} - \chrissym{\lambda}{\mu}{\nu}g_{\lambda\rho} - \chrissym{\lambda}{\mu}{\rho}g_{\nu\lambda} = 0 \\
+    \Delta_\nu g_{\rho\mu} &= \partial_\nu g_{\rho\mu} - \chrissym{\lambda}{\nu}{\rho}g_{\lambda\mu} - \chrissym{\lambda}{\nu}{\mu}g_{\rho\lambda} = 0
+\end{align}
+$(1) - (2) - (3)$:
+\begin{align*}
+    \partial_\rho g_{\mu\nu} - \partial_\mu g_{\nu\rho} - \partial_\nu g_{\rho\mu} + 2\chrissym{\lambda}{\mu}{\nu}g_{\rho\lambda} = 0 \\
+    \implies g_{\rho\lambda}\chrissym{\lambda}{\mu}{\nu} = \frac{1}{2}\left(\partial_\nu g_{\rho\mu} + \partial_\mu g_{\nu\rho} - \partial_\rho g_{\mu\nu} \right) \\
+    \implies \chrissym{\rho}{\mu}{\nu} = \frac{1}{2} g^{\rho\lambda}\left(\partial_\nu g_{\lambda\mu} + \partial_\mu g_{\nu\lambda} - \partial_\lambda g_{\mu\nu}\right)
+\end{align*}
 
 \end{document}
