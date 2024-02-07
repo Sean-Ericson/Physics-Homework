@@ -156,23 +156,28 @@ In the third-to-last line, the index relabeling $i \to j$ and $j \to k$ for cont
     \end{align*}
     \item
     \[ \tilde{L} = R^2\sin^2\theta\dot{\phi} \implies \dot{\phi} = \frac{1}{R^2\sin^2\theta} \]
-    \[ u\cdot u = R^2\left(\dot{\theta}^2 + \sin^2\theta\dot{\phi}^2\right) = 1 \implies \dot{\theta}^2 = \frac{1}{R^2}\left(1 - \frac{L^2}{R^2\sin^2\theta}\right) \implies \dot{\theta} = \frac{1}{R}\sqrt{1 - \frac{L^2}{R^2\sin^2\theta}} \]
-    \[ \dv{\theta}{s} = \frac{1}{R}\sqrt{1 - \frac{L^2}{R^2\sin^2\theta}} \implies \int\dd s = \int \frac{R\dd\theta}{\sqrt{1 - \frac{L^2}{R^2\sin^2\theta}}} \]
+    \[ u\cdot u = R^2\left(\dot{\theta}^2 + \sin^2\theta\dot{\phi}^2\right) = 1 \implies \dot{\theta}^2 = \frac{1}{R^2}\left(1 - \frac{L^2}{R^2\sin^2\theta}\right) \implies \dot{\theta} = \pm\frac{1}{R}\sqrt{1 - \frac{L^2}{R^2\sin^2\theta}} \]
+    \[ \dv{\theta}{s} = \pm\frac{1}{R}\sqrt{1 - \frac{L^2}{R^2\sin^2\theta}} \implies \int\dd s = \pm\int \frac{R\dd\theta}{\sqrt{1 - \frac{L^2}{R^2\sin^2\theta}}} \]
     \item
     \[ z = R\cos\theta \implies \dd z = -R\sin\theta\dd\theta \]
+    \[ z = R\sin I\cos\psi \implies \dd z = -R\sin I\sin\psi \]
+    \[ \implies \psi = \cos^{-1}\frac{\cos\theta}{\sin I} \]
     \begin{align*}
-        s &= \int \frac{R\dd\theta}{\sqrt{1 - \frac{L^2}{R^2\sin^2\theta}}} \\
-        &= -\int\frac{R\dd z}{\sqrt{R^2\sin^2\theta - L^2}} \\
-        &= -\int\frac{R\dd z}{\sqrt{R^2\left(1 - \cos^2\theta\right) - L^2}} \\
-        &= -\int\frac{R\dd z}{\sqrt{R^2 - L^2 - z^2}} \\
-        &= \frac{-1}{\sqrt{R^2-L^2}}\int\frac{R\dd z}{\sqrt{1 - \frac{z^2}{R^2 - L^2}}} \\
-        &= R\cos^{-1}\left(\frac{z}{\sqrt{R^2 - L^2}}\right) + C \\
-        &= R\cos^{-1}\left(\frac{\sin I \cos\psi}{1 - \cos^2I}\right) + C \\
-        &= R\cos^{-1}\left(\frac{\cos\psi}{\sin I}\right) + C \\
-        \implies \qquad \frac{\cos\psi}{\sin I} &= \cos{\frac{s - C}{R}}
+        s &= \pm\int\frac{R\dd\theta}{\sqrt{1 - \frac{L^2}{R^2\sin^2\theta}}} \\
+        &= \mp\int\frac{R\dd z}{\sqrt{R^2\sin^2\theta - L^2}} \\
+        &= \mp\int\frac{R\dd z}{\sqrt{R^2\left(1 - \cos^2\theta\right) - L^2}} \\
+        &= \mp\int\frac{R\dd z}{\sqrt{R^2 - L^2 - z^2}} \\
+        &= \pm\int\frac{R^2\sin I\sin\psi\dd\psi}{\sqrt{R^2 - R^2\cos^2I - R^2\sin^2I\cos^2\psi}} \\
+        &= \pm\int\frac{R\sin I\sin\psi\dd\psi}{\sqrt{1 - \cos^2I - \sin^2I\cos^2\psi}} \\
+        &= \pm\int\frac{R\sin I\sin\psi\dd\psi}{\sqrt{\sin^2I - \sin^2I\cos^2\psi}} \\
+        &= \pm\int\frac{R\sin\psi\dd\psi}{\sqrt{1 - \cos^2\psi}} \\
+        &= \pm\int R\dd\psi \\
+        &= R\psi + C \\
+        \implies \qquad \frac{s-C}{R} &= \cos^{-1}\frac{\cos\theta}{\sin I} \\
+        \implies \qquad \cos\theta &= \sin I\cos\frac{s-C}{R}
     \end{align*}
 
-    \item
+    \item Project the great circle onto a plane containing the $z$-axis. The result will be a (generalized) ellipse, hence motion in the $z$-direction will be sinusoidal. In this picture, $z$ is the $z$-component of the position on the geodesic in the 3-space in which the 2-sphere is embedded. $I$ and $\psi$ are related to the axis about which the geodesic ``rotates''.
 \end{enumerate}
 
 
