@@ -22,9 +22,40 @@
 
 \section*{Problem 1 (Peskin 10.1)}
 \[ f_\text{val}(x) = A(1 + ax)(1 - x)^\beta \]
-\[ \int_0^1\dd x\; A(1 + ax)(1 - x)^\beta = A\frac{a + \beta + 2}{\beta^2 + 3\beta + 2} \]
+\[ \int_0^1\dd x\; A(1 + ax)(1 - x)^\beta = A\frac{a + \beta + 2}{\beta^2 + 3\beta + 2} = n_q \]
 \begin{enumerate}[label=(\alph*)]
-    \item 
+    \item The equation above was solved in mathematica with $n_q = 2$ for $u$ and $n_q = 1$ for $d$, with the results in the table below.
+    \begin{table}[h]
+        \centering
+        \begin{tabular}{c c c}
+            & $u$ & $d$ \\
+            \hline
+            $Q = 3.1$ GeV & $A = 9.23$ & $A = 5.56$ \\
+            $Q = 100$ GeV & $A = 11.5$ & $A = 6.77$ \\
+        \end{tabular}
+    \end{table}
+
+    \item Average momentums fractions:
+    \begin{table}[h]
+        \centering
+        \begin{tabular}{c c c}
+            & $u$ & $d$ \\
+            \hline
+            $Q = 3.1$ GeV & $x = 0.351$ & $x = 0.153$ \\
+            $Q = 100$ GeV & $x = 0.295$ & $x = 0.187$ \\
+        \end{tabular}
+    \end{table}
+
+    \item Total momentum fraction:
+    \begin{table}[h]
+        \centering
+        \begin{tabular}{c c}
+            & Valence Momentum Fraction \\
+            \hline
+            $Q = 3.1$ GeV & $x_u + x_d = 0.505$ \\
+            $Q = 100$ GeV & $x_u + x_d = 0.482$ \\
+        \end{tabular}
+    \end{table}
 \end{enumerate}
 
 \section*{Problem 2}

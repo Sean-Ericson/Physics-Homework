@@ -1,6 +1,6 @@
 # Fdb version 3
-["pdflatex"] 1707203392 "d:/Programming/GitHub/Physics-Homework/662/HW3/hw3.tex" "hw3.pdf" "hw3" 1707203393
-  "d:/Programming/GitHub/Physics-Homework/662/HW3/hw3.tex" 1707203392 4490 39bc388b61ecddb965f608e844506165 ""
+["pdflatex"] 1707354996 "d:/Programming/GitHub/Physics-Homework/662/HW3/hw3.tex" "hw3.pdf" "hw3" 1707354997
+  "d:/Programming/GitHub/Physics-Homework/662/HW3/hw3.tex" 1707354945 5535 4584ef9bd4786486421bfa8cb0fe20a2 ""
   "d:/Programs/texlive/2021/texmf-dist/fonts/map/fontname/texfonts.map" 1642475729 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "d:/Programs/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1642474176 1004 54797486969f23fa377b128694d548df ""
   "d:/Programs/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1642474176 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -157,9 +157,9 @@
   "d:/Programs/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1642478976 4417076 38dc20cdd3aafdb85ffe94a295c45ef8 ""
   "d:/Programs/texlive/2021/texmf-var/web2c/pdftex/pdflatex.fmt" 1642479064 2796587 825f17197e932c4ad1fc2363155e73cb ""
   "d:/Programs/texlive/2021/texmf.cnf" 1642478965 713 e69b156964470283e0530f5060668171 ""
-  "hw3.aux" 1707203393 349 47b457f48807b20ef224f26176b6b713 "pdflatex"
-  "hw3.tex" 1707203392 4490 39bc388b61ecddb965f608e844506165 ""
-  "prob3.pdf" 1707190576 1313539 8416bb80d499c8b81f4e5c15f2be7724 ""
+  "hw3.aux" 1707354997 349 a7caea933de13d865d9e44fd7c9d188f "pdflatex"
+  "hw3.tex" 1707354945 5535 4584ef9bd4786486421bfa8cb0fe20a2 ""
+  "prob3.pdf" 1707354806 77812 20dca1fadf2ec13d6f32cb1fd2e11898 ""
   (generated)
   "hw3.aux"
   "hw3.log"
