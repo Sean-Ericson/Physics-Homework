@@ -13,10 +13,8 @@
 \usepackage{tikz}
 \usetikzlibrary{calc,decorations.markings,patterns}
 
-\newcommand{\magsq}[1]{\big|#1\big|^2}
-\newcommand{\metric}{\mqty(1 & 0 & 0 & 0 \\ 0 & -1 & 0 & 0 \\ 0 & 0 & -1 & 0 \\ 0 & 0 & 0 & -1)}
 \newcommand{\chrissym}[3]{\Gamma_{#2#3}^#1}
-\newcommand{\partialg}[3]{\partial_{#1}g_{#2#3}}
+\newcommand{\tchrissym}[3]{\tilde{\Gamma}_{#2#3}^#1}
 
 \begin{document}
 
@@ -25,23 +23,39 @@
 \maketitle
 
 \section*{Problem 1}
+\begin{enumerate}[label=(\alph*)]
+    \item
 
+    \item
+
+    \item
+
+    \item
+
+    \item
+\end{enumerate}
 
 \section*{Problem 2}
 
 
-\begin{enumerate}[label=(\alph*)]
-
-\end{enumerate}
-
-
 \section*{Problem 3}
 \begin{enumerate}[label=(\alph*)]
+    \item
+    \begin{alignat*}{3}
+        &         \quad & \tilde{\Delta}_\mu\tilde{V}^\nu &= A_\mu^\alpha (A^{-1})_\beta^\nu\Delta_\alpha V^\beta \\
+        &\implies \quad & \tilde{\partial}_\mu\tilde{V}^\nu + \tchrissym{\nu}{\mu}{\gamma}\tilde{V}^\gamma &= A_\mu^\alpha (A^{-1})_\beta^\nu\left(\partial_\alpha V^\beta + \chrissym{\beta}{\alpha}{\lambda}V^\lambda\right) \\
+        &\implies \quad & \tilde{\partial}_\mu\left((A^{-1})_\lambda^\nu V^\lambda\right) + \tchrissym{\nu}{\mu}{\gamma}(A^{-1})_\lambda^\gamma V^\lambda &= \quad \text{``}\qquad\qquad\qquad\text{''}\quad\\
+        &\implies \quad & (\tilde{\partial}_\mu (A^{-1})_\lambda^\nu) V^\lambda + (A^{-1})_\lambda^\nu (\tilde{\partial_\mu}V^\lambda) + \tchrissym{\nu}{\mu}{\gamma}(A^{-1})_\lambda^\gamma V^\lambda &= \\
+        &\implies \quad & A_\mu^\gamma(\partial_\gamma(A^{-1})_\lambda^\nu)V^\lambda + (A^{-1})_\lambda^\nu A_\mu^\alpha\partial_\alpha V^\lambda + \tchrissym{\nu}{\mu}{\gamma}(A^{-1})_\lambda^\gamma V^\lambda &= \\
+        &\implies \quad & A_\mu^\gamma(\partial_\gamma(A^{-1})_\lambda^\nu)V^\lambda + \tchrissym{\nu}{\mu}{\gamma}(A^{-1})_\lambda^\gamma V^\lambda &= A_\mu^\alpha (A^{-1})_\beta^\nu\chrissym{\beta}{\alpha}{\lambda}V^\lambda \\
+        &\implies \quad & \tchrissym{\nu}{\mu}{\gamma}(A^{-1})_\lambda^\gamma &= A_\mu^\alpha (A^{-1})_\beta^\nu\chrissym{\beta}{\alpha}{\lambda} - A_\mu^\gamma\partial_\gamma(A^{-1})_\lambda^\nu \\
+        &\implies \quad & \tchrissym{\nu}{\mu}{\rho} &= A_\rho^\lambda A_\mu^\alpha (A^{-1})_\beta^\nu\chrissym{\beta}{\alpha}{\lambda} - A_\rho^\lambda A_\mu^\alpha\partial_\alpha(A^{-1})_\lambda^\nu \\
+        &\implies \quad & \tchrissym{\nu}{\mu}{\rho} &= A_\rho^\lambda A_\mu^\alpha \left((A^{-1})_\beta^\nu\chrissym{\beta}{\alpha}{\lambda} -\partial_\alpha(A^{-1})_\lambda^\nu\right)
+    \end{alignat*}
 
+    \item
 \end{enumerate}
 
-
-\section*{Problem 4}
 
 
 \end{document}
