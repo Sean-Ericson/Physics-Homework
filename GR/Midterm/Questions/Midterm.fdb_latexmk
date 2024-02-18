@@ -1,8 +1,8 @@
 # Fdb version 3
-["pdflatex"] 1707887496 "d:/Programming/GitHub/Physics-Homework/GR/Midterm/Questions/Midterm.tex" "Midterm.pdf" "Midterm" 1707887496
-  "Midterm.aux" 1707887496 32 3985256e7290058c681f74d7a3565a19 "pdflatex"
-  "Midterm.tex" 1707887495 2457 8213c1e5809e6a3df54af9bf442dcd43 ""
-  "d:/Programming/GitHub/Physics-Homework/GR/Midterm/Questions/Midterm.tex" 1707887495 2457 8213c1e5809e6a3df54af9bf442dcd43 ""
+["pdflatex"] 1708232426 "d:/Programming/GitHub/Physics-Homework/GR/Midterm/Questions/Midterm.tex" "Midterm.pdf" "Midterm" 1708232427
+  "Midterm.aux" 1708232427 32 3985256e7290058c681f74d7a3565a19 "pdflatex"
+  "Midterm.tex" 1708232426 2456 05e3da27c338be2668fee7b6b5e809cc ""
+  "d:/Programming/GitHub/Physics-Homework/GR/Midterm/Questions/Midterm.tex" 1708232426 2456 05e3da27c338be2668fee7b6b5e809cc ""
   "d:/Programs/texlive/2021/texmf-dist/fonts/map/fontname/texfonts.map" 1642475729 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "d:/Programs/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1642474176 1004 54797486969f23fa377b128694d548df ""
   "d:/Programs/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1642474176 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -34,6 +34,7 @@
   "d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb" 1642474176 32362 bc3f3eec7ab7d65fe700963d4017d32c ""
   "d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb" 1642474176 32726 39f0f9e62e84beb801509898a605dbd5 ""
   "d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1642474176 32569 5e5ddc8df908dea60932f3c484a54c0d ""
+  "d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb" 1642474176 32626 5abc8bb2f28aa647d4c70f8ea38cc0d3 ""
   "d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb" 1642474176 36118 fad905eba93cff5bce1e185fe980a177 ""
   "d:/Programs/texlive/2021/texmf-dist/tex/context/base/mkii/supp-pdf.mkii" 1642476978 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "d:/Programs/texlive/2021/texmf-dist/tex/generic/iftex/iftex.sty" 1642476165 6501 4011d89d9621e0b0901138815ba5ff29 ""

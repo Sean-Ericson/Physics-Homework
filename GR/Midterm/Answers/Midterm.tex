@@ -9,6 +9,8 @@
 \usepackage{physics}
 \usepackage{tensor}
 \usepackage{subcaption}
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
 
 \usepackage{tikz}
 \usetikzlibrary{calc,decorations.markings,patterns}
@@ -23,32 +25,87 @@
 
 \section*{Problem 1}
 \begin{align*}
-    g_{\mu\nu} &= \mqty(foo & 0 & 0 & 0 \\ 0 & bar & 0 & 0 \\ 0 & 0 & boo & 0 \\ 0 & 0 & 0 & far) \\
-    g^{\mu\nu} &= \mqty(foo^{-1} & 0 & 0 & 0 \\ 0 & bar^{-1} & 0 & 0 \\ 0 & 0 & boo^{-1} & 0 \\ 0 & 0 & 0 & far^{-1}) \\
+    g_{\mu\nu} &= \mqty(-\left(1 - \frac{2M}{\sqrt{r^2 + b^2}}\right) & 0 & 0 & 0 \\ 0 & \left(1 - \frac{2M}{\sqrt{r^2 + b^2}}\right)^{-1} & 0 & 0 \\ 0 & 0 & r^2 + b^2 & 0 \\ 0 & 0 & 0 & (r^2 + b^2)\sin^2\theta) \\
+    g^{\mu\nu} &= \mqty(-\left(1 - \frac{2M}{\sqrt{r^2 + b^2}}\right)^{-1} & 0 & 0 & 0 \\ 0 & \left(1 - \frac{2M}{\sqrt{r^2 + b^2}}\right) & 0 & 0 \\ 0 & 0 & \frac{1}{r^2 + b^2} & 0 \\ 0 & 0 & 0 & \frac{1}{(r^2 + b^2)\sin^2\theta}) \\
 \end{align*}
 
 
 \section*{Problem 2}
 \begin{align*}
-    \chrissym{t}{r}{\theta} &= foo
+    \chrissym{t}{t}{r} &= \frac{Mr}{(r^2 + b^2)\left(\sqrt{r^2 + b^2} - 2M\right)} \\
+    \chrissym{r}{t}{t} &= \frac{Mr\left(\sqrt{r^2 + b^2} - 2M\right)}{(r^2 + b^2)^2} \\
+    \chrissym{r}{r}{r} &= -\frac{Mr}{(r^2 + b^2)\left(\sqrt{r^2 + b^2} - 2M\right)} \\
+    \chrissym{r}{\theta}{\theta} &= r\left(\frac{2M}{\sqrt{r^2 + b^2}} - 1\right) \\
+    \chrissym{r}{\phi}{\phi} &= r\left(\frac{2M}{\sqrt{r^2 + b^2}} - 1\right) \sin^2\theta \\
+    \chrissym{\theta}{\theta}{r} &= \frac{r}{r^2 + b^2}  \\
+    \chrissym{\theta}{\phi}{\phi} &= -\sin\theta\cos\theta \\
+    \chrissym{\phi}{\phi}{r} &= \frac{r}{r^2 + b^2} \\
+    \chrissym{\phi}{\phi}{\theta} &= \cot\theta
 \end{align*}
 
 \section*{Problem 3}
+\begin{align*}
+    \ddot{t} &= -\frac{2Mr\dot{t}\dot{r}}{(r^2 + b^2)\left(\sqrt{r^2 + b^2} - 2M\right)} \\
+    \ddot{r} &= \frac{r}{(r^2 + b^2)^2 \left(\sqrt{r^2 + b^2} - 2M\right)} \left[\left(\sqrt{r^2 + b^2} - 2M\right)^2\left((r^2 + b^2)^{\frac{3}{2}}\left(\sin^2\theta\dot{\phi}^2 + \dot{\theta}^2\right) - M\dot{t}^2\right) + M(r^2 + b^2)\dot{r}^2\right] \\
+    \ddot{\theta} &= \sin\theta\cos\theta\dot{\phi}^2 - \frac{2r\dot{\theta}\dot{r}}{r^2 + b^2} \\
+    \ddot{\phi} &= -2\dot{\phi}\left(\cot\theta\dot{\theta} + \frac{r\dot{r}}{r^2 + b^2}\right)
+\end{align*}
 
 
 \section*{Problem 4}
+The metric is independent of $t$ and $\phi$, so we have two conserved quantities:
+\begin{align*}
+    e &\coloneqq -\xi_t^{\;\mu}u_\mu = \left(1 - \frac{2m}{\sqrt{r^2 + b^2}}\right)\dot{t} \\
+    l &\coloneqq -\xi_\phi^{\;\mu}u_\mu = -(r^2 + b^2)\sin^2\theta\dot{\phi}
+\end{align*}
+The $\phi$ independence also implies that orbits lie in a plane, so we can consider an orbit in the $\theta = \pi/2$ plane, with $\dd\theta = 0$.
+\begin{alignat*}{3}
+    & & u^2 = -1 &= -\left(1 - \frac{2M}{\sqrt{r^2 + b^2}}\right)\dot{t}^2 + \left(1 - \frac{2M}{\sqrt{r^2 + b^2}}\right)^{-1}\dot{r}^2 + (r^2 + b^2)\dot{\phi}^2 \\
+    & &  &= -\left(1 - \frac{2M}{\sqrt{r^2 + b^2}}\right)^{-1}e^2 + \left(1 - \frac{2M}{\sqrt{r^2 + b^2}}\right)^{-1}\dot{r}^2 + \frac{l^2}{r^2 + b^2} \\
+    &\implies \quad & e^2 &= \dot{r}^2 + \left(1 - \frac{2M}{\sqrt{r^2 + b^2}}\right)\left(1 + \frac{l^2}{r^2 + b^2}\right) \\
+    &\implies \quad & \frac{1}{2}(e^2 - 1) &= \frac{1}{2}\dot{r}^2 + \left(1 - \frac{2M}{\sqrt{r^2 + b^2}}\right)\left(1 + \frac{l^2}{r^2 + b^2}\right) - 1 \\
+    &\implies \quad & \mathcal{E} = \frac{1}{2}\dot{r}^2 + V_\text{eff}(r)
+\end{alignat*}
+where
+\begin{align*}
+    V_\text{eff}(r) &\coloneqq \left(1 - \frac{2M}{\sqrt{r^2 + b^2}}\right)\left(1 + \frac{l^2}{r^2 + b^2}\right) - 1 \\
+    &= -\frac{M}{\sqrt{r^2 + b^2}} + \frac{l^2}{2(r^2 + b^2)} - \frac{Ml^2}{(r^2 + b^2)^{\frac{3}{2}}}
+\end{align*}
 
 
 \section*{Problem 5}
-
+No, for $M=0$ bound orbital solutions do not exist. In this case, the effective potential is of the form
+\[ V_\text{eff}(r)\big|_{M\to0} = \frac{l^2}{2(r^2 + b^2)}, \]
+which has a single maximum at $r=0$ and no local minima, as illustrated in Figure \ref{fig1}.
+\begin{figure}[h]
+    \includegraphics[scale=0.6]{NoMass.PNG}
+    \centering
+    \caption{An example plot of $V_\text{eff}$ with $M=0$.}
+    \label{fig1}
+\end{figure}
 
 \section*{Problem 6}
 
 
 \section*{Problem 7}
-
+\[ V_\text{eff}(r) = \frac{-1}{\sqrt{r^2 + 1}} + \frac{25}{2(r^2 + 1)} - \frac{25}{(r^2 + 1)^\frac{3}{2}} \]
+Minimum occurs ar $r \approx 21.5$ Bound orbits exist.
+\begin{figure}[h]
+    \includegraphics[scale=0.25]{prob7.PNG}
+    \centering
+    \caption{$V_\text{eff}(r)$ with $M=1$, $b=1$, $l=5$.}
+    \label{fig2}
+\end{figure}
 
 \section*{Problem 8}
+\[ V_\text{eff}(r) = \frac{-1}{\sqrt{r^2 + 9}} + \frac{4}{2(r^2 + 9)} - \frac{4}{(r^2 + 9)^\frac{3}{2}} \]
+$V_\text{eff} = \mathcal{E}$ when $r \approx 17.8$, so orbits are bound between $r=0$ and this maximum.
+\begin{figure}[h]
+    \includegraphics[scale=0.6]{prob8.PNG}
+    \centering
+    \caption{$V_\text{eff}(r)$ with $M=1$, $b=3$, $l=4$.}
+    \label{fig3}
+\end{figure}
 
 
 \end{document}
