@@ -59,18 +59,18 @@ The metric is independent of $t$ and $\phi$, so we have two conserved quantities
     l &\coloneqq -\xi_\phi^{\;\mu}u_\mu = -(r^2 + b^2)\sin^2\theta\dot{\phi}
 \end{align*}
 The $\phi$ independence also implies that orbits lie in a plane, so we can consider an orbit in the $\theta = \pi/2$ plane, with $\dd\theta = 0$.
-\begin{alignat*}{3}
-    & & u^2 = -1 &= -\left(1 - \frac{2M}{\sqrt{r^2 + b^2}}\right)\dot{t}^2 + \left(1 - \frac{2M}{\sqrt{r^2 + b^2}}\right)^{-1}\dot{r}^2 + (r^2 + b^2)\dot{\phi}^2 \\
-    & &  &= -\left(1 - \frac{2M}{\sqrt{r^2 + b^2}}\right)^{-1}e^2 + \left(1 - \frac{2M}{\sqrt{r^2 + b^2}}\right)^{-1}\dot{r}^2 + \frac{l^2}{r^2 + b^2} \\
-    &\implies \quad & e^2 &= \dot{r}^2 + \left(1 - \frac{2M}{\sqrt{r^2 + b^2}}\right)\left(1 + \frac{l^2}{r^2 + b^2}\right) \\
-    &\implies \quad & \frac{1}{2}(e^2 - 1) &= \frac{1}{2}\dot{r}^2 + \left(1 - \frac{2M}{\sqrt{r^2 + b^2}}\right)\left(1 + \frac{l^2}{r^2 + b^2}\right) - 1 \\
+\begin{alignat}{3}
+    & & u^2 = -1 &= -\left(1 - \frac{2M}{\sqrt{r^2 + b^2}}\right)\dot{t}^2 + \left(1 - \frac{2M}{\sqrt{r^2 + b^2}}\right)^{-1}\dot{r}^2 + (r^2 + b^2)\dot{\phi}^2 \nonumber \\
+    & &  &= -\left(1 - \frac{2M}{\sqrt{r^2 + b^2}}\right)^{-1}e^2 + \left(1 - \frac{2M}{\sqrt{r^2 + b^2}}\right)^{-1}\dot{r}^2 + \frac{l^2}{r^2 + b^2} \nonumber \\
+    &\implies \quad & e^2 &= \dot{r}^2 + \left(1 - \frac{2M}{\sqrt{r^2 + b^2}}\right)\left(1 + \frac{l^2}{r^2 + b^2}\right) \nonumber \\
+    &\implies \quad & \frac{1}{2}(e^2 - 1) &= \frac{1}{2}\dot{r}^2 + \left(1 - \frac{2M}{\sqrt{r^2 + b^2}}\right)\left(1 + \frac{l^2}{r^2 + b^2}\right) - 1 \nonumber \\
     &\implies \quad & \mathcal{E} = \frac{1}{2}\dot{r}^2 + V_\text{eff}(r)
-\end{alignat*}
+\end{alignat}
 where
-\begin{align*}
-    V_\text{eff}(r) &\coloneqq \left(1 - \frac{2M}{\sqrt{r^2 + b^2}}\right)\left(1 + \frac{l^2}{r^2 + b^2}\right) - 1 \\
+\begin{align}
+    V_\text{eff}(r) &\coloneqq \frac{1}{2}\left(1 - \frac{2M}{\sqrt{r^2 + b^2}}\right)\left(1 + \frac{l^2}{r^2 + b^2}\right) - 1 \nonumber \\
     &= -\frac{M}{\sqrt{r^2 + b^2}} + \frac{l^2}{2(r^2 + b^2)} - \frac{Ml^2}{(r^2 + b^2)^{\frac{3}{2}}}
-\end{align*}
+\end{align}
 
 
 \section*{Problem 5}
@@ -85,7 +85,12 @@ which has a single maximum at $r=0$ and no local minima, as illustrated in Figur
 \end{figure}
 
 \section*{Problem 6}
-
+\begin{alignat*}{3}
+    & & \dv{r}{\tau} &= \dv{r}{\phi}\dv{\phi}{\tau} \\
+    & &  &= \dv{r}{\phi}\frac{-l}{r^2 + b^2} \\
+    &\implies \quad & \mathcal{E} &= \frac{1}{2}\left(\dv{r}{\phi}\frac{-l}{r^2 + b^2}\right)^2 + V_\text{eff}(r) \\
+    &\implies \quad & \dv{r}{\phi} &= \pm \frac{r^2 + b^2}{l}\sqrt{2(\mathcal{E} - V_\text{eff})} \\
+\end{alignat*}
 
 \section*{Problem 7}
 \[ V_\text{eff}(r) = \frac{-1}{\sqrt{r^2 + 1}} + \frac{25}{2(r^2 + 1)} - \frac{25}{(r^2 + 1)^\frac{3}{2}} \]
@@ -103,7 +108,7 @@ $V_\text{eff} = \mathcal{E}$ when $r \approx 17.8$, so orbits are bound between 
 \begin{figure}[h]
     \includegraphics[scale=0.6]{prob8.PNG}
     \centering
-    \caption{$V_\text{eff}(r)$ with $M=1$, $b=3$, $l=4$.}
+    \caption{$V_\text{eff}(r)$ with $M=1$, $b=3$, $l=2$.}
     \label{fig3}
 \end{figure}
 
