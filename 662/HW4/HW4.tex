@@ -1,0 +1,58 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{nccmath}
+\usepackage{mathtools}
+\usepackage{mathrsfs}
+\usepackage{enumitem}
+\usepackage{physics}
+\usepackage{tensor}
+
+% Tikz imports / settings
+\usepackage{tikz}
+\usetikzlibrary{calc,decorations.markings,patterns}
+\usetikzlibrary{decorations.pathmorphing}
+\tikzset{snake it/.style={decorate, decoration=snake}}
+
+\begin{document}
+
+\title{Homework 4}
+\author{Sean Ericson \\ Phys 662}
+\maketitle
+
+\section*{Problem 1}
+\begin{enumerate}[label=(\alph*)]
+    \item 
+    \begin{align*}
+        \gamma &= \frac{1}{\sqrt{1 - \tanh^2(\alpha)}} \\
+        &= \frac{1}{\sqrt{\sech^2(\alpha)}} \\
+        &= \cosh(\alpha)
+    \end{align*}
+    \[ \Lambda = \mqty(\gamma&0&0&-\gamma\beta\\0&1&0&0\\0&0&1&0\\-\gamma\beta&0&0&\gamma) = \mqty(\cosh(\alpha)&0&0&-\sinh(\alpha)\\0&1&0&0\\0&0&1&0\\-\sinh(\alpha)&0&0&\cosh(\alpha)) \]
+    
+    \item 
+    \begin{align*}
+        p'_3 &= \Lambda p_3 \\
+        &= p_T\mqty(\cosh(\alpha)&0&0&-\sinh(\alpha)\\0&1&0&0\\0&0&1&0\\-\sinh(\alpha)&0&0&\cosh(\alpha))\mqty(\cosh(y_3)\\\cos(\phi)\\\sin(\phi)\\\sinh(\alpha)) \\
+        &= p_T \mqty\cosh(\alpha)\cosh(y_3)
+    \end{align*}
+    \item
+    \item
+    \item
+    \item
+\end{enumerate}
+
+\section*{Problem 2}
+\begin{enumerate}[label=(\alph*)]
+    \item 
+    \item
+    \item
+\end{enumerate}
+
+
+\section*{Problem 3}
+
+
+
+\end{document}
