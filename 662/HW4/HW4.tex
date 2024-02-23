@@ -31,13 +31,24 @@
     \end{align*}
     \[ \Lambda = \mqty(\gamma&0&0&-\gamma\beta\\0&1&0&0\\0&0&1&0\\-\gamma\beta&0&0&\gamma) = \mqty(\cosh(\alpha)&0&0&-\sinh(\alpha)\\0&1&0&0\\0&0&1&0\\-\sinh(\alpha)&0&0&\cosh(\alpha)) \]
     
-    \item 
+    \item For $p_3$, 
     \begin{align*}
         p'_3 &= \Lambda p_3 \\
-        &= p_T\mqty(\cosh(\alpha)&0&0&-\sinh(\alpha)\\0&1&0&0\\0&0&1&0\\-\sinh(\alpha)&0&0&\cosh(\alpha))\mqty(\cosh(y_3)\\\cos(\phi)\\\sin(\phi)\\\sinh(\alpha)) \\
-        &= p_T \mqty\cosh(\alpha)\cosh(y_3)
+        &= p_T\mqty(\cosh(\alpha)&0&0&-\sinh(\alpha)\\0&1&0&0\\0&0&1&0\\-\sinh(\alpha)&0&0&\cosh(\alpha))\mqty(\cosh(y_3)\\\cos(\phi)\\\sin(\phi)\\\sinh(y_3)) \\
+        &= p_T \mqty(\cosh(\alpha)\cosh(y_3)-\sinh(\alpha)\sinh(y_3)\\\cos(\phi)\\\sin(\phi)\\-\sinh(\alpha)\cosh(y_3) + \cosh(\alpha)\sinh(y_3)) \\
+        &= p_T \mqty(\cosh(\alpha-y_3)\\\cos(\phi)\\\sin(\phi)\\-\sinh(\alpha - y_3)) \\
+        &= p_T \mqty(\cosh(y_3 - \alpha)\\\cos(\phi)\\\sin(\phi)\\\sinh(y_3 - \alpha)),
     \end{align*}
-    \item
+    and similarly for $p_4$. Hence, $y_i \to y_i - \alpha$. 
+    
+    \item Consider just the $t$ and $z$ components:
+    \[ p_1 = \frac{x_1\sqrt{s}}{2}\mqty(1\\1), \quad p_2 = \frac{x_2\sqrt{s}}{2}\mqty(1\\-1) \]
+    \[ p_1^\text{CM} = \frac{\sqrt{s}}{2}\mqty(1\\1), \quad p_2^\text{CM} = \frac{\sqrt{s}}{2}\mqty(1\\-1). \]
+    Now,
+    \begin{alignat*}{3}
+        &         \quad &  &=  \\
+        &\implies \quad &  &=  \\
+    \end{alignat*}
     \item
     \item
     \item
