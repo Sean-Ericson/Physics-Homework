@@ -1,0 +1,52 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{nccmath}
+\usepackage{mathtools}
+\usepackage{mathrsfs}
+\usepackage{enumitem}
+\usepackage{physics}
+\usepackage{tensor}
+\usepackage{subcaption}
+\usepackage{pdfpages}
+
+\usepackage{tikz}
+\usetikzlibrary{calc,decorations.markings,patterns}
+
+\begin{document}
+\title{Homework 6}
+\author{Sean Ericson \\ Phys 610}
+\maketitle
+
+\section*{Problem 1}
+
+
+
+\section*{Problem 2}
+\begin{enumerate}[label=(\alph*)]
+    \item The symmetries 
+\end{enumerate}
+
+
+\section*{Problem 3}
+\begin{enumerate}[label=(\alph*)]
+    \item Calculation done in Mathematica, see Appendix.
+    \item The transformation is given by 
+    \[ h_{\mu\nu} \to h_{\mu\nu} + \partial_{\mu}\xi_\nu + \partial_nu\xi_\mu \]
+    To kill off the $c$s, we need 
+    \begin{align*}
+        2\partial_0\xi_0 &= -c\sin(k(x-t)), \\
+        2\partial_1\xi_1 &= c\sin(k(x-t)), \\
+        \partial_0\xi_i &= -\partial_i\xi_0 = 0, \\
+        \partial_i\xi_j &= -\partial_j\xi_i = 0 \quad (i,j = y,z).
+    \end{align*}
+    Integrating, we find that
+    \[ \xi_\mu = \mqty(-1\\-1\\0\\0)\frac{c}{2k}\cos(k(x-t)) + b_\mu \]
+    where $b_\mu$ is any constant vector. Under this transformation $a$ is unchanged.
+\end{enumerate}
+
+\section*{Appendix}
+\includepdf[pages=-]{calcs/prob3.pdf}
+
+\end{document}
