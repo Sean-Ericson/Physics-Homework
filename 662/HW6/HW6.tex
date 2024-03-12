@@ -7,8 +7,7 @@
 \usepackage{mathrsfs}
 \usepackage{enumitem}
 \usepackage{physics}
-\usepackage{tensor}
-\usepackage{slashed}
+\usepackage{pdfpages}
 
 \newcommand{\txtsup}[1]{\textsuperscript{#1}}
 
@@ -49,8 +48,8 @@
             \hline 
             u & 0.0019 \\
             d & 0.0041 \\
-            s & 0.0832 \\
-            c & 1.1096 \\
+            s & 0.0831 \\
+            c & 1.1078 \\
         \end{tabular}
     \end{table}
     \item The calculated masses for the four lightest quarks at $Q = m_b$ are listed in the table above.
@@ -59,11 +58,22 @@
 
 \section*{Problem 2}
 \begin{enumerate}[label=(\alph*)]
-    \item 
-    \item 
+    \item See attached Mathematica notebook.
+    \item Consider the operator
+    \[ df_\pi^4\Tr[Q_L\Sigma Q_R \Sigma^\dag + \text{h.c.}], \]
+    where $d$ is a dimensionless constant. This operator is $SU(3)_L \times SU(3)_R$ symmetric:
+    \begin{align*}
+        \Tr[Q_L\Sigma Q_R \Sigma^\dag] &\to \Tr[U_LQ_LU_L^\dag U_L \Sigma U_R^\dag U_RQ_RU_R^\dag U_R\Sigma^\dag U_L^\dag] \\
+        & = \Tr[U_LQ_L\Sigma Q_R \Sigma^\dag U_L^\dag] \\
+        &= \Tr[Q_L\Sigma Q_R \Sigma^\dag].
+    \end{align*}
+    In the last equality, the cyclic property of the trace in used. This operator results in mass corrections
+    \[ \delta m_{\pi^+}^2 = \delta m_{K^+}^2 = 4df_\pi^2 \]
+
     \item 
 \end{enumerate}
 
-
+\includepdf[pages=-]{prob1.pdf}
+\includepdf[pages=-]{prob2.pdf}
 
 \end{document}
