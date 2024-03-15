@@ -1,0 +1,33 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{nccmath}
+\usepackage{mathtools}
+\usepackage{mathrsfs}
+\usepackage{enumitem}
+\usepackage{physics}
+\usepackage{tensor}
+
+\begin{document}
+\title{Homework 6}
+\author{Phys 632}
+\maketitle
+
+\section*{Problem 4b}
+Given
+\[ \rho = \frac{1}{2}\left(\mathcal{I} + \vec{r}\cdot\vec{\sigma}\right), \quad \abs{\vec{r}} \leq 1, \]
+show that
+\[ \Tr[\rho^2] = \frac{1}{2}\left(1 + \abs{\vec{r}}^2\right). \]
+Proof (typeset version of Ellie Schnee's work): \\
+\begin{align*}
+    \Tr[\rho^2] &= \Tr[\rho\rho] \\
+    &= \frac{1}{2}\Tr[\rho\left(\mathcal{I} + \vec{r}\cdot\vec{\sigma}\right)] \\
+    &= \frac{1}{2}\Tr[\rho] + \frac{1}{2}\Tr[\rho\left(\vec{r}\cdot\vec{\sigma}\right)] \\
+    &= \frac{1}{2} + \frac{1}{2}\vec{r}\cdot\Tr[\rho\vec{\sigma}] \\
+    &= \frac{1}{2} + \frac{1}{2}\vec{r}\cdot\langle\vec{\sigma}\rangle \\
+    &= \frac{1}{2}\left(1 + \abs{\vec{r}}^2\right)
+\end{align*}
+
+
+\end{document}
