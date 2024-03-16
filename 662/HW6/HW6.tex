@@ -70,7 +70,20 @@
     In the last equality, the cyclic property of the trace in used. This operator results in mass corrections
     \[ \delta m_{\pi^+}^2 = \delta m_{K^+}^2 = 4df_\pi^2 \]
 
-    \item 
+    \item We have
+    \begin{alignat*}{3}
+        &\quad & \frac{c}{f_\pi^{2n-4}}\Tr[D_{\mu_1}\cdots D_{\mu_n}\Sigma D^{\mu_1}\cdots D^{\mu_n}\Sigma^\dag] &= f_\pi^2\Lambda^2\Tr[\frac{D_{\mu_1}}{\Lambda}\cdots\frac{D_{\mu_n}}{\Lambda}\Sigma\frac{D^{\mu_1}}{\Lambda}\cdots\frac{D^{\mu_n}}{\Lambda}\Sigma^\dag] \\
+        &\quad &  &= f_\pi^2\Lambda^{2-2n}\Tr[D_{\mu_1}\cdots D_{\mu_n}\Sigma D^{\mu_1}\cdots D^{\mu_n}\Sigma^\dag] \\
+        &\implies\quad & c &= \left(\frac{f_\pi}{\Lambda}\right)^{2n-2} \\
+        &\quad &  &= \frac{1}{\left(4\pi\right)^{2n-2}}
+    \end{alignat*}
+    We can get the four-point vertex by expanding $\Sigma$ to first order:
+    \[ \Sigma \approx 1 + i\Pi. \]
+    The terms that are fourth-order in $\Pi$ are of the forms
+    \[ Tr[D^n\Sigma D^n\Sigma^\dag] \supset \lambda_1 D^n\Pi^3D^n\Pi + \lambda_2 D^n\Pi^3D^n\Pi + \lambda_3 D^n\Pi^2D^n\Pi^2, \]
+    and the matrix element is roughly
+    \[ \mathcal{M} \sim \frac{c}{f_\pi^{2n-2}}(p\cdot p)^{n-2} \sim \left(\frac{E_\text{CM}}{4\pi f_\pi}\right)^{2n-4}. \]
+    We can see that this is independent of $n$ when $E_\text{CM} \approx 4\pi f_\pi = \Lambda$.
 \end{enumerate}
 
 \includepdf[pages=-]{prob1.pdf}

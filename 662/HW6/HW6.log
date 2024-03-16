@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2022.1.17)  14 MAR 2024 18:28
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2022.1.17)  15 MAR 2024 17:52
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -318,138 +318,142 @@ File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 ) [1
 
 {d:/Programs/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+Overfull \hbox (11.35233pt too wide) detected at line 79
+[]
+ []
+
 <prob1.pdf, id=15, 614.295pt x 794.97pt>
 File: prob1.pdf Graphic file (type pdf)
 <use prob1.pdf>
-Package pdftex.def Info: prob1.pdf  used on input line 76.
+Package pdftex.def Info: prob1.pdf  used on input line 89.
 (pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
 File: prob1.pdf Graphic file (type pdf)
 <use prob1.pdf>
-Package pdftex.def Info: prob1.pdf  used on input line 76.
+Package pdftex.def Info: prob1.pdf  used on input line 89.
 (pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
 <prob1.pdf, id=18, page=1, 614.295pt x 794.97pt>
 File: prob1.pdf Graphic file (type pdf)
 <use prob1.pdf, page 1>
-Package pdftex.def Info: prob1.pdf , page1 used on input line 76.
+Package pdftex.def Info: prob1.pdf , page1 used on input line 89.
 (pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
 File: prob1.pdf Graphic file (type pdf)
 <use prob1.pdf, page 1>
-Package pdftex.def Info: prob1.pdf , page1 used on input line 76.
+Package pdftex.def Info: prob1.pdf , page1 used on input line 89.
 (pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
- [2]
+[2]
 File: prob1.pdf Graphic file (type pdf)
 <use prob1.pdf, page 1>
-Package pdftex.def Info: prob1.pdf , page1 used on input line 76.
-(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
-File: prob1.pdf Graphic file (type pdf)
-<use prob1.pdf, page 1>
-Package pdftex.def Info: prob1.pdf , page1 used on input line 76.
+Package pdftex.def Info: prob1.pdf , page1 used on input line 89.
 (pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
 File: prob1.pdf Graphic file (type pdf)
 <use prob1.pdf, page 1>
-Package pdftex.def Info: prob1.pdf , page1 used on input line 76.
+Package pdftex.def Info: prob1.pdf , page1 used on input line 89.
+(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
+File: prob1.pdf Graphic file (type pdf)
+<use prob1.pdf, page 1>
+Package pdftex.def Info: prob1.pdf , page1 used on input line 89.
 (pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
  [3 <./prob1.pdf>]
-<prob1.pdf, id=65, page=2, 614.295pt x 794.97pt>
+<prob1.pdf, id=66, page=2, 614.295pt x 794.97pt>
 File: prob1.pdf Graphic file (type pdf)
 <use prob1.pdf, page 2>
-Package pdftex.def Info: prob1.pdf , page2 used on input line 76.
+Package pdftex.def Info: prob1.pdf , page2 used on input line 89.
 (pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
 File: prob1.pdf Graphic file (type pdf)
 <use prob1.pdf, page 2>
-Package pdftex.def Info: prob1.pdf , page2 used on input line 76.
+Package pdftex.def Info: prob1.pdf , page2 used on input line 89.
 (pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
 File: prob1.pdf Graphic file (type pdf)
 <use prob1.pdf, page 2>
-Package pdftex.def Info: prob1.pdf , page2 used on input line 76.
+Package pdftex.def Info: prob1.pdf , page2 used on input line 89.
 (pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
  [4 <./prob1.pdf>]
-<prob1.pdf, id=100, page=3, 614.295pt x 794.97pt>
+<prob1.pdf, id=101, page=3, 614.295pt x 794.97pt>
 File: prob1.pdf Graphic file (type pdf)
 <use prob1.pdf, page 3>
-Package pdftex.def Info: prob1.pdf , page3 used on input line 76.
+Package pdftex.def Info: prob1.pdf , page3 used on input line 89.
 (pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
 File: prob1.pdf Graphic file (type pdf)
 <use prob1.pdf, page 3>
-Package pdftex.def Info: prob1.pdf , page3 used on input line 76.
+Package pdftex.def Info: prob1.pdf , page3 used on input line 89.
 (pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
 File: prob1.pdf Graphic file (type pdf)
 <use prob1.pdf, page 3>
-Package pdftex.def Info: prob1.pdf , page3 used on input line 76.
+Package pdftex.def Info: prob1.pdf , page3 used on input line 89.
 (pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
  [5 <./prob1.pdf>]
-<prob2.pdf, id=105, 614.295pt x 794.97pt>
+<prob2.pdf, id=106, 614.295pt x 794.97pt>
 File: prob2.pdf Graphic file (type pdf)
 <use prob2.pdf>
-Package pdftex.def Info: prob2.pdf  used on input line 77.
+Package pdftex.def Info: prob2.pdf  used on input line 90.
 (pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
 File: prob2.pdf Graphic file (type pdf)
 <use prob2.pdf>
-Package pdftex.def Info: prob2.pdf  used on input line 77.
+Package pdftex.def Info: prob2.pdf  used on input line 90.
 (pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
-<prob2.pdf, id=108, page=1, 614.295pt x 794.97pt>
+<prob2.pdf, id=109, page=1, 614.295pt x 794.97pt>
 File: prob2.pdf Graphic file (type pdf)
 <use prob2.pdf, page 1>
-Package pdftex.def Info: prob2.pdf , page1 used on input line 77.
+Package pdftex.def Info: prob2.pdf , page1 used on input line 90.
 (pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
 File: prob2.pdf Graphic file (type pdf)
 <use prob2.pdf, page 1>
-Package pdftex.def Info: prob2.pdf , page1 used on input line 77.
+Package pdftex.def Info: prob2.pdf , page1 used on input line 90.
 (pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
 File: prob2.pdf Graphic file (type pdf)
 <use prob2.pdf, page 1>
-Package pdftex.def Info: prob2.pdf , page1 used on input line 77.
+Package pdftex.def Info: prob2.pdf , page1 used on input line 90.
 (pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
 File: prob2.pdf Graphic file (type pdf)
 <use prob2.pdf, page 1>
-Package pdftex.def Info: prob2.pdf , page1 used on input line 77.
+Package pdftex.def Info: prob2.pdf , page1 used on input line 90.
 (pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
 File: prob2.pdf Graphic file (type pdf)
 <use prob2.pdf, page 1>
-Package pdftex.def Info: prob2.pdf , page1 used on input line 77.
+Package pdftex.def Info: prob2.pdf , page1 used on input line 90.
 (pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
  [6 <./prob2.pdf>]
-<prob2.pdf, id=178, page=2, 614.295pt x 794.97pt>
+<prob2.pdf, id=179, page=2, 614.295pt x 794.97pt>
 File: prob2.pdf Graphic file (type pdf)
 <use prob2.pdf, page 2>
-Package pdftex.def Info: prob2.pdf , page2 used on input line 77.
+Package pdftex.def Info: prob2.pdf , page2 used on input line 90.
 (pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
 File: prob2.pdf Graphic file (type pdf)
 <use prob2.pdf, page 2>
-Package pdftex.def Info: prob2.pdf , page2 used on input line 77.
+Package pdftex.def Info: prob2.pdf , page2 used on input line 90.
 (pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
 File: prob2.pdf Graphic file (type pdf)
 <use prob2.pdf, page 2>
-Package pdftex.def Info: prob2.pdf , page2 used on input line 77.
+Package pdftex.def Info: prob2.pdf , page2 used on input line 90.
 (pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
  [7 <./prob2.pdf>]
-<prob2.pdf, id=202, page=3, 614.295pt x 794.97pt>
+<prob2.pdf, id=203, page=3, 614.295pt x 794.97pt>
 File: prob2.pdf Graphic file (type pdf)
 <use prob2.pdf, page 3>
-Package pdftex.def Info: prob2.pdf , page3 used on input line 77.
+Package pdftex.def Info: prob2.pdf , page3 used on input line 90.
 (pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
 File: prob2.pdf Graphic file (type pdf)
 <use prob2.pdf, page 3>
-Package pdftex.def Info: prob2.pdf , page3 used on input line 77.
+Package pdftex.def Info: prob2.pdf , page3 used on input line 90.
 (pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
 File: prob2.pdf Graphic file (type pdf)
 <use prob2.pdf, page 3>
-Package pdftex.def Info: prob2.pdf , page3 used on input line 77.
+Package pdftex.def Info: prob2.pdf , page3 used on input line 90.
 (pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
  [8 <./prob2.pdf>] (./HW6.aux) ) 
 Here is how much of TeX's memory you used:
  6190 strings out of 478286
  94708 string characters out of 5846229
- 406638 words of memory out of 5000000
+ 409638 words of memory out of 5000000
  24303 multiletter control sequences out of 15000+600000
  478398 words of font info for 66 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  70i,17n,77p,377b,423s stack positions out of 5000i,500n,10000p,200000b,80000s
-<d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on HW6.pdf (8 pages, 280585 bytes).
+<d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on HW6.pdf (8 pages, 295820 bytes).
 PDF statistics:
- 250 PDF objects out of 1000 (max. 8388607)
- 158 compressed objects within 2 object streams
+ 255 PDF objects out of 1000 (max. 8388607)
+ 161 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  61 words of extra memory for PDF output out of 10000 (max. 10000000)
 
