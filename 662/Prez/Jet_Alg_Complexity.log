@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2022.1.17)  17 MAR 2024 21:32
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2022.1.17)  17 MAR 2024 21:33
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1472,6 +1472,10 @@ Package pdftex.def Info: ./images//siscone.PNG  used on input line 332.
 
 ] [89
 
+] [90
+
+] [91
+
  <d:/Programs/texlive/2021/texmf-dist/tex/latex/beamer/beamericonarticle.pdf>]
 \tf@nav=\write6
 \openout6 = `Jet_Alg_Complexity.nav'.
@@ -1487,18 +1491,18 @@ Package rerunfilecheck Info: File `Jet_Alg_Complexity.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 27557 strings out of 478286
- 540839 string characters out of 5846229
+ 27561 strings out of 478286
+ 540877 string characters out of 5846229
  786955 words of memory out of 5000000
  44945 multiletter control sequences out of 15000+600000
  485543 words of font info for 90 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,15n,122p,487b,863s stack positions out of 5000i,500n,10000p,200000b,80000s
 <d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmss9.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi12.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi9.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on Jet_Alg_Complexity.pdf (89 pages, 1161993 bytes).
+Output written on Jet_Alg_Complexity.pdf (91 pages, 1166770 bytes).
 PDF statistics:
- 3158 PDF objects out of 3580 (max. 8388607)
- 2687 compressed objects within 27 object streams
- 183 named destinations out of 1000 (max. 500000)
+ 3215 PDF objects out of 3580 (max. 8388607)
+ 2741 compressed objects within 28 object streams
+ 187 named destinations out of 1000 (max. 500000)
  1441 words of extra memory for PDF output out of 10000 (max. 10000000)
 
