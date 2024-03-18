@@ -37,7 +37,7 @@
 
 \begin{frame}{Complexity of Jet Algorithms}
 \begin{itemize}
-    \item<1-> Jet Reconstruction algorithm are at the core of modern HEP data collection and analysis
+    \item<1-> Jet Reconstruction algorithms are at the core of modern HEP data collection and analysis
     \item<2-> Efficient algorithms are necessary to make analysis of large datasets feasible.
     \item<3-> Outline
     \begin{itemize}
@@ -82,12 +82,12 @@
     \end{itemize}
     \item<5-> Jet shape
     \begin{itemize}
-        \item<6-> Algs with variable jet shape can allow for good resolution of subjets at the expense of greater susceptibility to UE and P
+        \item<6-> Algs with variable jet shape can allow for good resolution of subjets at the expense of greater susceptibility to UE and PU
     \end{itemize}
-    \item<6-> Infrared and Collinear safety (IRC safety)
+    \item<7-> Infrared and Collinear safety (IRC safety)
     \begin{itemize}
-        \item<7-> Calculated jets should be insensitive to emission of soft radiation from, or collinear splitting of the constituent particles.
-        \item<8-> Necessary for faithful comparison of data to experiment
+        \item<8-> Calculated jets should be insensitive to emission of soft radiation from, or collinear splitting of the constituent particles.
+        \item<9-> Necessary for faithful comparison of data to experiment
     \end{itemize}
 \end{itemize}
 \end{frame}
@@ -95,18 +95,18 @@
 \begin{frame}{Review of Jet Algorithms (cont.)}
 \alert{Class of Jet Algorithms}
 \begin{itemize}
-    \item<1-> Cone Algorithms
+    \item<2-> Cone Algorithms
     \begin{itemize}
-        \item<2-> Assume particles in jets will appear in conical regions; cluster in $(\eta, \phi)$-space.
-        \item<3-> Easy to implement, but typically contain unphysical parameters which hinder analysis
-        \item<4-> Most are not IRC safe
-        \item<5-> Examples include IC-PR, IC-SM, and SISCone.
+        \item<3-> Assume particles in jets will appear in conical regions; cluster in $(\eta, \phi)$-space.
+        \item<4-> Easy to implement, but typically contain unphysical parameters which hinder analysis
+        \item<5-> Most are not IRC safe
+        \item<6-> Examples include IC-PR, IC-SM, and SISCone.
     \end{itemize}
-    \item<6-> Sequential Clustering Algorithms
+    \item<7-> Sequential Clustering Algorithms
     \begin{itemize}
-        \item<7-> Assume particles in jets have small differences in $p_t$; cluster in moment space.
-        \item<8-> Automatically IRC safe
-        \item<9-> Examples include $K_t$, $\bar{K}_t$, and Cambridge/Aachen
+        \item<8-> Assume particles in jets have small differences in $p_t$; cluster in momentum space.
+        \item<9-> Automatically IRC safe
+        \item<10-> Examples include $K_t$, $\bar{K}_t$, and Cambridge/Aachen
     \end{itemize}
 \end{itemize}
 \end{frame}
@@ -114,13 +114,13 @@
 \begin{frame}{Measuring Algorithmic Complexity}
 \alert{Assymptotics and Big-O Notation}
 \begin{itemize}
-    \item<1-> Algorithm runtime depends on the specific hardware its running on, and on the input to the particular problem instance
-    \item<2-> How can we compare algorithms in a context-independent way?
+    \item<2-> Algorithm runtime depends on the specific hardware its running on, and on the input to the particular problem instance
+    \item<3-> How can we compare algorithms in a context-independent way?
     \begin{itemize}
-        \item<3-> Big-O Notation! (a.k.a Bachmann-Landau/asymptotic notation)
-        \item<4->[] $f(x) \in \ord{g(x)}_{x\to\inf} \iff \exists c\; \exists x_0\; \forall x>x_0:\; \abs{f(x)} \leq cg(x)$
-        \item<5-> E.g. $\ord{\ln(x)} \subset \ord{x} \subset \ord{x^n} \subset \ord{e^x} \subset \ord{x!}$
-        \item<6-> Also, $o()$, $\Theta(x)$, $\Omega()$, $\omega()$ with related definitions
+        \item<4-> Big-O Notation! (a.k.a Bachmann-Landau/asymptotic notation)
+        \item<5->[] $f(x) \in \ord{g(x)}_{x\to\inf} \iff \exists c\; \exists x_0\; \forall x>x_0:\; \abs{f(x)} \leq cg(x)$
+        \item<6-> E.g. $\ord{\ln(x)} \subset \ord{x} \subset \ord{x^n} \subset \ord{e^x} \subset \ord{x!}$
+        \item<7-> Also, $o()$, $\Theta(x)$, $\Omega()$, $\omega()$ with related definitions
     \end{itemize}
     
 \end{itemize}
@@ -151,29 +151,29 @@
 \begin{frame}{Pre-FastJet $K_t$ Complexity (cont.)}
 \alert{Complexity Analysis}
 \begin{itemize}
-    \item<1-> Outermost loop executes $\mathcal{O}(n)$ times
+    \item<2-> Outermost loop executes $\mathcal{O}(n)$ times
     \begin{itemize}
-        \item<2-> Calculation of $d_{Bi}$ initially $\ord{N}$, updates actually $\ord{1}$
-        \item<3-> Calculation of $d_{ij}$ initially $\ord{N^2}$, updates actually $\ord{N}$
-        \item<4-> Determining $d_\text{min}$ is $\ord{N^2}$
-        \item<5-> Merging operation is $\ord{1}$
+        \item<3-> Calculation of $d_{Bi}$ initially $\ord{N}$, updates actually $\ord{1}$
+        \item<4-> Calculation of $d_{ij}$ initially $\ord{N^2}$, updates actually $\ord{N}$
+        \item<5-> Determining $d_\text{min}$ is $\ord{N^2}$
+        \item<6-> Merging operation is $\ord{1}$
     \end{itemize}
-    \item<5-> Full time complexity is therefore \[ \ord{N + N^2 + N(1 + N + N^2 + 1)} = \ord{N^3} \]
-    \item<6-> Also easy to see that the space complexity is $\ord{N^2}$.
+    \item<7-> Full time complexity is therefore \[ \ord{N + N^2 + N(1 + N + N^2 + 1)} = \ord{N^3} \]
+    \item<8-> Also easy to see that the space complexity is $\ord{N^2}$.
 \end{itemize}
 \end{frame}
 
 \begin{frame}{Enter: FastJet}
 \alert{Geometric Insight}
 \begin{itemize}
-    \item<1-> The key to improving $K_t$ is the (rather obvious) geometric insight:
+    \item<2-> The key to improving $K_t$ is the (rather obvious) geometric insight:
     \begin{itemize}
-        \item<2-> Let $d_\text{min} = \min(\{d_{ij}\})$, and let $p_{ti} < p_{tj}$.
-        \item<3-> Then, $\forall l:\;R_{ij} \leq R_{il} \quad$
+        \item<3-> Let $d_\text{min} = \min(\{d_{ij}\})$, and let $p_{ti} < p_{tj}$.
+        \item<4-> Then, $\forall l:\;R_{ij} \leq R_{il} \quad$
     \end{itemize}
-    \item<4-> That is, particles $i$ and $j$ are geometric \textit{nearest neighbors}
-    \item<5-> Therefore, we don't need the $\ord{N^2}$ table $d_{ij}$!
-    \item<6-> We only need an $n$-element list of nearest neighbors $d_{i\mathcal{G}_i}$
+    \item<5-> That is, particles $i$ and $j$ are geometric \textit{nearest neighbors}
+    \item<6-> Therefore, we don't need the $\ord{N^2}$ table $d_{ij}$!
+    \item<7-> We only need an $n$-element list of nearest neighbors $d_{i\mathcal{G}_i}$
 \end{itemize}
 \end{frame}
 
@@ -198,17 +198,17 @@
 \begin{frame}{Complexity of FastJet (cont.)}
 \alert{Semi-Naïve Complexity Analysis}
 \begin{itemize}
-    \item<1-> This appears to have a time complexity of $\ord{N^2}$:
+    \item<2-> This appears to have a time complexity of $\ord{N^2}$:
     \begin{itemize}
-        \item<2-> Initial construction of $\mathcal{G}_i$ is $\ord{N}$.
-        \item<3-> Initial calculation of $d_{i\mathcal{G}_i}$, $d_{Bi}$ is $\ord{N}$
-        \item<4-> Finding $d_\text{min}$ takes $\ord{N}$ times, repeated $\ord{N}$ times.
-        \item<5-> Updating $\mathcal{G}_i$, $d_{Bi}$ after a merge or removal takes $\ord{N}$ (repeated $\ord{N}$ times)
+        \item<3-> Initial construction of $\mathcal{G}_i$ is $\ord{N}$.
+        \item<4-> Initial calculation of $d_{i\mathcal{G}_i}$, $d_{Bi}$ is $\ord{N}$
+        \item<5-> Finding $d_\text{min}$ takes $\ord{N}$ times, repeated $\ord{N}$ times.
+        \item<6-> Updating $\mathcal{G}_i$, $d_{Bi}$ after a merge or removal takes $\ord{N}$ (repeated $\ord{N}$ times)
         \begin{itemize}
-            \item<6-> Updating $\mathcal{G}_i$ in $\ord{N}$ is a nontrivial geometric affect
+            \item<7-> Updating $\mathcal{G}_i$ in $\ord{N}$ is a nontrivial geometric affect
         \end{itemize}
     \end{itemize}
-    \item<7-> However, we can do better!
+    \item<8-> However, we can do better!
 \end{itemize}
 \end{frame}
 
@@ -226,15 +226,15 @@
 \begin{column}{.75\textwidth}
     \hspace{10em}
     \begin{itemize}
-        \item<1-> A Voronoi diagram for NN calculations
+        \item<2-> A Voronoi diagram for NN calculations
         \begin{itemize}
-            \item<2-> Constructed in $\ord{n\ln(N)}$ time
-            \item<3-> Allows for calculation of $\mathcal{G}_i$ in $\ord{N}$
-            \item<4-> Dynamic updates in $\ord{\ln(n)}$
+            \item<3-> Constructed in $\ord{n\ln(N)}$ time
+            \item<4-> Allows for calculation of $\mathcal{G}_i$ in $\ord{N}$
+            \item<5-> Dynamic updates in $\ord{\ln(n)}$
         \end{itemize}
-        \item<5-> Represent $d_{i\mathcal{G}_i}$ as a Red-Black tree
+        \item<6-> Represent $d_{i\mathcal{G}_i}$ as a Red-Black tree
         \begin{itemize}
-            \item<6-> Constructed in $\ord{N\ln(N)}$ time
+            \item<7-> Constructed in $\ord{N\ln(N)}$ time
         \end{itemize}
     \end{itemize}
 \end{column}
@@ -247,10 +247,10 @@
     \item[]
     \begin{itemize}
         \vspace{-1.15em}
-        \item<7-> Dynamic updates and searching in $\ord{\ln(N)}$
-        \item<8-> Searches/updates occur $\ord{N}$ times; $\ord{N\ln(N)}$ operations total
+        \item<8-> Dynamic updates and searching in $\ord{\ln(N)}$
+        \item<9-> Searches/updates occur $\ord{N}$ times; $\ord{N\ln(N)}$ operations total
     \end{itemize}
-    \item<9-> Total time complexity: $\ord{N\ln(N)}$.
+    \item<10-> Total time complexity: $\ord{N\ln(N)}$.
 \end{itemize}
 \end{frame}
 
@@ -301,19 +301,19 @@
 \begin{frame}{Complexity of IC-SM}
 \alert{Complexity Analysis}
 \begin{itemize}
-    \item<1->Stable cone production 
+    \item<2->Stable cone production 
     \begin{itemize}
-        \item<2-> Process of finding a stable cone from a seed roughly $\ord{Nn}$ where $n$ is the average particle count in a circle of radius $R$
-        \item<3-> This is repeated $\ord{N}$ times.
-        \item<4-> Codes MCFM and NLOJet implement this in $\ord{N 2^N}$ by iterating through all possible cones!!
+        \item<3-> Process of finding a stable cone from a seed roughly $\ord{Nn}$ where $n$ is the average particle count in a circle of radius $R$
+        \item<4-> This is repeated $\ord{N}$ times.
+        \item<5-> Codes MCFM and NLOJet implement this in $\ord{N 2^N}$ by iterating through all possible cones!!
     \end{itemize}
-    \item<5-> Split-Merge
+    \item<6-> Split-Merge
     \begin{itemize}
-        \item<6-> Determining hardest protojet takes $\ord{N}$
-        \item<7-> Finding hardest overlapping jet takes $\ord{N/n}$, repeated $\ord{N}$ times.
-        \item<8-> Merging takes $\ord{Nn}$
+        \item<7-> Determining hardest protojet takes $\ord{N}$
+        \item<8-> Finding hardest overlapping jet takes $\ord{N/n}$, repeated $\ord{N}$ times.
+        \item<9-> Merging takes $\ord{Nn}$
     \end{itemize}
-    \item<8-> Total complexity: $\ord{N^2n}$ (can be optimized to $\ord{N^2}$ with 2D tree data structures)
+    \item<10-> Total complexity: $\ord{N^2n}$ (can be optimized to $\ord{N^2}$ with 2D tree data structures)
 \end{itemize}
 \end{frame}
 
@@ -325,9 +325,9 @@
     \caption{SISCone's geometric approach to seedless cone-finding.}
 \end{figure}
 \begin{itemize}
-    \item<1-> SISCone again uses geometric insight to optimize cone finding.
-    \item<2-> Able to provably find all stable cones in $\ord{Nn\ln(n)}$ time!
-    \item<3-> Seedlessness $\implies$ inherent IR safety
+    \item<2-> SISCone again uses geometric insight to optimize cone finding.
+    \item<3-> Able to provably find all stable cones in $\ord{Nn\ln(n)}$ time!
+    \item<4-> Seedlessness $\implies$ inherent IR safety
 \end{itemize}
 \end{frame}
 
