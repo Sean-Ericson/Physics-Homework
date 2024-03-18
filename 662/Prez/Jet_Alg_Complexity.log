@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2022.1.17)  12 MAR 2024 21:25
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2022.1.17)  17 MAR 2024 21:32
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -175,7 +175,9 @@ Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1372.
 Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1373.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1374.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1375.
-) (d:/Programs/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+ (d:/Programs/texlive/2021/texmf-dist/tex/latex/graphics/dvipsnam.def
+File: dvipsnam.def 2016/06/17 v3.0m Driver-dependent file (DPC,SPQR)
+)) (d:/Programs/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
 Package: pgfcore 2021/05/15 v3.1.9a (3.1.9a)
  (d:/Programs/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex (d:/Programs/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex (d:/Programs/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex) (d:/Programs/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
 \pgfmath@dimen=\dimen176
@@ -547,45 +549,138 @@ LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 130.
 ) (d:/Programs/texlive/2021/texmf-dist/tex/latex/jknapltx/mathrsfs.sty
 Package: mathrsfs 1996/01/01 Math RSFS package v1.0 (jk)
 \symrsfs=\mathgroup6
-) (d:/Programs/texlive/2021/texmf-dist/tex/latex/enumitem/enumitem.sty
-Package: enumitem 2019/06/20 v3.9 Customized lists
-\labelindent=\skip68
-\enit@outerparindent=\dimen294
-\enit@toks=\toks45
-\enit@inbox=\box76
-\enit@count@id=\count333
-\enitdp@description=\count334
 ) (d:/Programs/texlive/2021/texmf-dist/tex/latex/physics/physics.sty
 Package: physics 
  (d:/Programs/texlive/2021/texmf-dist/tex/latex/l3packages/xparse/xparse.sty (d:/Programs/texlive/2021/texmf-dist/tex/latex/l3kernel/expl3.sty
 Package: expl3 2022-01-12 L3 programming layer (loader) 
  (d:/Programs/texlive/2021/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2022-01-12 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count335
-\l__pdf_internal_box=\box77
+\l__color_backend_stack_int=\count333
+\l__pdf_internal_box=\box76
 ))
 Package: xparse 2022-01-12 L3 Experimental document command parser
-)) (./Jet_Alg_Complexity.aux)
+)) (d:/Programs/texlive/2021/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2020/10/26 v3.5g Customizing captions (AR)
+ (d:/Programs/texlive/2021/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2020/10/21 v2.2e caption3 kernel (AR)
+\captionmargin=\dimen294
+\captionmargin@=\dimen295
+\captionwidth=\dimen296
+\caption@tempdima=\dimen297
+\caption@indent=\dimen298
+\caption@parindent=\dimen299
+\caption@hangindent=\dimen300
+Package caption Info: beamer document class detected.
+ (d:/Programs/texlive/2021/texmf-dist/tex/latex/caption/caption-beamer.sto
+File: caption-beamer.sto 2020/08/22 v2.0 Adaption of the caption package to the beamer document classes (AR)
+))
+\c@caption@flags=\count334
+\c@continuedfloat=\count335
+Package caption Info: hyperref package is loaded.
+Package caption Info: Hyperref support is turned off
+(caption)             because hyperref has stopped early.
+) (d:/Programs/texlive/2021/texmf-dist/tex/latex/algorithmicx/algpseudocode.sty
+Package: algpseudocode 
+ (d:/Programs/texlive/2021/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2020/11/24 v1.1c Standard LaTeX ifthen package (DPC)
+) (d:/Programs/texlive/2021/texmf-dist/tex/latex/algorithmicx/algorithmicx.sty
+Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
+
+Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
+\c@ALG@line=\count336
+\c@ALG@rem=\count337
+\c@ALG@nested=\count338
+\ALG@tlm=\skip68
+\ALG@thistlm=\skip69
+\c@ALG@Lnr=\count339
+\c@ALG@blocknr=\count340
+\c@ALG@storecount=\count341
+\c@ALG@tmpcounter=\count342
+\ALG@tmplength=\skip70
+)
+Document Style - pseudocode environments for use with the `algorithmicx' style
+) (d:/Programs/texlive/2021/texmf-dist/tex/latex/algorithms/algorithm.sty
+Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating environment
+ (d:/Programs/texlive/2021/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count343
+\float@exts=\toks45
+\float@box=\box77
+\@float@everytoks=\toks46
+\@floatcapt=\box78
+)
+\@float@every@algorithm=\toks47
+\c@algorithm=\count344
+) (d:/Programs/texlive/2021/texmf-dist/tex/latex/animate/animate.sty
+Package: animate 2021/11/09 PDF & SVG animations from files and inline graphics
+ (d:/Programs/texlive/2021/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2020/11/20 v2.8 package option processing (HA)
+ (d:/Programs/texlive/2021/texmf-dist/tex/generic/xkeyval/xkeyval.tex (d:/Programs/texlive/2021/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+\XKV@toks=\toks48
+\XKV@tempa@toks=\toks49
+)
+\XKV@depth=\count345
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+)) (d:/Programs/texlive/2021/texmf-dist/tex/latex/oberdiek/ifdraft.sty
+Package: ifdraft 2016/05/16 v1.4 Detect class options draft and final (HO)
+) (d:/Programs/texlive/2021/texmf-dist/tex/latex/zref/zref-abspage.sty
+Package: zref-abspage 2020-07-03 v2.32 Module abspage for zref (HO)
+ (d:/Programs/texlive/2021/texmf-dist/tex/latex/zref/zref-base.sty
+Package: zref-base 2020-07-03 v2.32 Module base for zref (HO)
+Package zref Info: New property list: main on input line 764.
+Package zref Info: New property: default on input line 765.
+Package zref Info: New property: page on input line 766.
+)
+\c@abspage=\count346
+Package zref Info: New property: abspage on input line 66.
+) (d:/Programs/texlive/2021/texmf-dist/tex/latex/media9/pdfbase.sty (d:/Programs/texlive/2021/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
+Package: l3keys2e 2022-01-12 LaTeX2e option processing using LaTeX3 keys
+)
+Package: pdfbase 2021/09/12 v0.53 driver independent access to low-level PDF features
+\g_pbs_page_int=\count347
+\g_pbs_oc_int=\count348
+) (d:/Programs/texlive/2021/texmf-dist/tex/latex/ocgx2/ocgbase.sty
+Package: ocgbase 2021/06/11 v0.20 support package for ocgx2.sty
+\g_ocgbase_nd_int=\count349
+)
+\@anim@box=\box79
+\@anim@measbox=\box80
+\@anim@tmpdima=\dimen301
+\@anim@tmpdimb=\dimen302
+\@anim@num=\count350
+\@anim@curframe=\count351
+\@anim@curframe@zb=\count352
+\@anim@resizeflags=\count353
+\@anim@skipfram=\count354
+\@anim@mulframecnt=\count355
+\@anim@@tmlnfile=\read3
+\@anim@tmpcnt=\count356
+\c@@anim@ltxcnt=\count357
+\@anim@curlayer=\count358
+\@anim@lineno=\count359
+\@anim@curfield=\count360
+\@anim@@resizeflags=\count361
+) (./Jet_Alg_Complexity.aux)
 \openout1 = `Jet_Alg_Complexity.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -623,24 +718,24 @@ LaTeX Font Info:    ... okay on input line 18.
 
 (d:/Programs/texlive/2021/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count336
-\scratchdimen=\dimen295
-\scratchbox=\box78
-\nofMPsegments=\count337
-\nofMParguments=\count338
-\everyMPshowfont=\toks46
-\MPscratchCnt=\count339
-\MPscratchDim=\dimen296
-\MPnumerator=\count340
-\makeMPintoPDFobject=\count341
-\everyMPtoPDFconversion=\toks47
+\scratchcounter=\count362
+\scratchdimen=\dimen303
+\scratchbox=\box81
+\nofMPsegments=\count363
+\nofMParguments=\count364
+\everyMPshowfont=\toks50
+\MPscratchCnt=\count365
+\MPscratchDim=\dimen304
+\MPnumerator=\count366
+\makeMPintoPDFobject=\count367
+\everyMPtoPDFconversion=\toks51
 ) (d:/Programs/texlive/2021/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
  (d:/Programs/texlive/2021/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-Package hyperref Info: Link coloring OFF on input line 18.
+Package hyperref Info: Link coloring OFF on input line 34.
  (d:/Programs/texlive/2021/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
  (d:/Programs/texlive/2021/texmf-dist/tex/latex/refcount/refcount.sty
@@ -648,64 +743,64 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ) (d:/Programs/texlive/2021/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count342
+\c@section@level=\count368
 )
-LaTeX Info: Redefining \ref on input line 18.
-LaTeX Info: Redefining \pageref on input line 18.
-LaTeX Info: Redefining \nameref on input line 18.
+LaTeX Info: Redefining \ref on input line 34.
+LaTeX Info: Redefining \pageref on input line 34.
+LaTeX Info: Redefining \nameref on input line 34.
  (./Jet_Alg_Complexity.out) (./Jet_Alg_Complexity.out)
 \@outlinefile=\write5
 \openout5 = `Jet_Alg_Complexity.out'.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 18.
+(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 34.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/b/n on input line 18.
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/b/n on input line 34.
 \symnumbers=\mathgroup7
 \sympureletters=\mathgroup8
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/cmss/m/n --> OT1/cmr/m/n on input line 18.
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 18.
+(Font)                  OT1/cmss/m/n --> OT1/cmr/m/n on input line 34.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 34.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/b/n on input line 18.
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/b/n on input line 34.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/b/n on input line 18.
-LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 18.
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/b/n on input line 34.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 34.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> OT1/cmss/m/n on input line 18.
+(Font)                  OT1/cmss/m/n --> OT1/cmss/m/n on input line 34.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> OT1/cmss/m/n on input line 18.
-LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 18.
+(Font)                  OT1/cmss/bx/n --> OT1/cmss/m/n on input line 34.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 34.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> OT1/cmss/m/it on input line 18.
+(Font)                  OT1/cmr/m/it --> OT1/cmss/m/it on input line 34.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> OT1/cmss/m/it on input line 18.
-LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 18.
+(Font)                  OT1/cmr/bx/it --> OT1/cmss/m/it on input line 34.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 34.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 18.
+(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 34.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 18.
+(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 34.
 LaTeX Font Info:    Overwriting symbol font `numbers' in version `bold'
-(Font)                  OT1/cmss/m/n --> OT1/cmss/b/n on input line 18.
+(Font)                  OT1/cmss/m/n --> OT1/cmss/b/n on input line 34.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
-(Font)                  OT1/cmss/m/it --> OT1/cmss/b/it on input line 18.
+(Font)                  OT1/cmss/m/it --> OT1/cmss/b/it on input line 34.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
-(Font)                  OT1/cmss/b/n --> OT1/cmr/b/n on input line 18.
+(Font)                  OT1/cmss/b/n --> OT1/cmr/b/n on input line 34.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/cmss/b/n --> OT1/cmss/b/n on input line 18.
+(Font)                  OT1/cmss/b/n --> OT1/cmss/b/n on input line 34.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/m/n --> OT1/cmss/b/n on input line 18.
+(Font)                  OT1/cmss/m/n --> OT1/cmss/b/n on input line 34.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmss/m/it --> OT1/cmss/b/it on input line 18.
+(Font)                  OT1/cmss/m/it --> OT1/cmss/b/it on input line 34.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> OT1/cmtt/b/n on input line 18.
-LaTeX Font Info:    Redeclaring symbol font `pureletters' on input line 18.
+(Font)                  OT1/cmtt/m/n --> OT1/cmtt/b/n on input line 34.
+LaTeX Font Info:    Redeclaring symbol font `pureletters' on input line 34.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `normal'
-(Font)                  OT1/cmss/m/it --> OT1/mathkerncmss/m/sl on input line 18.
+(Font)                  OT1/cmss/m/it --> OT1/mathkerncmss/m/sl on input line 34.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
-(Font)                  OT1/cmss/b/it --> OT1/mathkerncmss/m/sl on input line 18.
+(Font)                  OT1/cmss/b/it --> OT1/mathkerncmss/m/sl on input line 34.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
-(Font)                  OT1/mathkerncmss/m/sl --> OT1/mathkerncmss/bx/sl on input line 18.
+(Font)                  OT1/mathkerncmss/m/sl --> OT1/mathkerncmss/bx/sl on input line 34.
  (d:/Programs/texlive/2021/texmf-dist/tex/latex/translator/translator-basic-dictionary-English.dict
 Dictionary: translator-basic-dictionary, Language: English 
 ) (d:/Programs/texlive/2021/texmf-dist/tex/latex/translator/translator-bibliography-dictionary-English.dict
@@ -718,17 +813,666 @@ Dictionary: translator-months-dictionary, Language: English
 Dictionary: translator-numbers-dictionary, Language: English 
 ) (d:/Programs/texlive/2021/texmf-dist/tex/latex/translator/translator-theorem-dictionary-English.dict
 Dictionary: translator-theorem-dictionary, Language: English 
-) (./Jet_Alg_Complexity.nav)
-<seal.jpg, id=14, 188.95593pt x 151.3153pt>
-File: seal.jpg Graphic file (type jpg)
-<use seal.jpg>
-Package pdftex.def Info: seal.jpg  used on input line 20.
+)
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: float package is loaded.
+Package caption Info: End \AtBeginDocument code.
+ (./Jet_Alg_Complexity.nav)
+<./images//seal.jpg, id=14, 188.95593pt x 151.3153pt>
+File: ./images//seal.jpg Graphic file (type jpg)
+<use ./images//seal.jpg>
+Package pdftex.def Info: ./images//seal.jpg  used on input line 36.
 (pdftex.def)             Requested size: 132.26823pt x 105.91998pt.
  [1
 
-{d:/Programs/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./seal.jpg>] [2
+{d:/Programs/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./images//seal.jpg>]
+LaTeX Font Info:    Trying to load font information for U+msa on input line 49.
+ (d:/Programs/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 49.
+ (d:/Programs/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 49.
+ (d:/Programs/texlive/2021/texmf-dist/tex/latex/jknapltx/ursfs.fd
+File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
+)
+LaTeX Font Info:    Trying to load font information for OT1+mathkerncmss on input line 49.
+ (d:/Programs/texlive/2021/texmf-dist/tex/latex/sansmathaccent/ot1mathkerncmss.fd
+File: ot1mathkerncmss.fd 2020/01/31 Fontinst v1.933 font definitions for OT1/mathkerncmss.
+) [2
+
+] [3
+
+] [4
+
+] [5
+
+] [6
+
+] [7
+
+] [8
+
+] [9
+
+] [10
+
+] [11
+
+] [12
+
+] [13
+
+] [14
+
+] [15
 
 ]
+<./images//jet_example.png, id=432, 1072.87422pt x 708.54402pt>
+File: ./images//jet_example.png Graphic file (type png)
+<use ./images//jet_example.png>
+Package pdftex.def Info: ./images//jet_example.png  used on input line 73.
+(pdftex.def)             Requested size: 289.6799pt x 191.30943pt.
+ [16
+
+ <./images//jet_example.png>] [17
+
+] [18
+
+] [19
+
+] [20
+
+] [21
+
+] [22
+
+] [23
+
+] [24
+
+] [25
+
+] [26
+
+] [27
+
+] [28
+
+] [29
+
+] [30
+
+] [31
+
+] [32
+
+] [33
+
+] [34
+
+] [35
+
+] [36
+
+] [37
+
+] [38
+
+] [39
+
+]
+Overfull \vbox (4.59344pt too high) detected at line 149
+ []
+
+[40
+
+] [41
+
+] [42
+
+] [43
+
+] [44
+
+] [45
+
+] [46
+
+] [47
+
+] [48
+
+] [49
+
+] [50
+
+] [51
+
+] [52
+
+] [53
+
+] [54
+
+] [55
+
+] [56
+
+] [57
+
+] [58
+
+] [59
+
+] [60
+
+]
+<./images//frames/frame-0.png, id=1681, 662.475pt x 679.53876pt>
+File: ./images//frames/frame-0.png Graphic file (type png)
+<use ./images//frames/frame-0.png>
+Package pdftex.def Info: ./images//frames/frame-0.png  used on input line 221.
+(pdftex.def)             Requested size: 662.47339pt x 679.53711pt.
+ <./images//frames/frame-0.png> <a0,fr0>
+<./images//frames/frame-1.png, id=1690, 662.475pt x 679.53876pt>
+File: ./images//frames/frame-1.png Graphic file (type png)
+<use ./images//frames/frame-1.png>
+Package pdftex.def Info: ./images//frames/frame-1.png  used on input line 221.
+(pdftex.def)             Requested size: 662.47339pt x 679.53711pt.
+ <./images//frames/frame-1.png> <a0,fr1>
+<./images//frames/frame-2.png, id=1699, 662.475pt x 679.53876pt>
+File: ./images//frames/frame-2.png Graphic file (type png)
+<use ./images//frames/frame-2.png>
+Package pdftex.def Info: ./images//frames/frame-2.png  used on input line 221.
+(pdftex.def)             Requested size: 662.47339pt x 679.53711pt.
+ <./images//frames/frame-2.png> <a0,fr2>
+<./images//frames/frame-3.png, id=1708, 662.475pt x 679.53876pt>
+File: ./images//frames/frame-3.png Graphic file (type png)
+<use ./images//frames/frame-3.png>
+Package pdftex.def Info: ./images//frames/frame-3.png  used on input line 221.
+(pdftex.def)             Requested size: 662.47339pt x 679.53711pt.
+ <./images//frames/frame-3.png> <a0,fr3>
+<./images//frames/frame-4.png, id=1717, 662.475pt x 679.53876pt>
+File: ./images//frames/frame-4.png Graphic file (type png)
+<use ./images//frames/frame-4.png>
+Package pdftex.def Info: ./images//frames/frame-4.png  used on input line 221.
+(pdftex.def)             Requested size: 662.47339pt x 679.53711pt.
+ <./images//frames/frame-4.png> <a0,fr4>
+<./images//frames/frame-5.png, id=1726, 662.475pt x 679.53876pt>
+File: ./images//frames/frame-5.png Graphic file (type png)
+<use ./images//frames/frame-5.png>
+Package pdftex.def Info: ./images//frames/frame-5.png  used on input line 221.
+(pdftex.def)             Requested size: 662.47339pt x 679.53711pt.
+ <./images//frames/frame-5.png> <a0,fr5>
+<./images//frames/frame-6.png, id=1735, 662.475pt x 679.53876pt>
+File: ./images//frames/frame-6.png Graphic file (type png)
+<use ./images//frames/frame-6.png>
+Package pdftex.def Info: ./images//frames/frame-6.png  used on input line 221.
+(pdftex.def)             Requested size: 662.47339pt x 679.53711pt.
+ <./images//frames/frame-6.png> <a0,fr6>
+<./images//frames/frame-7.png, id=1744, 662.475pt x 679.53876pt>
+File: ./images//frames/frame-7.png Graphic file (type png)
+<use ./images//frames/frame-7.png>
+Package pdftex.def Info: ./images//frames/frame-7.png  used on input line 221.
+(pdftex.def)             Requested size: 662.47339pt x 679.53711pt.
+ <./images//frames/frame-7.png> <a0,fr7>
+<./images//frames/frame-8.png, id=1753, 662.475pt x 679.53876pt>
+File: ./images//frames/frame-8.png Graphic file (type png)
+<use ./images//frames/frame-8.png>
+Package pdftex.def Info: ./images//frames/frame-8.png  used on input line 221.
+(pdftex.def)             Requested size: 662.47339pt x 679.53711pt.
+ <./images//frames/frame-8.png> <a0,fr8>
+<./images//frames/frame-9.png, id=1762, 662.475pt x 679.53876pt>
+File: ./images//frames/frame-9.png Graphic file (type png)
+<use ./images//frames/frame-9.png>
+Package pdftex.def Info: ./images//frames/frame-9.png  used on input line 221.
+(pdftex.def)             Requested size: 662.47339pt x 679.53711pt.
+ <./images//frames/frame-9.png> <a0,fr9>
+<./images//frames/frame-10.png, id=1771, 662.475pt x 679.53876pt>
+File: ./images//frames/frame-10.png Graphic file (type png)
+<use ./images//frames/frame-10.png>
+Package pdftex.def Info: ./images//frames/frame-10.png  used on input line 221.
+(pdftex.def)             Requested size: 662.47339pt x 679.53711pt.
+ <./images//frames/frame-10.png> <a0,fr10>
+<./images//frames/frame-11.png, id=1780, 662.475pt x 679.53876pt>
+File: ./images//frames/frame-11.png Graphic file (type png)
+<use ./images//frames/frame-11.png>
+Package pdftex.def Info: ./images//frames/frame-11.png  used on input line 221.
+(pdftex.def)             Requested size: 662.47339pt x 679.53711pt.
+ <./images//frames/frame-11.png> <a0,fr11>
+<./images//frames/frame-12.png, id=1789, 662.475pt x 679.53876pt>
+File: ./images//frames/frame-12.png Graphic file (type png)
+<use ./images//frames/frame-12.png>
+Package pdftex.def Info: ./images//frames/frame-12.png  used on input line 221.
+(pdftex.def)             Requested size: 662.47339pt x 679.53711pt.
+ <./images//frames/frame-12.png> <a0,fr12>
+<./images//frames/frame-13.png, id=1799, 662.475pt x 679.53876pt>
+File: ./images//frames/frame-13.png Graphic file (type png)
+<use ./images//frames/frame-13.png>
+Package pdftex.def Info: ./images//frames/frame-13.png  used on input line 221.
+(pdftex.def)             Requested size: 662.47339pt x 679.53711pt.
+ <./images//frames/frame-13.png> <a0,fr13>
+<./images//frames/frame-14.png, id=1808, 662.475pt x 679.53876pt>
+File: ./images//frames/frame-14.png Graphic file (type png)
+<use ./images//frames/frame-14.png>
+Package pdftex.def Info: ./images//frames/frame-14.png  used on input line 221.
+(pdftex.def)             Requested size: 662.47339pt x 679.53711pt.
+ <./images//frames/frame-14.png> <a0,fr14>
+<./images//frames/frame-15.png, id=1817, 662.475pt x 679.53876pt>
+File: ./images//frames/frame-15.png Graphic file (type png)
+<use ./images//frames/frame-15.png>
+Package pdftex.def Info: ./images//frames/frame-15.png  used on input line 221.
+(pdftex.def)             Requested size: 662.47339pt x 679.53711pt.
+ <./images//frames/frame-15.png> <a0,fr15>
+<./images//frames/frame-16.png, id=1826, 662.475pt x 679.53876pt>
+File: ./images//frames/frame-16.png Graphic file (type png)
+<use ./images//frames/frame-16.png>
+Package pdftex.def Info: ./images//frames/frame-16.png  used on input line 221.
+(pdftex.def)             Requested size: 662.47339pt x 679.53711pt.
+ <./images//frames/frame-16.png> <a0,fr16>
+<./images//frames/frame-17.png, id=1835, 662.475pt x 679.53876pt>
+File: ./images//frames/frame-17.png Graphic file (type png)
+<use ./images//frames/frame-17.png>
+Package pdftex.def Info: ./images//frames/frame-17.png  used on input line 221.
+(pdftex.def)             Requested size: 662.47339pt x 679.53711pt.
+ <./images//frames/frame-17.png> <a0,fr17>
+<./images//frames/frame-18.png, id=1844, 662.475pt x 679.53876pt>
+File: ./images//frames/frame-18.png Graphic file (type png)
+<use ./images//frames/frame-18.png>
+Package pdftex.def Info: ./images//frames/frame-18.png  used on input line 221.
+(pdftex.def)             Requested size: 662.47339pt x 679.53711pt.
+ <./images//frames/frame-18.png> <a0,fr18>
+<./images//frames/frame-19.png, id=1853, 662.475pt x 679.53876pt>
+File: ./images//frames/frame-19.png Graphic file (type png)
+<use ./images//frames/frame-19.png>
+Package pdftex.def Info: ./images//frames/frame-19.png  used on input line 221.
+(pdftex.def)             Requested size: 662.47339pt x 679.53711pt.
+ <./images//frames/frame-19.png> <a0,fr19>
+<./images//frames/frame-20.png, id=1862, 662.475pt x 679.53876pt>
+File: ./images//frames/frame-20.png Graphic file (type png)
+<use ./images//frames/frame-20.png>
+Package pdftex.def Info: ./images//frames/frame-20.png  used on input line 221.
+(pdftex.def)             Requested size: 662.47339pt x 679.53711pt.
+ <./images//frames/frame-20.png> <a0,fr20>
+<./images//frames/frame-21.png, id=1871, 662.475pt x 679.53876pt>
+File: ./images//frames/frame-21.png Graphic file (type png)
+<use ./images//frames/frame-21.png>
+Package pdftex.def Info: ./images//frames/frame-21.png  used on input line 221.
+(pdftex.def)             Requested size: 662.47339pt x 679.53711pt.
+ <./images//frames/frame-21.png> <a0,fr21>
+<./images//frames/frame-22.png, id=1880, 331.2375pt x 339.76938pt>
+File: ./images//frames/frame-22.png Graphic file (type png)
+<use ./images//frames/frame-22.png>
+Package pdftex.def Info: ./images//frames/frame-22.png  used on input line 221.
+(pdftex.def)             Requested size: 331.23668pt x 339.76854pt.
+ <./images//frames/frame-22.png> <a0,fr22>
+<./images//frames/frame-23.png, id=1890, 331.2375pt x 339.76938pt>
+File: ./images//frames/frame-23.png Graphic file (type png)
+<use ./images//frames/frame-23.png>
+Package pdftex.def Info: ./images//frames/frame-23.png  used on input line 221.
+(pdftex.def)             Requested size: 331.23668pt x 339.76854pt.
+ <./images//frames/frame-23.png> <a0,fr23>
+<./images//frames/frame-24.png, id=1899, 331.2375pt x 339.76938pt>
+File: ./images//frames/frame-24.png Graphic file (type png)
+<use ./images//frames/frame-24.png>
+Package pdftex.def Info: ./images//frames/frame-24.png  used on input line 221.
+(pdftex.def)             Requested size: 331.23668pt x 339.76854pt.
+ <./images//frames/frame-24.png> <a0,fr24>
+<./images//frames/frame-25.png, id=1908, 331.2375pt x 339.76938pt>
+File: ./images//frames/frame-25.png Graphic file (type png)
+<use ./images//frames/frame-25.png>
+Package pdftex.def Info: ./images//frames/frame-25.png  used on input line 221.
+(pdftex.def)             Requested size: 331.23668pt x 339.76854pt.
+ <./images//frames/frame-25.png> <a0,fr25>
+<./images//frames/frame-26.png, id=1917, 331.2375pt x 339.76938pt>
+File: ./images//frames/frame-26.png Graphic file (type png)
+<use ./images//frames/frame-26.png>
+Package pdftex.def Info: ./images//frames/frame-26.png  used on input line 221.
+(pdftex.def)             Requested size: 331.23668pt x 339.76854pt.
+ <./images//frames/frame-26.png> <a0,fr26>
+<./images//frames/frame-27.png, id=1926, 331.2375pt x 339.76938pt>
+File: ./images//frames/frame-27.png Graphic file (type png)
+<use ./images//frames/frame-27.png>
+Package pdftex.def Info: ./images//frames/frame-27.png  used on input line 221.
+(pdftex.def)             Requested size: 331.23668pt x 339.76854pt.
+ <./images//frames/frame-27.png> <a0,fr27>
+<./images//frames/frame-28.png, id=1935, 331.2375pt x 339.76938pt>
+File: ./images//frames/frame-28.png Graphic file (type png)
+<use ./images//frames/frame-28.png>
+Package pdftex.def Info: ./images//frames/frame-28.png  used on input line 221.
+(pdftex.def)             Requested size: 331.23668pt x 339.76854pt.
+ <./images//frames/frame-28.png> <a0,fr28>
+<./images//frames/frame-29.png, id=1944, 331.2375pt x 339.76938pt>
+File: ./images//frames/frame-29.png Graphic file (type png)
+<use ./images//frames/frame-29.png>
+Package pdftex.def Info: ./images//frames/frame-29.png  used on input line 221.
+(pdftex.def)             Requested size: 331.23668pt x 339.76854pt.
+ <./images//frames/frame-29.png> <a0,fr29>
+<./images//frames/frame-30.png, id=1953, 331.2375pt x 339.76938pt>
+File: ./images//frames/frame-30.png Graphic file (type png)
+<use ./images//frames/frame-30.png>
+Package pdftex.def Info: ./images//frames/frame-30.png  used on input line 221.
+(pdftex.def)             Requested size: 331.23668pt x 339.76854pt.
+ <./images//frames/frame-30.png> <a0,fr30>
+<./images//frames/frame-31.png, id=1962, 331.2375pt x 339.76938pt>
+File: ./images//frames/frame-31.png Graphic file (type png)
+<use ./images//frames/frame-31.png>
+Package pdftex.def Info: ./images//frames/frame-31.png  used on input line 221.
+(pdftex.def)             Requested size: 331.23668pt x 339.76854pt.
+ <./images//frames/frame-31.png> <a0,fr31>
+<./images//frames/frame-32.png, id=1971, 331.2375pt x 339.76938pt>
+File: ./images//frames/frame-32.png Graphic file (type png)
+<use ./images//frames/frame-32.png>
+Package pdftex.def Info: ./images//frames/frame-32.png  used on input line 221.
+(pdftex.def)             Requested size: 331.23668pt x 339.76854pt.
+ <./images//frames/frame-32.png> <a0,fr32>
+<./images//frames/frame-33.png, id=1980, 331.2375pt x 339.76938pt>
+File: ./images//frames/frame-33.png Graphic file (type png)
+<use ./images//frames/frame-33.png>
+Package pdftex.def Info: ./images//frames/frame-33.png  used on input line 221.
+(pdftex.def)             Requested size: 331.23668pt x 339.76854pt.
+ <./images//frames/frame-33.png> <a0,fr33>
+<./images//frames/frame-34.png, id=1989, 331.2375pt x 339.76938pt>
+File: ./images//frames/frame-34.png Graphic file (type png)
+<use ./images//frames/frame-34.png>
+Package pdftex.def Info: ./images//frames/frame-34.png  used on input line 221.
+(pdftex.def)             Requested size: 331.23668pt x 339.76854pt.
+ <./images//frames/frame-34.png> <a0,fr34>
+<./images//frames/frame-35.png, id=1998, 331.2375pt x 339.76938pt>
+File: ./images//frames/frame-35.png Graphic file (type png)
+<use ./images//frames/frame-35.png>
+Package pdftex.def Info: ./images//frames/frame-35.png  used on input line 221.
+(pdftex.def)             Requested size: 331.23668pt x 339.76854pt.
+ <./images//frames/frame-35.png> <a0,fr35>
+<./images//frames/frame-36.png, id=2007, 331.2375pt x 339.76938pt>
+File: ./images//frames/frame-36.png Graphic file (type png)
+<use ./images//frames/frame-36.png>
+Package pdftex.def Info: ./images//frames/frame-36.png  used on input line 221.
+(pdftex.def)             Requested size: 331.23668pt x 339.76854pt.
+ <./images//frames/frame-36.png> <a0,fr36>
+<./images//frames/frame-37.png, id=2016, 331.2375pt x 339.76938pt>
+File: ./images//frames/frame-37.png Graphic file (type png)
+<use ./images//frames/frame-37.png>
+Package pdftex.def Info: ./images//frames/frame-37.png  used on input line 221.
+(pdftex.def)             Requested size: 331.23668pt x 339.76854pt.
+ <./images//frames/frame-37.png> <a0,fr37>
+<./images//frames/frame-38.png, id=2025, 331.2375pt x 339.76938pt>
+File: ./images//frames/frame-38.png Graphic file (type png)
+<use ./images//frames/frame-38.png>
+Package pdftex.def Info: ./images//frames/frame-38.png  used on input line 221.
+(pdftex.def)             Requested size: 331.23668pt x 339.76854pt.
+ <./images//frames/frame-38.png> <a0,fr38>
+<./images//frames/frame-39.png, id=2034, 331.2375pt x 339.76938pt>
+File: ./images//frames/frame-39.png Graphic file (type png)
+<use ./images//frames/frame-39.png>
+Package pdftex.def Info: ./images//frames/frame-39.png  used on input line 221.
+(pdftex.def)             Requested size: 331.23668pt x 339.76854pt.
+ <./images//frames/frame-39.png> <a0,fr39>
+<./images//frames/frame-40.png, id=2043, 331.2375pt x 339.76938pt>
+File: ./images//frames/frame-40.png Graphic file (type png)
+<use ./images//frames/frame-40.png>
+Package pdftex.def Info: ./images//frames/frame-40.png  used on input line 221.
+(pdftex.def)             Requested size: 331.23668pt x 339.76854pt.
+ <./images//frames/frame-40.png> <a0,fr40>
+<./images//frames/frame-41.png, id=2052, 331.2375pt x 339.76938pt>
+File: ./images//frames/frame-41.png Graphic file (type png)
+<use ./images//frames/frame-41.png>
+Package pdftex.def Info: ./images//frames/frame-41.png  used on input line 221.
+(pdftex.def)             Requested size: 331.23668pt x 339.76854pt.
+ <./images//frames/frame-41.png> <a0,fr41>
+<./images//frames/frame-42.png, id=2061, 331.2375pt x 339.76938pt>
+File: ./images//frames/frame-42.png Graphic file (type png)
+<use ./images//frames/frame-42.png>
+Package pdftex.def Info: ./images//frames/frame-42.png  used on input line 221.
+(pdftex.def)             Requested size: 331.23668pt x 339.76854pt.
+ <./images//frames/frame-42.png> <a0,fr42>
+<./images//frames/frame-43.png, id=2070, 331.2375pt x 339.76938pt>
+File: ./images//frames/frame-43.png Graphic file (type png)
+<use ./images//frames/frame-43.png>
+Package pdftex.def Info: ./images//frames/frame-43.png  used on input line 221.
+(pdftex.def)             Requested size: 331.23668pt x 339.76854pt.
+ <./images//frames/frame-43.png> <a0,fr43>
+<./images//frames/frame-44.png, id=2079, 331.2375pt x 339.76938pt>
+File: ./images//frames/frame-44.png Graphic file (type png)
+<use ./images//frames/frame-44.png>
+Package pdftex.def Info: ./images//frames/frame-44.png  used on input line 221.
+(pdftex.def)             Requested size: 331.23668pt x 339.76854pt.
+ <./images//frames/frame-44.png> <a0,fr44>
+<./images//frames/frame-45.png, id=2088, 331.2375pt x 339.76938pt>
+File: ./images//frames/frame-45.png Graphic file (type png)
+<use ./images//frames/frame-45.png>
+Package pdftex.def Info: ./images//frames/frame-45.png  used on input line 221.
+(pdftex.def)             Requested size: 331.23668pt x 339.76854pt.
+ <./images//frames/frame-45.png> <a0,fr45>
+<./images//frames/frame-46.png, id=2098, 331.2375pt x 339.76938pt>
+File: ./images//frames/frame-46.png Graphic file (type png)
+<use ./images//frames/frame-46.png>
+Package pdftex.def Info: ./images//frames/frame-46.png  used on input line 221.
+(pdftex.def)             Requested size: 331.23668pt x 339.76854pt.
+ <./images//frames/frame-46.png> <a0,fr46>
+<./images//frames/frame-47.png, id=2107, 331.2375pt x 339.76938pt>
+File: ./images//frames/frame-47.png Graphic file (type png)
+<use ./images//frames/frame-47.png>
+Package pdftex.def Info: ./images//frames/frame-47.png  used on input line 221.
+(pdftex.def)             Requested size: 331.23668pt x 339.76854pt.
+ <./images//frames/frame-47.png> <a0,fr47>
+<./images//frames/frame-48.png, id=2116, 331.2375pt x 339.76938pt>
+File: ./images//frames/frame-48.png Graphic file (type png)
+<use ./images//frames/frame-48.png>
+Package pdftex.def Info: ./images//frames/frame-48.png  used on input line 221.
+(pdftex.def)             Requested size: 331.23668pt x 339.76854pt.
+ <./images//frames/frame-48.png> <a0,fr48>
+<./images//frames/frame-49.png, id=2125, 331.2375pt x 339.76938pt>
+File: ./images//frames/frame-49.png Graphic file (type png)
+<use ./images//frames/frame-49.png>
+Package pdftex.def Info: ./images//frames/frame-49.png  used on input line 221.
+(pdftex.def)             Requested size: 331.23668pt x 339.76854pt.
+ <./images//frames/frame-49.png> <a0,fr49>
+<./images//frames/frame-50.png, id=2134, 331.2375pt x 339.76938pt>
+File: ./images//frames/frame-50.png Graphic file (type png)
+<use ./images//frames/frame-50.png>
+Package pdftex.def Info: ./images//frames/frame-50.png  used on input line 221.
+(pdftex.def)             Requested size: 331.23668pt x 339.76854pt.
+ <./images//frames/frame-50.png> <a0,fr50>
+<./images//frames/frame-51.png, id=2143, 331.2375pt x 339.76938pt>
+File: ./images//frames/frame-51.png Graphic file (type png)
+<use ./images//frames/frame-51.png>
+Package pdftex.def Info: ./images//frames/frame-51.png  used on input line 221.
+(pdftex.def)             Requested size: 331.23668pt x 339.76854pt.
+ <./images//frames/frame-51.png> <a0,fr51>
+<./images//frames/frame-52.png, id=2152, 331.2375pt x 339.76938pt>
+File: ./images//frames/frame-52.png Graphic file (type png)
+<use ./images//frames/frame-52.png>
+Package pdftex.def Info: ./images//frames/frame-52.png  used on input line 221.
+(pdftex.def)             Requested size: 331.23668pt x 339.76854pt.
+ <./images//frames/frame-52.png> <a0,fr52>
+<./images//frames/frame-53.png, id=2161, 331.2375pt x 339.76938pt>
+File: ./images//frames/frame-53.png Graphic file (type png)
+<use ./images//frames/frame-53.png>
+Package pdftex.def Info: ./images//frames/frame-53.png  used on input line 221.
+(pdftex.def)             Requested size: 331.23668pt x 339.76854pt.
+ <./images//frames/frame-53.png> <a0,fr53>
+<./images//frames/frame-54.png, id=2170, 331.2375pt x 339.76938pt>
+File: ./images//frames/frame-54.png Graphic file (type png)
+<use ./images//frames/frame-54.png>
+Package pdftex.def Info: ./images//frames/frame-54.png  used on input line 221.
+(pdftex.def)             Requested size: 331.23668pt x 339.76854pt.
+ <./images//frames/frame-54.png> <a0,fr54>
+<./images//frames/frame-55.png, id=2179, 331.2375pt x 339.76938pt>
+File: ./images//frames/frame-55.png Graphic file (type png)
+<use ./images//frames/frame-55.png>
+Package pdftex.def Info: ./images//frames/frame-55.png  used on input line 221.
+(pdftex.def)             Requested size: 331.23668pt x 339.76854pt.
+ <./images//frames/frame-55.png> <a0,fr55>
+<./images//frames/frame-56.png, id=2188, 662.475pt x 679.53876pt>
+File: ./images//frames/frame-56.png Graphic file (type png)
+<use ./images//frames/frame-56.png>
+Package pdftex.def Info: ./images//frames/frame-56.png  used on input line 221.
+(pdftex.def)             Requested size: 662.47339pt x 679.53711pt.
+ <./images//frames/frame-56.png> <a0,fr56> [61
+
+]
+<./images//VD_diagram.PNG, id=2255, 390.96063pt x 346.79562pt>
+File: ./images//VD_diagram.PNG Graphic file (type png)
+<use ./images//VD_diagram.PNG>
+Package pdftex.def Info: ./images//VD_diagram.PNG  used on input line 255.
+(pdftex.def)             Requested size: 78.19073pt x 69.3579pt.
+<./images//redblacktree.png, id=2256, 575.32588pt x 401.02765pt>
+File: ./images//redblacktree.png Graphic file (type png)
+<use ./images//redblacktree.png>
+Package pdftex.def Info: ./images//redblacktree.png  used on input line 255.
+(pdftex.def)             Requested size: 86.29515pt x 60.15155pt.
+ [62
+
+ <./images//VD_diagram.PNG> <./images//redblacktree.png>]
+File: ./images//VD_diagram.PNG Graphic file (type png)
+<use ./images//VD_diagram.PNG>
+Package pdftex.def Info: ./images//VD_diagram.PNG  used on input line 255.
+(pdftex.def)             Requested size: 78.19073pt x 69.3579pt.
+File: ./images//redblacktree.png Graphic file (type png)
+<use ./images//redblacktree.png>
+Package pdftex.def Info: ./images//redblacktree.png  used on input line 255.
+(pdftex.def)             Requested size: 86.29515pt x 60.15155pt.
+ [63
+
+]
+File: ./images//VD_diagram.PNG Graphic file (type png)
+<use ./images//VD_diagram.PNG>
+Package pdftex.def Info: ./images//VD_diagram.PNG  used on input line 255.
+(pdftex.def)             Requested size: 78.19073pt x 69.3579pt.
+File: ./images//redblacktree.png Graphic file (type png)
+<use ./images//redblacktree.png>
+Package pdftex.def Info: ./images//redblacktree.png  used on input line 255.
+(pdftex.def)             Requested size: 86.29515pt x 60.15155pt.
+ [64
+
+]
+File: ./images//VD_diagram.PNG Graphic file (type png)
+<use ./images//VD_diagram.PNG>
+Package pdftex.def Info: ./images//VD_diagram.PNG  used on input line 255.
+(pdftex.def)             Requested size: 78.19073pt x 69.3579pt.
+File: ./images//redblacktree.png Graphic file (type png)
+<use ./images//redblacktree.png>
+Package pdftex.def Info: ./images//redblacktree.png  used on input line 255.
+(pdftex.def)             Requested size: 86.29515pt x 60.15155pt.
+ [65
+
+]
+File: ./images//VD_diagram.PNG Graphic file (type png)
+<use ./images//VD_diagram.PNG>
+Package pdftex.def Info: ./images//VD_diagram.PNG  used on input line 255.
+(pdftex.def)             Requested size: 78.19073pt x 69.3579pt.
+File: ./images//redblacktree.png Graphic file (type png)
+<use ./images//redblacktree.png>
+Package pdftex.def Info: ./images//redblacktree.png  used on input line 255.
+(pdftex.def)             Requested size: 86.29515pt x 60.15155pt.
+ [66
+
+]
+File: ./images//VD_diagram.PNG Graphic file (type png)
+<use ./images//VD_diagram.PNG>
+Package pdftex.def Info: ./images//VD_diagram.PNG  used on input line 255.
+(pdftex.def)             Requested size: 78.19073pt x 69.3579pt.
+File: ./images//redblacktree.png Graphic file (type png)
+<use ./images//redblacktree.png>
+Package pdftex.def Info: ./images//redblacktree.png  used on input line 255.
+(pdftex.def)             Requested size: 86.29515pt x 60.15155pt.
+ [67
+
+]
+File: ./images//VD_diagram.PNG Graphic file (type png)
+<use ./images//VD_diagram.PNG>
+Package pdftex.def Info: ./images//VD_diagram.PNG  used on input line 255.
+(pdftex.def)             Requested size: 78.19073pt x 69.3579pt.
+File: ./images//redblacktree.png Graphic file (type png)
+<use ./images//redblacktree.png>
+Package pdftex.def Info: ./images//redblacktree.png  used on input line 255.
+(pdftex.def)             Requested size: 86.29515pt x 60.15155pt.
+ [68
+
+]
+File: ./images//VD_diagram.PNG Graphic file (type png)
+<use ./images//VD_diagram.PNG>
+Package pdftex.def Info: ./images//VD_diagram.PNG  used on input line 255.
+(pdftex.def)             Requested size: 78.19073pt x 69.3579pt.
+File: ./images//redblacktree.png Graphic file (type png)
+<use ./images//redblacktree.png>
+Package pdftex.def Info: ./images//redblacktree.png  used on input line 255.
+(pdftex.def)             Requested size: 86.29515pt x 60.15155pt.
+ [69
+
+]
+File: ./images//VD_diagram.PNG Graphic file (type png)
+<use ./images//VD_diagram.PNG>
+Package pdftex.def Info: ./images//VD_diagram.PNG  used on input line 255.
+(pdftex.def)             Requested size: 78.19073pt x 69.3579pt.
+File: ./images//redblacktree.png Graphic file (type png)
+<use ./images//redblacktree.png>
+Package pdftex.def Info: ./images//redblacktree.png  used on input line 255.
+(pdftex.def)             Requested size: 86.29515pt x 60.15155pt.
+ [70
+
+] [71
+
+]
+Overfull \vbox (17.90524pt too high) detected at line 299
+ []
+
+[72
+
+] [73
+
+] [74
+
+] [75
+
+] [76
+
+] [77
+
+] [78
+
+] [79
+
+] [80
+
+]
+<./images//siscone.PNG, id=2780, 766.865pt x 169.63374pt>
+File: ./images//siscone.PNG Graphic file (type png)
+<use ./images//siscone.PNG>
+Package pdftex.def Info: ./images//siscone.PNG  used on input line 332.
+(pdftex.def)             Requested size: 207.05632pt x 45.80171pt.
+ [81
+
+ <./images//siscone.PNG>]
+File: ./images//siscone.PNG Graphic file (type png)
+<use ./images//siscone.PNG>
+Package pdftex.def Info: ./images//siscone.PNG  used on input line 332.
+(pdftex.def)             Requested size: 207.05632pt x 45.80171pt.
+ [82
+
+]
+File: ./images//siscone.PNG Graphic file (type png)
+<use ./images//siscone.PNG>
+Package pdftex.def Info: ./images//siscone.PNG  used on input line 332.
+(pdftex.def)             Requested size: 207.05632pt x 45.80171pt.
+ [83
+
+] [84
+
+] [85
+
+] [86
+
+] [87
+
+] [88
+
+] [89
+
+ <d:/Programs/texlive/2021/texmf-dist/tex/latex/beamer/beamericonarticle.pdf>]
 \tf@nav=\write6
 \openout6 = `Jet_Alg_Complexity.nav'.
 
@@ -743,18 +1487,18 @@ Package rerunfilecheck Info: File `Jet_Alg_Complexity.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 23053 strings out of 478286
- 446426 string characters out of 5846229
- 705490 words of memory out of 5000000
- 40790 multiletter control sequences out of 15000+600000
- 471071 words of font info for 34 fonts, out of 8000000 for 9000
+ 27557 strings out of 478286
+ 540839 string characters out of 5846229
+ 786955 words of memory out of 5000000
+ 44945 multiletter control sequences out of 15000+600000
+ 485543 words of font info for 90 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 128i,15n,122p,470b,569s stack positions out of 5000i,500n,10000p,200000b,80000s
-<d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb>
-Output written on Jet_Alg_Complexity.pdf (2 pages, 58180 bytes).
+ 128i,15n,122p,487b,863s stack positions out of 5000i,500n,10000p,200000b,80000s
+<d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmss9.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi12.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi9.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
+Output written on Jet_Alg_Complexity.pdf (89 pages, 1161993 bytes).
 PDF statistics:
- 87 PDF objects out of 1000 (max. 8388607)
- 68 compressed objects within 1 object stream
- 5 named destinations out of 1000 (max. 500000)
- 48 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 3158 PDF objects out of 3580 (max. 8388607)
+ 2687 compressed objects within 27 object streams
+ 183 named destinations out of 1000 (max. 500000)
+ 1441 words of extra memory for PDF output out of 10000 (max. 10000000)
 
