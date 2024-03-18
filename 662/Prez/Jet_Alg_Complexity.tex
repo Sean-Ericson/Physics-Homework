@@ -318,6 +318,29 @@
 \end{frame}
 
 \begin{frame}{Complexity of SISCone}
+\begin{algorithm}[H]
+    \caption{SISCone}
+    \begin{algorithmic}[1]
+        \For{particle i}
+            \State Find all particles $j$ within $2R$ of $i$
+            \If{no such $j$ exists}
+                \State $i$ is made a protojet
+            \Else
+                \State Find circles of radius $R$ with $i$ $j$ on their circumference
+                \For{each circle}
+                    \For{each permutations of edge point containment}
+                        \State Label circle as cone
+                        \State Check cone stability w.r.t the edge points
+                    \EndFor
+                \EndFor
+            \EndIf
+        \EndFor
+        \State Explicitly check all cones not labeled unstable for stability
+    \end{algorithmic}
+\end{algorithm}
+\end{frame}
+
+\begin{frame}{Complexity of SISCone}
 \alert{Improved Cone-Finding}
 \begin{figure}
     \centering

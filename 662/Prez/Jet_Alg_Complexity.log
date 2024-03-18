@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2022.1.17)  17 MAR 2024 21:46
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2022.1.17)  18 MAR 2024 11:15
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1468,35 +1468,39 @@ Overfull \vbox (17.90524pt too high) detected at line 299
 ] [90
 
 ]
-<./images//siscone.PNG, id=3053, 766.865pt x 169.63374pt>
+Overfull \vbox (15.77608pt too high) detected at line 341
+ []
+
+[91
+
+]
+<./images//siscone.PNG, id=3082, 766.865pt x 169.63374pt>
 File: ./images//siscone.PNG Graphic file (type png)
 <use ./images//siscone.PNG>
-Package pdftex.def Info: ./images//siscone.PNG  used on input line 332.
+Package pdftex.def Info: ./images//siscone.PNG  used on input line 355.
 (pdftex.def)             Requested size: 207.05632pt x 45.80171pt.
- [91
+ [92
 
  <./images//siscone.PNG>]
 File: ./images//siscone.PNG Graphic file (type png)
 <use ./images//siscone.PNG>
-Package pdftex.def Info: ./images//siscone.PNG  used on input line 332.
-(pdftex.def)             Requested size: 207.05632pt x 45.80171pt.
- [92
-
-]
-File: ./images//siscone.PNG Graphic file (type png)
-<use ./images//siscone.PNG>
-Package pdftex.def Info: ./images//siscone.PNG  used on input line 332.
+Package pdftex.def Info: ./images//siscone.PNG  used on input line 355.
 (pdftex.def)             Requested size: 207.05632pt x 45.80171pt.
  [93
 
 ]
 File: ./images//siscone.PNG Graphic file (type png)
 <use ./images//siscone.PNG>
-Package pdftex.def Info: ./images//siscone.PNG  used on input line 332.
+Package pdftex.def Info: ./images//siscone.PNG  used on input line 355.
 (pdftex.def)             Requested size: 207.05632pt x 45.80171pt.
  [94
 
-] [95
+]
+File: ./images//siscone.PNG Graphic file (type png)
+<use ./images//siscone.PNG>
+Package pdftex.def Info: ./images//siscone.PNG  used on input line 355.
+(pdftex.def)             Requested size: 207.05632pt x 45.80171pt.
+ [95
 
 ] [96
 
@@ -1514,6 +1518,8 @@ Package pdftex.def Info: ./images//siscone.PNG  used on input line 332.
 
 ] [103
 
+] [104
+
  <d:/Programs/texlive/2021/texmf-dist/tex/latex/beamer/beamericonarticle.pdf>]
 \tf@nav=\write6
 \openout6 = `Jet_Alg_Complexity.nav'.
@@ -1529,18 +1535,18 @@ Package rerunfilecheck Info: File `Jet_Alg_Complexity.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 27586 strings out of 478286
- 541128 string characters out of 5846229
- 786914 words of memory out of 5000000
- 44946 multiletter control sequences out of 15000+600000
+ 27597 strings out of 478286
+ 541264 string characters out of 5846229
+ 786950 words of memory out of 5000000
+ 44955 multiletter control sequences out of 15000+600000
  485543 words of font info for 90 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,15n,122p,487b,863s stack positions out of 5000i,500n,10000p,200000b,80000s
 <d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmss9.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi12.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi9.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb><d:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on Jet_Alg_Complexity.pdf (103 pages, 1197643 bytes).
+Output written on Jet_Alg_Complexity.pdf (104 pages, 1200121 bytes).
 PDF statistics:
- 3548 PDF objects out of 3580 (max. 8388607)
- 3059 compressed objects within 31 object streams
- 211 named destinations out of 1000 (max. 500000)
+ 3575 PDF objects out of 3580 (max. 8388607)
+ 3085 compressed objects within 31 object streams
+ 213 named destinations out of 1000 (max. 500000)
  1441 words of extra memory for PDF output out of 10000 (max. 10000000)
 
