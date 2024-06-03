@@ -1,0 +1,41 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{mathrsfs}
+\usepackage{mathtools}
+\usepackage{enumitem}
+\usepackage{physics}
+
+\newcommand{\magsq}[1]{\big|#1\big|^2}
+\newcommand{\avg}[1]{\left<#1\right>}
+\newcommand{\fullint}{\int_{-\infty}^\infty}
+\newcommand{\fullintd}[1]{\fullint\dd#1\:}
+\newcommand{\cint}[2]{\int_{#1}^{#2}}
+\newcommand{\cintd}[3]{\cint{#1}{#2}\dd#3\:}
+\newcommand\treq{\stackrel{\mathclap{\tiny\mbox{Tr}}}{=}}
+
+\begin{document}
+	
+\title{Exercise Set 4}
+\author{Sean Ericson \\ Phys 633}
+\maketitle
+
+\section*{Monday}
+\subsection*{Exercise 1}
+The ``actual'' current distribution can be thought of as a linear superposition of classical circular trajectories. The linearity allows the logic to carry through.
+
+
+\section*{Tuesday}
+\subsection*{Exercise 1}
+\begin{align*}
+    \Delta E_\text{hfs}(\text{1S},F) & = -\frac{2\pi g_I g_S \alpha^2 a_0}{3m_e}\avg{\vec{S}\cdot\vec{I}}\magsq{\psi_{100}(\vec{0})} \\
+    &= -\frac{2\pi g_I g_S \alpha^2 a_0}{3m_e}\left(\frac{\hbar^2}{2}F(F+1)-\frac{3}{4}\right)\left(\frac{1}{\pi a_0^3}\right) \\
+    &= -\frac{g_I g_S \alpha^2 \hbar^2}{6m_e a_0^2} \begin{cases}
+        \times 1 & \text{if $F = 1$ (triplet)} \\
+        \times (-3) & \text{if $F = 0$ (singlet)}
+      \end{cases}
+\end{align*}
+
+
+\end{document}

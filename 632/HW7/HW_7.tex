@@ -1,0 +1,100 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{mathrsfs}
+\usepackage{enumitem}
+\usepackage{physics}
+
+\newcommand{\magsq}[1]{\big|#1\big|^2}
+\newcommand{\avg}[1]{\left<#1\right>}
+\newcommand{\fullint}{\int_{-\infty}^\infty}
+\newcommand{\fullintd}[1]{\fullint\dd#1\:}
+\newcommand{\cint}[2]{\int_{#1}^{#2}}
+\newcommand{\cintd}[3]{\cint{#1}{#2}\dd#3\:}
+
+\begin{document}
+	
+\title{Homework 7}
+\author{Sean Ericson \\ Phys 632}
+\maketitle
+
+\section*{Problem 1}
+\begin{enumerate}[label=(\alph*)]
+    \item Let $\hat{\alpha} = \hat{z}$ and $\hat{\beta} = \cos\theta\hat{z} + \sin\theta\hat{x}$. Then
+    \[ \sigma_{\hat{\beta}} = \cos \theta\sigma_z + \sin \theta\sigma_x = \mqty(\cos\theta & \sin\theta \\ \sin\theta & -\cos\theta) \]
+    and
+    \[ \mel{+}{\sigma_{\hat{\beta}}}{+} = \cos\theta \]
+
+    \item When $\hat{\beta}'$ is aligned with $\hat{\alpha}$ the integral evaluates to 1. When $\hat{\beta}'$ is anti-aligned with $\hat{\alpha}$ ($\theta' = \pi$), the integral evaluates to -1. The value of the integral varies lineraly with the angle $\theta'$ between 1 and -1 over the range $\theta'=0$ to $\theta'=\pi$. Thus,
+    \[ \ev{\sigma(\hat{\beta},\lambda)} = 1 - \frac{2\theta'}{\pi}. \]
+    To pick $\hat{\beta}'$ ($\theta'$) in order to reproduce the results of quantum mechanics, we set
+    \[ \theta' = \frac{\pi}{2}(1-\cos\theta) \]
+\end{enumerate}
+
+
+\section*{Problem 2}
+\begin{enumerate}[label=(\alph*)]
+    \item As we showed in class, $C(\hat{\alpha},\hat{\beta}) = -\hat{\alpha}\cdot\hat{\beta}$ for the Bell pair $\frac{1}{\sqrt{2}}(\ket{1, 0} - \ket{0, 1})$. The first three pairs are $45^{\circ}$ appart, while the the last is $135^{\circ}$. Therefore,
+    \[ \mathscr{C} = -\frac{1}{\sqrt{2}} - \frac{1}{\sqrt{2}} - \frac{1}{\sqrt{2}} - \frac{1}{\sqrt{2}} = 2\sqrt{2} \]
+
+    \item Given
+    \[ \vec{\sigma}_{\hat{\alpha}} = \hat{\alpha}\cdot\vec{\sigma}; \qquad \hat{\gamma} = a\hat{\alpha} + b\hat{\beta} \quad (\magsq{a} + \magsq{b} = 1), \]
+    we see
+    \[ \sigma_{\hat{\gamma}} = \hat{\gamma}\cdot\vec{\sigma} = \left(a\hat{\alpha} + b\hat{\beta}\right)\cdot\vec{\sigma} = a\sigma_{\hat{\alpha}} + b\sigma_{\hat{\beta}}. \]
+    We are therefore justified in writing
+    \[ \sigma_{\hat{\pm}} = \frac{1}{\sqrt{2}}\left(\sigma_{\hat{x}} \pm \sigma_{\hat{y}}\right). \]
+    Now
+    \begin{align*}
+        \sigma_{\hat{x}}^{(1)}\sigma_{\hat{+}}^{(2)} &= \frac{1}{\sqrt{2}}\left(\sigma_{\hat{x}}^{(1)}\sigma_{\hat{x}}^{(2)} + \sigma_{\hat{x}}^{(1)}\sigma_{\hat{y}}^{(2)} \right) \\
+        \sigma_{\hat{x}}^{(1)}\sigma_{\hat{-}}^{(2)} &= \frac{1}{\sqrt{2}}\left(\sigma_{\hat{x}}^{(1)}\sigma_{\hat{x}}^{(2)} - \sigma_{\hat{x}}^{(1)}\sigma_{\hat{y}}^{(2)} \right) \\
+        \sigma_{\hat{y}}^{(1)}\sigma_{\hat{+}}^{(2)} &= \frac{1}{\sqrt{2}}\left(\sigma_{\hat{y}}^{(1)}\sigma_{\hat{x}}^{(2)} + \sigma_{\hat{y}}^{(1)}\sigma_{\hat{y}}^{(2)} \right) \\
+        \sigma_{\hat{y}}^{(1)}\sigma_{\hat{-}}^{(2)} &= \frac{1}{\sqrt{2}}\left(\sigma_{\hat{y}}^{(1)}\sigma_{\hat{x}}^{(2)} - \sigma_{\hat{y}}^{(1)}\sigma_{\hat{y}}^{(2)} \right)
+    \end{align*}
+    adding the first three terms and subtracting the last gives
+    \[ \sqrt{2}\left(\sigma_{\hat{x}}^{(1)}\sigma_{\hat{x}}^{(2)} + \sigma_{\hat{y}}^{(1)}\sigma_{\hat{y}}^{(2)} \right) \]
+    The total correlation combination is easily calcualted as
+    \[ 2\sqrt{2}C(\hat{\alpha}, \hat{\alpha}) = -2\sqrt{2} \]
+
+    \item Consider the two cases
+    \[ A_x = 1, A_y = -1, B_+ = 1, B_- = -1 \implies 2 \]
+    \[ A_x = 1, A_y = -1, B_+ = 1, B_- = 1 \implies -2 \]
+    Since the other two possible cases are equal by symmetry, we can conclude that any experimental run must result in $\pm 2$. 
+
+    \item $|\mathscr{C}| \leq \ev{|\pm 2|}$ = 2
+\end{enumerate}
+
+
+\section*{Problem 3}
+\begin{align*}
+    \partial_t \Tr[\rho^2] &= \partial_t\sum_\alpha \mel{\alpha}{\rho\rho}{\alpha} \\
+    &= \sum_\alpha \mel{\alpha}{\dot{\rho}\rho + \rho\dot{\rho}}{\alpha} \\
+    &= -\frac{i}{\hbar}\sum_\alpha \mel{\alpha}{\comm{H}{\rho}\rho + \rho\comm{H}{\rho}}{\alpha} \\
+    &= -\frac{i}{\hbar}\sum_\alpha \mel{\alpha}{H\rho - \rho H \rho + \rho H \rho - H\rho}{\alpha} \\
+    &= 0
+\end{align*}
+
+
+\section*{Problem 4}
+\begin{enumerate}[label=(\alph*)]
+    \item If $\vec{r} = \mqty(a&b&c)^\intercal$, then
+    \begin{align*}
+        \frac{1}{2}\left[\mathcal{I} + \vec{r}\cdot\vec{\sigma}\right] &= \frac{1}{2}\left[\mqty(1&0\\0&1) + \mqty(c&0\\0&-c) + \mqty(0&a\\a&0) + \mqty(0&-ib\\ib&0)\right] \\
+        &= \frac{1}{2}\mqty(1+c & a-ib \\ a+ib & 1-c)
+    \end{align*}
+
+    \item
+    \begin{align*}
+        \Tr[\rho\sigma_x] &= \frac{1}{2}\Tr[\mqty(1+c & a-ib \\ a+ib & 1-c)\mqty(0&1\\1&0)] = \frac{1}{2}(a - ib + a + ib) = a \\
+        \Tr[\rho\sigma_y] &= \frac{1}{2}\Tr[\frac{1}{2}\mqty(1+c & a-ib \\ a+ib & 1-c)\mqty(0&-i\\i&0)] = \frac{1}{2}(ia + b - ia + b) = b \\
+        \Tr[\rho\sigma_z] &= \frac{1}{2}\Tr[\frac{1}{2}\mqty(1+c & a-ib \\ a+ib & 1-c)\mqty(1&0\\0&-1)] = \frac{1}{2}(1 + c - 1 + c) = c
+    \end{align*}
+
+    \item In the ``I Know Nothing'' state,
+    \[ \ev{\sigma_x} = \ev{\sigma_y} = \ev{\sigma_z} = 0 \]
+    Thus
+    \[ \vec{r} = \vec{0} \]
+\end{enumerate}
+
+
+\end{document}

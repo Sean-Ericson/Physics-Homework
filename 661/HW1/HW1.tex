@@ -1,0 +1,127 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{mathtools}
+\usepackage{mathrsfs}
+\usepackage{enumitem}
+\usepackage{physics}
+\usepackage{tensor}
+
+\usepackage{tikz}
+\usetikzlibrary{calc,decorations.markings,patterns}
+
+\newcommand{\magsq}[1]{\big|#1\big|^2}
+\newcommand{\avg}[1]{\left<#1\right>}
+\newcommand{\fullint}{\int_{-\infty}^\infty}
+\newcommand{\fullintd}[1]{\fullint\dd#1\:}
+\newcommand{\cint}[2]{\int_{#1}^{#2}}
+\newcommand{\cintd}[3]{\cint{#1}{#2}\dd#3\:}
+\newcommand{\boostXY}{\mqty(\gamma & -\gamma\beta_x & -\gamma\beta_y & 0 \\ -\gamma\beta_x & 1 + (\gamma - 1)\frac{\beta_x^2}{\abs{\beta}^2} & (\gamma - 1)\frac{\beta_x\beta_y}{\abs{\beta}^2} & 0 \\ -\gamma\beta_y & (\gamma - 1)\frac{\beta_x\beta_y}{\abs{\beta}^2} & 1 + (\gamma - 1)\frac{\beta_y^2}{\abs{\beta}^2} & 0 \\ 0 & 0 & 0 & 1)}
+\newcommand{\metric}{\mqty(1 & 0 & 0 & 0 \\ 0 & -1 & 0 & 0 \\ 0 & 0 & -1 & 0 \\ 0 & 0 & 0 & -1)}
+
+\begin{document}
+
+\title{Homework 1}
+\author{Sean Ericson \\ Phys 661}
+\maketitle
+
+\section*{Problem 1}
+\begin{enumerate}[label=(\alph*)]
+    \item \[ \frac{\hbar c}{r_J} \approx 2.82\times 10^{-21}\;\text{MeV} \]
+    \item \[ \frac{\hbar c}{\lambda_W} \approx 2.45\times 10^{-16}\;\text{cm} \]
+    \item \[ \frac{\hbar c}{\sqrt{s}} \approx 9.9\times 10^{-17}\;\text{cm} \]
+\end{enumerate}
+
+
+\section*{Problem 2}
+Conservation of energy implies
+\begin{equation*} \tag{2.1}
+    E + m_e = E' + E_e',
+\end{equation*}
+    
+while conservation of momentum implies
+\begin{align*}
+    E' \sin\theta - \abs{p_e'}\sin\theta' &= 0 \\
+    E' \cos\theta - \abs{p_e'}\cos\theta' &= E. \tag{2.2}
+\end{align*}
+Now we note that the final electron energy is given by
+\begin{equation*} \tag{2.3}
+    (E_e')^2 = \abs{p_e'}^2 + m_e^2.
+\end{equation*}
+Plugging (2.3) into (2.1), then solving the result along with (2.3) for $\abs{p_e'}^2$, we find
+\begin{align*}
+    \abs{p_e'}^2 &= (E - E' + m_e)^2 - m_e^2 \\
+    \abs{p_e'}^2 &= E^2 + (E')^2 - 2EE'\cos\theta \tag{2.4}.
+\end{align*}
+Equating the two right hand sides of (2.4) gives
+\begin{align*}
+    &&E^2 + (E')^2 - 2EE'\cos\theta &= E^2 + (E')^2 + m_e^2 + 2(E-E')m_e - 2EE' - m_e^2 \\
+    \implies&& 2(E-E')m_e - 2EE' &= -2EE'\cos\theta \\
+    \implies&& (\frac{1}{E'} - \frac{1}{E})m_e &= 1 - \cos\theta
+\end{align*}
+Finally, using the photon wavelength/energy relation $E = \frac{2\pi}{\lambda}$, we arrive at the desired equation for wavelength shift:
+\[ (\frac{\lambda'}{2\pi} - \frac{\lambda}{2\pi})m_e = (1-cos\theta) \implies \boxed{\lambda' - \lambda = \frac{2\pi}{m_e}(1-\cos\theta)} \]
+
+\section*{Problem 3}
+Given that
+\begin{equation*} \tag{3.1}
+    (p')^\mu = \Lambda_{\;\nu}^\mu p^\nu 
+\end{equation*}
+we have that 
+\begin{align*}
+    (p')_\mu(p')^\mu &= \Lambda_{\mu\nu}p^\nu \Lambda_{\;\rho}^\mu p^\rho \\
+    &= \eta_{\mu\alpha}\Lambda_{\;\nu}^\alpha\Lambda_{\;\rho}^\mu p^\nu p^\rho \tag{3.2}
+\end{align*}
+Now, if
+\begin{equation*} \tag{3.3}
+    \eta_{\mu\alpha}\Lambda_{\;\nu}^\alpha\Lambda_{\;\rho}^\mu = \eta_{\nu\rho},
+\end{equation*}
+then the right hand side of (3.2) becomes
+\begin{equation*} \tag{3.4}
+    \eta_{\nu\rho} p^\nu p^\rho = p_\nu p^\nu, 
+\end{equation*}
+which is the result we wish to show. Now, (3.4) is equivalent to $\Lambda^\intercal \eta \Lambda$. Calculating $\eta \Lambda$, we find
+\begin{equation*}
+    \eta \boostXY = \mqty(\gamma & -\gamma\beta_x & -\gamma\beta_y & 0 \\ \gamma\beta_x & -1 - (\gamma - 1)\frac{\beta_x^2}{\abs{\beta}^2} & (1 - \gamma)\frac{\beta_x\beta_y}{\abs{\beta}^2} & 0 \\ \gamma\beta_y & (1- \gamma)\frac{\beta_x\beta_y}{\abs{\beta}^2} & -1 - (\gamma - 1)\frac{\beta_y^2}{\abs{\beta}^2} & 0 \\ 0 & 0 & 0 & -1).
+\end{equation*}
+Finally, multiplying on the left by $\Lambda^\intercal = \Lambda$ and simplifying, we arrive back at the metric:
+\[ \Lambda^\intercal \eta \Lambda = \metric = \eta \].
+Thus, (3.3) is satisfied and therefore $(p')_\mu(p')^\mu = p_\mu p^\mu$.
+
+\section*{Problem 4}
+In the center of mass-energy frame, we have 
+\begin{equation*} \tag{4.1}
+    (M, 0, 0, 0) \rightarrow 
+    \begin{cases*}
+        (\frac{M}{2}, \frac{1}{4}M^2 - m^2, 0, 0) \\
+        (\frac{M}{2}, m^2 - \frac{1}{4}M^2 0, 0),    
+    \end{cases*}
+\end{equation*}
+while in the lab frame we have
+\begin{equation*} \tag{4.2}
+    (\gamma M, 0, 0, \gamma\beta) \rightarrow 
+    \begin{cases*}
+        (\sqrt{m^2 + \gamma^2\abs{\beta_\text{Lab}'}}, \gamma\abs{\beta_\text{Lab}'}\sin\frac{\theta}{2}, 0, \gamma\abs{\beta_\text{Lab}'}\cos\frac{\theta}{2}) \\
+        (\sqrt{m^2 + \gamma^2\abs{\beta_\text{Lab}'}}, -\gamma\abs{\beta_\text{Lab}'}\sin\frac{\theta}{2}, 0, \gamma\abs{\beta_\text{Lab}'}\cos\frac{\theta}{2}),
+    \end{cases*}
+\end{equation*}
+where $\theta$ is the angle between the final state particles in the lab frame. Boosting from the CoM/E frame to labe frame (i.e. boosting by $-\beta \hat{z}$), we find
+\begin{equation*} \tag{4.3}
+    \begin{rcases*}
+        (\frac{M}{2}, \frac{1}{4}M^2 - m^2, 0, 0) \\
+        (\frac{M}{2}, m^2 - \frac{1}{4}M^2 0, 0)  
+    \end{rcases*} 
+    \rightarrow \mqty{(\frac{1}{2}\gamma M, \frac{1}{4}M^2 - m^2, 0, -\gamma\beta m) \\ (\frac{1}{2}\gamma M, m^2 - \frac{1}{4}M^2, 0, -\gamma\beta m)}.
+\end{equation*}
+By conservation of energy, we have that 
+\begin{equation*} \tag{4.4}
+    \sqrt{m^2 + \gamma^2\abs{\beta_\text{Lab}'}^2} = \frac{1}{2}\gamma M \implies \abs{\beta_\text{Lab}'}^2 = \frac{1}{4}M^2 - (\frac{m}{\gamma})^2
+\end{equation*}
+Now, comparing the $z$ components of (4.2) and (4.3), we see that
+\begin{align*} \tag{4.5}
+    \gamma \abs{\beta_\text{Lab}} \cos\frac{\theta}{2} = -\gamma\beta \implies \boxed{\cos\frac{\theta}{2} = \frac{-\beta}{\frac{1}{4}M^2 - (\frac{m}{\gamma})^2}} 
+\end{align*}
+Oops, this can't be right...
+
+\end{document}

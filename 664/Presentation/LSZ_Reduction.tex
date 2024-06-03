@@ -1,0 +1,148 @@
+\documentclass{beamer}
+
+\usetheme{Malmoe}
+\usecolortheme{orchid}
+
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{mathtools}
+\usepackage{mathrsfs}
+\usepackage{physics}
+
+\newcommand{\cev}[1]{\reflectbox{\ensuremath{\vec{\reflectbox{\ensuremath{#1}}}}}}
+
+%Information to be included in the title page:
+\title{The LSZ Reduction Formula}
+\author{Sean Ericson}
+\institute{Phys 464}
+\date{November 30, 2022}
+
+\begin{document}
+
+\frame{\titlepage}
+
+\begin{frame}
+\frametitle{What is the LSZ Reduction Formula?}
+\begin{itemize}
+    \item<2-> A formula for calculating S-Matrix elements (scattering amplitudes)
+    \item<3-> It \textit{reduces} the problem of calculating scattering amplitudes to calculating correlation functions of fields.
+    \item<4-> Originally published by German physicists Harry Lehmann, Kurt Symanzik and Wolfhart Zimmermann in 1955.
+    \item<5> Not to be confused with Lysergic acid 2,4-dimethylazetidide, an analog of LSD
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{What is the LSZ Reduction Formula?}
+    \begin{alertblock}{The LSZ Reduction Formula}
+        \begin{flalign*}
+            &\braket{\mathbf{k_{n+1}\cdots\mathbf{k_{n+m}}}}{\mathbf{k_1}\cdots\mathbf{k_n}} = &&\\
+            &\left(\prod_{i=1}^{n}\int\dd^4 x_i e^{-ik_ix_i}(\Box_i + m^2)\right)\left(\prod_{i=n+1}^{n+m}\int\dd^4 x_i e^{ik_ix_i}(\Box_i + m^2)\right) &&\\
+            &\times \mel{\Omega}{T\{\phi(x_1)\cdots\phi(x_{n+m})\}}{\Omega} &&\\
+        \end{flalign*}
+    \end{alertblock}
+\end{frame}
+
+\begin{frame}
+\frametitle{Where does it Come From?}
+\begin{itemize}
+    \item<2-> Issue: how to connect asymptotic free states with interacting intermediate states?
+    \item<3-> Solution: The \textit{Key Identity}:
+    \begin{alertblock}<3->{The Key Identity}
+        \[ a_\mathbf{k}(+\infty) - a_\mathbf{k}(-\infty) = i\int\dd^4x \; e^{ikx}(\Box + m^2)\phi(x) \]
+    \end{alertblock}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Where does it Come From?}
+    \begin{block}{Proof of the Key Identity}
+        \setlength\abovedisplayskip{0pt}
+        \begin{align*}
+            a_\mathbf{k}(+\infty) - a_\mathbf{k}(-\infty) &= \int_{-\infty}^\infty \dd t \; \partial_0 a_\mathbf{k}(t) \\
+            &= \int_{-\infty}^\infty \dd t \; \partial_0 \int \dd^3 x \; e^{-ikx} \left(i\partial_0 + \omega\right)\phi(x) \\
+            &= i\int \dd^4 x\; e^{ikx}\left(\partial_0^2 + \omega^2\right)\phi(x) \\
+            &= i\int \dd^4 x\; e^{ikx}\left(\partial_0^2 + \mathbf{k}^2 + m^2\right)\phi(x) \\
+            &= i\int \dd^4 x\; e^{ikx}\left(\partial_0^2 - \cev{\nabla}^2 + m^2\right)\phi(x) \\
+            &= i\int \dd^4 x\; e^{ikx}\left(\partial_0^2 - \vec{\nabla}^2 + m^2\right)\phi(x) \\
+            &= i\int \dd^4 x\; e^{ikx}\left(\Box + m^2\right)\phi(x)
+        \end{align*}
+    \end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{How does that Help?}
+\begin{itemize}
+    \item<1> Goal: $\mel{\Omega}{a_{n+1}(\infty)\cdots a_{n+m}(\infty)a_1^\dag(-\infty)\cdots a_n^\dag(-\infty)}{\Omega}$
+    \item<2> Key Identity Lemma:
+    \only<2>{
+        \begin{align*}
+            &a_i(+\infty) &&=&& a_i(-\infty) + \Phi_i^+ \\
+            &a_i^\dag(-\infty) &&=&& a_i^\dag(+\infty) + \Phi_i^- \\
+            &\Phi_i^\pm &&=&& \int \dd^4 x_i\; e^{\pm ik_ix_i}(\Box_i + m^2)
+        \end{align*}
+    }
+    \item<3> Insert into scattering amplitude:
+    \only<3>{\begin{align*}
+        &\mel{\Omega}{a_{n+1}(\infty)\cdots a_{n+m}(\infty)a_1^\dag(-\infty)\cdots a_n^\dag(-\infty)}{\Omega} \\
+        &= \mel{\Omega}{T\{a_{n+1}(\infty)\cdots a_{n+m}(\infty)a_1^\dag(-\infty)\cdots a_n^\dag(-\infty)\}}{\Omega} \\
+        &= \mel{\Omega}{T\{\cdots \left[a_{n+m}(-\infty) + \Phi_{n+m}^+\right] \cdots \left[a_n^\dag(\infty) + \Phi_n^-\right]\}}{\Omega} \\
+        &= \mel{\Omega}{T\{\Phi_{n+1}^+ \cdots \Phi_{n+m}^+ \Phi_1^- \cdots \Phi_n^-\}}{\Omega} \\
+        &=^* \left(\prod_{i=1}^{n}\int\dd^4 x_i e^{-ik_ix_i}(\Box_i + m^2)\right)\left(\prod_{i=n+1}^{n+m}\int\dd^4 x_i e^{ik_ix_i}(\Box_i + m^2)\right) \\
+        &\times \mel{\Omega}{T\{\phi(x_1)\cdots\phi(x_{n+m})\}}{\Omega} 
+    \end{align*}}
+    
+    
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{*Aside: $\Box$ and $T\{\}$}
+\begin{itemize}
+    \item<1-> Technically
+    \[ \Box_x\mel{\Omega}{T\{\phi_x\phi_1\cdots\phi_n\}}{\Omega} \neq \mel{\omega}{T\{\Box_x\phi_x\phi_1\cdots\phi_n\}}{\Omega} \]
+    \item<2-> In fact,
+    \begin{align*} 
+        &\Box_x\mel{\Omega}{T\{\phi_x\phi_1\cdots\phi_n\}}{\Omega} = \\
+        &\quad \mel{\Omega}{T\{\Box_x\phi_x\phi_1\cdots\phi_n\}}{\Omega} \\
+        &\quad -i\sum_j \delta^4(x-x_j)\mel{\Omega}{T\{\phi_1\cdots\phi_{j-1}\phi_{j+1}\phi_n\}}{\Omega} 
+    \end{align*}
+    \item<3-> However,
+    \begin{itemize}
+        \item These so-called \textit{contact terms} don't contribute to the connected part of the scattering amplitude
+    \end{itemize}
+
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{What does this all Mean?}
+\begin{itemize}
+    \item<2-> LSZ reduces S-matrix elements to correlation functions.
+    \item<3-> Correlation functions are extremely versitile:
+    \begin{itemize}
+        \item<4-> Calculated using Feynmann rules
+        \item<5-> Contain much more information than just scattering
+        \item<6-> LSZ projects out the single-particle asymptotic states
+    \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Extra: Effective Field Theories}
+\begin{itemize}
+    \item<2-> Key ingredient to LSZ: \textit{free} states at \textit{asymptotic} times
+    \item<3-> $\phi(x)$ can be exchanged for any other operator satisfying this requirement
+    \begin{itemize}
+        \item<4-> i.e. any $O(x)$ s.t. $\mel{p}{O(x)}{\Omega} \propto e^{-ikx}$
+    \end{itemize}
+    \item<5-> LSZ does not distinguish between elementary/non-elementary particles
+    \begin{itemize}
+        \item<6-> i.e. those with corresponding fields in $\mathscr{L}$
+    \end{itemize}
+    \item<7-> Asymptotic states can therefore be composite particles
+    \begin{itemize}
+        \item<8-> Assuming sufficiently low energy scattering
+    \end{itemize}
+\end{itemize}
+\end{frame}
+
+\end{document}

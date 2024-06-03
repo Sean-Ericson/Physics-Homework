@@ -1,0 +1,89 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{nccmath}
+\usepackage{mathtools}
+\usepackage{mathrsfs}
+\usepackage{enumitem}
+\usepackage{physics}
+\usepackage{tensor}
+
+\begin{document}
+
+\title{Homework 4}
+\author{Sean Ericson \\ Phys 662}
+\maketitle
+
+\section*{Problem 1}
+\begin{enumerate}[label=(\alph*)]
+    \item 
+    \begin{align*}
+        \gamma &= \frac{1}{\sqrt{1 - \tanh^2(\alpha)}} \\
+        &= \frac{1}{\sqrt{\sech^2(\alpha)}} \\
+        &= \cosh(\alpha)
+    \end{align*}
+    \[ \Lambda = \mqty(\gamma&0&0&-\gamma\beta\\0&1&0&0\\0&0&1&0\\-\gamma\beta&0&0&\gamma) = \mqty(\cosh(\alpha)&0&0&-\sinh(\alpha)\\0&1&0&0\\0&0&1&0\\-\sinh(\alpha)&0&0&\cosh(\alpha)) \]
+    
+    \item For $p_3$, boosting in the $-\hat{z}$ direction by rapidity $\alpha$, 
+    \begin{align*}
+        p'_3 &= \Lambda p_3 \\
+        &= p_T\mqty(\cosh(\alpha)&0&0&\sinh(\alpha)\\0&1&0&0\\0&0&1&0\\\sinh(\alpha)&0&0&\cosh(\alpha))\mqty(\cosh(y_3)\\\cos(\phi)\\\sin(\phi)\\\sinh(y_3)) \\
+        &= p_T \mqty(\cosh(\alpha)\cosh(y_3)+\sinh(\alpha)\sinh(y_3)\\\cos(\phi)\\\sin(\phi)\\\sinh(\alpha)\cosh(y_3) + \cosh(\alpha)\sinh(y_3)) \\
+        &= p_T \mqty(\cosh(y_3+\alpha)\\\cos(\phi)\\\sin(\phi)\\\sinh(y_3+\alpha)), \\
+    \end{align*}
+    and similarly for $p_4$. Hence, $y_i \to y_i +  \alpha$. 
+    
+    \item The sum of $p_3$ and $p_4$ is
+    \[ p_3 + p_4 = p_T\mqty(\cosh(y_3) + \cosh(y_4)\\0\\0\\\sinh(y_3)+\sinh(y_4)). \]
+    Considering just the $\hat{t}$ and $\hat{z}$ components, we want the transformation that takes this to the CM Frame, i.e.,
+    \begin{alignat*}{3}
+        &         \quad & \mqty(p_T\\0) &= p_T\mqty(\cosh(\alpha)&-\sinh(\alpha)\\-\sinh(\alpha)&\cosh(\alpha))\mqty(\cosh(y_3) + \cosh(y_4)\\\sinh(y_3)+\sinh(y_4))  \\
+        &         \quad &   &= p_T\mqty(\cosh(\alpha)\cosh(y_3) + \cosh(\alpha)\cosh(y_4) - \sinh(\alpha)\sinh(y_3) - \sinh(\alpha)\sinh(y_4) \\ -\sinh(\alpha)\cosh(y_3) - \sinh(\alpha)\cosh(y_4) + \cosh(\alpha)\sinh(y_3) + \cosh(\alpha)\sinh(y_4)) \\ 
+        &         \quad &   &= p_T\mqty(\cosh(y_3 - \alpha) + \cosh(y_4 - \alpha) \\ \sinh(y_3 - \alpha) + \sinh(y_4 - \alpha)) \\
+        &\implies \quad & 0 &= \sinh(y_3 - \alpha) + \sinh(y_4 - \alpha) \\
+        &\implies \quad & \alpha &= \frac{1}{2}(y_3 + y_4)
+    \end{alignat*}
+    
+    \item
+    \[ p_1 + p_2 = \mqty(\frac{\sqrt{s}}{2}(x_1 + x_2) \\ \frac{\sqrt{s}}{2}(x_1 - x_2)) \]
+    \begin{alignat*}{3}
+        &         \quad & p_1 + p_2 &= p_3 + p_4 \\
+        &\implies \quad & \frac{\sqrt{s}}{2}(x_1 + x_2) &=  p_T(\cosh(y_3) + \cosh(y_4)) \\
+        &         \quad & \frac{\sqrt{s}}{2}(x_1 - x_2) &=  p_T(\sinh(y_3) + \sinh(y_4)) \\
+        &\implies \quad & x_1 = \frac{p_T}{\sqrt{s}}\left(e^{y_3} + e^{y_4}\right),&\;\; x_2 = \frac{p_T}{\sqrt{s}}\left(e^{-y_3} + e^{-y_4}\right)
+    \end{alignat*}
+    In the last step, substitute the definitions for $\sinh$ and $\cosh$ in terms of exponentials, then add the two equations to get $x_1$, and subtract to get $x_2$.
+
+    \item
+    \begin{align*}
+        \hat{s} &= (p_1 + p_2)^2 \\
+        &= s x_1 x_2 \\
+        &= p_T^2\left(e^{y_3} + e^{y_4}\right)\left(e^{-y_3} + e^{-y_4}\right) \\
+        &= p_T^2\left(2 + e^{y_3-y_4} + e^{y_4-y_3}\right) \\
+        &= p_T^2\left(2 + 2\cosh(y_4 - y_3)\right)
+    \end{align*}
+    \begin{align*}
+        (p_3 + p_4)^2 &= p_T^2\left[\left(\cosh(y_3) + \cosh(y_4)\right)^2 - \left(\sinh(y_3) + \sinh(y_4)\right)^2\right] \\
+        &= p_T^2\left(2 + 2\cosh(y_4 - y_3)\right)
+    \end{align*}
+    Where the last equality was confirmed with WolframAlpha.
+
+    \item I think I could use
+    \[ \hat{t} = (p_1 - p_3)^2 -\frac{1}{2}\hat{s}(1 - \cos\hat{\theta}), \]
+    but when I plug in the values for $(p_1 - p_3)^2$, and $\hat{s}$ the algebra gets really messy...
+\end{enumerate}
+
+\section*{Problem 2}
+\begin{enumerate}[label=(\alph*)]
+    \item The term with the $\hat{t}^2$ denominator corresponds to the leftmost diagram of eq. 13.31 (the t-channel process), while the other two terms correspond to the other two diagrams (the s- and u-channel diagrams).
+    \item
+    \item Due to the symmetry, the equation should be invariant under $\theta \to -\theta$. Under this transformation, we have that $\hat{t} \leftrightarrow \hat{u}$. Equation 13.26 is clearly invariant under $\hat{t} \leftrightarrow \hat{u}$, so it is consistent with this symmetry.
+\end{enumerate}
+
+
+\section*{Problem 3}
+Seems colinear safe, but not IR safe. $\ket{\vec{\tilde{1}}}$
+
+
+\end{document}

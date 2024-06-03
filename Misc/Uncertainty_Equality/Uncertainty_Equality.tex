@@ -1,0 +1,57 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{enumitem}
+\usepackage{physics}
+
+\newcommand{\magsq}[1]{\big|#1\big|^2}
+\newcommand{\avg}[1]{\left<#1\right>}
+\newcommand{\fullint}{\int_{-\infty}^\infty}
+\newcommand{\fullintd}[1]{\fullint\dd#1\:}
+\newcommand{\cint}[2]{\int_{#1}^{#2}}
+\newcommand{\cintd}[3]{\cint{#1}{#2}\dd#3\:}
+\newcommand{\notimplies}{\mathrel{{\ooalign{\hidewidth$\not\phantom{=}$\hidewidth\cr$\implies$}}}}
+
+\begin{document}
+	
+\title{$\comm{Q}{R} = 0 \notimplies \sigma_Q\sigma_R = 0$}
+\author{Sean Ericson \\ Phys 631}
+\maketitle
+
+\section*{Problem}
+Consider two observables $Q$ and $R$ such that $\comm{Q}{R} = 0$. The uncertainty principle states that $\sigma_Q\sigma_R > 0$. Is it \textit{always} the case that $\sigma_Q\sigma_R = 0$?
+
+\section*{Solution}
+Consider an orthonormal set of states $\ket{\psi_i}$ that span the Hilbert space
+\[ \sum_i \dyad{\psi_i} = \mathbb{I}, \]
+and are eigenvectors for both operators:
+\[ Q = \sum_i q_i \dyad{\psi_i}; \quad R = \sum_i r_i \dyad{\psi_i}. \]
+For an arbitrary state
+\[ \ket{\psi} = \sum_i a_i\ket{\psi_i}, \]
+the variance is given by
+\[ \sigma_Q^2 = \ev{Q^2}{\psi} - \ev{Q}{\psi}^2. \]
+Evaluating the first term, we have
+\begin{align*}
+    \ev{Q^2}{\psi} &= \left(\sum_i a_i^*\bra{\psi_i}\right)\left(\sum_j q_j\dyad{\psi_j}\right)^2\left(\sum_k a_k \ket{\psi_k}\right) \\
+    &= \sum_{i,j,j',k}a_i^* a_k q_j q_{j'}\braket{\psi_i}{\psi_j}\braket{\psi_j}{\psi_{j'}}\braket{\psi_{j'}}{\psi_k} \\
+    &= \sum_{i,j,j',k}a_i^* a_k q_j q_{j'}\delta_{ij}\delta{jj'}\delta_{j'k} \\
+    &= \sum_{i}\abs{a_i}^2 q_i^2.
+\end{align*}
+The second terms, meanwhile, is
+\begin{align*}
+    \ev{Q}{\psi}^2 &= \left[\left(\sum_i a_i^*\bra{\psi_i}\right)\left(\sum_j q_j\dyad{\psi_j}\right)\left(\sum_k a_k \ket{\psi_k}\right)\right]^2 \\
+    &= \left[\sum_{i,j,k}a_i^* a_k q_j\braket{\psi_i}{\psi_j}\braket{\psi_{j}}{\psi_k}\right]^2 \\
+    &= \left[\sum_{i,j,k} a_i^* a_k q_j \delta_{ij}\delta_{jk}\right]^2 \\
+    &= \left[\sum_i \abs{a_i}^2 q_i \right]^2.
+\end{align*}
+Now,
+\[ \sigma_Q\sigma_R = \sqrt{\sum_i\abs{a_i}^2q_i^2 - \left(\sum_i\abs{a_i}^2q_i\right)^2}\sqrt{\sum_i\abs{a_i}^2r_i^2 - \left(\sum_i\abs{a_i}^2r_i\right)^2}. \]
+Clearly, $\sigma_Q\sigma_R = 0$ if and only if one of the two factors above is zero. That is,
+\[ \boxed{\sum_i \abs{a_i}^2q_i^2 = \left(\sum_i\abs{a_i}q_i\right)^2 \quad \text{OR} \quad \sum_i \abs{a_i}^2r_i^2 = \left(\sum_i\abs{a_i}r_i\right)^2 \implies \sigma_Q\sigma_R = 0} \]
+\[ \sum_i \abs{a_i}^2q_i^2 = \left(\sum_i\abs{a_i}q_i\right)^2 \]
+\[ \implies \]
+\[ \sum_{i\neq j}\abs{a_i a_j}q_iq_j = 0 \]
+
+
+\end{document}

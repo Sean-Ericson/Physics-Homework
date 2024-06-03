@@ -1,0 +1,46 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{mathrsfs}
+\usepackage{mathtools}
+\usepackage{enumitem}
+\usepackage{physics}
+
+\newcommand{\magsq}[1]{\big|#1\big|^2}
+\newcommand{\avg}[1]{\left<#1\right>}
+\newcommand{\fullint}{\int_{-\infty}^\infty}
+\newcommand{\fullintd}[1]{\fullint\dd#1\:}
+\newcommand{\cint}[2]{\int_{#1}^{#2}}
+\newcommand{\cintd}[3]{\cint{#1}{#2}\dd#3\:}
+\newcommand\treq{\stackrel{\mathclap{\tiny\mbox{Tr}}}{=}}
+
+\begin{document}
+	
+\title{Exercise Set 3}
+\author{Sean Ericson \\ Phys 633}
+\maketitle
+
+\section*{Monday}
+\subsection*{Exercise 1}
+\[ \comm{p^2}{z} = 2i\hbar p_z = -2\hbar^2\partial_z \]
+
+\subsection*{Exercise 2}
+\begin{align*}
+    \comm{p^2}{r}f &= -\hbar^2\comm{\nabla^2}{r}f \\
+    &= -\hbar^2\left(\nabla^2(rf) - r\left(\nabla^2f\right)\right) \\
+    &= -\hbar^2\left((\nabla^2r)f + 2(\nabla r)\cdot(\nabla f) + r\nabla^2f - r\nabla^2 f\right) \\
+    &= -2\hbar^2\left(\frac{1}{r} - (\nabla r)\cdot\nabla\right)f \\
+    &= -2\hbar^2\left(\frac{1}{r} - \hat{r}\cdot\nabla\right)f
+\end{align*}
+\[ \implies \comm{p^2}{r} = -2\hbar^2\left(\frac{1}{r} - \hat{r}\cdot\nabla\right) \]
+
+\section*{Tuesday}
+\subsection*{Exercise 1}
+\begin{align*}
+    \mathscr{U}_1 &= S_1VP_0 = G_QVP_0 \\
+    \mathscr{U}_2 &= S_1VS_1VP_0 + S_2VS_0VP_0 = G_QVG_QVP_0 - G_Q^2VP_0VP_0
+\end{align*}
+
+
+\end{document}

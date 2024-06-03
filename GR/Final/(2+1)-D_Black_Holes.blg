@@ -1,0 +1,17 @@
+[0] Config.pm:311> INFO - This is Biber 2.16
+[0] Config.pm:314> INFO - Logfile is '(2+1)-D_Black_Holes.blg'
+[101] biber-MSWIN32:340> INFO - === 
+[127] Biber.pm:415> INFO - Reading '(2+1)-D_Black_Holes.bcf'
+[206] Biber.pm:952> INFO - Found 10 citekeys in bib section 0
+[218] Biber.pm:4340> INFO - Processing section 0
+[227] Biber.pm:4531> INFO - Looking for bibtex format file 'refs.bib' for section 0
+[262] bibtex.pm:1689> INFO - LaTeX decoding ...
+[278] bibtex.pm:1494> INFO - Found BibTeX data source 'refs.bib'
+[333] Utils.pm:395> WARN - I didn't find a database entry for '2' (section 0)
+[341] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[341] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[341] Biber.pm:4168> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
+[341] Biber.pm:4174> INFO - No sort tailoring available for locale 'en-US'
+[350] bbl.pm:654> INFO - Writing '(2+1)-D_Black_Holes.bbl' with encoding 'UTF-8'
+[354] bbl.pm:757> INFO - Output to (2+1)-D_Black_Holes.bbl
+[354] Biber.pm:128> INFO - WARNINGS: 1

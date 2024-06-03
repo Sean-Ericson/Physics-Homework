@@ -1,0 +1,47 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{nccmath}
+\usepackage{mathtools}
+\usepackage{mathrsfs}
+\usepackage{enumitem}
+\usepackage{physics}
+\usepackage{tensor}
+\usepackage{subcaption}
+
+\usepackage{tikz}
+\usetikzlibrary{calc,decorations.markings,patterns}
+
+\newcommand{\chrissym}[3]{\Gamma_{#2#3}^#1}
+
+\begin{document}
+
+\title{Midterm}
+\author{Phys 610, Winter '24}
+\maketitle
+
+\section*{Questions}
+Consider the line element
+\[ \dd s^2 = -\left(1 - \frac{2M}{\sqrt{r^2 + b^2}}\right)\dd t^2 + \left(1 - \frac{2M}{\sqrt{r^2 + b^2}}\right)^{-1}\dd r^2 + (r^2 + b^2)(\dd\theta^2 + \sin^2\theta\dd\phi) \]
+where $M$ and $b$ are positive, real constants. Note that we are using geometrical units here where $G = c = 1$.
+\begin{enumerate}
+    \item (15 points) Write down the metric and inverse metric in the $t, r, \theta, \phi$ coordinate system.
+
+    \item (15 points) Write down the non-zero Christoffel symbols $\chrissym{\alpha}{\beta}{\gamma}$ for this metric. (Hint: of the 40 Christoffel symbols that are distinct by taking account of symmetry under $\beta \leftrightarrow \gamma$, only 9 are non-zero.)
+
+    \item (15 points) Write the geodesic equation in this metric for a massive particle \textit{i.e.} write equations for $\ddot{t}, \ddot{r}, \ddot{\theta}, \ddot{\phi}$ where the double-dots are with respect to $\tau$.
+
+    \item (15 points) Calculate the effective potential for timelike orbits for arbitrary $M$ and $b$.
+
+    \item (10 points) Do bound orbital solutions exist for $M = 0$? Why or why not?
+    
+    \item (10 points) Build a numerical solver for integrating the geodesic equation given an initial position, $\varepsilon$, and $l$. Here, $\varepsilon$ corresponds to the script E (i.e. energy) that was used in class. Explore a bit; try different geometries and initial conditions. Can you find any interesting geometries and/or trajectories?
+    
+    \item (10 points) Do bound orbital solutions exist for $b=1$, $M=1$, $l=5$? If so, show a trajectory.
+    
+    \item (10 points) What kind of trajectories are possible in $b=3$, $M=1$ geometry with $\varepsilon=-0.05$, $l=2$?
+\end{enumerate}
+WARNING: Don't use any off-the-shelf integrator as a black box.  Think about the physics of the problem and how you can check for errors in the integration.  Do you trust the trajectories you've computed?
+
+\end{document}

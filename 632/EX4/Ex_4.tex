@@ -1,0 +1,49 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{enumitem}
+\usepackage{physics}
+
+\newcommand{\magsq}[1]{\big|#1\big|^2}
+\newcommand{\avg}[1]{\left<#1\right>}
+\newcommand{\fullint}{\int_{-\infty}^\infty}
+\newcommand{\fullintd}[1]{\fullint\dd#1\:}
+\newcommand{\cint}[2]{\int_{#1}^{#2}}
+\newcommand{\cintd}[3]{\cint{#1}{#2}\dd#3\:}
+
+\begin{document}
+	
+\title{Exercise Set 4}
+\author{Sean Ericson \\ Phys 632}
+\maketitle
+
+\section*{Exercise 1}
+\begin{align*}
+    \comm{L_\alpha}{p_\delta} & = \comm{\epsilon_{\alpha\beta\gamma}r_\beta p_\gamma}{p_\delta} \\
+    & = \epsilon_{\alpha\beta\gamma} \comm{r_\beta}{p_\delta}p_\gamma \\
+    & = i\hbar\epsilon_{\alpha\beta\gamma}\delta_{\beta\gamma}p_\gamma \\
+    & = i\hbar \epsilon_{\alpha\beta\gamma} p_\gamma
+\end{align*}
+
+\section*{Exercise 2}
+\begin{align*}
+    \comm{L_x}{L_y} & = \comm{L_x}{zp_x - xp_z} \\
+    & = \comm{L_x}{zp_x} - \comm{L_x}{xp_z} \\
+    & = \comm{L_x}{z}p_x - x\comm{L_x}{p_z} \\
+    & = i\hbar\left(yp_x - xp_y\right) \\
+    & = L_z
+\end{align*}
+By cyclic permutation of the indicies,
+\[ \comm{L_\alpha}{L_\beta} = i\hbar \epsilon_{\alpha\beta\gamma} L_\gamma \]
+
+\section*{Exercise 3}
+\begin{enumerate}[label=(\alph*)]
+    \item 0; Violation of the triangle condition
+    \item 0; $m$-quantum numbers don't add
+    \item 1; One particle has no angular momentum, so the combined momentum must be that of the other.
+    \item 0; By the above argument.
+    \item 1/3; The $\ket{00}$ state has components $\ket{1 -1; 1 1}$, $\ket{1, 1; 1, -1}$, and $\ket{1, 0; 1, 0}$.
+\end{enumerate}
+
+\end{document}

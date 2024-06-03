@@ -1,0 +1,101 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{mathrsfs}
+\usepackage{enumitem}
+\usepackage{physics}
+
+\newcommand{\magsq}[1]{\big|#1\big|^2}
+\newcommand{\avg}[1]{\left<#1\right>}
+\newcommand{\fullint}{\int_{-\infty}^\infty}
+\newcommand{\fullintd}[1]{\fullint\dd#1\:}
+\newcommand{\cint}[2]{\int_{#1}^{#2}}
+\newcommand{\cintd}[3]{\cint{#1}{#2}\dd#3\:}
+
+\begin{document}
+	
+\title{Homework 2}
+\author{Sean Ericson \\ Phys 632}
+\maketitle
+
+\section*{Problem 1}
+Let's look at $x_1$ first. The WKB approximation is
+\[ \psi_\text{WKB}(x) = \begin{cases}
+    \frac{A_<}{\sqrt{p(x)}}\cos\left(\frac{1}{\hbar}\cint{x}{x_1}p(x')\dd x'\right) + \frac{B_<}{\sqrt{p(x)}}\sin\left(\frac{1}{\hbar}\cint{x}{x_1}p(x')\dd x'\right) & x < x_1 \\
+    \frac{A_F}{\sqrt{\abs{p(x)}}}\exp\left[-\frac{1}{\hbar}\cint{x_1}{x}\abs{p(x')}\dd x'\right] + \frac{B_F}{\sqrt{\abs{p(x)}}}\exp\left[\frac{1}{\hbar}\cint{x_1}{x}\abs{p(x')}\dd x'\right] & x > x_1
+\end{cases} \]
+\[ \psi_\text{patch}(x) = a\text{Ai}(\nu x) + b\text{Bi}(\nu x), \quad \nu = \left(\frac{2mV'(x_1)}{\hbar^2}\right)^{\frac{1}{3}}. \]
+To match them up, let's first consider $x \lesssim x_1$. In this region,
+\[ p(x) \approx \hbar\sqrt{\nu^3(x_1-x)}. \]
+The WKB solution is thus approximately
+\[ \psi_\text{WKB}(x) \approx \frac{A_<}{\sqrt{\hbar}\nu^{3/4}(x_1-x)^{1/4}}\cos\left(\frac{2}{3}\nu^{3/2}(x_1-x)^{3/2}\right) + \frac{B_<}{\sqrt{\hbar}\nu^{3/4}(x_1-x)^{1/4}}\sin\left(\frac{2}{3}\nu^{3/2}(x_1-x)^{3/2}\right), \]
+while the asymptotic form of the patch wavefunction is
+\[ \psi_\text{patch} \approx \frac{a}{\sqrt{\pi}\nu^{1/4}(x_1-x)^{1/4}}\cos\left(\frac{2}{3}\nu^{3/2}(x_1-x)^{3/2}-\frac{\pi}{4}\right) + \frac{b}{\sqrt{\pi}\nu^{1/4}(x_1-x)^{1/4}}\sin\left(\frac{2}{3}\nu^{3/2}(x_1-x)^{3/2}-\frac{\pi}{4}\right). \]
+However, given that
+\[ \cos\left(x - \frac{\pi}{4}\right) = \frac{\sin(x)}{\sqrt{2}} + \frac{\cos(x)}{\sqrt{2}} \]
+\[ \sin\left(x - \frac{\pi}{4}\right) = \frac{\sin(x)}{\sqrt{2}} - \frac{\cos(x)}{\sqrt{2}}, \]
+the patch wavefunction can be rewritten as
+\[ \psi_\text{patch} \approx \frac{a-b}{\sqrt{2\pi}\nu^{1/4}(x_1-x)^{1/4}}\cos\left(\frac{2}{3}\nu^{3/2}(x_1-x)^{3/2}\right) + \frac{a+b}{\sqrt{2\pi}\nu^{1/4}(x_1-x)^{1/4}}\sin\left(\frac{2}{3}\nu^{3/2}(x_1-x)^{3/2}\right). \]
+The two solutions are equivalent subject to
+\[ a - b = \sqrt{\frac{2\pi}{\hbar\nu}}A_<, \quad a + b = \sqrt{\frac{2\pi}{\hbar\nu}} B_< \tag{1}\]
+
+Now we can turn to $x \gtrsim x_1$. In this region,
+\[ \abs{p(x)} \approx \hbar\sqrt{\nu^3(x-x_1)} \]
+The WKB solution is thus approximately
+\[ \psi_\text{WKB} \approx \frac{A_F}{\sqrt{\hbar}\nu^{3/4}(x-x_1)^{1/4}}\exp\left[-\frac{2}{3}\nu^{3/2}(x-x_1)^{3/2}\right] + \frac{B_F}{\sqrt{\hbar}\nu^{3/4}(x-x_1)^{1/4}}\exp\left[\frac{2}{3}\nu^{3/2}(x-x_1)^{3/2}\right], \]
+while the asymptotic form of the patch wavefunction is
+\[ \frac{a}{\sqrt{4\pi}\nu^{1/4}(x-x_1)^{1/4}}\exp\left[-\frac{2}{3}\nu^{3/2}(x-x_1)^{3/2}\right] + \frac{b}{\sqrt{\pi}\nu^{1/4}(x-x_1)^{1/4}}\exp\left[\frac{2}{3}\nu^{3/2}(x-x_1)^{3/2}\right] \]
+The two solutions are equivalent subjet to 
+\[ a = \sqrt{\frac{4\pi}{\hbar\nu}}A_F, \quad b = \sqrt{\frac{\pi}{\hbar\nu}}B_F. \tag{2}\]
+Combining the two conditions for equality gives
+\[ 2A_F - B_F = \sqrt{2}A_< \]
+\[ 2A_F + B_F = \sqrt{2}B_< \]
+
+\section*{Problem 2}
+The approximate wavefucntions around the turning points are
+\[ \psi_\text{WKB} = \begin{cases}
+    \frac{A_<}{\sqrt{p(x)}}\cos\left(\frac{1}{\hbar}\cint{x}{x_1}p(x')\dd x'\right) + \frac{B_<}{\sqrt{p(x)}}\sin\left(\cint{x}{x_1}p(x')\dd x'\right) & x \lesssim x_1 \\
+    \frac{A_F^{(1)}}{\sqrt{\abs{p(x)}}}\exp\left[-\frac{1}{\hbar}\cint{x_1}{x}\abs{p(x')}\dd x'\right] + \frac{B_F^{(1)}}{\sqrt{\abs{p(x)}}}\exp\left[\frac{1}{\hbar}\cint{x_1}{x}\abs{p(x')}\dd x'\right] & x \gtrsim x_1 \\
+    \frac{A_F^{(2)}}{\sqrt{\abs{p(x)}}}\exp\left[\frac{1}{\hbar}\cint{x}{x_2}\abs{p(x')}\dd x'\right] + \frac{B_F^{(2)}}{\sqrt{\abs{p(x)}}}\exp\left[-\frac{1}{\hbar}\cint{x}{x_2}\abs{p(x')}\dd x'\right] & x \lesssim x_2 \\
+    \frac{A_>}{\sqrt{p(x)}}\cos\left(\frac{1}{\hbar}\cint{x_2}{x}p(x')\dd x'\right) + \frac{B_>}{\sqrt{p(x)}}\sin\left(\cint{x_2}{x}p(x')\dd x'\right) & x \gtrsim x_2
+\end{cases} \]
+Requiring the two components within the barrier to be equivalent gives
+\[ \frac{A_F^{(1)}}{\sqrt{\abs{p(x)}}}\exp\left[-\frac{1}{\hbar}\cint{x_1}{x}\abs{p(x')}\dd x'\right] = \frac{A_F^{(2)}}{\sqrt{\abs{p(x)}}}\exp\left[\frac{1}{\hbar}\cint{x}{x_2}\abs{p(x')}\dd x'\right] \]
+\begin{align*}
+    \implies \frac{A_F^{(1)}}{A_F^{(2)}} & = \exp\left[\frac{1}{\hbar}\cint{x_1}{x}\abs{p(x')}\dd x'\right]\exp\left[\frac{1}{\hbar}\cint{x}{x_2}\abs{p(x')}\dd x'\right] \\
+    & = \exp\left[\frac{1}{\hbar}\cint{x_1}{x_2}\abs{p(x')}\dd x'\right] \\
+    & = \sqrt{T_1}
+\end{align*}
+and, similarly,
+\[ \frac{B_F^{(1)}}{B_F^{(2)}} = \frac{1}{\sqrt{T_1}} \]
+Using the result from the last problem we can write the coefficients inside the barrier in terms of the external coefficients:
+\[ A_F^{(1,2)} = \frac{1}{2\sqrt{2}}(A_{<,>} + B_{<,>}) \]
+\[ B_F^{(1,2)} = \frac{1}{\sqrt{2}}(B_{<,>} - B_{<,>}) \]
+Combining these, we can write the left-interior coefficients in terms of the right-transmission region coefficients:
+\[ A_F^{(1)} = \frac{\sqrt{T_1}}{2\sqrt{2}}(A_> + B_>) \]
+\[ B_F^{(1)} = \frac{1}{\sqrt{2T_1}}(B_> - A_>) \]
+We can write the transmission regions as superpositions of left and right going waves:
+\[ \psi_\text{WKB} = \frac{A_< - iB_<}{2}\exp\left[\frac{i}{\hbar}\cint{x}{x_1}p(x')\dd x'\right] + \frac{A_< + iB_<}{2}\exp\left[-\frac{i}{\hbar}\cint{x}{x_1}p(x')\dd x'\right] \quad x \lesssim x_1  \]
+\[ \psi_\text{WKB} = \frac{A_> + iB_>}{2}\exp\left[-\frac{i}{\hbar}\cint{x_2}{x}p(x')\dd x'\right] + \frac{A_> - iB_>}{2}\exp\left[\frac{i}{\hbar}\cint{x_2}{x}p(x')\dd x'\right] \quad x \gtrsim x_2  \]
+To model the action of a wave incident on the barrier from the left side, we set
+\[ A_< - iB_< = 0 \]
+The trasnmission probability is then
+\[ T = \magsq{\frac{A_> - iB_>}{A_< + iB_<}} \]
+Combining with the results above gives
+\[ T = \frac{T_1}{1 + T_1/4} \]
+
+
+\section*{Problem 3}
+The approimate tunneling probability is given by
+\begin{align*}
+    T & \approx \exp\left[-\frac{2}{\hbar}\cint{x_1}{x_2}\abs{p(x')}\dd x'\right] \\
+    & = \exp\left[-\frac{2}{\hbar}\cint{0}{\frac{V_0-E}{e\mathscr{E}}} \abs{\sqrt{2m(E - V_0 + e\mathscr{E}x)}} \dd x' \right] \\
+    & = \exp\left[-\frac{2}{\hbar}\cint{0}{\frac{V_0-E}{e\mathscr{E}}} \sqrt{2m(V_0 - E - e\mathscr{E}x)} \dd x' \right] \\
+    & = \exp\left[-\frac{2\left(2m(V_0-E)\right)^{3/2}}{3\hbar me\mathscr{E}}\right]
+\end{align*}
+If $E = V_0 - W$ then
+\[ T \approx \exp\left[-\frac{2(2mW)^{3/2}}{3\hbar me\mathscr{E}}\right] \]
+
+
+\end{document}

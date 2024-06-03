@@ -1,0 +1,238 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{mathtools}
+\usepackage{mathrsfs}
+\usepackage{enumitem}
+\usepackage{physics}
+\usepackage{tensor}
+
+\usepackage{tikz}
+\usetikzlibrary{calc,decorations.markings,patterns}
+
+\newcommand{\magsq}[1]{\big|#1\big|^2}
+\newcommand{\avg}[1]{\left<#1\right>}
+\newcommand{\fullint}{\int_{-\infty}^\infty}
+\newcommand{\fullintd}[1]{\fullint\dd#1\:}
+\newcommand{\cint}[2]{\int_{#1}^{#2}}
+\newcommand{\cintd}[3]{\cint{#1}{#2}\dd#3\:}
+
+\begin{document}
+
+\title{Homework 1}
+\author{Sean Ericson \\ Phys 664}
+\maketitle
+
+\section*{Problem 1}
+Let
+\[ \Lambda_{\;\nu}^{\mu} = \delta_{\;\nu}^{\mu} + \delta\omega_{\;\nu}^{\mu} \]
+Then, (keeping only terms linear in $\delta\omega$)
+\begin{align*}
+    g_{\rho\sigma} &= g_{\mu\nu}\Lambda_{\;\rho}^\mu\Lambda_{\;\sigma}^\nu \\
+    &= g_{\mu\nu}\left(\delta_{\;\rho}^\mu + \delta\omega_{\;\rho}^\mu\right)\left(\delta_{\;\rho}^\mu + \delta\omega_{\;\sigma}^\nu\right) \\
+    &= g_{\mu\nu}\delta_{\;\rho}^\mu\delta_{\;\rho}^\mu + g_{\mu\nu}\delta_{\;\rho}^\mu\delta\omega_{\;\sigma}^\nu + g_{\mu\nu}\delta\omega_{\;\rho}^\mu\delta_{\;\rho}^\mu + O(\delta\omega^2)\\
+    &= g_{\rho\sigma} + \delta\omega_{\rho\sigma} + \delta\omega_{\sigma\rho}
+\end{align*}
+\[ \implies 0 = \delta\omega_{\rho\sigma} + \delta\omega_{\sigma\rho} \]
+\[ \implies \boxed{\delta\omega_{\rho\sigma} = -\delta\omega_{\sigma\rho}} \]
+
+
+\section*{Problem 2}
+Starting with
+\[ U(\Lambda)^{-1}U(\Lambda')U(\Lambda) = U(\Lambda^{-1}\Lambda'\Lambda) \]
+we can expand $\Lambda'$ to $\delta_{\;\nu}^{\mu} + \delta{\omega'}_{\;\nu}^{\mu}$. On the left hand side this gives
+\begin{align*}
+    U(\Lambda)^{-1}U(\Lambda')U(\Lambda) &= U(\Lambda)^{-1}U(\delta_{\;\nu}^{\mu} + \delta{\omega'}_{\;\nu}^{\mu})U(\Lambda) \\
+    &= U(\Lambda)^{-1}\left(\mathbb{I} + \frac{i}{2}\delta{\omega'}_{\;\nu}^\mu\right)U(\Lambda) \\
+    &= \mathbb{I} + \frac{i}{2}\delta{\omega'}_{\mu\nu}U(\Lambda)^{-1}M^{\mu\nu}U(\Lambda)
+\end{align*}
+On the right hand side we get
+\begin{align*}
+    U(\Lambda^{-1}\Lambda'\Lambda) &= U((\Lambda^{-1})_{\;\alpha}^{\mu}{\Lambda'}_{\;\beta}^{\alpha}\Lambda_{\;\nu}^{\beta}) \\
+    &= U(\Lambda_{\alpha}^{\;\mu}(\delta_{\;\beta}^\alpha + \delta{\omega'}_{\;\beta}^\alpha)\Lambda_{\;\nu}^{\beta}) \\
+    &= U(\delta_{\;\mu}^\nu + \Lambda_\alpha^{\;\mu}\Lambda_{\;\nu}^\beta\delta{\omega'}_{\;\beta}^\alpha) \\
+    &= U(\delta_{\;\mu}^\nu + \delta\tilde{\omega}_{\;\nu}^\mu) \\
+    &= \mathbb{I} + \frac{i}{2}\delta\tilde{\omega}_{\mu\nu}M^{\mu\nu}
+\end{align*}
+Where
+\[ \delta\tilde{\omega}_{\;\nu}^\mu = \Lambda_\alpha^{\;\mu}\Lambda_{\;\nu}^\beta\delta{\omega'}_{\;\beta}^\alpha) \]
+Now,
+\begin{align*}
+    \delta\tilde{\omega}_{\mu\nu} &= g_{\mu\rho}\delta\tilde{\omega}_{\;\nu}^\rho \\
+    &= g_{\kappa\sigma}\Lambda_{\;\mu}^{\kappa}\Lambda_{\;\rho}^\sigma\Lambda_\alpha^{\;\rho}\Lambda_{\;\nu}^\beta\delta{\omega'}_{\;\beta}^\alpha \\
+    &= g_{\kappa\sigma}\Lambda_{\;\mu}^{\kappa}\delta_{\;\alpha}^\sigma\Lambda_{\;\nu}^\beta\delta{\omega'}_{\;\beta}^\alpha \\
+    &= g_{\kappa\sigma}\Lambda_{\;\mu}^\kappa\Lambda_{\;\nu}^\beta\delta{\omega'}_{\;\beta}^\alpha \\
+    &= \Lambda_{\;\mu}^\kappa\Lambda_{\;\nu}^\beta\delta{\omega'}_{\kappa\beta}
+\end{align*}
+So we have that
+\[ \mathbb{I} + \frac{i}{2}\delta{\omega'}_{\mu\nu}U(\Lambda)^{-1}M^{\mu\nu}U(\Lambda) = \mathbb{I} + \frac{i}{2}\Lambda_{\;\mu}^\kappa\Lambda_{\;\nu}^\beta\delta{\omega'}_{\kappa\beta}M^{\mu\nu} \]
+\[ \implies \delta{\omega'}_{\mu\nu}U(\Lambda)^{-1}M^{\mu\nu}U(\Lambda) = \delta{\omega'}_{\kappa\beta}\Lambda_{\;\mu}^\kappa\Lambda_{\;\nu}^\beta M^{\mu\nu} \]
+\[ \implies \delta{\omega'}_{\mu\nu}U(\Lambda)^{-1}M^{\mu\nu}U(\Lambda) = \delta{\omega'}_{\mu\nu}\Lambda_{\;\kappa}^\mu\Lambda_{\;\beta}^\nu M^{\kappa\beta} \]
+Now we can equate the antisymmetric parts on both sides. Since $M^{\alpha\beta}$ is already antisymmetric, we can simply cancel $\delta{\omega'}_{\mu\nu}$, giving (after swapping out the contracted indicies to match the desired form):
+\[ \boxed{U(\Lambda)^{-1}M^{\mu\nu}U(\Lambda) = \Lambda_{\;\rho}^\mu\Lambda_{\;\sigma}^\nu M^{\rho\sigma}} \]
+
+
+
+\section*{Problem 3}
+Starting with the solution from Problem 2, we can again expand $\Lambda$. On the left-hand side this gives
+\begin{align*}
+    U(\Lambda)^{-1}M^{\mu\nu}U(\Lambda) &= U(\delta_{\;\sigma}^\rho + \delta\omega_{\;\sigma}^\rho)^{-1}M^{\mu\nu}U(\delta_{\;\beta}^\alpha + \delta\omega_{\;\beta}^\alpha) \\
+    &= \left(\mathbb{I} - \frac{i}{2}\delta\omega_{\rho\sigma}M^{\rho\sigma}\right)M^{\mu\nu}\left(\mathbb{I} + \frac{i}{2}\delta\omega_{\alpha\beta}M^{\alpha\beta}\right) \\
+    &= M^{\mu\nu} - \frac{i}{2}\delta\omega_{\rho\sigma}M^{\rho\sigma}M^{\mu\nu} + \frac{i}{2}\delta\omega_{\alpha\beta}M^{\mu\nu}M^{\alpha\beta} + O(\delta\omega^2)
+\end{align*}
+The right-hand side gives
+\begin{align*}
+    \Lambda_{\;\rho}^\mu\Lambda_{\;\sigma}^\nu M^{\rho\sigma} &= (\delta_{\;\rho}^\mu + \delta\omega_{\;\rho}^\mu)(\delta_{\;\sigma}^\nu + \delta\omega_{\;\sigma}^\nu)M^{\rho\sigma} \\
+    &= M^{\mu\nu} + \delta\omega_{\;\sigma}^\nu M^{\mu\sigma} + \delta\omega_{\;\rho}^\mu M^{\rho\nu} + O(\delta\omega^2)
+\end{align*}
+Re-equating the two sides, canceling the first term in each, and swapping some contracted indicies gives
+\[ \frac{i}{2}\left(\delta\omega_{\alpha\beta}M^{\mu\nu}M^{\alpha\beta} - \delta\omega_{\alpha\beta}M^{\alpha\beta}M^{\mu\nu}\right) = \delta\omega_{\;\alpha}^\nu M^{\mu\alpha} + \delta\omega_{\;\alpha}^\mu M^{\alpha\nu} \]
+To get the index locations on the right to agree with the left, we can toss on some metrics:
+\begin{align*}
+    \delta\omega_{\;\alpha}^\nu M^{\mu\alpha} + \delta\omega_{\;\alpha}^\mu M^{\alpha\nu} &= g^{\nu\beta}\delta\omega_{\beta\alpha}M^{\mu\alpha} + g^{\mu\alpha}\delta\omega_{\beta\alpha}M^{\beta\nu} \\
+    &= -g^{\nu\beta}\delta\omega_{\alpha\beta}M^{\mu\alpha} + g^{\mu\beta}\delta\omega_{\alpha\beta}M^{\alpha\nu}
+\end{align*}
+In the first term of the second line above, the antisymmetry of $\delta\omega$ was used to swap its indicies. In the second term, the contracted indicies were simply relabeled. The full expression is now
+\begin{align*}
+    \delta\omega_{\alpha\beta}M^{\mu\nu}M^{\alpha\beta} - \delta\omega_{\alpha\beta}M^{\alpha\beta}M^{\mu\nu} &= -2i\left(-g^{\nu\beta}\delta\omega_{\alpha\beta}M^{\mu\alpha} + g^{\mu\beta}\delta\omega_{\alpha\beta}M^{\alpha\nu} \right) \\
+    &= -i\left(-g^{\nu\beta}\delta\omega_{\alpha\beta}M^{\mu\alpha} + g^{\mu\beta}\delta\omega_{\alpha\beta}M^{\alpha\nu} + g^{\nu\alpha}\delta\omega_{\alpha\beta}M^{\mu\beta} - g^{\mu\beta}\delta\omega_{\alpha\beta}M^{\alpha\nu} \right)
+\end{align*}
+Just as in Problem 2, the antisymmetry of $M^{\alpha\beta}$ allows us to cancel all the $\delta\omega_{\alpha\beta}$. Swapping contracted indicies again to match the desired result, we have
+\[ M^{\mu\nu}M^{\rho\sigma} - M^{\rho\sigma}M^{\mu\nu} = i\left(g^{\nu\beta}M^{\mu\alpha} - g^{\mu\beta}M^{\alpha\nu} - g^{\nu\alpha}M^{\mu\beta} + g^{\mu\beta}M^{\alpha\nu} \right) \]
+\[ \implies \boxed{\comm{M^{\mu\nu}}{M^{\rho\sigma}} = \left(g^{\mu\rho}M^{\nu\sigma} - (\mu \leftrightarrow \nu)\right) - (\rho \leftrightarrow \sigma)} \]
+
+
+\section*{Problem 4}
+To show that
+\[ \comm{J_i}{J_j} = i\varepsilon_{ijk}J_k \]
+we can start by expressing the $J$s in terms of the $M$s:
+\[ J_1 = -\frac{1}{2}\varepsilon_{1jk}M^{jk} = -\frac{1}{2}\left(M^{23} - M^{32}\right) = M^{32} \]
+\[ J_2 = -\frac{1}{2}\varepsilon_{2jk}M^{jk} = -\frac{1}{2}\left(M^{31} - M^{13}\right) = M^{13} \]
+\[ J_3 = -\frac{1}{2}\varepsilon_{3jk}M^{jk} = -\frac{1}{2}\left(M^{12} - M^{21}\right) = M^{21} \]
+Now, using the result from Problem 3, we have that
+\begin{align*}
+    \comm{J_1}{J_2} &= \comm{M^{32}}{M^{13}} \\
+    &= i\left(g^{31}M^{23} - g^{21}M^{33} - g^{33}M^{21} + g^{23}M^{31}\right) \\
+    &= iM^{21} \\
+    &= iJ_3
+\end{align*}
+Taking cyclic permutations of the above result gives
+\[ \boxed{\comm{J_i}{J_j} = i\varepsilon_{ijk}J_k} \]
+\\
+For the next identity, consider
+\begin{align*}
+    \comm{J_1}{K_2} &= \comm{M^{32}}{M^{20}} \\
+    &= i\left(g^{32}M^{20} - g^{22}M^{30} - g^{30}M^22 + g^{20}M^{32}\right) \\
+    &= iM^{30} \\
+    &= iK_3
+\end{align*}
+Again, taking cyclic permutations of the above result gives
+\[ \boxed{\comm{J_i}{K_j} = i\varepsilon_{ijk}K_k} \]
+\\
+Finally,
+\begin{align*}
+    \comm{K_i}{K_j} &= \comm{M^{10}}{M^{20}} \\
+    &= i\left(g^{12}M^{00} - g^{02}M^{10} - g^{10}M^{02} + g^{00}M^{12}\right) \\
+    &= iM^{12} \\
+    &= -iJ_3
+\end{align*}
+taking cyclic permutations of the above result then gives
+\[ \boxed{\comm{K_i}{K_j} = -i\varepsilon_{ijk}J_k} \]
+
+\section*{Problem 5}
+\begin{enumerate}[label=(\alph*)]
+    \item Starting with
+    \[ U(\Lambda)^{-1}\partial^\mu\phi(x)U(\Lambda) = \Lambda_{\;\rho}^\mu\bar{\partial}^\mu\phi(\Lambda^{-1}x) \]
+    we can expand both sides using $\Lambda = 1 + \delta\omega$. Starting with the left-hand side this gives
+    \begin{align*}
+        U(\Lambda)^{-1}\partial^\mu\phi(x)U(\Lambda) &= \partial^\mu U(\Lambda)^{-1}\phi(x)U(\Lambda) \\
+        &= \partial^\mu \left(\mathbb{I} - \delta\omega_{\alpha\beta}M^{\alpha\beta}\right)\phi(x)\left(\mathbb{I} + \delta\omega_{\alpha\beta}M^{\alpha\beta}\right) \\
+        &= \partial^\mu \left[\phi(x) + \frac{i}{2}\delta\omega_{\alpha\beta}\left(\phi(x)M^{\alpha\beta} - M^{\alpha\beta}\phi(x)\right)\right] \\
+        &= \partial^\mu \left[\phi(x) + \frac{i}{2}\comm{\phi(x)}{M^{\alpha\beta}}\right] \\
+        &= \partial^\mu \phi(x) + \frac{i}{2}\comm{\partial^\mu\phi(x)}{M^{\alpha\beta}}
+    \end{align*}
+    while the right-hand side gives
+    \begin{align*}
+        \Lambda_{\;\rho}^\mu\bar{\partial}^\mu\phi(\Lambda^{-1}x) &= \partial^\mu \phi(\Lambda^{-1}x) \\
+        &= \partial^\mu\phi((1-\delta\omega)x) \\
+        &= \partial^\mu\phi(x - x\delta\omega) \\
+        &= \partial^\mu\left(\phi(x) - \delta\omega_{\mu\nu}x^\nu\partial^\mu\phi(x)\right) 
+    \end{align*}
+    Canceling the first terms, we now have that
+    \[ \frac{i}{2}\delta\omega_{\alpha\beta}\comm{\partial^\mu\phi(x)}{M^{\alpha\beta}} = \partial^\mu\left(\delta\omega_{\alpha\beta}x^\beta\delta^\alpha\phi(x)\right) \]
+    Rearranging terms, we have that
+    \begin{align*}
+        \delta\omega_{\alpha\beta}\comm{\partial^\mu\phi(x)}{M^{\alpha\beta}} &= -2i\partial^\mu\left(\delta\omega_{\alpha\beta}x^\beta\delta^\alpha\phi(x)\right) \\
+        &= -i\partial^\mu\left(\delta\omega_{\alpha\beta}x^\beta\delta^\alpha\phi(x) + \delta\omega_{\beta\alpha}x^\alpha\partial^\beta\phi(x)\right) \\
+        &= -i\partial^\mu\left(\delta\omega_{\alpha\beta}x^\beta\partial^\alpha\phi(x) - \delta\omega_{\alpha\beta}x^\alpha\partial^\beta\phi(x)\right) \\
+        &= -i\partial^\mu\delta\omega_{\alpha\beta}\left(x^\beta\partial^\alpha\phi(x) - x^\alpha\partial^\beta\phi(x)\right) \\
+        &= \delta\omega_{\alpha\beta}\partial^\mu\mathcal{L}^{\alpha\beta}\phi(x)
+    \end{align*}
+    Now we can cancel the $\delta\omega_{\alpha\beta}$, giving
+    \[ \comm{\partial^\mu\phi(x)}{M^{\alpha\beta}} = \partial^\mu\mathcal{L}^{\alpha\beta}\phi(x) \]
+    We can now use the chain rule to expand the right-hand side further
+    \begin{align*}
+        \partial^\mu\mathcal{L}^\alpha\beta\phi(x) &= \mathcal{L}^\alpha\beta\partial^\mu\phi(x) + \left(\partial^\mu\mathcal{L}^{\alpha\beta}\right)\phi(x) \\
+        &= \mathcal{L}^{\alpha\beta}\partial^\mu\phi(x) -i\partial^\mu\left(x^\alpha\partial^\beta - x^\beta\partial^\alpha\right)\phi(x) \\
+        &= \mathcal{L}^{\alpha\beta}\partial^\mu\phi(x) -i\left(g^{\mu\alpha}\partial^\beta - g^{\mu\beta}\partial^\alpha\right)\phi(x) \\
+        &= \mathcal{L}^{\alpha\beta}\partial^\mu\phi(x) -i\left(g^{\alpha\mu}\delta_{\;\tau}^\beta - g^{\beta\mu}\delta_{\;\tau}^\alpha\right)\partial^\tau\phi(x) \\
+        &= \mathcal{L}^{\alpha\beta}\partial^\mu\phi(x) + \left(S_V^{\alpha\beta}\right)_{\;\tau}^{\mu}\partial^\tau\phi(x)
+    \end{align*}
+    which finally gives the desired result
+    \[ \boxed{\comm{\partial^\mu\phi(x)}{M^{\alpha\beta}} = \mathcal{L}^\alpha\beta\partial^\mu\phi(x) + \left(S_V^{\alpha\beta}\right)_{\;\tau}^{\mu}\partial^\tau\phi(x)} \]
+
+    \setcounter{enumi}{2}
+    \item To begin, let's right out $S_V^{12}$ as a matrix:
+    \begin{align*}
+        S_V^{12} &= -i\left(g^{1\rho}\delta_{\;\tau}^2 - g^{2\rho}\delta_{\;\tau}^1\right) \\
+        &= -i\left[\mqty(0\\-1\\0\\0)\mqty(0&0&1&0) - \mqty(0\\0\\-1\\0)\mqty(0&1&0&0) \right] \\
+        &= -i\left[\mqty(0&0&0&0\\0&0&-1&0\\0&0&0&0\\0&0&0&0) - \mqty(0&0&0&0\\0&0&0&0\\0&-1&0&0\\0&0&0&0)\right] \\
+        &= \mqty(0&0&0&0\\0&0&i&0\\0&-i&0&0\\0&0&0&0)
+    \end{align*}
+    Now let $A = i\left(S_V^{12}\right)$. Powers of $A$ are given by
+    \begin{align*}
+        A^1 &= \mqty(0&0&0&0\\0&0&-1&0\\0&1&0&0\\0&0&0&0) \\
+        A^2 &= \mqty(0&0&0&0\\0&-1&0&0\\0&0&-1&0\\0&0&0&0) \\
+        A^3 &= \mqty(0&0&0&0\\0&0&1&0\\0&-1&0&0\\0&0&0&0) \\
+        &= -A
+    \end{align*}
+    Now we can expand $\exp(-i\theta S_V^{12})$ as follows:
+    \begin{align*}
+        \exp(-i\theta S_V^{12}) &= e^{-\theta A} \\
+        &= \mathbb{I} - \theta A + \frac{1}{2!}\theta^2A^2 - \frac{1}{3!}\theta^3A^3 + \frac{1}{4!}\theta^4A^4 - \frac{1}{5!}\theta^5A^5 + \frac{1}{6!}\theta^6A^6 + \cdots \\
+        &= \mathbb{I} - \theta A + \frac{1}{2!}\theta^2A^2 + \frac{1}{3!}\theta^3A - \frac{1}{4!}\theta^4A^2 -\frac{1}{5!}\theta^5A + \frac{1}{6!}\theta^6A^2 + \cdots \\
+        &= \mathbb{I} + \left(-\theta + \frac{1}{3!}\theta^3 - \frac{1}{5!}\theta^5 + \cdots\right)A + \left(\frac{1}{2!}\theta^2 - \frac{1}{4!}\theta^4 + \frac{1}{6!}\theta^6 + \cdots\right)A^2 \\
+        &= \mathbb{I} - (\sin\theta)A + (1-\cos\theta)A^2
+    \end{align*}
+    Plugging in the above matrix expressions for $A$ and $A^2$ gives the desired result:
+    \[ \boxed{\Lambda = \mqty(1&0&0&0\\0&\cos\theta&-\sin\theta&0\\0&\sin\theta&\cos\theta&0\\0&0&0&1)} \]
+
+    \item As in part c, we can begin by writing out $S_V^{30}$ as a matrix:
+    \begin{align*}
+        S_V^{30} &= -i\left(g^{3\rho}\delta_{\;\tau}^0 - g^{0\rho}\delta_{\;\tau}^3 \right) \\
+        &= -i\left[\mqty(0\\0\\0\\-1)\mqty(1&0&0&0) - \mqty(1\\0\\0\\0)\mqty(0&0&0&1)\right] \\
+        &= -i\left[\mqty(0&0&0&0\\0&0&0&0\\0&0&0&0\\-1&0&0&0) - \mqty(0&0&0&1\\0&0&0&0\\0&0&0&0\\0&0&0&0)\right] \\
+        &= \mqty(0&0&0&i\\0&0&0&0\\0&0&0&0\\i&0&0&0)
+    \end{align*}
+    Now, letting $A = i\left(S_V^{30}\right)$, powers of $A$ are given by
+    \begin{align*}
+        A &= \mqty(0&0&0&-1\\0&0&0&0\\0&0&0&0\\-1&0&0&0) \\
+        A^2 &= \mqty(1&0&0&0\\0&0&0&0\\0&0&0&0\\0&0&0&1) \\
+        A^3 &= \mqty(0&0&0&-1\\0&0&0&0\\0&0&0&0\\-1&0&0&0) \\
+        &= A
+    \end{align*}
+    Now we can expand $\exp(i\eta S_V^{30})$ as follows:
+    \begin{align*}
+        \exp(i\eta S_V^{30}) &= e^{\eta A} \\
+        &= \mathbb{I} + \eta A + \frac{1}{2!}\eta^2A^2 + \frac{1}{3!}\eta^3A^3 + \frac{1}{4!}\eta^4A^4 + \frac{1}{5!}\eta^5A^5 + \cdots \\
+        &= \mathbb{I} + \eta A + \frac{1}{2!}\eta^2A^2 + \frac{1}{3!}\eta^3A + \frac{1}{4!}\eta^4A^2 + \frac{1}{5!}\eta^5A + \cdots \\
+        &= \mathbb{I} + \left(\eta + \frac{1}{3!}\eta^3 + \frac{1}{5!}\eta^5 + \cdots\right)A + \left(\frac{1}{2!}\eta^2 + \frac{1}{4!}\eta^4 + \cdots\right)A^2 \\
+        &= \mathbb{I} + (\sinh\eta)A + (\cosh\eta - 1)A^2
+    \end{align*}
+    Plugging in the above matrix expressions for $A$ and $A^2$ gives the desired result:
+    \[ \boxed{\Lambda = \mqty(\cosh\eta&0&0&\sinh\eta\\0&1&0&0\\0&0&0&1\\\sinh\eta&0&0&\cosh\eta)} \]
+\end{enumerate}
+
+
+\end{document}

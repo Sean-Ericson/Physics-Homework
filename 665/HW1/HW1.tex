@@ -1,0 +1,141 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{mathtools}
+\usepackage{mathrsfs}
+\usepackage{enumitem}
+\usepackage{physics}
+\usepackage{empheq}
+
+\usepackage{tikz}
+\usetikzlibrary{calc,decorations.markings,patterns}
+
+\newcommand{\magsq}[1]{\big|#1\big|^2}
+\newcommand{\avg}[1]{\left<#1\right>}
+\newcommand{\fullint}{\int_{-\infty}^\infty}
+\newcommand{\fullintd}[1]{\fullint\dd#1\:}
+\newcommand{\cint}[2]{\int_{#1}^{#2}}
+\newcommand{\cintd}[3]{\cint{#1}{#2}\dd#3\:}
+
+\begin{document}
+
+\title{Homework 1}
+\author{Sean Ericson \\ Phys 665}
+\maketitle
+
+\section*{Problem 33.1}
+An arbitrary rank-2 tensor $B^{\mu\nu}(x)$ can be decomposed as
+\[ B^{\mu\nu}(x) = A^{\mu\nu}(x) + S^{\mu\nu}(x) + \frac{1}{4}g^{\mu\nu}T(x), \]
+where
+\[ A^{\mu\nu}(x) = -A^{\mu\nu}(x) \]
+\[ S^{\mu\nu}(x) = S^{\nu\mu}(x); \quad g_{\mu\nu}S^{\mu\nu}(x) = 0. \]
+The trace component is obviously given by
+\[ T(x) = g_{\mu\nu}B^{\mu\nu}, \]
+while the antisymmetric part is given by the antisymmetric combination
+\[ A^{\mu\nu} = \frac{1}{2}\left(B^{\mu\nu} - B^{\nu\mu}\right). \]
+The symmetric part is then the symmetric combination, minus the trace:
+\[ S^{\mu\nu} = \frac{1}{2}\left(B^{\mu\nu} + B^{\mu\nu}\right) - \frac{1}{4}g^{\mu\nu}g_{\alpha\beta}B^{\alpha\beta}\]
+
+
+\section*{Problem 33.2}
+We have that
+\[ N_i = \frac{1}{2}(J_i - iK_i); \quad N_i^\dag = \frac{1}{2}(J_i + iK_i), \]
+as well as
+\begin{align*}
+    \comm{J_i}{J_j} &= i\epsilon_{ijk}J_k \\ 
+    \comm{J_i}{K_j} &= i\epsilon_{ijk}K_k \\
+    \comm{K_i}{K_j} &= -i\epsilon_{ijk}J_K.
+\end{align*}
+Now,
+\begin{align*}
+    \comm{N_i}{N_j} &= \frac{1}{4}\comm{J_i - iK_i}{J_j - iK_j} \\
+    &= \frac{1}{4}\left[\comm{J_i}{J_j} - i\comm{J_i}{K_j} - i\comm{K_i}{J_j} - \comm{K_i}{K_j}\right] \\
+    &= \frac{1}{4}\left[i\epsilon_{ijk}J_k - i(i\epsilon_{ijk}K_k) -i(-i\epsilon_{jik}K_k) - (-i\epsilon_{ijk}J_k)\right] \\
+    &= \frac{1}{4}\left[i\epsilon_{ijk}J_k + \epsilon_{ijk}K_k + \epsilon_{ijk}K_k + i\epsilon_{ijk}J_k\right] \\
+    &= \frac{1}{2}\epsilon_{ijk}(J_k - iK_k) \\
+    &= i\epsilon_{ijk}N_k.
+\end{align*}
+Next,
+\begin{align*}
+    \comm{N_i^\dag}{N_j^\dag} &= \comm{N_j}{N_i}^\dag \\
+    &= (i\epsilon_{jik}N_k)^\dag \\ 
+    &= -i\epsilon_{jik}N_k^\dag \\
+    &= i\epsilon_{ijk}N_k^\dag.
+\end{align*}
+Finally,
+\begin{align*}
+    \comm{N_i}{N_j^\dag} &= \frac{1}{4}\comm{J_i - iK_i}{J_j + iK_j} \\
+    &= \frac{1}{4}\left[\comm{J_i}{J_j} + i\comm{J_i}{K_j} - i\comm{K_i}{J_j} + \comm{K_i}{K_j}\right] \\
+    &= \frac{1}{4}\left[i\epsilon_{ijk}J_k + i(i\epsilon_{ijk}K_k) -i(-i\epsilon_{jik}K_k) + (-i\epsilon_{ijk}J_k)\right] \\
+    &= \frac{1}{4}\left[i\epsilon_{ijk}J_k - \epsilon_{ijk}K_k + \epsilon_{ijk}K_k - i\epsilon_{ijk}J_k\right] \\
+    &= 0
+\end{align*}
+
+
+\section*{Problem 34.2}
+Let's use the $(-,+,+,_)$ metric for this one. Now, given that
+\[ \left(S_L^{ij}\right) = \frac{1}{2}\epsilon^{ijk}\sigma_k, \]
+\[ \left(S_L^{k0}\right) = \frac{1}{2}i\sigma_k, \]
+and
+\[ \comm{\sigma_i}{\sigma_j} = 2i\epsilon_{ijk}\sigma_k, \]
+we can see that
+\begin{align*}
+    \comm{S_L^{ij}}{S_L^{ij'}} &= \frac{1}{4}\comm{\epsilon^{ijk}\sigma_k}{\epsilon^{ij'k'}\sigma_{k'}} \\
+    &= \frac{1}{4}\epsilon^{ijk}\epsilon^{ij'k'}\comm{\sigma_k}{\sigma_{k'}} \\
+    &= \frac{i}{2}\epsilon^{ijk}\epsilon^{ij'k'}\epsilon_{kk'l}\sigma_l \\
+    &= \frac{i}{2}\epsilon^{ijk}\left(\delta_{\;l}^{i}\delta_{\;k}^{j'} - \delta_{\;k}^{i}\delta_{\;l}^{j'}\right)\sigma_l \\
+    &= \frac{i}{2}\epsilon^{ijk}\delta_{\;l}^{i}\delta_{\;k}^{j'}\sigma_l - \frac{i}{2}\epsilon^{ijk}\delta_{\;k}^{i}\delta_{\;l}^{j'}\sigma_l \\
+    &= \frac{i}{2}\epsilon^{ijj'}\sigma_l - \frac{i}{2}\epsilon^{iji}\sigma_{j'} \\
+    &= \frac{i}{2}\epsilon^{ijj'}\sigma_l \\
+    &= i\left(S_L^{jj'}\right)
+\end{align*}
+Is this consistent with the generator commutation relation? It is, as can be seen by
+\[ i\left[g^{ii}\left(S_L^{jj'}\right) - g^{ji'}\left(S_L^{ij'}\right) - g^{ij}\left(S_L^{ji}\right) + g^{jj'}\left(S_L^{ii}\right)\right] = iS_L^{jj'} \]
+Next, consider
+\begin{align*}
+    \comm{S_L^{k0}}{S_L^{k'0}} &= -\frac{1}{4}\comm{\sigma_k}{\sigma_{k'}} \\
+    &= -\frac{i}{2}\epsilon_{kk'l}\sigma_l \\
+    &= -iS_L^{kk'}.
+\end{align*}
+This is also consistent with the generator commutation relation:
+\[ i\left[g^{kk'}\left(S_L^{00}\right) - g^{0k}\left(S_L^{k0}\right) - g^{k0}\left(S_L^{0k'}\right) + g^{00}\left(S_L^{kk'}\right)\right] = iS_L^{kk'} \]
+
+
+\section*{Problem 34.3}
+Consider
+\[ \epsilon^{\mu\nu\rho\sigma}\epsilon_{\alpha\beta\gamma\sigma} = \epsilon^{\mu\nu\rho 0}\epsilon_{\alpha\beta\gamma 0} + \epsilon^{\mu\nu\rho 1}\epsilon_{\alpha\beta\gamma 1} + \epsilon^{\mu\nu\rho 2}\epsilon_{\alpha\beta\gamma 2} + \epsilon^{\mu\nu\rho 3}\epsilon_{\alpha\beta\gamma 3}. \]
+For any 
+\[ \{\mu, \nu, \rho\} \subset \{0, 1, 2, 3\}, \]
+it is clear that at most one of these terms can be non-zero. As an example, let's assume $\{\mu, \nu, \rho\}$ and $\{\alpha, \beta, \gamma\}$ are both permuatations of $\{1, 2, 3\}$. In this case, only the first term above will be non-zero. This term will be $-1$ if both sets are even permuatations \textit{or} if both sets are odd permuatations. Otherwise, the term will be $+1$. (Note that this is because $\epsilon$ with upper indices assigns $+1$ to even permutations, $-1$ to odd permutations, and vice-versa for $\epsilon$ with lower indicies) Continuing the exmaple, consider the case in which 
+\[ \{\mu, \nu, \rho\} = \{1, 2, 3\}. \]
+The assigments of ${\alpha, \beta, \gamma}$ that will yeild a $-1$ are then
+\[ \{1,2,3\}, \;\; \{2,3,1\}, \;\; \{3,1,2\}, \]
+while the assigments that yield a $+1$ are
+\[ \{2,1,3\}, \;\; \{1,3,2\}, \;\; \{3,2,1\}. \]
+We can write out this specific example using Kronecker deltas as
+\[ -\delta_{\;1}^{1}\delta_{\;2}^{2}\delta_{\;3}^{3} - \delta_{\;2}^{1}\delta_{\;3}^{2}\delta_{\;1}^{3} - \delta_{\;3}^{1}\delta_{\;1}^{2}\delta_{\;2}^{3} + \delta_{\;2}^{1}\delta_{\;1}^{2}\delta_{\;3}^{3} + \delta_{\;1}^{1}\delta_{\;3}^{2}\delta_{\;2}^{3} + \delta_{\;3}^{1}\delta_{\;2}^{2}\delta_{\;1}^{3}. \]
+Or, using the indicies, this is just
+\[ -\delta_{\;\alpha}^{\mu}\delta_{\;\beta}^{\nu}\delta_{\;\gamma}^{\rho} - \delta_{\;\beta}^{\mu}\delta_{\;\gamma}^{\nu}\delta_{\;\alpha}^{\rho} - \delta_{\;\gamma}^{\mu}\delta_{\;\alpha}^{\nu}\delta_{\;\beta}^{\rho} + \delta_{\;\beta}^{\mu}\delta_{\;\alpha}^{\nu}\delta_{\;\gamma}^{\rho} + \delta_{\;\alpha}^{\mu}\delta_{\;\gamma}^{\nu}\delta_{\;\beta}^{\rho} + \delta_{\;\gamma}^{\mu}\delta_{\;\beta}^{\nu}\delta_{\;\alpha}^{\rho}. \]
+As the particular values in this example were chosen arbitrarily, it is clear that the above expression holds for any other assigment of the indicies. \\
+
+Next, consider
+\[ \epsilon^{\mu\nu\rho\sigma}\epsilon_{\alpha\beta\rho\sigma} = \epsilon^{\mu\nu 01}\epsilon_{\alpha\beta\gamma 01} + \cdots . \]
+There are $2!\binom{4}{2} = 12$ terms in the sum above (neglecting terms in which $\rho = \sigma$). For any
+\[ \{\mu, \nu\} \subset \{0,1,2,3\}, \]
+$2! = 2$ of the terms in the sum will be non-zero. The exact same reasoning about even/odd permutations applies, giving
+\[ -2\delta_{\;\alpha}^\mu\delta_{\;\beta}^\nu + 2\delta_{\;\beta}^\mu\delta_{\alpha}^\nu = -2(\delta_{\;\alpha}^\mu\delta_{\;\beta}^\nu - \delta_{\;\beta}^\mu\delta_{\alpha}^\nu) \]
+Finally, consider
+\[ \epsilon^{\mu\nu\rho\sigma}\epsilon_{\alpha\nu\rho\sigma} = \epsilon^{\mu 012}\epsilon_{\alpha 012} + \cdots . \]
+There are $3!\binom{4}{3} = 24$ terms in the above sum (neglecting terms in which any of the $\nu$, $\rho$, and $\sigma$ are equal). For any
+\[ \mu \in {0,1,2,3}, \]
+$3! = 6$ terms will be nonzero. Note that now there is no more freedom to assign $\mu$ and $\alpha$ different values, as the value of $\mu$ fixes the values of $\nu$, $\rho$, and $\sigma$, in turn fixing the value of $\alpha$. Thus,
+\[ \epsilon^{\mu\nu\rho\sigma}\epsilon_{\alpha\nu\rho\sigma} = - 6\delta_{\;\alpha}^\mu \]
+
+
+\section*{Problem 5}
+Most generally, a representation of a group is a homomorphism from the group to the set of linear operators on some vector space. In our case, the group is the Lorentz group, and the vector space is space of tensors (tensor fields, specifically). A reducible representation is one that can be written as the sum of representations of smaller dimension, whereas irriducible representations cannot. A prime example is the decomposition of an arbitrary rank-2 tensor into the antisymmetric, symmetric-traceless, and scalar parts as in problem 33.1. Under Lorentz transformations (the action of the group) these irriducible representations stay within their own subspaces. \\
+The generators of $SO(1,3)$ are the boost and angular momentum operators. These operators form two distinct representations of the $SO(3)$ Lie algebra. However, the representations for which the $j$ angular moementum number is an half-integer, it is the case that a rotation by $2\pi$ yields a minus sign. In this case, the representations are really representations of $SU(2)$.
+
+
+\end{document}

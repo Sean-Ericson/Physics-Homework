@@ -1,0 +1,35 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{enumitem}
+\usepackage{physics}
+
+\newcommand{\magsq}[1]{\big|#1\big|^2}
+\newcommand{\avg}[1]{\left<#1\right>}
+\newcommand{\fullint}{\int_{-\infty}^\infty}
+\newcommand{\fullintd}[1]{\fullint\dd#1\:}
+\newcommand{\cint}[2]{\int_{#1}^{#2}}
+\newcommand{\cintd}[3]{\cint{#1}{#2}\dd#3\:}
+
+\begin{document}
+	
+\title{Exercise Set 5}
+\author{Sean Ericson \\ Phys 632}
+\maketitle
+
+\section*{Exercise 1}
+It works!
+
+
+\section*{Exercise 2}
+\begin{align*}
+    M_{\alpha\beta} &= \frac{1}{3}M^{(0)}\delta_{\alpha\beta} + \frac{1}{4}M_\mu^{(1)}\epsilon_{\mu\alpha\beta} + M_{\alpha\beta}^{(2)} \\ 
+    & = \frac{1}{3}M_{\mu\mu}\delta_{\alpha\beta} + \frac{1}{4}\epsilon_{\mu\sigma\tau}(M_{\sigma\tau} - M_{\tau\sigma})\epsilon_{\mu\alpha\beta} + \frac{1}{2}(M_{\alpha\beta} + M_{\beta\alpha}) - \frac{1}{3}M_{\mu\mu}\delta_{\alpha\beta} \\
+    & = \frac{1}{4}(\delta_{\alpha\sigma}\delta_{\beta\tau} - \delta_{\alpha\tau}\delta_{\beta\sigma})(M_{\sigma\tau}-M_{\tau\sigma}) + \frac{1}{2}(M_{\alpha\beta} + M_{\beta\alpha}) \\ 
+    & = \frac{1}{4}(M_{\alpha\beta} - M_{\beta\alpha} - M_{\beta\alpha} + M_{\alpha\beta}) + \frac{1}{2}(M_{\alpha\beta} + M_{\beta\alpha}) \\ 
+    & = M_{\alpha\beta}
+\end{align*}
+
+
+\end{document}

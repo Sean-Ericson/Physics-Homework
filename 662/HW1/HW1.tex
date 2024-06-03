@@ -1,0 +1,98 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{nccmath}
+\usepackage{mathtools}
+\usepackage{mathrsfs}
+\usepackage{enumitem}
+\usepackage{physics}
+\usepackage{tensor}
+
+\usepackage{tikz}
+\usetikzlibrary{calc,decorations.markings,patterns}
+\usetikzlibrary{decorations.pathmorphing}
+\tikzset{snake it/.style={decorate, decoration=snake}}
+
+\newcommand{\magsq}[1]{\big|#1\big|^2}
+\newcommand{\avg}[1]{\left<#1\right>}
+\newcommand{\fullint}{\int_{-\infty}^\infty}
+\newcommand{\fullintd}[1]{\fullint\dd#1\:}
+\newcommand{\cint}[2]{\int_{#1}^{#2}}
+\newcommand{\cintd}[3]{\cint{#1}{#2}\dd#3\:}
+\newcommand{\boostXY}{\mqty(\gamma & -\gamma\beta_x & -\gamma\beta_y & 0 \\ -\gamma\beta_x & 1 + (\gamma - 1)\frac{\beta_x^2}{\abs{\beta}^2} & (\gamma - 1)\frac{\beta_x\beta_y}{\abs{\beta}^2} & 0 \\ -\gamma\beta_y & (\gamma - 1)\frac{\beta_x\beta_y}{\abs{\beta}^2} & 1 + (\gamma - 1)\frac{\beta_y^2}{\abs{\beta}^2} & 0 \\ 0 & 0 & 0 & 1)}
+\newcommand{\metric}{\mqty(1 & 0 & 0 & 0 \\ 0 & -1 & 0 & 0 \\ 0 & 0 & -1 & 0 \\ 0 & 0 & 0 & -1)}
+
+\begin{document}
+
+\title{Homework 1}
+\author{Sean Ericson \\ Phys 662}
+\maketitle
+
+\section*{Problem 1}
+\begin{enumerate}[label=(\alph*)]
+    \item Using $Q = 1$, $R = 4\times10^7$m, $B = 10$ Tesla, we find
+    \begin{align*}
+        E &= Q \left(\frac{R}{\text{meter}}\right)\left(\frac{B}{\text{Tesla}}\right)\;0.3\;\text{GeV} \\
+        &= (4\times10^7)(10)(0.3) \;\text{GeV} \\
+        &= 1.2\times10^7 \;\text{GeV}
+    \end{align*}
+
+    \item Power loss due to synchrotron radiation is given by
+    \[ P = \frac{0.3 \gamma^4}{R/\text{meter}} \;\text{eV/s}. \]
+    The time to complete one loop is given by $2 \pi R$.
+    Then,
+    \[ E = \frac{0.3 \gamma^4}{R/\text{meter}} 2 \pi R \;\text{eV} = 0.6\pi\left(\frac{E}{m_e}\right)^4 \;\text{eV}\]
+    \[ \implies E \approx 77\;\text{MeV} \]
+
+    \item We have that
+    \[ N_\text{turns} = \frac{\gamma\tau c}{2\pi R} = \frac{\tau c E}{2 \pi R m_\mu}. \]
+    With $E = 10 \text{TeV}$, and plugging in the mass and lifetime of the muon, this gives
+    \[ N_\text{turns} \approx 2300 \]
+
+    \item The event rate is given by
+    \[ \dv{N}{t} = \sigma \mathscr{L}. \]
+    Given a cross section of $\sigma = 100 \;\text{nb}$ and an instantaneous luminosity of $10\text{nb}^{-1}\text{s}^{-1}$ (from google), this gives a total event rate of 
+    \[ \dv{N}{t} = 1000 \;\text{Hz}, \]
+    which seems rather low... If you can only record events at $100$ Hz, then your trigger needs a suppression factor of 10.
+
+    \item Using the power formula stated in part (b), with $E = 200$ GeV and $2\pi R = 2.7\times10^4$m, we find that the power per particle is
+    \[ P = 4.1\times10^{-2} \;\text{W}. \]
+    With $10^{12}$ particles in the ring, that's a total power of
+    \[ P_\text{total} = 4.1\times10^10 \;\text{W} = 41 \;\text{gigawatts} \]
+\end{enumerate}
+
+
+\section*{Problem 2}
+\begin{enumerate}[label=(\alph*)]
+    \item 
+    \item The Feynman diagram for the process is shown in Figure \ref{fig1}.
+    \begin{figure}[h]
+        \centering
+        \resizebox{250pt}{!}{
+            \begin{tikzpicture}
+                % e +/-
+                \draw[thick, decoration={markings,mark=at position 0.5 with {\arrow{>}}},postaction={decorate}] (0,8) node[left]{$e^-$} -- (3,4);
+                \draw[thick, decoration={markings,mark=at position 0.5 with {\arrow{>}}},postaction={decorate}] (3,4) -- (0,0) node[left]{$e^+$};
+    
+                % photon
+                \draw[thick, snake it] (3,4)--(7.5,4);
+    
+                % Scalars
+                \draw[thick, dashed] (7.5,4)--(10.5,8) node[right]{$\phi^-$};
+                \draw[thick, dashed] (7.5,4)--(10.5,0) node[right]{$\phi^+$};
+    
+                % Momentum
+                \draw[->] (0.4,7) -- (1.5,5.5) node[midway,left]{$p_-$};
+                \draw[->] (1,2) -- (2,3.25) node[midway,left]{$p_+$};
+                \draw[->] (4.5,4.5) -- (6.5,4.5) node[midway,above]{$q$};
+                \draw[->] (9,5.5) -- (10,6.75) node[midway,right]{$p'_-$};
+                \draw[->] (8.5,3.25) -- (9.5,2) node[midway,right]{$p'_+$};
+            \end{tikzpicture}
+        }
+        \caption{The Feynman diagram for $e^+e^- \to \phi^+\phi^-$}
+        \label{fig1}
+    \end{figure}
+\end{enumerate}
+
+\end{document}

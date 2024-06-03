@@ -1,0 +1,64 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{mathrsfs}
+\usepackage{enumitem}
+\usepackage{physics}
+
+\newcommand{\magsq}[1]{\big|#1\big|^2}
+\newcommand{\avg}[1]{\left<#1\right>}
+\newcommand{\fullint}{\int_{-\infty}^\infty}
+\newcommand{\fullintd}[1]{\fullint\dd#1\:}
+\newcommand{\cint}[2]{\int_{#1}^{#2}}
+\newcommand{\cintd}[3]{\cint{#1}{#2}\dd#3\:}
+
+\begin{document}
+	
+\title{Homework 3}
+\author{Sean Ericson \\ Phys 632}
+\maketitle
+
+\section*{Problem 1}
+In components, the cross product side of the ``bac-cab'' rule is
+\[ \left(\vec{B}\cross\vec{C}\right)_r = B_sC_t\epsilon_{str} \]
+\[ \left(\vec{A}\cross\left(\vec{B}\cross\vec{C}\right)\right)_p = A_qB_sC_t\epsilon_{str}\epsilon_{qrp} \]
+The dot product side is
+\begin{align*}
+    \left(\vec{B}\left(\vec{A}\cdot\vec{C}\right)-\vec{C}\left(\vec{A}\cdot\vec{B}\right)\right)_p & = A_tB_pC_t - A_sB_sC_p \\
+    & = A_qB_pC_t\delta_{qt} - A_qB_sC_p\delta_{qs} \\
+    & = A_qB_sC_t\delta_{qt}\delta_{ps} - A_qB_sC_t\delta_{qs}\delta_{pt} \\
+    & = A_qB_sC_t\left(\delta_{qt}\delta_{ps}-\delta_{qs}\delta_{pt}\right)
+\end{align*}
+Putting it together,
+\[ \vec{A}\cross\left(\vec{B}\cross\vec{C}\right) = \vec{B}\left(\vec{A}\cdot\vec{C}\right)-\vec{C}\left(\vec{A}\cdot\vec{B}\right) \]
+\[ \implies A_qB_sC_t\epsilon_{str}\epsilon_{qrp} = A_qB_sC_t\left(\delta_{qt}\delta_{ps}-\delta_{qs}\delta_{pt}\right) \]
+\[ \implies \epsilon_{str}\epsilon_{qrp} = \delta_{qt}\delta_{ps}-\delta_{qs}\delta_{pt} \]
+
+
+\section*{Problem 2}
+Using the ladder operators,
+\[ L_\pm = L_x \pm iL_y, \]
+we can write $L_x$ as
+\[ L_x = \frac{1}{2}\left(J_+ + J_-\right). \]
+The expectation value, $\avg{L_x}$, is now immediatly obvious:
+\[ \avg{L_x} = \frac{1}{2}\left(\avg{J_+} + \avg{J_-}\right) = 0. \]
+For the expectation value of $L_x^2$, we simply note that by symmetry it must have the same value as $L_y^2$. Therefore,
+\[ L_x^2 = L_y^2 = \frac{1}{2}\left(L^2 - L_z^2\right) = \frac{\hbar^2}{2}(j(j+1)-m^2) \]
+Since the first moments are zero, the variance (and hence the uncertainty) are trivial:
+\[ \sigma_x = \sigma_y = \sqrt{\frac{\hbar^2}{2}(j(j+1)-m^2)} \]
+The restriction of $m$ to the range $\{-j,...j\}$ ensures that $(j(j+1)-m^2)\geq1$, so
+\[ \sigma_x\sigma_y = \frac{\hbar^2}{2}(j(j+1)-m^2) \geq \frac{\hbar}{2} \]
+
+\section*{Problem 3}
+For a radial displacement, $\vec{r}\to\vec{r}+\hat{r}\dd r$,
+\[ f(r + \dd r) - f(r) = \dd r \hat{r}\cdot\nabla f \]
+\[ \implies \hat{r}\cdot\nabla f = \frac{f(r + \dd r) - f(r)}{\dd r} = \partial_rf. \]
+For a polar angular displacement, $\vec{r}\to\vec{r}+r\dd \theta \hat{\theta}$,
+\[ f(\theta + \dd\theta) - f(\theta) = r\dd \theta \hat{\theta}\nabla f \]
+\[ \implies \hat{\theta}\cdot\nabla f = \frac{1}{r}\frac{f(\theta + \dd\theta) - f(\theta)}{\dd\theta} = \frac{1}{r}\partial_\theta f. \]
+For an azimuthal angular displacement, $\vec{r}\to\vec{r}+r\sin\theta\hat{\phi}$,
+\[ f(\theta + \dd\phi) - f(\phi) = r\sin\theta\dd\phi\hat{\phi}\cdot\nabla f \]
+\[ \implies \hat{\phi}\cdot\nabla f = \frac{1}{r\sin\theta}\partial_\phi f. \]
+
+\end{document}

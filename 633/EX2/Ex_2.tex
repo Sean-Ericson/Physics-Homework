@@ -1,0 +1,70 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{mathtools}
+\usepackage{enumitem}
+\usepackage{physics}
+
+\newcommand{\magsq}[1]{\big|#1\big|^2}
+\newcommand{\avg}[1]{\left<#1\right>}
+\newcommand{\fullint}{\int_{-\infty}^\infty}
+\newcommand{\fullintd}[1]{\fullint\dd#1\:}
+\newcommand{\cint}[2]{\int_{#1}^{#2}}
+\newcommand{\cintd}[3]{\cint{#1}{#2}\dd#3\:}
+\newcommand\treq{\stackrel{\mathclap{\tiny\mbox{Tr}}}{=}}
+
+\begin{document}
+	
+\title{Exercise Set 2}
+\author{Sean Ericson \\ Phys 633}
+\maketitle
+
+\section*{Monday}
+\subsection*{Exercise 1}
+\[ \Delta_1 = S_0VS_0 = P_0VP_0 \]
+\begin{align*}
+    \Tr[\Delta_1] &= \Tr[P_0VP_0] \\
+    &= \Tr[P_0V] \\
+    &= \mel{\psi_0}{V}{\psi_0} \\
+    &= V_{00}
+\end{align*}
+\[ \delta E_1 = \lambda \Tr[\Delta_1] = \lambda V_{00} \]
+
+\subsection*{Exercise 2}
+\[ \Delta_2 = P_0VQ_0G_0(E_0)Q_0VP_0 = P_0V\sum_{\alpha\neq 0}\frac{\dyad{\alpha}}{E_0\alpha}VP_0 \]
+\begin{align*}
+    \Tr[\Delta_2] &= \Tr[P_0V\sum_{\alpha\neq 0}\frac{\dyad{\alpha}}{E_0\alpha}VP_0] \\
+    &= \Tr[P_0\sum_{\alpha\neq 0}\frac{V_{0\alpha}V_{\alpha 0}}{E_{0\alpha}}] \\
+    &= \sum_{\alpha\neq 0}\frac{\magsq{V_{0\alpha}}}{E_{0\alpha}}
+\end{align*}
+\[ \delta E_2 = \lambda^2 \Tr[\Delta_2] = \lambda^2 \sum_{\alpha\neq 0}\frac{\magsq{V_{0\alpha}}}{E_{0\alpha}} \]
+
+
+\subsection*{Exercise 3}
+\begin{align*}
+    \Delta_3 &= (0011\cdot) + (0101\cdot) + (1001\cdot) + (1010\cdot) + (1100\cdot) + (1001\cdot) + (0002\cdot) + (0020\cdot) + (0200\cdot) + (2000\cdot) \\
+    &\treq  (0110\cdot) + (1001\cdot) + (0020\cdot) + (0200\cdot) \\
+    &\treq (0110\cdot) + (1\cdot 100) + (0\cdot020) + (0\cdot 002) \\
+    &\treq (0110\cdot) + (200) - (020) - (002) \\
+    &\treq (0110\cdot) + (020) \\
+    &\treq P_0V\sum_{\alpha\neq 0}\frac{\dyad{\alpha}}{E_{0\alpha}}V\sum_{\beta\neq 0}\frac{\dyad{\beta}}{E_{0\beta}}VP_0 - P_0V\sum_{\alpha\neq 0}\frac{\dyad{\alpha}}{E_{0\alpha}^2}VP_0
+\end{align*}
+\begin{align*}
+    \Tr[\Delta_3] &= \Tr[P_0V\sum_{\alpha\neq 0}\frac{\dyad{\alpha}}{E_{0\alpha}}V\sum_{\beta\neq 0}\frac{\dyad{\beta}}{E_{0\beta}}VP_0] - \Tr[P_0V\sum_{\alpha\neq 0}\frac{\dyad{\alpha}}{E_{0\alpha}^2}VP_0] \\
+    &= \Tr[P_0\sum_{\alpha , \beta\neq 0}\frac{V_{0\alpha}V_{\alpha\beta}V_{\beta 0}}{E_{0\alpha}E_{0\beta}}] - \Tr[P_0\sum_{\alpha\neq 0}\frac{V_{0\alpha}V_{\alpha 0}}{E_{0\alpha}}] \\
+    &= \sum_{\alpha , \beta\neq 0}\frac{V_{0\alpha}V_{\alpha\beta}V_{\beta 0}}{E_{0\alpha}E_{0\beta}} - \sum_{\alpha\neq 0}\frac{\magsq{V_{0\alpha}}}{E_{0\alpha}}
+\end{align*}
+\[ \delta E_3 = \lambda^3\Tr[\Delta_3] = \lambda^3\sum_{\alpha , \beta\neq 0}\frac{V_{0\alpha}V_{\alpha\beta}V_{\beta 0}}{E_{0\alpha}E_{0\beta}} - \lambda^3\sum_{\alpha\neq 0}\frac{\magsq{V_{0\alpha}}}{E_{0\alpha}} \]
+
+
+\section*{Tuesday}
+\subsection*{Exercise 1}
+The full potential is the sum of the centrifugal barrier potential and the Coloumb potential:
+\[ V(r) = V_\text{CB}(r) + V_\text{C}(r) = \frac{\hbar^2l(l+1)}{2\mu r^2} - \frac{\hbar c \alpha}{r} \]
+No matter the coefficients, the $r^{-2}$ term will dominate near $r=0$, causing $V(r)$ to approach $+\infty$. Also independent of the coefficients is the fact that as $r\to\infty$, the $-r^{-1}$ term will dominate, causing $V(r)$ to approach 0 from below. These two facts imply that $V(r)$ must have a local minimum (i.e. a potential well) somwhere after it becomes negative.
+
+\subsection*{Exercise 2}
+The 2P state has $l\neq 0$, so the position-amplitude goes to 0 at the origin. The perturbation potential is only non-zer \textit{very} near the origin, so it's effect is negligable. Therefore the energy of the 2P state does not change, and the 1S-2P transition energy change is just the change in the 1S state's energy.
+
+\end{document}

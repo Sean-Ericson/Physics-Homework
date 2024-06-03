@@ -1,0 +1,50 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{mathtools}
+\usepackage{mathrsfs}
+\usepackage{enumitem}
+\usepackage{physics}
+\usepackage{empheq}
+\usepackage{undertilde}
+\usepackage{float}
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
+
+\usepackage{tikz}
+\usetikzlibrary{calc,decorations.markings,patterns}
+
+\newcommand{\magsq}[1]{\big|#1\big|^2}
+\newcommand{\avg}[1]{\left<#1\right>}
+\newcommand{\fullint}{\int_{-\infty}^\infty}
+\newcommand{\fullintd}[1]{\fullint\dd#1\:}
+\newcommand{\cint}[2]{\int_{#1}^{#2}}
+\newcommand{\cintd}[3]{\cint{#1}{#2}\dd#3\:}
+
+\begin{document}
+
+\title{Problem Set \#2}
+\author{Phys 614}
+\date{Due: Who the hell knows when}
+\maketitle
+
+\section*{Problem 1}
+$N$ non-interacting Bosons of mass m move in a spherically symmetric potential (in three dimensions)
+\begin{equation}
+    U(\vec{r}) = \frac{1}{2}m\omega r^2 \qquad ( r \equiv \abs{\vec{r}})
+\end{equation}
+\begin{enumerate}[label=\Alph*)]
+    \item Calculate the Bose-Einstein condensation temerature $T_c$ of this system.
+    \item Calculate the number of atoms in the ground state as a function of temperature $T < T_c$. \\ (Note: this is a reasonable model for the famous Bose-Einstein condensation experiments of Cornell and Weinmann, who created the potential with a ``magnetic trap'')
+\end{enumerate}
+
+\section*{Problem 2}
+Using the result of (1), plus your knowledge of the ground state wavefunction for a harmonic oscillator, calculate the density of atoms at the origin for $T < T_c$, and show that it is larger than the corresponding density for $T \gtrapprox T_c$ (e.g. $T = 2T_c$) by a factor of order $\sqrt{N}$, which, of course, is huge. Comment on the implications of this result for the applicability of the non-interacting approximation in this experiment.
+
+\section*{Problem 3}
+Returning to Bose-Einstein condensation of particles in a box (rather than a harmonic potential), show that there is no Bose-Einstein condensation in $d=2$ dimensions of space. \\ (Hint: calculate $\rho(T, \mu)$ by replacing sums by integrals in the usual way, and show that $\rho$ is unbounded (i.e. diverges) as $\mu \to 0^-$ from below.)
+
+
+
+\end{document}

@@ -1,0 +1,144 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{nccmath}
+\usepackage{mathtools}
+\usepackage{mathrsfs}
+\usepackage{enumitem}
+\usepackage{physics}
+\usepackage{slashed}
+\usepackage{pdfpages}
+
+\usepackage{tikz}
+\usetikzlibrary{calc,decorations.markings,patterns}
+\usetikzlibrary{decorations.pathmorphing}
+\tikzset{snake it/.style={decorate, decoration=snake}}
+
+\begin{document}
+
+\title{Homework 2}
+\author{Sean Ericson \\ Phys 662}
+\maketitle
+\section*{Problem 1 (Peskin 17.2)}
+\begin{enumerate}[label=(\alph*)]
+    \item From chapter 8,
+    \[ \dv{\sigma}{\cos\theta} = \frac{\pi\alpha^2}{2s}\left(1\pm\cos\theta\right)^2, \]
+    where the + is for the $RL\to RL$ and $LR\to LR$ helicity states, and the minus is for the $LR\to RL$ and $RL\to LR$ states.
+    The recall is \textit{total}.
+    \item
+    \begin{figure}[h]
+        \centering
+        \resizebox{\textwidth}{!}{
+            \begin{tikzpicture}[scale=1, every node/.style={scale=1.5}]
+                % e +/-
+                \draw[thick, decoration={markings,mark=at position 0.5 with {\arrow{>}}},postaction={decorate}] (0,8) node[left]{$e^-$} -- (3,4);
+                \draw[thick, decoration={markings,mark=at position 0.5 with {\arrow{>}}},postaction={decorate}] (3,4) -- (0,0) node[left]{$e^+$};
+    
+                % photon
+                \draw[thick, snake it] (3,4)--(7.5,4) node[midway,below]{\huge$\gamma$};
+    
+                % mu +/-
+                \draw[thick, decoration={markings,mark=at position 0.5 with {\arrow{>}}},postaction={decorate}] (7.5,4)--(10.5,8) node[right]{$\mu^-$};
+                \draw[thick, decoration={markings,mark=at position 0.5 with {\arrow{>}}},postaction={decorate}] (7.5,4)--(10.5,0) node[right]{$\mu^+$};
+    
+                % Momentum
+                \draw[->] (0.4,7) -- (1.5,5.5) node[midway,left]{$p_-$};
+                \draw[->] (1,2) -- (2,3.25) node[midway,left]{$p_+$};
+                \draw[->] (4.5,4.5) -- (6.5,4.5) node[midway,above]{$q$};
+                \draw[->] (9,5.5) -- (10,6.75) node[midway,right]{$p'_-$};
+                \draw[->] (8.5,3.25) -- (9.5,2) node[midway,right]{$p'_+$};
+            \end{tikzpicture}
+            \begin{tikzpicture}[scale=1, every node/.style={scale=1.5}]
+                % e +/-
+                \draw[thick, decoration={markings,mark=at position 0.5 with {\arrow{>}}},postaction={decorate}] (0,8) node[left]{$e^-$} -- (3,4);
+                \draw[thick, decoration={markings,mark=at position 0.5 with {\arrow{>}}},postaction={decorate}] (3,4) -- (0,0) node[left]{$e^+$};
+    
+                % Z
+                \draw[thick, snake it] (3,4)--(7.5,4);
+                \draw[thick, snake it] (3,4)--(7.5,4) node[midway,below]{\huge$Z$};
+    
+                % mu +/-
+                \draw[thick, decoration={markings,mark=at position 0.5 with {\arrow{>}}},postaction={decorate}] (7.5,4)--(10.5,8) node[right]{$\mu^-$};
+                \draw[thick, decoration={markings,mark=at position 0.5 with {\arrow{>}}},postaction={decorate}] (7.5,4)--(10.5,0) node[right]{$\mu^+$};
+    
+                % Momentum
+                \draw[->] (0.4,7) -- (1.5,5.5) node[midway,left]{$p_-$};
+                \draw[->] (1,2) -- (2,3.25) node[midway,left]{$p_+$};
+                \draw[->] (4.5,4.5) -- (6.5,4.5) node[midway,above]{$q$};
+                \draw[->] (9,5.5) -- (10,6.75) node[midway,right]{$p'_-$};
+                \draw[->] (8.5,3.25) -- (9.5,2) node[midway,right]{$p'_+$};
+            \end{tikzpicture}
+        }
+        \caption{The Feynman diagram for $e^+e^- \to \mu^+\mu^-$}
+        \label{fig1}
+    \end{figure}
+    Clearly, both diagrams are nearly identical. The only differences are the massiveness of the $Z$ boson, and the couplings of the $Z$ to $e$ and $\mu$. The virtual photon matrix element is 
+    \[ \mathcal{M}_\gamma(e_L^-e_R^+\to\mu_L^-\mu_R^+) = e^2(1 + \cos\theta) = g^2s_w^2(1 + \cos\theta), \]
+    while the virtual $Z$ matrix element is
+    \begin{align*}
+        \mathcal{M}_Z(e_L^-e_R^+\to\mu_L^-\mu_R^+) &= \frac{g^2}{c_w^2}\frac{Q_{ZL}^2 8E^2}{s - m_Z^2 + im_Z\Gamma_Z} \frac{1}{2}(1 + \cos\theta) \\
+        &= \frac{g^2}{c_w^2}\frac{(\frac{1}{2} - s_w^2)^2 s}{s - m_Z^2 + im_Z\Gamma_Z}(1 + \cos\theta).
+    \end{align*}
+    The total matrix element is then
+    \begin{align*}
+        \mathcal{M}(e_L^-e_R^+\to\mu_L^-\mu_R^+) &= \mathcal{M_\gamma} + \mathcal{M_Z} \\
+        &= g^2s_w^2(1 + \cos\theta) + \frac{g^2}{c_w^2}\frac{(\frac{1}{2} - s_w^2)^2 s}{s - m_Z^2 + im_Z^2}(1 + \cos\theta) \\
+        &= g^2s_w^2(1 + \cos\theta)\left(1 + \frac{1}{c_w^2s_w^2}(\frac{1}{2}-s_w^2)^2\frac{s}{s-m_Z^2+im_Z\Gamma_Z}\right)
+    \end{align*}
+    The matrix element has the same $\theta$ dependence, so the cross section will be the same up to the term in large parenthesis above (squared).
+    \item Plugging in the other charges / polarization product, we get
+    \begin{align*}
+        \mathcal{M}(e_R^-e_L^+\to\mu_R^-\mu_L^+) &= g^2s_w^2(1 + \cos\theta)\left(1 + \frac{s_w^2}{c_w^2}\frac{s}{s-m_Z^2+im_Z\Gamma_Z^2}\right)\\
+        \mathcal{M}(e_L^-e_R^+\to\mu_R^-\mu_L^+) &= g^2s_w^2(1 - \cos\theta)\left(1 + \frac{1}{c_w^2}(-\frac{1}{2}+s_w^2)\frac{s}{s-m_Z^2+im_Z\Gamma_Z}\right)\\
+        \mathcal{M}(e_R^-e_L^+\to\mu_L^-\mu_R^+) &= g^2s_w^2(1 - \cos\theta)\left(1 + \frac{1}{c_w^2}(-\frac{1}{2}+s_w^2)\frac{s}{s-m_Z^2+im_Z\Gamma_Z}\right)
+    \end{align*}
+    \item
+    \begin{align*}
+        \sigma(\cos\theta > 0) &= \int_0^1\dd \cos\theta \left(1 + \cos\theta\right)^2 \\
+        &= \frac{1}{3}\left(1 + \cos\theta\right)^3\big|_{\cos\theta=0}^1 \\
+        &= \frac{7}{3} \\
+        \sigma(\cos\theta < 0) &= \int_{-1}^0\dd \cos\theta \left(1 + \cos\theta\right)^2 \\
+        &= \frac{1}{3}\left(1 + \cos\theta\right)^3\big|_{\cos\theta=-1}^0 \\
+        &= \frac{1}{3} 
+    \end{align*}
+    \[ \implies  \frac{\sigma(\cos\theta > 0) - \sigma(\cos\theta < 0)}{\sigma(\cos\theta > 0) + \sigma(\cos\theta < 0)} = \frac{7 - 1}{7+1} = \frac{3}{4} \]
+    \item In the limit $s \ll m_Z^2$, the breit-wigner factors go to zero (to leading order), reducing the cross sections to the ones calculated in chapter 8. The $LR\to LR$ and $RL\to RL$ states have $A_{FB} = 3/4$, while the other two states have $A_{FB} = -3/4$\footnote{I did the integrals; they're practically identical to the ones in part (d), do I really need to type them out?}. Clearly, then, the unpolarized process has vanishing forward-backward asymmetry in this limit. \\
+    When $s = m_Z^2$, the Breit-wigner factors reduce to $-im_Z/\Gamma_Z$. Neglecting the photon contribution, the cross sections are
+    \begin{align*}
+        \dv{\sigma}{\cos\theta}\left(e_L^-e_R^+\to\mu_L^-\mu_R^+\right) &= \left[g^2s_w^2(1 + \cos\theta)\frac{1}{c_w^2s_w^2}(\frac{1}{2}-s_w^2)^2\frac{m_Z}{\Gamma_Z} \right]^2 \\
+        \dv{\sigma}{\cos\theta}\left(e_R^-e_L^+\to\mu_R^-\mu_L^+\right) &= \left[g^2s_w^2(1 + \cos\theta)\frac{s_w^2}{c_w^2}\frac{m_Z}{\Gamma_Z} \right]^2 \\
+        \dv{\sigma}{\cos\theta}\left(e_L^-e_R^+\to\mu_R^-\mu_L^+\right) &= \left[g^2s_w^2(1 - \cos\theta)\frac{1}{c_w^2}(-\frac{1}{2}+s_w^2)\frac{m_Z}{\Gamma_Z} \right]^2 \\
+        \dv{\sigma}{\cos\theta}\left(e_R^-e_L^+\to\mu_L^-\mu_R^+\right) &= \left[g^2s_w^2(1 - \cos\theta)\frac{1}{c_w^2}(-\frac{1}{2}+s_w^2)\frac{m_Z}{\Gamma_Z} \right]^2
+    \end{align*}
+    Let's preemptively drop common terms that will end up canceling. The total cross section is
+    \[ \dv{\sigma}{\cos\theta} \propto (f_1 + f_2)(1  + \cos\theta)^2 + 2f_3(1-\cos\theta)^2 \]
+    where
+    \begin{align*}
+        f_1 &= \frac{\left(\frac{1}{2} - s_w^2\right)^4}{s_w^4} \\
+        f_2 &= s_w^4 \\
+        f_3 &= \left(\frac{1}{2} - s_w\right)^2
+    \end{align*}
+    The forward and backward integrals give
+    \begin{align*}
+        \sigma_{>0} &= \frac{7}{3}(f_1 + f_2) - \frac{2}{3}f_3 \\
+        \sigma_{<0} &= \frac{1}{3}(f_1 + f_2) - \frac{14}{3}f_3
+    \end{align*}
+    Hence,
+    \begin{align*}
+        A_{FB} &= \frac{6(f_1 + f_2) + 12f_3}{8(f_1 + f_2)-16f_3}
+    \end{align*}
+    \item In the ultra-high energy limit, the Breit-Wigner factor goes to 1, and we get
+    \[ \dv{\sigma}{\cos\theta}\left(e_L^-e_R^+\to\mu_L^-\mu_R^+\right) = \left[g^2s_w^2(1 + \cos\theta)\left(1 + \frac{1}{c_w^2s_w^2}(\frac{1}{2}-s_w^2)^2\right)\right]^2 \]
+    \item The $B$ diagram gives 
+    \[ (-\frac{1}{2}g')^2(1 + \cos\theta) \]
+    The $A$ diagram gives 
+    \[ (-\frac{1}{2}g)^2(1 + \cos\theta) \]
+    I tried takeing all the $s_w$ and $c_w$s in (f) and turning them into $g$s and $g'$s, but I can't get them to look equal =(.
+    \item For $RL\to RL$ The $A$ diagram doesn't contribute, but the $B$ diagram gives
+    \[ (-g')^2(1 + \cos\theta) \]
+    For $LR\to RL$ and $RL \to LR$ The $A$ diagram also doesn't contribute, but $B$ gives
+    \[ (\frac{1}{2}g')^2(1 - \cos\theta) \] 
+\end{enumerate}
+
+\end{document}

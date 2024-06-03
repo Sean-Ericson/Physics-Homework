@@ -1,0 +1,85 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{mathtools}
+\usepackage{mathrsfs}
+\usepackage{enumitem}
+\usepackage{physics}
+\usepackage{array}
+
+\usepackage{tikz}
+\usetikzlibrary{calc,decorations.markings}
+
+\newcommand{\magsq}[1]{\big|#1\big|^2}
+\newcommand{\avg}[1]{\left<#1\right>}
+\newcommand{\fullint}{\int_{-\infty}^\infty}
+\newcommand{\fullintd}[1]{\fullint\dd#1\:}
+\newcommand{\cint}[2]{\int_{#1}^{#2}}
+\newcommand{\cintd}[3]{\cint{#1}{#2}\dd#3\:}
+
+\begin{document}
+	
+\title{Homework 3}
+\author{Sean Ericson \\ Phys 610}
+\maketitle
+
+\section*{1.2.3}
+\begin{enumerate}[label=(\alph*)]
+    \item \[  \]
+    \begin{tabular}{>{$}c<{$}|*{6}{>{$}c<{$}}}
+        ~      & ()    & (12)  & (23)   & (13)  & (123) & (132)  \\
+        \hline\vrule height 12pt width 0pt
+        ()     & ()    & (12)  & (23)   & (13)  & (123) & (132)  \\
+        (12)   & (12)  & ()    & (132)  & (123) & (13)  & (23)   \\
+        (23)   & (23)  & (123) & ()     & (132) & (12)  & (13)   \\
+        (13)   & (13)  & (132) & (123)  & ()    & (23)  & (12)   \\
+        (123)  & (123) & (23)  & (13)   & (12)  & (132) & ()     \\
+        (132)  & (132) & (13)  & (12)   & (23)  & ()    & (123)  
+        \end{tabular} 
+        \[  \]
+    Note: in the table above the row headers left-multiply the column headers. $S_3$ is \textit{not} abelian, as it's multiplication table is not symmetric. 
+    
+    \item The subgroups of $S_3$ are
+    \[ \{()\}, \quad \{(), (12)\}, \quad \{(), (13)\}, \quad \{(), (23)\}, \quad \{(), (123), (132)\} \]
+    and all are abelian.
+\end{enumerate}
+
+\section*{1.2.4}
+Let $H \leq G$. Then
+\[ b \in H \implies b^{-1} \in H \implies a \vee b^{-1} \in H \quad \checkmark \]
+Now, let $a,b \in H \implies a \vee b^{-1} \in H$. Then,
+\[ a = b \implies a \vee a^{-1} \in H \]
+so $H$ has a neutral element. Also,
+\[ a = e \implies e \vee b^{-1} = b \in H \]
+so $H$ has inverses. Next,
+\[ a \vee \left(b^{-1}\right)^{-1} = a \vee b \in H \]
+so $H$ is closed. Finally, since $G$ is a group, the operation is associative, so we have that
+\[ G \leq H \]
+
+
+\section*{1.3.1}
+\begin{enumerate}[label=(\alph*)]
+    \item Let $a,b,c,d \in \mathbb{Z}$. Then,
+    \[ \frac{a}{b},\frac{c}{d} \in \mathbb{Q} \implies \frac{a}{b} + \frac{c}{d} = \frac{ad+bc}{bd} \in \mathbb{Q}, \]
+    which demonstrates closure. The opperation is obviously associative \textit{and} commutative. The neutral element is 0. Finally, all elements have an inverse:
+    \[ \frac{a}{b} \in \mathbb{Q} \implies -\frac{a}{b} \in \mathbb{Q} \] 
+
+    \item Let's make the addition table: \[  \]
+    \begin{tabular}{>{$}c<{$}|*{2}{>{$}c<{$}}}
+    ~ & \theta & e \\
+    \hline\vrule height 12pt width 0pt
+    \theta & \theta & e \\
+    e & e & \theta
+    \end{tabular} \[  \]
+    From this table we an see that $(F, +)$ forms an additve group with neutral element $\theta$. Excluding the neutral element, the group $(F, \cdot)$ as defined is the trivial group. Therefore, $(F, +, \cdot)$ is a field. 
+\end{enumerate}
+
+
+\section*{1.4.1}
+Let $V=C$, and define addition as
+\[ (f+g)(x) = f(x) + g(x) \]
+Now let $\alpha, \beta \in \mathbb{R}$. Then define scalar multiplication as
+\[ (\alpha\beta f)(x) = ((\alpha\beta))(f(x)) = \alpha(\beta f(x)) \]
+
+\end{document}

@@ -1,0 +1,162 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{nccmath}
+\usepackage{mathtools}
+\usepackage{mathrsfs}
+\usepackage{enumitem}
+\usepackage{physics}
+\usepackage{slashed}
+\usepackage{pdfpages}
+\usepackage{float}
+
+\usepackage{tikz}
+\usepackage{tikz-feynman}
+
+\newcommand{\magsq}[1]{\big|#1\big|^2}
+
+\graphicspath{ {./images/} }
+
+\begin{document}
+
+\title{Homework 5}
+\author{Sean Ericson \\ Phys 663}
+\maketitle
+
+\section*{Problem 1}
+\begin{figure}[H]
+    \centering
+    \resizebox{0.35\textwidth}{!}{
+        \feynmandiagram [horizontal=i1 to p1] {
+        i1[particle=$h$] -- [scalar, momentum'=$p$] p1[label=$\kappa$] -- [scalar, momentum'=$p_1$] f1[particle=$X$],
+        p1 -- [scalar, momentum'=$p_2$] f2[particle=$X$],
+        };
+    }
+    \caption{The decay $h \to X+X$.}
+    \label{fig1}
+\end{figure}
+\begin{enumerate}[label=(\roman*)]
+    \item The partial width of the decay is given by
+    \[ \Gamma = \frac{1}{2m_h}\int \frac{\dd\Pi_2}{2!} \magsq{\mathcal{M}(h\to XX)}. \]
+    The matrix element is $\kappa$, so we simply need to integrate over 2-body phase space. In the CM frame, 
+    \[ p = (m_h, 0, 0, 0), \quad p_1 = (m_h/2, \abs{\vec{p_1}}\sin\theta, 0, \abs{\vec{p_1}}\cos\theta), \quad p_2 = (m_h/2, -\abs{\vec{p_1}}\sin\theta, 0, -\abs{\vec{p_1}}\cos\theta) \]
+    \[ E_1^2 = m_X^2 + \magsq{\vec{p}_1} \]
+    The phase space integral is then
+    \begin{align*}
+        \int\dd\Pi_2 &= \int \frac{\dd^3\vec{p}_1}{(2\pi)^32E_1}\frac{\dd^3\vec{p}_2}{(2\pi)^32E_2}(2\pi)^4\delta^4(p - p_1 - p_2) \\
+        &= \frac{1}{4(2\pi)^2}\int\dd^3\vec{p}_1\dd^3\vec{p}_2\frac{1}{E_1E_2}\delta(E-E_1-E_2)\delta^3(\vec{p}_1+\vec{p}_2) \\
+        &= \frac{1}{(2\pi)^2}\int\dd\abs{\vec{p}_1}\dd\Omega\frac{\magsq{\vec{p}_1}}{E_1^2}\delta(E-2E_1) \\
+        &= \frac{4\pi}{4(2\pi)^2}\int\dd\abs{\vec{p}_1}\frac{\magsq{\vec{p}_1}}{E_1^2}\delta(E-2E_1) \\
+        &= \frac{1}{4\pi}\frac{\abs{\vec{p}_1}^2}{E_1^2}\frac{E_1}{2\abs{\vec{p}_1}}\Biggr\rvert_{E_1=\frac{m_h}{2}} \\
+        &= \frac{1}{8\pi}\frac{\abs{\vec{p}_1}}{E_1}\Biggr\rvert_{E_1=\frac{m_h}{2}} \\
+        &= \frac{1}{4\pi m_h}\sqrt{\left(\frac{m_h}{2}\right)^2 - m_X^2} \\
+        &= \frac{1}{8\pi}\sqrt{1 - \left(\frac{2m_X}{m_h}\right)^2}.
+    \end{align*}
+    Putting it all together, the partial width is
+    \[ \Gamma_{h\to XX} = \frac{\kappa^2}{16\pi m_h}\sqrt{1 - \left(\frac{2m_X}{m_h}\right)^2} \]
+
+    \item Assume the possible SM decays are enumerated. The $i^\text{th}$ branching ratio $BR_i$ is given by
+    \[ BR_i = \frac{\Gamma_i}{\sum_j\Gamma_j}. \]
+    Adding a new BSM decay, we get
+    \[ BR_i \to \tilde{BR}_i = \frac{\Gamma_i}{\sum_j\Gamma_j + \Gamma_{h\to XX}}. \]
+    That is, any particular branching ratio is changed by a constant factor of
+    \[ \frac{\tilde{BR}_i}{BR_i} = \frac{\sum_j\Gamma_j}{\sum_j\Gamma_j + \Gamma_{h\to XX}} \]
+
+    \item Let $\Gamma_0 = \sum_j\Gamma_j$. Then,
+    \[ \frac{\Gamma_0}{\Gamma_0 + \Gamma_{h\to XX}} = \frac{1}{4} \implies \Gamma_{h\to XX} = 3\Gamma_0 \]
+    For a massless $X$, the partial width is simply $\kappa^2/4\pi m_h$, so
+    \[ \frac{\kappa^2}{16\pi m_h} = 3\Gamma_0 \implies \kappa = \sqrt{48\pi\Gamma_0m_h} \]
+    for a 125 GeV Higgs with a width of 3.2 MeV, this gives a $\kappa$ of
+    \[ \kappa \approx 7.8 GeV \]
+\end{enumerate}
+
+\section{Problem 2}
+\begin{figure}[H]
+    \centering
+    \resizebox{0.65\textwidth}{!}{
+        \feynmandiagram [horizontal=i1 to p1] {
+        i1[particle=$h$] -- [scalar] p1 -- [scalar] f1[particle=$W_\mu^+$],
+        p1 -- [scalar] f2[particle=$W_\mu^-$],
+        };
+        \feynmandiagram [horizontal=i1 to p1] {
+        i1[particle=$h$] -- [scalar] p1 -- [scalar] f1[particle=$Z_\mu^0$],
+        p1 -- [scalar] f2[particle=$Z_\nu^0$],
+        };
+    }
+    \caption{$h \to W^+W^-$ and $h \to ZZ$ decays.}
+    \label{fig2}
+\end{figure}
+
+\begin{enumerate}[label=(\alph*)]
+    \item The Feynman diagrams in figure \ref{fig2} correspond to the SM lagrangian terms
+    \[ \dots + \frac{2m_w^2}{v}hW_\mu^+W^{-\mu} + \frac{m_Z^2}{v}hZ_\mu Z^\mu + \dots \]
+    given in Peskin (21.11).
+
+    \item The Higgs is spin-0, so to conserve angular momentum the spins of the resulting particles must be anti-aligned. Since, (in the CM frame) the particles momenta are anti-aligned, the helicities must be equal.
+    \item The polarization vectors for the $W^+$ are given by
+    \[ \epsilon_\pm^\mu = \frac{1}{\sqrt{2}}\mqty(0\\1\\\pm i\\0); \quad \epsilon_0^\mu = \mqty(0\\0\\0\\1). \]
+    The specified boost is along the $\hat{z}$ direction. Therefore, only the 0 and 3 components of 4-vectors are affected by it. Clearly then, the $\epsilon_\pm$ polarizations vectors are unaffected. The boost that takes $(m_W, 0, 0, 0)^\mu$ to $(E, 0, 0 k)$ can be expressed in the 0-3 subspace as
+    \[ B = \frac{1}{m_W}\mqty(E&k\\k&E). \]
+    The boosted longitudinal polarization vector is then 
+    \[ \epsilon_0^\mu \to \frac{1}{m_W}\mqty(E&k\\k&E)\mqty(0\\1) = \frac{1}{m_W}\mqty(k\\E), \]
+    as desired.
+
+    \item Spatial rotations about the $x$-axis take $\hat{y}\to-\hat{y}$ and $\hat{z}\to-\hat{z}$ The effect on the polarization vectors is then
+    \[ \epsilon_\pm^\mu \to \frac{1}{\sqrt{2}}\mqty(0\\1\\\mp i\\0); \quad \epsilon_0^\mu \to \mqty(0\\0\\0\\-1). \]
+    Note that, had we rotated around the $y$-axis, the effect for the longitudinal polarization would have been identical, while the transverse polarizations each pick up an overall minus sign.
+
+    \item The matrix element is given by the vertex factor, $2m_W^2/v$, times the product of the polarization vectors. The polarization vector products are given by
+    \begin{align*}
+        \frac{1}{\sqrt{2}}\mqty(0\\1\\i\\0)_\mu \frac{1}{\sqrt{2}}\mqty(0\\1\\-i\\0)^\mu &= -1 \\
+        \frac{1}{m_W}\mqty(k\\0\\0\\E)_\mu\frac{1}{m_W}\mqty(k\\0\\0\\-E) &= \frac{k^2 + E^2}{m_W^2},
+    \end{align*}
+    giving matrix elements (modulo $i$)
+    \[ \mathcal{M}_{++} = \mathcal{M}_{--} = -\frac{2m_W^2}{v}, \]
+    \[ \mathcal{M}_{00} = \frac{2}{v}(k^2 + E^2). \]
+
+    \item The total matrix element (modulo $i$) is then
+    \[ \mathcal{M} = \mathcal{M}_{++} + \mathcal{M}_{--} + \mathcal{M}_{00} = \frac{2}{v}\left(\magsq{\vec{p}_1} + \frac{1}{4}m_h^2 - m_W^2\right), \]
+    with square
+    \begin{align*}
+        \magsq{\mathcal{M}} &= \frac{4}{v^2}\left[\abs{\vec{p}_1}^4 + 2\magsq{\vec{p}_1}\left(\left(\frac{m_h}{2}\right)^2 - m_W^2\right) + \left(\left(\frac{m_h}{2}\right)^2 - m_W^2\right)^2\right] \\
+        &= \frac{4}{v^2}\left[\abs{\vec{p}_1}^4 + \frac{\magsq{\vec{p}_1}m_h^2}{2}\left(1-\left(\frac{2m_W^2}{m_h}\right)^2\right) + \frac{m_h^4}{16}\left(1-\left(\frac{2m_W^2}{m_h}\right)^2\right)^2 \right]
+    \end{align*}
+    where $\vec{k} \to \vec{p}_1$ for consistence with problem 1, and $E=m_h/2$ has been substituted. The calculate the rate, we will need the phase space integral
+    \[ \int\dd\Pi_2 =  \frac{1}{8\pi}\sqrt{1 - \left(\frac{2m_W}{m_h}\right)^2}, \]
+    which was calculated in problem 1, as well as
+    \[ \int\magsq{\vec{p}_1}\dd\Pi_2, \]
+    and 
+    \[ \int\abs{\vec{p}_1}^4\dd\Pi_2. \]
+    Now,
+    \begin{align*}
+        \int\magsq{\vec{p}_1}\dd\Pi_2 &= \int \frac{\dd^3\vec{p}_1}{(2\pi)^32E_1}\frac{\dd^3\vec{p}_2}{(2\pi)^32E_2}\magsq{\vec{p}_1}(2\pi)^4\delta^4(p - p_1 - p_2) \\
+        &= \frac{1}{4(2\pi)^2}\int\dd^3\vec{p}_1\frac{\magsq{\vec{p}_1}}{E_1^2}\delta(2E_1-m_h) \\
+        &= \frac{1}{4\pi}\int\dd\abs{\vec{p}_1}\frac{\abs{\vec{p}_1}^4}{E_1^2}\delta(2E_1-m_h) \\
+        &= \frac{1}{4\pi}\frac{\abs{\vec{p}_1}^4}{E_1^2}\frac{E_1}{2\abs{\vec{p}_1}}\Biggr\rvert_{E_1=\frac{m_h}{2}} \\
+        &= \frac{1}{8\pi}\frac{\abs{\vec{p}_1}^3}{E_1}\Biggr\rvert_{E_1=\frac{m_h}{2}} \\
+        &= \frac{1}{4\pi m_h}\left(\left(\frac{m_h}{2}\right)^2 - m_W^2\right)^{3/2} \\
+        &= \frac{m_h^2}{32\pi}\left(1 - \left(\frac{2m_h}{m_W^2}\right)^2\right)^{3/2},
+    \end{align*}
+    and similarly
+    \[ \int\abs{\vec{p}_1}^4\dd\Pi_2 = \frac{m_h^4}{128\pi}\left(1 - \left(\frac{2m_h}{m_W^2}\right)^2\right)^{5/2}. \]
+    The decay width is given by
+    \[ \Gamma = \frac{1}{2m_h}\int\dd\Pi_2\magsq{\mathcal{M}(h\to W^+W^-)}. \]
+    Let $\delta = (1 - (2m_W/m_h)^2)$. Putting it all together, we get
+    \begin{align*}
+        \Gamma_{h\to W^+W^-} &= \frac{2}{v^2m_h} \left[\frac{m_h^4}{128\pi}\delta^{5/2} + \frac{m_h^2}{2}\delta\frac{m_h^2}{32\pi}\delta^{3/2} + \frac{m_h^4}{16}\delta^2\frac{1}{8\pi}\delta^{1/2}\right] \\
+        &= \frac{m_h^3}{64\pi v^2}\delta^{5/2}[1 + 2 + 1] \\
+        &= \frac{m_h^3}{16v^2}\left(1 - \left(\frac{2m_h}{m_W}\right)^2\right)^{5/2} \\
+        &= \frac{\alpha_Wm_h^3}{4m_W^2}\left(1 - \left(\frac{2m_h}{m_W}\right)^2\right)^{5/2} \\
+    \end{align*}
+    which has the same $m_h^3$ dependence that Peskin has, but not exactly the right form =(.
+
+    \item For $h \to ZZ$, everything goes through almost identically. The only differences are that $m_W \to m_Z$, and we get an extra factor of $1/2!$ since the final state particles are identical, but that cancels with the extra factor of 2 in the lagrangian. Thus,
+    \[ \Gamma_{h \to ZZ} = \frac{\alpha_Wm_h^3}{4m_Z^2}\left(1 - \left(\frac{2m_h}{m_Z}\right)^2\right)^{5/2} \\ \]
+    \item The longitudinal polarization gives momentum dependence to the matrix element, so it seems that it should be the longitudinal helicity amplitude that is responsible for the $m_h^3$ growth.
+\end{enumerate}
+
+\[ \mathscr{L} = \dots -\lambda\left(\frac{(v + h)^2}{2} + \frac{1}{2}\left(\left(G^0\right)^2 + 2G^+G^-\right) - \frac{v^2}{2}\right)^2 \]
+\[ \mathcal{M}(h\to G^0G^0) = ddd \]
+
+\end{document}

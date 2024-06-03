@@ -1,0 +1,49 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{mathtools}
+\usepackage{mathrsfs}
+\usepackage{enumitem}
+\usepackage{physics}
+\usepackage{empheq}
+\usepackage{undertilde}
+\usepackage{float}
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
+
+\usepackage{tikz}
+\usetikzlibrary{calc,decorations.markings,patterns}
+
+\newcommand{\magsq}[1]{\big|#1\big|^2}
+\newcommand{\avg}[1]{\left<#1\right>}
+\newcommand{\fullint}{\int_{-\infty}^\infty}
+\newcommand{\fullintd}[1]{\fullint\dd#1\:}
+\newcommand{\cint}[2]{\int_{#1}^{#2}}
+\newcommand{\cintd}[3]{\cint{#1}{#2}\dd#3\:}
+
+\begin{document}
+
+\title{Problem Set \#1}
+\author{Phys 614}
+\date{Due: 12 Noon, Thursday, April 13, 2023}
+\maketitle
+
+\section*{Problem 1}
+For a quantum-mechanical system of non-interacting particles in the Grand Canonical Ensemble, calculate the probability $P(N)$ that the system has \underline{exactly} $N$ particles. Express your answer \underline{entirely} in terms of $N$ and the mean number of particles $\bar{N}$.
+
+\section*{Problem 2}
+Do the same as (1) for a system of \underline{classical}, but indistinguishable, non-interacting particles all moving in a common potential $V(\vec{r})$.
+
+\section*{Problem 3}
+What is the statistical significance of your answers to problems (1) and (2)?
+
+\section*{Problem 4}
+Consider a system of non-interacting ``$N$-yons'', particles which are between Fermions and Bosons in the following sense: For ``$N$-yons'', the largest number of particles allowed in one quantum-mechanical state is $N_{\text{max}}$ ($1 \leq N_{\text{max}} \leq \infty$), independent of the state.
+\begin{enumerate}[label=(\alph*)]
+    \item Find the mean occupation number $\ev{n_i}$ of a state with single-particle energy $\epsilon_i$.
+    \item Show that you recover the Fermi result for $\ev{n_i}$ if $N_{\text{max}}=1$.
+    \item Show that you recover the Bose result for $N_{\text{max}}\to\infty$.
+\end{enumerate}
+
+\end{document}

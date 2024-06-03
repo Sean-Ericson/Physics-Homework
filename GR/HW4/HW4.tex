@@ -1,0 +1,100 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{nccmath}
+\usepackage{mathtools}
+\usepackage{mathrsfs}
+\usepackage{enumitem}
+\usepackage{physics}
+\usepackage{tensor}
+\usepackage{subcaption}
+
+\usepackage{tikz}
+\usetikzlibrary{calc,decorations.markings,patterns}
+
+\newcommand{\chrissym}[3]{\Gamma_{#2#3}^#1}
+\newcommand{\tchrissym}[3]{\tilde{\Gamma}_{#2#3}^#1}
+
+\begin{document}
+
+\title{Homework 4}
+\author{Sean Ericson \\ Phys 610}
+\maketitle
+
+\section*{Problem 1}
+\begin{enumerate}[label=(\alph*)]
+    \item
+    \begin{alignat*}{3}
+        &         \quad & l\cdot u &= 0 \\
+        &\implies \quad & -(1 + 2\Phi)l^0u^0 + u^il_i &= 0 \\
+        &\implies \quad & l^0 \dv{t}{\tau} = (1 + 2\Phi)^{-1}\dv{x^i}{\tau}l_i \\
+        &\implies \quad & l^0 = (1 + 2\Phi)^{-1}\dot{x}^il_i \\
+        &\implies \quad & l^0 \approx (1 - 2\Phi)\dot{x}^il_i \\
+        &\implies \quad & l^0 \approx \dot{x}^il_i
+    \end{alignat*}
+
+    \item Parallel transport of $l$ implies
+    \[ \dv{t}l^\mu + \chrissym{\mu}{\sigma}{\rho}\dot{x}^\sigma l^\rho = 0 \]
+    Solving for the $i^\text{th}$ component of $l$, we find 
+    \begin{align*}
+        \dot{l}^i &= -\frac{1}{2}g^{ij}\left(\partial_\sigma g_{\rho j} + \partial_\rho g_{\sigma j} - \partial_j g_{\sigma\rho}\right)\dot{x}^\sigma l^\rho \\
+        &= -\frac{1}{2}g^{jj}\left(\partial_\sigma g_{ii} \dot{x}^\sigma l^i + \partial_\rho g_{ii}\dot{x}^il^\rho - \partial_i g_{\alpha\alpha}\dot{x}^\alpha l^\alpha\right) \\
+        &= -\frac{1}{2}(1 - 2\Phi)^{-1}\left(\partial_\sigma(1-2\Phi)\dot{x}^\sigma l^i + \partial_\rho (1 - 2\Phi)\dot{x}^il^\rho - \partial_i g_{\alpha\alpha}\dot{x}^\alpha l^\alpha\right) \\
+        &= (1 - 2\Phi)^{-1} \left(\dot{x}^\sigma l^i \Phi_{,\sigma} + \dot{x}^i l^\rho \Phi_{,\rho} + \frac{1}{2} \partial_i g_{\alpha\alpha}\dot{x}^\alpha l^\alpha \right) \\
+        &= (1 - 2\Phi)^{-1} \left(\dot{x}^\sigma l^i \Phi_{,\sigma} + \dot{x}^i l^\rho \Phi_{,\rho} -\frac{1}{2} \partial_i(1+2\Phi)\dot{x}^0 l^0 + \frac{1}{2} \partial_i(1-2\Phi)\dot{x}^j l^j \right) \\
+        &= (1 - 2\Phi)^{-1} \left(\dot{x}^\sigma l^i \Phi_{,\sigma} + \dot{x}^i l^\rho \Phi_{,\rho} - \Phi_{,i} l^0 - \Phi_{,i}\dot{x}^j l^j \right) \\
+        &= (1 - 2\Phi)^{-1} \left(l^i \dot{\Phi} + \dot{x}^j l^j \Phi_{,j} + \dot{x}^i l^0 \dot{\Phi} + \dot{x}^il^j \Phi{,j} - 2\dot{x}^jl^j\Phi_{,i}\right) \\
+        &\approx - 2\dot{x}^jl^j\Phi_{,i} + l^i \dot{\Phi} + \dot{x}^il^k \Phi_{,k} +  \dot{x}^m l^i \Phi_{,m},
+    \end{align*}
+
+    \item ??
+
+    \item ??
+
+    \item ??
+\end{enumerate}
+
+\section*{Problem 2}
+??
+
+\section*{Problem 3}
+\begin{enumerate}[label=(\alph*)]
+    \item We begin by demanding that the covariant derivative of a vector transforms like a $(1,1)$ tensor:
+    \begin{alignat*}{3}
+        &         \quad & \tilde{\Delta}_\mu\tilde{V}^\nu &= A_\mu^\alpha (A^{-1})_\beta^\nu\Delta_\alpha V^\beta \\
+        &\implies \quad & \tilde{\partial}_\mu\tilde{V}^\nu + \tchrissym{\nu}{\mu}{\gamma}\tilde{V}^\gamma &= A_\mu^\alpha (A^{-1})_\beta^\nu\left(\partial_\alpha V^\beta + \chrissym{\beta}{\alpha}{\lambda}V^\lambda\right) \\
+        &\implies \quad & \tilde{\partial}_\mu\left((A^{-1})_\lambda^\nu V^\lambda\right) + \tchrissym{\nu}{\mu}{\gamma}(A^{-1})_\lambda^\gamma V^\lambda &= \quad \text{``}\qquad\qquad\qquad\text{''}\quad\\
+        &\implies \quad & (\tilde{\partial}_\mu (A^{-1})_\lambda^\nu) V^\lambda + (A^{-1})_\lambda^\nu (\tilde{\partial_\mu}V^\lambda) + \tchrissym{\nu}{\mu}{\gamma}(A^{-1})_\lambda^\gamma V^\lambda &= \\
+        &\implies \quad & A_\mu^\gamma(\partial_\gamma(A^{-1})_\lambda^\nu)V^\lambda + (A^{-1})_\lambda^\nu A_\mu^\alpha\partial_\alpha V^\lambda + \tchrissym{\nu}{\mu}{\gamma}(A^{-1})_\lambda^\gamma V^\lambda &= \\
+        &\implies \quad & A_\mu^\gamma(\partial_\gamma(A^{-1})_\lambda^\nu)V^\lambda + \tchrissym{\nu}{\mu}{\gamma}(A^{-1})_\lambda^\gamma V^\lambda &= A_\mu^\alpha (A^{-1})_\beta^\nu\chrissym{\beta}{\alpha}{\lambda}V^\lambda \\
+        &\implies \quad & \tchrissym{\nu}{\mu}{\gamma}(A^{-1})_\lambda^\gamma &= A_\mu^\alpha (A^{-1})_\beta^\nu\chrissym{\beta}{\alpha}{\lambda} - A_\mu^\gamma\partial_\gamma(A^{-1})_\lambda^\nu \\
+        &\implies \quad & \tchrissym{\nu}{\mu}{\rho} &= A_\rho^\lambda A_\mu^\alpha (A^{-1})_\beta^\nu\chrissym{\beta}{\alpha}{\lambda} - A_\rho^\lambda A_\mu^\alpha\partial_\alpha(A^{-1})_\lambda^\nu \\
+        &\implies \quad & \tchrissym{\nu}{\mu}{\rho} &= A_\rho^\lambda A_\mu^\alpha \left((A^{-1})_\beta^\nu\chrissym{\beta}{\alpha}{\lambda} -\partial_\alpha(A^{-1})_\lambda^\nu\right)
+    \end{alignat*}
+    This form agrees with equation 3.10 in Carrol's \textit{Spacetime and Geometry}. To get it into the desired form, we can relabel some indices and focus on the last term:
+    \begin{align*}
+        -A_\rho^\lambda A_\mu^\alpha \partial_\alpha (A^{-1})_\lambda^\mu &= \tilde{\partial}_\rho\delta_{\;\nu}^\mu - A_\nu^\lambda A_\rho^\alpha \partial_\alpha(A^{-1})_\lambda^\nu \\
+        &=  \tilde{\partial}_\rho\left((A^{-1})_\tau^\mu A_\nu^\tau\right) - A_\nu^\lambda A_\rho^\alpha \partial_\alpha(A^{-1})_\lambda^\nu \\
+        &= (A^{-1})_\tau^\mu\tilde{\partial}_\rho A_\nu^\tau \\
+        &= (A^{-1})_\tau^\mu A_\rho^\sigma \partial_\sigma A_\nu^\tau
+    \end{align*}
+    Finally, then, we have that
+    \begin{align*}
+        \tchrissym{\mu}{\rho}{\nu} &= A_\nu^\lambda A_\rho^\alpha (A^{-1})_\tau^\mu\chrissym{\tau}{\alpha}{\lambda} - A_\nu^\lambda A_\rho^\alpha\partial_\alpha(A^{-1})_\lambda^\mu \\
+        &= A_\nu^\lambda A_\rho^\sigma (A^{-1})_\tau^\mu\chrissym{\tau}{\sigma}{\lambda} + (A^{-1})_\tau^\mu A_\rho^\sigma \partial_\sigma A_\nu^\tau \\
+        &= A_\rho^\sigma (A^{-1})_\tau^\mu\left(A_\nu^\lambda \chrissym{\tau}{\sigma}{\lambda} + \partial_\sigma A_\nu^\tau\right)
+    \end{align*}
+
+    \item Yes, the difference of two connections transforms like a tensor, as the non-tensorial part of the transformations cancel:
+    \begin{align*}
+        \tilde{S}_{\rho\nu}^\mu &= (\tilde{\Gamma}_1)_{\rho\nu}^\mu - (\tilde{\Gamma}_2)_{\rho\nu}^\mu \\
+        &= A_\rho^\sigma (A^{-1})_\tau^\mu A_\nu^\lambda (\Gamma_1)_{\sigma\lambda}^\tau + A_\rho^\sigma (A^{-1})_\tau^\mu \partial_\sigma A_\nu^\tau - A_\rho^\sigma (A^{-1})_\tau^\mu A_\nu^\lambda (\Gamma_2)_{\sigma\lambda}^\tau - A_\rho^\sigma (A^{-1})_\tau^\mu \partial_\sigma A_\nu^\tau \\
+        &= A_\rho^\sigma (A^{-1})_\tau^\mu A_\nu^\lambda (\Gamma_1)_{\sigma\lambda}^\tau - A_\rho^\sigma (A^{-1})_\tau^\mu A_\nu^\lambda (\Gamma_2)_{\sigma\lambda}^\tau \\
+        &= A_\rho^\sigma (A^{-1})_\tau^\mu A_\nu^\lambda S_{\sigma\lambda}^\tau
+    \end{align*}
+\end{enumerate}
+
+
+
+\end{document}

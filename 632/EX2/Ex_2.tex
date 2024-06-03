@@ -1,0 +1,44 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{enumitem}
+\usepackage{physics}
+
+\newcommand{\magsq}[1]{\big|#1\big|^2}
+\newcommand{\avg}[1]{\left<#1\right>}
+\newcommand{\fullint}{\int_{-\infty}^\infty}
+\newcommand{\fullintd}[1]{\fullint\dd#1\:}
+\newcommand{\cint}[2]{\int_{#1}^{#2}}
+\newcommand{\cintd}[3]{\cint{#1}{#2}\dd#3\:}
+
+\begin{document}
+	
+\title{Exercise Set 2}
+\author{Sean Ericson \\ Phys 632}
+\maketitle
+
+\section*{Exercise 1}
+First let's calculate the derivative
+\[ \partial_x\psi = \left(\pm\frac{i\eta}{\hbar} \sqrt{p(x)} -\frac{\eta p'(x)}{2(p(x))^{3/2}}\right) \exp[\pm \frac{i}{\hbar}\int^x p(x') \dd x' ] \]
+Multiplying by $\psi^*$ will cancel the exponential, so
+\begin{align*}
+    j(x) & = \frac{\hbar}{m}\Im\left[\frac{\eta}{\sqrt{p(x)}}\left(\pm\frac{i\eta}{\hbar} \sqrt{p(x)} -\frac{\eta p'(x)}{2(p(x))^{3/2}}\right)\right] \\
+    & = \pm \frac{\eta^2}{m}
+\end{align*}
+
+
+\section*{Exercise 2}
+The turning points are given by
+\[ V(x_{1,2}) = E \implies m\omega^2x_{1,2}^2 = E \implies x_{1,2} = \mp\sqrt{\frac{E}{m\omega^2}} \]
+Now,
+\begin{align*}
+    \oint p(x)\dd x & = \cint{-\sqrt{\frac{E}{m\omega^2}}}{\sqrt{\frac{E}{m\omega^2}}} \sqrt{2mE - 2m^2\omega^2x^2} \dd x \\
+    & = 4m\omega \cint{-\sqrt{\frac{E}{m\omega^2}}}{\sqrt{\frac{E}{m\omega^2}}} \sqrt{\frac{E}{m\omega^2} - x^2} \\
+    & = 4m\omega \frac{E}{m\omega^2}\frac{\pi}{2} \\
+    & = \frac{2\pi E}{\omega}  = \left(n + \frac{1}{2}\right)h
+\end{align*}
+\[ \implies E = \left(n + \frac{1}{2}\right)\hbar\omega \]    
+
+
+\end{document}

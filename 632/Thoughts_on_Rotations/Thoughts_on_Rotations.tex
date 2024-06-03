@@ -1,0 +1,56 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{mathrsfs}
+\usepackage{enumitem}
+\usepackage{physics}
+
+\newcommand{\magsq}[1]{\big|#1\big|^2}
+\newcommand{\avg}[1]{\left<#1\right>}
+\newcommand{\fullint}{\int_{-\infty}^\infty}
+\newcommand{\fullintd}[1]{\fullint\dd#1\:}
+\newcommand{\cint}[2]{\int_{#1}^{#2}}
+\newcommand{\cintd}[3]{\cint{#1}{#2}\dd#3\:}
+
+\begin{document}
+	
+\title{On The Relationship Between Rotations of Angular Momentum Eigenstates in $\mathcal{H}$ and Rotations of Elements of $\mathbb{R}^3$}
+\author{Sean Ericson \\ Phys 632}
+\maketitle
+
+\section*{The Problem}
+Wigner, being the champ that he was, kindly calculated for our utilization and enjoyment the representation of $R(\mathbf{v}) = e^{-i\abs{\mathbf{v}}J_{\hat{v}}/\hbar}$ in the basis of eigenstates of $J_z$ for $l=1$. In particular, if the general rotation is decomposed into rotations about the standard Euler angles, $R(\mathbf{v}) = R_z(\alpha)R_y(\beta)R_z(\gamma)$, then
+\[ D_{m'm}^{(1)} = \mqty(e^{-i\alpha}\cos^2(\beta/2)e^{-i\gamma} & -\frac{1}{\sqrt{2}}e^{-i\alpha}\sin\beta & e^{-i\alpha}\sin^2(\beta/2)e^{i\gamma} \\ \frac{1}{\sqrt{2}}\sin\beta e^{-i\gamma} & \cos\beta & -\frac{1}{\sqrt{2}}\sin\beta e^{i\gamma} \\ e^{i\alpha}\sin^2(\beta/2)e^{-i\gamma} & \frac{1}{\sqrt{2}}e^{i\alpha}\sin\beta & e^{i\alpha}\cos^2(\beta/2)e^{i\gamma} )  \]
+Now, this rotation operator acts on elements of an abstract Hilbert space. It is defined as the exponential of the Anuglar Momentum component operator along the the direction of $\hat{v}$. 
+
+We intuitively expect this abstract operator to relate to the more familiar rotation operators for $\mathbb{R}^3$. In particular, we might expect that the representations of the Hilbert space operator in the $J_z$ eigenbasis to be identical to that of the operator on $\mathbb{R}^3$ wich affects the same rotation expressed in the spherical basis. That is, if 
+\[ R \in \mathcal{H} = R_z(\alpha)R_y(\beta)R_z(\gamma) = e^{-i\alpha J_z/\hbar}e^{-i\beta J_y/\hbar}e^{-i\gamma J_z/\hbar} \]
+\[ D_{m'm}^{(1)} = \mel{lm'}{R}{lm} \]
+and
+\[ \tilde{R} \in \mathbb{R}^3 = \tilde{R}_z(\alpha)\tilde{R}_y(\beta)\tilde{R}_z(\gamma) \]
+then we expect
+\[ P_{q'q} = \mel{e_{q'}}{\tilde{R}}{e_q} = D_{q'q}^{(1)} \]
+However, when we actually calculate $P_{q'q}$, we find that
+\[ P_{q'q} = \left[D_{q'q}^{(1)}\right]^* \]
+This tells us that our naive assumption that $(R) \leftrightarrow (\tilde{R})$ was simply incorrect.
+
+So let's try to figure out what rotation operator on $\mathbb{R}^3$ really does correspond to the operator on the Hilbert space. To do so we must establish some sort of connection between the spaces $\mathcal{H}$ and $\mathbb{R}^3$ in order to understand what the ``correspondence'' really means. Consider the following definitions:
+\begin{align*}
+    Y_1^m &= \braket{\theta, \phi}{1, m} \\
+    \tilde{Y}_1^m &= \braket{e_m}{\mathbf{r}},
+\end{align*}
+where $\ket{e_m}$ are the spherical basis vectors. The requirement that $\tilde{Y}_1^m = Y_1^m$ gives us a link between the two spaces. Further, let
+\begin{align*}
+    \left[Y_1^m\right]' &= \mel{\theta, \phi}{R}{1, m} = \sum_{m'}\braket{\theta, \phi}{1 m'}\mel{1 m'}{R}{1 m} = D_{m'm}Y_1^m \\
+    \left[\tilde{Y}_1^m\right]' &= \mel{e_m}{\tilde{R}}{\mathbf{r}} = \sum_{m'} \mel{e_m}{R}{e_{m'}}\braket{e_{q'}}{\mathbf{r}} = P_{mm'}Y_1^m
+\end{align*}
+Thus we see that, whatever $\tilde{R}$ on $\mathbb{R}^3$ really corresponds to $R$, it's matrix representation in the spherical basis is the \textit{transpose} of the Wigner $D$ matrix. 
+
+Now we can put both of these observations together. If $R(\mathbf{v}) = R_z(\alpha)R_y(\beta)R_z(\gamma)$ is the operator on the Hilbert space corresponding to the rotation $\mathbf{v}$, and we go through the perscription of taking the transpose of $\tilde{R}$'s matrix in the spherical basis, we will wind up with
+\[ P_{q'q} = \left[D_{mm'}^{(1)}\right]^* = \left[D_{m'm}^{(1)}\right]^\dag \]
+This tells us that the rotation on $\mathbb{R}^3$ which corresponds (via the equivalency of the $Y_1^m$) to the rotation on the Hilber space is infact
+\[ (R) \overset{\intercal}{\leftrightarrow} (\tilde{R}(-\mathbf{v})) = (\tilde{R}_z(-\gamma)\tilde{R}_y(-\beta)\tilde{R}_z(-\alpha)) \]
+i.e. that it is the \textit{inverse} rotation which corresponds (again, via the equivalency of the $Y_1^m$) to rotation on the Hilbert space.
+
+\end{document}

@@ -1,0 +1,136 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{mathrsfs}
+\usepackage{enumitem}
+\usepackage{physics}
+
+\newcommand{\magsq}[1]{\big|#1\big|^2}
+\newcommand{\avg}[1]{\left<#1\right>}
+\newcommand{\fullint}{\int_{-\infty}^\infty}
+\newcommand{\fullintd}[1]{\fullint\dd#1\:}
+\newcommand{\cint}[2]{\int_{#1}^{#2}}
+\newcommand{\cintd}[3]{\cint{#1}{#2}\dd#3\:}
+
+\begin{document}
+	
+\title{Midterm Rewrite}
+\author{Sean Ericson \\ Phys 632}
+\maketitle
+
+\section*{Problem 1}
+Consider, without loss of generality, $J_z = -\frac{i}{\hbar}\comm{J_x}{J_y}$. Due to the linearity and commutational invariance of the trace,
+\begin{align*}
+    \tr[J_z] &= -\frac{i}{\hbar}\tr[J_xJ_y - J_yJ_x] \\
+    & = -\frac{i}{\hbar}\left(\tr[J_xJ_y] - \tr[J_yJ_x]\right) \\
+    & = -\frac{i}{\hbar}\left(\tr[J_xJ_y] - \tr[J_xJ_y]\right) \\
+    & = 0
+\end{align*}
+
+\section*{Problem 2}
+Using the saddle-point approximation with $f(x, t) = xt-e^t$, we have
+\begin{align*}
+    \pdv{f}{t} &= x - e^t \\
+    \pdv[2]{f}{t} &= -e^t
+\end{align*}
+Therefore,
+\[ t_0 = \ln(x); \quad f_0 = f(x, t_0) = x\ln(x)-x; \quad f''_0 = \pdv[2]{f}{t}|_{t=t_0} = -x \]
+and applying the saddle-point approximation gives
+\begin{align*}
+    I(x) &\approx e^{f_0}\sqrt{\frac{2\pi}{\abs{f''_0}}} \\
+    &\approx e^{x\ln(x)-x}\sqrt{\frac{2\pi}{x}} \\
+    &\approx \sqrt{2\pi}e^{-x}x^{x-\frac{1}{2}}
+\end{align*}
+
+\section*{Problem 3}
+\begin{enumerate}[label=(\alph*)]
+    \item No, $\vec{r}$ and $\vec{p}$ are vector operators, but their components each commute amongst themselves.
+    \item \[ \vec{V}\cdot\vec{J} - \vec{J}\cdot\vec{V} = \comm{V_\alpha}{J_\alpha} = i\hbar\epsilon_{\alpha\alpha\beta}V_\beta = 0 \implies \vec{V}\cdot\vec{J} = \vec{J}\cdot\vec{V} \]
+    \item
+    \begin{align*}
+        \comm{J_\alpha}{\vec{V}\cdot\vec{J}} &= \comm{J_\alpha}{V_\beta J_\beta} \\
+        &= V_\beta\comm{J_\alpha}{J_\beta} + \comm{J_\alpha}{V_\beta}J_\beta \\
+        &= i\hbar\left(\epsilon_{\alpha\beta\gamma}V_\beta J_\gamma + \epsilon_{\alpha\beta\gamma}V_\gamma J_\beta\right) \\
+        &= 0
+    \end{align*}
+    where the last equality comes from the antisymmetry of the Levi-Civita symbol.
+    
+    \item Firstly,
+    \begin{align*}
+        \comm{J^2}{V_\beta} & = J_\alpha\comm{J_\alpha}{V_\beta} + \comm{J_\alpha}{V_\beta}J_\alpha \\
+        &= i\hbar\epsilon_{\alpha\beta\gamma}\comm{J_\alpha}{V_\gamma}_+
+    \end{align*}
+    Now,
+    \begin{align*}
+        \comm{J^2}{\comm{J^2}{V_\beta}} &= J_\sigma\comm{J_\sigma}{V_\beta} + \comm{J_\sigma}{\comm{J^2}{V_\beta}}J_\sigma \\
+        &= i\hbar\epsilon_{\alpha\beta\gamma}\comm{J_\sigma}{\comm{J_\sigma}{\comm{J_\alpha}{V_\gamma}_+}}_+ \\
+        &= i\hbar\epsilon_{\alpha\beta\gamma}\comm{J_\sigma}{\comm{J_\sigma}{J_\alpha V_\gamma + V_\gamma J_\alpha}}_+
+    \end{align*}
+    The inner commutator gives
+    \begin{align*}
+        \comm{J_\sigma}{J_\alpha V_\gamma + V_\gamma J_\alpha} &= J_\alpha\comm{J_\sigma}{V_\gamma} + \comm{J_\sigma}{J_\alpha}V_\gamma + V_\gamma\comm{J_\sigma}{J_\alpha} + \comm{J_\sigma}{V_\gamma}J_\alpha \\
+        &= i\hbar\epsilon_{\sigma\gamma\delta}J_\alpha V_\delta + i\hbar\epsilon_{\sigma\alpha\delta}J_\delta V_\gamma + i\hbar\epsilon_{\sigma\gamma\delta}V_\delta J_\alpha \\
+        &= i\hbar\epsilon_{\sigma\gamma\delta}\comm{J_\alpha}{V_\delta}_+ + i\hbar\epsilon_{\sigma\alpha\delta}\comm{J_\delta}{V_\gamma}_+
+    \end{align*}
+    The double commutator therefore becomes
+    \begin{align*}
+        \comm{J^2}{\comm{J^2}{V_\beta}} &= -\hbar^2\epsilon_{\alpha\beta\gamma}\comm{J_\alpha}{\epsilon_{\sigma\gamma\delta}\comm{J_\alpha}{V_\delta}_+ + \epsilon_{\sigma\alpha\delta}\comm{J_\delta}{V_\gamma}_+}_+ \\
+        &= \hbar^2\epsilon_{\alpha\beta\gamma}\comm{J_\sigma}{\epsilon_{\sigma\alpha\delta}\comm{J_\gamma}{V_\delta}_+ - \epsilon_{\sigma\alpha\delta}\comm{J_\delta}{V_\gamma}_+}_+ \\
+        &= \hbar^2\epsilon_{\alpha\beta\gamma}\epsilon_{\alpha\delta\sigma}\comm{J_\sigma}{\comm{J_\gamma}{V_\delta}_+ - \comm{J_\delta}{V_\gamma}_+}_+
+    \end{align*}
+    Then, using
+    \[ \epsilon_{\mu\alpha\beta}\epsilon_{\mu\sigma\tau} = \delta_{\alpha\sigma}\delta_{\beta\tau} - \delta_{\alpha\tau}\delta_{\beta\sigma}, \]
+    we get
+    \begin{align*}
+        \comm{J^2}{\comm{J^2}{V_\beta}} &= \hbar^2(\delta_{\beta\delta}\delta_{\gamma\sigma} - \delta_{\beta\sigma}\delta_{\gamma\delta})\comm{J_\sigma}{\comm{J_\gamma}{V_\delta}_+ - \comm{J_\delta}{V_\gamma}_+} \\
+        &= \hbar^2\comm{J_\gamma}{\comm{J_\gamma}{V_\beta}_+ - \comm{J_\beta}{V_\gamma}_+}_+ - \hbar^2\comm{J_\beta}{\comm{J_\gamma}{V_\gamma}_+ - \comm{J_\gamma}{V_\gamma}_+}_+ \\
+        &= \hbar^2\comm{J_\gamma}{\comm{J_\gamma}{V_\beta}_+ - \comm{J_\beta}{V_\gamma}_+}_+
+    \end{align*}
+    The first term of the outer commutator in the above equation gives
+    \begin{align*}
+        \comm{J_\gamma}{\comm{J_\gamma}{V_\beta}_+}_+ &= J_\gamma J_\gamma V_\beta + J_\gamma V_\beta J_\gamma + J_\gamma V_\beta J_\gamma + V_\beta J_\gamma J_\gamma \\
+        &= 2J_\gamma J_\gamma V_\beta + 2V_\beta J_\gamma J_\gamma + J_\gamma\comm{V_\beta}{J_\gamma} + \comm{J_\gamma}{V_\beta}J_\gamma \\
+        &= 2\comm{J^2}{V_\beta}_+ - i\hbar\epsilon_{\gamma\beta\sigma}J_\gamma V_\sigma + i\hbar\epsilon_{\gamma\beta\sigma}V_\sigma J_\gamma \\
+        &= 2\comm{J^2}{V_\beta}_+ + \hbar^2\epsilon_{\gamma\beta\sigma}\epsilon_{\gamma\sigma\tau}V_\tau \\
+        &= 2\comm{J^2}{V_\beta}_+ - 2\hbar^2V_\beta
+    \end{align*}
+    and the second term gives
+    \begin{align*}
+        \comm{J_\gamma}{\comm{J_\beta}{V_\gamma}_+}_+ &= J_\gamma J_\beta V_\gamma + J_\gamma V_\gamma J_\beta + J_\beta V_\gamma J_\gamma + V_\gamma J_\beta J_\gamma \\
+        &= 4J_\beta\vec{V}\cdot\vec{J} + \comm{J_\gamma}{J_\beta}V_\gamma + V_\gamma\comm{J_\beta}{J_\gamma} \\
+        &= 4J_\beta\vec{V}\cdot\vec{J} + i\hbar\epsilon_{\gamma\beta\sigma}\comm{J_\sigma}{V_\gamma} \\
+        &= 4J_\beta\vec{V}\cdot\vec{J} - \hbar^2\epsilon_{\gamma\beta\sigma}\epsilon_{\sigma\gamma\tau}V_\tau \\
+        &= 4J_\beta\vec{V}\cdot\vec{J} - 2\hbar^2V_\beta
+    \end{align*}
+    Finally,
+    \[ \comm{J^2}{\comm{J^2}{V_\beta}} = 2\hbar^2\comm{J^2}{V_\beta}_+ - 4\hbar^2J_\beta \vec{V}\cdot\vec{J} \]
+    \[ \implies \comm{J^2}{\comm{J^2}{\vec{V}}} = 2\hbar^2\comm{J^2}{\vec{V}}_+ - 4\hbar^2(\vec{V}\cdot\vec{J})\vec{J} \]
+\end{enumerate}
+
+
+\section*{Problem 4}
+\begin{enumerate}[label=(\alph*)]
+    \item For $0 \leq x \leq L$, the potential can be written
+    \[ V(x) = V_0\left(\frac{x}{L} - 1\right), \]
+    and the turning point is given by
+    \[ V(x_2) = V_0\left(\frac{x_2}{L} - 1\right) = -\abs{E} \implies x_2 = L\left(1 - \frac{\abs{E}}{V_0}\right) \]
+    The WKB quantization condtion tells us that
+    \begin{align*}
+        (n+1/2)\pi\hbar &= 2\int_0^{x_2}\sqrt{2m(E-V(x))} \dd x \\
+        &= \sqrt{32m}\int_0^{x_2}\sqrt{V_0 - \abs{E} - V_0\frac{x}{L}} \dd x \\
+        &= \frac{\sqrt{128m}L}{3V_0}(V_0 - \abs{E})^{3/2}
+    \end{align*}
+    Thus
+    \[ E_n = \left(\frac{3V_0(n + 1/2)\pi\hbar}{\sqrt{32}mL}\right) - V_0 \]
+
+    \item The energy of the highest bound state is as close to 0 as possible without being positive. Setting $E_n = 0$ gives
+    \[ V_0 = \left(\frac{3V_0(n_\text{max}+1/2)\pi\hbar}{\sqrt{32}mL}\right) \implies n_\text{max} \approx \frac{sqrt{32mV_0}L}{3\pi\hbar} - \frac{1}{2} \]
+
+    \item Setting $n_\text{max} = 0$ gives
+    \[ \frac{\sqrt{32mV_0}L}{3\pi\hbar} = \frac{1}{2} \implies V_0L \geq \frac{9\pi^2\hbar^2}{128m} \]
+\end{enumerate}
+
+
+
+\end{document}

@@ -1,0 +1,112 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{mathrsfs}
+\usepackage{enumitem}
+\usepackage{physics}
+
+\newcommand{\magsq}[1]{\big|#1\big|^2}
+\newcommand{\avg}[1]{\left<#1\right>}
+\newcommand{\fullint}{\int_{-\infty}^\infty}
+\newcommand{\fullintd}[1]{\fullint\dd#1\:}
+\newcommand{\cint}[2]{\int_{#1}^{#2}}
+\newcommand{\cintd}[3]{\cint{#1}{#2}\dd#3\:}
+\newcommand{\e}{\mathbf{e}}
+
+\begin{document}
+	
+\title{Homework 8}
+\author{Sean Ericson \\ Phys 632}
+\maketitle
+
+\section*{Problem 1}
+First, let's identify
+\[ \e = e^{\beta\hbar\omega}, \quad \coth(\beta\hbar\omega) = \frac{\e^1 + \e^{-1}}{\e^1 - \e^{-1}}, \quad \csch(\beta\hbar\omega) = \frac{2}{\e^1 - \e^{-1}} \]
+as well as
+\[ Z = \sum_n\e^{-(n+1/2)} = \e^{-\frac{1}{2}}\sum_n\e^{-n} = \frac{\e^{-\frac{1}{2}}}{1 - \e^{-1}} = \frac{1}{\e^\frac{1}{2} - \e^{-\frac{1}{2}}} \]
+Now, neglecting units for the time being,
+\begin{align*}
+    \rho(x,x') &= \mel{x}{\rho}{x'} \\
+    &= Z^{-1}\sum_n \e^{-(n+1/2)}\braket{x}{n}\braket{n}{x'} \\
+    &= \frac{1}{\sqrt{\pi}}\left(\e^\frac{1}{2} - \e^{-\frac{1}{2}}\right)\e^{-\frac{1}{2}} e^{-(x^2 + (x')^2)/2}\sum_n\frac{\e^{-n}}{2^n n!}H_n(x)H_n(x') \\
+\end{align*}
+Letting $z = \e^{-1}$ and applying Mehler's formula gives
+\begin{align*}
+    \rho(x,x') &= \frac{1}{\sqrt{\pi}}\frac{1 - \e^{-1}}{\sqrt{1 - \e^{-2}}}e^{-(x^2 + (x')^2)/2}\exp\left[\frac{2xx'\e^{-1} - (x^2 + (x')^2)\e^{-2}}{1 - \e^{-2}}\right] \\
+    &= \frac{1}{\sqrt{\pi}}\frac{\e^{\frac{1}{2}}(\e^{\frac{1}{2}} - \e^{-\frac{1}{2}})}{\e^{\frac{1}{2}}\sqrt{\e^1 - \e^{-1}}}\exp\left[\frac{2xx'}{\e^{1} - \e^{-1}} - (x^2 + (x')^2)\left(\frac{\e^{-1}}{\e^1 - \e^{-1}} + \frac{1}{2}\right)\right] \\
+    &= \frac{1}{\sqrt{\pi}}\frac{\e^{\frac{1}{2}} - \e^{-\frac{1}{2}}}{\sqrt{(\e^{\frac{1}{2}}-\e^{-\frac{1}{2}})(\e^{\frac{1}{2}}+\e^{-\frac{1}{2}})}}\exp[xx'\csch(\beta\hbar\omega) - \frac{1}{2}(x^2 + (x')^2)\coth(\beta\hbar\omega)] \\
+    &= \frac{1}{\sqrt{\pi\coth(\beta\hbar\omega/2)}}\exp[xx'\csch(\beta\hbar\omega) - \frac{1}{2}(x^2 + (x')^2)\coth(\beta\hbar\omega)] \\
+\end{align*}
+Restoring units,
+\[ \rho(x,x') = \frac{1}{\sqrt{\pi x_s^2 \coth(\beta\hbar\omega/2)}}\exp[\frac{xx'}{x_s^2}\csch(\beta\hbar\omega) - \frac{(x^2 + (x')^2))}{2x_s^2}\coth(\beta\hbar\omega)] \]
+For the position uncertainty, $\rho(x,x)$ is a gaussian, so we can immediately read off the  uncertainty as
+\[ \sigma_x = \sqrt{\frac{1}{2}x_s^2\coth(\beta\hbar\omega/2)} = \sqrt{\frac{\hbar\coth(\beta\hbar\omega/2)}{2m\omega}} \]
+As $T\to 0$, this becomes the typical harmonic oscillator ground state position uncertainty,
+\[ \sigma_x = \sqrt{\frac{\hbar}{2m\omega}}. \]
+As $T\to\inf$, $\coth(\beta\hbar\omega/2)\to 2/\beta\hbar\omega$, and the uncertainty approaches
+\[ \sigma_x = \sqrt{\frac{k_BT}{m\omega^2}} \]
+as expexted by the equipartition theorem, $\frac{1}{2}m\omega^2\sigma_x^2 = \frac{1}{2}k_bT$.
+
+
+\section*{Problem 2}
+Before Alice performs her measurement, the three qubits are in the state
+\[ \ket{\psi_{\text{TAB}}} = \frac{1}{2}\left[\ket{1 1}\ket{\psi_{11}} + \ket{1 0}\ket{\psi_{10}} + \ket{01}\ket{\psi_{01}} - \ket{00}\ket{\psi_{00}}\right] \]
+where
+\begin{align*}
+    \ket{\psi_{11}} &= c_0\ket{1} + c_1\ket{0} = \sigma_x\ket{\psi_{10}} \\
+    \ket{\psi_{10}} &= c_1\ket{1} + c_0\ket{0} = \mathcal{I}\ket{\psi_{10}} \\
+    \ket{\psi_{01}} &= c_0\ket{1} - c_1\ket{0} = i\sigma_y\ket{\psi_{10}} \\
+    \ket{\psi_{00}} &= c_1\ket{1} - c_0\ket{0} = \sigma_z\ket{\psi_{10}}
+\end{align*}
+After Bob hears about Alice's measurement result and performs the necessary unitary operation, his state is
+\begin{align*}
+    \rho_B &= (1-\epsilon)\dyad{\psi_{10}} + \frac{\epsilon}{3}\left(\dyad{\psi_{11}} + \dyad{\psi_{01}} + \dyad{\psi_{00}} \right) \\
+    &= (1-\epsilon - \frac{\epsilon}{3})\dyad{\psi_{10}} + \frac{\epsilon}{3}\left(\dyad{\psi_{11}} + \dyad{\psi_{01}} + \dyad{\psi_{00}} + \dyad{\psi_{10}} \right) \\
+    &= (1 - \frac{4}{3}\epsilon)\dyad{\psi_{10}} + \frac{4}{3}\epsilon\mathcal{I}
+\end{align*}
+With a matrix representation the $\{\ket{1}, \ket{0}\}$ basis of
+\[ \mqty((1 - \frac{4}{3}\epsilon)\magsq{c_1} + \frac{4}{3}\epsilon & (1-\frac{4}{3}\epsilon)c_0^*c_1 \\ (1-\frac{4}{3}\epsilon)c_0c_1^* & (1 - \frac{4}{3})\epsilon\magsq{c_0} + \frac{4}{3}\epsilon ) \]
+
+\section*{Problem 3}
+The mean-squared separation is given by
+\begin{align*}
+    \ev{(x_A - x_B)^2} &= \ev{x^2}_A + \ev{x^2}_B - 2\ev{x}_A\ev{x}_B \mp 2\magsq{\mel{\psi_1}{x}{\psi_2}} \\
+    &= \sigma_x^2(n) + \sigma_x^2(n') \mp 2\magsq{\mel{n}{x}{n'}}
+\end{align*}
+where the last term is + for fermions, - for bosons, and 0 for distinguishable particles. The position-variances are simply
+\[ \sigma_x^2 = \frac{\hbar(n + 1/2)}{m\omega_0} \]
+and the overlap is
+\begin{align*}
+    \mel{n}{x}{n'} &= \frac{1}{\sqrt{2}}\mel{n}{a + a^{\dag}}{n'} \\
+    &= \frac{1}{\sqrt{2}}\left(\sqrt{n+1}\delta_{n,n'-1} + \sqrt{n}\delta_{n, n'+1}\right)
+\end{align*}
+So, for distinguishable particles we have
+\[ \ev{(x_A - x_B)^2} = \frac{\hbar(n + n' + 1)}{m\omega_0} \]
+For indistinguishable bosons,
+\[ \ev{(x_A - x_B)^2} = \frac{\hbar(n + n' + 1)}{m\omega_0} - \frac{1}{\sqrt{2}}\left(\sqrt{n+1}\delta_{n,n'-1} + \sqrt{n}\delta_{n, n'+1}\right)  \]
+For indistinguishable fermions,
+\[ \ev{(x_A - x_B)^2} = \frac{\hbar(n + n' + 1)}{m\omega_0} + \frac{1}{\sqrt{2}}\left(\sqrt{n+1}\delta_{n,n'-1} + \sqrt{n}\delta_{n, n'+1}\right)  \]
+
+
+\section*{Problem 4}
+\begin{enumerate}[label=(\alph*)]
+    \item Parahelium should have the lower energy. Since the electrons' spins are antisymmetric, their spacial degree of freedom must be bosonic, so the can both occupy the lowest energy state.
+    \item For the delium atom, the electrons' wavefunctions need not be symmetric or antisymmetric, so their degree of localization should be betwen that of the para/orthohelium cases, and its energy should also be between that of para/orthohelium.
+\end{enumerate}
+
+
+\section*{Problem 5}
+\[ \Tr[Q] = p_0 - p_1; \qquad \det[Q] = \left[(p_0-p_1)^2 - 1\right]\sin^2\theta\cos^2\theta \]
+\begin{align*}
+    q_{\pm} &= \frac{\Tr[Q]}{2} \pm \sqrt{\left(\frac{\Tr[Q]}{2}\right)^2 - \det[Q]} \\
+    &= \frac{p_0-p_0}{2} \pm \sqrt{\left(\frac{p_0-p_1}{2}\right)^2 - \left[(p_0-p_1)^2 - 1\right]\sin^2\theta\cos^2\theta} \\
+    &= \frac{1}{2}\left(p_0 - p_1 \pm \sqrt{(p_0-p_1)^2 - \left[(p_0-p_1)^2 - 1\right]\sin^2(2\theta)}\right) \\
+    &= \frac{1}{2}\left(p_0 - p_1 \pm \sqrt{(p_0-p_1)^2 - \left[(p_0-p_1)^2 - 1\right]\left(1-\cos^2(2\theta)\right)}\right) \\
+    &= \frac{1}{2}\left(p_0 - p_1 \pm \sqrt{1 - \cos^2(2\theta) - (p_0 - p_1)^2\cos^2(2\theta)}\right) \\
+    &= \frac{1}{2}\left(p_0 - p_1 \pm \sqrt{1 + (1 - (p_0 - p_1)^2)\cos^2(2\theta)} \right) \\
+    &= \frac{1}{2}\left(p_0 - p_1 \pm \sqrt{1 - 4p_0p_1\cos^2{2\theta}}\right)
+\end{align*}
+
+
+\end{document}

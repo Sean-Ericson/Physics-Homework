@@ -1,0 +1,88 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{nccmath}
+\usepackage{mathtools}
+\usepackage{mathrsfs}
+\usepackage{enumitem}
+\usepackage{physics}
+\usepackage{tensor}
+\usepackage{slashed}
+
+\newcommand{\txtsup}[1]{\textsuperscript{#1}}
+
+\begin{document}
+
+\title{Homework 5}
+\author{Sean Ericson \\ Phys 662}
+\maketitle
+
+\section*{Problem 1}
+On page 28 of the ATLAS paper, they quote a lower limit of 4.2 TeV for the mass of the $W'$. Using the collider reach site, I find the following predictions for the given colliders:
+\begin{table}[h]
+    \centering
+    \begin{tabular}{c c c}
+        $\sqrt{s}$ & $\mathcal{L}^{-1}$ & $m_{W'}$ Limit \\
+        \hline
+        14 TeV & 3000fb\txtsup{-1} & 5.9 Tev \\
+        27 TeV & 15000fb\txtsup{-1} & 11.5 Tev \\
+        100 TeV & 300000fb\txtsup{-1} & 42.9 Tev
+    \end{tabular}
+\end{table}
+
+\section*{Problem 2}
+\begin{enumerate}[label=(\alph*)]
+    \item The full lagrangian is given by
+    \[ \mathscr{L} = \sum_f \bar{\Psi}_{fi}\left(i\slashed{D}_{ij} - m_f\delta_{ij}\right)\Psi_{fj} - \frac{1}{4}F_{\mu\nu}F^{\mu\nu} - \frac{1}{4}G_{\mu\nu}^aG_a^{\mu\nu}, \]
+    where 
+    \[ F_{\mu\nu} = 2\partial_{[\mu}A_{\nu]}, \]
+    \[ G_{\mu\nu}^a = 2\partial_{[\mu}B_{\nu]}^a + gf^{abc}B_\mu^aB_\nu^c, \]
+    and 
+    \[ \slashed{D}_j^i = \gamma^\mu\left(\partial_\mu\delta_{ij} - igt_{ij}^aB_\mu^a - iQ_feA^\mu\delta_{ij}\right). \]
+    With $m_f = 0$ for all flavors, the symmetries of the lagrangian are $SU(3)_{L\times R}\times U(1)_{B}$. I believe there should also be an $SU(2)$ for rotation between down and strange since they have the same charge (a sort of ``strange isospin'', if you will).
+
+    \item Turning on the masses brakes the $SU(3)_{L\times R}$, though we still have the $U(1)_B$. If the masses are equal, we retain a $SU(3)_{L+R}$ symmetry, and if at least the down and strange masses are the same we retain that $SU(2)$.
+\end{enumerate}
+
+
+\section*{Problem 3}
+\begin{enumerate}[label=(\alph*)]
+    \item As a function of $u = \vec{\phi}\cdot\vec{\phi}$, the potential is given by 
+    \[ V(u) = \lambda(u-v^2)^2. \]
+    Setting the derivative to zero and solving for $u$, we find
+    \begin{alignat*}{3}
+        &\quad & 0 &= \dv{V}{u} \\
+        &\quad &   &= 2(x-v^2) \\
+        &\implies\quad & u &= v^2
+    \end{alignat*}
+
+    \item We have that
+    \begin{align*}
+        \delta\left<\vec{\phi}\right> &= R(\alpha)\left<\vec{\phi}\right> - \left<\vec{\phi}\right> \\
+        &= \exp(-i\alpha_aT^a)\left<\vec{\phi}\right> - \left<\vec{\phi}\right> \\
+        &\approx \left(\mathbb{I} - \alpha_a\epsilon_{bc}^a\right)\left<\vec{\phi}\right> - \left<\vec{\phi}\right> \\
+        &= -\alpha_a\epsilon_{bc}^a\left<\vec{\phi}_c\right>
+    \end{align*}
+    Plugging in 1,2, and 3 for a, we see that
+    \begin{align*}
+        \delta \left<\vec{\phi}_1\right> &= \alpha_1\left(\phi_2-\phi_3\right) = \alpha_1 v \\
+        \delta \left<\vec{\phi}_2\right> &= \alpha_1\left(\phi_3-\phi_1\right) = \alpha_2 v \\
+        \delta \left<\vec{\phi}_1\right> &= \alpha_1\left(\phi_2-\phi_1\right) = 0.
+    \end{align*}
+    So, generators 1 and 2 are broken.
+
+    \item The mass squared matrix evaluates as 
+    {\tiny
+    \begin{align*}
+        M_{ij}^2 &= \pdv[2]{V}{\tilde{\phi}_i}{\tilde{\phi}_j}\big|_{\tilde{\phi}=0} \\
+        &= \mqty(4\left(\tilde{\phi}_1^2 + \tilde{\phi}_2^2 + \tilde{\phi}_3^2 + 2v\tilde{\phi}_3\right) + 8\tilde{\phi}_1^2 & 8\tilde{\phi}_1\tilde{\phi}_2 & 8\tilde{\phi}_1\left(v + \tilde{\phi}_3\right) \\
+                 8\tilde{\phi}_1\tilde{\phi_2} & 4\left(\tilde{\phi}_1^2 + \tilde{\phi}_2^2 + \tilde{\phi}_3^2 + 2v\tilde{\phi}_3\right) + 8\tilde{\phi}_2^2 & 8\tilde{\phi}_2\left(v + \tilde{\phi}_3\right) \\
+                 8\tilde{\phi}_1\left(v + \tilde{\phi}_3\right) & 8\tilde{\phi}_2(v + \tilde{\phi}_3) & 4\left(\tilde{\phi}_1^2 + \tilde{\phi}_2^2 + \tilde{\phi}_3^2 + 2v\tilde{\phi}_3\right) + 8\left(v + \tilde{\phi}_3\right)^2 )\\
+    \end{align*}
+    }%
+    \[ = \mqty(0&0&0\\0&0&0\\0&0&8v^2) \]
+    Since the mass squared matrix is diagonal, we can clearly see that the zero eigenvectors are 1 and 2, while the nonzero is 3, in agreement with (b).
+\end{enumerate}
+
+\end{document}

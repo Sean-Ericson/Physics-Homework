@@ -1,0 +1,80 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{mathrsfs}
+\usepackage{enumitem}
+\usepackage{physics}
+
+\newcommand{\magsq}[1]{\big|#1\big|^2}
+\newcommand{\avg}[1]{\left<#1\right>}
+\newcommand{\fullint}{\int_{-\infty}^\infty}
+\newcommand{\fullintd}[1]{\fullint\dd#1\:}
+\newcommand{\cint}[2]{\int_{#1}^{#2}}
+\newcommand{\cintd}[3]{\cint{#1}{#2}\dd#3\:}
+
+\begin{document}
+	
+\title{Homework 4}
+\author{Sean Ericson \\ Phys 632}
+\maketitle
+
+\section*{Problem 1}
+Firstly,
+\[ \comm{A}{J_x} = \comm{A}{J_y} = 0 \implies \comm{A}{J_+} = 0 \]
+Therefore,
+\[ \comm{A}{J_+J_-} = 0 \]
+\[ \implies \comm{A}{J_x^2 + J_y^2 -\hbar J_z} = \hbar\comm{A}{J_z} = 0 \]
+
+\section*{Problem 2}
+\begin{enumerate}[label=(\alph*)]
+    \item Consider $\comm{J^2}{J_\alpha^2}$. We know every individual component commutes with $J^2$, so
+    \[ \comm{J^2}{J_\alpha^2} = 0 \implies \comm{J_x^2}{J_\alpha^2} + \comm{J_y^2}{J_\alpha^2} + \comm{J_z^2}{J_\alpha^2} = 0 \]
+    When we substitute one of $\{x, y, z\}$ for $\alpha$, one of the terms above will disappear and another will be ``out of order''. For example, $\alpha = x$ gives
+    \[ \comm{J_y^2}{J_x^2} + \comm{J_z^2}{J_x^2} = 0 \implies \comm{J_z^2}{J_x^2} = \comm{J_x^2}{J_y^2}\]
+    Substituting the remaining values of $\alpha$ gives other two requisite equations.
+
+    \item First let
+    \[ J_\pm^2\ket{j,m} = c_{j,m}^\pm\ket{j,m\pm 2}. \]
+    Then, for $j = 1$,
+    \[ J_z^2(J_+^2 + J_-^2)\ket{1,1} = J_z^2J_-^2\ket{1,1} = \hbar^2c_{1,1}^-\ket{1,-1} \]
+    \[ (J_+^2 + J_-^2)J_z^2\ket{1,1} = \hbar^2J_-^2\ket{1,1} = \hbar^2c_{1,1}^-\ket{1,-1} \]
+    \[ J_z^2(J_+^2 + J_-^2)\ket{1,-1} = J_z^2J_+^2\ket{1,-1} = \hbar^2c_{1,-1}^+\ket{1,1}\]
+    \[ (J_+^2 + J_-^2)J_z^2\ket{1,-1} = \hbar^2J_+^2\ket{1,-1} = \hbar^2c_{1,-1}^+\ket{1,1} \]
+    \[ J_z^2(J_+^2 + J_-^2)\ket{1,0} = (J_+^2 + J_-^2)J_z^2\ket{1,0} = 0 \]
+    Obviously for $j=1/2$ and $j=0$ the operator vanishishes similarly to the $\ket{1,0}$ case. 
+    Therefore it is the case that, for $j\in\{0, \frac{1}{2}, 1\}$,
+    \[ \comm{J_z^2}{J_+^2 + J_-^2} = 0 \]
+    Now, since
+    \[ J_+^2 + J_-^2 = 2J_x^2 - 2J_y^2 = 2J^2 - 2J_z^2 - 4J_y^2 \]
+    we see that
+    \[ \comm{J_z^2}{J_+^2 + J_-^2} = 0 \implies \comm{J_z^2}{2J^2 - 2J_z^2 - 4J_y^2} = -4\comm{J_z^2}{J_y^2} = 0 \]
+    This combined with the result from part (a) give the desired result.
+\end{enumerate}
+
+
+\section*{Problem 3}
+In the case that $l = 1/2$, we \textit{should} have that
+\[ \Theta_{1/2}^{-1/2}(\theta) = \Theta_{1/2}^{1/2}(\theta) \propto \sqrt{\sin\theta} \]
+It should also be the case that
+\[ L_+\Theta_{1/2}^{-1/2}(\theta)e^{-i\phi/2} \propto \Theta_{1/2}^{1/2}(\theta)e^{i\phi/2} \]
+However, applying $L_+$ to $\Theta_{1/2}^{-1/2}(\theta)e^{-i\phi/2}$, we see that
+\begin{align*}
+    L_+\Theta_{1/2}^{-1/2}(\theta)e^{-i\phi/2} & = \hbar e^{i\phi/2}\left(i\cot\theta\partial_\phi + \partial_\theta\right)\sqrt{\sin\theta}e^{-i\phi/2} \\
+    & = i\hbar e^{i\phi/2}\cot\theta\partial_\phi\sqrt{\sin\theta}e^{-i\phi/2} + \hbar e^{i\phi/2}\partial_\theta\sqrt{\sin\theta}e^{-i\phi/2} \\
+    & = \frac{\hbar}{2}e^{i\phi/2}\cot\theta\sqrt{\sin\theta}e^{-i\phi/2} + \frac{\hbar}{2}e^{i\phi/2}\cos\theta\sqrt{\sin\theta}e^{-i\phi/2} \\
+    & = \frac{\hbar}{2}e^{i\phi/2}\frac{\cos\theta}{\sqrt{\sin\theta}}e^{-i\phi/2}
+\end{align*}
+Which is \textit{not} proportional to $\sqrt{\sin\theta}$.
+
+\section*{Problem 4}
+\[ \ket{1 1} = \sqrt{\frac{3}{7}}\ket{2, 2; 2 -1} - \sqrt{\frac{1}{14}}\ket{2,2;1,0} - \sqrt{\frac{1}{14}}\ket{2,2;1,0} + \sqrt{\frac{3}{7}}\ket{2,2;-1,2} \]
+\[  \implies P(m_1=0 \:\text{OR}\: m_2=0) = 2\times\frac{1}{14} = \frac{1}{7} \]
+
+
+\section*{Problem 5}
+Let $\alpha = \braket{1,0;j,0}{j,0}$. The symmetry relation
+\[ \braket{j_1, m_1; j_2, m_2}{j_3, m_3} = (-1)^{j_1 + j_2 - j_3}\braket{j_1, -m_1; j_2 -m_2}{j_3, -m_3} \]
+implies that $\alpha = -\alpha$, therefore it must be that $\alpha = 0$.
+
+\end{document}

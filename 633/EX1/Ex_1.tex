@@ -1,0 +1,63 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{enumitem}
+\usepackage{physics}
+
+\newcommand{\magsq}[1]{\big|#1\big|^2}
+\newcommand{\avg}[1]{\left<#1\right>}
+\newcommand{\fullint}{\int_{-\infty}^\infty}
+\newcommand{\fullintd}[1]{\fullint\dd#1\:}
+\newcommand{\cint}[2]{\int_{#1}^{#2}}
+\newcommand{\cintd}[3]{\cint{#1}{#2}\dd#3\:}
+
+\begin{document}
+	
+\title{Exercise Set 1}
+\author{Sean Ericson \\ Phys 633}
+\maketitle
+
+\section*{Exercise 1}
+First let's right out all the probabilites we'll need:
+\begin{align*}
+    P(sick) &= x \\
+    P(+|sick) &= 1-x \\
+    P(-|sick) &= x \\
+    P(+|\neg sick) &= x \\
+    P(+) &= P(+|sick)P(sick) + P(+|\neg sick)P(\neg sick) = 2x(1-x) \\
+    x &= 0.001
+\end{align*}
+Where the symbols + and - represent positive and negative test results (respectively), while $sick$ and $\neg sick$ represent being sick and healthy (respectively). Now the posterior probability of actually having Bayes' syndrom, given that you have tested positive, is simply
+\[ P(sick|+) = \frac{P(+|sick)P(sick)}{P(+)} = \frac{x(1-x)}{2x(1-x)} = \frac{1}{2}. \]
+In this case, the prior is the probability of any random person having Bayes' syndrome ($x=0.001$), the likelihood is the probability of a person with Bayes' syndrome testing positive for it ($1-x=0.999$), and the renormalization factor is the probability of \textit{any} test for Bayes' syndrome being positive.
+
+\section*{Exercise 2}
+The relevent probabilites are
+\begin{align*}
+    P(sick) &= 0.5 \\
+    P(+|sick) &= 0.6 \\
+    P(-|sick) &= 0.4 \\
+    P(-|\neg sick) &= 1 \\
+    P(-) &= P(-|sick)P(sick) + P(-|\neg sick)P(\neg sick) = 0.5(0.4 + 1) = 0.7
+\end{align*}
+The probability of being sick despite a negative test is therefore
+\[ P(sick|-) = \frac{P(-|sick)P(sick)}{P(-)} = \frac{0.4*0.5}{0.7} = \frac{2}{7} \] 
+In the case that the test's sensitivity is $90\%$, the likelihood and renormalization factor change to
+\begin{align*}
+    P(-|sick) &= 0.1 \\
+    P(sick) = 0.5(0.1 + 1) &= .55
+\end{align*}
+and the posterior probability becomes
+\[ P(sick|-) = \frac{0.1 * 0.5}{0.55} = \frac{1}{11} \]
+
+\section*{Exercise 3}
+\begin{enumerate}[label=(\alph*)]
+    \item \[ B = A + (B - A) \implies \frac{1}{B}B\frac{1}{A} = \frac{1}{B}A\frac{1}{A} + \frac{1}{B}(B-A)\frac{1}{A} \implies \frac{1}{A} = \frac{1}{B} + \frac{1}{B}(B-A)\frac{1}{A} \]
+    \item Let $A = z - H_0 - \lambda V$, $B = z - H_0$. Then, $B - A = \lambda V$ and
+    \[ \frac{1}{z - H_0 - \lambda V} = \frac{1}{z-H_0} + \frac{1}{z-H_0}(\lambda V)\frac{1}{z-H_0-\lambda V}.  \]
+    Because $G(z) = 1/A$ and $G_0(z) = 1/B$, this shows that
+    \[ G(z) = G_0(z) + \lambda G_0(z)VG(z). \]
+\end{enumerate}
+
+\end{document}

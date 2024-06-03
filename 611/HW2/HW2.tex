@@ -1,0 +1,301 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{mathtools}
+\usepackage{mathrsfs}
+\usepackage{enumitem}
+\usepackage{physics}
+\usepackage{empheq}
+
+\usepackage{tikz}
+\usetikzlibrary{calc,decorations.markings,patterns}
+
+\newcommand{\magsq}[1]{\big|#1\big|^2}
+\newcommand{\avg}[1]{\left<#1\right>}
+\newcommand{\fullint}{\int_{-\infty}^\infty}
+\newcommand{\fullintd}[1]{\fullint\dd#1\:}
+\newcommand{\cint}[2]{\int_{#1}^{#2}}
+\newcommand{\cintd}[3]{\cint{#1}{#2}\dd#3\:}
+
+\begin{document}
+
+\title{Homework 2}
+\author{Sean Ericson \\ Phys 611}
+\maketitle
+
+\section*{Problem 1}
+\begin{enumerate}[label=(\alph*)]
+    \item Let the positive $z$ axis point up along the shaft, with the origin at the pivot. The distance $\rho$ of the masses $m_2$ from the shaft is given by
+    \[ \rho = l\sin\theta, \]
+    while the $z$ component of their position is given by
+    \[ z_2 = -l\cos\theta. \]
+    Similarly, the $z$ component of the position of $m_1$ is given by
+    \[ z_1 = -2l\cos\theta \]
+    Picking one of the $m_2$ masses arbitrarily, it's full position vector is given by
+    \begin{align*}
+        \vec{r}_2 &= z_2\hat{z} + \rho\hat{\rho} \\
+        &= \rho\cos\phi\hat{x} + \rho\sin\phi\hat{y} - l\cos\theta\hat{z} \\
+        &= l\sin\theta\cos\phi\hat{x} + l\sin\theta\sin\phi\hat{y} - l\cos\theta\hat{z}
+    \end{align*}
+    while it's velocity vector is given by 
+    \begin{align*}
+        \vec{v}_2 &= \dv{t}\vec{r}_2 \\
+        &= \left(l\cos\theta\cos\phi\dot{\theta} - l\sin\theta\sin\phi\dot{\phi}\right)\hat{x} + \left(l\cos\theta\sin\phi\dot{\theta} + l\sin\theta\cos\phi\dot{\phi}\right) + l\sin\theta\dot{\theta}\hat{z}
+    \end{align*}
+    The velocity vector of mass $m_1$ is simply given by
+    \[ \vec{v}_1 = 2l\sin\theta\dot{\theta} \]
+    The squared-magnitude of $\vec{v}_1$ is
+    \[  \magsq{\vec{v}_1} = 4l^2\sin^2\theta\dot{\theta}^2, \]
+    while the squred-magnitude of $\vec{v}_2$ is
+    \begin{align*}
+        \magsq{\vec{v}_2} &= \left(l\cos\theta\cos\phi\dot{\theta} - l\sin\theta\sin\phi\dot{\phi}\right)^2 + \left(l\cos\theta\sin\phi\dot{\theta} + l\sin\theta\cos\phi\dot{\phi}\right)^2 + l^2\sin^2\theta\dot{\theta}^2 \\
+        &= l^2\left[ C_\theta^2C_\phi^2\dot{\theta}^2 - 2C_\theta C_\phi S_\theta S_\phi\dot{\theta}\dot{\phi} + S_\theta^2S_\phi^2\dot{\phi}^2 + C_\theta^2S_\phi^2\dot{\theta}^2 + 2C_\theta C_\phi S_\theta S_\phi\dot{\theta}\dot{\phi} + S_\theta^2C_\phi^2\dot{\phi}^2 + S_\theta^2\dot{\theta}^2 \right] \\
+        &= l^2\left[ \left(S_\theta^2 + C_\theta^2C_\phi^2 + C_\theta^2S_\phi^2\right)\dot{\theta}^2 + \left(S_\theta^2S_\phi^2 + S_\theta^2C_\phi^2\right)\dot{\phi}^2 \right] \\
+        &= l^2\left[ \left(S_\theta^2 + C_\theta^2\left(C_\phi^2 + S_\phi^2\right)\right)\dot{\theta}^2 + S_\theta^2\left(S_\phi^2 + C_\phi^2\right)\dot{\phi}^2 \right] \\
+        &= l^2\left[ \left(S_\theta^2 + C_\theta^2\right)\dot{\theta}^2 + S_\theta^2\dot{\phi}^2\right] \\
+        &= l^2\left(\dot{\theta}^2 + \sin^2\theta\dot{\phi}^2\right)
+    \end{align*}
+    where the symbols $S_x^n$ and  $C_x^n$ stand for $\sin^n x$ and  $\cos^n x$, respectively.
+    The total gravitation potential energy of the system is given by
+    \begin{align*}
+        U &= m_1gz_1 + 2m_2gz_2 \\
+        &= -2m_1gl\cos\theta - 2m_2gl\cos\theta \\
+        &= -2(m_1 + m_2)gl\cos\theta
+    \end{align*}
+    while the total kinetic energy is given by
+    \begin{align*}
+        T &= \frac{1}{2}m_1\magsq{\vec{v}_1} + m_2\magsq{\vec{v}_2} \\
+        &= 2m_1l^2\sin^2\theta\dot{\theta}^2 + m_2l^2\left(\dot{\theta}^2 + \sin^2\theta\dot{\phi}^2\right)
+    \end{align*}
+    Giving a Lagrangian of 
+    \[ \boxed{\mathscr{L} = 2m_1l^2\sin^2\theta\dot{\theta}^2 + m_2l^2\left(\dot{\theta}^2 + \sin^2\theta\dot{\phi}^2\right) + 2(m_1 + m_2)gl\cos\theta} \]
+    
+    \item Let's take some derivatives
+    \begin{align*}
+        \pdv{\mathscr{L}}{\dot{\theta}} &= 4m_1l^2\sin^2\theta\dot{\theta} + 2m_2l^2 \\
+        \pdv{\mathscr{L}}{\dot{\phi}} &= 2m_2l^2\sin^2\theta\dot{\phi}
+    \end{align*}
+    Now, calculating the first integral of motion, we see that
+    \begin{align*}
+        \sum_i\dot{q}_i\left(\pdv{\mathscr{L}}{\dot{q}_i}\right) - \mathscr{L} &= \dot{\theta}\left(\pdv{\mathscr{L}}{\dot{\theta}}\right) + \dot{\phi}\left(\pdv{\mathscr{L}}{\dot{\phi}}\right) - \mathscr{L} \\
+        &= 4m_1l^2\sin^2\theta\dot{\theta}^2 + 2m_2l^2\dot{\theta}^2 + 2m_2l^2\sin^2\theta\dot{\phi}^2 - \mathscr{L} \\
+        &= 2m_1l^2\sin^2\theta\dot{\theta}^2 + m_2l^2\left(\dot{\theta}^2 + \sin^2\theta\dot{\phi}^2\right) - 2(m_1 + m_2)gl\cos\theta \\
+        &= T + U
+    \end{align*}
+    So energy is a conserved quantity. Next we note that $\pdv{\mathscr{L}}{\phi} = 0$, which implies that
+    \[ \pdv{\mathscr{L}}{\dot{\phi}} = 2m_2l^2\sin^2\theta\dot{\phi} = L \]
+    where $L$ is a constant. Thus, two conserved quantities are
+    \begin{empheq}[box=\fbox]{align*}
+        E &= 2m_1l^2\sin^2\theta\dot{\theta}^2 + m_2l^2\left(\dot{\theta}^2 + \sin^2\theta\dot{\phi}^2\right) - 2(m_1 + m_2)gl\cos\theta \\
+        L &= 2m_2l^2\sin^2\theta\dot{\phi}
+    \end{empheq}
+
+    \item Given the initial conditions
+    \[ \theta(t=0) = \theta_0, \quad \dot{\theta}(t=0) = 0, \quad \dot{\phi}(t=0) = \omega, \]
+    the energy of the system is given by
+    \[ E = m_2l^2\omega^2\sin^2\theta_0 - 2(m_1+m_2)gl\cos\theta_0, \]
+    while the angular momentum is given by 
+    \[ L = 2m_2l^2\omega\sin^2\theta_0 \]
+    We can also write $\dot{\phi}$ in terms of $\theta$, $\dot{\theta}$ and the initial conditions:
+    \[ \dot{\phi} = \frac{L}{2m_2l^2\sin^2\theta} = \omega\left(\frac{\sin\theta_0}{\sin\theta}\right)^2 \]
+    Now the energy can be expressed without reference to $\dot{\phi}$:
+    \[ E = (2m_1\sin^2\theta + m_2)l^2\dot{\theta}^2 + m_2l^2\omega^2\frac{\sin^4\theta_0}{\sin^2\theta} - 2(m_1+m_2)gl\cos\theta \]
+    At the extrema of $\theta$ (which we'll call $\theta_m$), it must be that $\dot{\theta}$ = 0. Equating the above expression for the energy (evaluated at $\theta_m$) to the one in terms of the initial conditions, we have
+    \[ m_2l^2\omega^2\frac{\sin^4\theta_0}{\sin^2\theta_m} - 2(m_1+m_2)gl\cos\theta_m = m_2l^2\omega^2\sin^2\theta_0 - 2(m_1+m_2)gl\cos\theta_0 \] 
+    \[ \implies \]
+    \[ m_2l^2\omega^2\sin^2\theta_0\left(\frac{\sin^2\theta_0}{\sin^2\theta_m} - 1\right) = 2(m_1+m_2)gl(\cos\theta_m - \cos\theta_0) \]
+    Now we can focus on the parenthesized quantity on the left-hand side for some simplification:
+    \begin{align*}
+        \frac{\sin^2\theta_0}{\sin^2\theta_m} - 1 &= \frac{\sin^2\theta_0 - \sin^2\theta_m}{\sin^2\theta_m} \\
+        &= \frac{(1 - \cos^2\theta_0)-(1 - \cos^2\theta_m)}{\sin^2\theta_m} \\
+        &= \frac{\cos^2\theta_m - \cos^2\theta_0}{\sin^2\theta_m} \\
+        &= \frac{(\cos\theta_m + \cos\theta_0)(\cos\theta_m - \cos\theta_0)}{\sin^2\theta_m}
+    \end{align*}
+    Next, we can turn the $\sin^2\theta_m$ in the denominator into a $1 - \cos^2\theta_m$, reinsert into the previous equation, and cancel some terms:
+    \[ m_2l^2\omega^2\sin^2\theta_0(\cos\theta_m + \cos\theta_0) = 2gl(m_1+m_2)(1 - \cos^2\theta_m) \]
+    \[ \implies 2gl(m_1+m_2)\cos^2\theta_m + m_2l^2\omega^2\sin^2\theta_0\cos\theta_m + m_2l^2\omega^2\sin^2\theta_0\cos\theta_0 - 2gl(m_1+m_2) = 0 \]
+    The equation above is a quadratic equation in $\cos\theta_m$. In standard form ($ax^2 + bx + c = 0$) the coefficients are
+    \begin{align*}
+        a &= 2gl(m_1+m_2) \\
+        b &= m_2l^2\omega^2\sin^2\theta_0 \\
+        c &= m_2l^2\omega^2\sin^2\theta_0\cos\theta_0 - 2gl(m_1+m_2)
+    \end{align*}
+    The solution is then
+    \[ \cos\theta_m = \frac{-b \pm \sqrt{b^2 -4ac}}{2a} \]
+    Since inverse-cosine is monotonically decrasing, we want to take the \textit{positive} root to get the minimum value of $\theta$ (the negative root will yield the maximum value of $\theta$), i.e.
+    \[ \boxed{\theta_\text{min} = \cos^{-1}\left[\frac{-b + \sqrt{b^2 -4ac}}{2a} \right]} \]
+
+\end{enumerate}
+
+
+\section*{Problem 2}
+\begin{enumerate}[label=(\alph*)]
+    \item Using the standard cylindrical coordinate system, we have that
+    \begin{align*}
+        x &= \rho\cos\phi \\
+        y &= \rho\sin\phi \\
+        z &= \rho\cot B
+    \end{align*}
+    The velocity components are then
+    \begin{align*}
+        \dot{x} &= \dot{\rho}\cos\phi - \rho\sin\phi\dot{\phi} \\
+        \dot{y} &= \dot{\rho}\sin\phi + \rho\cos\phi\dot{\phi} \\
+        \dot{z} &= \dot{\rho}\cot B
+    \end{align*}
+    The squared-magnitude of the velocity is
+    \begin{align*}
+        \magsq{\vec{v}} &= \left(\dot{\rho}\cos\phi - \rho\sin\phi\dot{\phi}\right)^2 + \left(\dot{\rho}\sin\phi + \rho\cos\phi\dot{\phi}\right)^2 + \dot{\rho}^2\cot^2B \\
+        &= \dot{\rho}^2C_\phi^2 - 2\rho\dot{\rho}C_\phi S_\phi\dot{\phi} + \rho^2S_\phi^2\dot{\phi}^2 + \dot{\rho}^2\sin^2\phi + 2\rho\dot{\rho}C_\phi S_\phi\dot{\phi} + \rho^2C_\phi^2\dot{\phi}^2 + \dot{\rho}^2\cot^2 B \\
+        &= \left(\cos^2\phi + \sin^2\phi + \cot^2 B\right)\dot{\rho}^2 + \rho^2\left(\sin^2\phi + \cos^2\phi\right)\dot{\phi}^2 \\
+        &= \cot^2 B\dot{\rho}^2 + \rho^2\dot{\phi}^2
+    \end{align*}
+    The gravitational potential energy is given by
+    \[ U = mgz = mg\rho\cot B, \]
+    while the kinetic energy is given by
+    \[ T = \frac{1}{2}m\magsq{\vec{v}} = \frac{1}{2}m\left(\cot^2 B\dot{\rho}^2 + \rho^2\dot{\phi}^2\right) \]
+    The Lagrangian is therefore
+    \[ \boxed{\mathscr{L} = \frac{1}{2}m\left(\cot^2 B\dot{\rho}^2 + \rho^2\dot{\phi}^2\right) - mg\rho\cot B} \]
+
+    \item Let's take some derivatives
+    \begin{align*}
+        \pdv{\mathscr{L}}{\dot{\rho}} &= m\cot^2B\dot{\rho} \\
+        \pdv{\mathscr{L}}{\dot{\phi}} &= m\rho^2\dot{\phi} 
+    \end{align*}
+    Now, calculating the first integral of motion, we see that
+    \begin{align*}
+        \sum_i\dot{q}_i\left(\pdv{\mathscr{L}}{\dot{q}_i}\right) - \mathscr{L} &= \dot{\rho}\left(\pdv{\mathscr{L}}{\dot{\rho}}\right) + \dot{\phi}\left(\pdv{\mathscr{L}}{\dot{\phi}}\right) - \mathscr{L} \\
+        &= m\cot^2B\dot{\rho}^2 + m\rho^2\dot{\phi}^2 - \mathscr{L} \\
+        &= \frac{1}{2}m\left(\cot^2 B\dot{\rho}^2 + \rho^2\dot{\phi}^2\right) + mg\rho\cot B \\
+        &= T + U
+    \end{align*}
+    So energy is a conserved quantity. Next we note that $\pdv{\mathscr{L}}{\phi} = 0$, which implies that
+    \[ \pdv{\mathscr{L}}{\dot{\phi}} = m\rho^2\dot{\phi} = L  \]
+    where $L$ is a constant. Thus, two conserved quantities are
+    \begin{empheq}[box=\fbox]{align*}
+        E &= \frac{1}{2}m\left(\cot^2 B\dot{\rho}^2 + \rho^2\dot{\phi}^2\right) + mg\rho\cot B \\
+        L &= m\rho^2\dot{\phi}
+    \end{empheq}
+
+    \item Given the initial conditions
+    \[ z(t=0) = z_0, \quad \dot{z}(t=0) = 0, \quad \dot{\phi}(t=0) = \omega \]
+    \[ \implies \rho_0 = z_0\tan B, \quad \dot{\rho}_0 = 0  \]
+    the energy of the system is given by
+    \[ E = \frac{1}{2}m\rho_0^2\omega^2 + mg\rho_0\cot B, \]
+    while the angular momentum is given by 
+    \[ L = m\rho_0^2\omega \]
+    We can also write $\dot{\phi}$ in terms of $\rho$ and the initial conditions:
+    \[ \dot{\phi} = \frac{L}{m\rho^2} = \left(\frac{\rho_0}{\rho}\right)^2\omega \]
+    Now the energy can be expressed without reference to $\dot{\phi}$:
+    \[ E = \frac{1}{2}m\left(\cot^2B\dot{\rho}^2 + \frac{\rho_0^4}{\rho^2}\omega^2\right) + mg\rho\cot B \]
+    At the extrema of $\rho$ (which we'll call $\rho_m$), it must be that $\dot{\rho}$ = 0. Equating the above expression for the energy (evaluated at $\rho_m$) to the one in terms of the initial conditions, we have
+    \[ \frac{1}{2}m\omega^2\frac{\rho_0^4}{\rho_m^2} + mg\rho_m\cot B = \frac{1}{2}m\omega^2\rho_0^2+ mg\rho_0\cot B \] 
+    \[ \implies \]
+    \[ \frac{1}{2}\omega^2\rho_0^2\left(\frac{\rho_0^2}{\rho_m^2} - 1\right) = g\cot B \left(\rho_0 - \rho_m\right) \]
+    This is nearly the equation we arrived at in problem 1. Applying similar tricks we find
+    \[ g\cot B \rho_m^2 - \frac{1}{2}\omega^2\rho_0^2\rho_m - \frac{1}{2}\omega^2\rho_0^3 = 0 \]
+    Again, this is quadratic in $\rho_m$ with coefficients
+    \begin{align*}
+        a &= g\cot B \\
+        b &= \frac{1}{2}\omega^2\rho_0^2 \\
+        c &= \frac{1}{2}\omega^2\rho_0^3
+    \end{align*}
+    Taking now the negative root and changing variable back to $z$ we have
+    \[ \boxed{z_\text{min} = \frac{-b + \sqrt{b^2 -4ac}}{2a}\cot B } \]
+
+    \item At it's lowest point, the mass will have no radial velocity, meaning
+    \begin{align*}
+        v &= \rho_m\dot{\phi} \\
+        &= \rho_m \left(\frac{\rho_0}{\rho_m}\right)^2\omega \\
+        &= \frac{\omega\rho_0^2}{\rho_m} \\
+        &= \boxed{\frac{\omega z_0^2}{z_m}\cot B}
+    \end{align*}
+\end{enumerate}
+
+
+\section*{Problem 3}
+\begin{enumerate}[label=(\alph*)]
+    \item The particle will oscillate between the starting point $x_A$ and another point $0<x'_A<x_A$ such that $U(x'_A) = U(x_A)$.
+    \item For points $x_B$ and $x_C$, the particle will escapte to positive infinity. For point $x_D$ the particle will oscillate between $x_D$ and another point $x'_D$ such that $x_D<x'_D<\infty$ and $U(x'_D) = U(x_D)$.
+    \item Starting at point $B$ with no kinetic energy, the particle's total energy is some positive constant satisfying
+    \[ E = \frac{1}{2}m\dot{x}^2 - \frac{U_0x_0}{x} > 0 \]
+    Solving for $\dot{x}$, we find
+    \[ \dot{x} = \sqrt{\frac{2}{m}\left(\frac{U_0x_0}{x} + E\right)} \]
+    which is a seperable first-order differential equation:
+    \[ \left[\frac{2}{m}\left(\frac{U_0x_0}{x} + E\right)\right]^{-1/2} \dd x = \dd t \]
+    ...unfortunately it's not a very \textit{nice} differential equation. However, given that we \textit{know} that the particle will escape to infinity, and we're interested in the long-term behaviour, we can safely neglect the $\frac{U_0x_0}{x}$ term, as it goes to zero in the limit we're interested in. That leaves us with
+    \[ \cint{x_0}{x}\sqrt{\frac{m}{2E}}\dd x' = \cint{t_0}{t}\dd t' \]
+    \[ \implies x(t) \to \sqrt{\frac{2E}{m}}t + C \]
+    i.e.
+    \[ \boxed{x(t) \propto t^1} \]
+
+    \item Following the same logic as in part c, we arive at the same seperable differential equation, but this one is \textit{much} nicer since $E=0$:
+    \[ \cint{x_0}{x}\left(\frac{2U_0x_0}{mx'}\right)^{-1/2}\dd x' = \cint{t_0}{t}\dd t' \]
+    \[ \implies \frac{m}{U_0x_0}x^{1/2} + C = t \]
+    \[ \implies x(t) = \sqrt{\frac{U_0x_0t}{m}} + C' \]
+    i.e.
+    \[ x(t) \propto t^{1/2} \]
+\end{enumerate}
+
+
+
+\section*{Problem 4}
+The parametric equation for a circle that touches the origin and extends in the $x$-direction a distance $R$ is given by
+\[ r(\theta) = R\cos\theta. \]
+The radial velocity is then
+\[ \dot{r} = -R\sin\theta\dot{\theta} \]
+We can then solve the first equation for $\theta$ and plug it into the second equation to get
+\[ \dot{r} = -R\sin\cos^{-1}(r/R)\dot{\theta} = -R\sqrt{1 - \left(\frac{r}{R}\right)^2}\dot{\theta} \]
+Given that this is a central-force problem, we know that angular momentum is conserved, so we can plug
+\[ \dot{\theta} = \frac{L}{mr^2} \]
+into the above equation to get
+\[ \dot{r} = -\frac{RL}{mr^2}\sqrt{1 - \left(\frac{r}{R}\right)^2} = -\frac{L}{mr^2}\sqrt{R^2 - r^2} \]
+We also know that energy is conserved. The total energy is given by
+\[ E = \frac{1}{2}m\dot{r}^2 + \frac{L^2}{2mr^2} + U(r) \]
+We can solve the equation above for $\dot{r}^2$ to find
+\[ \dot{r}^2 = \frac{2}{m}\left(E - \frac{L^2}{2mr^2} + U(r)\right) \]
+Now we can square the first expression for $\dot{r}$, and equate it to the one above, giving
+\[ \frac{L^2}{m^2r^4}\left(R^2 - r^2\right) = \frac{2}{m}\left(E - \frac{L^2}{2mr^2} + U(r)\right) \]
+Solving for $U(r)$, we find
+\begin{align*}
+    U(r) &= \frac{L^2}{2mr^4}\left(R^2 - r^2\right) + \frac{L^2}{2mr^2} - E \\
+    &= \frac{L^2R^2}{2mr^4} - \frac{L^2}{2mr^2} + \frac{L^2}{2mr^2} - E \\
+    &= \frac{L^2R^2}{2mr^4} - E
+\end{align*}
+The force is given by
+\begin{align*}
+    F(r) &= -\dv{U}{r} \\
+    &= \frac{2L^2R^2}{mr^5}
+\end{align*}
+\[ \implies \boxed{F(r) \propto r^{-5   }} \]
+
+\section*{Problem 5}
+\begin{enumerate}[label=(\alph*)]
+    \item Take the orgin as the center of the hoop with gravity pointing in the negative $z$ direction. The distance $\rho$ of the bead from the vertical axis is 
+    \[ \rho = R\sin\theta. \]
+    The bead's position is given by
+    \begin{align*}
+        x &= \rho\cos\omega \\
+        &= R\sin\theta\cos\omega \\
+        y &= \rho\sin\omega \\
+        &= R\sin\theta\sin\omega \\
+        z &= -R\cos\theta
+    \end{align*}
+    Similar to problems 1 and 2, the squared-magnitude of the bead's velocity is
+    \[ \magsq{\vec{v}} = R^2\left(\dot{\theta}^2 + \sin^2\theta\dot{\omega}^2\right) \]
+    We can now write out the Lagrangian
+    \[ \boxed{\mathscr{L} = \frac{1}{2}mR^2\left(\dot{\theta}^2 + \sin^2\theta\dot{\omega}^2\right) + mgR\cos\theta} \]
+
+    \item It's easy to see that energy is conserved:
+    \[ \pdv{\mathscr{L}}{\dot{\theta}} = mR^2\dot{\theta} \]
+    \[ \dot{\theta}\left(\pdv{\mathscr{L}}{\dot{\theta}}\right) - \mathscr{L} = \frac{1}{2}mR^2\left(\dot{\theta}^2 + \sin^2\theta\dot{\omega}^2\right) - mgR\cos\theta = T + U\]
+    \[ \implies \boxed{E = \frac{1}{2}mR^2\left(\dot{\theta}^2 + \sin^2\theta\dot{\omega}^2\right) - mgR\cos\theta} \]
+
+    \item Centripetal force will act to move the bead up the ring, which can be though of as an effective weakening of gravity. Depending on the relative strenghts of gravity and the centripetal force, along with the inital angual velocity, one of two things will happen
+    \begin{enumerate}[label=(\arabic*)]
+        \item If the initial velocity is sufficient, the bead will rotate all the way around the ring.
+        \item If the initial velocity is \textit{insufficient}, the bead will oscillate without ever reaching the top of the ring.
+    \end{enumerate}    
+\end{enumerate}
+
+\end{document}

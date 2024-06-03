@@ -1,0 +1,114 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{mathtools}
+\usepackage{mathrsfs}
+\usepackage{enumitem}
+\usepackage{physics}
+\usepackage{tensor}
+\usepackage{array}
+
+\usepackage{tikz}
+\usetikzlibrary{calc,decorations.markings,patterns}
+
+\newcommand{\magsq}[1]{\big|#1\big|^2}
+\newcommand{\avg}[1]{\left<#1\right>}
+\newcommand{\fullint}{\int_{-\infty}^\infty}
+\newcommand{\fullintd}[1]{\fullint\dd#1\:}
+\newcommand{\cint}[2]{\int_{#1}^{#2}}
+\newcommand{\cintd}[3]{\cint{#1}{#2}\dd#3\:}
+
+\begin{document}
+
+\title{Homework 2}
+\author{Sean Ericson \\ Phys 661}
+\maketitle
+
+\section*{Problem 1}
+Given that our group must have an identity element (and without loss of generality we can identify it as the element $1$), we can immediately fill in five of the nine entries in the multiplication table:
+\[
+    \begin{tabular}{>{$}c<{$}|*{3}{>{$}c<{$}}}
+    ~  & 1   & a   & b  \\
+    \hline\vrule height 12pt width 0pt
+    1  & 1   & a   & b  \\
+    a  & a   &     &    \\
+    b  & b   &     &    \\
+    \end{tabular} 
+\]
+Now, due to the fact that each element can only appear in each row/column once (as a result of the uniqueness of inverses), we can conclude that $a^2 = b$, $b^2 = a$, and $ab = ba = 1$, i.e.
+\[
+    \begin{tabular}{>{$}c<{$}|*{3}{>{$}c<{$}}}
+    ~  & 1   & a   & b  \\
+    \hline\vrule height 12pt width 0pt
+    1  & 1   & a   & b  \\
+    a  & a   & b   & 1  \\
+    b  & b   & 1   & a  \\
+    \end{tabular} 
+\]
+is the only possible multiplication table for a group with three elements.
+
+
+\section*{Problem 2}
+\begin{enumerate}[label=(\alph*)]
+    \item Given that
+    \begin{align*}
+        T_1 = \mqty(0&0&0\\0&0&-i\\0&i&0) = i(\dyad{2}{3} - \dyad{3}{2}) \\
+        T_2 = \mqty(0&0&i\\0&0&0\\-i&0&0) = i(\dyad{1}{3} - \dyad{3}{1}) \\
+        T_3 = \mqty(0&-i&0\\i&0&0\\0&0&0) = i(\dyad{2}{1} - \dyad{1}{2}),
+    \end{align*}
+    we have
+    \begin{align*}
+        \comm{T_1}{T_2} &= T_1T_2 - T_2T_1 \\
+        &= i^1\left(\dyad{1}{3} - \dyad{3}{1}\right)\left(\dyad{2}{3}-\dyad{3}{2}\right) - i^2\left(\dyad{2}{3} - \dyad{3}{2}\right)\left(\dyad{1}{3} - \dyad{3}{1}\right) \\
+        &= \dyad{1}{2} - \dyad{2}{1}
+    \end{align*}
+    as well as
+    \begin{align*}
+        i\epsilon_{12c}T_c &= i\epsilon_{121}T_1 + i\epsilon_{122}T_2 + i\epsilon_{123}T_3 \\
+        &= iT_3 \\
+        &= i^2\left(\dyad{2}{1} - \dyad{1}{2}\right) \\
+        &= \dyad{1}{2} - \dyad{2}{1}.
+    \end{align*}
+    Thus,
+    \[ \boxed{i\epsilon_{12c}T_c = iT_3} \]
+
+    \item We first note that
+    \[ T_3^2 = \mqty(1&0&0\\0&1&0\\0&0&0); \quad T_3^3 = \mqty(0&-i&0\\i&0&0\\0&0&0) = T_3. \]
+    Then, expanding the exponential, we have
+    \begin{align*}
+        \exp(-i\phi T_3) &= \mathbb{I} - i\phi T_3 - \frac{1}{2}\phi^2 T_3^2 + \frac{1}{3!}\phi^3 T_3^3 + \cdots \\
+        &= \mathbb{I} + \left(\frac{(-i\phi)^1}{1!} + \frac{(-i\phi)^3}{3!} + \cdots\right)T_3 + \left(\frac{(-i\phi)^2}{2!} + \frac{(-i\phi)^4}{4!} + \cdots\right)T_3^2 \\
+        &= \mathbb{I} + T_3\sum_{n=0}^{\infty}\frac{(-i\phi)^{2n+1}}{(2n+1)!} + T_3^2\sum_{n=1}^{\infty}\frac{(-i\phi)^(2n)}{(2n)!} \\
+        &= \mathbb{I} - i\sin\phi T_3 + (\cos\phi - 1)T_3 \\
+        &= \mqty(1&0&0\\0&1&0\\0&0&1) + \mqty(0&-\sin\phi&0\\\sin\phi&0&0\\0&0&0) + \mqty(\cos\phi-1&0&0\\0&\cos\phi-1&0\\0&0&0) \\
+        &= \mqty(\cos\phi&-\sin\phi&0\\\sin\phi&\cos\phi&0\\0&0&1)
+    \end{align*}
+    which is indeed the matrix that affects a counter-clockwise rotation by $\phi$ radians about the $z$ axis.
+\end{enumerate}
+
+\section*{Problem 3}
+\begin{enumerate}[label=(\alph*)]
+    \item The given Lagrangian is
+    \[ \mathcal{L} = \partial_\mu\Phi^\dag\partial^\mu\Phi - m^2\abs{\Phi}^2. \]
+    The mass term is obviously invariant under the $\Phi \leftrightarrow \Phi^\dag$ transformation, as $\abs{\Phi}^2 = \Phi\Phi^\dag$. The kinetic term is similarly invariant:
+    \begin{align*}
+        \partial_\mu\Phi\partial^\mu\Phi^\dag &= \partial^\mu\Phi^\dag\partial_\mu\Phi \\
+        &= \partial_\mu\Phi^\dag\partial^\mu\Phi
+    \end{align*}
+    as contracted upper/lower indices can be freely swapped.
+
+    \item
+    \begin{align*}
+        \partial_\mu j^\mu &= i\left[\partial_\mu\left(\Phi^\dag\partial^\mu\Phi\right) - \partial_\mu\left(\partial^\mu\Phi^\dag\right)\Phi\right] \\
+        &= i\left[\partial_\mu\Phi^\dag\partial^\mu\Phi + \Phi^\dag\Box\Phi - \left(\Box\Phi^\dag\right)\Phi - \partial^\mu\Phi^\dag\partial_\mu\Phi\right] \\
+        &= i\left[\Phi^\dag\Box\Phi - \left(\Box\Phi^\dag\right)\Phi\right] \\
+        &= i\left[-m^2\Phi\Phi^\dag + m^2\Phi\Phi^\dag\right] \\
+        &= 0
+    \end{align*}
+    In the above work, the second equality results from applying the product rule to both terms, the third equality follows from the argument about the kinetic term above, and the fourth equality follows from the Klein-Gordon equations for $\Phi$ and $\Phi^\dag$.
+\end{enumerate}
+
+
+
+\end{document}

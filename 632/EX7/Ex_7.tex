@@ -1,0 +1,47 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{enumitem}
+\usepackage{physics}
+
+\newcommand{\magsq}[1]{\big|#1\big|^2}
+\newcommand{\avg}[1]{\left<#1\right>}
+\newcommand{\fullint}{\int_{-\infty}^\infty}
+\newcommand{\fullintd}[1]{\fullint\dd#1\:}
+\newcommand{\cint}[2]{\int_{#1}^{#2}}
+\newcommand{\cintd}[3]{\cint{#1}{#2}\dd#3\:}
+
+\begin{document}
+	
+\title{Exercise Set 7}
+\author{Sean Ericson \\ Phys 632}
+\maketitle
+
+\section*{Exercise 1}
+\begin{enumerate}[label=(\alph*)]
+    \item The correlation present in the case of Bertlmann's socks is different from the quantum case because Bertlmann's correlation is due to a \textit{local element of reality}. That is, the color of each member of the pair is well-defined at all points in time, no matter if the socks are observed or not.
+    \item To dismiss the EPR paradox as merely a case of Bertlmann's socks is to commit to the idea that each sock(particle) has a local element of reality corresponding to it. This is the supposition of a Local Hidden Variable theory. However, due to Bell, we know that no such theory can exist. Therefore, if we wish to maintain locality, we must interpret observable properties of particles as not corresponding to elements of physical reality (i.e. not existing) until observed. Alternatively, if we reject the requirement of locality, we must interpret the aspect of physical reality to which the quantum state corresponds as inherently non-local.
+\end{enumerate}
+
+
+\section*{Exercise 2}
+\[ \rho = \mqty(A&0\\0&D) \]
+\begin{enumerate}[label=(\alph*)]
+    \item In order for $\rho$ to be a density matrix, we must have
+    \[ A,D \geq 0; \quad A + D = 1 \]
+    \item In order for $\rho$ to be a pure density matrix, we must have
+    \[ (A=1, D=0) \quad\text{OR}\quad (A=0, D=1) \]
+\end{enumerate}
+
+\section*{Exercise 3}
+\[ \rho = \mqty(A&B\\C&D) \]
+\begin{enumerate}[label=(\alph*)]
+    \item In order for $\rho$ to be a density matrix, we must have
+    \[ A,D \in \mathbb{R}; \quad A+D=1; \quad B=C^*; \quad \magsq{B},\magsq{C} \leq AD \]
+    \item In order for $\rho$ to be a pure density matrix, we must have
+    \[ A,D \in \mathbb{R}; \quad A+D=1; \quad B=C^*; \quad \magsq{B},\magsq{C} = AD \]
+\end{enumerate}
+
+
+\end{document}

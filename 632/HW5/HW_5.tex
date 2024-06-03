@@ -1,0 +1,102 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{mathrsfs}
+\usepackage{enumitem}
+\usepackage{physics}
+
+\newcommand{\magsq}[1]{\big|#1\big|^2}
+\newcommand{\avg}[1]{\left<#1\right>}
+\newcommand{\fullint}{\int_{-\infty}^\infty}
+\newcommand{\fullintd}[1]{\fullint\dd#1\:}
+\newcommand{\cint}[2]{\int_{#1}^{#2}}
+\newcommand{\cintd}[3]{\cint{#1}{#2}\dd#3\:}
+
+\begin{document}
+	
+\title{Homework 5}
+\author{Sean Ericson \\ Phys 632}
+\maketitle
+
+\section*{Problem 1}
+\begin{enumerate}[label=(\alph*)]
+    \item The rotation matrix for a $\pi/2$ rotation about the $y$-axis (in the standard basis) is
+    \[ \mathbf{d}^{(1)}(\hat{y}\pi/2) = \frac{1}{2}\mqty(1 & -\sqrt{2} & 1 \\ \sqrt{2} & 0 & -\sqrt{2} \\ 1 & \sqrt{2} & 1) \]
+    Applying this rotation to $\ket{1, 0}$ gives
+    \[ \sum_m\ket{1, m}d_{m,0}^{(1)}(\hat{y}\pi/2) = \frac{1}{\sqrt{2}}\left(\ket{1, 1} - \ket{1,-1}\right) \]
+
+    \item The rotation matrix for a $-\pi/2$ rotation about the $x$-axis is
+    \[ \mathbf{d}^{(1)}(-\hat{x}\pi/2) = \frac{1}{2}\mqty(1 & -\sqrt{2}i & -1 \\ -\sqrt{2}i & 0 & -\sqrt{2}i \\ -1 & -\sqrt{2}i & 1) \]
+    Applying this rotation to $\ket{1,1}$ gives
+    \[ \sum_m\ket{1,m}d_{m,0}^{(1)}(-\hat{x}\pi/2) = \frac{-i}{\sqrt{2}}\left(\ket{1, 1} + \ket{1, -1}\right) \]
+\end{enumerate}
+
+\section*{Problem 2}
+\begin{enumerate}[label=(\alph*)]
+    \item The transformation from cartesian to spherical coordinates is given by
+    \begin{align*}
+        A_1 & = \frac{-1}{\sqrt{2}}A_x - \frac{i}{\sqrt{2}}A_y \\
+        A_0 & = A_z \\
+        A_{-1} & = \frac{1}{\sqrt{2}}A_x - \frac{i}{\sqrt{2}}A_y
+    \end{align*}
+    or, in matrix form,
+    \[ \mqty(A_1\\A_0\\A_{-1}) = \frac{1}{\sqrt{2}}\mqty(-1&-i&0\\0&0&1\\1&-i&0)\mqty(A_x\\A_y\\A_z) \]
+    
+    \item The cartesian rotation matricies about the $y$ and $z$ axes are given by 
+    \[ R_y(\theta) = \mqty(\cos\theta & 0 & \sin\theta \\ 0&1&0 \\ -\sin\theta & 0 & \cos\theta) \quad R_z(\theta) = \mqty(\cos\theta & -\sin\theta & 0 \\ \sin\theta & \cos\theta & 0 \\ 0&0&1) \]
+    The composite passive-rotation operator, $P = R_z(-\gamma)R_y(-\beta)R_z(-\alpha)$, in cartesian coordinates is
+    \[ \mqty(\cos\alpha\cos\beta\cos\gamma-\sin\alpha\sin\gamma & \cos\beta\cos\gamma\sin\alpha + \cos\alpha\sin\alpha & - \cos\gamma\sin\beta \\ -\cos\gamma\sin\alpha - \cos\alpha\cos\beta\sin\gamma & \cos\alpha\cos\gamma - \cos\beta\sin\alpha\sin\gamma & \sin\beta\sin\gamma \\ \cos\alpha\cos\beta & \sin\alpha\sin\beta & \cos\beta) \]
+    Transforming to the spherical basis gives
+    \[ UPU^\dag = \mqty(\frac{1}{2}(\cos\beta + 1)e^{-i\alpha}e^{-i\gamma} & \frac{1}{\sqrt{2}}\sin\beta e^{-i\gamma} & \frac{1}{2}(1 - \cos\beta)e^{i\alpha}e^{-i\gamma} \\ -\frac{1}{\sqrt{2}}\sin\beta e^{-i\alpha} & \cos\beta & \frac{1}{\sqrt{2}}\sin\beta e^{i\alpha} \\ \frac{1}{2}(1 - \cos\beta)e^{-i\alpha}e^{i\gamma} & -\frac{1}{\sqrt{2}}\sin\beta e^{i\gamma} & \frac{1}{2}(1 + \cos\beta)e^{i\alpha}e^{i\gamma}) \]
+    
+    \item Finally,
+    \[ \left(UPU^\dag\right)^\intercal = \mqty(\frac{1}{2}(\cos\beta + 1)e^{-i\alpha}e^{-i\gamma} & -\frac{1}{\sqrt{2}}\sin\beta e^{-i\alpha} & \frac{1}{2}(1 - \cos\beta)e^{-i\alpha}e^{i\gamma} \\ \frac{1}{\sqrt{2}}\sin\beta e^{-i\gamma} & \cos\beta & -\frac{1}{\sqrt{2}}\sin\beta e^{i\gamma} \\ \frac{1}{2}(1 - \cos\beta)e^{i\alpha}e^{-i\gamma} & \frac{1}{\sqrt{2}}\sin\beta e^{i\alpha} & \frac{1}{2}(1 + \cos\beta)e^{i\alpha}e^{i\gamma}) )  \]
+
+\end{enumerate}
+
+
+\section*{Problem 3}
+\begin{align*}
+    T_1^{(1)}    &= \frac{1}{\sqrt{2}}\left(A_1B_0 - A_0B_1\right) \\
+                 &= \frac{1}{2}\left[\left(-A_x-iA_y\right)B_z - A_z\left(-B_x-iB_y\right)\right] \\
+                 &= \frac{1}{2} \left[A_zB_x - A_xB_z + i\left(A_zB_y - A_yB_z\right)\right] \\
+                 &= \frac{-i}{\sqrt{2}}\left[\left(\vec{A}\times\vec{B}\right)_x + i\left(\vec{A}\times\vec{B}\right)_y\right]  \\
+                 &= \frac{i}{\sqrt{2}}\left(\vec{A}\times\vec{B}\right)_1 \\
+    T_0^{(1)}    &= \frac{1}{\sqrt{2}}\left(A_{-1}B_1 - A_1B_{-1}\right) \\
+                 &= \frac{1}{2^{3/2}}\left[\left(A_x - iA_y\right)\left(-B_x -iB_y\right) - \left(-A_x - iA_y\right)\left(B_x - iB_y\right)\right] \\
+                 &= \frac{i}{\sqrt{2}}\left(A_xB_y - A_yB_x\right) \\
+                 &= \frac{i}{\sqrt{2}}\left(\vec{A}\times\vec{B}\right)_0 \\
+    T_{-1}^{(1)} &= \frac{1}{\sqrt{2}}\left(A_{-1}B_0 - A_0B_{-1}\right) \\
+                 &= \frac{1}{2}\left[\left(A_x-iA_y\right)B_z - A_z\left(B_x-iB_y\right)\right] \\
+                 &= \frac{1}{2}\left[A_xB_z - A_zB_x + i\left(A_zB_y - A_yB_z\right)\right] \\
+                 &= \frac{i}{\sqrt{2}}\left[\left(\vec{A}\times\vec{B}\right)_x - i\left(\vec{A}\times\vec{B}\right)_y\right] \\
+                 &= \frac{i}{\sqrt{2}}\left(\vec{A}\times\vec{B}\right)_{-1}
+\end{align*}
+
+
+\section*{Problem 4}
+Consider $\ket{\theta_1,\phi_1}$, $\ket{\theta_2, \phi_2}$, $\ket{\theta'_1, \phi'_1}$, $\ket{\theta'_2,\phi'_2}$ such that 
+\[ \ket{\theta'_\alpha, \phi'_\alpha} = R\ket{\theta_\alpha, \phi_\alpha} \]
+for some rotation $R$. \\
+Consider now the quantity
+\[ C_l = \sum_m \braket{\theta_2, \phi_2}{l,m}\braket{l,m}{\theta_1, \phi_1} = \sum_m \left[Y_l^m(\theta_1, \phi_1)\right]^* Y_l^m(\theta_2, \phi_2) \]
+This quantity my be expressed in terms of the primed coordinates as so:
+\[ C'_l = \sum_{m,m',m''}d_{m',m}^{(l)}\left(d_{m,m''}^{(l)}\right)^*\braket{\theta_2,\phi_2}{l,m'}\braket{l,m''}{\theta_1, \phi_1} = \sum_m\left[Y_l^m(\theta'_1,\phi'_1)\right]^* Y_l^m(\theta'_2, \phi'_2), \]
+where $\mathbf{d}^{(l)}$ is the matrix representation for $R$ in the standard basis. Note that, due to the unitarity of $R$,
+\[ \sum_m d_{m',m}^{(l)}d_{m,m''}^{(l)} = \delta_{m',m''}. \]
+The tripple sum above therefore reduces to 
+\[ C'_l = \sum_{m'} \braket{\theta_2,\phi_2}{l,m'}\braket{l,m'}{\theta_1, \phi_1} = C_l \]
+and we see that the primed and un-primed quantities are equal. \\
+Next consider the case where $(\theta'_1, \phi'_1)$ points along the $z$-axis (i.e. $\theta'_1$ = 0), and $\phi'_2 = 0$. The value of the spherical harmonic along the $z$-axis is
+\[ Y_l^m(0, \phi) = \sqrt{\frac{2l+1}{4\pi}}\delta_{m,0}, \]
+from the definition of the spherical harmonics. This eliminates all but one of the terms in the quantity above:
+\[ C'_l = \sqrt{\frac{2l+1}{4\pi}}Y_l^0(\theta'_2, 0). \]
+However, since this is equal to the rotated quantity, we have
+\[ Y_l^0(\theta, 0) = \sqrt{\frac{4\pi}{2l+1}}\sum_m \left[Y_l^m(\theta_1, \phi_1)\right]^* Y_l^m(\theta_2, \phi_2) \]
+where $\theta$ is the angle between the directions given by $(\theta_1, \phi_1)$ and $(\theta_2, \phi_2)$. Letting $\theta_1 = \theta_2$ and $\phi_1 = \phi_2$, we get
+\[ \sqrt{\frac{2l+1}{4\pi}} = \sqrt{\frac{4\pi}{2l+1}}\sum_m\magsq{Y_l^m(\theta, \phi)} \]
+\[ \implies \sum_m\magsq{Y_l^m(\theta, \phi)} = \frac{2l+1}{4\pi} \]
+
+
+\end{document}

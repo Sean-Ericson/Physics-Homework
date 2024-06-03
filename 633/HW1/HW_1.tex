@@ -1,0 +1,176 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{mathrsfs}
+\usepackage{enumitem}
+\usepackage{physics}
+
+\newcommand{\magsq}[1]{\big|#1\big|^2}
+\newcommand{\avg}[1]{\left<#1\right>}
+\newcommand{\fullint}{\int_{-\infty}^\infty}
+\newcommand{\fullintd}[1]{\fullint\dd#1\:}
+\newcommand{\cint}[2]{\int_{#1}^{#2}}
+\newcommand{\cintd}[3]{\cint{#1}{#2}\dd#3\:}
+\newcommand{\e}{\mathbf{e}}
+
+\begin{document}
+	
+\title{Homework 1}
+\author{Sean Ericson \\ Phys 633}
+\maketitle
+
+\section*{Problem 1}
+Let's begin with the purified state, $\ket{\psi_\text{CM}}$ (where ``C'' stands for ``contestant'' and ``M'' stands for ``Monty'')
+\[ \ket{\psi_\text{CM}} = \frac{1}{\sqrt{3}}\left(\ket{1}\ket{1} + \ket{2}\ket{2} + \ket{3}\ket{3}\right)\]
+The contestant's state represents their state of belief about which door the car is behind. Monty's state represents his state of belief about which door he will open to reveal a goat. The contestant's selection of door 1 induces the transformation
+\begin{align*}
+     \ket{\psi_\text{CM}} \to& \frac{1}{\sqrt{3}}\left[\ket{1}\left(\frac{\ket{2}+\ket{3}}{\sqrt{2}}\right) + \ket{2}\ket{3} + \ket{3}\ket{2}\right] \\
+     &= \frac{1}{\sqrt{6}}\ket{1}\ket{2} + \frac{1}{\sqrt{6}}\ket{1}\ket{3} + \frac{1}{\sqrt{3}}\ket{2}\ket{3} + \frac{1}{\sqrt{3}}\ket{3}\ket{2} \\
+     &= \left(\frac{1}{\sqrt{6}}\ket{1} + \frac{1}{\sqrt{3}}\ket{2}\right)\ket{2} + \left(\frac{1}{\sqrt{6}}\ket{1} + \frac{1}{\sqrt{3}}\ket{2}\right)\ket{3}
+\end{align*}
+Now, a projective measurment on Monty's state (i.e., Monty choosing to open door 2 or 3) will collapse the state one of
+\[ \left(\sqrt{\frac{1}{3}}\ket{1} + \sqrt{\frac{2}{3}}\ket{2}\right)\ket{2} \]
+\[ \left(\sqrt{\frac{1}{3}}\ket{1} + \sqrt{\frac{2}{3}}\ket{2}\right)\ket{3} \]
+with equal probability. In either case, the contestant's part of the state becomes
+\[ \ket{\psi_\text{C}} = \sqrt{\frac{1}{3}}\ket{1} + \sqrt{\frac{2}{3}}\ket{2}\]
+indicating that with probability $2/3$ the car is behind door 2 and the contestant should switch.
+
+\section*{Problem 2}
+\begin{align*}
+    x &\approx x_0 + \lambda x_1 + \lambda^2 x_2 + \cdots\\
+    &= 12.002383785691716
+\end{align*}  
+\begin{enumerate}[label=(\alph*)]
+    \item 
+    \begin{align*}
+        x &= (x_0 + \lambda x_1)^3 \\
+        &= x_0^3 + 3\lambda x_0^2x_1 + 3\lambda^2x_0x_1^2 + \lambda^3 x_1^3 \\
+        &= x_0^3 + \lambda
+    \end{align*}
+    Matching terms proportional to $\lambda$ gives
+    \[ \lambda = 3\lambda x_0^2x_1 \implies 3x_0^2x_1 = 1 \implies x_1 = \frac{1}{3x_0^2} \]
+    The current approximation for $x$ is therefore
+    \[ x \approx x_0 + \lambda x_1 = 12 + \frac{1.03}{3\times12^2} = 12.002384\overline{259} \]
+
+    \item Keeping terms only proportional to $\lambda^2$ we have
+    \begin{align*}
+        (x_0 + \lambda x_1 + \lambda^2 x_2)^3 &\to 3x_0^2x_2\lambda^2 + 3x_0x_1^2\lambda^2 \\
+        &= (3x_0^2x_2 + 3x_0x_1^2) \lambda^2
+    \end{align*}
+    matching terms proportional to $\lambda^2$ gives
+    \[ 3x_0^2x_2 + 3x_0x_1^2 = 0 \implies x_2 = -\frac{x_0x_1^2}{x_0^2} = -\frac{x_1^2}{x_0} = -\frac{1}{9x_0^5} \]
+    The current approximation for $x$ is therefore
+    \[ x \approx x_0 + \lambda x_1 + \lambda^2 x_2 = 12 + \frac{1.03}{3\times12^2} - \frac{1.03^2}{9\times12^5} = 12.00238473298 \]
+\end{enumerate}
+
+
+\section*{Problem 3}
+$\Delta_4$ is a sum over all sets of 5 nonnegative indicies that add to 3:
+\begin{align*}
+    \Delta_4 = &(01110\cdot) + (10011\cdot) + (10101\cdot) + (11001\cdot) + \\
+    &(00120\cdot) + (00210\cdot) + (01020\cdot) + (01200\cdot) + (02100\cdot) + (02010\cdot) + (10002\cdot) + (20001\cdot) \\
+    &(00030\cdot) + (00300\cdot) + (03000\cdot)
+\end{align*}
+Where only terms in which the first and last indicies do not cancel under trace have been kept. Some further simplification is given by
+\[ (10002\cdot) \to (3000) \]
+\[ (2001\cdot) \to (3000) \]
+\[ (00030\cdot), (03000\cdot), (00300\cdot) \to -(3000) \]
+\[ (00120\cdot) \to -(0011\cdot 1) \to -(10011\cdot) \]
+\[ (00210\cdot) \to -(001\cdot 11) \to -(11001\cdot) \]
+\[ (01020\cdot) \to -(0101\cdot 1) \to -(10101\cdot) \]
+\[ (01200\cdot) \to -(011\cdot 10) \to -(10011\cdot) \]
+\[ (02100\cdot) \to -(01\cdot 110) \to -(11001\cdot) \]
+\[ (02010\cdot) \to -(01\cdot 101) \to -(10101\cdot) \]
+Giving
+\begin{align*}
+    \Delta_4 &= (01110\cdot) - (10011\cdot) - (11001\cdot) - (10101\cdot) - (3000) \\
+    &= -(0111) - (2001) - (2100) - (2010) - (3000) \\
+\end{align*}
+Now let's handle the trace of each term individually
+\begin{align*}
+    \Tr[-(0111)] &= \Tr[P_0 V \sum_{\alpha\neq 0}\frac{\dyad{\alpha}}{E_{0\alpha}}V \sum_{\beta\neq 0}\frac{\dyad{\beta}}{E_{0\beta}}V\sum_{\gamma\neq 0}\frac{\dyad{\gamma}}{E_{0\gamma}}V] \\
+    &= \Tr[P_0 V \sum_{\alpha\neq 0}\frac{\dyad{\alpha}}{E_{0\alpha}}V \sum_{\beta\neq 0}\frac{\dyad{\beta}}{E_{0\beta}}V\sum_{\gamma\neq 0}\frac{\dyad{\gamma}}{E_{0\gamma}}V P_0] \\
+    &= \Tr[P_0\sum_{\alpha,\beta,\gamma\neq 0}\frac{V_{0\alpha}V_{\alpha\beta}V_{\beta\gamma}V_{\gamma 0}}{E_{0\alpha}E_{0\beta}E_{0\gamma}}] \\
+    &= \sum_{\alpha,\beta,\gamma\neq 0}\frac{V_{0\alpha}V_{\alpha\beta}V_{\beta\gamma}V_{\gamma 0}}{E_{0\alpha}E_{0\beta}E_{0\gamma}}
+\end{align*}
+\begin{align*}
+    -\Tr[(2010)] &= -\Tr[\sum_{\alpha\neq 0}\frac{\dyad{\alpha}}{E_{0\alpha}^2}VP_0V\sum_{\beta\neq 0}\frac{\dyad{\beta}}{E_{0\beta}}VP_0V] \\
+    &= -\Tr[P_0V\sum_{\alpha\neq 0}\frac{\dyad{\alpha}}{E_{0\alpha}^2}VP_0V\sum_{\beta\neq 0}\frac{\dyad{\beta}}{E_{0\beta}}VP_0] \\
+    &= -\Tr[P_0\sum_{\alpha,\beta\neq 0}\frac{V_{0\alpha}V_{\alpha 0}V_{0\beta}V_{\beta 0}}{E_{0\alpha}^2E_{0\beta}}] \\
+    &= -\sum_{\alpha,\beta\neq 0} \frac{\magsq{V_{0\alpha}}\magsq{V_{0\beta}}}{E_{0\alpha}^2E_{0\beta}}
+\end{align*}
+\begin{align*}
+    -\Tr[(2001)] &= -\Tr[\sum_{\alpha\neq 0}\frac{\dyad{\alpha}}{E_{0\alpha}^2}VP_0VP_0V\sum_{\beta\neq 0}\frac{\dyad{\beta}}{E_{0\beta}}V] \\
+    &= -\Tr[P_0V\sum_{\beta\neq 0}\frac{\dyad{\beta}}{E_{0\beta}}V\sum_{\alpha\neq 0}\frac{\dyad{\alpha}}{E_{0\alpha}^2}VP_0VP_0] \\
+    &= -\Tr[P_0\sum_{\alpha,\beta\neq 0}\frac{V_{0\beta}V_{\beta\alpha}V_{\alpha 0}}{E_{0\alpha}^2E_{0\beta}}V_{00}] \\
+    &= -V_{00}\sum_{\alpha,\beta\neq 0}\frac{V_{0\beta}V_{\beta\alpha}V_{\alpha 0}}{E_{0\alpha}^2E_{0\beta}} \\
+    &= -V_{00}\sum_{\alpha,\beta\neq 0}\frac{V_{0\alpha}V_{\alpha\beta}V_{\beta 0}}{E_{0\alpha}E_{0\beta}^2}
+\end{align*}
+\begin{align*}
+    -\Tr[(2100)] &= -\Tr[\sum_{\alpha\neq 0}\frac{\dyad{\alpha}}{E_{0\alpha}^2}V\sum_{\beta\neq 0}\frac{\dyad{\beta}}{E_{0\beta}}VP_0VP_0V] \\
+    &= -\Tr[P_0V\sum_{\alpha\neq 0}\frac{\dyad{\alpha}}{E_{0\alpha}^2}V\sum_{\beta\neq 0}\frac{\dyad{\beta}}{E_{0\beta}}VP_0VP_0] \\
+    &= -\Tr[P_0\sum_{\alpha,\beta\neq 0}\frac{V_{0\alpha}V_{\alpha\beta}V_{\beta 0}}{E_{0\alpha}^2E_{0\beta}}V_{00}] \\
+    &= -V_{00}\sum_{\alpha,\beta\neq 0}\frac{V_{0\alpha}V_{\alpha\beta}V_{\beta 0}}{E_{0\alpha}^2E_{0\beta}}
+\end{align*}
+\begin{align*}
+    -\Tr[(3000)] &= \Tr[\sum_{\alpha\neq 0}\frac{\dyad{\alpha}}{E_{0\alpha}^3}VP_0VP_0VP_0V] \\
+    &= \Tr[P_0V\sum_{\alpha\neq 0}\frac{\dyad{\alpha}}{E_{0\alpha}^3}VP_0VP_0VP_0] \\
+    &= \Tr[P_0\sum_{\alpha\neq 0}\frac{V_{0\alpha}V_{\alpha 0}}{E_{0\alpha}^3}V_{00}V_{00}] \\
+    &= V_{00}^2\sum_{\alpha\neq 0}\frac{\magsq{V_{0\alpha}}}{E_{0\alpha}^3}
+\end{align*}
+Putting it all together we have
+\[ \Tr[\Delta_4] = \sum_{\alpha,\beta,\gamma\neq 0}\frac{V_{0\alpha}V_{\alpha\beta}V_{\beta\gamma}V_{\gamma 0}}{E_{0\alpha}E_{0\beta}E_{0\gamma}} -\sum_{\alpha,\beta\neq 0} \frac{\magsq{V_{0\alpha}}\magsq{V_{0\beta}}}{E_{0\alpha}^2E_{0\beta}} -V_{00}\sum_{\alpha,\beta\neq 0}\left[\frac{V_{0\alpha}V_{\alpha\beta}V_{\beta 0}}{E_{0\alpha}E_{0\beta}^2}+\frac{V_{0\alpha}V_{\alpha\beta}V_{\beta 0}}{E_{0\alpha}^2E_{0\beta}}\right] + V_{00}^2\sum_{\alpha\neq 0}\frac{\magsq{V_{0\alpha}}}{E_{0\alpha}^3} \]
+In the case that $\Tr[\Delta_1] = \Tr[\Delta_2] = \Tr[\Delta_3] = 0$ this reduces to just the first term:
+\[ \Tr[\Delta_4] = \sum_{\alpha,\beta,\gamma\neq 0}\frac{V_{0\alpha}V_{\alpha\beta}V_{\beta\gamma}V_{\gamma 0}}{E_{0\alpha}E_{0\beta}E_{0\gamma}} \]
+
+
+\section*{Problem 4}
+\begin{align*}
+    \comm{\vec{r}\cdot\vec{p}}{H} &= \comm{\vec{r}\cdot\vec{p}}{\frac{p^2}{2m}} + \comm{\vec{r}\cdot\vec{p}}{V(r)} \\
+    &= \frac{1}{2m}\comm{\vec{r}}{p^2}\cdot\vec{p} + \vec{r}\cdot\comm{\vec{p}}{V(r)} \\
+    &= \frac{1}{2m}(2i\hbar\vec{p})\cdot{\vec{p}} - i\hbar\vec{r}\cdot\nabla V(r) \\
+    &= i\hbar\left(\frac{p^2}{m} - \vec{r}\cdot\nabla V(r)\right) \\
+    &= i\hbar\left(2T - \vec{r}\cdot\nabla V\right)
+\end{align*}
+Now,
+\[ \ev{\comm{\vec{r}\cdot\vec{p}}{H}} = 0 \implies 2\ev{T} = \ev{\vec{r}\cdot\nabla V} \]
+but 
+\[ \ev{\vec{r}\cdot\nabla V} = \ev{\vec{r} \cdot n\lambda r^{n-1}\hat{r}} = \ev{n\lambda r^n} = n\ev{V} \]
+so
+\[ 2\ev{T} = n\ev{V} \]
+
+
+\section*{Problem 5}
+\begin{enumerate}[label=(\alph*)]
+    \item For the hydrogen atom we have $n=-1$, so
+    \[ \ev{T} = -\frac{1}{2}\ev{v} \implies E_n = \ev{T}_n + \ev{V}_n = \frac{1}{2}\ev{V}_n \]
+    \[ \implies -\frac{\alpha^2\mu c^2}{2n^2} = \frac{\hbar c \alpha}{2}\ev{r^{-1}} \]
+    \[ \implies \ev{r^{-1}} = \frac{\alpha\mu c}{\hbar n^2} = \frac{1}{a_0n^2} \]
+
+    \item Given $H = \frac{p_r^2}{2m_e} + \frac{\hbar^2L(L+1)}{2m_er^2} - \frac{\hbar c \alpha}{r}$, $E_n = -\frac{\alpha^2\mu c^2}{2n^2}$,
+    \[ \partial_\alpha E = -\frac{\alpha\mu c^2}{n^2} \]
+    \[ \ev{\partial_\alpha H} = \ev{-\frac{\hbar c}{r}} = -\hbar c \ev{r^{-1}} \]
+    \[ \partial_\alpha E = \ev{\partial_\alpha H} \implies \ev{r^{-1}} = \frac{\alpha\mu c}{\hbar n^2} = \frac{1}{a_0 n^2} \]
+
+    \item 
+    \[ \partial_L E = \partial_L \left(-\frac{\alpha^2\mu c^2}{2(L+k)^2}\right) = \frac{\alpha^2\mu c^2}{(L+k)^3} = \frac{\alpha^2\mu c^2}{n^3} \]
+    \[ \ev{\partial_L H} = \ev{\partial_L \left(\frac{p_r^2}{2\mu} + \frac{\hbar^2L(L+1)}{2\mu r^2} - \frac{\hbar c \alpha}{r}\right)} = \frac{\hbar^2(L + 1/2)}{\mu}\ev{r^{-2}} \]
+    \[ \partial_L E = \ev{\partial_L H} \implies \ev{r^{-2}} = \frac{\alpha^2\mu^2 c^2}{\hbar^2(L + 1/2)n^3} = \frac{1}{a_0^2(L + 1/2)n^3}\]
+
+    \item 
+    \begin{align*}
+        \comm{H}{p_r} &= \frac{\hbar^2L(L+1)}{2\mu}\comm{r^{-2}}{p_r} - \hbar\alpha c\comm{r^{-1}}{p_r} \\
+        &= -\frac{i\hbar^3L(L+1)}{\mu}r^{-3} + i\hbar^2\alpha c r^{-2}
+    \end{align*}
+    Since the expectation value of any operator with the Hamiltonian vanishes with respect to any of the Hamiltonian's eigenstates,
+    \[ \ev{\comm{H}{p_r}} = 0 \implies i\hbar^2\alpha c \ev{r^{-2}} = \frac{i\hbar^3L(L+1)}{\mu}\ev{r^{-3}} \]
+    \[ \implies \ev{r^{-3}} = \frac{\alpha\mu c}{\hbar L(L+1)}\ev{r^{-2}} = \frac{1}{a_0L(L+1)}\ev{r^{-2}} \] 
+    Substituting in the value for $\ev{r^{-2}}$ gives
+    \[ \ev{r^{-3}} = \frac{1}{L(L+1/2)(L+1)a_0^3n^3} \]
+
+\end{enumerate}
+
+
+
+\end{document}

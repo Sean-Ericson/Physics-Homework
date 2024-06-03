@@ -1,0 +1,396 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global}
+    \entry{carroll}{book}{}
+      \name{author}{1}{}{%
+        {{hash=73b042b9ba90ce90393abfc7ae77a66b}{%
+           family={Carroll},
+           familyi={C\bibinitperiod},
+           given={Sean},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Benjamin Cummings}%
+      }
+      \strng{namehash}{73b042b9ba90ce90393abfc7ae77a66b}
+      \strng{fullhash}{73b042b9ba90ce90393abfc7ae77a66b}
+      \strng{bibnamehash}{73b042b9ba90ce90393abfc7ae77a66b}
+      \strng{authorbibnamehash}{73b042b9ba90ce90393abfc7ae77a66b}
+      \strng{authornamehash}{73b042b9ba90ce90393abfc7ae77a66b}
+      \strng{authorfullhash}{73b042b9ba90ce90393abfc7ae77a66b}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{0805387323}
+      \field{title}{Spacetime and Geometry: An Introduction to General Relativity}
+      \field{year}{2003}
+      \field{pages}{239}
+      \range{pages}{1}
+      \verb{urlraw}
+      \verb http://www.amazon.com/Spacetime-Geometry-Introduction-General-Relativity/dp/0805387323
+      \endverb
+      \verb{url}
+      \verb http://www.amazon.com/Spacetime-Geometry-Introduction-General-Relativity/dp/0805387323
+      \endverb
+      \keyw{GeneralRelativity Geometry books spacetime}
+    \endentry
+    \entry{cornish}{article}{}
+      \name{author}{2}{}{%
+        {{hash=1b450ddb9416297233a7e98cd3f17832}{%
+           family={Cornish},
+           familyi={C\bibinitperiod},
+           given={N.\bibnamedelimi J.},
+           giveni={N\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=f562e92e27c83fcecdf99b422d9f1f6e}{%
+           family={Frankel},
+           familyi={F\bibinitperiod},
+           given={N.\bibnamedelimi E.},
+           giveni={N\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Physical Society}%
+      }
+      \strng{namehash}{f0c68afc294650d10c62ef0b354431d0}
+      \strng{fullhash}{f0c68afc294650d10c62ef0b354431d0}
+      \strng{bibnamehash}{f0c68afc294650d10c62ef0b354431d0}
+      \strng{authorbibnamehash}{f0c68afc294650d10c62ef0b354431d0}
+      \strng{authornamehash}{f0c68afc294650d10c62ef0b354431d0}
+      \strng{authorfullhash}{f0c68afc294650d10c62ef0b354431d0}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issue}{8}
+      \field{journaltitle}{Phys. Rev. D}
+      \field{month}{4}
+      \field{title}{Gravitation in 2+1 dimensions}
+      \field{volume}{43}
+      \field{year}{1991}
+      \field{pages}{2555\bibrangedash 2565}
+      \range{pages}{11}
+      \verb{doi}
+      \verb 10.1103/PhysRevD.43.2555
+      \endverb
+      \verb{urlraw}
+      \verb https://link.aps.org/doi/10.1103/PhysRevD.43.2555
+      \endverb
+      \verb{url}
+      \verb https://link.aps.org/doi/10.1103/PhysRevD.43.2555
+      \endverb
+    \endentry
+    \entry{banados92}{article}{}
+      \name{author}{3}{}{%
+        {{hash=f59f45b86ff00aa455c17681f4941fd5}{%
+           family={Bañados},
+           familyi={B\bibinitperiod},
+           given={Máximo},
+           giveni={M\bibinitperiod}}}%
+        {{hash=d7e795e7b084c55f867a570981b68b79}{%
+           family={Teitelboim},
+           familyi={T\bibinitperiod},
+           given={Claudio},
+           giveni={C\bibinitperiod}}}%
+        {{hash=4239b76df1c759b8fc31159c0f915dad}{%
+           family={Zanelli},
+           familyi={Z\bibinitperiod},
+           given={Jorge},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Physical Society (APS)}%
+      }
+      \strng{namehash}{c09a0666e03c34fff80ed934198a9885}
+      \strng{fullhash}{c09a0666e03c34fff80ed934198a9885}
+      \strng{bibnamehash}{c09a0666e03c34fff80ed934198a9885}
+      \strng{authorbibnamehash}{c09a0666e03c34fff80ed934198a9885}
+      \strng{authornamehash}{c09a0666e03c34fff80ed934198a9885}
+      \strng{authorfullhash}{c09a0666e03c34fff80ed934198a9885}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0031-9007}
+      \field{journaltitle}{Physical Review Letters}
+      \field{month}{9}
+      \field{number}{13}
+      \field{title}{Black hole in three-dimensional spacetime}
+      \field{volume}{69}
+      \field{year}{1992}
+      \field{pages}{1849\bibrangedash 1851}
+      \range{pages}{3}
+      \verb{doi}
+      \verb 10.1103/physrevlett.69.1849
+      \endverb
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1103/PhysRevLett.69.1849
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1103/PhysRevLett.69.1849
+      \endverb
+    \endentry
+    \entry{chan}{online}{}
+      \name{author}{1}{}{%
+        {{hash=75303e9859d01866f3cd1d31446500cb}{%
+           family={Chan},
+           familyi={C\bibinitperiod},
+           given={K.C.K},
+           giveni={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{75303e9859d01866f3cd1d31446500cb}
+      \strng{fullhash}{75303e9859d01866f3cd1d31446500cb}
+      \strng{bibnamehash}{75303e9859d01866f3cd1d31446500cb}
+      \strng{authorbibnamehash}{75303e9859d01866f3cd1d31446500cb}
+      \strng{authornamehash}{75303e9859d01866f3cd1d31446500cb}
+      \strng{authorfullhash}{75303e9859d01866f3cd1d31446500cb}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{gr-qc}
+      \field{eprinttype}{arXiv}
+      \field{title}{Static Charged Black Holes in (2+1) Dimensional Dilaton Gravity}
+      \field{year}{1994}
+      \verb{eprint}
+      \verb gr-qc/9404040
+      \endverb
+    \endentry
+    \entry{carlipLec}{online}{}
+      \name{author}{1}{}{%
+        {{hash=8a70908cc6e3989599cd1c9641a543fc}{%
+           family={Carlip},
+           familyi={C\bibinitperiod},
+           given={Steven},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{8a70908cc6e3989599cd1c9641a543fc}
+      \strng{fullhash}{8a70908cc6e3989599cd1c9641a543fc}
+      \strng{bibnamehash}{8a70908cc6e3989599cd1c9641a543fc}
+      \strng{authorbibnamehash}{8a70908cc6e3989599cd1c9641a543fc}
+      \strng{authornamehash}{8a70908cc6e3989599cd1c9641a543fc}
+      \strng{authorfullhash}{8a70908cc6e3989599cd1c9641a543fc}
+      \field{extraname}{1}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{gr-qc}
+      \field{eprinttype}{arXiv}
+      \field{title}{Lectures in (2+1)-Dimensional Gravity}
+      \field{year}{1995}
+      \verb{eprint}
+      \verb gr-qc/9503024
+      \endverb
+    \endentry
+    \entry{mann93}{article}{}
+      \name{author}{2}{}{%
+        {{hash=e24019e8f16b0ac33188b95aca2815b7}{%
+           family={Mann},
+           familyi={M\bibinitperiod},
+           given={R.\bibnamedelimi B.},
+           giveni={R\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{hash=87cfc435b514218bfdc6393f04978f9b}{%
+           family={Ross},
+           familyi={R\bibinitperiod},
+           given={S.\bibnamedelimi F.},
+           giveni={S\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Physical Society (APS)}%
+      }
+      \strng{namehash}{f393e775c335e02ab34d081220f1242e}
+      \strng{fullhash}{f393e775c335e02ab34d081220f1242e}
+      \strng{bibnamehash}{f393e775c335e02ab34d081220f1242e}
+      \strng{authorbibnamehash}{f393e775c335e02ab34d081220f1242e}
+      \strng{authornamehash}{f393e775c335e02ab34d081220f1242e}
+      \strng{authorfullhash}{f393e775c335e02ab34d081220f1242e}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0556-2821}
+      \field{journaltitle}{Physical Review D}
+      \field{month}{4}
+      \field{number}{8}
+      \field{title}{Gravitationally collapsing dust in 2 + 1 dimensions}
+      \field{volume}{47}
+      \field{year}{1993}
+      \field{pages}{3319\bibrangedash 3322}
+      \range{pages}{4}
+      \verb{doi}
+      \verb 10.1103/physrevd.47.3319
+      \endverb
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1103/PhysRevD.47.3319
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1103/PhysRevD.47.3319
+      \endverb
+    \endentry
+    \entry{martinez}{article}{}
+      \name{author}{3}{}{%
+        {{hash=752a7cdd33cdf4a236689f0ff824ea9a}{%
+           family={Martínez},
+           familyi={M\bibinitperiod},
+           given={Cristián},
+           giveni={C\bibinitperiod}}}%
+        {{hash=d7e795e7b084c55f867a570981b68b79}{%
+           family={Teitelboim},
+           familyi={T\bibinitperiod},
+           given={Claudio},
+           giveni={C\bibinitperiod}}}%
+        {{hash=4239b76df1c759b8fc31159c0f915dad}{%
+           family={Zanelli},
+           familyi={Z\bibinitperiod},
+           given={Jorge},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Physical Society (APS)}%
+      }
+      \strng{namehash}{73697b5db6776f5b9cf7ffe1fd9e656e}
+      \strng{fullhash}{73697b5db6776f5b9cf7ffe1fd9e656e}
+      \strng{bibnamehash}{73697b5db6776f5b9cf7ffe1fd9e656e}
+      \strng{authorbibnamehash}{73697b5db6776f5b9cf7ffe1fd9e656e}
+      \strng{authornamehash}{73697b5db6776f5b9cf7ffe1fd9e656e}
+      \strng{authorfullhash}{73697b5db6776f5b9cf7ffe1fd9e656e}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1089-4918}
+      \field{journaltitle}{Physical Review D}
+      \field{month}{4}
+      \field{number}{10}
+      \field{title}{Charged rotating black hole in three spacetime dimensions}
+      \field{volume}{61}
+      \field{year}{2000}
+      \verb{doi}
+      \verb 10.1103/physrevd.61.104013
+      \endverb
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1103/PhysRevD.61.104013
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1103/PhysRevD.61.104013
+      \endverb
+    \endentry
+    \entry{banados93}{article}{}
+      \name{author}{4}{}{%
+        {{hash=f59f45b86ff00aa455c17681f4941fd5}{%
+           family={Bañados},
+           familyi={B\bibinitperiod},
+           given={Máximo},
+           giveni={M\bibinitperiod}}}%
+        {{hash=7bf2d4a663d359c69fb014ca4e12279d}{%
+           family={Henneaux},
+           familyi={H\bibinitperiod},
+           given={Marc},
+           giveni={M\bibinitperiod}}}%
+        {{hash=d7e795e7b084c55f867a570981b68b79}{%
+           family={Teitelboim},
+           familyi={T\bibinitperiod},
+           given={Claudio},
+           giveni={C\bibinitperiod}}}%
+        {{hash=4239b76df1c759b8fc31159c0f915dad}{%
+           family={Zanelli},
+           familyi={Z\bibinitperiod},
+           given={Jorge},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Physical Society (APS)}%
+      }
+      \strng{namehash}{6609c2aab47bcdaf5d2802341a4be204}
+      \strng{fullhash}{71d8f40094b76a6e6db9ac550ae55ce8}
+      \strng{bibnamehash}{6609c2aab47bcdaf5d2802341a4be204}
+      \strng{authorbibnamehash}{6609c2aab47bcdaf5d2802341a4be204}
+      \strng{authornamehash}{6609c2aab47bcdaf5d2802341a4be204}
+      \strng{authorfullhash}{71d8f40094b76a6e6db9ac550ae55ce8}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0556-2821}
+      \field{journaltitle}{Physical Review D}
+      \field{month}{8}
+      \field{number}{4}
+      \field{title}{Geometry of the 2+1 black hole}
+      \field{volume}{48}
+      \field{year}{1993}
+      \field{pages}{1506\bibrangedash 1525}
+      \range{pages}{20}
+      \verb{doi}
+      \verb 10.1103/physrevd.48.1506
+      \endverb
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1103/PhysRevD.48.1506
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1103/PhysRevD.48.1506
+      \endverb
+    \endentry
+    \entry{carlip95}{article}{}
+      \name{author}{1}{}{%
+        {{hash=6ca37d09004636d0a81a368d39921530}{%
+           family={Carlip},
+           familyi={C\bibinitperiod},
+           given={S},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IOP Publishing}%
+      }
+      \strng{namehash}{6ca37d09004636d0a81a368d39921530}
+      \strng{fullhash}{6ca37d09004636d0a81a368d39921530}
+      \strng{bibnamehash}{6ca37d09004636d0a81a368d39921530}
+      \strng{authorbibnamehash}{6ca37d09004636d0a81a368d39921530}
+      \strng{authornamehash}{6ca37d09004636d0a81a368d39921530}
+      \strng{authorfullhash}{6ca37d09004636d0a81a368d39921530}
+      \field{extraname}{2}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1361-6382}
+      \field{journaltitle}{Classical and Quantum Gravity}
+      \field{month}{12}
+      \field{number}{12}
+      \field{title}{The (2 + 1)-dimensional black hole}
+      \field{volume}{12}
+      \field{year}{1995}
+      \field{pages}{2853\bibrangedash 2879}
+      \range{pages}{27}
+      \verb{doi}
+      \verb 10.1088/0264-9381/12/12/005
+      \endverb
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1088/0264-9381/12/12/005
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1088/0264-9381/12/12/005
+      \endverb
+    \endentry
+  \enddatalist
+  \missing{2}
+\endrefsection
+\endinput
+

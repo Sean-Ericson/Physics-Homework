@@ -1,0 +1,98 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{mathrsfs}
+\usepackage{mathtools}
+\usepackage{enumitem}
+\usepackage{physics}
+
+\newcommand{\magsq}[1]{\big|#1\big|^2}
+\newcommand{\avg}[1]{\left<#1\right>}
+\newcommand{\fullint}{\int_{-\infty}^\infty}
+\newcommand{\fullintd}[1]{\fullint\dd#1\:}
+\newcommand{\cint}[2]{\int_{#1}^{#2}}
+\newcommand{\cintd}[3]{\cint{#1}{#2}\dd#3\:}
+\newcommand\treq{\stackrel{\mathclap{\tiny\mbox{Tr}}}{=}}
+
+\begin{document}
+	
+\title{Exercise Set 9}
+\author{Sean Ericson \\ Phys 633}
+\maketitle
+
+\section*{Monday}
+\subsection*{Exercise 1}
+\begin{align*}
+    \left(x_{j+1}-x_j\right)^2 &= \left(\bar{x}_{j+1} + \delta_{j+1} - \left(\bar{x}_j + \delta_j\right)\right)^2 \\
+    &= \left(\delta_{j+1} - \delta_j + x_0 + \bar{v}(t_{j+1}-t_0) - x_0 - \bar{v}(t_j-t_0)\right)^2 \\
+    &= \left(\delta_{j+1} - \delta_j + \bar{v}(t_{j+1}-t_j)\right)^2 \\
+    &= \left(\delta_{j+1} - \delta_j + \bar{v}\delta t\right)^2 \\
+    &= (\delta_{j+1} - \delta_j)^2 + 2(\delta_{j+1}-\delta_j)\bar{v}\delta t + \bar{v}^2\delta t^2
+\end{align*}
+
+\subsection*{Exercise 2}
+\begin{align*}
+    \prod_{j=0}^{N-1}\exp[\frac{im\bar{v}^2\delta t}{2\hbar}] &= \exp[\sum_{j=0}^{N-1}\frac{im\bar{v}^2\delta t}{2\hbar}] \\
+    &= \exp[N\frac{im\bar{v}^2\delta t}{2\hbar}] \\
+    &= \exp[\frac{im(x-x_0)^2}{2\hbar(t-t_0)}]
+\end{align*}
+
+\subsection*{Exercise 3}
+\begin{align*}
+    {\det}_n &= \mqty|2 & -1 & 0 & \cdots & 0 & 0 \\ -1 & 2 & -1 & \cdots & 0 & 0 \\ 0 & -1 & 2 & \cdots & 0 & 0 \\ \vdots & \vdots & \vdots & \ddots & \vdots & \vdots \\ 0 & 0 & 0 & \cdots & 2 & -1 \\ 0 & 0 & 0 & \cdots & -1 & 2|_n \\
+    &= 2\mqty|2 & -1 & 0 & \cdots & 0 & 0 \\ -1 & 2 & -1 & \cdots & 0 & 0 \\ 0 & -1 & 2 & \cdots & 0 & 0 \\ \vdots & \vdots & \vdots & \ddots & \vdots & \vdots \\ 0 & 0 & 0 & \cdots & 2 & -1 \\ 0 & 0 & 0 & \cdots & -1 & 2|_{n-1} + \mqty|-1 & -1 & 0 & \cdots & 0 & 0 \\0 & 2 & -1 & \cdots & 0 & 0 \\0 & -1 & 2 & \cdots & 0 & 0 \\ \vdots & \vdots & \vdots & \ddots & \vdots & \vdots \\0 & 0 & 0 & \cdots & 2 & -1 \\0 & 0 & 0 & \cdots & -1 & 2|_{n-1} \\
+    &= 2\mqty|2 & -1 & 0 & \cdots & 0 & 0 \\ -1 & 2 & -1 & \cdots & 0 & 0 \\ 0 & -1 & 2 & \cdots & 0 & 0 \\ \vdots & \vdots & \vdots & \ddots & \vdots & \vdots \\ 0 & 0 & 0 & \cdots & 2 & -1 \\ 0 & 0 & 0 & \cdots & -1 & 2|_{n-1} - \mqty|2 & -1 & 0 & \cdots & 0 & 0 \\ -1 & 2 & -1 & \cdots & 0 & 0 \\ 0 & -1 & 2 & \cdots & 0 & 0 \\ \vdots & \vdots & \vdots & \ddots & \vdots & \vdots \\ 0 & 0 & 0 & \cdots & 2 & -1 \\ 0 & 0 & 0 & \cdots & -1 & 2|_{n-2} \\
+    &= 2{\det}_{n-1} - {\det}_{n-2}
+\end{align*}
+
+\subsection*{Exercise 4}
+First, assume that, for some $j$
+\[ {\det}_j = j+1, \quad {\det}_{j+1} = j+2 \]
+Then
+\begin{align*}
+    {\det}_{j+2} &= 2{\det}_{j+1} - {\det}_j \\
+    &= 2(j+2) - (j + 1) \\
+    &= j + 3
+\end{align*}
+Now, given that
+\[ {\det}_1 = \mqty|2| = 2, \quad {\det}_2 = \mqty|2&-1\\-1&2| = 4-1 = 3 \]
+\[ {\det}_3 = 2\cdot 3 - 2 = 4 = 3+1 \]
+we have that 
+\[ {\det}_n = n+1 \quad n\in\mathbb{N} \]
+
+
+\section*{Tuesday}
+\subsection*{Exercise 1}
+\[ \pdv{x_k}x_j^n = nx_j^{n-1}\delta_{jk} \]
+\[ \leftrightarrow \]
+\[ \frac{\delta}{\delta x(t)}\cintd{t_1}{t_2}{t'}x^n(t') = nx^{n-1}(t)\delta(t-t') \]
+
+\subsection*{Exercise 2}
+Expanding the field commutator into the mode functions gives
+\[ \comm{\hat{\psi}(\vec{r})}{\hat{\psi}(\vec{r}')} = \sum_{jj'}\comm{\hat{a}_j(t)}{\hat{a}^\dag_{j'}(t)}\phi(\vec{r})\phi^*(\vec{r}') \]
+A particual mode-operator commutator pair can be projected out by multiplying by $\phi_k^*(\vec{r})\phi_{k'}(\vec{r}')$ and integrating:
+\begin{align*}
+    \int {\dd}^3r{\dd}^3r' \comm{\hat{\psi}(\vec{r})}{\hat{\psi}(\vec{r}')}\phi_k^*(\vec{r})\phi_{k'}(\vec{r}') &= \int {\dd}^3r{\dd}^3r'\sum_{jj'}\comm{\hat{a}_j(t)}{\hat{a}^\dag_{j'}(t)}\phi(\vec{r})\phi^*(\vec{r}')\phi_k^*(\vec{r})\phi_{k'}(\vec{r}') \\
+    &= \sum_{jj'}\comm{\hat{a}_j(t)}{\hat{a}^\dag_{j'}(t)}\delta_{jk}\delta_{j'k'} \\
+    &= \comm{\hat{a}_k(t)}{\hat{a}^\dag_{k'}(t)}
+\end{align*}
+Since the field commutator evaulates as
+\[ \comm{\hat{\psi}(\vec{r})}{\hat{\psi}(\vec{r}')} = \delta^3(\vec{r}-\vec{r}') \]
+we also have that
+\begin{align*}
+    \int {\dd}^3r{\dd}^3r' \comm{\hat{\psi}(\vec{r})}{\hat{\psi}(\vec{r}')}\phi_k^*(\vec{r})\phi_{k'}(\vec{r}') &= \int {\dd}^3r{\dd}^3r'\delta^3(\vec{r}-\vec{r}')\phi_k^*(\vec{r})\phi_{k'}(\vec{r}') \\
+    &= \delta_{kk'}
+\end{align*}
+Thus
+\[ \comm{\hat{a}_k(t)}{\hat{a}_{k'}^\dag} = \delta_{kk'} \]
+
+\subsection*{Exercise 3}
+The initial joint state is given by
+\[ \left(\frac{\ket{1_L0_R} + \ket{0_L1_R}}{\sqrt{2}}\right)\ket{\uparrow_A\uparrow_B} = \frac{\ket{1_L0_R}\ket{\uparrow_A\uparrow_B} + \ket{0_L1_R}\ket{\uparrow_A\uparrow_B}}{\sqrt{2}}. \]
+After the interaction (and discarding the mode states) we have the state
+\[ \frac{\ket{\downarrow_A\uparrow_B} + \ket{\uparrow_A\downarrow_B}}{\sqrt{2}}, \]
+in which the spins of the particals are clearly entangled. Assuming the modes are physically separted, and the spin-flipping interactions between the modes and the particals are local, the entanglment present in the particals' spins must have come from the modes. Hence, mode state
+\[ \frac{\ket{1_L0_R} + \ket{0_L1_R}}{\sqrt{2}} \]
+must be entangled.
+\end{document}

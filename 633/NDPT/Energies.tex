@@ -1,0 +1,61 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{mathrsfs}
+\usepackage{enumitem}
+\usepackage{physics}
+
+\newcommand{\magsq}[1]{\big|#1\big|^2}
+\newcommand{\avg}[1]{\left<#1\right>}
+\newcommand{\fullint}{\int_{-\infty}^\infty}
+\newcommand{\fullintd}[1]{\fullint\dd#1\:}
+\newcommand{\cint}[2]{\int_{#1}^{#2}}
+\newcommand{\cintd}[3]{\cint{#1}{#2}\dd#3\:}
+\newcommand{\trdelta}[1]{\Tr[\Delta_{#1}]}
+
+\begin{document}
+	
+\title{Non-Degenerate Perturbation Theory}
+\author{Sean Ericson}
+\maketitle
+
+\section*{Notation}
+\[ V_{00} = \mel{\psi_0}{V}{\psi_0} \]
+\[ E_{0\alpha} = E_0 - E_\alpha \]
+\[ \Sigma_{x_1x_2\cdots x_n} = \sum_{\alpha_1,\alpha_2,\cdots \alpha_n\neq 0} \frac{V_{0\alpha_1}V_{\alpha_1\alpha_2}\cdots V_{\alpha_n0}}{E_{0\alpha_1}^{x_1}E_{0\alpha_2}^{x_2}\cdots E_{0\alpha_n}^{x_n}} \]
+\subsection*{Examples}
+\[ \Sigma_1 = \sum_{\alpha\neq 0}\frac{\magsq{V_{0\alpha}}}{E_{0\alpha}} \]
+\[ \Sigma_{12} = \sum_{\alpha_1,\alpha_2\neq 0}\frac{V_{0\alpha_1}V_{\alpha_1\alpha_2}V_{\alpha_20}}{E_{0\alpha_1}E_{0\alpha_2}^2} \]
+
+\section*{Energy Corrections}
+\begin{align*}
+    \trdelta{1} &= V_{00}
+\end{align*}
+\begin{align*}
+    \trdelta{2} &= \Sigma_1
+\end{align*}
+\begin{align*}
+    \trdelta{3} &= \Sigma_{11} \\
+    &\quad - V_{00}\Sigma_2
+\end{align*}
+\begin{align*}
+    \trdelta{4} &= \Sigma_{111} - \Sigma_2\Sigma_1 \\
+    &\quad - V_{00}\left(\Sigma_{12} + \Sigma_{21}\right) \\
+    &\quad + V_{00}^2\Sigma_3
+\end{align*}
+\begin{align*}
+    \trdelta{5} &= \Sigma_{1111} - \Sigma_1\Sigma_{12} - \Sigma_1\Sigma_{21} - \Sigma_2\Sigma_{11} \\
+    &\quad - V_{00}\left(\Sigma_{211} + \Sigma_{121} + \Sigma_{112} - \Sigma_2^2 - 2\Sigma_1\Sigma_3\right) \\
+    &\quad + V_{00}^2\left(\Sigma_{22} + \Sigma_{13} + \Sigma_{31}\right) \\
+    &\quad - V_{00}^3\Sigma_4
+\end{align*}
+\begin{align*}
+    \trdelta{6} &= \Sigma_{11111} + \Sigma_1^2\Sigma_3 + \Sigma_1\Sigma_2^2 - \Sigma_1\Sigma_{112} - \Sigma_1\Sigma_{121} - \Sigma_1\Sigma_{211} - \Sigma_{11}\Sigma_{12} - \Sigma_{11}\Sigma_{21} - \Sigma_2\Sigma_{111} \\
+    &\quad + V_{00}\left( 2\Sigma_1\Sigma_{13} + 2\Sigma_1\Sigma_{31} + 2\Sigma_1\Sigma_{22} + 2\Sigma_3\Sigma_{11} - \Sigma_{1112} - \Sigma_{1121} - \Sigma_{1211} - \Sigma_{2111} + 2\Sigma_2\Sigma_{12} + 2\Sigma_2\Sigma_{21} \right) \\
+    &\quad + V_{00}^2\left( \Sigma_{113} + \Sigma_{131} + \Sigma_{311} + \Sigma_{221} + \Sigma_{212} + \Sigma_{122} - 3\Sigma_1\Sigma_4 - 3\Sigma_2\Sigma_3 \right) \\
+    &\quad - V_{00}^3\left( \Sigma_{14} + \Sigma_{41} + \Sigma_{23} + \Sigma_{32} \right) \\
+    &\quad + V_{00}^4 \Sigma_5
+\end{align*}
+
+\end{document}

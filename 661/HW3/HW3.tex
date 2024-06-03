@@ -1,0 +1,110 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{mathtools}
+\usepackage{mathrsfs}
+\usepackage{enumitem}
+\usepackage{physics}
+\usepackage{tensor}
+\usepackage{array}
+
+\usepackage{tikz}
+\usetikzlibrary{calc,decorations.markings,patterns}
+
+\newcommand{\magsq}[1]{\big|#1\big|^2}
+\newcommand{\avg}[1]{\left<#1\right>}
+\newcommand{\fullint}{\int_{-\infty}^\infty}
+\newcommand{\fullintd}[1]{\fullint\dd#1\:}
+\newcommand{\cint}[2]{\int_{#1}^{#2}}
+\newcommand{\cintd}[3]{\cint{#1}{#2}\dd#3\:}
+
+\begin{document}
+
+\title{Homework 3}
+\author{Sean Ericson \\ Phys 661}
+\maketitle
+
+\section*{Peskin 3.4}
+\begin{enumerate}[label=(\alph*)]
+    \item The final state consists of two photons and therefore has total angular momentum 0, 1, or 2 by the usual addition of angular momentum rules. By conservation of angular momentum, the initial particle must have had one of these values of angular momentum, and thus was an integer rather than half-integer.
+    
+    \item Rotation by an angle $\phi$ about the $\hat{z}$ axis is affected by the matrix
+    \[ R(\phi\hat{z}) = \mqty(\cos\phi & -\sin\phi & 0 \\ \sin\phi & \cos\phi & 0 \\ 0 & 0 & 1). \]
+    Applying this to the given polarization vectors, we have
+    \begin{align*}
+        R(\phi\hat{z})\vec{\epsilon}_{1\text{R}} &= \frac{1}{\sqrt{2}}\mqty(\cos\phi & -\sin\phi & 0 \\ \sin\phi & \cos\phi & 0 \\ 0 & 0 & 1)\mqty(1\\i\\0) \\
+        &= \frac{1}{\sqrt{2}}\mqty(\cos\phi - i\sin\phi \\ \sin\phi + i\cos\phi \\ 0) \\
+        &= \frac{1}{\sqrt{2}}\mqty(e^{-i\phi} \\ ie^{-i\phi} \\ 0) \\
+        &= e^{-i\phi}\vec{\epsilon}_{1\text{R}},
+    \end{align*}
+    and 
+    \begin{align*}
+        R(\phi\hat{z})\vec{\epsilon}_{1\text{L}} &= \frac{1}{\sqrt{2}}\mqty(\cos\phi & -\sin\phi & 0 \\ \sin\phi & \cos\phi & 0 \\ 0 & 0 & 1)\mqty(1\\-i\\0) \\
+        &= \frac{1}{\sqrt{2}}\mqty(\cos\phi + i\sin\phi \\ \sin\phi - i\cos\phi \\ 0) \\
+        &= \frac{1}{\sqrt{2}}\mqty(e^{i\phi} \\ ie^{i\phi} \\ 0) \\
+        &= e^{i\phi}\vec{\epsilon}_{1\text{L}}.
+    \end{align*}
+    Thus, $\vec{\epsilon}_{1\text{R}}$ corresponds to a photon state of angular momentum $J_z = +1$, while $\vec{\epsilon}_{1\text{L}}$ corresponds to $J_z = -1$.
+    
+    \item Rotation by $\pi$ radians about the $\hat{y}$ axis is affected by the matrix
+    \[ R(\pi\hat{y}) = \mqty(-1&0&0\\0&1&0\\0&0&-1). \]
+    Applying this to the given polarization vectors gives
+    \begin{align*}
+        \vec{\epsilon}_{2\text{R}} &= R(\pi\hat{y})\vec{\epsilon}_{1\text{R}} \\
+        &= \frac{1}{\sqrt{2}}\mqty(-1&0&0\\0&1&0\\0&0&-1)\mqty(1\\i\\0) \\
+        &= \frac{1}{\sqrt{2}}\mqty(-1\\i\\0),
+    \end{align*}
+    and 
+    \begin{align*}
+        \vec{\epsilon}_{2\text{L}} &= R(\pi\hat{y})\vec{\epsilon}_{1\text{L}} \\
+        &= \frac{1}{\sqrt{2}}\mqty(-1&0&0\\0&1&0\\0&0&-1)\mqty(1\\-i\\0) \\
+        &= \frac{1}{\sqrt{2}}\mqty(-1\\-i\\0).
+    \end{align*}
+    Checking that these corresponds to the expected photon momentums, we see that
+    \begin{align*}
+        R(\phi\hat{z})\vec{\epsilon}_{2\text{R}} &= \frac{1}{\sqrt{2}}\mqty(\cos\phi & -\sin\phi & 0 \\ \sin\phi & \cos\phi & 0 \\ 0 & 0 & 1)\mqty(-1\\i\\0) \\
+        &= \frac{1}{\sqrt{2}}\mqty(-\cos\phi - i\sin\phi \\ -\sin\phi + i\cos\phi \\ 0) \\
+        &= \frac{1}{\sqrt{2}}\mqty(e^{i\phi} \\ ie^{i\phi} \\ 0) \\
+        &= e^{i\phi}\vec{\epsilon}_{2\text{R}},
+    \end{align*}
+    and
+    \begin{align*}
+        R(\phi\hat{z})\vec{\epsilon}_{2\text{L}} &= \frac{1}{\sqrt{2}}\mqty(\cos\phi & -\sin\phi & 0 \\ \sin\phi & \cos\phi & 0 \\ 0 & 0 & 1)\mqty(-1\\-i\\0) \\
+        &= \frac{1}{\sqrt{2}}\mqty(-\cos\phi + i\sin\phi \\ -\sin\phi - i\cos\phi \\ 0) \\
+        &= \frac{1}{\sqrt{2}}\mqty(e^{-i\phi} \\ ie^{-i\phi} \\ 0) \\
+        &= e^{-i\phi}\vec{\epsilon}_{2\text{L}},
+    \end{align*}
+    as expected.
+
+    \item By the normal addition rules for angular momentum, the $J_z$ components simply add together. The states $\vec{e}_{1\text{R}}$ and $\vec{e}_{2\text{L}}$ both have $J_z = +1$, while $\vec{e}_{2\text{R}}$ and $\vec{e}_{1\text{L}}$ have $J_z = -1$. Thus,
+    \begin{align*}
+        \vec{e}_{1\text{R}}\vec{e}_{2\text{R}}&: J_z = 1-1 = 0 \\
+        \vec{e}_{1\text{R}}\vec{e}_{2\text{L}}&: J_z = 1+1 = 2 \\
+        \vec{e}_{1\text{L}}\vec{e}_{2\text{R}}&: J_z = 1+1 = 2 \\
+        \vec{e}_{1\text{R}}\vec{e}_{2\text{R}}&: J_z = -1+1 = 0
+    \end{align*}
+    Now, since $|J_z| < J$ (i.e $J_z \in \{-J, -J+1, \cdots J\}$), we can conclude for the $\vec{e}_{1\text{R}}\vec{e}_{2\text{L}}$ and $\vec{e}_{1\text{L}}\vec{e}_{2\text{R}}$ states that the initial particle must have had total angular momentum $J \geq 2$.
+
+    \item In part (c) we found that $\vec{e}_{2\text{L}}$ and $\vec{e}_{2\text{R}}$ by rotating $\vec{e}_{1\text{L}}$ and $\vec{e}_{1\text{R}}$ by $\pi$ radians about the $\hat{y}$ axis. This transformation is clearly an involution, so we have that
+    \begin{align*}
+        \vec{e}_{1\text{L}} \leftrightarrow \vec{e}_{2\text{L}} \\
+        \vec{e}_{1\text{R}} \leftrightarrow \vec{e}_{2\text{R}}
+    \end{align*}
+    under this transformation. Now, in the rest frame of the original particle, the two photons propagate away symmetrically. Therefore, the spatial part of their joint wavefunction must be symmetric. The spin part must also therefore be symmetric (in order for the entire wavefunction to by symmetric as required by the Spin-Statistics theorem). So, we simply have that
+    \[ \vec{e}_{1\text{R}}\vec{e}_{2\text{R}} + \vec{e}_{2\text{R}}\vec{e}_{1\text{R}} \to \vec{e}_{2\text{R}}\vec{e}_{1\text{R}} + \vec{e}_{1\text{R}}\vec{e}_{2\text{R}},  \]
+    and the state remains unchanged by the transformation.
+
+    \item The $Y_J^{0}$ spherical harmonics have the form
+    \[ \sqrt{\frac{2J+1}{4\pi}}P_J(\cos\theta). \]
+    Under rotation by $\pi$ radians about the $\hat{y}$ axis, $\theta$ goes to $-\theta$. However, since $\cos\theta$ is an even function in $\theta$, we can see that these spherical harmonics are unchanged by this transformation.
+
+    \item We can dust off our old copy of Griffiths to look up the Clebsch-Gordan decompositions of $J = 1$ states into two other $J = 1$ states. The only one possible is
+    \[ \ket{1,0} = \frac{1}{\sqrt{2}}\ket{1,1}\ket{1,-1} - \frac{1}{\sqrt{2}}\ket{1,-1}\ket{1,1}. \]
+    As argued in part (e), the spin part of the joint wavefunction must be symmetric. The joint spin state above is clearly antisymmetric, hence a particle of spin 1 cannot decay into two photons.
+
+\end{enumerate}
+
+
+
+\end{document}

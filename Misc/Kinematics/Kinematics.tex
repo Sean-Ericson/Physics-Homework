@@ -1,0 +1,167 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{mathrsfs}
+\usepackage{mathtools}
+\usepackage{enumitem}
+\usepackage{physics}
+
+\newcommand{\magsq}[1]{\big|#1\big|^2}
+\newcommand{\Lag}{\mathcal{L}}
+\newcommand{\Ham}{\mathcal{H}}
+\newcommand{\pos}{\vec{r}}
+\newcommand{\vel}{\dot{\vec{r}}}
+\newcommand{\acc}{\ddot{\vec{r}}}
+\newcommand{\mom}{\vec{p}}
+
+\begin{document}
+	
+\title{Classical v. Relativistic Kinematics}
+\author{Sean Ericson}
+\maketitle
+
+\section{Linear Acceleration}
+\subsection*{Classical}
+\[ \Lag = \frac{1}{2}m\magsq{\vel} + m\pos\cdot\vec{g}  \]
+
+\subsubsection*{Euler-Lagrange Equations}
+\begin{align*}
+    \dv{t}\pdv{\Lag}{\vel} = \pdv{\Lag}{r} \\
+    \implies\qquad \dv{t}\left(m\vel\right) = m\vec{g} \\
+    \implies\qquad  m\acc = m\vec{g} \\
+    \implies\qquad \acc = \vec{g}
+\end{align*}
+
+\subsubsection*{Solutions of Equations of Motion}
+\[ \pos(t) = \pos_0 + t\vel_0+ \frac{1}{2}t^2\vec{g} \]
+\[ \vel(t) = \vel_0 + t\vec{g} \]
+\[ \acc(t) = \vec{g} \]
+
+\subsubsection*{Hamiltonian}
+\[ \mom = \pdv{\Lag}{\vel} = m\vel \implies \vel = \frac{1}{m}\mom \]
+\[ H = \vel\cdot\mom - \Lag = \frac{1}{m}\magsq{\mom} - \frac{1}{2m}\magsq{\mom} - m\pos\cdot\vec{g} = \frac{1}{2m}\magsq{\mom} - m\pos\cdot\vec{g} \]
+\[ \dot{\mom} = -\pdv{\Ham}{\pos} = m\vec{g} \]
+
+\subsubsection*{Conserved Quantities}
+Consider orthonormal vectors $\hat{r}_1$, $\hat{r}_2$, $\hat{r}_3$ such that
+\[ \hat{r}_1 \cdot \vec{g} = \hat{r}_2 \cdot \vec{g} = 0, \]
+and 
+\[ \hat{r}_3 = \frac{\vec{g}}{\abs{\vec{g}}}. \]
+Then, the quantities
+\begin{align*}
+    p_1 &\coloneqq \hat{r}_1\cdot\mom \\
+    p_2 &\coloneqq \hat{r}_2\cdot\mom \\
+    L_3 &\coloneqq (\hat{r}_1\cdot\pos)p_2 - (\hat{r}_2\cdot{\pos})p_1 \\
+    &= (\hat{r}_1 \cdot \pos)(\hat{r}_2 \cdot \mom) - (\hat{r}_2 \cdot \pos)(\hat{r}_1 \cdot \mom)
+\end{align*}
+are conserved. \\ \textit{proof}
+\begin{align*}
+    \dot{p}_1 &= \pb{p_1}{H} \\
+    &= \pdv{p_1}{\pos}\cdot\pdv{\Ham}{\mom} + \pdv{p_1}{\mom}\cdot\pdv{H}{\pos} \\
+    &= \vec{0}\cdot\frac{\mom}{m} - m\hat{r}_1\cdot\vec{g} \\
+    &= 0 \\
+    \\
+    \dot{p}_2 &= \pb{p_2}{H} \\
+    &= \pdv{p_2}{\pos}\cdot\pdv{\Ham}{\mom} + \pdv{p_2}{\mom}\cdot\pdv{H}{\pos} \\
+    &= \vec{0}\cdot\frac{\mom}{m} - m\hat{r}_2\cdot\vec{g} \\
+    &= 0 \\
+    \\
+    \dot{L}_3 &= \pb{L_3}{\Ham} \\
+    &= \pdv{L_3}{\pos}\cdot\pdv{\Ham}{\mom} + \pdv{L_3}{\mom}\cdot\pdv{H}{\pos} \\
+    &= \left((\hat{r}_2\cdot\mom)\hat{r}_1 - (\hat{r}_1\cdot\mom)\hat{r}_2\right)\cdot \frac{\mom}{m} - m\left((\hat{r}_1\cdot\pos)\hat{r}_2 - (\hat{r}_2\cdot\pos)\hat{r}_1\right)\cdot\vec{g} \\
+    &= \frac{1}{m}\left[(\hat{r}_2\cdot\mom)(\hat{r}_1\cdot\mom) - (\hat{r}_1\cdot\mom)(\hat{r}_1\cdot\mom)\right] - m\left[(\hat{r}_1\cdot\pos)(\hat{r}_2\cdot\vec{g}) - (\hat{r}_2\cdot\pos)(\hat{r}_1\cdot\vec{g})\right] \\
+    &= \frac{1}{m}[0] - [0-0] \\
+    &= 0
+\end{align*}
+
+\subsubsection*{Changing Coordinates}
+Consider coordinates $\rho$, $\phi$ and $r_3$ such that 
+\begin{align*}
+    \hat{r}_1\cdot{\pos} &= \rho\cos\phi, \\
+    \hat{r}_2\cdot{\pos} &= \rho\sin\phi, \\
+    \hat{r}_3\cdot{\pos} &= r_3,
+\end{align*}
+where $\hat{r}_3$ is defined as above. Consider also cylindrical unit vectors $\hat{\rho}$ and $\hat{\phi}$ such that
+\begin{align*}
+    \hat{\rho} &= \cos\phi\;\hat{r}_1 + \sin\phi\;\hat{r}_2, \\
+    \hat{\phi} &= -\sin\phi\;\hat{r}_1 + \cos\phi\;\hat{r}_2.
+\end{align*}
+\begin{align*}
+    \dv{t}\hat{\rho} &= -\sin\phi\dot{\phi}\hat{r}_1 + \cos\phi\dot{\phi}\hat{r}_2 \\
+    &= \dot{\phi}\hat{\phi} \\
+    \dv{t}\hat{\phi} &= -\cos\phi\dot{\phi}\hat{r}_1 - \sin\phi\dot{\phi}\hat{r}_2 \\
+    &= -\dot{\phi}\hat{\rho} \\
+    \pos &= \rho\hat{\rho} + \phi\hat{\phi} + r_3\hat{r}_3 \\
+    \vel &= \dot{\rho}\hat{\rho} + \rho\dot{\hat{\rho}} + \dot{\phi}\hat{\phi} + \phi\dot{\hat{\phi}} + \dot{r}_3\hat{r}_3 \\
+    &= \dot{\rho}\hat{\rho} + \rho\dot{\phi}\hat{\phi} + \dot{\phi}\hat{\phi} - \phi\dot{\phi}\hat{\rho} + + \dot{r}_3\hat{r}_3 \\
+    &= \left(\dot{\rho} - \phi\dot{\phi}\right)\hat{\rho} + \left(\rho\dot{\phi} + \dot{\phi}\right)\hat{\phi} + \dot{r}_3\hat{r}_3 \\
+    &= \left(\dot{\rho} - \phi\dot{\phi}\right)\hat{\rho} + (\rho + 1)\dot{\phi}\hat{\phi} + \dot{r}_3\hat{r}_3  \\
+    \magsq{\vel} &= \left(\dot{\rho} - \phi\dot{\phi}\right)^2 + (\rho + 1)^2\dot{\phi}^2 + \dot{r}_3^2 \\
+    &= \dot{\rho}^2 - 2\phi\dot{\rho}\dot{\phi} + \phi^2\dot{\phi}^2 + \rho^2\dot{\phi^2} + 2\rho\dot{\phi}^2 + \dot{\phi}^2 + \dot{r}_3^2
+\end{align*}
+
+\subsection*{Relativistic}
+\begin{align*}
+    \Lag &= -\gamma^{-1} mc^2 + m\pos\cdot\vec{g} \\
+    &\eqqcolon -mc^2\sqrt{1 - \frac{\magsq{\vel}}{c^2}} + m\pos\cdot\vec{g}
+\end{align*}
+
+\subsubsection*{Euler-Lagrange Equations}
+\begin{align*}
+    \dv{t}\pdv{\Lag}{\vel} = \pdv{\Lag}{\pos} \\
+    \implies \dv{t}\left(-m\gamma\vel\right) = m\vec{g} \\
+    \implies -m\left(\dv{\gamma}{t}\vel + \gamma\dv{\vel}{t} \right) = m\vec{g} \\
+    \implies -\left[\left(\frac{1}{c^2}\gamma^3\vel\cdot\acc\right)\vel + \gamma\acc\right] = \vec{g}
+\end{align*}
+
+\begin{align*}
+    \gamma = \frac{1}{\sqrt{1 - \frac{\magsq{\vel}}{c^2}}} \\
+    \pdv{\gamma}{\vel} = \frac{\gamma^3}{c^2}\vel \\
+    \dv{\gamma}{t} = \pdv{\gamma}{\vel}\cdot\dv{\vel}{t} = \frac{\gamma^3}{c^2} \vel\cdot\acc \\
+    \pdv{\gamma^{-1}}{\vel} = -\frac{1}{c^2}\gamma\vel \\
+    \dv{\gamma^{-1}}{t} = -\frac{\gamma}{c^2} \vel\cdot\acc \\
+    \dv{\gamma^n}{\vel} = \frac{n\gamma^{n+2}}{c^2}\vel
+\end{align*}
+
+\subsubsection*{Hamiltonian}
+\begin{align*}
+    \mom &= \pdv{\Lag}{\vel} \\
+    &= m\gamma\vel \\
+    \implies \\
+    \magsq{\mom} &= \frac{m^2\vel^2}{1 - \frac{\magsq{\vel}}{c^2}} \\
+    \implies \\
+    \magsq{\mom} - \frac{1}{c^2}\magsq{\mom}\magsq{\vel} &= m^2\magsq{\vel} \\
+    \implies \\
+    \magsq{\vel}\left(m^2 + \frac{\magsq{\mom}}{c^2}\right) = \magsq{\mom} \\
+    \implies \\
+    \magsq{\vel} = \frac{c^2\magsq{\mom}}{m^2c^4 + \magsq{\mom}c^2} \eqqcolon \frac{c^4\magsq{\mom}}{E^2}
+\end{align*}
+
+\begin{align*}
+    \Ham &= \vel\cdot\mom - \Lag \\
+    &= \frac{\magsq{\mom}}{m\gamma} + \frac{mc^2}{\gamma} - m\pos\cdot\vec{g} \\
+    &= \frac{\magsq{\mom} + m^2c^2}{m\gamma} - m\pos\cdot\vec{g}
+\end{align*}
+
+\begin{align*}
+    \dot{\mom} &= -\pdv{\Ham}{\pos} = m\vec{g}
+\end{align*}
+
+\subsubsection*{Solutions of Equations of Motion}
+\begin{align*}
+    \mom(t) &= \mom_0 + mt\vec{g} \\
+    \vel(t) &= \frac{\mom(t)}{m\gamma} \\
+    &= \frac{1}{m}\mom(t)\sqrt{1 - \frac{\magsq{\vel}}{c^2}} \\
+    &= \frac{1}{m}\mom(t)\sqrt{1 - \frac{c^2\magsq{\mom}}{E^2}} \\
+    &= (\gamma_0\vel_0 + t\vec{g})\sqrt{1 - \frac{c^2\magsq{m\gamma_0\vel_0 + t\vec{g}}}{m^2c^4 + \magsq{m\gamma_0\vel_0 + t\vec{g}}c^2}} \\
+    &= (\gamma_0\vel_0 + t\vec{g})\sqrt{\frac{m^2c^2}{\magsq{m\gamma_0\vel_0 + t\vec{g}}}} \\
+    &= mc\frac{(\gamma_0\vel_0 + t\vec{g})}{\abs{m\gamma_0\vel_0 + t\vec{g}}}
+\end{align*}
+
+
+\subsubsection*{Conserved Quantities}
+
+
+
+\end{document}
