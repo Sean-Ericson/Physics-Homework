@@ -1,0 +1,70 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{nccmath}
+\usepackage{mathtools}
+\usepackage{mathrsfs}
+\usepackage{enumitem}
+\usepackage{physics}
+
+\newcommand{\magsq}[1]{\big|#1\big|^2}
+
+\begin{document}
+
+\title{Homework 8}
+\author{Sean Ericson \\ Phys 663}
+\maketitle
+
+\section*{Problem 1}
+\[ \Gamma = cT^n; \quad N_\text{int} = \int_t^\infty \dd t' \Gamma(t') \]
+For a radiation dominated universe
+\[ a(t) = \sqrt{\frac{t}{t_0}} \implies H = \frac{1}{2t}, \;\; H_0 = \frac{1}{2t_0} \]
+\begin{alignat*}{3}
+    & \quad & T &\propto \frac{1}{a} \\
+    &\implies\quad & \Gamma &= c\left(\frac{t}{t_0}\right)^{n/2} \\
+    &\implies\quad & N_\text{int} &= c\int_t^\infty \dd t' \left(\frac{'}{t_0}\right)^{n/2} \\
+    & \quad &   &= \frac{2c}{n-2} \frac{t^{-(n-2)/2}}{(2H_0)^{n/2}} \quad (n > 2) \\
+\end{alignat*}
+Now,
+\begin{alignat*}{3}
+    & \quad & N_\text{int}(t_d) &= 1 \\
+    &\implies\quad & \frac{2c}{n-2} \frac{t_d^{-(n-2)/2}}{(2H_0)^{n/2}} &= 1 \\
+    &\implies\quad & t_d &= \frac{1}{2}\left(\frac{n-2}{c}\right)^{\frac{-2}{n-2}}H_0^{\frac{-n}{n-2}}.
+\end{alignat*}
+Finally,
+\begin{alignat*}{3}
+    & \quad & \frac{\Gamma(t)}{H(t)} &= c \frac{t^{(2-n)/2}}{t_0^{-n/2}} \\
+    &\implies\quad & \frac{\Gamma(t_d)}{H(t_d)} = \frac{n-2}{2},
+\end{alignat*}
+which is greater than 1 for $n>4$
+
+\section*{Problem 2}
+\begin{enumerate}[label=\roman*)]
+    \item 
+\end{enumerate}
+
+
+\section*{Problem 3}
+Given that
+\begin{align*}
+    \rho_\text{DM} &= 0.3\;\text{GeV}\text{cm}^{-3}, \\
+    R &= 20\;\text{kpc}, \\
+    \left<\sigma v\right> &= 3\times10^{-26}\;\text{cm}^3\text{s}^{-1}, \\
+    m_\text{DM} &= 100\;\text{GeV}
+\end{align*}
+we have that
+\begin{alignat*}{3}
+    & \quad & \Gamma &\approx n \left<\sigma v\right> \\
+    & \quad &        &= \frac{\rho_\text{DM}}{m_\text{DM}}\left<\sigma v\right> \\
+    & \quad &        &\approx  1\times10^{-28}\;\text{s}^{-1}
+\end{alignat*}
+The total number of dark matter particles within the given radius is
+\[ N = \frac{4}{3}\pi R^3 \frac{\rho_\text{DM}}{m_\text{DM}}. \]
+The time for all of that to decay is
+\[ t_\text{decay} = \frac{4\pi R^3}{3 \left<\sigma v\right>} \approx 3\times10^{94}\;\text{s}, \]
+so there is certainly no risk of depletion \textit{any} time soon.
+The universal dark matter density is 
+
+
+\end{document}
