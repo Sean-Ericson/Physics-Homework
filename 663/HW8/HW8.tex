@@ -23,7 +23,7 @@ For a radiation dominated universe
 \begin{alignat*}{3}
     & \quad & T &\propto \frac{1}{a} \\
     &\implies\quad & \Gamma &= c\left(\frac{t}{t_0}\right)^{n/2} \\
-    &\implies\quad & N_\text{int} &= c\int_t^\infty \dd t' \left(\frac{'}{t_0}\right)^{n/2} \\
+    &\implies\quad & N_\text{int} &= c\int_t^\infty \dd t' \left(\frac{t}{t_0}\right)^{n/2} \\
     & \quad &   &= \frac{2c}{n-2} \frac{t^{-(n-2)/2}}{(2H_0)^{n/2}} \quad (n > 2) \\
 \end{alignat*}
 Now,
@@ -41,7 +41,28 @@ which is greater than 1 for $n>4$
 
 \section*{Problem 2}
 \begin{enumerate}[label=\roman*)]
+    \item The entropy density is given by
+    \begin{align*}
+        s_0 &= \frac{2\pi^2}{45}g_{*s}T_\gamma^3 \\
+        &= \frac{2\pi^2}{45}\left(2 + \frac{7}{8}\times3\times2\left(\frac{T_\nu}{T_\gamma}\right)^3\right)T_\gamma^3 \\
+        &= \frac{2\pi^2}{45}\left(2 + \frac{21}{4}\frac{4}{11}\right)(2.73\;\text{K})^3 \\
+        &= 39.4\;\text{K}^3 \\
+        &\approx 4\times10^{-38}\;\text{GeV}^3
+    \end{align*}
+    The critical density is
+    \[ \rho_c = \frac{3H_0^2}{8\pi G} = 5\times10^{-6}\;\text{GeV}\text{cm}^{-3} \]
+    the dark matter density is then
+    \[ \rho_\text{DM} = \Omega_\text{DM}\rho_c \approx 1.3\times10^{-6}\text{GeV}\text{cm}^{-3} \]
+    The number density, $n_\text{DM}$ is given by
+    \[ n_\text{DM} = Y_\text{DM} s_0. \]
+    Using 
+    \[ Y_\text{DM} \sim 0.2 \frac{g}{g_{*s}} \approx 0.007 \]
+    I get
+    \[ n_\text{DM} \approx 3\times10^{-40}\;\text{GeV}^3 \]
     \item 
+    \[ \Omega_\text{DM} \approx 0.25 = \frac{\rho_\text{DM}}{\rho_c} = \frac{m_\text{DM}n_\text{DM}}{\rho_c} \]
+    \[ \implies m_\text{DM} = \frac{\Omega_\text{DM}\rho_c}{n_\text{DM}} \approx 37\;\text{eV} \]
+    This is wayyyy below the weak scale. But I'm sure my yield calculation was nonsense =P.
 \end{enumerate}
 
 
@@ -60,11 +81,11 @@ we have that
     & \quad &        &\approx  1\times10^{-28}\;\text{s}^{-1}
 \end{alignat*}
 The total number of dark matter particles within the given radius is
-\[ N = \frac{4}{3}\pi R^3 \frac{\rho_\text{DM}}{m_\text{DM}}. \]
-The time for all of that to decay is
-\[ t_\text{decay} = \frac{4\pi R^3}{3 \left<\sigma v\right>} \approx 3\times10^{94}\;\text{s}, \]
-so there is certainly no risk of depletion \textit{any} time soon.
-The universal dark matter density is 
-
+\[ N = \frac{4}{3}\pi R^3 \frac{\rho_\text{DM}}{m_\text{DM}} \approx 10^{66} \]
+The current rate of annihilations in the galaxy is then $\sim10^{38}$/sec. Given that the time constant ($1/\Gamma$) is about 10 orders of magnitude larger than the current age of the universe, it seems we are not presently at great risk of galactic dark matter depletion.
+Using
+\[ \rho_\text{DM} = \Omega_\text{DM} \rho_c = \frac{3\Omega_\text{DM}H_0^2}{8\pi G} \approx 1.2\times10^{-6}\;\text{GeV}\text{cm}^{-3} \]
+as the universal dark matter density, we find a universal dark matter annihilation rate of
+\[ \Gamma \approx 10^{-34}\;\text{s}^{-1} \]
 
 \end{document}
