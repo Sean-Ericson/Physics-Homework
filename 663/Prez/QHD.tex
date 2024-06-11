@@ -1,0 +1,50 @@
+\documentclass[xcolor={dvipsnames}]{beamer}
+\usetheme{Malmoe}
+\usecolortheme{spruce}
+\setbeamercolor{item}{fg=PineGreen}
+\setbeamertemplate{itemize item}[square]
+\setbeamertemplate{itemize subitem}[triangle]
+\setbeamertemplate{itemize subsubitem}[square]
+\setbeamertemplate{itemize/enumerate subbody begin}{\vspace{0.5em}}
+
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{mathtools}
+\usepackage{mathrsfs}
+\usepackage{physics}
+\usepackage{graphicx}
+\usepackage{caption}
+
+\captionsetup[figure]{labelformat=empty}
+\graphicspath{ {./images/} }
+
+\let\olditemize=\itemize 
+\let\endolditemize=\enditemize 
+\renewenvironment{itemize}{\olditemize \itemsep=.5em }{\endolditemize}
+
+\title{Quantum Hadrodynamics}
+\subtitle{From Fundamental Fields to Nuclear Phenomena}
+\author{Sean Ericson}
+\institute{UO\\PHYS 663}
+\date{June 14, 2024}
+\titlegraphic{\includegraphics[scale=0.7]{seal.jpg}}
+
+\begin{document}
+
+\frame{\titlepage}
+
+\begin{frame}{First frame}
+\begin{itemize}
+    \item<1-> First Item
+\end{itemize}
+\end{frame}
+
+\begin{frame}{References}
+\begin{thebibliography}{5}
+    \bibitem{1} Ryan Atkin 2015 J. Phys.: Conf. Ser. 645 012008
+    \bibitem{2} G. P. Salam and G. Soyez, JHEP 0705 (2007) 086 [arXiv:0704.0292 [hep-ph]].
+    \bibitem{3} M. Cacciari and G. P. Salam, arXiv:hep-ph/0512210.
+    \bibitem{4} S. Fortune, in Proceedings of the second annual symposium on Computational geometry, p. 312 (1986).
+\end{thebibliography}
+\end{frame}
+
+\end{document}
