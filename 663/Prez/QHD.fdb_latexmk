@@ -1,19 +1,19 @@
 # Fdb version 4
-["bibtex QHD"] 1718266675.23022 "QHD.aux" "QHD.bbl" "QHD" 1718267091.78681 0
+["bibtex QHD"] 1718266675.23022 "QHD.aux" "QHD.bbl" "QHD" 1718298854.49363 0
   "./refs.bib" 1718265088 3331 21201f58a8756cccdcba32d6adfd7018 ""
-  "QHD.aux" 1718267090 4630 667fa35d2d4e0edaa2198e53b97ca9ca "pdflatex"
+  "QHD.aux" 1718298853 4630 667fa35d2d4e0edaa2198e53b97ca9ca "pdflatex"
   "d:/Programs/texlive/2024/texmf-dist/bibtex/bst/base/abbrv.bst" 1711142392 20329 b5fed53e10044d0f8112183785c759b1 ""
   (generated)
   "QHD.bbl"
   "QHD.blg"
   (rewritten before read)
-["pdflatex"] 1718267084.96955 "d:/Programming/GitHub/Physics-Homework/663/Prez/QHD.tex" "QHD.pdf" "QHD" 1718267091.78714 0
-  "QHD.aux" 1718267090 4630 667fa35d2d4e0edaa2198e53b97ca9ca "pdflatex"
+["pdflatex"] 1718298848.58681 "d:/Programming/GitHub/Physics-Homework/663/Prez/QHD.tex" "QHD.pdf" "QHD" 1718298854.49395 0
+  "QHD.aux" 1718298853 4630 667fa35d2d4e0edaa2198e53b97ca9ca "pdflatex"
   "QHD.bbl" 1718266675 956 14f2c9f99985972672fe008ff91eb73e "bibtex QHD"
-  "QHD.nav" 1718267090 1977 44d8bb1026067d593e45150ca52dc04e "pdflatex"
-  "QHD.out" 1718267090 93 aea4b6a8ae45636c75679c2f0dfa4493 "pdflatex"
-  "QHD.tex" 1718267084 13829 17b8c7f3739b0b0428f33e32bc1f5dad ""
-  "d:/Programming/GitHub/Physics-Homework/663/Prez/QHD.tex" 1718267084 13829 17b8c7f3739b0b0428f33e32bc1f5dad ""
+  "QHD.nav" 1718298853 1977 44d8bb1026067d593e45150ca52dc04e "pdflatex"
+  "QHD.out" 1718298853 93 aea4b6a8ae45636c75679c2f0dfa4493 "pdflatex"
+  "QHD.tex" 1718298848 13828 1ff701974cd3c3f72c00f5219758c2c1 ""
+  "d:/Programming/GitHub/Physics-Homework/663/Prez/QHD.tex" 1718298848 13828 1ff701974cd3c3f72c00f5219758c2c1 ""
   "d:/Programs/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1711142853 2971 def0b6c1f0b107b3b936def894055589 ""
   "d:/Programs/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1711144024 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "d:/Programs/texlive/2024/texmf-dist/fonts/tfm/jknappen/ec/ecso1000.tfm" 1711143507 3584 28de528d5eb276f96f1afe67dab24105 ""
