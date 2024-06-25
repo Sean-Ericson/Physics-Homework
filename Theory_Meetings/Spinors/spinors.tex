@@ -1,0 +1,57 @@
+\documentclass[xcolor={dvipsnames}]{beamer}
+\usetheme{Malmoe}
+\usecolortheme{spruce}
+\setbeamercolor{item}{fg=PineGreen}
+\setbeamertemplate{itemize item}[square]
+\setbeamertemplate{itemize subitem}[triangle]
+\setbeamertemplate{itemize subsubitem}[square]
+\setbeamertemplate{itemize/enumerate subbody begin}{\vspace{0.5em}}
+\setbeamercolor*{bibliography entry title}{fg=black}
+\setbeamercolor*{bibliography entry author}{fg=black}
+\setbeamercolor*{bibliography entry location}{fg=black}
+\setbeamercolor*{bibliography entry note}{fg=black}
+% and kill the abominable icon
+\setbeamertemplate{bibliography item}{}
+
+\usepackage{natbib}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{mathtools}
+\usepackage{mathrsfs}
+\usepackage{bm}
+\usepackage{physics}
+\usepackage{slashed}
+\usepackage{graphicx}
+\usepackage{caption}
+
+\captionsetup[figure]{labelformat=empty}
+\graphicspath{ {./images/} }
+
+\let\olditemize=\itemize 
+\let\endolditemize=\enditemize 
+\renewenvironment{itemize}{\olditemize \itemsep=.5em }{\endolditemize}
+
+\title{title}
+\subtitle{subtitle}
+\author{Sean Ericson}
+\institute{UO}
+\date{Theory meeting, June 27, 2024}
+\titlegraphic{\includegraphics[scale=0.6]{seal.jpg}}
+
+\begin{document}
+
+\frame{\titlepage}
+
+\begin{frame}{title}
+    \alert{subtitle/alert thing}
+    \begin{itemize}
+        \item<2->
+    \end{itemize}
+\end{frame}
+
+% \begin{frame}{References}
+%     \cite{bertulani2007nuclear}
+%     \bibliographystyle{abbrv}
+%     \bibliography{refs}
+% \end{frame}
+
+\end{document}
