@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.3.22)  29 JUN 2024 23:27
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.3.22)  30 JUN 2024 10:59
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -935,6 +935,86 @@ File: ts1cmss.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 
 ] [72
 
+] [73
+
+] [74
+
+] [75
+
+] [76
+
+] [77
+
+] [78
+
+] [79
+
+] [80
+
+] [81
+
+] [82
+
+] [83
+
+] [84
+
+] [85
+
+] [86
+
+] [87
+
+] [88
+
+]
+LaTeX Font Info:    Trying to load font information for U+euf on input line 247.
+ (d:/Programs/texlive/2024/texmf-dist/tex/latex/amsfonts/ueuf.fd
+File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
+) [89
+
+] [90
+
+] [91
+
+] [92
+
+] [93
+
+] [94
+
+] [95
+
+] [96
+
+] [97
+
+] [98
+
+] [99
+
+] [100
+
+] [101
+
+] [102
+
+] [103
+
+] [104
+
+] [105
+
+] [106
+
+] [107
+
+] [108
+
+] [109
+
+] [110
+
 ]
 \tf@nav=\write6
 \openout6 = `spinors.nav'.
@@ -959,18 +1039,18 @@ Package rerunfilecheck Info: File `spinors.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 24972 strings out of 474103
- 475627 string characters out of 5742948
+ 25133 strings out of 474103
+ 478309 string characters out of 5742948
  1950496 words of memory out of 5000000
- 46672 multiletter control sequences out of 15000+600000
- 584313 words of font info for 119 fonts, out of 8000000 for 9000
+ 46742 multiletter control sequences out of 15000+600000
+ 589735 words of font info for 138 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 128i,17n,123p,462b,674s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb><d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb><d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb><d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb><d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi12.pfb><d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb><d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb><d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfss1000.pfb><d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfss1095.pfb>
-Output written on spinors.pdf (72 pages, 400015 bytes).
+ 128i,17n,123p,462b,738s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb><d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb><d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb><d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb><d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmss9.pfb><d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb><d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi12.pfb><d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb><d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi9.pfb><d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb><d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb><d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb><d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb><d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfss1000.pfb><d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfss1095.pfb>
+Output written on spinors.pdf (110 pages, 574764 bytes).
 PDF statistics:
- 2072 PDF objects out of 2073 (max. 8388607)
- 1916 compressed objects within 20 object streams
- 145 named destinations out of 1000 (max. 500000)
+ 3127 PDF objects out of 3580 (max. 8388607)
+ 2909 compressed objects within 30 object streams
+ 221 named destinations out of 1000 (max. 500000)
  48 words of extra memory for PDF output out of 10000 (max. 10000000)
 

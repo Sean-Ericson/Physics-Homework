@@ -55,7 +55,7 @@
             \item<6-> Expresses the invariance of physical laws under diffeomorphisms
             \item<7-> G.C. $\implies$ S.C.
         \end{itemize}
-        \item<8-> Special/General covariance \textrightarrow Special/General relativity
+        \item<8-> Special/General covariance \textrightarrow\; Special/General relativity
     \end{itemize}
 \end{frame}
 
@@ -63,7 +63,7 @@
     \begin{itemize}
         \item<2-> Consider $(\mathbb{R}^4, \eta_{ab})$, $\mathcal{S} = \{\psi \in \mathcal{H}\;:\; \magsq{\psi} = 1\}/\sim$
         \begin{itemize}
-            \item<3-> $\psi \sim \psi' \;\iff\; \psi = e^{i\theta}\psi' $
+            \item<3-> $\psi \sim \psi' \;\iff\; \psi = e^{i\alpha}\psi' $
         \end{itemize}  
         \item<4-> Isometry group: $G = ISO(3, 1)^+$
         \item<5-> Associate with $\tilde{\phi}_g$ a map $U_g: \mathcal{H}\rightarrow\mathcal{H}$ which preserves $\sim$
@@ -81,15 +81,15 @@
 
 \begin{frame}{Universal Covering Spaces}
     \begin{itemize}
-        \item<2-> The universal cover $\mathcal{U}(M)$ of a topological space $M$ is a simply connected space $\hat{M}$ which covers $M$
+        \item<2-> The universal cover $\mathcal{U}(M)$ of a topological space $M$ is a simply connected space which covers $M$
         \item<3-> Construction:
         \begin{itemize}
             \item<4-> Cut $M$ such that it becomes simply connected with boundary
             \item<5-> Glue together copies to eliminate the boundaries
         \end{itemize}
-        \item<4-> Lie group structure of $M$ is naturally lifted to $\hat{M}$
-        \item<5-> Fundamental group of $ISO(3, 1)^+$ is $\mathbb{Z}_2$ \textrightarrow\; double cover
-        \item<6-> In fact, $\widehat{ISO}(3, 1)^+ \cong ISL(2, \mathbb{C})$
+        \item<6-> Lie group structure of $M$ is naturally lifted to $\mathcal{U}(M)$
+        \item<7-> Fundamental group of $ISO(3, 1)^+$ is $\mathbb{Z}_2$ \textrightarrow\; double cover
+        \item<8-> In fact, $\mathcal{U}(ISO(3, 1)^+) \cong ISL(2, \mathbb{C})$
     \end{itemize}
 \end{frame}
 
@@ -118,9 +118,12 @@
         \item<3-> Conjugation maps $(k,l;k',l')$ tensors to $(k',l';k,l)$ tensors: $$T_{\;\;BC}^A \leftrightarrow \overline{T}_{\;\;B'C'}^{A'}$$
         \item<3-> $\epsilon^{AB}$,$\epsilon_{AB}$ raise/lower unprimed indices; $\overline{\epsilon}_{A'B'}$ for primed
         \item<4-> Contraction occurs over \textit{first} index of $\epsilon$: \[ \phi_A = \epsilon_{BA}\phi^B = -\epsilon_{AB}\phi^{B} \]
-        \item<5-> $\delta_{\;\;B}^A = \mathbb{I}_W$ differs by a sign from $\delta_C^{\;\;D} = \mathbb{I}_{W^*}$
         \begin{itemize}
-            \item<6-> \textrightarrow\; use $\epsilon_{\;\;B}^A$, $\epsilon_C^{\;\;D}$ and their conjugates to avoid confusion
+            \item<5-> $\implies \phi_A \phi^A = 0$
+        \end{itemize}
+        \item<6-> $\delta_{\;\;B}^A = \mathbb{I}_W$ differs by a sign from $\delta_C^{\;\;D} = \mathbb{I}_{W^*}$
+        \begin{itemize}
+            \item<7-> \textrightarrow\; use $\epsilon_{\;\;B}^A$, $\epsilon_C^{\;\;D}$ and their conjugates to avoid confusion
         \end{itemize}
     \end{itemize}
 \end{frame}
@@ -185,20 +188,86 @@
 
 \begin{frame}{Spinors and Null Vectors}
     \begin{itemize}
-        \item<2->
+        \item<2-> Let $\psi^A \in W$, then $\psi^A\bar{\psi}^{A'} \eqqcolon k^{AA'} \in \Re[W_{1,0;1,0}]$
+        \begin{itemize}
+            \item<3-> $k_{AA'}k^{AA'} = g_{AA'BB'}k^{AA'}k^{BB'} = \epsilon_{AB}\overline{\epsilon}_{A'B'}\psi^{A}\bar{\psi}^{A'}\psi^{B}\bar{\psi}^{B'} = 0$
+            \item<4-> $k^{AA'}$ is thus a null vector ($\psi^A$ ``square root'' of a null vector\textinterrobang) 
+        \end{itemize}
+        \item<5-> Let $\psi^A, \phi^A \in W$, then $\psi_A\overline{\psi}_{A'}\phi^{A}\bar{\phi}^{A'} = \magsq{\psi_A\phi^A} > 0$
+        \begin{itemize}
+            \item<6-> $k_\psi^{AA'}$, $k_\phi^{AA'}$ on the same side of the light cone: future direction
+            \item<7-> $\Re[W_{1,0;1,0}]$ has a natural time orientation
+        \end{itemize}
+        \item<8-> Def. $\epsilon_{AA'BB'CC'DD'} \coloneqq \epsilon_{AB}\epsilon_{CD}\overline{\epsilon}_{A'C'}\overline{\epsilon}_{B'D'} - \epsilon_{AC}\epsilon_{BD}\overline{\epsilon}_{A'B'}\overline{\epsilon}_{C'D'}$
+        \begin{itemize}
+            \item<9-> $\Re[W_{1,0;1,0}]$ has a natural orientation
+        \end{itemize}
+        \item<10-> \textit{Null flag}: $F^{AA'BB'} \coloneqq \psi^A\psi^B\overline{\epsilon}^{A'B'} + \bar{\psi}^{A'}\bar{\psi}^{B'}\epsilon^{AB}$
+        \begin{itemize}
+            \item<11-> $F^{AA'BB'} = -F^{BB'AA'}, \; F_{AA'BB'}F^{AA'BB'} = F_{AA'BB'}\psi^{B}\bar{\psi}^{B'} = 0$
+            \item<12-> $\implies F^{AA'BB'} = k^{AA'}m^{BB'} - k^{BB'}m^{AA'}$ for some $m^{AA'}$
+            \item<13-> $\psi, \psi' \rightarrow F \iff \psi = \pm \psi'$
+        \end{itemize} 
     \end{itemize}    
+\end{frame}
+
+\begin{frame}{A Couple Neat Identites}
+    \begin{itemize}
+        \item<2-> Let $T_{ab}$ ($T_{AA'BB'}$) be a tensor on $\mathbb{R}^{3,1}$ ($\Re[W_{0,1;0,1}]$)
+        \item<3-> Antisymmetrization:
+        \begin{itemize}
+            \item<4-> $T_{[ab]} = T_{(AB)[A'B']} + T_{[AB](A'B')} = \phi_{AB}\overline{\epsilon}_{A'B'} + \overline{\phi}_{A'B'}\epsilon_{AB}\qquad$ with $\phi_{AB} = \frac{1}{2}T_{(AB)A'}^{\qquad\; A'}$ symmetric
+        \end{itemize}
+        \item<5-> Symmetrization:
+        \begin{itemize}
+            \item<6-> $T_{(ab)} = T_{(AB)(A'B')} + T_{[AB][A'B']} = T_{(AB)(A'B')} + \frac{1}{4}\epsilon_{AB}\overline{\epsilon}_{A'B'}T$ where $T = T_{A\;\;A}^{\;\;A\;\;A} = T_aT^a$
+            \item<7-> Note also that $T_{[AB]A'}^{\qquad\;A'} = \frac{1}{2}\epsilon_{AB}^T$ 
+        \end{itemize}
+        \item<8-> $\partial_{AA'}\partial_B^{\;\;A'} = \frac{1}{2}\epsilon_{AB}\Box, $ where $\Box = \partial_{AA'}\partial^{AA'} $
+    \end{itemize}
 \end{frame}
 
 \begin{frame}{The Universal Enveloping Algebra}
     \begin{itemize}
-        \item<2->
+        \item<2-> Given a Lie algebra $\mathfrak{g}$, the \textit{universal enveloping algebra} $\mathscr{U}(\mathfrak{g})$ is the unique unital associative algebra whose representations correspond exactly to the representations of $\mathfrak{g}$
+        \item<3-> Construction
+        \begin{itemize}
+            \item<4-> Form the \textit{Tensor algebra} $T(\mathfrak{g}) \coloneqq \mathbb{C} \oplus \mathfrak{g} \oplus \left(\mathfrak{g}\otimes\mathfrak{g}\right) \cdots$
+            \item<5-> Recursively lift $[,]$ from $\mathfrak{g}$ to $T(\mathfrak{g})$
+            \item<6-> Fully lifted, $[,]$ obeys Leibniz's law: $T(\mathfrak{g})$ is a \textit{poisson} algebra
+            \item<7-> $\mathscr{U}(\mathfrak{g})$ is what remains after ``modding out'' the poisson structure, i.e. $\mathscr{U}(\mathfrak{g}) = T(\mathfrak{g}) / \sim$ where the equivalence relation is given by $[a,b] = a\otimes b - b\otimes a$ 
+        \end{itemize}
+        \item<8-> Casimir elements
+        \begin{itemize}
+            \item<9-> \textit{Center} $Z(\mathscr{U}(\mathfrak{g}))$: all elements that commute with all of $\mathscr{U}(\mathfrak{g})$
+            \item<10-> \textit{Casimir elements} form a basis of $Z(\mathscr{U}(\mathfrak{g}))$
+            \item<11-> Casimir representatives proportional to identity
+        \end{itemize}
     \end{itemize}
 \end{frame}
 
 \begin{frame}{Representations and Hilbert Space}
     \begin{itemize}
-        \item<2->
+        \item<2-> $\mathscr{U}(ISL(2, \mathbb{C}))$ has two independent Casimir elements: $P^2$ and $S^2$ with eigenvalues $m^2$ and $s(s+1)$, respectively.
+        \item<3-> Cases:
+        \begin{enumerate}
+            \item<4-> $m^2 > 0$
+            \item<5-> $m^2 = 0$ with nontrivial translations
+            \begin{enumerate}
+                \item<6-> Helicity parameterization: $s = 0, \pm \frac{1}{2}, \pm 1, \pm\frac{3}{2}\dots$
+                \item<7-> ``Continuous spin''
+            \end{enumerate}
+            \item<6-> $m^2 = 0$; trivial translations
+            \item<7-> $m^2 < 0$ (tachyons!)
+        \end{enumerate}
+        \item<8-> Physically relevant cases are 1 and 2.1
     \end{itemize}    
+\end{frame}
+
+\begin{frame}{Representations and Hilbert Space}
+    \begin{itemize}
+        \item<1-> Specify representatives for class 1 via \[ \left(\right) \] 
+    \end{itemize}
 \end{frame}
 
 \begin{frame}{Summary}
