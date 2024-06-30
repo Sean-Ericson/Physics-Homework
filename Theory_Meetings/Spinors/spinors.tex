@@ -23,6 +23,8 @@
 \usepackage{graphicx}
 \usepackage{caption}
 
+\newcommand{\magsq}[1]{\big|#1\big|^2}
+
 \captionsetup[figure]{labelformat=empty}
 \graphicspath{ {./images/} }
 
@@ -30,22 +32,179 @@
 \let\endolditemize=\enditemize 
 \renewenvironment{itemize}{\olditemize \itemsep=.5em }{\endolditemize}
 
-\title{title}
-\subtitle{subtitle}
+\title{All About Spinors}
+\subtitle{...on \textit{flat} spacetime}
 \author{Sean Ericson}
 \institute{UO}
 \date{Theory meeting, June 27, 2024}
 \titlegraphic{\includegraphics[scale=0.6]{seal.jpg}}
 
 \begin{document}
-
 \frame{\titlepage}
 
-\begin{frame}{title}
-    \alert{subtitle/alert thing}
+\begin{frame}{Special and General Covariance}
+    \alert{Some Philisophical Motivation}
+    \begin{itemize}
+        \item<2-> \textit{Special covariance}: For any two families of inertial observes $O$ and $O'$ related by an isometry, any set of physical measurements observable by $O$ is observable by $O'$
+        \begin{itemize}
+            \item<3-> Expresses invariance of physical laws under isometries
+            \item<4-> Implies an action of the group of isometries on the space of physical states $\tilde{\phi}_g:\mathcal{S}\rightarrow\mathcal{S}$
+        \end{itemize} 
+        \item<5-> \textit{General covariance}: For a physical entity described by a tensor field $T_{\quad b\dots}^{a\dots}$, the equations governing the field should be of the form $f(T, \partial T, \cdots, g_{ab}, \partial g_{ab}, \cdots)$
+        \begin{itemize}
+            \item<6-> Expresses the invariance of physical laws under diffeomorphisms
+            \item<7-> G.C. $\implies$ S.C.
+        \end{itemize}
+        \item<8-> Special/General covariance \textrightarrow Special/General relativity
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Minkowski Space and Quantum Theory}
+    \begin{itemize}
+        \item<2-> Consider $(\mathbb{R}^4, \eta_{ab})$, $\mathcal{S} = \{\psi \in \mathcal{H}\;:\; \magsq{\psi} = 1\}/\sim$
+        \begin{itemize}
+            \item<3-> $\psi \sim \psi' \;\iff\; \psi = e^{i\theta}\psi' $
+        \end{itemize}  
+        \item<4-> Isometry group: $G = ISO(3, 1)^+$
+        \item<5-> Associate with $\tilde{\phi}_g$ a map $U_g: \mathcal{H}\rightarrow\mathcal{H}$ which preserves $\sim$
+        \begin{itemize}
+            \item<6-> $U_g$ can be rephased to be (anti-)unitary
+        \end{itemize}
+        \item<7-> Composition: $\tilde{\phi}_{g_1}\circ\tilde{\phi}_{g_2} = \tilde{\phi}_{g_1g_2} \;\implies\; U_{g_1}U_{g_2} = e^{i\theta}U_{g_1g_2}$
+        \begin{itemize}
+            \item<8-> Wigner ('39): can set phases so $\theta = n\pi$, i.e. $U_{g_1}U_{g_2} = \pm U_{g_1g_2}$
+        \end{itemize}
+        \item<9-> $\mathcal{H}$ a rep. space for a unitary rep. (up to sign) of $ISO(3, 1)^+$!
+        \item<10-> Bargmann ('54): reps up to sign are \textit{exactly} the true reps of the universal cover
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Universal Covering Spaces}
+    \begin{itemize}
+        \item<2-> The universal cover $\mathcal{U}(M)$ of a topological space $M$ is a simply connected space $\hat{M}$ which covers $M$
+        \item<3-> Construction:
+        \begin{itemize}
+            \item<4-> Cut $M$ such that it becomes simply connected with boundary
+            \item<5-> Glue together copies to eliminate the boundaries
+        \end{itemize}
+        \item<4-> Lie group structure of $M$ is naturally lifted to $\hat{M}$
+        \item<5-> Fundamental group of $ISO(3, 1)^+$ is $\mathbb{Z}_2$ \textrightarrow\; double cover
+        \item<6-> In fact, $\widehat{ISO}(3, 1)^+ \cong ISL(2, \mathbb{C})$
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Spinors, Spinorial Tensors, and Spinor Space}
+    \begin{itemize}
+        \item<2-> Let $W \cong \mathbb{C}^2$
+        \begin{itemize}
+            \item<3-> \textit{Dual space} $W^*$: linear maps $\lambda_A : W \rightarrow \mathbb{C}$
+            \item<4-> \textit{Conjugate dual space} $\overline{W}^*$: anti-linear maps $\lambda_{A'} : W \rightarrow \mathbb{C}$ 
+            \item<5-> \textit{Conjugate space} $\overline{W}$: the dual space of $\overline{W}^*$ 
+        \end{itemize}
+        \item<6-> Tensor of type $(k,l;k',l')$:
+        \[ T_{B_1\dots B_l B_1'\dots B_{l'}'}^{A_1\dots A_k A_1'\dots A_{k'}'}: \left(W^*\right)^k \times \left(W\right)^l \times \left(\overline{W}^*\right)^{k'} \times \left(\overline{W}\right)^{l'} \rightarrow \mathbb{C} \]
+        \item<7-> Space of type (0,2;0,0) antisymmetric tensors is 1-dimensional
+        \item<8-> Spinor space: $(W, \epsilon_{AB})$
+        \begin{itemize}
+            \item<9-> $\lambda^A \in W$ is called a \textit{spinor}
+            \item<10-> Tensors over $W$ are called \textit{spinoral tensors}
+        \end{itemize}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Spinor Conventions}
+    \begin{itemize}
+        \item<2-> (Un)primed index order irrelevant: $T_{\qquad C}^{AD'B} \leftrightarrow T_{\quad C}^{AB\;\;D'}$ 
+        \item<3-> Conjugation maps $(k,l;k',l')$ tensors to $(k',l';k,l)$ tensors: $$T_{\;\;BC}^A \leftrightarrow \overline{T}_{\;\;B'C'}^{A'}$$
+        \item<3-> $\epsilon^{AB}$,$\epsilon_{AB}$ raise/lower unprimed indices; $\overline{\epsilon}_{A'B'}$ for primed
+        \item<4-> Contraction occurs over \textit{first} index of $\epsilon$: \[ \phi_A = \epsilon_{BA}\phi^B = -\epsilon_{AB}\phi^{B} \]
+        \item<5-> $\delta_{\;\;B}^A = \mathbb{I}_W$ differs by a sign from $\delta_C^{\;\;D} = \mathbb{I}_{W^*}$
+        \begin{itemize}
+            \item<6-> \textrightarrow\; use $\epsilon_{\;\;B}^A$, $\epsilon_C^{\;\;D}$ and their conjugates to avoid confusion
+        \end{itemize}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{$SL(2, \mathbb{C})$ and $SO(3, 1)^+$}
+    \begin{itemize}
+        \item<2-> Let $L_{\;\;B}^A : W\rightarrow W$ be a linear transformation
+        \begin{itemize}
+            \item<3-> $\det(L) \coloneqq \frac{1}{2}\epsilon_{AB}\epsilon_{CD}L_{\;\;C}^AL_{\;\;D}^B$
+        \end{itemize}
+        \item<4-> $SL(2, \mathbb{C})$ is simply all $L$ with $\det(L) = 1$
+        \begin{itemize}
+            \item<5-> Polar decomp: $L = UH$ \textrightarrow\; 6 real d.o.f.
+            \item<6-> Simply connected Lie group $\cong S^3\times\mathbb{R}^3$
+            \item<7-> $\det(L)=1 \; \iff L_{\;\;C}^A L_{\;\;D}^B \epsilon_{AB} = \epsilon_{CD}$
+        \end{itemize}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{$SL(2, \mathbb{C})$ and $SO(3, 1)^+$}
+    \begin{itemize}
+        \item<1-> Tensors $\phi^{AA'} \in W_{1,0;1,0}$ comprise a $\mathbb{C}^4$ vector space
+        \begin{itemize}
+            \item<2-> Let $\{o^A, \iota^A \}$ be a basis for $W$ with $o_A\iota^A = 1$
+            \item<3-> A basis for $W_{1,0;1,0}$ can be given by
+            \begin{align*}
+                t^{AA'} &= \frac{1}{\sqrt{2}}\left(o^A\overline{o}^{A'} + \iota^A\overline{\iota}^{A'}\right) &&= \frac{1}{\sqrt{2}}\mqty(1&0\\0&1) \\
+                x^{AA'} &= \frac{1}{\sqrt{2}}\left(o^A\overline{\iota}^{A'} + \iota^A\overline{o}^{A'}\right) &&= \frac{1}{\sqrt{2}}\mqty(0&1\\1&0) \\
+                y^{AA'} &= \frac{i}{\sqrt{2}}\left(o^A\overline{\iota}^{A'} - \iota^A\overline{o}^{A'}\right) &&= \frac{1}{\sqrt{2}}\mqty(0&i\\-i&0) \\
+                z^{AA'} &= \frac{1}{\sqrt{2}}\left(o^A\overline{o}^{A'} - \iota^A\overline{\iota}^{A'}\right) &&= \frac{1}{\sqrt{2}}\mqty(1&0\\0&-1)
+            \end{align*}
+        \end{itemize}
+        \vspace{-1em}
+        \item<4-> Under conjugation, $\overline{W}_{1,0;1,0} = W_{1,0;1,0}$
+        \begin{itemize}
+            \item<5-> $\phi^{AA'} \in W_{1,0;1,0}$ s.t. $\overline{\phi}^{AA'} = \phi^{AA'}$ are called \textit{real}
+        \end{itemize}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{$SL(2, \mathbb{C})$ and $SO(3, 1)^+$}
+    \begin{itemize}
+        \item<1-> $\{t^{AA'}, x^{AA'}, y^{AA'}, z^{AA'}\}$ defined above are clearly real
+        \item<2-> They span a 4-real dimensional space $V \subset W_{1,0;1,0}$
+        \item<3-> Define $g:V\times V \rightarrow \mathbb{R}$ by $g_{AA'BB'} \coloneqq \epsilon_{AB}\overline{\epsilon}_{A'B'}$
+        \begin{itemize}
+            \item<4-> $g$ is nondegenerate with signature $(+, -, -, -)$; a Lorentz metric!
+        \end{itemize}
+        \item<5-> Define $\lambda: V \rightarrow V$ by $\lambda_{\quad BB'}^{AA'} \coloneqq L_{\;\;B}^A \overline{L}_{\;\;B'}^{A'}$
+        \begin{itemize}
+            \item<6-> Automatically, $\lambda_{\quad CC'}^{AA'}\lambda_{\quad DD'}^{BB'} g_{AA'BB'} = g_{CC'DD'}$
+            \item<7-> But this means $\lambda \in O(3, 1)$ (in fact, $SO(3, 1)^+$)!!
+            \item<8-> $L_1$, $L_2$ \textrightarrow\; $\lambda$ $\implies L_1 = \pm L_2$ (a double cover)
+        \end{itemize}
+        \item<9-> Let $\{t^a, x^a, y^a, z^a \}$ be a basis for $\mathbb{R}^{3,1}$
+        \item<10-> Define $\sigma_{\;AA'}^a \coloneqq t^at_{AA'} - x^ax_{AA'} - y^ay_{AA'} - z^az_{AA'}$
+        \begin{itemize}
+            \item<11-> $\sigma$ is an isomorphism between $\Re[W_{1,0;1,0}]$ and $\mathbb{R}^{3,1}$
+        \end{itemize}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Spinors and Null Vectors}
+    \begin{itemize}
+        \item<2->
+    \end{itemize}    
+\end{frame}
+
+\begin{frame}{The Universal Enveloping Algebra}
     \begin{itemize}
         \item<2->
     \end{itemize}
+\end{frame}
+
+\begin{frame}{Representations and Hilbert Space}
+    \begin{itemize}
+        \item<2->
+    \end{itemize}    
+\end{frame}
+
+\begin{frame}{Summary}
+    \begin{itemize}
+        \item<2->
+    \end{itemize}    
 \end{frame}
 
 % \begin{frame}{References}
