@@ -1,6 +1,14 @@
 # Fdb version 4
-["pdflatex"] 1719770393.00092 "d:/Programming/GitHub/Physics-Homework/Theory_Meetings/Spinors/spinors.tex" "spinors.pdf" "spinors" 1719770396.53541 0
-  "d:/Programming/GitHub/Physics-Homework/Theory_Meetings/Spinors/spinors.tex" 1719770388 15338 8a8658730ee12edfd613b4f7f18490ae ""
+["bibtex spinors"] 1719807010.39514 "spinors.aux" "spinors.bbl" "spinors" 1719807015.42076 0
+  "./refs.bib" 1719802680 586 974fafecca5fd89f84ac1cd6d91eeedc ""
+  "d:/Programs/texlive/2024/texmf-dist/bibtex/bst/base/abbrv.bst" 1711142392 20329 b5fed53e10044d0f8112183785c759b1 ""
+  "spinors.aux" 1719807014 3260 faf49f3e6a620722737bd3620f0953ff "pdflatex"
+  (generated)
+  "spinors.bbl"
+  "spinors.blg"
+  (rewritten before read)
+["pdflatex"] 1719807010.68437 "d:/Programming/GitHub/Physics-Homework/Theory_Meetings/Spinors/spinors.tex" "spinors.pdf" "spinors" 1719807015.42108 0
+  "d:/Programming/GitHub/Physics-Homework/Theory_Meetings/Spinors/spinors.tex" 1719807005 17670 c27495eaeec45432d363c295a87af1e1 ""
   "d:/Programs/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1711142853 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "d:/Programs/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1711144024 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "d:/Programs/texlive/2024/texmf-dist/fonts/tfm/jknappen/ec/tcss1000.tfm" 1711143507 1536 293044035fd171bb1d18cf655049b101 ""
@@ -43,6 +51,8 @@
   "d:/Programs/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmmi9.tfm" 1711142845 1524 d89e2d087a9828407a196f428428ef4a ""
   "d:/Programs/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmmib10.tfm" 1711142845 1524 554068197b70979a55370e6c6495f441 ""
   "d:/Programs/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmr10.tfm" 1711142845 1296 45809c5a464d5f32c8f98ba97c1bb47f ""
+  "d:/Programs/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmr6.tfm" 1711142845 1300 b62933e007d01cfd073f79b963c01526 ""
+  "d:/Programs/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmr8.tfm" 1711142845 1292 21c1c5bfeaebccffdb478fd231a0997d ""
   "d:/Programs/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmss10.tfm" 1711142845 1316 b636689f1933f24d1294acdf6041daaa ""
   "d:/Programs/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmss12.tfm" 1711142845 1324 37b971caf729d7edd9cbb9f9b0ea76eb ""
   "d:/Programs/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmss8.tfm" 1711142845 1296 d77f431d10d47c8ea2cc18cf45346274 ""
@@ -69,6 +79,7 @@
   "d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb" 1711141820 36281 c355509802a035cadc5f15869451dcee ""
   "d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb" 1711141820 35469 dcf3a5f2fc1862f5952e3ee5eb1d98c4 ""
   "d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb" 1711141820 36094 798f80770b3b148ceedd006d487db67c ""
+  "d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1711141820 35752 024fb6c41858982481f6968b5fc26508 ""
   "d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb" 1711141820 24457 5cbb7bdf209d5d1ce9892a9b80a307cc ""
   "d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb" 1711141820 24393 3b7eb51a67a0a62aec5849271bdb9c2e ""
   "d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb" 1711141820 24420 52dbb8e8aa0069a1b987309557f8d303 ""
@@ -272,10 +283,11 @@
   "d:/Programs/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1711148917 8222580 205aca1d69315e7ba9551f4887309340 ""
   "d:/Programs/texlive/2024/texmf.cnf" 1711148841 713 e69b156964470283e0530f5060668171 ""
   "images/seal.jpg" 1690946538 20608 3996b8f0e554ca6e7c2e44f542e13aa8 ""
-  "spinors.aux" 1719770396 2412 a11b5c12631145ed8297043067879dad "pdflatex"
-  "spinors.nav" 1719770396 1618 2c729813823735622fcb882460da03a6 "pdflatex"
-  "spinors.out" 1719770393 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "spinors.tex" 1719770388 15338 8a8658730ee12edfd613b4f7f18490ae ""
+  "spinors.aux" 1719807014 3260 faf49f3e6a620722737bd3620f0953ff "pdflatex"
+  "spinors.bbl" 1719807010 209 a90f443dd4a279e3d455ec8bc98b8dc9 "bibtex spinors"
+  "spinors.nav" 1719807014 2094 e968c9ea979bc3e4c786df86ba57380a "pdflatex"
+  "spinors.out" 1719807014 93 aea4b6a8ae45636c75679c2f0dfa4493 "pdflatex"
+  "spinors.tex" 1719807005 17670 c27495eaeec45432d363c295a87af1e1 ""
   (generated)
   "spinors.aux"
   "spinors.log"

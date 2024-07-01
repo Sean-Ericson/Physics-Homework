@@ -482,6 +482,11 @@ INPUT d:/Programs/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmbx9.tfm
 INPUT d:/Programs/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmmib9.tfm
 INPUT d:/Programs/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy9.tfm
 INPUT d:/Programs/texlive/2024/texmf-dist/fonts/tfm/public/sansmathaccent/mathkerncmssxi9.tfm
+INPUT d:/Programs/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmr8.tfm
+INPUT d:/Programs/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmr6.tfm
+INPUT ./spinors.bbl
+INPUT ./spinors.bbl
+INPUT spinors.bbl
 OUTPUT spinors.nav
 OUTPUT spinors.toc
 OUTPUT spinors.snm
@@ -494,6 +499,7 @@ INPUT d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.
 INPUT d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb
 INPUT d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb
 INPUT d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb
+INPUT d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb
 INPUT d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb
 INPUT d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb
 INPUT d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb

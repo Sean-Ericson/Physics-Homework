@@ -116,14 +116,14 @@
     \begin{itemize}
         \item<2-> (Un)primed index order irrelevant: $T_{\qquad C}^{AD'B} \leftrightarrow T_{\quad C}^{AB\;\;D'}$ 
         \item<3-> Conjugation maps $(k,l;k',l')$ tensors to $(k',l';k,l)$ tensors: $$T_{\;\;BC}^A \leftrightarrow \overline{T}_{\;\;B'C'}^{A'}$$
-        \item<3-> $\epsilon^{AB}$,$\epsilon_{AB}$ raise/lower unprimed indices; $\overline{\epsilon}_{A'B'}$ for primed
-        \item<4-> Contraction occurs over \textit{first} index of $\epsilon$: \[ \phi_A = \epsilon_{BA}\phi^B = -\epsilon_{AB}\phi^{B} \]
+        \item<4-> $\epsilon^{AB}$,$\epsilon_{AB}$ raise/lower unprimed indices; $\overline{\epsilon}_{A'B'}$ for primed
+        \item<5-> Contraction occurs over \textit{first} index of $\epsilon$: \[ \phi_A = \epsilon_{BA}\phi^B = -\epsilon_{AB}\phi^{B} \]
         \begin{itemize}
-            \item<5-> $\implies \phi_A \phi^A = 0$
+            \item<6-> $\implies \phi_A \phi^A = 0$
         \end{itemize}
-        \item<6-> $\delta_{\;\;B}^A = \mathbb{I}_W$ differs by a sign from $\delta_C^{\;\;D} = \mathbb{I}_{W^*}$
+        \item<7-> $\delta_{\;\;B}^A = \mathbb{I}_W$ differs by a sign from $\delta_C^{\;\;D} = \mathbb{I}_{W^*}$
         \begin{itemize}
-            \item<7-> \textrightarrow\; use $\epsilon_{\;\;B}^A$, $\epsilon_C^{\;\;D}$ and their conjugates to avoid confusion
+            \item<8-> \textrightarrow\; use $\epsilon_{\;\;B}^A$, $\epsilon_C^{\;\;D}$ and their conjugates to avoid confusion
         \end{itemize}
     \end{itemize}
 \end{frame}
@@ -249,37 +249,74 @@
 \begin{frame}{Representations and Hilbert Space}
     \begin{itemize}
         \item<2-> $\mathscr{U}(ISL(2, \mathbb{C}))$ has two independent Casimir elements: $P^2$ and $S^2$ with eigenvalues $m^2$ and $s(s+1)$, respectively.
-        \item<3-> Cases:
+        \item<3-> Classes:
         \begin{enumerate}
             \item<4-> $m^2 > 0$
-            \item<5-> $m^2 = 0$ with nontrivial translations
+            \item<5-> $m^2 = 0$; nontrivial translations
             \begin{enumerate}
                 \item<6-> Helicity parameterization: $s = 0, \pm \frac{1}{2}, \pm 1, \pm\frac{3}{2}\dots$
                 \item<7-> ``Continuous spin''
             \end{enumerate}
-            \item<6-> $m^2 = 0$; trivial translations
-            \item<7-> $m^2 < 0$ (tachyons!)
+            \item<8-> $m^2 = 0$; trivial translations
+            \item<9-> $m^2 < 0$ (tachyons!)
         \end{enumerate}
-        \item<8-> Physically relevant cases are 1 and 2.1
+        \item<10-> Physically relevant cases are 1 and 2.1
     \end{itemize}    
 \end{frame}
 
 \begin{frame}{Representations and Hilbert Space}
     \begin{itemize}
-        \item<1-> Specify representatives for class 1 via \[ \left(\right) \] 
+        \item<1-> Let $n = 2s$. Class 1 reps selected by \[ \left(\Box + m^2\right)\phi^{A_1\dots A_n} = 0 \]
+        \item<2-> or, equivalently
+        \begin{align*}
+            \partial_{AA'}\phi^{A_1\dots A_n} &= \frac{m}{\sqrt{2}}\xi_{A_1'}^{\;\;\;A_2\dots A_n} \\
+            \partial_{AA'}\xi_{A_1'}^{\;\;\;A_2\dots A_n} &= -\frac{m}{\sqrt{2}}\phi^{A_1\dots A_n}
+        \end{align*}
+        \item<3-> For $s = 1/2$, the pair $(\phi^A, \xi_{A'})$ is known as a \textit{Dirac} spinor, and the above equations are just the Dirac equation
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Representations and Hilbert Space}
+    \begin{itemize}
+        \item<1-> For class 2.1, previous equations do not select irreducible reps
+        \item<2-> Irreps for class 2.1 given by \[ \partial_{A_1'A_1}\phi^{A_1\dots A_n} = 0 \]
+        \begin{itemize}
+            \item<3-> $s = \frac{1}{2}$: Weyl neutrino equation
+            \item<4-> $s = 1$: Maxwell's equations
+            \item<5-> $s = 2$: Linearized GR
+        \end{itemize}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Representations and Hilbert Space}
+    \begin{itemize}
+        \item<1-> We need an inner product for this Hilbert space
+        \item<2-> Define the (conserved) \textit{particle current vector}:
+        \begin{align*}
+            j^{AA'}(\phi, \psi) &\coloneqq (-i)^{n-1}\big( \overline{\phi}^{A'A_2'\dots A_n'}\partial_{A_2'A_2}\cdots\partial_{A_n'A_n}\psi^{AA_2\dots A_n} \\
+            &\qquad\qquad\quad + \overline{\xi}^{AA_2'\dots A_n}\partial_{A_2'A_2}\cdots\partial_{A_n'A_n}\zeta^{A'A_2\dots A_n} \big) 
+        \end{align*}
+        where $\xi$ and $\zeta$ are the auxiliary fields corresponding to $\phi$ and $\psi$, respectively
+        \item<3-> Define an inner product by integrating the normal component of the particle current of a Cauchy surface $\Sigma$:
+        \[ \left<\phi, \psi\right> \coloneqq \int_\Sigma j^{AA'}n_{AA'}\dd V \]  
     \end{itemize}
 \end{frame}
 
 \begin{frame}{Summary}
     \begin{itemize}
-        \item<2->
+        \item<2-> The natural action of $ISL(2, \mathbb{C})$ on spinoral tensor fields $\phi^{A_1\dots A_n}$ gives rise to all known physical fields
+        \begin{itemize}
+            \item<3-> For even $n$ (bosons), the representations are true reps of the Poincar\'e group (spinors not actually required)
+            \item<4-> For odd $n$ (fermions), the reps are only reps up to sign, and spinors are necessary to describe them
+        \end{itemize}  
     \end{itemize}    
 \end{frame}
 
-% \begin{frame}{References}
-%     \cite{bertulani2007nuclear}
-%     \bibliographystyle{abbrv}
-%     \bibliography{refs}
-% \end{frame}
+\begin{frame}{References}
+    \nocite{wald:1984}
+    \nocite{Wikipedia:2024}
+    \bibliographystyle{abbrv}
+    \bibliography{refs}
+\end{frame}
 
 \end{document}
