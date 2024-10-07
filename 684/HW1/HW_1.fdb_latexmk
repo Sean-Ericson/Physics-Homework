@@ -1,9 +1,9 @@
 # Fdb version 4
-["pdflatex"] 1728082855.11148 "d:/Programming/GitHub/Physics-Homework/684/HW1/HW_1.tex" "HW_1.pdf" "HW_1" 1728082855.82298 0
-  "HW_1.aux" 1728082855 32 ab05033ccbb38b00a31b200ccedf8001 "pdflatex"
-  "HW_1.tex" 1728082854 3086 23902ae2a1327f28575847f7b4637452 ""
-  "calcs/HW1_mathematica.pdf" 1728076426 51535 66cd5e5af0190667a878637e1ac6b8a3 ""
-  "d:/Programming/GitHub/Physics-Homework/684/HW1/HW_1.tex" 1728082854 3086 23902ae2a1327f28575847f7b4637452 ""
+["pdflatex"] 1728259449.39143 "d:/Programming/GitHub/Physics-Homework/684/HW1/HW_1.tex" "HW_1.pdf" "HW_1" 1728259450.19566 0
+  "HW_1.aux" 1728259450 32 77e0dffd05b653a64f0caf3eb9bb454a "pdflatex"
+  "HW_1.tex" 1728259448 9009 c67a12cd46727acb8e4f0a36851ef75b ""
+  "calcs/HW1_mathematica.pdf" 1728251642 91027 0c5e2afd73f23cfcc34a043c54700840 ""
+  "d:/Programming/GitHub/Physics-Homework/684/HW1/HW_1.tex" 1728259448 9009 c67a12cd46727acb8e4f0a36851ef75b ""
   "d:/Programs/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1711144024 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "d:/Programs/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1711141820 1004 54797486969f23fa377b128694d548df ""
   "d:/Programs/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1711141820 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -32,6 +32,7 @@
   "d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb" 1711141820 35469 dcf3a5f2fc1862f5952e3ee5eb1d98c4 ""
   "d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb" 1711141820 32722 d7379af29a190c3f453aba36302ff5a9 ""
   "d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb" 1711141820 32362 bc3f3eec7ab7d65fe700963d4017d32c ""
+  "d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb" 1711141820 32734 69e00a6b65cedb993666e42eedb3d48f ""
   "d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb" 1711141820 32726 39f0f9e62e84beb801509898a605dbd5 ""
   "d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1711141820 32569 5e5ddc8df908dea60932f3c484a54c0d ""
   "d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb" 1711141820 32587 65067f817f408bc71a7312f3d9828a9b ""
@@ -72,6 +73,8 @@
   "d:/Programs/texlive/2024/texmf-dist/tex/latex/l3kernel/expl3.sty" 1711145053 6565 0b340a7e9bf9e07ae19f3e617f5e364a ""
   "d:/Programs/texlive/2024/texmf-dist/tex/latex/l3packages/xparse/xparse.sty" 1711145056 9327 5639c769ba7d5bb81b757ffe41c01cb5 ""
   "d:/Programs/texlive/2024/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg" 1711145167 678 4792914a8f45be57bb98413425e4c7af ""
+  "d:/Programs/texlive/2024/texmf-dist/tex/latex/mathtools/mathtools.sty" 1711145639 62672 9ff036bc89365461cc2bd482cc1e4879 ""
+  "d:/Programs/texlive/2024/texmf-dist/tex/latex/mathtools/mhsetup.sty" 1711145639 5582 a43dedf8e5ec418356f1e9dfe5d29fc3 ""
   "d:/Programs/texlive/2024/texmf-dist/tex/latex/pdflscape/pdflscape-nometadata.sty" 1711146373 6572 ea530fbbe537629fd97736d33babc07d ""
   "d:/Programs/texlive/2024/texmf-dist/tex/latex/pdflscape/pdflscape.sty" 1711146373 2224 1230ab76aa62221ccbd90bca8c8c015e ""
   "d:/Programs/texlive/2024/texmf-dist/tex/latex/pdfpages/pdfpages.sty" 1711146384 54914 ea9713532d0d0ae802ca2446650f9ded ""

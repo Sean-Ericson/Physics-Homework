@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.3.22)  4 OCT 2024 16:00
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.3.22)  6 OCT 2024 17:04
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -132,44 +132,60 @@ LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 )) (d:/Programs/texlive/2024/texmf-dist/tex/latex/jknapltx/mathrsfs.sty
 Package: mathrsfs 1996/01/01 Math RSFS package v1.0 (jk)
 \symrsfs=\mathgroup6
+) (d:/Programs/texlive/2024/texmf-dist/tex/latex/mathtools/mathtools.sty
+Package: mathtools 2024/03/11 v1.30 mathematical typesetting tools
+ (d:/Programs/texlive/2024/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2023/07/08 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count277
+\calc@Bcount=\count278
+\calc@Adimen=\dimen158
+\calc@Bdimen=\dimen159
+\calc@Askip=\skip56
+\calc@Bskip=\skip57
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count279
+\calc@Cskip=\skip58
+) (d:/Programs/texlive/2024/texmf-dist/tex/latex/mathtools/mhsetup.sty
+Package: mhsetup 2021/03/18 v1.4 programming setup (MH)
+)
+\g_MT_multlinerow_int=\count280
+\l_MT_multwidth_dim=\dimen160
+\origjot=\skip59
+\l_MT_shortvdotswithinadjustabove_dim=\dimen161
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen162
+\l_MT_above_intertext_sep=\dimen163
+\l_MT_below_intertext_sep=\dimen164
+\l_MT_above_shortintertext_sep=\dimen165
+\l_MT_below_shortintertext_sep=\dimen166
+\xmathstrut@box=\box53
+\xmathstrut@dim=\dimen167
 ) (d:/Programs/texlive/2024/texmf-dist/tex/latex/enumitem/enumitem.sty
 Package: enumitem 2019/06/20 v3.9 Customized lists
-\labelindent=\skip56
-\enit@outerparindent=\dimen158
+\labelindent=\skip60
+\enit@outerparindent=\dimen168
 \enit@toks=\toks30
-\enit@inbox=\box53
-\enit@count@id=\count277
-\enitdp@description=\count278
+\enit@inbox=\box54
+\enit@count@id=\count281
+\enitdp@description=\count282
 ) (d:/Programs/texlive/2024/texmf-dist/tex/latex/physics/physics.sty
 Package: physics 
  (d:/Programs/texlive/2024/texmf-dist/tex/latex/l3packages/xparse/xparse.sty (d:/Programs/texlive/2024/texmf-dist/tex/latex/l3kernel/expl3.sty
 Package: expl3 2024-03-14 L3 programming layer (loader) 
  (d:/Programs/texlive/2024/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2024-03-14 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count279
-\l__pdf_internal_box=\box54
+\l__color_backend_stack_int=\count283
+\l__pdf_internal_box=\box55
 ))
 Package: xparse 2024-03-14 L3 Experimental document command parser
 )) (d:/Programs/texlive/2024/texmf-dist/tex/latex/pdfpages/pdfpages.sty
 Package: pdfpages 2024/01/21 v0.5y Insert pages of external PDF documents (AM)
  (d:/Programs/texlive/2024/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
-) (d:/Programs/texlive/2024/texmf-dist/tex/latex/tools/calc.sty
-Package: calc 2023/07/08 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count280
-\calc@Bcount=\count281
-\calc@Adimen=\dimen159
-\calc@Bdimen=\dimen160
-\calc@Askip=\skip57
-\calc@Bskip=\skip58
-LaTeX Info: Redefining \setlength on input line 80.
-LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count282
-\calc@Cskip=\skip59
 ) (d:/Programs/texlive/2024/texmf-dist/tex/latex/eso-pic/eso-pic.sty
 Package: eso-pic 2023/05/03 v3.0c eso-pic (RN)
-\ESO@tempdima=\dimen161
-\ESO@tempdimb=\dimen162
+\ESO@tempdima=\dimen169
+\ESO@tempdimb=\dimen170
  (d:/Programs/texlive/2024/texmf-dist/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2023/11/15 v3.01 LaTeX color extensions (UK)
  (d:/Programs/texlive/2024/texmf-dist/tex/latex/graphics-cfg/color.cfg
@@ -199,40 +215,40 @@ File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 107.
 )
-\Gin@req@height=\dimen163
-\Gin@req@width=\dimen164
+\Gin@req@height=\dimen171
+\Gin@req@width=\dimen172
 )
-\AM@pagewidth=\dimen165
-\AM@pageheight=\dimen166
-\AM@fboxrule=\dimen167
+\AM@pagewidth=\dimen173
+\AM@pageheight=\dimen174
+\AM@fboxrule=\dimen175
  (d:/Programs/texlive/2024/texmf-dist/tex/latex/pdfpages/pppdftex.def
 File: pppdftex.def 2024/01/21 v0.5y Pdfpages driver for pdfTeX (AM)
 )
-\pdfpages@includegraphics@status=\count283
-\AM@pagebox=\box55
+\pdfpages@includegraphics@status=\count284
+\AM@pagebox=\box56
 \AM@global@opts=\toks31
-\AM@pagecnt=\count284
+\AM@pagecnt=\count285
 \AM@toc@title=\toks32
 \AM@lof@heading=\toks33
-\c@AM@survey=\count285
-\AM@templatesizebox=\box56
+\c@AM@survey=\count286
+\AM@templatesizebox=\box57
 ) (./HW_1.aux)
 \openout1 = `HW_1.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -270,16 +286,16 @@ LaTeX Font Info:    ... okay on input line 19.
 
 (d:/Programs/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count286
-\scratchdimen=\dimen168
-\scratchbox=\box57
-\nofMPsegments=\count287
-\nofMParguments=\count288
+\scratchcounter=\count287
+\scratchdimen=\dimen176
+\scratchbox=\box58
+\nofMPsegments=\count288
+\nofMParguments=\count289
 \everyMPshowfont=\toks34
-\MPscratchCnt=\count289
-\MPscratchDim=\dimen169
-\MPnumerator=\count290
-\makeMPintoPDFobject=\count291
+\MPscratchCnt=\count290
+\MPscratchDim=\dimen177
+\MPnumerator=\count291
+\makeMPintoPDFobject=\count292
 \everyMPtoPDFconversion=\toks35
 ) (d:/Programs/texlive/2024/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -295,52 +311,68 @@ Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 ))
-LaTeX Font Info:    Trying to load font information for U+msa on input line 23.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 24.
  (d:/Programs/texlive/2024/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 23.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 24.
  (d:/Programs/texlive/2024/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 23.
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 24.
  (d:/Programs/texlive/2024/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 ) [1
 
-{d:/Programs/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-<calcs/HW1_mathematica.pdf, id=16, 614.295pt x 794.97pt>
+{d:/Programs/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]
+<calcs/HW1_mathematica.pdf, id=24, 614.295pt x 794.97pt>
 File: calcs/HW1_mathematica.pdf Graphic file (type pdf)
 <use calcs/HW1_mathematica.pdf>
-Package pdftex.def Info: calcs/HW1_mathematica.pdf  used on input line 78.
+Package pdftex.def Info: calcs/HW1_mathematica.pdf  used on input line 164.
 (pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
 File: calcs/HW1_mathematica.pdf Graphic file (type pdf)
 <use calcs/HW1_mathematica.pdf>
-Package pdftex.def Info: calcs/HW1_mathematica.pdf  used on input line 78.
+Package pdftex.def Info: calcs/HW1_mathematica.pdf  used on input line 164.
 (pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
-<calcs/HW1_mathematica.pdf, id=19, page=1, 614.295pt x 794.97pt>
+<calcs/HW1_mathematica.pdf, id=27, page=1, 614.295pt x 794.97pt>
 File: calcs/HW1_mathematica.pdf Graphic file (type pdf)
 <use calcs/HW1_mathematica.pdf, page 1>
-Package pdftex.def Info: calcs/HW1_mathematica.pdf , page1 used on input line 78.
+Package pdftex.def Info: calcs/HW1_mathematica.pdf , page1 used on input line 164.
 (pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
 File: calcs/HW1_mathematica.pdf Graphic file (type pdf)
 <use calcs/HW1_mathematica.pdf, page 1>
-Package pdftex.def Info: calcs/HW1_mathematica.pdf , page1 used on input line 78.
+Package pdftex.def Info: calcs/HW1_mathematica.pdf , page1 used on input line 164.
 (pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
- [2]
+ [4]
 File: calcs/HW1_mathematica.pdf Graphic file (type pdf)
 <use calcs/HW1_mathematica.pdf, page 1>
-Package pdftex.def Info: calcs/HW1_mathematica.pdf , page1 used on input line 78.
-(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
-File: calcs/HW1_mathematica.pdf Graphic file (type pdf)
-<use calcs/HW1_mathematica.pdf, page 1>
-Package pdftex.def Info: calcs/HW1_mathematica.pdf , page1 used on input line 78.
+Package pdftex.def Info: calcs/HW1_mathematica.pdf , page1 used on input line 164.
 (pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
 File: calcs/HW1_mathematica.pdf Graphic file (type pdf)
 <use calcs/HW1_mathematica.pdf, page 1>
-Package pdftex.def Info: calcs/HW1_mathematica.pdf , page1 used on input line 78.
+Package pdftex.def Info: calcs/HW1_mathematica.pdf , page1 used on input line 164.
 (pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
- [3
+File: calcs/HW1_mathematica.pdf Graphic file (type pdf)
+<use calcs/HW1_mathematica.pdf, page 1>
+Package pdftex.def Info: calcs/HW1_mathematica.pdf , page1 used on input line 164.
+(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
+ [5
+
+ <./calcs/HW1_mathematica.pdf>]
+<calcs/HW1_mathematica.pdf, id=105, page=2, 614.295pt x 794.97pt>
+File: calcs/HW1_mathematica.pdf Graphic file (type pdf)
+<use calcs/HW1_mathematica.pdf, page 2>
+Package pdftex.def Info: calcs/HW1_mathematica.pdf , page2 used on input line 164.
+(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
+File: calcs/HW1_mathematica.pdf Graphic file (type pdf)
+<use calcs/HW1_mathematica.pdf, page 2>
+Package pdftex.def Info: calcs/HW1_mathematica.pdf , page2 used on input line 164.
+(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
+File: calcs/HW1_mathematica.pdf Graphic file (type pdf)
+<use calcs/HW1_mathematica.pdf, page 2>
+Package pdftex.def Info: calcs/HW1_mathematica.pdf , page2 used on input line 164.
+(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
+ [6
 
  <./calcs/HW1_mathematica.pdf>] (./HW_1.aux)
  ***********
@@ -349,18 +381,18 @@ L3 programming layer <2024-03-14>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 5595 strings out of 474103
- 83504 string characters out of 5742948
- 1937496 words of memory out of 5000000
- 27893 multiletter control sequences out of 15000+600000
+ 6147 strings out of 474103
+ 94010 string characters out of 5742948
+ 1954496 words of memory out of 5000000
+ 28438 multiletter control sequences out of 15000+600000
  567208 words of font info for 74 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 79i,17n,93p,357b,431s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on HW_1.pdf (3 pages, 155964 bytes).
+ 79i,18n,93p,357b,435s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on HW_1.pdf (6 pages, 215037 bytes).
 PDF statistics:
- 118 PDF objects out of 1000 (max. 8388607)
- 72 compressed objects within 1 object stream
+ 179 PDF objects out of 1000 (max. 8388607)
+ 112 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 26 words of extra memory for PDF output out of 10000 (max. 10000000)
 

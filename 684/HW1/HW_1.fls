@@ -37,6 +37,12 @@ INPUT d:/Programs/texlive/2024/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 INPUT d:/Programs/texlive/2024/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 INPUT d:/Programs/texlive/2024/texmf-dist/tex/latex/jknapltx/mathrsfs.sty
 INPUT d:/Programs/texlive/2024/texmf-dist/tex/latex/jknapltx/mathrsfs.sty
+INPUT d:/Programs/texlive/2024/texmf-dist/tex/latex/mathtools/mathtools.sty
+INPUT d:/Programs/texlive/2024/texmf-dist/tex/latex/mathtools/mathtools.sty
+INPUT d:/Programs/texlive/2024/texmf-dist/tex/latex/tools/calc.sty
+INPUT d:/Programs/texlive/2024/texmf-dist/tex/latex/tools/calc.sty
+INPUT d:/Programs/texlive/2024/texmf-dist/tex/latex/mathtools/mhsetup.sty
+INPUT d:/Programs/texlive/2024/texmf-dist/tex/latex/mathtools/mhsetup.sty
 INPUT d:/Programs/texlive/2024/texmf-dist/tex/latex/enumitem/enumitem.sty
 INPUT d:/Programs/texlive/2024/texmf-dist/tex/latex/enumitem/enumitem.sty
 INPUT d:/Programs/texlive/2024/texmf-dist/tex/latex/physics/physics.sty
@@ -51,8 +57,6 @@ INPUT d:/Programs/texlive/2024/texmf-dist/tex/latex/pdfpages/pdfpages.sty
 INPUT d:/Programs/texlive/2024/texmf-dist/tex/latex/pdfpages/pdfpages.sty
 INPUT d:/Programs/texlive/2024/texmf-dist/tex/latex/base/ifthen.sty
 INPUT d:/Programs/texlive/2024/texmf-dist/tex/latex/base/ifthen.sty
-INPUT d:/Programs/texlive/2024/texmf-dist/tex/latex/tools/calc.sty
-INPUT d:/Programs/texlive/2024/texmf-dist/tex/latex/tools/calc.sty
 INPUT d:/Programs/texlive/2024/texmf-dist/tex/latex/eso-pic/eso-pic.sty
 INPUT d:/Programs/texlive/2024/texmf-dist/tex/latex/eso-pic/eso-pic.sty
 INPUT d:/Programs/texlive/2024/texmf-dist/tex/latex/xcolor/xcolor.sty
@@ -158,6 +162,10 @@ INPUT ./calcs/HW1_mathematica.pdf
 INPUT ./calcs/HW1_mathematica.pdf
 INPUT ./calcs/HW1_mathematica.pdf
 INPUT ./calcs/HW1_mathematica.pdf
+INPUT ./calcs/HW1_mathematica.pdf
+INPUT ./calcs/HW1_mathematica.pdf
+INPUT ./calcs/HW1_mathematica.pdf
+INPUT ./calcs/HW1_mathematica.pdf
 INPUT HW_1.aux
 INPUT d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 INPUT d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
@@ -165,6 +173,7 @@ INPUT d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.
 INPUT d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb
 INPUT d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb
 INPUT d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb
+INPUT d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb
 INPUT d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb
 INPUT d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
 INPUT d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb
