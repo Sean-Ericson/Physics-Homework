@@ -67,7 +67,7 @@ So, to first order we have that
     \implies
     \begin{aligned}
         \magsq{c_1} &\approx 1 \\
-        \magsq{c_2} &\approx \frac{\Omega_0^2}{2\delta^2}\left(1 - \cos\delta t\right)
+        \magsq{c_2} &\approx \frac{\Omega_0^2}{\delta^2}\sin^2\frac{\delta t}{2}
     \end{aligned}
 \end{equation*}
 
@@ -88,42 +88,30 @@ Repeating the process for second order (matching terms proportional to $\Omega_0
 So, to second order we have
 \begin{equation*}
     \begin{aligned}
-        c_1 &\approx 1 - \frac{i\Omega_0^2}{4\delta}\left[t - \frac{1}{i\delta}\left(e^{i\delta t} - 1\right)\right] \\
+        c_1 &\approx 1 - \frac{\Omega_0^2}{4\delta}\left[i\delta t - \left(e^{i\delta t} - 1\right)\right] \\
         c_2 &\approx \frac{\Omega_0}{2\delta}\left(e^{-i\delta t} - 1\right)
     \end{aligned}
 \end{equation*}
 \begin{equation*}
     \implies
     \begin{cases*}
-        \magsq{c_1} \approx 1 - \frac{\Omega_0^2}{2\delta}\left(1 - \cos\delta t\right) + \frac{\Omega_0^4}{8\delta^4}\left(1 + \frac{t^2}{2\delta^2} - \cos\delta t - 2t\sin\delta t\right)  \\
-        \magsq{c_2} \approx \frac{\Omega_0^2}{2\delta^2}\left(1 - \cos\delta t\right)
+        \magsq{c_1} \approx 1 - \frac{\Omega_0^2}{\delta^2}\sin^2\frac{\delta t}{2} + \frac{\Omega_0^4}{8\delta^4}\left(1 + \frac{t^2}{2\delta^2} - \cos\delta t - 2t\sin\delta t\right)  \\
+        \magsq{c_2} \approx \frac{\Omega_0^2}{\delta^2}\sin^2\frac{\delta t}{2}
     \end{cases*}
 \end{equation*}
 
-Now, for third order,
-\begin{alignat*}{3}
-    &\quad & \Omega_0^3\dot{c}_1^{(3)} &= -\frac{i}{2}\Omega_0e^{i\delta t}\left(\frac{\Omega_0}{2\delta}\left(e^{-i\delta t} - 1\right)\right) \\
-    &\implies\quad & \dot{c}_1^{(3)} &= 0 \\
-    &\implies\quad & \dot{c}_1^{(3)} & = 0
-\end{alignat*}
-\begin{alignat*}{3}
-    &\quad & \Omega_0^3\dot{c}_2^{(3)} &= -\frac{i}{2}\Omega_0e^{-i\delta t}\left(1 - \frac{i\Omega_0^2}{4\delta}\left[t - \frac{1}{i\delta}\left(e^{i\delta t} - 1\right)\right]\right) \\
-    &\implies\quad & \dot{c}_2^{(3)} &= -\frac{1}{8\delta}\left[t - \frac{1}{i\delta}\left(e^{i\delta t} - 1\right)\right] \\
-    &\implies\quad & c_2^{(3)} &= -\frac{1}{16\delta^3}\left[2\left(e^{i\delta t} - 1\right) + \delta t (\delta t - 2i)\right].
-\end{alignat*}
-
-So, to third order
+For third order I'll just rely on the Mathematica code and skip the details:
 \begin{equation*}
     \begin{aligned}
-        c_1 &\approx 1 - \frac{i\Omega_0^2}{4\delta}\left[t - \frac{1}{i\delta}\left(e^{i\delta t} - 1\right)\right] \\
-        c_2 &\approx \frac{\Omega_0}{2\delta}\left(e^{-i\delta t} - 1\right) - \frac{\Omega_0^3}{16\delta^3}\left[2\left(e^{i\delta t} - 1\right) + \delta t (\delta t - 2i)\right]
+        c_1 &\approx 1 - \frac{\Omega_0^2}{4\delta}\left[i\delta t - \left(e^{i\delta t} - 1\right)\right] \\
+        c_2 &\approx \frac{\Omega_0}{2\delta}\left(e^{-i\delta t} - 1\right) + \frac{\Omega_0^3}{\delta^3}\left(2 - i\delta t - e^{-i\delta t}\left(2 + i\delta t\right)\right)
     \end{aligned}
 \end{equation*}
 \begin{equation*}
     \implies
     \begin{cases*}
-        \magsq{c_1} \approx 1 - \frac{\Omega_0^2}{2\delta}\left(1 - \cos\delta t\right) + \frac{\Omega_0^4}{8\delta^4}\left(1 + \frac{t^2}{2\delta^2} - \cos\delta t - 2t\sin\delta t\right)  \\
-        \magsq{c_2} \approx \frac{\Omega_0^2}{2\delta^2}\left(1 - \cos\delta t\right) - 
+        \magsq{c_1} \approx 1 - \frac{\Omega_0^2}{\delta^2}\sin^2\frac{\delta t}{2} + \frac{\Omega_0^4}{8\delta^4}\left(1 + \frac{t^2}{2\delta^2} - \cos\delta t - 2t\sin\delta t\right)  \\
+        \magsq{c_2} \approx \frac{\Omega_0^2}{\delta^2}\sin^2\frac{\delta t}{2} + \frac{\Omega_0^4}{2\delta^4}\left(\delta t\sin\frac{\delta t}{2}\cos\frac{\delta t}{2} - 2\sin^2\frac{\delta t}{2}\right) + \frac{\Omega_0^6}{16\delta^6}\left((\delta t)^2\cos^2\frac{\delta t}{2} + 4\sin^2\frac{\delta t}{2}-4\delta t\cos\frac{\delta t}{2}\sin\frac{\delta t}{2}\right)
     \end{cases*}
 \end{equation*}
 
@@ -187,8 +175,23 @@ or, more simply,
 For $c_1(0) = 1,\;c_2(0)=0$, the solution to this first order differential equation is
 \begin{align*}
     \psi(t) &= e^{Mt}\psi(0) \\
-    &= \frac{1}{2\chi} \mqty(e^{-(\gamma_1 + \gamma_2 + \chi)t}\left[\chi\left(e^{\chi t/2} + 1\right) + (\gamma_1 + \gamma_2)\left(e^{\chi t/2} - 1\right)\right] \\ -2ie^{-(\gamma_1 + \gamma_2 + \chi)/4}\left(e^{\chi t/2} - 1\right) )
+    &= \frac{1}{2\chi} \mqty(e^{-(\chi + \gamma_1 + \gamma_2)t}\left[\chi + \gamma_1 - \gamma_2 + e^{\chi t/2}\left(\chi - \gamma_1 + \gamma_2\right)\right] \\ -2i\Omega_0e^{-(\gamma_1 + \gamma_2 + \chi)/4}\left(e^{\chi t/2} - 1\right) )
 \end{align*}
+where
+\[ \chi = \sqrt{(\gamma_1 - \gamma_2)^2 - 4\Omega_0^2}. \]
+In particular, 
+\begin{alignat*}{3}
+    & \quad & c_2(t) &= -i\frac{\Omega_0}{\chi}e^{-(\chi + \gamma_1 + \gamma_2)t/4}\left(e^{\chi t/2} - 1\right) \\
+    &\implies\quad & \magsq{c_2(t)} &= \frac{\Omega_0^2}{\chi^2}\frac{1 + e^{\chi t} -2e^{\chi t/2}}{e^{(\chi + \gamma_1 + \gamma_2)t/2}}.
+\end{alignat*}
+Note that if $\Omega_0^2 > (\gamma_1-\gamma_2)^2$, $\chi$ will be imaginary and the population will oscillate \textit{and} decay.
+If $\gamma_1 = \gamma_2 = \gamma$, this reduces to
+\begin{align*}
+    c_1 &= e^{\gamma t/2}\cos\frac{\Omega_0t}{2} \\
+    c_2 &= -ie^{\gamma t/2}\sin\frac{\Omega_0t}{2},
+\end{align*}
+with
+\[ \magsq{c_2} = e^{-\gamma t}\sin^2\frac{\Omega_0t}{2} \]
 
 \includepdf[pages=-]{calcs/HW1_mathematica.pdf}
 \end{document}
