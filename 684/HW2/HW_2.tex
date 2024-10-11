@@ -18,19 +18,30 @@
 \author{Sean Ericson \\ Phys 684}
 \maketitle
 
-\section*{Problem 1}
-\begin{enumerate}[label=(\alph*)]
-    \item 
-\end{enumerate}
+\section*{Problem 1 {\small (Berman 2.9)}}
 
-\section*{Problem 2}
-\begin{enumerate}[label=(\alph*)]
-    \item 
-\end{enumerate}
+\section*{Problem 2 {\small (Berman 2.17)}}
 
 \section*{Problem 3}
 \begin{enumerate}[label=(\alph*)]
-    \item 
+    \item Given that
+    \[ H_0 = \hbar\mqty(\omega_1&0\\0&\omega_2), \]
+    we have that
+    \begin{align*}
+        \exp(iH_0t/\hbar) &= \mqty(1&0\\0&1) + it\mqty(\omega_1&0\\0&\omega_2) + \frac{(it)^2}{2}\mqty(\omega_1&0\\0&\omega_2)^2 + \frac{(it)^3}{3!}\mqty(\omega_1&0\\0&\omega_2)^3 + \cdots \\
+        &= \mqty(1 + i\omega_1t + \frac{1}{2}(i\omega_1t)^2 + \frac{1}{3!}(i\omega_1 t)^3 + \cdots & 0 \\ 0 & 1 + i\omega_2t + \frac{1}{2}(i\omega_2t)^2 + \frac{1}{3!}(i\omega_2t)^3 + \cdots) \\
+        &= \mqty(\exp(i\omega_1t)&0\\0&\exp(i\omega_2t)).
+    \end{align*}
+
+    \item In the interaction representation, we factor out this free phase evolution by writing
+    \[ \ket{\psi(t)}_\text{I} = \bar{c}_1(t)e^{-i\omega_1t}\ket{1} + \bar{c}_2(t)e^{-i\omega_2t}\ket{2}, \]
+    that is, we make the (time-dependent) unitary transformation
+    \[ \ket{\psi(t)}_\text{S} \to \ket{\psi(t)}_\text{I} = U(t)\ket{\psi(t)}_\text{S}, \]
+    where
+    \[ U(t) = \mqty(e^{-i\omega_1t}&0\\0&e^{-i\omega_2t}). \] 
+    We get the effective interaction hamiltonian by making the inverse transformation on $V$:
+    \[ V_\text{I} = U^\dag VU = \hbar\Omega_0 \cos(\omega t) \mqty(0&e^{-i\omega_0t}\\e^{i\omega_0t}&0), \]
+    where the phase $\phi$ has been absorbed into the (complex) Rabi frequency.
 \end{enumerate}
 
 \section*{Problem 4}
