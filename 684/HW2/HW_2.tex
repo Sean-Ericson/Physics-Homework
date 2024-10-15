@@ -66,7 +66,20 @@ See attached Mathematica print-out.
     that is, we make the (time-dependent) unitary transformation
     \[ \ket{\psi(t)}_\text{S} \to \ket{\psi(t)}_\text{I} = U(t)\ket{\psi(t)}_\text{S}, \]
     where
-    \[ U(t) = \mqty(e^{-i\omega_1t}&0\\0&e^{-i\omega_2t}). \] 
+    \[ U(t) = e^{iH_0t/\hbar} =  \mqty(e^{i\omega_1t}&0\\0&e^{i\omega_2t}). \] 
+    Time evolution in the interaction representation is given by
+    \begin{align*}
+        \ket{\dot{\psi}}_\text{I} &= \frac{iH_0}{\hbar}e^{iH_0t/\hbar}\ket{\psi}_\text{S} + e^{iH_0t/\hbar}\ket{\dot{\psi}}_\text{s} \\
+        &= -\frac{i}{\hbar}e^{iH_0t/\hbar}\left(H - H_0\right)\ket{\psi}_\text{s} \\
+        &= -\frac{i}{\hbar}V_\text{I}\ket{\psi}_\text{I},
+    \end{align*}
+    where
+    \begin{align*}
+        V_\text{I} &= e^{iH_0t/\hbar}Ve^{-iH_0t/\hbar} \\
+        &= \hbar\mqty(e^{i\omega_1t}&0\\0&e^{i\omega_2t})\mqty(0&\Omega_0\cos(\omega t)\\\Omega_0\cos(\omega t)&0)\mqty(e^{-i\omega_1t}&0\\0&e^{-i\omega_2t}) \\
+        &= \hbar\Omega_0 \cos(\omega t) \mqty(0&e^{-i\omega_0t}\\e^{i\omega_0t}&0)
+    \end{align*}
+    
     We get the effective interaction hamiltonian by making the inverse transformation on $V$:
     \[ V_\text{I} = U^\dag VU = \hbar\Omega_0 \cos(\omega t) \mqty(0&e^{-i\omega_0t}\\e^{i\omega_0t}&0), \]
     where the phase $\phi$ has been absorbed into the (complex) Rabi frequency.
@@ -74,7 +87,16 @@ See attached Mathematica print-out.
     \item In the field-interaction representation, 
     \[ \ket{\psi(t)}_\text{FI} = \tilde{c}_1(t)e^{i\omega t/2}\ket{1} + \tilde{c}_2(t)e^{-i\omega t/2}\ket{2}. \]
     So, in this case,
-    \[ U = \mqty(e^{-i\omega t/2}&0\\0&e^{i\omega t/2}) \]
+    \[ U = \mqty(e^{-i\omega t/2}&0\\0&e^{i\omega t/2}) = e^{-i\omega\sigma_zt/2}\]
+    and
+    \begin{align*}
+        \ket{\dot{\psi}}_\text{FI} &= -\frac{i\omega}{2}\sigma_z e^{-i\omega\sigma_zt/2}\ket{\psi}_\text{S} + e^{i\omega\sigma_zt/2}\ket{\dot{\psi}}_\text{S}\\
+        &= -\frac{i\omega}{2}\sigma_z e^{-i\omega\sigma_zt/2}\ket{\psi}_\text{S} - \frac{i}{\hbar}e^{-i\omega\sigma_zt/2}H\ket{\psi}_\text{S} \\
+        &= \frac{i}{\hbar}\sigma_z\ket{\psi}_\text{FI} - \frac{i}{\hbar}e^{-i\omega\sigma_zt/2}He^{i\omega\sigma_zt/2}\ket{\psi}_\text{FI} \\
+        &= -\frac{i}{\hbar}H_\text{FI}\ket{\psi}_\text{FI},
+    \end{align*}
+    where 
+    \[ H_\text{FI} = \frac{\hbar\omega}{2}\sigma_z  + e^{-i\omega\sigma_zt}He^{i\omega\sigma_zt} \]
 \end{enumerate}
 
 \section*{Problem 4}
