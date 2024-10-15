@@ -48,6 +48,7 @@ Putting everything together, we find
 
 
 \section*{Problem 2 {\small (Berman 2.17)}}
+See attached Mathematica print-out.
 
 \section*{Problem 3}
 \begin{enumerate}[label=(\alph*)]
@@ -69,6 +70,11 @@ Putting everything together, we find
     We get the effective interaction hamiltonian by making the inverse transformation on $V$:
     \[ V_\text{I} = U^\dag VU = \hbar\Omega_0 \cos(\omega t) \mqty(0&e^{-i\omega_0t}\\e^{i\omega_0t}&0), \]
     where the phase $\phi$ has been absorbed into the (complex) Rabi frequency.
+
+    \item In the field-interaction representation, 
+    \[ \ket{\psi(t)}_\text{FI} = \tilde{c}_1(t)e^{i\omega t/2}\ket{1} + \tilde{c}_2(t)e^{-i\omega t/2}\ket{2}. \]
+    So, in this case,
+    \[ U = \mqty(e^{-i\omega t/2}&0\\0&e^{i\omega t/2}) \]
 \end{enumerate}
 
 \section*{Problem 4}
@@ -103,7 +109,7 @@ The eigenvectors are then
 \end{align*}
 with $\theta$ given implicitly above.
 
-\section*{Problem 4}
+\section*{Problem 5}
 The general solution is given by
 \[ \mqty(c_1(t)\\c_2(t)) = \mqty(e^{-i\delta t/2}\left[\left[\cos\frac{\Omega t}{2} + i\frac{\delta}{\Omega}\sin\frac{\Omega t}{2}\right]c_1(0) - i\frac{\Omega_0^*}{\Omega}\sin\frac{\Omega t}{2}c_2(0)\right] \\ e^{i\delta t/2}\left[-i\frac{\Omega_0}{\Omega}\sin\frac{\Omega t}{2}c_1(0) + \left[\cos\frac{\Omega t}{2} - i\frac{\delta}{\Omega}\sin\frac{\Omega t}{2}\right]c_2(0)\right]). \]
 In the $\abs{\delta} \gg \Omega_0$ limit, we have that
@@ -111,26 +117,39 @@ In the $\abs{\delta} \gg \Omega_0$ limit, we have that
 \begin{enumerate}[label=(\alph*)]
     \item With the initial conditions $c_1(0) = 1$ and $c_2(0) = 0$, we have 
     \[ \mqty(c_1(t)\\c_2(t)) = \mqty(e^{-i\delta t/2}\left(\cos\frac{\Omega t}{2} + i\frac{\delta}{\Omega}\sin\frac{\Omega t}{2}\right)\\ -i\frac{\Omega_0}{\Omega}e^{i\delta t/2}\sin\frac{\Omega t}{2}) \]
-\end{enumerate}
-Focusing on $c_1$, we find
-\begin{align*}
-    c_1(t) &= e^{-i\delta t/2}\left(\cos\frac{\Omega t}{2} + i\frac{\delta}{\Omega}\sin\frac{\Omega t}{2}\right) \\
-    &= \frac{1}{2}e^{-i\delta t/2}\left[\left(e^{i\Omega t/2} + e^{-i\Omega t/2}\right) + \frac{\delta}{\Omega}\left(e^{i\Omega t/2} - e^{-i\Omega t/2}\right)\right] \\
-    &= \frac{1}{2\Omega}e^{-i(\delta+\Omega)t/2}\left[(\Omega - \delta) + (\Omega + \delta)e^{i\Omega t}\right] \\
-    &= \frac{\Omega + \delta}{2\Omega}e^{-i(\delta-\Omega)t/2} + O(\frac{\Omega_0^2}{\delta^2}).
-\end{align*}
-Now, since this is in the interaction representation, we have that
-\begin{align*}
-    \ket{\psi(t)} &= c_1(t)e^{-i\omega_1t}\ket{1} \\
-    &\propto e^{-i(\omega_1 + (\delta-\Omega)/2)t}\ket{1},
-\end{align*}
-i.e., the $\ket{1}$ state has an apparent energy shift of
-\begin{align*}
-    \Delta &= \frac{1}{2}(\delta - \Omega) \\
-    &\approx \frac{1}{2}\left(\delta - \delta(1 - \frac{\Omega_0^2}{2\delta^2})\right) \\
-    &= \frac{\Omega_0^2}{4\delta}
-\end{align*}
+    Focusing on $c_1$, we find
+    \begin{align*}
+        c_1(t) &= e^{-i\delta t/2}\left(\cos\frac{\Omega t}{2} + i\frac{\delta}{\Omega}\sin\frac{\Omega t}{2}\right) \\
+        &= \frac{1}{2}e^{-i\delta t/2}\left[\left(e^{i\Omega t/2} + e^{-i\Omega t/2}\right) + \frac{\delta}{\Omega}\left(e^{i\Omega t/2} - e^{-i\Omega t/2}\right)\right] \\
+        &= \frac{1}{2\Omega}e^{-i(\delta+\Omega)t/2}\left[(\Omega - \delta) + (\Omega + \delta)e^{i\Omega t}\right] \\
+        &= \frac{\Omega + \delta}{2\Omega}e^{-i(\delta-\Omega)t/2} + O(\frac{\Omega_0^2}{\delta^2}).
+    \end{align*}
+    Now, since this is in the interaction representation, we have that
+    \begin{align*}
+        \ket{\psi(t)} &= c_1(t)e^{-i\omega_1t}\ket{1} \\
+        &\propto e^{-i(\omega_1 + (\delta-\Omega)/2)t}\ket{1},
+    \end{align*}
+    i.e., the $\ket{1}$ state has an apparent energy shift of
+    \begin{align*}
+        \Delta &= \frac{1}{2}(\delta - \Omega) \\
+        &\approx \frac{1}{2}\left(\delta - \delta(1 - \frac{\Omega_0^2}{2\delta^2})\right) \\
+        &= \frac{\Omega_0^2}{4\delta}
+    \end{align*}
 
+    \item With the initial conditions $c_1(0) = 0$ and $c_2(0) = 1$, focusing on $c_2$ we have 
+    \begin{align*}
+        c_2(t) &= e^{i\delta t/2}\left[\cos\frac{\Omega t}{2} - i\frac{\delta}{\Omega}\sin\frac{\Omega t}{2}\right] \\
+        &= \frac{1}{2}e^{i\delta t/2}\left[\left(e^{i\Omega t/2} + e^{-i\Omega t/2}\right) - i\frac{\delta}{\Omega}\left(e^{i\Omega t/2} - e^{-i\Omega t/2}\right)\right] \\
+        &= \frac{1}{2\Omega}e^{i(\delta-\Omega)t/2}\left[\delta + \Omega - (\delta-\Omega)e^{i\Omega t}\right] \\
+        &= \frac{\Omega + \delta}{2\Omega}e^{i(\delta-\Omega)t/2} + O(\frac{\Omega_0^2}{\delta^2})
+    \end{align*}
+    So,
+    \begin{align*}
+        \ket{\psi(t)} &= c_2(t)e^{-i\omega_2t}\ket{2} \\
+        &\propto e^{-i(\omega_2-(\delta-\Omega)/2)t}\ket{2},
+    \end{align*}
+    and we see that the shift is the same as for the $\ket{1}$ state, just with opposite sign, i.e. $-\Omega_0^2/4\delta$.
+\end{enumerate}
 
 \includepdf[pages=-]{calcs/HW2_mathematica.pdf}
 \end{document}
