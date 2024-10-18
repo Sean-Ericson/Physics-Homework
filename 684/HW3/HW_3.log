@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.3.22)  17 OCT 2024 20:39
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.3.22)  17 OCT 2024 22:21
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -322,57 +322,57 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 LaTeX Font Info:    Trying to load font information for U+rsfs on input line 18.
  (d:/Programs/texlive/2024/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
-)
-<calcs/HW3_mathematica.pdf, id=1, 614.295pt x 794.97pt>
-File: calcs/HW3_mathematica.pdf Graphic file (type pdf)
-<use calcs/HW3_mathematica.pdf>
-Package pdftex.def Info: calcs/HW3_mathematica.pdf  used on input line 30.
-(pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
-File: calcs/HW3_mathematica.pdf Graphic file (type pdf)
-<use calcs/HW3_mathematica.pdf>
-Package pdftex.def Info: calcs/HW3_mathematica.pdf  used on input line 30.
-(pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
-<calcs/HW3_mathematica.pdf, id=4, page=1, 614.295pt x 794.97pt>
-File: calcs/HW3_mathematica.pdf Graphic file (type pdf)
-<use calcs/HW3_mathematica.pdf, page 1>
-Package pdftex.def Info: calcs/HW3_mathematica.pdf , page1 used on input line 30.
-(pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
-File: calcs/HW3_mathematica.pdf Graphic file (type pdf)
-<use calcs/HW3_mathematica.pdf, page 1>
-Package pdftex.def Info: calcs/HW3_mathematica.pdf , page1 used on input line 30.
-(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
- [1
+) [1
 
 {d:/Programs/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+<calcs/HW3_mathematica.pdf, id=16, 614.295pt x 794.97pt>
+File: calcs/HW3_mathematica.pdf Graphic file (type pdf)
+<use calcs/HW3_mathematica.pdf>
+Package pdftex.def Info: calcs/HW3_mathematica.pdf  used on input line 68.
+(pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
+File: calcs/HW3_mathematica.pdf Graphic file (type pdf)
+<use calcs/HW3_mathematica.pdf>
+Package pdftex.def Info: calcs/HW3_mathematica.pdf  used on input line 68.
+(pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
+<calcs/HW3_mathematica.pdf, id=19, page=1, 614.295pt x 794.97pt>
 File: calcs/HW3_mathematica.pdf Graphic file (type pdf)
 <use calcs/HW3_mathematica.pdf, page 1>
-Package pdftex.def Info: calcs/HW3_mathematica.pdf , page1 used on input line 30.
+Package pdftex.def Info: calcs/HW3_mathematica.pdf , page1 used on input line 68.
+(pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
+File: calcs/HW3_mathematica.pdf Graphic file (type pdf)
+<use calcs/HW3_mathematica.pdf, page 1>
+Package pdftex.def Info: calcs/HW3_mathematica.pdf , page1 used on input line 68.
+(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
+ [2]
+File: calcs/HW3_mathematica.pdf Graphic file (type pdf)
+<use calcs/HW3_mathematica.pdf, page 1>
+Package pdftex.def Info: calcs/HW3_mathematica.pdf , page1 used on input line 68.
 (pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
 File: calcs/HW3_mathematica.pdf Graphic file (type pdf)
 <use calcs/HW3_mathematica.pdf, page 1>
-Package pdftex.def Info: calcs/HW3_mathematica.pdf , page1 used on input line 30.
+Package pdftex.def Info: calcs/HW3_mathematica.pdf , page1 used on input line 68.
 (pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
 File: calcs/HW3_mathematica.pdf Graphic file (type pdf)
 <use calcs/HW3_mathematica.pdf, page 1>
-Package pdftex.def Info: calcs/HW3_mathematica.pdf , page1 used on input line 30.
-(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
- [2
-
- <./calcs/HW3_mathematica.pdf>]
-<calcs/HW3_mathematica.pdf, id=87, page=2, 614.295pt x 794.97pt>
-File: calcs/HW3_mathematica.pdf Graphic file (type pdf)
-<use calcs/HW3_mathematica.pdf, page 2>
-Package pdftex.def Info: calcs/HW3_mathematica.pdf , page2 used on input line 30.
-(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
-File: calcs/HW3_mathematica.pdf Graphic file (type pdf)
-<use calcs/HW3_mathematica.pdf, page 2>
-Package pdftex.def Info: calcs/HW3_mathematica.pdf , page2 used on input line 30.
-(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
-File: calcs/HW3_mathematica.pdf Graphic file (type pdf)
-<use calcs/HW3_mathematica.pdf, page 2>
-Package pdftex.def Info: calcs/HW3_mathematica.pdf , page2 used on input line 30.
+Package pdftex.def Info: calcs/HW3_mathematica.pdf , page1 used on input line 68.
 (pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
  [3
+
+ <./calcs/HW3_mathematica.pdf>]
+<calcs/HW3_mathematica.pdf, id=97, page=2, 614.295pt x 794.97pt>
+File: calcs/HW3_mathematica.pdf Graphic file (type pdf)
+<use calcs/HW3_mathematica.pdf, page 2>
+Package pdftex.def Info: calcs/HW3_mathematica.pdf , page2 used on input line 68.
+(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
+File: calcs/HW3_mathematica.pdf Graphic file (type pdf)
+<use calcs/HW3_mathematica.pdf, page 2>
+Package pdftex.def Info: calcs/HW3_mathematica.pdf , page2 used on input line 68.
+(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
+File: calcs/HW3_mathematica.pdf Graphic file (type pdf)
+<use calcs/HW3_mathematica.pdf, page 2>
+Package pdftex.def Info: calcs/HW3_mathematica.pdf , page2 used on input line 68.
+(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
+ [4
 
  <./calcs/HW3_mathematica.pdf>] (./HW_3.aux)
  ***********
@@ -381,18 +381,18 @@ L3 programming layer <2024-03-14>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 6097 strings out of 474103
- 93192 string characters out of 5742948
- 1927496 words of memory out of 5000000
- 28396 multiletter control sequences out of 15000+600000
- 562367 words of font info for 54 fonts, out of 8000000 for 9000
+ 6131 strings out of 474103
+ 93666 string characters out of 5742948
+ 1938496 words of memory out of 5000000
+ 28422 multiletter control sequences out of 15000+600000
+ 567208 words of font info for 74 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 79i,17n,93p,378b,433s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb>
-Output written on HW_3.pdf (3 pages, 121940 bytes).
+ 79i,20n,93p,378b,435s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on HW_3.pdf (4 pages, 189069 bytes).
 PDF statistics:
- 118 PDF objects out of 1000 (max. 8388607)
- 75 compressed objects within 1 object stream
+ 156 PDF objects out of 1000 (max. 8388607)
+ 98 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  26 words of extra memory for PDF output out of 10000 (max. 10000000)
 
