@@ -43,6 +43,8 @@ INPUT d:/Programs/texlive/2024/texmf-dist/tex/latex/tools/calc.sty
 INPUT d:/Programs/texlive/2024/texmf-dist/tex/latex/tools/calc.sty
 INPUT d:/Programs/texlive/2024/texmf-dist/tex/latex/mathtools/mhsetup.sty
 INPUT d:/Programs/texlive/2024/texmf-dist/tex/latex/mathtools/mhsetup.sty
+INPUT d:/Programs/texlive/2024/texmf-dist/tex/latex/ncctools/nccmath.sty
+INPUT d:/Programs/texlive/2024/texmf-dist/tex/latex/ncctools/nccmath.sty
 INPUT d:/Programs/texlive/2024/texmf-dist/tex/latex/enumitem/enumitem.sty
 INPUT d:/Programs/texlive/2024/texmf-dist/tex/latex/enumitem/enumitem.sty
 INPUT d:/Programs/texlive/2024/texmf-dist/tex/latex/physics/physics.sty
@@ -149,6 +151,10 @@ INPUT d:/Programs/texlive/2024/texmf-dist/fonts/tfm/public/rsfs/rsfs10.tfm
 INPUT d:/Programs/texlive/2024/texmf-dist/fonts/tfm/public/rsfs/rsfs5.tfm
 OUTPUT HW_3.pdf
 INPUT d:/Programs/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map
+INPUT d:/Programs/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
+INPUT d:/Programs/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam5.tfm
+INPUT d:/Programs/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm
+INPUT d:/Programs/texlive/2024/texmf-dist/fonts/tfm/public/rsfs/rsfs5.tfm
 INPUT ./calcs/HW3_mathematica.pdf
 INPUT ./calcs/HW3_mathematica.pdf
 INPUT ./calcs/HW3_mathematica.pdf
@@ -169,11 +175,16 @@ INPUT ./calcs/HW3_mathematica.pdf
 INPUT HW_3.aux
 INPUT d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 INPUT d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
+INPUT d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
 INPUT d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb
+INPUT d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb
 INPUT d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb
+INPUT d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb
 INPUT d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb
 INPUT d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb
+INPUT d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb
 INPUT d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb
 INPUT d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
+INPUT d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb
 INPUT d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb
 INPUT d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb

@@ -4,6 +4,7 @@
 \usepackage{amsmath,amsthm,amssymb}
 \usepackage{mathrsfs}
 \usepackage{mathtools}
+\usepackage{nccmath}
 \usepackage{enumitem}
 \usepackage{physics}
 \usepackage{pdfpages}
@@ -38,6 +39,25 @@ The Bloch vector is just the vector of expectation values of the Pauli operators
 
 \section*{Problem 3 (Berman 3.8)}
 
+\[ \rho_{22} = \frac{\magsq{\Omega_0}/2}{2\gamma^2 + \magsq{\Omega}}\left[1 - \left(\cos(\lambda t) + \frac{3\gamma}{2\lambda}\sin(\lambda t)\right)e^{-3\gamma t/2}\right] \]
+\begin{align*}
+    \frac{\magsq{\Omega_0}/2}{2\gamma^2 + \magsq{\Omega_0}} &= \frac{1}{2}\left(1 + 2\left(\frac{\gamma}{\abs{\Omega_0}}\right)^2\right)^{-1} \\
+    &\approx \frac{1}{2}\left(1 - 2\frac{\gamma^2}{\magsq{\Omega_0}}\right) \\
+    \\
+    \lambda &= \sqrt{\magsq{\Omega_0} - \gamma^2/4} \\
+    &= \abs{\Omega_0}\sqrt{1 - \left(\frac{\gamma}{2\abs{\Omega_0}}\right)^2}\\
+    &\approx \abs{\Omega_0}\left(1 - \frac{\gamma^2}{4\magsq{\Omega_0}}\right) \\
+    \frac{1}{\lambda} &\approx \frac{1}{\abs{\Omega_0}}\left(1 + \frac{\gamma^2}{4\magsq{\Omega_0}}\right)
+\end{align*}
+so
+\begin{align*}
+    \rho_{22} &\approx \medmath{\frac{1}{2}\left(1 - 2\frac{\gamma^2}{\magsq{\Omega_0}}\right)\left[1 - \left(\cos\left(\abs{\Omega_0}\left(1 - \frac{\gamma^2}{4\magsq{\Omega_0}}\right)t\right)+\frac{3}{2}\frac{\gamma}{\abs{\Omega_0}}\left(1 + \frac{\gamma^2}{4\magsq{\Omega_0}}\right)\sin\left(\abs{\Omega_0}\left(1 - \frac{\gamma^2}{4\magsq{\Omega_0}}\right)t\right)\right)e^{-3\gamma t/2}\right]} \\
+    &\approx \frac{1}{2}\left[1 - \left(\cos(\abs{\Omega_0}t) + \frac{3}{2}\frac{\gamma}{\abs{\Omega_0}}\sin(\abs{\Omega_0}t)\right)e^{-3\gamma t/2}\right] \\
+    &\approx \frac{1}{2}\left(1 - e^{-3\gamma t/2}\cos(\abs{\Omega_0}t)\right)
+\end{align*}
+This describes exponentially damped oscillation of the population between the upper and lower states (i.e. damped oscillation of the $z$-component of the Bloch vector), which asymptotically approaches $\rho_{11} = \rho_{22} = 1/2$ (i.e. the $z$-component of the Bloch vector goes to 0).
+
+
 \section*{Problem 4 (Berman 3.10)}
 Parameterizing the state as
 \[ \ket{\psi} = \cos\frac{\theta}{2}\ket{1} + \sin\frac{\theta}{2}e^{i\phi}\ket{2}, \]
@@ -60,9 +80,12 @@ so, letting $\theta$ be the angle between $\vec\Omega$ and $\vec{B}$,
     &= 0
 \end{align*}
 
+If $\vec\Omega$ is a function of time (with rate of change negligible compared to its magnitude), then
 \begin{align*}
-    \dv{t}\cos\theta &= \dv{t}\frac{\vec\Omega\cdot\vec{B}}{\abs{\vec\Omega}} \\
-    &= \dv{t}
+    \dv{t}\cos\theta &= \dv{t}\frac{\vec\Omega(t)\cdot\vec{B}(t)}{\abs{\vec\Omega(t)}} \\
+    &= \left(\dv{t}\Omega^{-1}(t)\right)\left(\vec\Omega(t)\cdot\vec{B}(t)\right) + \frac{\left(\dv{t}\vec\Omega(t)\right)\cdot\vec{B}(t) + \vec\Omega(t)\cdot\left(\dv{t}\vec{B}(t)\right)}{\Omega} \\
+    &= \frac{\dot{\vec{\Omega}}(t)}{\Omega(t)}\cdot\vec{B} -\frac{\dot\Omega(t)}{\Omega^2(t)} \\
+    &\approx 0.
 \end{align*}
 
 \includepdf[pages=-]{calcs/HW3_mathematica.pdf}
