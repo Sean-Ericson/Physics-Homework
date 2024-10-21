@@ -38,7 +38,11 @@ The Bloch vector is just the vector of expectation values of the Pauli operators
 (See attached Mathematica printout for calculations.)
 
 \section*{Problem 3 (Berman 3.8)}
-
+From equation 3.31 in Berman,
+\begin{align*}
+    \dot{\rho}_{12} &= i(\omega_0 + i\gamma)\rho_{12}(t) - \frac{i}{2}\Omega_0^*(t)e^{i\omega t}\left(\rho_{22}(t)-\rho_{11}(t)\right) \\
+    \dot{\rho}_{22} &= -2\gamma\rho_{22}(t) + 2\Im[\Omega_0(t)e^{-i\omega t}\rho_{12}(t)]
+\end{align*}
 \[ \rho_{22} = \frac{\magsq{\Omega_0}/2}{2\gamma^2 + \magsq{\Omega}}\left[1 - \left(\cos(\lambda t) + \frac{3\gamma}{2\lambda}\sin(\lambda t)\right)e^{-3\gamma t/2}\right] \]
 \begin{align*}
     \frac{\magsq{\Omega_0}/2}{2\gamma^2 + \magsq{\Omega_0}} &= \frac{1}{2}\left(1 + 2\left(\frac{\gamma}{\abs{\Omega_0}}\right)^2\right)^{-1} \\
