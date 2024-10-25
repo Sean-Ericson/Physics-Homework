@@ -1,8 +1,9 @@
 # Fdb version 4
-["pdflatex"] 1729879120.94633 "d:/Programming/GitHub/Physics-Homework/684/HW4/HW_4.tex" "HW_4.pdf" "HW_4" 1729879121.65835 0
-  "HW_4.aux" 1729879121 32 044b7f8fc9779af7531264e0c5c84b6d "pdflatex"
-  "HW_4.tex" 1729879120 2141 230cb503b62cc53c23f7724a521a45dd ""
-  "d:/Programming/GitHub/Physics-Homework/684/HW4/HW_4.tex" 1729879120 2141 230cb503b62cc53c23f7724a521a45dd ""
+["pdflatex"] 1729898301.15367 "d:/Programming/GitHub/Physics-Homework/684/HW4/HW_4.tex" "HW_4.pdf" "HW_4" 1729898301.91711 0
+  "HW_4.aux" 1729898301 32 c81c40425fbb5e93b90fba65da0b5e61 "pdflatex"
+  "HW_4.tex" 1729898300 4065 e4bd1dec8b62debb4f45bdebd662ae6b ""
+  "calcs/HW4_mathematica.pdf" 1729898224 65995 8035fc9455e317c9c01990fd67348aeb ""
+  "d:/Programming/GitHub/Physics-Homework/684/HW4/HW_4.tex" 1729898300 4065 e4bd1dec8b62debb4f45bdebd662ae6b ""
   "d:/Programs/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1711144024 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "d:/Programs/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1711141820 1004 54797486969f23fa377b128694d548df ""
   "d:/Programs/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1711141820 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -34,6 +35,7 @@
   "d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb" 1711141820 32726 39f0f9e62e84beb801509898a605dbd5 ""
   "d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1711141820 32569 5e5ddc8df908dea60932f3c484a54c0d ""
   "d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb" 1711141820 32626 5abc8bb2f28aa647d4c70f8ea38cc0d3 ""
+  "d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb" 1711141820 34694 870c211f62cb72718a00e353f14f254d ""
   "d:/Programs/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii" 1711145898 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "d:/Programs/texlive/2024/texmf-dist/tex/generic/iftex/iftex.sty" 1711144733 7237 bdd120a32c8fdb4b433cf9ca2e7cd98a ""
   "d:/Programs/texlive/2024/texmf-dist/tex/generic/iftex/ifvtex.sty" 1711144733 1057 525c2192b5febbd8c1f662c9468335bb ""

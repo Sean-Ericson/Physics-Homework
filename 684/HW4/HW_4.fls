@@ -149,6 +149,19 @@ INPUT d:/Programs/texlive/2024/texmf-dist/fonts/tfm/public/rsfs/rsfs10.tfm
 INPUT d:/Programs/texlive/2024/texmf-dist/fonts/tfm/public/rsfs/rsfs5.tfm
 OUTPUT HW_4.pdf
 INPUT d:/Programs/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map
+INPUT ./calcs/HW4_mathematica.pdf
+INPUT ./calcs/HW4_mathematica.pdf
+INPUT ./calcs/HW4_mathematica.pdf
+INPUT ./calcs/HW4_mathematica.pdf
+INPUT ./calcs/HW4_mathematica.pdf
+INPUT ./calcs/HW4_mathematica.pdf
+INPUT ./calcs/HW4_mathematica.pdf
+INPUT ./calcs/HW4_mathematica.pdf
+INPUT ./calcs/HW4_mathematica.pdf
+INPUT ./calcs/HW4_mathematica.pdf
+INPUT ./calcs/HW4_mathematica.pdf
+INPUT ./calcs/HW4_mathematica.pdf
+INPUT ./calcs/HW4_mathematica.pdf
 INPUT HW_4.aux
 INPUT d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 INPUT d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
@@ -159,3 +172,4 @@ INPUT d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.p
 INPUT d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb
 INPUT d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
 INPUT d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb
+INPUT d:/Programs/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb
