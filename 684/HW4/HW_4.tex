@@ -6,7 +6,6 @@
 \usepackage{mathtools}
 \usepackage{enumitem}
 \usepackage{physics}
-
 \usepackage{pdfpages}
 
 \newcommand{\magsq}[1]{\big|#1\big|^2}
@@ -20,7 +19,39 @@
 
 \section*{Problem 1}
 \begin{enumerate}[label=(\alph*)]
-    \item 
+    \item Letting
+    \[ \vec{R} = \mqty(u\\v\\w); \quad \vec{\Omega} = \mqty(\Omega'\\-\Omega''\\\delta), \] 
+    the evolution of the Bloch vector in the BLANK is given by
+    \[
+        \dv{t}\vec{R} = \vec{\Omega}\times\vec{R} \implies
+        \begin{cases*}
+            \dot{u} = -\delta v - \Omega_0'' w & \\
+            \dot{v} = \delta u -\Omega_0' w & \\
+            \dot{w} = \Omega_0' v + \Omega_0'' u. & \\
+        \end{cases*} 
+    \]
+    Given that $\Omega_0'' = 0$, this simplifies to
+    \begin{align*}
+        \dot{u} &= -\delta v \\
+        \dot{v} &= \delta u -\Omega_0' w \\
+        \dot{w} &= \Omega_0' v.
+    \end{align*}
+    Then,
+    \begin{alignat*}{3}
+        &\quad & \ddot{v} &= \delta\dot{u} -\Omega_0'\dot{w} \\
+        &\quad & &= -\left(\delta^2 + \Omega_0'^2\right)v \\
+        &\quad & &= -\Omega^2v \\
+        &\implies\quad & v(t) &= A\cos(\Omega t) + B\sin(\Omega t).
+    \end{alignat*}
+    Next, the initial condition $\vec{R}(0) = -\hat{w}$ implies $A = 0$, so
+    \[ v(t) = B\sin(\Omega t). \]
+    Now solving for u,
+    \begin{alignat*}{3}
+        &\quad & \dot{u} &= -\delta v \\
+        &\implies\quad & u(t) &= u(t) - \delta\int_0^t\dd t' v(t') \\
+        &\quad & &= \frac{\delta B}{\Omega}\cos(\Omega t')\big\vert_0^t \\
+        &\quad & &= \frac{\delta B}{\Omega}\left(\cos(\Omega t) - 1\right)
+    \end{alignat*}
 \end{enumerate}
 
 \section*{Problem 2}
