@@ -86,9 +86,14 @@ See attached Mathematica notebook.
 See attached Mathematica notebook for calculations.
 \[ H_\text{d} = -\frac{\hbar}{2}\Omega_0\sigma_z + \hbar\dot{\theta}\sigma_y \]
 \begin{align*}
-    \dot{\tilde{\rho}}_\text{d} &= \comm{H_\text{d}}{\tilde{\rho}_\text{d}} \\
-    &= \mqty(-\dot{\theta}\Re[\tilde{\rho_d}_{12}] & i\Omega_0\rho_{12}-\dot{\theta}\left(\tilde{\rho_d}_{22} - \tilde{\rho_d}_{11}\right) \\ -i\Omega_0\rho_{21}-\dot{\theta}\left(\tilde{\rho_d}_{22} - \tilde{\rho_d}_{11}\right) & \dot{\theta}\Re[\tilde{\rho_d}_{12}])
+    \dot{\tilde{\rho_\text{d}}} &= \comm{H_\text{d}}{\tilde{\rho_\text{d}}} \\
+    &= \mqty(-2\dot{\theta}\Re[\tilde{\rho_\text{d}}_{12}] & i\Omega_0\rho_{12}-\dot{\theta}\left(\tilde{\rho_\text{d}}_{22} - \tilde{\rho_\text{d}}_{11}\right) \\ -i\Omega_0\rho_{21}-\dot{\theta}\left(\tilde{\rho_\text{d}}_{22} - \tilde{\rho_\text{d}}_{11}\right) & 2\dot{\theta}\Re[\tilde{\rho_\text{d}}_{12}])
 \end{align*}
+
+The relaxation terms take the same form as in the previous problem, i.e.
+\[ \dv{\tilde{\rho}}{t}\Big\vert_{\text{relaxation}} = -\gamma\left(\sigma_0\tilde{\rho}_\text{d} + \tilde{\rho}_\text{d}\sigma_0\right) + \gamma_2\sigma_-\tilde{\rho}_\text{d}\sigma_+ + 2\Gamma\sigma_0\tilde{\rho}_\text{d}\sigma_0. \]
+Adding this to the above equation, we get
+\[ \dot{\tilde{\rho_\text{d}}} = \mqty(-2\dot{\theta}\Re[\tilde{\rho_\text{d}}_{12}] + \gamma_2\tilde{\rho_\text{d}}_{22} & i\Omega_0\rho_{12}-\dot{\theta}\left(\tilde{\rho_\text{d}}_{22} - \tilde{\rho_\text{d}}_{11}\right) -\gamma\tilde{\rho_\text{d}}_{12} \\ -i\Omega_0\rho_{21}-\dot{\theta}\left(\tilde{\rho_\text{d}}_{22} - \tilde{\rho_\text{d}}_{11}\right) -\gamma\tilde{\rho_\text{d}}_{21} & 2\dot{\theta}\Re[\tilde{\rho_\text{d}}_{12}] - \gamma_2\rho_{22}) \]
 
 \includepdf[pages=-]{calcs/HW4_mathematica.pdf}
 \end{document}
