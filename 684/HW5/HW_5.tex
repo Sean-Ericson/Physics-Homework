@@ -25,22 +25,39 @@ where
 \[ \vec{P}(\vec{r},t) = \vec{P}_+(z,t) + \vec{P}_-(z,t) = \frac{1}{2}\hat{x}\left(P_0(z,t)e^{-i\alpha(z,t)} + \text{c.c}\right), \]
 \[ \alpha(z,t) = \omega t - kz - \phi(z,t), \]
 and $E_0(z,t)\in\mathbb{R}$ while $P_0(z,t)\in\mathbb{C}$.
-Next, we note that
+Noticing that
 \begin{align*}
     2\pdv{z}\abs{E_\pm} &= \left(E_0' \mp iE_0\alpha'\right)e^{\mp i\alpha}, \\
     2\pdv{t}\abs{E_\pm} &= \left(\dot{E}_0 \mp iE_0\dot\alpha\right)e^{\mp i\alpha}, \\
-    2\pdv{t}\abs{P_\pm} &= \left(\dot{P}_0 \mp P_0\dot\alpha\right)e^{\mp i\alpha}
+    2\pdv{t}\abs{P_\pm} &= \left(\dot{P}_0 \mp P_0\dot\alpha\right)e^{\mp i\alpha} \\
+    2\pdv[2]{t}\abs{P_\pm} &= \left(\ddot{P}_0 \mp \dot{P}_0\dot\alpha \mp P_0\ddot{\alpha} \mp i\dot{P}_0\dot\alpha + iP_0\dot\alpha^2\right)e^{\mp i\alpha} \\
+    \alpha' &= -k - \phi' \\
+    \dot\alpha &= \omega - \dot\phi,
+\end{align*}
+we factor the differential operator in the wave equation as 
+\[ \partial_z^2 - \frac{1}{c^2}\partial_t^2 = \left(\partial_z + \frac{1}{c}\partial_t\right)\left(\partial_z - \frac{1}{c}\partial_t\right), \]
+and begin applying it to the $\pm$ components of the fields:
+\begin{align*}
+    2\left(\partial_z - \frac{1}{c}\partial_t\right)\abs{E_\pm} &= \left[E_0' \mp iE_0\alpha' - \frac{1}{c}\left(\dot{E}_0 \mp iE_0\dot\alpha\right)\right]e^{\mp i\alpha} \\
+    &= \left[\mp iE_0\left(\alpha' - \frac{1}{c}\dot\alpha\right) + E_0' - \frac{1}{c}\dot{E}_0\right]e^{\mp i\alpha} \\
+    &= \left[\pm iE_0(2k + \phi' - \frac{1}{c}\dot\phi) + E_0' - \frac{1}{c}\dot{E}_0\right]e^{\mp i\alpha}.
+\end{align*}
+Now, in the slowly varying amplitude and phase approximation, we neglect terms proportional to $\ddot{E}_0$, $E_0''$, $\dot{P}_0$, and $\ddot{P}_0$.
+So, as we apply the second half of the differential operator, let's drop the terms that will produce terms that we'll neglect anyway:
+\begin{align*}
+    2\left(\partial_z + \frac{1}{c}\partial_t\right)\left(\partial_z - \frac{1}{c}\partial_t\right)\abs{E_\pm} &\approx \pm i\left(\partial_z + \frac{1}{c}\partial_t\right)\left[E_0\left(2k+\phi' - \frac{1}{c}\dot\phi\right)e^{\mp i\alpha}\right] \\
+    &= \pm i \left[\left(E_0' + \frac{1}{c}\dot{E}_0\right)\left(2k+\phi' - \frac{1}{c}\dot\phi\right) \right]
 \end{align*}
 
 \section*{Problem 2}
 Starting with
 \begin{align*}
-    \dot{\tilde{\rho}}_{21} &= -\gamma \tilde{\rho}_{21} - i\delta\tilde{\rho}_{21} + i \frac{\Omega_0}{2}\left(\rho_{22}-\rho_{11}\right) \\
+    \dot{\tilde{\rho}}_{21} &= -(\gamma+i\delta) \tilde{\rho}_{21} + i \frac{\Omega_0}{2}\left(\rho_{22}-\rho_{11}\right) \\
     \dot{\rho}_{22} &= -\gamma_2\rho_{22} + \Re[i\Omega_0^*\tilde{\rho}_{21}],
 \end{align*}
 we first drop the tildes, then let $\rho_{21} = \frac{1}{2}(u - iv)$, and $\Omega_0 = \Omega_0' + i\Omega_0''$. Plugging these in, we get
 \begin{alignat*}{3}
-    &\quad & \frac{1}{2}(\dot{u} - i\dot{v}) &= -\frac{\gamma}{2}(u-iv) - i\frac{\delta}{2}(u-iv) + \frac{i}{2}\left(\Omega_0' + i\Omega_0''\right)\left(2\rho_{22} - 1\right) \\
+    &\quad & \frac{1}{2}(\dot{u} - i\dot{v}) &= -\frac{1}{2}(\gamma + i\delta)(u-iv) + \frac{i}{2}\left(\Omega_0' + i\Omega_0''\right)\left(2\rho_{22} - 1\right) \\
     &\quad & \dot{\rho}_{22} &= -\gamma_2\rho_{22} + \frac{1}{2}\left(\Omega_0'' u + \Omega_0' v\right) \\
     &\implies\quad & &  \\
     &\quad & \dot{u} &= -\gamma u - \delta v - 2\Omega_0''\rho_{22} + \Omega_0'' \\
@@ -58,7 +75,7 @@ In the steady state, this is
 \mqty(-\gamma&-\delta&2\Omega_0''\\-\delta&+\gamma&2\Omega_0'\\\frac{\Omega_0''}{2}&\frac{\Omega_0'}{2}&-\gamma_2)\mqty(u\\v\\\rho_{22}) = \mqty(-\Omega_0''\\\Omega_0\\0)
 \]
 Inverting and solving, we find
-\[ \mqty(\dot{u}\\\dot{v}\\\dot{\rho}_{22}) = \frac{1}{\gamma^2 + \delta^2 + \frac{\gamma}{\gamma_2}\magsq{\Omega_0}}\mqty(\gamma\Omega_0'' - \delta\Omega_0' \\ \delta\Omega_0'' + \gamma\Omega_0' \\ \frac{\gamma\magsq{\Omega_0}}{2\gamma_2}). \]
+\[ \mqty(u\\v\\\rho_{22}) = \frac{1}{\gamma^2 + \delta^2 + \frac{\gamma}{\gamma_2}\magsq{\Omega_0}}\mqty(\gamma\Omega_0'' - \delta\Omega_0' \\ \delta\Omega_0'' + \gamma\Omega_0' \\ \frac{\gamma\magsq{\Omega_0}}{2\gamma_2}). \]
 Or, in terms of just density matrix components,
 \begin{align*}
     \tilde{\rho}_{21} &= \frac{-\frac{1}{2}(\delta+i\gamma)\Omega_0}{\gamma^2 + \delta^2 + \frac{\gamma}{\gamma_2}\magsq{\Omega_0}} \\
