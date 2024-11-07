@@ -45,9 +45,12 @@ and begin applying it to the $\pm$ components of the fields:
 Now, in the slowly varying amplitude and phase approximation, we neglect terms proportional to $\ddot{E}_0$, $E_0''$, $\dot{P}_0$, and $\ddot{P}_0$.
 So, as we apply the second half of the differential operator, let's drop the terms that will produce terms that we'll neglect anyway:
 \begin{align*}
-    2\left(\partial_z + \frac{1}{c}\partial_t\right)\left(\partial_z - \frac{1}{c}\partial_t\right)\abs{E_\pm} &\approx \pm i\left(\partial_z + \frac{1}{c}\partial_t\right)\left[E_0\left(2k+\phi' - \frac{1}{c}\dot\phi\right)e^{\mp i\alpha}\right] \\
-    &= \pm i \left[\left(E_0' + \frac{1}{c}\dot{E}_0\right)\left(2k+\phi' - \frac{1}{c}\dot\phi\right) \right]
+    2\left(\partial_z + \frac{1}{c}\partial_t\right)\left(\partial_z - \frac{1}{c}\partial_t\right)\abs{E_\pm} &\approx \pm2ik \left(\partial_z + \frac{1}{c}\partial_t\right)\left[E_0e^{\mp i\alpha}\right] \\
+    &= \pm 2ik\left[E_0'  + \frac{1}{c}\dot{E}_0 \pm i\left(\phi' + \frac{1}{c}\dot\phi\right)\right]e^{\mp i\alpha}
 \end{align*}
+The other side of the wave equation is approximately
+\[ \pdv[2]{t}P_0 \approx -\omega^2 P_0 \]
+Equating the real and imaginary parts of each side of then gives the desired results.
 
 \section*{Problem 2}
 Starting with
@@ -83,13 +86,34 @@ Or, in terms of just density matrix components,
 \end{align*}
 
 \section*{Problem 3}
+In lecture, we arrived at
+\[ \chi(\omega) \approx \frac{N}{V}\frac{\mu^2}{\epsilon_0\hbar}\frac{\rho_{22}^{(0)} - \rho_{11}^{(0)}}{\delta - i \gamma}, \]
+where we used the first order approximation 
+\[ \rho_{21}^{(1)} \approx \frac{\Omega_0}{2}\frac{\rho_{22}^{(0)}-\rho_{11}^{(0)}}{\delta - i\gamma}. \]
+If I use the full solution that I got in the previous problem, however, I get an imaginary component of $\chi$ that is
+\[ \chi'' = \frac{N}{V}\frac{\mu^2}{\epsilon_0\hbar}\frac{\gamma}{\gamma^2 + \delta^2 + \frac{\gamma}{\gamma_2}\magsq{\Omega_0}}, \]
+which is the same up to that extra term in the denominator. That extra term seems to mess up the simplification when we set $\delta =0\;(\implies \omega = \omega_0)$, $\gamma = \gamma_2/2$, and
+\[ \gamma_2 = \frac{\mu^2\omega_0^3}{3\pi \epsilon_0\hbar c^3}. \]
+If we ignore it, then everything goes through exactly as it did in lecture. When we compare 
+\[ \alpha = \frac{\omega}{c}\chi'' = \frac{N}{V}\sigma, \]
+we get
+\[ \sigma = \frac{c^2}{\omega_0^2}6\pi = \frac{3}{2\pi}\lambda_0^2 \]
+Given
+\begin{align*}
+    \frac{N}{V} = 3\times10^9\;\frac{\text{atoms}}{\text{cm}^3} \\
+    \gamma_2 = 2\pi\times10\;\text{MHz} \\
+    \lambda_0 = 600\;\text{nm}
+\end{align*}
+we have that 
+\[ \alpha = \frac{N}{V}\frac{3}{2\pi}\lambda_0^2 \]
 \begin{enumerate}[label=(\alph*)]
-    \item 
+    \item \[ n + 1 + \frac{1}{2}\chi' \]
 \end{enumerate}
 
 \section*{Problem 4}
 \begin{enumerate}[label=(\alph*)]
-    \item 
+    \item The rate equation approximation seems to be valid in the first and third cases.
+    It's clearly not valid in the second case, as the coherence is almost exactly $90^\circ$ out of phase with the population
 \end{enumerate}
 
 \includepdf[pages=-]{calcs/HW5_mathematica.pdf}
