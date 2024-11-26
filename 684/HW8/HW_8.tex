@@ -59,11 +59,15 @@
         \ket{D} &= \frac{1}{\Omega}\left(\Omega_0'\ket{1} + \Omega_0\ket{3}\right), \\
         \ket{B} &= \frac{1}{\Omega}\left(\Omega_0^*\ket{1} - \Omega_0'^*\ket{3}\right),
     \end{align*}
-    where $\Omega = \sqrt{\abs{\Omega_0}^2 + \abs{\Omega_0'}^2}$, we solve for the $\ket{1}$ and $\ket{3}$ states to get
+    where $\Omega = \sqrt{\abs{\Omega_0}^2 + \abs{\Omega_0'}^2}$.
+    The transformation between these bases is then (dropping tildes)
+    \[ \mqty(c_d\\c_2\\c_B) = \mqty(\frac{\Omega_0'}{\Omega}&0&\frac{\Omega_0}{\Omega}\\0&1&0\\\frac{\Omega_0^*}{\Omega}&0&-\Omega_0'^*)\mqty(c_1\\c_2\\c_3) \eqcolon U\mqty(c_1\\c_2\\c_3). \]
+    Now we can transform the Hamiltonian into this basis (assuming real Rabi frequencies):
     \begin{align*}
-        \ket{1} &= \frac{1}{\Omega}\left(\Omega_0'^*\ket{D} + \Omega_0\ket{B}\right) \\
-        \ket{3} &= \frac{1}{\Omega}\left(\Omega_0^*\ket{D} - \Omega_0'\ket{B}\right)
+        H_{D2B} &= UHU^\dag \\
+        &= \hbar\mqty(-2\delta & \frac{\Omega_0\Omega_0'}{\Omega^2})
     \end{align*}
+
     \item
 \end{enumerate}
 
