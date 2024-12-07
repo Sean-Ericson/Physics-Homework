@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1733528115 "c:/Users/seric/Documents/GitHub/Physics-Homework/684/HW9/HW_9.tex" "HW_9.pdf" "HW_9" 1733528116 0
+["pdflatex"] 1733532106 "c:/Users/seric/Documents/GitHub/Physics-Homework/684/HW9/HW_9.tex" "HW_9.pdf" "HW_9" 1733532107 0
   "C:/Users/seric/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1729795697 278392 70e41675f518162771d7c9e1f1d77684 ""
   "C:/Users/seric/AppData/Local/MiKTeX/fonts/tfm/public/rsfs/rsfs10.tfm" 1702438685 688 37338d6ab346c2f1466b29e195316aa4 ""
   "C:/Users/seric/AppData/Local/MiKTeX/fonts/tfm/public/rsfs/rsfs5.tfm" 1702438686 684 3a51bd4fd9600428d5264cf25f04bb9a ""
@@ -77,10 +77,10 @@
   "C:/Users/seric/AppData/Local/Programs/MiKTeX/tex/latex/physics/physics.sty" 1356002062 29610 a9597219b282d9c78b02393dcd7d4322 ""
   "C:/Users/seric/AppData/Local/Programs/MiKTeX/tex/latex/tools/calc.sty" 1700599895 10214 547fd4d29642cb7c80bf54b49d447f01 ""
   "C:/Users/seric/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1700127522 55487 80a65caedd3722f4c20a14a69e785d8f ""
-  "HW_9.aux" 1733528116 32 ab05033ccbb38b00a31b200ccedf8001 "pdflatex"
-  "HW_9.tex" 1733528115 3235 4f2f7e02da958e9150e7661a833dc46d ""
-  "c:/Users/seric/Documents/GitHub/Physics-Homework/684/HW9/HW_9.tex" 1733528115 3235 4f2f7e02da958e9150e7661a833dc46d ""
-  "calcs/hw_9.pdf" 1733524759 77390 92a6a3170ba7f2ae1f1b982ae45b6efd ""
+  "HW_9.aux" 1733532106 32 c81c40425fbb5e93b90fba65da0b5e61 "pdflatex"
+  "HW_9.tex" 1733532105 3468 55e980fb37ca5f803fb93e48933cf640 ""
+  "c:/Users/seric/Documents/GitHub/Physics-Homework/684/HW9/HW_9.tex" 1733532105 3468 55e980fb37ca5f803fb93e48933cf640 ""
+  "calcs/hw_9.pdf" 1733531803 100972 ac9daeb5a02cdb93bb6930984fdf378d ""
   (generated)
   "HW_9.aux"
   "HW_9.log"
