@@ -62,6 +62,19 @@ Using the calculations in the attached Mathematica notebook, we find that the we
 For the 100-mW case, we find that the well depth is approximately 4.6$\times 10^7$ the recoil energy.
 In both cases, the CoM energy associated with the Doppler cooling limit is several orders of magnitude smaller than the potential depth, so atoms cooled to the Doppler limit should indeed be trappable by these potentials.
 
+The optical potential has the form
+\[ V(z) = V_\text{opt}\sin(kz). \]
+Near a minimum, this is approximated by
+\[ V(z) \approx V_\text{opt}\left(\frac{(kz)^2}{2} - 1\right). \]
+Ignoring the offset, we have that
+\begin{alignat*}{3}
+    &\quad & V &\sim \frac{1}{2}V_\text{opt}k^2z^2 \\
+    & & &= \frac{1}{2}m\tilde{\omega}^2z^2 \\
+    &\implies & \tilde{\omega} &= \sqrt{\frac{V_\text{opt}k^2}{m}}
+\end{alignat*}
+
+Using the the given values, we find that the potentials produce frequency spacings of $\tilde{\omega} \approx $ 0.1 MHz and 37 MHz, respectively.
+
 
 \includepdf[pages=-]{calcs/hw_9.pdf}
 \end{document}
