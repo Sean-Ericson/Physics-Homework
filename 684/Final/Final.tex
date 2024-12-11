@@ -1,0 +1,188 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{mathrsfs}
+\usepackage{mathtools}
+\usepackage{enumitem}
+\usepackage{physics}
+\usepackage{pdfpages}
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
+
+\newcommand{\magsq}[1]{\big|#1\big|^2}
+\newcommand{\avg}[1]{\left<#1\right>}
+\newcommand{\fullint}[1][x]{\int_{-\infty}^{\infty}\dd #1\;}
+\newcommand{\halfint}[1][x]{\int_{0}^{\infty}\dd #1\;}
+
+\begin{document}
+	
+\title{Final}
+\author{Sean Ericson \\ Phys 684}
+\maketitle
+
+\section*{Problem 1}
+\subsection*{a)}
+\subsubsection*{\underline{Problem}}
+Use momentum conservation to describe briefly how a plane-wave optical field exerts a force on a nearly resonant two-level atom.
+What are the direction and amplitude of the force?
+What happens if the incident field is not a plane wave?
+
+\subsubsection*{\underline{Solution}}
+By Newton's second law, a force is equivalent to a change in momentum over some amount of time. 
+By conservation of momentum, when an atom absorbs a photon it receives a change in momentum equal to the momentum of the photon, and similarly when it emits a photon it receives a change in momentum equal and opposite to the photons momentum (this is exactly newton's third law).
+
+The force due to stimulated emission alone averages to zero, as the momentum change from the absorbed photon is cancelled by the momentum change from the emitted photon.
+The force due to spontaneous emission alone averages to zero, in this case because spontaneous emission is an isotropic process.
+
+The combined effects of spontaneous and stimulated emission, however, lead to a nonzero force in a direction parallel to the direction of the plane wave wave vector $\vec{k}$, and with amplitude proportional the change in momentum ($\hbar k$) times the average emission rate ($\gamma_2\rho_{22}$).
+
+Even if the incident field is not a plane wave, it can still be decomposed into a sum of plane waves, with the above argument applying to each plane wave component.
+Typically, like for a focused laser beam, the component wave vectors will have some amount of divergence, with the overall result being a \textit{gradient} force that acts as a restoring force on the atom.
+
+\subsection*{b)}
+\subsubsection*{\underline{Problem}}
+Discuss briefly how to use a dark state to adiabatically transfer electron population between the two lower states in a a $\Lambda$-type three-level system.
+Draw schematically the pulse sequence and the population in the two lower states as a function of time in the adiabatic passage process.
+What happens if one does the transfer too fast (i.e. the transfer process is no longer adiabatic)?
+
+\subsubsection*{\underline{Solution}}
+The dark state $\ket{D}$ is a superposition of the $\ket{1}$ and $\ket{3}$ states. Specifically,
+\[ \ket{D} = \frac{1}{\Omega}\left(\Omega_0'\ket{1} - \Omega_0\ket{3}\right); \quad \Omega = \sqrt{\Omega_0^2 + (\Omega_0')^2}. \]
+The dark state is an eigenstate of the Hamiltonian. 
+Given that the system starts in this state, we can tune the amplitudes of the fields (sufficiently slowly) such that we remain in the instantaneous eigenstate $\ket{D}$, while changing the particular combination of $\ket{1}$ and $\ket{3}$ that comprise $\ket{D}$.
+If initially we have that $\Omega_0 \ll \Omega_0'$, then $\ket{D} \approx \ket{1}$, so the population is effectively in the ground state.
+We can then ramp up the field amplitude of $\Omega_0$, while simultaneously ramping down $\Omega_0'$ (again, sufficiently slowly), such that eventually $\ket{D} \approx \ket{3}$.
+Thus, we can coherently transfer population from $\ket{1}$ to $\ket{3}$ (or vice-versa, if the sequence is reversed), without exciting the state $\ket{2}$.
+
+If the fields are changed too rapidly, such that the adiabatic condition does not hold, the other energy eigenstates of the Hamiltonian (i.e. $\ket{B} = (\Omega_0^*\ket{1} - \Omega_0'^*\ket{3})/\Omega$ and $\ket{2}$) will be excited.
+
+\subsection*{c)}
+\subsubsection*{\underline{Problem}}
+Describe briefly the mechanism of Doppler laser cooling.
+What are the limits to Doppler cooling? What is the recoil limit?
+
+\subsubsection*{\underline{Solution}}
+As discussed in part (a), the force on a two-level atom subject to a plane wave is proportional to the wave vector, with the maximum average force occurring for a field perfectly resonant with the two-level transition.
+For red-detuned counter-propagating waves, atoms moving \textit{against} the direction of either of the waves will see a higher frequency (hence wave vector amplitude) due to the doppler shift, and therefore feel a stronger force than if it were traveling \textit{with} the wave.
+Because the waves are counter-propagating, this effect works in both directions and results in an overall dissipative force on the atoms' motion along the axis of the field propagation (i.e. a cooling force).
+
+Spontaneous emission is effectively a heating process that sets a theoretical limit on Doppler cooling.
+Even if atoms were cooled to their motional ground state, random kicks from spontaneous emission supply momentum (and thus energy) to the atoms.
+The recoil limit represents the temperature associated with the energy due to this process.
+Each recoil from spontaneous emission imparts an energy equal to $\hbar^2k^2/2M$ to the atom at a rate given by $\gamma_2\rho_{22}$.
+Assuming steady state and using the equipartition theorem, we can associated a temperature with the process of 
+\[ T_\text{recoil} \approx \frac{\hbar}{4k_B}\frac{\delta^2 + (\gamma')^2}{\delta} \geq \frac{\hbar\gamma'}{2k_B} \]
+
+
+\subsection*{d)}
+\subsubsection*{\underline{Problem}}
+Describe briefly pulse propagation under the condition of slow light and electromagnetically induced transparency.
+What determines the group velocity in this case?
+
+\subsubsection*{\underline{Solution}}
+The inability of the dark state to absorb/emit radiation leads to a suppression of decay/decoherence, which in turn enhances coherent optical interactions.
+For the case of EIT (assuming Raman resonance $\delta = \delta'$), near resonance we have that $n \sim \delta \chi'$ where $n$ is the index of refraction.
+The dispersion $\chi'$ in the case of EIT exhibits a sharp rise near resonance (i.e. $\dd n/\dd\omega \gg 0$), such that the group velocity
+\begin{align*}
+    v_g &= \dv{\omega}{k} \\
+    &= \frac{1}{\dd k/\dd\omega} \\
+    &= \frac{c}{\dv{\omega}(\omega n)} \\
+    &= \frac{c}{n + \omega\dv{n}{\omega}} \\
+    &\ll c.
+\end{align*}
+As this effect relies on the coherent interaction between the field and the atoms, lowering $\Omega_0'$ in turns lowering the group velocity, such that $\Omega_0' \to 0 \implies v_g \to 0$.
+
+\subsection*{e)}
+\subsubsection*{\underline{Problem}}
+Discuss briefly the physical mechanism of spectral hole burning and draw schematically a typical hole burning spectral response.
+What is the width of the spectral hole?
+
+\subsubsection*{\underline{Solution}}
+
+
+\subsection*{f)}
+\subsubsection*{\underline{Problem}}
+Discuss briefly why an inhomogeneously broadened laser medium tends to support multi-mode lasing operation, while a homogeneously broadened laser medium tends to support single-mode lasing operation.
+
+\subsubsection*{\underline{Solution}}
+
+
+\section*{Problem 2}
+\subsubsection*{\underline{Problem}}
+In this experiment, we apply three, instead of two, laser pulses to an inhomogeneously broadened two-level system.
+All three laser pulses are $\pi/2$ pulses.
+We assume that the atoms are initially in the lower state and that the pulses are short and intense such that the effects of detuning and decay can be ignored during each pulse.
+The dipole decoherence rate is $\gamma$, and the excited state population decay rate is $\gamma_2$.
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=.75]{spin_echo.png}
+\end{figure}
+\begin{enumerate}[label=(\alph*)]
+    \item Write down the Bloch vector in the $x$-$y$ plane right before the second pulse for an atom with detuning $\delta$ from the applied field.
+    \item Write down the $z$ component of the Bloch vector for the above atom right after the second pulse.
+    \item Write down the $z$ component of the Bloch vector right before the third pulse.
+    \item Write down the Bloch vector in the $x$-$y$ plane right after the third pulse, \textit{including only the contribution due to the $z$ component in (c)}.
+    \item An echo forms after the third pulse. What is the timing of the echo and why?
+    \item Compared with the usual two-pulse echo, what additional information can we obtain with the three-pulse echo (assuming that you can measure the echo intensity as a function of $\tau_1$ and $\tau_2$)?
+\end{enumerate}
+
+\subsubsection*{\underline{Solution}}
+\begin{enumerate}[label=(\alph*)]
+    \item 
+    \item 
+    \item 
+    \item 
+    \item  
+    \item 
+\end{enumerate}
+
+
+\section*{Problem 3}
+\subsubsection*{\underline{Problem}}
+We consider a cascaded 3-level system, where one laser beam $E$ with frequency $\omega$ interacts with the $\ket{1}\leftrightarrow\ket{2}$ dipole transition and another laser beam $E'$ with frequency $\omega'$ interacts with the $\ket{2}\leftrightarrow\ket{3}$ dipole transition, as shown schematically in the figure.
+Assume that initially the atom is in the ground state (state $\ket{1}$), decay rates for population in $\ket{2}$ and $\ket{3}$ are $\gamma_2$ and $\gamma_3$, respectively, and decay rates for $\rho_{12}$, $\rho_{23}$ and $\rho_{13}$ are $\gamma_{12}$, $\gamma_{23}$ and $\gamma_{13}$, respectively.
+For simplicity, we also assume that the Rabi frequencies for the two dipole transitions, $\Omega_0$ and $\Omega_0'$, are real.
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=.75]{cascade.png}
+\end{figure}
+\begin{enumerate}[label=(\alph*)]
+    \item Write down the wave function in the field-interaction representation, for which the Hamiltonian will have no explicit time dependence. Use this wave function to derive or write down the Hamiltonian in the field-interaction representation.
+    \item Derive the density matrix equation for the nonradiative coherence, i.e., $\rho_{13}$.
+    \item Assuming that laser beam $E'$ can be strong, but laser beam $E$ is weak, write down the relevant density matrix equations that you will need in order to calculate the susceptibility probed by the weak laser beam $E$.
+    \item Calculate the susceptibility probed by laser beam $E$.
+    \item Under what conditions will the system remain approximately in the ground state even when $E$ is nearly resonant with the atomic transition? Explain briefly the underlying physics.
+    \item Discuss briefly the main difference between the $\Lambda$-type and the cascaded-type 3-level systems.
+\end{enumerate}
+
+\subsubsection*{\underline{Solution}}
+\begin{enumerate}[label=(\alph*)]
+    \item 
+    \item 
+    \item 
+    \item 
+    \item  
+    \item 
+\end{enumerate}
+
+
+\section*{Problem 4}
+Consider the transitions form the ground state with total angular momentum $J=0$ to the excited states with $J=1$ (see the figure below). The atom (which is near $z=0$) is put in a magnetic field gradient along the $z$-direction with $B=\beta z$ where $\beta$ is a positive constant. 
+Assume that the magnetic sublevels' energies vary as $E_m - E_0 + gmz$, where $g$ is a positive constant and $m$ is the magnetic quantum number.
+
+For this experiment, we apply two counter propagating laser beams (for simplicity, assume the laser beams are plane waves) with the same frequency and opposite circular polarization to the atom.
+The $\sigma_+$ laser beam (coupling to the $J=0$ to $m=1$ transition) is incident in the $+z$ direction and the $\sigma_-$ laser beam (coupling to the $J=0$ to $m=-1$ transition) is incident in the $-z$ direction.
+The two transitions have the same spontaneous emission rate, $\gamma_2$, and the same Rabi frequency, $\Omega_0$
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=.75]{polarized_beams.png}
+\end{figure}
+\begin{enumerate}[label=(\alph*)]
+    \item Write down the radiation pressure force on the atom.
+    \item Assuming that the atom is moving sufficiently slowly such that we can neglect its Doppler shift, show that, in this limit, the net radiation pressure force becomes a restoring force toward $z=0$ if the field is detuned below the resonance frequency (i.e. $\delta>0$).
+    \item Use the result in (b) to derive the effective trapping potential for the atom.
+\end{enumerate}
+
+%\includepdf[pages=-]{calcs/hw_9.pdf}
+\end{document}
