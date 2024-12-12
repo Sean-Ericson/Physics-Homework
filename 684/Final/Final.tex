@@ -118,7 +118,7 @@ from which we can see that the linewidth for SHB is $2(\gamma + \gamma')$, where
 includes the effects of power broadening.
 \begin{figure}[h]
     \centering
-    \includegraphics{1e.png}
+    \includegraphics[scale=1.5]{1e.png}
 \end{figure}
 
 \subsection*{f)}
@@ -177,8 +177,8 @@ The dipole decoherence rate is $\gamma$, and the excited state population decay 
         &= \cos(\delta\tau_1)e^{-\gamma\tau_1 - \gamma_2\tau_2} + e^{\gamma_2\tau_2} - 1
     \end{align*}
     \item As stated previously the $\pi/2$ pulses take $\hat{z}\to-\hat{y}$, so, considering only the $z$ component from the previous part, the Bloch vector is in the state $\left(\cos(\delta\tau_1)e^{-\gamma\tau_1 - \gamma_2\tau_2} + e^{\gamma_2\tau_2} - 1\right)\hat{y}$.
-    \item  
-    \item 
+    \item The echo should appear after a time of $\tau_1$ after the last pulse.
+    \item The usual 2-pulse experiment allows us to measure $\delta$ and $\gamma$, with the additional pulse perhaps we can hope to measure $\gamma_2$. Hard to say; I find hope difficult to come by these days.
 \end{enumerate}
 
 
@@ -257,7 +257,15 @@ For simplicity, we also assume that the Rabi frequencies for the two dipole tran
         &= -\frac{i}{2}\Omega_0\left(\tilde{\rho}_{12} - \tilde{\rho}_{21}\right) + \frac{1}{2}\Omega_0'\left(\tilde{\rho}_{32} + \tilde{\rho}_{23}\right) \\
         &\to -\frac{i}{2}\Omega_0\left(\tilde{\rho}_{12} - \tilde{\rho}_{21}\right) + \frac{1}{2}\Omega_0'\left(\tilde{\rho}_{32} + \tilde{\rho}_{23}\right) - \gamma_2\tilde{\rho}_{22}
     \end{align*}
-    \item Since the probe field is weak, we can calculate the susceptibility to first order in $\Omega_0$
+    Guess we'll need $\tilde{\rho}_{23}$ too... (I guess I might as well just have used to commutator to get all these equations, oh well)
+    \begin{align*}
+        \dot{\tilde{\rho}}_{23} &= \dot{\tilde{c}}_2\tilde{c}_3^* + \tilde{c}_2\dot{\tilde{c}}_3^* \\
+        &= \left(-\frac{i}{2}\left(\Omega_0\tilde{c}_1 + \Omega_0'\tilde{c}_3\right)\right)\tilde{c}_3^* + \tilde{c}_2\left(\frac{i}{2}\Omega_0' \tilde{c}_2 - i\delta'\tilde{c}_3\right) \\
+        &= -\frac{i}{2}\Omega_0\tilde{\rho}_{13} - \frac{i}{2}\Omega_0'\tilde{\rho}_{33} + \frac{i}{2}\Omega_0'\tilde{\rho}_{22} - i\delta'\tilde{\rho}_{23} \\
+        &= 
+    \end{align*}
+    Of course, the tildes on the populations ($\rho_{ii}$) are superfluous, but it feels weird to have tilded and untilded $\rho$s mixed together.
+    \item Since the probe field is weak, we can calculate the susceptibility to first order in $\Omega_0$. See attached hand-written calculations for an attempt to calculate $\tilde{\rho}_{12}$ to first order.
     \item If the decay rate $\gamma_2$ is large, this will contribute to keeping the system approximately in the ground state, as excitations of the $\ket{2}$ state will quickly decay back to the $\ket{1}$ state.
     If the Rabi frequency $\Omega_0'$ is not particularly large (compared to $\gamma_2$), then population will not have time to transition from $\ket{2}$ to $\ket{3}$ before decaying from $\ket{2}$ to $\ket{1}$, therefore helping to maintain the excitation in state $\ket{1}$.
     Additionally, if $\Omega_0' \gg \Omega_0$, the dark state $\ket{D} = \frac{1}{\Omega}\left(\Omega_0'\ket{1} - \Omega_0\ket{3}\right) \approx \ket{1}$. Coherent population trapping then maintains this state, keeping the system approximately in the ground state.
@@ -286,9 +294,13 @@ The two transitions have the same spontaneous emission rate, $\gamma_2$, and the
 
 \subsubsection*{\underline{Solution}}
 \begin{enumerate}[label=(\alph*)]
-    \item
-    \item 
-    \item 
+    \item I read ch. 18 in Berman, but I feel like I would need to read it a half-dozen more times to get anything useful out of it.
+    I'm just going to try to argue based on Doppler cooling.
+    The force should be due to momentum exchange form the absorption/emission of photos from the atoms (likely with a modification due to the magnetic field gradient).
+    This should be $\hbar k \times$ (decay rate). In the case of Doppler cooling, this is
+    \[ \frac{1}{2}\hbar k \abs{\Omega_0}^2 \frac{\gamma}{\left(\omega_0 - \omega + \vec{k}\cdot\vec{v}\right)^2 + (\gamma')^2} \]
+    \item In order to be a restoring force (towards $z=0$), for $\delta > 0$, it would need to be proportional to $-\delta z$ for $z \approx 0$.
+    \item Were I to have found a force, the effective potential could be found by using the simple relation \[ \vec{F} = -\vec{\nabla}V \]
 \end{enumerate}
 
 %\includepdf[pages=-]{calcs/hw_9.pdf}
